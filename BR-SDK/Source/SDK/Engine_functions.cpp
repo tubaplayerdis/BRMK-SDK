@@ -13369,8 +13369,10 @@ bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* MeshCom
 
 class UWorld* UWorld::GetWorld()
 {
-	if constexpr (Offsets::GWorld != 0)
-		return *reinterpret_cast<UWorld**>(InSDKUtils::GetImageBase() + Offsets::GWorld);
+	static const uintptr_t GWorld = Offsets::OGWorld();
+
+	if (GWorld != 0)
+		return *reinterpret_cast<UWorld**>(GWorld);
 
 	if (UEngine* Engine = UEngine::GetEngine())
 	{
@@ -13381,6 +13383,7 @@ class UWorld* UWorld::GetWorld()
 	}
 
 	return nullptr;
+}
 }
 
 

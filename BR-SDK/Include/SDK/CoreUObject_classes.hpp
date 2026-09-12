@@ -275,6 +275,11 @@ public:
 	uint8                                         Pad_C4[0x24];                                      // 0x00C4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
 	FNativeFuncPtr                                ExecFunction;                                      // 0x00E8(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
+	FProperty* GetPropertyLink()
+	{
+		return GetMember<FProperty*>(this, 0x68);
+	}
+
 public:
 	static class UClass* StaticClass()
 	{

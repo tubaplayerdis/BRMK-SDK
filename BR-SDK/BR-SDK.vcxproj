@@ -1392,10 +1392,6 @@
     <ClInclude Include="Include\Utils\UtfN.hpp" />
     <ClInclude Include="Include\Utils\Utilities.hpp" />
     <ClInclude Include="Include\Utils\UtilitiesImplementation.hpp" />
-    <ClInclude Include="Source\Platform\Arch_x86.h" />
-    <ClInclude Include="Source\Platform\Platform.h" />
-    <ClInclude Include="Source\Platform\PlatformWindows.h" />
-    <ClInclude Include="Source\Platform\TmpUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Hooking\MinHook\buffer.c" />
@@ -1405,9 +1401,6 @@
     <ClCompile Include="Source\Hooking\MinHook\trampoline.c" />
     <ClCompile Include="Source\Hooking\Signature.cpp" />
     <ClCompile Include="Source\Hooking\UHook.cpp" />
-    <ClCompile Include="Source\Platform\Arch_x86.cpp" />
-    <ClCompile Include="Source\Platform\PlatformWindows.cpp">
-    </ClCompile>
     <ClCompile Include="Source\Scanner.cpp" />
     <ClCompile Include="Source\SDK\ABP_Character_Fluppism_functions.cpp" />
     <ClCompile Include="Source\SDK\ABP_Character_functions.cpp" />

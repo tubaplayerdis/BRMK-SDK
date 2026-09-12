@@ -10,6 +10,8 @@
 
 #define VC_EXTRALEAN
 #define WIN32_LEAN_AND_MEAN
+#include "../Hooking/Signature.hpp"
+#include "../Utils/GameFunctions.hpp"
 
 
 /*
@@ -42,9 +44,9 @@
 #include <type_traits>
 #include <format>
 
-#include "../PropertyFixup.hpp"
-#include "../UnrealContainers.hpp"
-#include "../Assertions.inl"
+#include "../Utils/PropertyFixup.hpp"
+#include "../Utils/UnrealContainers.hpp"
+#include "../Utils/Assertions.inl"
 
 SDK_NAMESPACE_START
 
@@ -52,7 +54,7 @@ SDK_NAMESPACE_START
 using namespace UC;
 #endif // IMPORT_CPP_SDK_INTO_IDA
 
-#include "../NameCollisions.inl"
+#include "../Utils/NameCollisions.inl"
 
 /*
 * Disclaimer:
@@ -61,11 +63,12 @@ using namespace UC;
 */
 namespace Offsets
 {
-	constexpr int32 GObjects          = 0x0073A3F0;
-	constexpr int32 AppendString      = 0x006056C0;
-	constexpr int32 GNames            = 0x00000000;
-	constexpr int32 GWorld            = 0x030C0FB0;
-	constexpr int32 ProcessEvent      = 0x00449640;
+	void FindOffsets();
+	uintptr_t OGObjects();
+	uintptr_t OAppendString();
+	uintptr_t OGNames();
+	uintptr_t OGWorld();
+	uintptr_t OProcessEvent();
 	constexpr int32 ProcessEventIdx   = 0x0000005C;
 }
 
@@ -296,7 +299,7 @@ public:
 private:
 	inline void InitGObjects()
 	{
-		GObjectsAddress = reinterpret_cast<void*>(InSDKUtils::GetImageBase() + Offsets::GObjects);
+		GObjectsAddress = reinterpret_cast<void*>(Offsets::OGObjects());
 	}
 
 public:
@@ -370,7 +373,7 @@ public:
 
 	static void InitInternal()
 	{
-		AppendString = reinterpret_cast<void*>(InSDKUtils::GetImageBase() + Offsets::AppendString);
+		AppendString = reinterpret_cast<void*>(Offsets::OAppendString());
 	}
 
 	bool IsNone() const
@@ -1210,6 +1213,7 @@ DUMPER7_ASSERTS_FField;
 // 0x0050 (0x0088 - 0x0038)
 class FProperty : public FField
 {
+	uintptr_t GetSymbolAddress(const char* Module, const char* Symbol);
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ArrayDim;                                          // 0x0040(0x0004)(NOT AUTO-GENERATED PROPERTY)
@@ -1218,6 +1222,47 @@ public:
 	uint8                                         Pad_50[0x4];                                       // 0x0050(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Offset;                                            // 0x0054(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_58[0x30];                                      // 0x0058(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+	void InitializeValue(void* Value)
+	{
+		static constexpr char SYB_MOD[] = "BrickRigsModKitSteam-CoreUObject.dll";
+		static constexpr char SYB[] = "?InitializeValue@FProperty@@QEBAXPEAX@Z";
+		static Function<void(void*, void*)> FProperty_InitializeValue(GetSymbolAddress(SYB_MOD, SYB));
+		FProperty_InitializeValue(this, Value);
+	}
+
+	bool HasAnyPropertyFlags(EPropertyFlags Flags)
+	{
+		return (Flags & static_cast<EPropertyFlags>(PropertyFlags));
+	}
+
+	void CopyCompleteValueToScriptVM(void* Value, const void* NewValue)
+	{
+		static constexpr char SYB_MOD[] = "BrickRigsModKitSteam-CoreUObject.dll";
+		static constexpr char SYB[] = "?CopyCompleteValueToScriptVM@FProperty@@UEBAXPEAXPEBX@Z";
+		static Function<void(void*, void*, const void*)> FProperty_CopyCompleteValueToScriptVM(GetSymbolAddress(SYB_MOD, SYB));
+		FProperty_CopyCompleteValueToScriptVM(this, Value, NewValue);
+	}
+
+	void CopyCompleteValueFromScriptVM(void* Value, const void* NewValue)
+	{
+		static constexpr char SYB_MOD[] = "BrickRigsModKitSteam-CoreUObject.dll";
+		static constexpr char SYB[] = "?CopyCompleteValueFromScriptVM@FProperty@@UEBAXPEAXPEBX@Z";
+		static Function<void(void*, void*, const void*)> FProperty_CopyCompleteValueFromScriptVM(GetSymbolAddress(SYB_MOD, SYB));
+		FProperty_CopyCompleteValueFromScriptVM(this, Value, NewValue);
+	}
+
+	FProperty* GetPropertyLinkNext()
+	{
+		return GetMember<FProperty*>(this, 0x68); //Read old clause convos
+	}
+
+	template<typename ValueType>
+	ValueType* ContainerPtrToValuePtr(void* ContainerPtr, int32 ArrayIndex = 0) const
+	{
+		int Offset_Internal = GetMember<int>(const_cast<FProperty*>(this), 0x4C);
+		return (ValueType*)ContainerPtr + Offset_Internal + ElementSize * ArrayIndex;
+	}
 };
 DUMPER7_ASSERTS_FProperty;
 

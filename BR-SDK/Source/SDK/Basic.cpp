@@ -137,5 +137,11 @@ bool FWeakObjectPtr::operator!=(const class UObject* Other) const
 	return ObjectIndex != Other->Index;
 }
 
+uintptr_t FProperty::GetSymbolAddress(const char* Module, const char* Symbol)
+{
+	HMODULE hModuleKit = GetModuleHandleA(Module); // or whatever the module's actually called
+	return (uintptr_t)GetProcAddress(hModuleKit, Symbol);
+}
+
 
 SDK_NAMESPACE_END
