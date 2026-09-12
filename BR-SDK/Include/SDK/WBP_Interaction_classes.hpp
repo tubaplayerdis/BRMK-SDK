@@ -17,16 +17,16 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Interaction.WBP_Interaction_C
-// 0x0010 (0x0298 - 0x0288)
+// 0x0018 (0x0438 - 0x0420)
 class UWBP_Interaction_C final : public UInteractionWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickVerticalBox*                      OptionsBox;                                        // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      OptionsBox;                                        // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void AddOptionWidget(class UInteractionOptionWidget* Widget_AddOptionWidget, int32 OptionIndex_AddOptionWidget);
 	void ExecuteUbergraph_WBP_Interaction(int32 EntryPoint);
+	void AddOptionWidget(class UInteractionOptionWidget* Widget, int32 OptionIndex);
 
 public:
 	static class UClass* StaticClass()
@@ -43,5 +43,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Interaction_C;
+
+// WidgetBlueprintGeneratedClass WBP_Interaction.SKEL_WBP_Interaction_C
+// 0x0018 (0x0438 - 0x0420)
+class USKEL_WBP_Interaction_C final : public UInteractionWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      OptionsBox;                                        // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddOptionWidget(class UInteractionOptionWidget* Widget, int32 OptionIndex);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Interaction_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Interaction_C")
+	}
+	static class USKEL_WBP_Interaction_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Interaction_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Interaction_C;
 
 SDK_NAMESPACE_END

@@ -12,8 +12,8 @@
 
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "UMG_structs.hpp"
+#include "BrickRigs_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -117,16 +117,94 @@ public:
 DUMPER7_ASSERTS_WBP_BrickEditor_C_AddGameOverlayWidget;
 
 // Function WBP_BrickEditor.WBP_BrickEditor_C.OnBorderMouseEvent
-// 0x0218 (0x0218 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct WBP_BrickEditor_C_OnBorderMouseEvent final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0160(0x00B8)()
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0170(0x00C0)()
 };
 DUMPER7_ASSERTS_WBP_BrickEditor_C_OnBorderMouseEvent;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.UpdateCanPlaceObjects
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_UpdateCanPlaceObjects final
+{
+public:
+	bool                                          bNewCanPlace;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_UpdateCanPlaceObjects;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.UpdateSelection
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_UpdateSelection final
+{
+public:
+	class FText                                   SelectionName;                                     // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bAnythingSelected;                                 // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_UpdateSelection;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.BndEvt__ResetFilterButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_BndEvt__ResetFilterButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_BndEvt__ResetFilterButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.AddMirrorModeWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_AddMirrorModeWidget final
+{
+public:
+	class UBrickEditorMirrorAxisWidget*           Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_AddMirrorModeWidget;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.UpdateCanClearPlacableFilter
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_UpdateCanClearPlacableFilter final
+{
+public:
+	bool                                          bNewCanClear;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_UpdateCanClearPlacableFilter;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.UpdateEditorUIScale
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_UpdateEditorUIScale final
+{
+public:
+	float                                         NewScale;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_UpdateEditorUIScale;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.AddGameOverlayWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_AddGameOverlayWidget final
+{
+public:
+	class UGameOverlayWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_AddGameOverlayWidget;
+
+// Function WBP_BrickEditor.SKEL_WBP_BrickEditor_C.OnBorderMouseEvent
+// 0x0170 (0x0170 - 0x0000)
+struct SKEL_WBP_BrickEditor_C_OnBorderMouseEvent final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditor_C_OnBorderMouseEvent;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

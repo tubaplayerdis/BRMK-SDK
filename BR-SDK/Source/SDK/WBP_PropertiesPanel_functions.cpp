@@ -58,4 +58,26 @@ void UWBP_PropertiesPanel_C::AddCategoryWidget(class UPropertyCategoryWidget* Wi
 }
 
 
+// Function WBP_PropertiesPanel.SKEL_WBP_PropertiesPanel_C.AddCategoryWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPropertyCategoryWidget*          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertiesPanel_C::AddCategoryWidget(class UPropertyCategoryWidget* Widget, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertiesPanel_C", "AddCategoryWidget");
+
+	Params::SKEL_WBP_PropertiesPanel_C_AddCategoryWidget Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

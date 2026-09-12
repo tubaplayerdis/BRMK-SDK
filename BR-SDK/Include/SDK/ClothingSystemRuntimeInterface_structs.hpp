@@ -46,14 +46,15 @@ public:
 DUMPER7_ASSERTS_FClothCollisionPrim_ConvexFace;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_Convex
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FClothCollisionPrim_Convex final
 {
 public:
-	TArray<struct FClothCollisionPrim_ConvexFace> Faces;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        SurfacePoints;                                     // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         BoneIndex;                                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FPlane>                         Planes;                                            // 0x0000(0x0010)(ZeroConstructor, Deprecated, EditorOnly, NativeAccessSpecifierPublic)
+	TArray<struct FClothCollisionPrim_ConvexFace> Faces;                                             // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        SurfacePoints;                                     // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         BoneIndex;                                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FClothCollisionPrim_Convex;
 

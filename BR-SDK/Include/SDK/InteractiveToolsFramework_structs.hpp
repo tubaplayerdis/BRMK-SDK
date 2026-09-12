@@ -186,11 +186,11 @@ enum class ESceneSnapQueryType : uint8
 };
 
 // ScriptStruct InteractiveToolsFramework.BrushStampData
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct alignas(0x04) FBrushStampData final
 {
 public:
-	uint8                                         Pad_0[0xA8];                                       // 0x0000(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBrushStampData;
 

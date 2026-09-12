@@ -18,19 +18,19 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MatchState.WBP_MatchState_C
-// 0x0020 (0x0298 - 0x0278)
+// 0x0028 (0x0440 - 0x0418)
 class UWBP_MatchState_C final : public UMatchStateWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBrickBorder*                           Border;                                            // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0428(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickBorder*                           Border;                                            // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateMatchState(const class FText& NewDisplayText_UpdateMatchState, EBrickUIColorStyle NewColorStyle_UpdateMatchState, bool bFadeOut_UpdateMatchState);
-	void OnAnimationFinished(const class UWidgetAnimation* Animation_OnAnimationFinished);
 	void ExecuteUbergraph_WBP_MatchState(int32 EntryPoint);
+	void OnAnimationFinished(const class UWidgetAnimation* Animation);
+	void UpdateMatchState(const class FText& NewDisplayText, EBrickUIColorStyle NewColorStyle, bool bFadeOut);
 
 public:
 	static class UClass* StaticClass()
@@ -47,5 +47,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_MatchState_C;
+
+// WidgetBlueprintGeneratedClass WBP_MatchState.SKEL_WBP_MatchState_C
+// 0x0028 (0x0440 - 0x0418)
+class USKEL_WBP_MatchState_C final : public UMatchStateWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0428(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickBorder*                           Border;                                            // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateMatchState(const class FText& NewDisplayText, EBrickUIColorStyle NewColorStyle, bool bFadeOut);
+	void OnAnimationFinished(const class UWidgetAnimation* Animation);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_MatchState_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_MatchState_C")
+	}
+	static class USKEL_WBP_MatchState_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_MatchState_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_MatchState_C;
 
 SDK_NAMESPACE_END

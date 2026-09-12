@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // Class FluMoveSync.FluMoveSyncActor
-// 0x0008 (0x0228 - 0x0220)
+// 0x0008 (0x0300 - 0x02F8)
 class AFluMoveSyncActor : public AActor
 {
 public:
-	float                                         RepMovementTimestamp;                              // 0x0220(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         RepMovementTimestamp;                              // 0x02F8(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_AFluMoveSyncActor;
 
 // Class FluMoveSync.FluMoveSyncFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UFluMoveSyncFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
@@ -60,14 +60,14 @@ public:
 DUMPER7_ASSERTS_UFluMoveSyncFunctionLibrary;
 
 // Class FluMoveSync.FluMoveSyncKinematicActor
-// 0x0088 (0x02B0 - 0x0228)
+// 0x0090 (0x0390 - 0x0300)
 class alignas(0x10) AFluMoveSyncKinematicActor : public AFluMoveSyncActor
 {
 public:
-	uint8                                         Pad_228[0x70];                                     // 0x0228(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovementComponent*                     MovementComponent;                                 // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USceneComponent*                        InterpolatedComponent;                             // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_300[0x78];                                     // 0x0300(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovementComponent*                     MovementComponent;                                 // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USceneComponent*                        InterpolatedComponent;                             // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetInterpolatedComponent(class USceneComponent* Comp);

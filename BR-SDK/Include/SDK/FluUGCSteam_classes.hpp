@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class FluUGCSteam.FluUGCSubsystemSteam
-// 0x0008 (0x0068 - 0x0060)
+// 0x0008 (0x0070 - 0x0068)
 class UFluUGCSubsystemSteam final : public UFluUGCSubsystem
 {
 public:
-	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

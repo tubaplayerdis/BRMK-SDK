@@ -42,9 +42,9 @@
 #include <type_traits>
 #include <format>
 
-#include "../Utils/PropertyFixup.hpp"
-#include "../Utils/UnrealContainers.hpp"
-#include "../Utils/Assertions.inl"
+#include "../PropertyFixup.hpp"
+#include "../UnrealContainers.hpp"
+#include "../Assertions.inl"
 
 SDK_NAMESPACE_START
 
@@ -52,7 +52,7 @@ SDK_NAMESPACE_START
 using namespace UC;
 #endif // IMPORT_CPP_SDK_INTO_IDA
 
-#include "../Utils/NameCollisions.inl"
+#include "../NameCollisions.inl"
 
 /*
 * Disclaimer:
@@ -61,14 +61,12 @@ using namespace UC;
 */
 namespace Offsets
 {
-	//Does not actually refind offsets lol.
-	void FindOffsets();
-	uintptr_t OGObjects();
-	uintptr_t OAppendString();
-	uintptr_t OGNames();
-	uintptr_t OGWorld();
-	uintptr_t OProcessEvent();
-	constexpr int32 ProcessEventIdx   = 0x00000044;//Very low chance of this changing
+	constexpr int32 GObjects          = 0x0073A3F0;
+	constexpr int32 AppendString      = 0x006056C0;
+	constexpr int32 GNames            = 0x00000000;
+	constexpr int32 GWorld            = 0x030C0FB0;
+	constexpr int32 ProcessEvent      = 0x00449640;
+	constexpr int32 ProcessEventIdx   = 0x0000005C;
 }
 
 namespace InSDKUtils
@@ -221,17 +219,17 @@ ClassType* GetDefaultObjImpl()
 }
 
 // Predefined struct FUObjectItem
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FUObjectItem final
 {
 public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x18];                                       // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FUObjectItem;
 
 // Predefined struct TUObjectArray
-// 0x0020 (0x0020 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 class TUObjectArray final
 {
 public:
@@ -242,12 +240,13 @@ public:
 
 	static constexpr int32                        ElementsPerChunk = 0x10000;                        // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
-	struct FUObjectItem**                         Objects;                                           // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxElements;                                       // 0x0010(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	int32                                         NumElements;                                       // 0x0014(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	int32                                         MaxChunks;                                         // 0x0018(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	int32                                         NumChunks;                                         // 0x001C(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUObjectItem**                         Objects;                                           // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxElements;                                       // 0x0020(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         NumElements;                                       // 0x0024(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         MaxChunks;                                         // 0x0028(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         NumChunks;                                         // 0x002C(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
 public:
 	inline int32 Num() const
@@ -297,7 +296,7 @@ public:
 private:
 	inline void InitGObjects()
 	{
-		GObjectsAddress = reinterpret_cast<void*>(Offsets::OGObjects());
+		GObjectsAddress = reinterpret_cast<void*>(InSDKUtils::GetImageBase() + Offsets::GObjects);
 	}
 
 public:
@@ -337,18 +336,19 @@ public:
 };
 
 // Predefined struct FName
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 class FName final
 {
 public:
 	static inline void*                           AppendString = nullptr;                            // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
 	int32                                         ComparisonIndex = 0x0;                             // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	uint32                                        Number = 0x0;                                      // 0x0004(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         DisplayIndex = 0x0;                                // 0x0004(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         Number = 0x0;                                      // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
 public:
-	constexpr explicit FName(int32 ComparisonIndex, uint32 Number = 0)
-		: ComparisonIndex(ComparisonIndex), Number(Number)
+	constexpr explicit FName(int32 ComparisonIndex, uint32 Number = 0, int32 DisplayIndex = 0)
+		: ComparisonIndex(ComparisonIndex), Number(Number), DisplayIndex(DisplayIndex)
 	{
 	}
 
@@ -370,17 +370,17 @@ public:
 
 	static void InitInternal()
 	{
-		AppendString = reinterpret_cast<void*>(Offsets::OAppendString());
+		AppendString = reinterpret_cast<void*>(InSDKUtils::GetImageBase() + Offsets::AppendString);
 	}
 
 	bool IsNone() const
 	{
-		return !ComparisonIndex&& !Number;
+		return !DisplayIndex&& !Number;
 	}
 	
 	int32 GetDisplayIndex() const
 	{
-		return ComparisonIndex;
+		return DisplayIndex;
 	}
 	
 	std::string GetRawString() const
@@ -608,12 +608,13 @@ namespace FakeSoftObjectPtr
 {
 
 // ScriptStruct CoreUObject.SoftObjectPath
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FSoftObjectPath
 {
 public:
-	class FName                                   AssetPathName;                                     // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SubPathString;                                     // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AssetPathName;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SubPathString;                                     // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSoftObjectPath;
 
@@ -681,18 +682,21 @@ class TScriptInterface final : public FScriptInterface
 };
 
 // Predefined struct FFieldPath
-// 0x0020 (0x0020 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 class FFieldPath
 {
 public:
 	class FField*                                 ResolvedField;                                     // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	TWeakObjectPtr<class UStruct>                 ResolvedOwner;                                     // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	TArray<FName>                                 Path;                                              // 0x0010(0x0010)(NOT AUTO-GENERATED PROPERTY)
+	class FFieldClass*                            InitialFieldClass;                                 // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         FieldPathSerialNumber;                             // 0x0010(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	TWeakObjectPtr<class UStruct>                 ResolvedOwner;                                     // 0x0014(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	TArray<FName>                                 Path;                                              // 0x001C(0x0010)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFieldPath;
 
 // Predefined struct TFieldPath
-// 0x0000 (0x0020 - 0x0020)
+// 0x0000 (0x0030 - 0x0030)
 template<class PropertyType>
 class TFieldPath final : public FFieldPath
 {
@@ -764,31 +768,31 @@ public:
 
 
 // Predefined struct FScriptDelegate
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FScriptDelegate
 {
 public:
 	FWeakObjectPtr                                Object;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	FName                                         FunctionName;                                      // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	FName                                         FunctionName;                                      // 0x0008(0x000C)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FScriptDelegate;
 
 // Predefined struct TDelegate
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 template<typename FunctionSignature>
 class TDelegate
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x14];                                       // 0x0000(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // Predefined struct TDelegate<Ret(Args...)>
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 template<typename Ret, typename... Args>
 class TDelegate<Ret(Args...)>
 {
 public:
-	FScriptDelegate                               BoundFunction;                                     // 0x0000(0x0010)(NOT AUTO-GENERATED PROPERTY)
+	FScriptDelegate                               BoundFunction;                                     // 0x0000(0x0014)(NOT AUTO-GENERATED PROPERTY)
 };
 
 // Predefined struct TMulticastInlineDelegate
@@ -1162,16 +1166,17 @@ UE_ENUM_OPERATORS(EClassCastFlags);
 UE_ENUM_OPERATORS(EPropertyFlags);
 
 // Predefined struct FFieldClass
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 class FFieldClass
 {
 public:
-	FName                                         Name;                                              // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint64                                        Id;                                                // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint64                                        CastFlags;                                         // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	EClassFlags                                   ClassFlags;                                        // 0x0018(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FFieldClass*                            SuperClass;                                        // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	FName                                         Name;                                              // 0x0000(0x000C)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint64                                        Id;                                                // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	uint64                                        CastFlags;                                         // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	EClassFlags                                   ClassFlags;                                        // 0x0020(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FFieldClass*                            SuperClass;                                        // 0x0028(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FFieldClass;
 
@@ -1196,182 +1201,136 @@ public:
 	class FFieldClass*                            ClassPrivate;                                      // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	FFieldVariant                                 Owner;                                             // 0x0010(0x0010)(NOT AUTO-GENERATED PROPERTY)
 	class FField*                                 Next;                                              // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	FName                                         Name;                                              // 0x0028(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	int32                                         ObjFlags;                                          // 0x0030(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	FName                                         Name;                                              // 0x0028(0x000C)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         ObjFlags;                                          // 0x0034(0x0004)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FField;
 
 // Predefined struct FProperty
-// 0x0040 (0x0078 - 0x0038)
+// 0x0050 (0x0088 - 0x0038)
 class FProperty : public FField
 {
-	template<typename TRet, typename... TArgs>
-	static TRet CallVTableFunction(int index, void* object, TArgs... args)
-	{
-		using FunctionFn = TRet(__fastcall*)(void*, TArgs...);
-		void** vtable = *reinterpret_cast<void***>(object);
-		FunctionFn FunctionFunc = reinterpret_cast<FunctionFn>(vtable[index]);
-		return FunctionFunc(object, std::forward<TArgs>(args)...);
-	}
-
-	template<typename T>
-	static T& GetMember(void* base, std::size_t offset)
-	{
-		return *reinterpret_cast<T*>(reinterpret_cast<std::uint8_t*>(base) + offset);
-	}
-
 public:
-	int32                                         ArrayDim;                                          // 0x0038(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	int32                                         ElementSize;                                       // 0x003C(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	uint64                                        PropertyFlags;                                     // 0x0040(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_48[0x4];                                       // 0x0048(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Offset;                                            // 0x004C(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_50[0x28];                                      // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-	void InitializeValue(void* Value)
-	{
-		CallVTableFunction<void, void*>(0xF8, this, Value);
-	}
-
-	bool HasAnyPropertyFlags(EPropertyFlags Flags)
-	{
-		return (Flags & static_cast<EPropertyFlags>(PropertyFlags));
-	}
-
-	void CopyCompleteValueToScriptVM(void* Value, const void* NewValue)
-	{
-		CallVTableFunction<void, void*, const void*>(0xD0, this, Value, NewValue);
-	}
-
-	void CopyCompleteValueFromScriptVM(void* Value, const void* NewValue)
-	{
-		CallVTableFunction<void, void*, const void*>(0xE0, this, Value, NewValue);
-	}
-
-	FProperty* GetPropertyLinkNext()
-	{
-		return GetMember<FProperty*>(this, 0x58);
-	}
-
-	template<typename ValueType>
-	ValueType* ContainerPtrToValuePtr(void* ContainerPtr, int32 ArrayIndex = 0) const
-	{
-		int Offset_Internal = GetMember<int>(const_cast<FProperty*>(this), 0x4C);
-		return (ValueType*)ContainerPtr + Offset_Internal + ElementSize * ArrayIndex;
-	}
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ArrayDim;                                          // 0x0040(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         ElementSize;                                       // 0x0044(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	uint64                                        PropertyFlags;                                     // 0x0048(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_50[0x4];                                       // 0x0050(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Offset;                                            // 0x0054(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_58[0x30];                                      // 0x0058(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FProperty;
 
 // Predefined struct FByteProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FByteProperty final : public FProperty
 {
 public:
-	class UEnum*                                  Enum;                                              // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class UEnum*                                  Enum;                                              // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FByteProperty;
 
 // Predefined struct FBoolProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FBoolProperty final : public FProperty
 {
 public:
-	uint8                                         FieldSize;                                         // 0x0078(0x0001)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         ByteOffset;                                        // 0x0079(0x0001)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         ByteMask;                                          // 0x007A(0x0001)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         FieldMask;                                         // 0x007B(0x0001)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         FieldSize;                                         // 0x0088(0x0001)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         ByteOffset;                                        // 0x0089(0x0001)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         ByteMask;                                          // 0x008A(0x0001)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         FieldMask;                                         // 0x008B(0x0001)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FBoolProperty;
 
 // Predefined struct FObjectPropertyBase
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FObjectPropertyBase : public FProperty
 {
 public:
-	class UClass*                                 PropertyClass;                                     // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class UClass*                                 PropertyClass;                                     // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FObjectPropertyBase;
 
 // Predefined struct FClassProperty
-// 0x0008 (0x0088 - 0x0080)
+// 0x0008 (0x0098 - 0x0090)
 class FClassProperty final : public FObjectPropertyBase
 {
 public:
-	class UClass*                                 MetaClass;                                         // 0x0080(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class UClass*                                 MetaClass;                                         // 0x0090(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FClassProperty;
 
 // Predefined struct FStructProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FStructProperty final : public FProperty
 {
 public:
-	class UStruct*                                Struct;                                            // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class UStruct*                                Struct;                                            // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FStructProperty;
 
 // Predefined struct FArrayProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FArrayProperty final : public FProperty
 {
 public:
-	class FProperty*                              InnerProperty;                                     // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FProperty*                              InnerProperty;                                     // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FArrayProperty;
 
 // Predefined struct FDelegateProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FDelegateProperty final : public FProperty
 {
 public:
-	class UFunction*                              SignatureFunction;                                 // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class UFunction*                              SignatureFunction;                                 // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FDelegateProperty;
 
 // Predefined struct FMapProperty
-// 0x0010 (0x0088 - 0x0078)
+// 0x0010 (0x0098 - 0x0088)
 class FMapProperty final : public FProperty
 {
 public:
-	class FProperty*                              KeyProperty;                                       // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	class FProperty*                              ValueProperty;                                     // 0x0080(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FProperty*                              KeyProperty;                                       // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FProperty*                              ValueProperty;                                     // 0x0090(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FMapProperty;
 
 // Predefined struct FSetProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FSetProperty final : public FProperty
 {
 public:
-	class FProperty*                              ElementProperty;                                   // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FProperty*                              ElementProperty;                                   // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FSetProperty;
 
 // Predefined struct FEnumProperty
-// 0x0010 (0x0088 - 0x0078)
+// 0x0010 (0x0098 - 0x0088)
 class FEnumProperty final : public FProperty
 {
 public:
-	class FProperty*                              UnderlayingProperty;                               // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	class UEnum*                                  Enum;                                              // 0x0080(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FProperty*                              UnderlayingProperty;                               // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class UEnum*                                  Enum;                                              // 0x0090(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FEnumProperty;
 
 // Predefined struct FFieldPathProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FFieldPathProperty final : public FProperty
 {
 public:
-	class FFieldClass*                            FieldClass;                                        // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FFieldClass*                            FieldClass;                                        // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FFieldPathProperty;
 
 // Predefined struct FOptionalProperty
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0090 - 0x0088)
 class FOptionalProperty final : public FProperty
 {
 public:
-	class FProperty*                              ValueProperty;                                     // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	class FProperty*                              ValueProperty;                                     // 0x0088(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
 DUMPER7_ASSERTS_FOptionalProperty;
 

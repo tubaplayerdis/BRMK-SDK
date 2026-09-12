@@ -150,4 +150,118 @@ class UWidget* UWBP_Spectator_C::GetWidgetToFocus() const
 }
 
 
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.UpdateSpectatedPlayer
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      PlayerName                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bIsValidPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Spectator_C::UpdateSpectatedPlayer(const class FText& PlayerName, bool bIsValidPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "UpdateSpectatedPlayer");
+
+	Params::SKEL_WBP_Spectator_C_UpdateSpectatedPlayer Parms{};
+
+	Parms.PlayerName = std::move(PlayerName);
+	Parms.bIsValidPlayer = bIsValidPlayer;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_Spectator_C::BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_Spectator_C::BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Spectator_C::BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_Spectator_C_BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Spectator_C::BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_Spectator_C_BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.GetWidgetToFocus
+// (Event, Protected, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWidget* USKEL_WBP_Spectator_C::GetWidgetToFocus() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "GetWidgetToFocus");
+
+	Params::SKEL_WBP_Spectator_C_GetWidgetToFocus Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

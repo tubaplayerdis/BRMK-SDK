@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_ScalableRamp.SKEL_BP_ScalableRamp_C
+// 0x0010 (0x01F0 - 0x01E0)
+class USKEL_BP_ScalableRamp_C final : public UScalableBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ScalableRamp_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ScalableRamp_C")
+	}
+	static class USKEL_BP_ScalableRamp_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_ScalableRamp_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_ScalableRamp_C;
+
 // BlueprintGeneratedClass BP_ScalableRamp.BP_ScalableRamp_C
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x01E0 - 0x01E0)
 class UBP_ScalableRamp_C final : public UScalableBrickStaticInfo
 {
 public:

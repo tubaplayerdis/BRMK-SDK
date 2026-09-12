@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PowerPlant.PowerPlant_C
-// 0x0000 (0x0228 - 0x0228)
+// 0x0000 (0x0300 - 0x0300)
 class APowerPlant_C final : public ALevelScriptActor
 {
 public:
@@ -34,5 +35,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_APowerPlant_C;
+
+// BlueprintGeneratedClass PowerPlant.SKEL_PowerPlant_C
+// 0x0010 (0x0310 - 0x0300)
+class ASKEL_PowerPlant_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_PowerPlant_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_PowerPlant_C")
+	}
+	static class ASKEL_PowerPlant_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_PowerPlant_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_PowerPlant_C;
 
 SDK_NAMESPACE_END

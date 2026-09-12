@@ -10,13 +10,40 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_FirstAidKit.SKEL_BP_FirstAidKit_C
+// 0x0010 (0x0360 - 0x0350)
+class ASKEL_BP_FirstAidKit_C final : public AFirstAidKit
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_FirstAidKit_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_FirstAidKit_C")
+	}
+	static class ASKEL_BP_FirstAidKit_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_FirstAidKit_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_FirstAidKit_C;
+
 // BlueprintGeneratedClass BP_FirstAidKit.BP_FirstAidKit_C
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x0350 - 0x0350)
 class ABP_FirstAidKit_C final : public AFirstAidKit
 {
 public:

@@ -110,4 +110,78 @@ void UWBP_KickPlayerPopup_C::Construct()
 }
 
 
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_KickPlayerPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_KickPlayerPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.UpdateIsLoadingKick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewLoading                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_KickPlayerPopup_C::UpdateIsLoadingKick(bool bNewLoading)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_KickPlayerPopup_C", "UpdateIsLoadingKick");
+
+	Params::SKEL_WBP_KickPlayerPopup_C_UpdateIsLoadingKick Parms{};
+
+	Parms.bNewLoading = bNewLoading;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.UpdateCanRevokeKick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanRevoke                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_KickPlayerPopup_C::UpdateCanRevokeKick(bool bCanRevoke)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_KickPlayerPopup_C", "UpdateCanRevokeKick");
+
+	Params::SKEL_WBP_KickPlayerPopup_C_UpdateCanRevokeKick Parms{};
+
+	Parms.bCanRevoke = bCanRevoke;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.UpdateCanConfirmKick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewCanConfirm                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_KickPlayerPopup_C::UpdateCanConfirmKick(bool bNewCanConfirm)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_KickPlayerPopup_C", "UpdateCanConfirmKick");
+
+	Params::SKEL_WBP_KickPlayerPopup_C_UpdateCanConfirmKick Parms{};
+
+	Parms.bNewCanConfirm = bNewCanConfirm;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

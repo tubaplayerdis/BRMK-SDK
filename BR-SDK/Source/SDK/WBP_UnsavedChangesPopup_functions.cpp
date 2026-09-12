@@ -78,4 +78,46 @@ void UWBP_UnsavedChangesPopup_C::Construct()
 }
 
 
+// Function WBP_UnsavedChangesPopup.SKEL_WBP_UnsavedChangesPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_UnsavedChangesPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UnsavedChangesPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UnsavedChangesPopup.SKEL_WBP_UnsavedChangesPopup_C.DiscardChanges
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_UnsavedChangesPopup_C::DiscardChanges()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UnsavedChangesPopup_C", "DiscardChanges");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UnsavedChangesPopup.SKEL_WBP_UnsavedChangesPopup_C.SaveChanges
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_UnsavedChangesPopup_C::SaveChanges()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UnsavedChangesPopup_C", "SaveChanges");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

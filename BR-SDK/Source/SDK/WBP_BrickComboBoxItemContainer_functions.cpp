@@ -90,4 +90,58 @@ void UWBP_BrickComboBoxItemContainer_C::AddItemWidget(class UBrickComboBoxItemWi
 }
 
 
+// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.AddItemWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UBrickComboBoxItemWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickComboBoxItemContainer_C::AddItemWidget(class UBrickComboBoxItemWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBoxItemContainer_C", "AddItemWidget");
+
+	Params::SKEL_WBP_BrickComboBoxItemContainer_C_AddItemWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.UpdateIsSelected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewSelected                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickComboBoxItemContainer_C::UpdateIsSelected(bool bNewSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBoxItemContainer_C", "UpdateIsSelected");
+
+	Params::SKEL_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected Parms{};
+
+	Parms.bNewSelected = bNewSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_BrickComboBoxItemContainer_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBoxItemContainer_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

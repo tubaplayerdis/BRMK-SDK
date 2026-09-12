@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -57,6 +57,28 @@ public:
 	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_UGCItem_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_UGCItem.SKEL_WBP_UGCItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_UGCItem_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCItem_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_UGCItem.SKEL_WBP_UGCItem_C.UpdateItemWidget
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_UGCItem_C_UpdateItemWidget final
+{
+public:
+	bool                                          bInIsSelected;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsLegacyFile;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInHasAutoSave;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsDedicatedAutoSave;                            // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCItem_C_UpdateItemWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

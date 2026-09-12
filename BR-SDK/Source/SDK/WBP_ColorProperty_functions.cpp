@@ -388,4 +388,356 @@ void UWBP_ColorProperty_C::UpdateCurrentColor(bool bUpdateHex)
 }
 
 
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_ColorProperty_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_ColorProperty_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.UpdateColorDisplayMode
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_ColorProperty_C::UpdateColorDisplayMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "UpdateColorDisplayMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_ColorWheel_K2Node_ComponentBoundEvent_2_ColorChanged__DelegateSignature
+// (Public)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_ColorWheel_K2Node_ComponentBoundEvent_2_ColorChanged__DelegateSignature(const struct FLinearColor& NewColor, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_ColorWheel_K2Node_ComponentBoundEvent_2_ColorChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_ColorWheel_K2Node_ComponentBoundEvent_2_ColorChanged__DelegateSignature Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_ColorPalette_K2Node_ComponentBoundEvent_3_OnColorChanged__DelegateSignature
+// (Public)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_ColorPalette_K2Node_ComponentBoundEvent_3_OnColorChanged__DelegateSignature(const struct FLinearColor& NewColor, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_ColorPalette_K2Node_ComponentBoundEvent_3_OnColorChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_ColorPalette_K2Node_ComponentBoundEvent_3_OnColorChanged__DelegateSignature Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_HueSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_HueSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_HueSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_HueSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_SaturationSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_SaturationSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_SaturationSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_SaturationSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_ValueSlider_K2Node_ComponentBoundEvent_6_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_ValueSlider_K2Node_ComponentBoundEvent_6_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_ValueSlider_K2Node_ComponentBoundEvent_6_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_ValueSlider_K2Node_ComponentBoundEvent_6_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_AlphaSlider_K2Node_ComponentBoundEvent_7_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_AlphaSlider_K2Node_ComponentBoundEvent_7_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_AlphaSlider_K2Node_ComponentBoundEvent_7_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_AlphaSlider_K2Node_ComponentBoundEvent_7_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_HexTextBox_K2Node_ComponentBoundEvent_8_OnTextBoxChanged__DelegateSignature
+// (Public)
+// Parameters:
+// const class FText&                      NewText                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_HexTextBox_K2Node_ComponentBoundEvent_8_OnTextBoxChanged__DelegateSignature(const class FText& NewText, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_HexTextBox_K2Node_ComponentBoundEvent_8_OnTextBoxChanged__DelegateSignature");
+
+	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_HexTextBox_K2Node_ComponentBoundEvent_8_OnTextBoxChanged__DelegateSignature Parms{};
+
+	Parms.NewText = std::move(NewText);
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.OnColorDisplayModeChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EColorDisplayMode                 NewDisplayMode                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_ColorProperty_C::OnColorDisplayModeChanged(const EColorDisplayMode NewDisplayMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "OnColorDisplayModeChanged");
+
+	Params::SKEL_WBP_ColorProperty_C_OnColorDisplayModeChanged Parms{};
+
+	Parms.NewDisplayMode = NewDisplayMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "PreConstruct");
+
+	Params::SKEL_WBP_ColorProperty_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.UpdateColorPropertyValue
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FColor&                    NewColor                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bValueChanged                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ColorProperty_C::UpdateColorPropertyValue(const struct FColor& NewColor, const bool bValueChanged)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "UpdateColorPropertyValue");
+
+	Params::SKEL_WBP_ColorProperty_C_UpdateColorPropertyValue Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+	Parms.bValueChanged = bValueChanged;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.CycleColorDisplayMode
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_ColorProperty_C::CycleColorDisplayMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "CycleColorDisplayMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.SetCurrentColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EValueChangedEventType            EventType                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsHSV                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USKEL_WBP_ColorProperty_C::SetCurrentColor(const struct FLinearColor& NewColor, const EValueChangedEventType EventType, bool bIsHSV)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "SetCurrentColor");
+
+	Params::SKEL_WBP_ColorProperty_C_SetCurrentColor Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+	Parms.EventType = EventType;
+	Parms.bIsHSV = bIsHSV;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.UpdateCurrentColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bUpdateHex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USKEL_WBP_ColorProperty_C::UpdateCurrentColor(bool bUpdateHex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "UpdateCurrentColor");
+
+	Params::SKEL_WBP_ColorProperty_C_UpdateCurrentColor Parms{};
+
+	Parms.bUpdateHex = bUpdateHex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

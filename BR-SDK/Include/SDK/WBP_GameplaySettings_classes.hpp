@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GameplaySettings.WBP_GameplaySettings_C
-// 0x0000 (0x0298 - 0x0298)
+// 0x0000 (0x0430 - 0x0430)
 class UWBP_GameplaySettings_C final : public UMenuSettingsPageWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_GameplaySettings_C;
+
+// WidgetBlueprintGeneratedClass WBP_GameplaySettings.SKEL_WBP_GameplaySettings_C
+// 0x0010 (0x0440 - 0x0430)
+class USKEL_WBP_GameplaySettings_C final : public UMenuSettingsPageWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_GameplaySettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_GameplaySettings_C")
+	}
+	static class USKEL_WBP_GameplaySettings_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_GameplaySettings_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_GameplaySettings_C;
 
 SDK_NAMESPACE_END

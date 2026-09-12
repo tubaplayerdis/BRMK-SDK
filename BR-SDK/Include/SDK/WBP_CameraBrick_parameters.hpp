@@ -47,5 +47,16 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CameraBrick_C_UpdateTargetRange;
 
+// Function WBP_CameraBrick.SKEL_WBP_CameraBrick_C.UpdateTargetRange
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_CameraBrick_C_UpdateTargetRange final
+{
+public:
+	bool                                          bHitSomething;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Distance;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CameraBrick_C_UpdateTargetRange;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

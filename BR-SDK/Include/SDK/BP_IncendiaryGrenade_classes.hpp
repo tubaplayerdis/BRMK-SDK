@@ -10,13 +10,42 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Grenade_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_IncendiaryGrenade.SKEL_BP_IncendiaryGrenade_C
+// 0x0010 (0x0378 - 0x0368)
+class ASKEL_BP_IncendiaryGrenade_C final : public ASKEL_BP_Grenade_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_IncendiaryGrenade_C;        // 0x0368(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveBeginPlay();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_IncendiaryGrenade_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_IncendiaryGrenade_C")
+	}
+	static class ASKEL_BP_IncendiaryGrenade_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_IncendiaryGrenade_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_IncendiaryGrenade_C;
+
 // BlueprintGeneratedClass BP_IncendiaryGrenade.BP_IncendiaryGrenade_C
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x0358 - 0x0358)
 class ABP_IncendiaryGrenade_C final : public ABP_Grenade_C
 {
 public:

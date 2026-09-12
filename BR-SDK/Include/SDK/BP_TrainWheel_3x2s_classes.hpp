@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_TrainWheel_3x2s.BP_TrainWheel_3x2s_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C8 - 0x01C8)
 class UBP_TrainWheel_3x2s_C final : public UTrainWheelBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_TrainWheel_3x2s_C;
+
+// BlueprintGeneratedClass BP_TrainWheel_3x2s.SKEL_BP_TrainWheel_3x2s_C
+// 0x0010 (0x01D8 - 0x01C8)
+class USKEL_BP_TrainWheel_3x2s_C final : public UTrainWheelBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01C8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_TrainWheel_3x2s_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_TrainWheel_3x2s_C")
+	}
+	static class USKEL_BP_TrainWheel_3x2s_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_TrainWheel_3x2s_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_TrainWheel_3x2s_C;
 
 SDK_NAMESPACE_END

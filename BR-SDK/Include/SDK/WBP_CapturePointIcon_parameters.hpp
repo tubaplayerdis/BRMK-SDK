@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_CapturePointIcon.SKEL_WBP_CapturePointIcon_C.GetIconDisplayName
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_CapturePointIcon_C_GetIconDisplayName final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CapturePointIcon_C_GetIconDisplayName;
+
 // Function WBP_CapturePointIcon.WBP_CapturePointIcon_C.GetIconDisplayName
 // 0x0098 (0x0098 - 0x0000)
 struct WBP_CapturePointIcon_C_GetIconDisplayName final

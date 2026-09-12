@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -68,6 +68,34 @@ public:
 	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_BrickComboBox_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_BrickComboBox_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickComboBox_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.AddSelectedItemWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_BrickComboBox_C_AddSelectedItemWidget final
+{
+public:
+	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickComboBox_C_AddSelectedItemWidget;
+
+// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.UpdateUseItemList
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickComboBox_C_UpdateUseItemList final
+{
+public:
+	bool                                          bInUseItemList;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickComboBox_C_UpdateUseItemList;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

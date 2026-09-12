@@ -112,4 +112,80 @@ void UWBP_Credits_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WBP_Credits.SKEL_WBP_Credits_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Credits_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Credits_C", "PreConstruct");
+
+	Params::SKEL_WBP_Credits_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Credits.SKEL_WBP_Credits_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_Credits_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Credits_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Credits.SKEL_WBP_Credits_C.OnClickedOfficialWebsite
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Credits_C::OnClickedOfficialWebsite()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Credits_C", "OnClickedOfficialWebsite");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Credits.SKEL_WBP_Credits_C.OnClickedBugTracker
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Credits_C::OnClickedBugTracker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Credits_C", "OnClickedBugTracker");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Credits.SKEL_WBP_Credits_C.OnClickedEULA
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Credits_C::OnClickedEULA()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Credits_C", "OnClickedEULA");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

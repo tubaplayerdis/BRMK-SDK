@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DragStrip.BP_DragStrip_C
-// 0x0008 (0x02B8 - 0x02B0)
+// 0x0008 (0x0398 - 0x0390)
 class ABP_DragStrip_C final : public ADragStrip
 {
 public:
-	class UStaticMeshComponent*                   StartSignal;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StartSignal;                                       // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class UMaterialInstanceDynamic* CreateTreeMID();
@@ -42,5 +43,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_DragStrip_C;
+
+// BlueprintGeneratedClass BP_DragStrip.SKEL_BP_DragStrip_C
+// 0x0018 (0x03A8 - 0x0390)
+class ASKEL_BP_DragStrip_C final : public ADragStrip
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StartSignal;                                       // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UserConstructionScript();
+	class UMaterialInstanceDynamic* CreateTreeMID();
+
+	struct FVector GetInteractionLocation() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_DragStrip_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_DragStrip_C")
+	}
+	static class ASKEL_BP_DragStrip_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_DragStrip_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_DragStrip_C;
 
 SDK_NAMESPACE_END

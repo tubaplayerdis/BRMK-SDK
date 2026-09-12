@@ -11,20 +11,20 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PagedList.WBP_PagedList_C
-// 0x0018 (0x0318 - 0x0300)
+// 0x0020 (0x04B8 - 0x0498)
 class UWBP_PagedList_C final : public UPagedListWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickScrollBox*                        PropertiesScrollBox;                               // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            Throbber;                                          // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickScrollBox*                        PropertiesScrollBox;                               // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            Throbber;                                          // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_PagedList(int32 EntryPoint);
@@ -47,5 +47,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_PagedList_C;
+
+// WidgetBlueprintGeneratedClass WBP_PagedList.SKEL_WBP_PagedList_C
+// 0x0020 (0x04B8 - 0x0498)
+class USKEL_WBP_PagedList_C final : public UPagedListWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickScrollBox*                        PropertiesScrollBox;                               // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            Throbber;                                          // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateIsLoading(bool bNewLoading);
+	void UpdateIsEntrySelected(bool bIsEntrySelected);
+	void BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PagedList_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PagedList_C")
+	}
+	static class USKEL_WBP_PagedList_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PagedList_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PagedList_C;
 
 SDK_NAMESPACE_END

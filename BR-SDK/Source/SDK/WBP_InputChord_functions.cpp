@@ -100,4 +100,68 @@ void UWBP_InputChord_C::AddKeyWidget(class UInputKeyWidget* Widget)
 }
 
 
+// Function WBP_InputChord.SKEL_WBP_InputChord_C.AddKeyWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UInputKeyWidget*                  Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputChord_C::AddKeyWidget(class UInputKeyWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputChord_C", "AddKeyWidget");
+
+	Params::SKEL_WBP_InputChord_C_AddKeyWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputChord.SKEL_WBP_InputChord_C.AddSpacerWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputChord_C::AddSpacerWidget(class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputChord_C", "AddSpacerWidget");
+
+	Params::SKEL_WBP_InputChord_C_AddSpacerWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputChord.SKEL_WBP_InputChord_C.UpdateSpacerColorStyleAndStyleState
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIColorStyle                      NewColorStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      NewStyleState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputChord_C::UpdateSpacerColorStyleAndStyleState(class UUserWidget* Widget, EBrickUIColorStyle NewColorStyle, EBrickUIStyleState NewStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputChord_C", "UpdateSpacerColorStyleAndStyleState");
+
+	Params::SKEL_WBP_InputChord_C_UpdateSpacerColorStyleAndStyleState Parms{};
+
+	Parms.Widget = Widget;
+	Parms.NewColorStyle = NewColorStyle;
+	Parms.NewStyleState = NewStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

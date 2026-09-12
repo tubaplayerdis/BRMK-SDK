@@ -18,11 +18,11 @@
 SDK_NAMESPACE_START
 
 // Class Slate.ButtonWidgetStyle
-// 0x0278 (0x02A8 - 0x0030)
+// 0x0300 (0x0338 - 0x0038)
 class UButtonWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FButtonStyle                           ButtonStyle;                                       // 0x0030(0x0278)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           ButtonStyle;                                       // 0x0038(0x0300)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -41,11 +41,11 @@ public:
 DUMPER7_ASSERTS_UButtonWidgetStyle;
 
 // Class Slate.CheckBoxWidgetStyle
-// 0x0580 (0x05B0 - 0x0030)
+// 0x0698 (0x06D0 - 0x0038)
 class UCheckBoxWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FCheckBoxStyle                         CheckBoxStyle;                                     // 0x0030(0x0580)(Edit, NativeAccessSpecifierPublic)
+	struct FCheckBoxStyle                         CheckBoxStyle;                                     // 0x0038(0x0698)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -64,11 +64,11 @@ public:
 DUMPER7_ASSERTS_UCheckBoxWidgetStyle;
 
 // Class Slate.ComboBoxWidgetStyle
-// 0x03F0 (0x0420 - 0x0030)
+// 0x04D0 (0x0508 - 0x0038)
 class UComboBoxWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboBoxStyle                         ComboBoxStyle;                                     // 0x0030(0x03F0)(Edit, NativeAccessSpecifierPublic)
+	struct FComboBoxStyle                         ComboBoxStyle;                                     // 0x0038(0x04D0)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -87,11 +87,11 @@ public:
 DUMPER7_ASSERTS_UComboBoxWidgetStyle;
 
 // Class Slate.ComboButtonWidgetStyle
-// 0x03B8 (0x03E8 - 0x0030)
+// 0x0470 (0x04A8 - 0x0038)
 class UComboButtonWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboButtonStyle                      ComboButtonStyle;                                  // 0x0030(0x03B8)(Edit, NativeAccessSpecifierPublic)
+	struct FComboButtonStyle                      ComboButtonStyle;                                  // 0x0038(0x0470)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -110,11 +110,11 @@ public:
 DUMPER7_ASSERTS_UComboButtonWidgetStyle;
 
 // Class Slate.EditableTextBoxWidgetStyle
-// 0x07F8 (0x0828 - 0x0030)
+// 0x0940 (0x0978 - 0x0038)
 class UEditableTextBoxWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextBoxStyle                  EditableTextBoxStyle;                              // 0x0030(0x07F8)(Edit, NativeAccessSpecifierPublic)
+	struct FEditableTextBoxStyle                  EditableTextBoxStyle;                              // 0x0038(0x0940)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -133,11 +133,11 @@ public:
 DUMPER7_ASSERTS_UEditableTextBoxWidgetStyle;
 
 // Class Slate.EditableTextWidgetStyle
-// 0x0220 (0x0250 - 0x0030)
+// 0x0278 (0x02B0 - 0x0038)
 class UEditableTextWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextStyle                     EditableTextStyle;                                 // 0x0030(0x0220)(Edit, NativeAccessSpecifierPublic)
+	struct FEditableTextStyle                     EditableTextStyle;                                 // 0x0038(0x0278)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -156,11 +156,11 @@ public:
 DUMPER7_ASSERTS_UEditableTextWidgetStyle;
 
 // Class Slate.ProgressWidgetStyle
-// 0x01A0 (0x01D0 - 0x0030)
+// 0x01E8 (0x0220 - 0x0038)
 class UProgressWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FProgressBarStyle                      ProgressBarStyle;                                  // 0x0030(0x01A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FProgressBarStyle                      ProgressBarStyle;                                  // 0x0038(0x01E8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -179,11 +179,11 @@ public:
 DUMPER7_ASSERTS_UProgressWidgetStyle;
 
 // Class Slate.ScrollBarWidgetStyle
-// 0x04D0 (0x0500 - 0x0030)
+// 0x05A8 (0x05E0 - 0x0038)
 class UScrollBarWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FScrollBarStyle                        ScrollBarStyle;                                    // 0x0030(0x04D0)(Edit, NativeAccessSpecifierPublic)
+	struct FScrollBarStyle                        ScrollBarStyle;                                    // 0x0038(0x05A8)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -202,11 +202,11 @@ public:
 DUMPER7_ASSERTS_UScrollBarWidgetStyle;
 
 // Class Slate.ScrollBoxWidgetStyle
-// 0x0228 (0x0258 - 0x0030)
+// 0x0288 (0x02C0 - 0x0038)
 class UScrollBoxWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FScrollBoxStyle                        ScrollBoxStyle;                                    // 0x0030(0x0228)(Edit, NativeAccessSpecifierPublic)
+	struct FScrollBoxStyle                        ScrollBoxStyle;                                    // 0x0038(0x0288)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -225,12 +225,12 @@ public:
 DUMPER7_ASSERTS_UScrollBoxWidgetStyle;
 
 // Class Slate.SlateSettings
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class USlateSettings final : public UObject
 {
 public:
-	bool                                          bExplicitCanvasChildZOrder;                        // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bExplicitCanvasChildZOrder;                        // 0x0030(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -249,11 +249,11 @@ public:
 DUMPER7_ASSERTS_USlateSettings;
 
 // Class Slate.SpinBoxWidgetStyle
-// 0x02E8 (0x0318 - 0x0030)
+// 0x0360 (0x0398 - 0x0038)
 class USpinBoxWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FSpinBoxStyle                          SpinBoxStyle;                                      // 0x0030(0x02E8)(Edit, NativeAccessSpecifierPublic)
+	struct FSpinBoxStyle                          SpinBoxStyle;                                      // 0x0038(0x0360)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -272,11 +272,11 @@ public:
 DUMPER7_ASSERTS_USpinBoxWidgetStyle;
 
 // Class Slate.TextBlockWidgetStyle
-// 0x0270 (0x02A0 - 0x0030)
+// 0x02C8 (0x0300 - 0x0038)
 class UTextBlockWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FTextBlockStyle                        TextBlockStyle;                                    // 0x0030(0x0270)(Edit, NativeAccessSpecifierPublic)
+	struct FTextBlockStyle                        TextBlockStyle;                                    // 0x0038(0x02C8)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -295,8 +295,8 @@ public:
 DUMPER7_ASSERTS_UTextBlockWidgetStyle;
 
 // Class Slate.ToolMenuBase
-// 0x0000 (0x0028 - 0x0028)
-class UToolMenuBase final : public UObject
+// 0x0000 (0x0030 - 0x0030)
+class UToolMenuBase : public UObject
 {
 public:
 	static class UClass* StaticClass()

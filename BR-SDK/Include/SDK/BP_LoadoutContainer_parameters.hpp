@@ -14,6 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_LoadoutContainer.BP_LoadoutContainer_C.UpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct BP_LoadoutContainer_C_UpdateAnimation final
+{
+public:
+	float                                         InAnimRatio_UpdateAnimation;                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_LoadoutContainer_C_UpdateAnimation;
+
 // Function BP_LoadoutContainer.BP_LoadoutContainer_C.ExecuteUbergraph_BP_LoadoutContainer
 // 0x000C (0x000C - 0x0000)
 struct BP_LoadoutContainer_C_ExecuteUbergraph_BP_LoadoutContainer final
@@ -25,14 +34,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_LoadoutContainer_C_ExecuteUbergraph_BP_LoadoutContainer;
 
-// Function BP_LoadoutContainer.BP_LoadoutContainer_C.UpdateAnimation
+// Function BP_LoadoutContainer.SKEL_BP_LoadoutContainer_C.UpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
-struct BP_LoadoutContainer_C_UpdateAnimation final
+struct SKEL_BP_LoadoutContainer_C_UpdateAnimation final
 {
 public:
-	float                                         InAnimRatio;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InAnimRatio_UpdateAnimation;                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BP_LoadoutContainer_C_UpdateAnimation;
+DUMPER7_ASSERTS_SKEL_BP_LoadoutContainer_C_UpdateAnimation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

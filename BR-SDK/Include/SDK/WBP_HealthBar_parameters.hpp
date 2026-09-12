@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -75,6 +75,33 @@ public:
 	float                                         NewHealth;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HealthBar_C_UpdateHealth;
+
+// Function WBP_HealthBar.SKEL_WBP_HealthBar_C.UpdateHealth
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_HealthBar_C_UpdateHealth final
+{
+public:
+	float                                         NewHealth;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HealthBar_C_UpdateHealth;
+
+// Function WBP_HealthBar.SKEL_WBP_HealthBar_C.UpdateCanBeDamaged
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_HealthBar_C_UpdateCanBeDamaged final
+{
+public:
+	bool                                          bNewCanBeDamaged;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HealthBar_C_UpdateCanBeDamaged;
+
+// Function WBP_HealthBar.SKEL_WBP_HealthBar_C.UpdateHealingState
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_HealthBar_C_UpdateHealingState final
+{
+public:
+	ECharacterHealingState                        NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HealthBar_C_UpdateHealingState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

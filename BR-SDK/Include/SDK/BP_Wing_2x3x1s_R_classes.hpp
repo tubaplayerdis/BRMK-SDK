@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Wing_2x3x1s_R.BP_Wing_2x3x1s_R_C
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01A0 - 0x01A0)
 class UBP_Wing_2x3x1s_R_C final : public UWingBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_Wing_2x3x1s_R_C;
+
+// BlueprintGeneratedClass BP_Wing_2x3x1s_R.SKEL_BP_Wing_2x3x1s_R_C
+// 0x0010 (0x01B0 - 0x01A0)
+class USKEL_BP_Wing_2x3x1s_R_C final : public UWingBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Wing_2x3x1s_R_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Wing_2x3x1s_R_C")
+	}
+	static class USKEL_BP_Wing_2x3x1s_R_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Wing_2x3x1s_R_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Wing_2x3x1s_R_C;
 
 SDK_NAMESPACE_END

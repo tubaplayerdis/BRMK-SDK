@@ -16,26 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_MatchState.WBP_MatchState_C.UpdateMatchState
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_MatchState_C_UpdateMatchState final
-{
-public:
-	class FText                                   NewDisplayText_UpdateMatchState;                   // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	EBrickUIColorStyle                            NewColorStyle_UpdateMatchState;                    // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFadeOut_UpdateMatchState;                         // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_MatchState_C_UpdateMatchState;
-
-// Function WBP_MatchState.WBP_MatchState_C.OnAnimationFinished
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_MatchState_C_OnAnimationFinished final
-{
-public:
-	const class UWidgetAnimation*                 Animation_OnAnimationFinished;                     // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_MatchState_C_OnAnimationFinished;
-
 // Function WBP_MatchState.WBP_MatchState_C.ExecuteUbergraph_WBP_MatchState
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_MatchState_C_ExecuteUbergraph_WBP_MatchState final
@@ -55,6 +35,46 @@ public:
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_MatchState_C_ExecuteUbergraph_WBP_MatchState;
+
+// Function WBP_MatchState.WBP_MatchState_C.OnAnimationFinished
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MatchState_C_OnAnimationFinished final
+{
+public:
+	const class UWidgetAnimation*                 Animation;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MatchState_C_OnAnimationFinished;
+
+// Function WBP_MatchState.WBP_MatchState_C.UpdateMatchState
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_MatchState_C_UpdateMatchState final
+{
+public:
+	class FText                                   NewDisplayText;                                    // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFadeOut;                                          // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_MatchState_C_UpdateMatchState;
+
+// Function WBP_MatchState.SKEL_WBP_MatchState_C.UpdateMatchState
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_MatchState_C_UpdateMatchState final
+{
+public:
+	class FText                                   NewDisplayText;                                    // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFadeOut;                                          // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_MatchState_C_UpdateMatchState;
+
+// Function WBP_MatchState.SKEL_WBP_MatchState_C.OnAnimationFinished
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_MatchState_C_OnAnimationFinished final
+{
+public:
+	const class UWidgetAnimation*                 Animation;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_MatchState_C_OnAnimationFinished;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,6 +16,120 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_RC_Sequence_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_C", "ReceiveTick");
+
+	Params::SKEL_BP_RC_Sequence_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_RC_Sequence_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.KickVehicle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Impulse                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASKEL_BP_RC_Sequence_C::KickVehicle(const struct FVector& Impulse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_C", "KickVehicle");
+
+	Params::SKEL_BP_RC_Sequence_C_KickVehicle Parms{};
+
+	Parms.Impulse = std::move(Impulse);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.GetLookAtTarget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FVector ASKEL_BP_RC_Sequence_C::GetLookAtTarget() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_C", "GetLookAtTarget");
+
+	Params::SKEL_BP_RC_Sequence_C_GetLookAtTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.GetTrailerRotation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+struct FRotator ASKEL_BP_RC_Sequence_C::GetTrailerRotation() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_C", "GetTrailerRotation");
+
+	Params::SKEL_BP_RC_Sequence_C_GetTrailerRotation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.IsVehicleDestroyed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ASKEL_BP_RC_Sequence_C::IsVehicleDestroyed() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_C", "IsVehicleDestroyed");
+
+	Params::SKEL_BP_RC_Sequence_C_IsVehicleDestroyed Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_RC_Sequence.BP_RC_Sequence_C.ExecuteUbergraph_BP_RC_Sequence
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

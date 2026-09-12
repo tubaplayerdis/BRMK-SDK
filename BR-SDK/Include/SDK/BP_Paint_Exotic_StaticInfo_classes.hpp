@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Paint_StaticInfo_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Paint_Exotic_StaticInfo.SKEL_BP_Paint_Exotic_StaticInfo_C
+// 0x0010 (0x03E0 - 0x03D0)
+class USKEL_BP_Paint_Exotic_StaticInfo_C final : public USKEL_BP_Paint_StaticInfo_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Paint_Exotic_StaticInfo_C;  // 0x03D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Paint_Exotic_StaticInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Paint_Exotic_StaticInfo_C")
+	}
+	static class USKEL_BP_Paint_Exotic_StaticInfo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Paint_Exotic_StaticInfo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Paint_Exotic_StaticInfo_C;
+
 // BlueprintGeneratedClass BP_Paint_Exotic_StaticInfo.BP_Paint_Exotic_StaticInfo_C
-// 0x0000 (0x0390 - 0x0390)
+// 0x0000 (0x03C0 - 0x03C0)
 class UBP_Paint_Exotic_StaticInfo_C final : public UBP_Paint_StaticInfo_C
 {
 public:

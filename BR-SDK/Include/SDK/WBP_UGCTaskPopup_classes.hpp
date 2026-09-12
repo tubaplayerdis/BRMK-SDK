@@ -18,13 +18,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_UGCTaskPopup.WBP_UGCTaskPopup_C
-// 0x0018 (0x02E0 - 0x02C8)
+// 0x0020 (0x0480 - 0x0460)
 class UWBP_UGCTaskPopup_C final : public UUGCTaskPopupWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickSliderReadOnly_C*             Slider;                                            // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      ConfirmButton;                                     // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickSliderReadOnly_C*             Slider;                                            // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ConfirmButton;                                     // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_UGCTaskPopup(int32 EntryPoint);
@@ -47,5 +47,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_UGCTaskPopup_C;
+
+// WidgetBlueprintGeneratedClass WBP_UGCTaskPopup.SKEL_WBP_UGCTaskPopup_C
+// 0x0020 (0x0480 - 0x0460)
+class USKEL_WBP_UGCTaskPopup_C final : public UUGCTaskPopupWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickSliderReadOnly_C*             Slider;                                            // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ConfirmButton;                                     // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UpdateProgress(float NewProgress);
+	void Construct();
+	void UpdateIsFinished(bool bNewFinished, bool bNewSuccess);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_UGCTaskPopup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_UGCTaskPopup_C")
+	}
+	static class USKEL_WBP_UGCTaskPopup_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_UGCTaskPopup_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_UGCTaskPopup_C;
 
 SDK_NAMESPACE_END

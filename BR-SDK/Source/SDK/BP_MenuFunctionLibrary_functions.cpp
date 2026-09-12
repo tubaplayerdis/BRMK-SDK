@@ -423,4 +423,411 @@ class UMenuButtonWidget* UBP_MenuFunctionLibrary_C::CreateLinkButton(class UMenu
 }
 
 
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateBackButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateBackButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateBackButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateBackButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateApplyButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateApplyButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateApplyButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateApplyButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateConfirmButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateConfirmButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateConfirmButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateConfirmButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateCancelButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateCancelButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateCancelButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateCancelButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateExitButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateExitButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateExitButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateExitButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateContinueButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateContinueButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateContinueButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateContinueButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateRefreshButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateRefreshButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateRefreshButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateRefreshButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateRetryButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateRetryButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateRetryButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateRetryButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateShowProfileButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateShowProfileButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateShowProfileButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateShowProfileButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateRevertButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateRevertButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateRevertButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateRevertButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateEditButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateEditButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateEditButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateEditButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateViewInBrowserButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateViewInBrowserButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateViewInBrowserButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateViewInBrowserButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateImportButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateImportButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateImportButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateImportButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateDisplayModeButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateDisplayModeButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateDisplayModeButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateDisplayModeButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateLinkButton
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      DisplayText                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const TDelegate<void()>&                Delegate                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateLinkButton(class UMenuButtonPanelWidget* Widget, const class FText& DisplayText, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateLinkButton");
+
+	Params::SKEL_BP_MenuFunctionLibrary_C_CreateLinkButton Parms{};
+
+	Parms.Widget = Widget;
+	Parms.DisplayText = std::move(DisplayText);
+	Parms.Delegate = Delegate;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

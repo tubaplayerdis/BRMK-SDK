@@ -228,4 +228,196 @@ void UWBP_PagedListHeader_C::UpdateEntry(const class FText& InTitleText, bool bI
 }
 
 
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateEntry
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      InTitleText                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bInHasEntry                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInHasUnsavedChanges                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::UpdateEntry(const class FText& InTitleText, bool bInHasEntry, bool bInHasUnsavedChanges)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "UpdateEntry");
+
+	Params::SKEL_WBP_PagedListHeader_C_UpdateEntry Parms{};
+
+	Parms.InTitleText = std::move(InTitleText);
+	Parms.bInHasEntry = bInHasEntry;
+	Parms.bInHasUnsavedChanges = bInHasUnsavedChanges;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateNumObjects
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   InNumObjects                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InMaxNumObjects                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InNumHiddenObjects                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InNumObjectsWithAerodynamics                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::UpdateNumObjects(int32 InNumObjects, int32 InMaxNumObjects, int32 InNumHiddenObjects, int32 InNumObjectsWithAerodynamics)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "UpdateNumObjects");
+
+	Params::SKEL_WBP_PagedListHeader_C_UpdateNumObjects Parms{};
+
+	Parms.InNumObjects = InNumObjects;
+	Parms.InMaxNumObjects = InMaxNumObjects;
+	Parms.InNumHiddenObjects = InNumHiddenObjects;
+	Parms.InNumObjectsWithAerodynamics = InNumObjectsWithAerodynamics;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateDimensions
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   InDimensions                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InMaxDimensions                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::UpdateDimensions(const struct FVector& InDimensions, const struct FVector& InMaxDimensions)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "UpdateDimensions");
+
+	Params::SKEL_WBP_PagedListHeader_C_UpdateDimensions Parms{};
+
+	Parms.InDimensions = std::move(InDimensions);
+	Parms.InMaxDimensions = std::move(InMaxDimensions);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdatePrice
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   InPrice                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InMoney                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::UpdatePrice(float InPrice, float InMoney)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "UpdatePrice");
+
+	Params::SKEL_WBP_PagedListHeader_C_UpdatePrice Parms{};
+
+	Parms.InPrice = InPrice;
+	Parms.InMoney = InMoney;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateMass
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   InMass                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InMaxMass                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::UpdateMass(float InMass, float InMaxMass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "UpdateMass");
+
+	Params::SKEL_WBP_PagedListHeader_C_UpdateMass Parms{};
+
+	Parms.InMass = InMass;
+	Parms.InMaxMass = InMaxMass;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "PreConstruct");
+
+	Params::SKEL_WBP_PagedListHeader_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedListHeader_C::BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_PagedListHeader_C_BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateClearButton
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInIsEnabled                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USKEL_WBP_PagedListHeader_C::UpdateClearButton(bool bInIsEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "UpdateClearButton");
+
+	Params::SKEL_WBP_PagedListHeader_C_UpdateClearButton Parms{};
+
+	Parms.bInIsEnabled = bInIsEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_PagedListHeader_C::BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeader_C", "BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

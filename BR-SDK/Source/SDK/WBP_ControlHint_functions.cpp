@@ -96,4 +96,64 @@ void UWBP_ControlHint_C::SetIconSize(float NewSize)
 }
 
 
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateInputChordVisibility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ControlHint_C::UpdateInputChordVisibility(bool bNewVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "UpdateInputChordVisibility");
+
+	Params::SKEL_WBP_ControlHint_C_UpdateInputChordVisibility Parms{};
+
+	Parms.bNewVisible = bNewVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateTextVisibility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ControlHint_C::UpdateTextVisibility(bool bNewVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "UpdateTextVisibility");
+
+	Params::SKEL_WBP_ControlHint_C_UpdateTextVisibility Parms{};
+
+	Parms.bNewVisible = bNewVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.SetIconSize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   NewSize                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_ControlHint_C::SetIconSize(float NewSize)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "SetIconSize");
+
+	Params::SKEL_WBP_ControlHint_C_SetIconSize Parms{};
+
+	Parms.NewSize = NewSize;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

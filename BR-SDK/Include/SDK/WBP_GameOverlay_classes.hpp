@@ -19,42 +19,42 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GameOverlay.WBP_GameOverlay_C
-// 0x0038 (0x0350 - 0x0318)
+// 0x0040 (0x04F0 - 0x04B0)
 class UWBP_GameOverlay_C final : public UGameOverlayWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    FriendlyTeamsBox;                                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickHorizontalBox*                    HostileTeamsBox;                                   // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickVerticalBox*                      HUDNotificationsBox;                               // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickVerticalBox*                      MatchStateBox;                                     // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             MatchTimerSlot;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    FriendlyTeamsBox;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    HostileTeamsBox;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickVerticalBox*                      HUDNotificationsBox;                               // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickVerticalBox*                      MatchStateBox;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             MatchTimerSlot;                                    // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void AddHUDNotification(class UHUDNotificationWidget* Widget_AddHUDNotification, int32 Index_AddHUDNotification);
-	void UpdateSlomoNotification(class UHUDNotificationWidget* Widget_UpdateSlomoNotification, float SlomoSpeed_UpdateSlomoNotification, bool bInvertSpeed_UpdateSlomoNotification, bool bSlomoEnabled_UpdateSlomoNotification, bool bIsPaused_UpdateSlomoNotification);
-	void UpdateMoneyNotification(class UHUDNotificationWidget* Widget_UpdateMoneyNotification, float NewAmount_UpdateMoneyNotification, float AmountAdded_UpdateMoneyNotification);
-	void UpdateFreeCamNotification(class UHUDNotificationWidget* Widget_UpdateFreeCamNotification, bool bIsInFreeCam_UpdateFreeCamNotification, EFreeCamMode InFreeCamMode_UpdateFreeCamNotification, bool bIsFixedCam_UpdateFreeCamNotification);
-	void UpdateThumbnailNotification(class UHUDNotificationWidget* Widget_UpdateThumbnailNotification);
-	void AddMatchTimerWidget(class UMatchTimerWidget* Widget_AddMatchTimerWidget);
-	void UpdateVehicleCameraNotification(class UHUDNotificationWidget* Widget_UpdateVehicleCameraNotification, const class FText& CameraDisplayName_UpdateVehicleCameraNotification);
-	void UpdateVehicleDownloadNotification(class UHUDNotificationWidget* Widget_UpdateVehicleDownloadNotification, const class FText& VehicleDisplayName_UpdateVehicleDownloadNotification, float Progress_UpdateVehicleDownloadNotification);
-	void AddInputHelpWidget(class UInputHelpWidget* Widget_AddInputHelpWidget);
-	void AddChatWidget(class UChatWidget* Widget_AddChatWidget);
-	void UpdateSaveNotification(class UHUDNotificationWidget* Widget_UpdateSaveNotification, bool bSuccess_UpdateSaveNotification, bool bIsAutoSave_UpdateSaveNotification);
-	void UpdateCameraSpeedNotification(class UHUDNotificationWidget* Widget_UpdateCameraSpeedNotification, float NewSpeedRatio_UpdateCameraSpeedNotification, float NewMaxSpeed_UpdateCameraSpeedNotification);
-	void UpdateCameraZoomNotification(class UHUDNotificationWidget* Widget_UpdateCameraZoomNotification, float NewZoomRatio_UpdateCameraZoomNotification);
-	void AddMatchStateWidget(class UMatchStateWidget* Widget_AddMatchStateWidget);
-	void AddTeamScoreWidget(class UTeamScoreWidget* Widget_AddTeamScoreWidget, ETeamAttitude TeamAttitude_AddTeamScoreWidget);
-	void UpdateHUDVisibilityNotification(class UHUDNotificationWidget* Widget_UpdateHUDVisibilityNotification, EHUDVisibility NewVisibility_UpdateHUDVisibilityNotification);
-	void UpdateCameraModeNotification(class UHUDNotificationWidget* Widget_UpdateCameraModeNotification, ECameraMode NewMode_UpdateCameraModeNotification);
-	void UpdateProjectileCameraNotification(class UHUDNotificationWidget* Widget_UpdateProjectileCameraNotification, bool bNewEnabled_UpdateProjectileCameraNotification);
-	void UpdateRestartFailedNotification(class UHUDNotificationWidget* Widget_UpdateRestartFailedNotification, const class FText& Message_UpdateRestartFailedNotification);
-	void UpdateRespawnDelayNotification(class UHUDNotificationWidget* Widget_UpdateRespawnDelayNotification, float Remaining_UpdateRespawnDelayNotification);
-	void UpdateVehicleSeatNotification(class UHUDNotificationWidget* Widget_UpdateVehicleSeatNotification, const class FText& SeatDisplayName_UpdateVehicleSeatNotification);
-	void UpdateVehicleConstructionNotification(class UHUDNotificationWidget* Widget_UpdateVehicleConstructionNotification, const class FText& VehicleDisplayName_UpdateVehicleConstructionNotification, float Progress_UpdateVehicleConstructionNotification);
 	void ExecuteUbergraph_WBP_GameOverlay(int32 EntryPoint);
+	void UpdateVehicleConstructionNotification(class UHUDNotificationWidget* Widget, const class FText& VehicleDisplayName, float Progress);
+	void UpdateVehicleSeatNotification(class UHUDNotificationWidget* Widget, const class FText& SeatDisplayName);
+	void UpdateRespawnDelayNotification(class UHUDNotificationWidget* Widget, float Remaining);
+	void UpdateRestartFailedNotification(class UHUDNotificationWidget* Widget, const class FText& Message);
+	void UpdateProjectileCameraNotification(class UHUDNotificationWidget* Widget, bool bNewEnabled);
+	void UpdateCameraModeNotification(class UHUDNotificationWidget* Widget, ECameraMode NewMode);
+	void UpdateHUDVisibilityNotification(class UHUDNotificationWidget* Widget, EHUDVisibility NewVisibility);
+	void AddTeamScoreWidget(class UTeamScoreWidget* Widget, ETeamAttitude TeamAttitude);
+	void AddMatchStateWidget(class UMatchStateWidget* Widget);
+	void UpdateCameraZoomNotification(class UHUDNotificationWidget* Widget, float NewZoomRatio);
+	void UpdateCameraSpeedNotification(class UHUDNotificationWidget* Widget, float NewSpeedRatio, float NewMaxSpeed);
+	void UpdateSaveNotification(class UHUDNotificationWidget* Widget, bool bSuccess, bool bIsAutoSave);
+	void AddChatWidget(class UChatWidget* Widget);
+	void AddInputHelpWidget(class UInputHelpWidget* Widget);
+	void UpdateVehicleDownloadNotification(class UHUDNotificationWidget* Widget, const class FText& VehicleDisplayName, float Progress);
+	void UpdateVehicleCameraNotification(class UHUDNotificationWidget* Widget, const class FText& CameraDisplayName);
+	void AddMatchTimerWidget(class UMatchTimerWidget* Widget);
+	void UpdateThumbnailNotification(class UHUDNotificationWidget* Widget);
+	void UpdateFreeCamNotification(class UHUDNotificationWidget* Widget, bool bIsInFreeCam, EFreeCamMode InFreeCamMode, bool bIsFixedCam);
+	void UpdateMoneyNotification(class UHUDNotificationWidget* Widget, float NewAmount, float AmountAdded);
+	void UpdateSlomoNotification(class UHUDNotificationWidget* Widget, float SlomoSpeed, bool bInvertSpeed, bool bSlomoEnabled, bool bIsPaused);
+	void AddHUDNotification(class UHUDNotificationWidget* Widget, int32 Index_0);
 
 public:
 	static class UClass* StaticClass()
@@ -71,5 +71,58 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_GameOverlay_C;
+
+// WidgetBlueprintGeneratedClass WBP_GameOverlay.SKEL_WBP_GameOverlay_C
+// 0x0040 (0x04F0 - 0x04B0)
+class USKEL_WBP_GameOverlay_C final : public UGameOverlayWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    FriendlyTeamsBox;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    HostileTeamsBox;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickVerticalBox*                      HUDNotificationsBox;                               // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickVerticalBox*                      MatchStateBox;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             MatchTimerSlot;                                    // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddHUDNotification(class UHUDNotificationWidget* Widget, int32 Index_0);
+	void UpdateSlomoNotification(class UHUDNotificationWidget* Widget, float SlomoSpeed, bool bInvertSpeed, bool bSlomoEnabled, bool bIsPaused);
+	void UpdateMoneyNotification(class UHUDNotificationWidget* Widget, float NewAmount, float AmountAdded);
+	void UpdateFreeCamNotification(class UHUDNotificationWidget* Widget, bool bIsInFreeCam, EFreeCamMode InFreeCamMode, bool bIsFixedCam);
+	void UpdateThumbnailNotification(class UHUDNotificationWidget* Widget);
+	void AddMatchTimerWidget(class UMatchTimerWidget* Widget);
+	void UpdateVehicleCameraNotification(class UHUDNotificationWidget* Widget, const class FText& CameraDisplayName);
+	void UpdateVehicleDownloadNotification(class UHUDNotificationWidget* Widget, const class FText& VehicleDisplayName, float Progress);
+	void AddInputHelpWidget(class UInputHelpWidget* Widget);
+	void AddChatWidget(class UChatWidget* Widget);
+	void UpdateSaveNotification(class UHUDNotificationWidget* Widget, bool bSuccess, bool bIsAutoSave);
+	void UpdateCameraSpeedNotification(class UHUDNotificationWidget* Widget, float NewSpeedRatio, float NewMaxSpeed);
+	void UpdateCameraZoomNotification(class UHUDNotificationWidget* Widget, float NewZoomRatio);
+	void AddMatchStateWidget(class UMatchStateWidget* Widget);
+	void AddTeamScoreWidget(class UTeamScoreWidget* Widget, ETeamAttitude TeamAttitude);
+	void UpdateHUDVisibilityNotification(class UHUDNotificationWidget* Widget, EHUDVisibility NewVisibility);
+	void UpdateCameraModeNotification(class UHUDNotificationWidget* Widget, ECameraMode NewMode);
+	void UpdateProjectileCameraNotification(class UHUDNotificationWidget* Widget, bool bNewEnabled);
+	void UpdateRestartFailedNotification(class UHUDNotificationWidget* Widget, const class FText& Message);
+	void UpdateRespawnDelayNotification(class UHUDNotificationWidget* Widget, float Remaining);
+	void UpdateVehicleSeatNotification(class UHUDNotificationWidget* Widget, const class FText& SeatDisplayName);
+	void UpdateVehicleConstructionNotification(class UHUDNotificationWidget* Widget, const class FText& VehicleDisplayName, float Progress);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_GameOverlay_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_GameOverlay_C")
+	}
+	static class USKEL_WBP_GameOverlay_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_GameOverlay_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_GameOverlay_C;
 
 SDK_NAMESPACE_END

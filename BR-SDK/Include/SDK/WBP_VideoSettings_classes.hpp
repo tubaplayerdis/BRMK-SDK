@@ -18,13 +18,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VideoSettings.WBP_VideoSettings_C
-// 0x0018 (0x02B0 - 0x0298)
+// 0x0020 (0x0450 - 0x0430)
 class UWBP_VideoSettings_C final : public UVideoSettingsPageWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMenuButtonWidget*                      ApplyButton;                                       // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPopupHandle                           SaveSettingsPopupHandle;                           // 0x02A8(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      ApplyButton;                                       // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPopupHandle                           SaveSettingsPopupHandle;                           // 0x0448(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WBP_VideoSettings(int32 EntryPoint);
@@ -49,5 +49,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_VideoSettings_C;
+
+// WidgetBlueprintGeneratedClass WBP_VideoSettings.SKEL_WBP_VideoSettings_C
+// 0x0020 (0x0450 - 0x0430)
+class USKEL_WBP_VideoSettings_C final : public UVideoSettingsPageWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      ApplyButton;                                       // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPopupHandle                           SaveSettingsPopupHandle;                           // 0x0448(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+
+public:
+	void Construct();
+	void UpdateApplyButton(bool bCanApply);
+	void OnSaveSettingsPopupClosed(EPopupResult Result);
+	void AddProperties();
+	bool StepBack();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_VideoSettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_VideoSettings_C")
+	}
+	static class USKEL_WBP_VideoSettings_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_VideoSettings_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_VideoSettings_C;
 
 SDK_NAMESPACE_END

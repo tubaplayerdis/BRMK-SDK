@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_GameInstance.SKEL_BP_GameInstance_C
+// 0x0010 (0x0630 - 0x0620)
+class USKEL_BP_GameInstance_C final : public UBrickGameInstance
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0620(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_GameInstance_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_GameInstance_C")
+	}
+	static class USKEL_BP_GameInstance_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_GameInstance_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_GameInstance_C;
+
 // BlueprintGeneratedClass BP_GameInstance.BP_GameInstance_C
-// 0x0000 (0x0608 - 0x0608)
+// 0x0000 (0x0620 - 0x0620)
 class UBP_GameInstance_C final : public UBrickGameInstance
 {
 public:

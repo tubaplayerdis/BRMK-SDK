@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Player.WBP_Player_C
-// 0x0010 (0x0530 - 0x0520)
+// 0x0010 (0x06E0 - 0x06D0)
 class UWBP_Player_C final : public UPlayerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0520(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_Player(int32 EntryPoint);
@@ -47,5 +47,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Player_C;
+
+// WidgetBlueprintGeneratedClass WBP_Player.SKEL_WBP_Player_C
+// 0x0010 (0x06E0 - 0x06D0)
+class USKEL_WBP_Player_C final : public UPlayerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void AddRestrictedAreaWidget(class URestrictedAreaWidget* InWidget);
+	void AddDashboardWidget(class UDashboardWidget* InWidget);
+	void AddCrosshairWidget(class UCrosshairWidget* InWidget);
+	void AddCurrentItemWidget(class UCurrentItemWidget* InWidget);
+	void AddHealthBarWidget(class UHealthBarWidget* InWidget);
+	void AddCameraBrickWidget(class UCameraBrickWidget* InWidget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Player_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Player_C")
+	}
+	static class USKEL_WBP_Player_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Player_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Player_C;
 
 SDK_NAMESPACE_END

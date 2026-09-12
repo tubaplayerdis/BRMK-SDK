@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_SandboxGameMode.BP_SandboxGameMode_C
-// 0x0008 (0x0450 - 0x0448)
+// 0x0008 (0x0538 - 0x0530)
 class ABP_SandboxGameMode_C final : public ASandboxGameMode
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_SandboxGameMode_C;
+
+// BlueprintGeneratedClass BP_SandboxGameMode.SKEL_BP_SandboxGameMode_C
+// 0x0018 (0x0548 - 0x0530)
+class ASKEL_BP_SandboxGameMode_C final : public ASandboxGameMode
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0530(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_SandboxGameMode_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_SandboxGameMode_C")
+	}
+	static class ASKEL_BP_SandboxGameMode_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_SandboxGameMode_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_SandboxGameMode_C;
 
 SDK_NAMESPACE_END

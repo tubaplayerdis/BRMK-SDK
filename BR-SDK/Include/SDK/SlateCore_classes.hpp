@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class SlateCore.FontBulkData
-// 0x0050 (0x0078 - 0x0028)
+// 0x00C0 (0x00F0 - 0x0030)
 class UFontBulkData final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xC0];                                      // 0x0030(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -97,7 +97,7 @@ public:
 DUMPER7_ASSERTS_IFontProviderInterface;
 
 // Class SlateCore.SlateTypes
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class USlateTypes final : public UObject
 {
 public:
@@ -117,11 +117,11 @@ public:
 DUMPER7_ASSERTS_USlateTypes;
 
 // Class SlateCore.SlateWidgetStyleAsset
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class USlateWidgetStyleAsset final : public UObject
 {
 public:
-	class USlateWidgetStyleContainerBase*         CustomStyle;                                       // 0x0028(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USlateWidgetStyleContainerBase*         CustomStyle;                                       // 0x0030(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -140,11 +140,11 @@ public:
 DUMPER7_ASSERTS_USlateWidgetStyleAsset;
 
 // Class SlateCore.SlateWidgetStyleContainerBase
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class USlateWidgetStyleContainerBase : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuFunctionLibrary.BP_MenuFunctionLibrary_C
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UBP_MenuFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
@@ -51,5 +51,42 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_MenuFunctionLibrary_C;
+
+// BlueprintGeneratedClass BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C
+// 0x0000 (0x0030 - 0x0030)
+class USKEL_BP_MenuFunctionLibrary_C final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UMenuButtonWidget* CreateBackButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateApplyButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateConfirmButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateCancelButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateExitButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateContinueButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateRefreshButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateRetryButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateShowProfileButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateRevertButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateEditButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateViewInBrowserButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateImportButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateDisplayModeButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+	static class UMenuButtonWidget* CreateLinkButton(class UMenuButtonPanelWidget* Widget, const class FText& DisplayText, const TDelegate<void()>& Delegate, class UObject* __WorldContext);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_MenuFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_MenuFunctionLibrary_C")
+	}
+	static class USKEL_BP_MenuFunctionLibrary_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_MenuFunctionLibrary_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_MenuFunctionLibrary_C;
 
 SDK_NAMESPACE_END

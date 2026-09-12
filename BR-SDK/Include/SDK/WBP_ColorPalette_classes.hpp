@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ColorPalette.WBP_ColorPalette_C
-// 0x0000 (0x02B8 - 0x02B8)
+// 0x0000 (0x0460 - 0x0460)
 class UWBP_ColorPalette_C final : public UColorPaletteWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ColorPalette_C;
+
+// WidgetBlueprintGeneratedClass WBP_ColorPalette.SKEL_WBP_ColorPalette_C
+// 0x0010 (0x0470 - 0x0460)
+class USKEL_WBP_ColorPalette_C final : public UColorPaletteWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ColorPalette_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ColorPalette_C")
+	}
+	static class USKEL_WBP_ColorPalette_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ColorPalette_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ColorPalette_C;
 
 SDK_NAMESPACE_END

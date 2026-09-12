@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Class MeshDescription.MeshDescription
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UMeshDescription final : public UObject
 {
 public:
@@ -36,11 +36,11 @@ public:
 DUMPER7_ASSERTS_UMeshDescription;
 
 // Class MeshDescription.MeshDescriptionBase
-// 0x0368 (0x0390 - 0x0028)
+// 0x0368 (0x0398 - 0x0030)
 class UMeshDescriptionBase : public UObject
 {
 public:
-	uint8                                         Pad_28[0x368];                                     // 0x0028(0x0368)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x368];                                     // 0x0030(0x0368)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ComputePolygonTriangulation(const struct FPolygonID& PolygonID);

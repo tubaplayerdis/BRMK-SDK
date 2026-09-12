@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_OffroadWheel_5x2.BP_OffroadWheel_5x2_C
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x01E8 - 0x01E8)
 class UBP_OffroadWheel_5x2_C final : public UCarWheelBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_OffroadWheel_5x2_C;
+
+// BlueprintGeneratedClass BP_OffroadWheel_5x2.SKEL_BP_OffroadWheel_5x2_C
+// 0x0010 (0x01F8 - 0x01E8)
+class USKEL_BP_OffroadWheel_5x2_C final : public UCarWheelBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01E8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_OffroadWheel_5x2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_OffroadWheel_5x2_C")
+	}
+	static class USKEL_BP_OffroadWheel_5x2_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_OffroadWheel_5x2_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_OffroadWheel_5x2_C;
 
 SDK_NAMESPACE_END

@@ -16,6 +16,94 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_StructProperty.SKEL_WBP_StructProperty_C.AddPropertyContainerWidget
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_AddPropertyContainerWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_StructProperty_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_StructProperty_C", "AddPropertyContainerWidget");
+
+	Params::SKEL_WBP_StructProperty_C_AddPropertyContainerWidget Parms{};
+
+	Parms.Widget_AddPropertyContainerWidget = Widget_AddPropertyContainerWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_StructProperty.SKEL_WBP_StructProperty_C.UpdatePropertyContainerWidgetSlot
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_UpdatePropertyContainerWidgetSlot               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_UpdatePropertyContainerWidgetSlot                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NumPerRow_UpdatePropertyContainerWidgetSlot            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_StructProperty_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_StructProperty_C", "UpdatePropertyContainerWidgetSlot");
+
+	Params::SKEL_WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot Parms{};
+
+	Parms.Widget_UpdatePropertyContainerWidgetSlot = Widget_UpdatePropertyContainerWidgetSlot;
+	Parms.Index_UpdatePropertyContainerWidgetSlot = Index_UpdatePropertyContainerWidgetSlot;
+	Parms.NumPerRow_UpdatePropertyContainerWidgetSlot = NumPerRow_UpdatePropertyContainerWidgetSlot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_StructProperty.WBP_StructProperty_C.UpdatePropertyContainerWidgetSlot
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_UpdatePropertyContainerWidgetSlot               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_UpdatePropertyContainerWidgetSlot                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   NumPerRow_UpdatePropertyContainerWidgetSlot            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_StructProperty_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_StructProperty_C", "UpdatePropertyContainerWidgetSlot");
+
+	Params::WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot Parms{};
+
+	Parms.Widget_UpdatePropertyContainerWidgetSlot = Widget_UpdatePropertyContainerWidgetSlot;
+	Parms.Index_UpdatePropertyContainerWidgetSlot = Index_UpdatePropertyContainerWidgetSlot;
+	Parms.NumPerRow_UpdatePropertyContainerWidgetSlot = NumPerRow_UpdatePropertyContainerWidgetSlot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_StructProperty.WBP_StructProperty_C.AddPropertyContainerWidget
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_AddPropertyContainerWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_StructProperty_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_StructProperty_C", "AddPropertyContainerWidget");
+
+	Params::WBP_StructProperty_C_AddPropertyContainerWidget Parms{};
+
+	Parms.Widget_AddPropertyContainerWidget = Widget_AddPropertyContainerWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_StructProperty.WBP_StructProperty_C.ExecuteUbergraph_WBP_StructProperty
 // (Final, UbergraphFunction)
 // Parameters:
@@ -31,50 +119,6 @@ void UWBP_StructProperty_C::ExecuteUbergraph_WBP_StructProperty(int32 EntryPoint
 	Params::WBP_StructProperty_C_ExecuteUbergraph_WBP_StructProperty Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_StructProperty.WBP_StructProperty_C.AddPropertyContainerWidget
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UPropertyContainerWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_StructProperty_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StructProperty_C", "AddPropertyContainerWidget");
-
-	Params::WBP_StructProperty_C_AddPropertyContainerWidget Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_StructProperty.WBP_StructProperty_C.UpdatePropertyContainerWidgetSlot
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UPropertyContainerWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   NumPerRow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_StructProperty_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StructProperty_C", "UpdatePropertyContainerWidgetSlot");
-
-	Params::WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot Parms{};
-
-	Parms.Widget = Widget;
-	Parms.Index_0 = Index_0;
-	Parms.NumPerRow = NumPerRow;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

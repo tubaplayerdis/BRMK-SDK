@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Windmill.BP_Windmill_C
-// 0x0000 (0x0268 - 0x0268)
+// 0x0000 (0x0368 - 0x0368)
 class ABP_Windmill_C final : public AWindmill
 {
 public:
@@ -34,5 +35,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Windmill_C;
+
+// BlueprintGeneratedClass BP_Windmill.SKEL_BP_Windmill_C
+// 0x0010 (0x0378 - 0x0368)
+class ASKEL_BP_Windmill_C final : public AWindmill
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Windmill_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Windmill_C")
+	}
+	static class ASKEL_BP_Windmill_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Windmill_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Windmill_C;
 
 SDK_NAMESPACE_END

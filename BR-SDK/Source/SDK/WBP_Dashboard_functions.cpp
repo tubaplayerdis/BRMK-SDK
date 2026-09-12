@@ -102,4 +102,70 @@ void UWBP_Dashboard_C::AddSliderWidget(class UDashboardSliderWidget* Widget)
 }
 
 
+// Function WBP_Dashboard.SKEL_WBP_Dashboard_C.AddSliderWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDashboardSliderWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Dashboard_C::AddSliderWidget(class UDashboardSliderWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Dashboard_C", "AddSliderWidget");
+
+	Params::SKEL_WBP_Dashboard_C_AddSliderWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Dashboard.SKEL_WBP_Dashboard_C.AddIconWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDashboardIconWidget*             Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Dashboard_C::AddIconWidget(class UDashboardIconWidget* Widget, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Dashboard_C", "AddIconWidget");
+
+	Params::SKEL_WBP_Dashboard_C_AddIconWidget Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Dashboard.SKEL_WBP_Dashboard_C.UpdateSliderWidgetSlot
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDashboardSliderWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NumSliders                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Dashboard_C::UpdateSliderWidgetSlot(class UDashboardSliderWidget* Widget, int32 Index_0, int32 NumSliders)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Dashboard_C", "UpdateSliderWidgetSlot");
+
+	Params::SKEL_WBP_Dashboard_C_UpdateSliderWidgetSlot Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Index_0 = Index_0;
+	Parms.NumSliders = NumSliders;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

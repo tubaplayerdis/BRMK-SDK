@@ -18,17 +18,17 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MatchTimer.WBP_MatchTimer_C
-// 0x0018 (0x0278 - 0x0260)
+// 0x0020 (0x0418 - 0x03F8)
 class UWBP_MatchTimer_C final : public UMatchTimerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateTimer(int32 NewTime_UpdateTimer);
 	void ExecuteUbergraph_WBP_MatchTimer(int32 EntryPoint);
+	void UpdateTimer(int32 NewTime);
 
 public:
 	static class UClass* StaticClass()
@@ -45,5 +45,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_MatchTimer_C;
+
+// WidgetBlueprintGeneratedClass WBP_MatchTimer.SKEL_WBP_MatchTimer_C
+// 0x0020 (0x0418 - 0x03F8)
+class USKEL_WBP_MatchTimer_C final : public UMatchTimerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateTimer(int32 NewTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_MatchTimer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_MatchTimer_C")
+	}
+	static class USKEL_WBP_MatchTimer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_MatchTimer_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_MatchTimer_C;
 
 SDK_NAMESPACE_END

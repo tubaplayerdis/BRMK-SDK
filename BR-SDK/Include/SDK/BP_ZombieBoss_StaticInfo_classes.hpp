@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BP_Zombie_StaticInfo_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ZombieBoss_StaticInfo.BP_ZombieBoss_StaticInfo_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x0318 - 0x0318)
 class UBP_ZombieBoss_StaticInfo_C final : public UBP_Zombie_StaticInfo_C
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_ZombieBoss_StaticInfo_C;
+
+// BlueprintGeneratedClass BP_ZombieBoss_StaticInfo.SKEL_BP_ZombieBoss_StaticInfo_C
+// 0x0010 (0x0348 - 0x0338)
+class USKEL_BP_ZombieBoss_StaticInfo_C final : public USKEL_BP_Zombie_StaticInfo_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_ZombieBoss_StaticInfo_C;    // 0x0338(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ZombieBoss_StaticInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ZombieBoss_StaticInfo_C")
+	}
+	static class USKEL_BP_ZombieBoss_StaticInfo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_ZombieBoss_StaticInfo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_ZombieBoss_StaticInfo_C;
 
 SDK_NAMESPACE_END

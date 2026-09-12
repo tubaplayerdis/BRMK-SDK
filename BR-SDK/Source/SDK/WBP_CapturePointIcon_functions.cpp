@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_CapturePointIcon.SKEL_WBP_CapturePointIcon_C.GetIconDisplayName
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class FText                             ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+class FText USKEL_WBP_CapturePointIcon_C::GetIconDisplayName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CapturePointIcon_C", "GetIconDisplayName");
+
+	Params::SKEL_WBP_CapturePointIcon_C_GetIconDisplayName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_CapturePointIcon.WBP_CapturePointIcon_C.GetIconDisplayName
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_Blender.BP_Blender_C.ExecuteUbergraph_BP_Blender
+// 0x0004 (0x0004 - 0x0000)
+struct BP_Blender_C_ExecuteUbergraph_BP_Blender final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Blender_C_ExecuteUbergraph_BP_Blender;
+
 // Function BP_Blender.BP_Blender_C.UserConstructionScript
 // 0x0050 (0x0050 - 0x0000)
 struct BP_Blender_C_UserConstructionScript final
@@ -28,15 +37,6 @@ public:
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_Blender_C_UserConstructionScript;
-
-// Function BP_Blender.BP_Blender_C.ExecuteUbergraph_BP_Blender
-// 0x0004 (0x0004 - 0x0000)
-struct BP_Blender_C_ExecuteUbergraph_BP_Blender final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Blender_C_ExecuteUbergraph_BP_Blender;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

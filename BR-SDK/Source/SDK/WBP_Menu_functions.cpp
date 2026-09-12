@@ -402,4 +402,370 @@ void UWBP_Menu_C::CreateAdminMenuButton()
 }
 
 
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnMenuContextChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FName&                      NewContext                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Menu_C::OnMenuContextChanged(const class FName& NewContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnMenuContextChanged");
+
+	Params::SKEL_WBP_Menu_C_OnMenuContextChanged Parms{};
+
+	Parms.NewContext = NewContext;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.AddMenuPage
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMenuPageWidget*                  Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Menu_C::AddMenuPage(class UMenuPageWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "AddMenuPage");
+
+	Params::SKEL_WBP_Menu_C_AddMenuPage Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedOptions
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedOptions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedOptions");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedHostGame
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedHostGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedHostGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedJoinGame
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedJoinGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedJoinGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedGameplaySettings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedGameplaySettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedGameplaySettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedVideoSettings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedVideoSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedVideoSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedInputSettings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedInputSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedInputSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedCredits
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedCredits()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedCredits");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedUISettings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedUISettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedUISettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClosedQuitGamePopup
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPopupResult                            Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_Menu_C::OnClosedQuitGamePopup(EPopupResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClosedQuitGamePopup");
+
+	Params::SKEL_WBP_Menu_C_OnClosedQuitGamePopup Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedMatchMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedMatchMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedMatchMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedAdminSettings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedAdminSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedAdminSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedPlayersMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedPlayersMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedPlayersMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedInputMappings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedInputMappings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedInputMappings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedEditorSettings
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedEditorSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedEditorSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedMainMenu
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedMainMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedMainMenu");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClosedMainMenuPopup
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPopupResult                            Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_Menu_C::OnClosedMainMenuPopup(EPopupResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClosedMainMenuPopup");
+
+	Params::SKEL_WBP_Menu_C_OnClosedMainMenuPopup Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClickedQuickGame
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnClickedQuickGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnClickedQuickGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.RemoveMenuPage
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMenuPageWidget*                  Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Menu_C::RemoveMenuPage(class UMenuPageWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "RemoveMenuPage");
+
+	Params::SKEL_WBP_Menu_C_RemoveMenuPage Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.CreateBackButton
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::CreateBackButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "CreateBackButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.CreateAdminMenuButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_Menu_C::CreateAdminMenuButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Menu_C", "CreateAdminMenuButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

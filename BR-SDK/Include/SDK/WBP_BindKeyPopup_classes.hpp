@@ -11,22 +11,22 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_BindKeyPopup.WBP_BindKeyPopup_C
-// 0x0020 (0x0348 - 0x0328)
+// 0x0028 (0x04E8 - 0x04C0)
 class UWBP_BindKeyPopup_C final : public UBindKeyPopupWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           ConflictsBorder;                                   // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        ConflictsTextBlock;                                // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           ControlHintBorder;                                 // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           ConflictsBorder;                                   // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ConflictsTextBlock;                                // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           ControlHintBorder;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_BindKeyPopup(int32 EntryPoint);
@@ -52,5 +52,39 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_BindKeyPopup_C;
+
+// WidgetBlueprintGeneratedClass WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C
+// 0x0028 (0x04E8 - 0x04C0)
+class USKEL_WBP_BindKeyPopup_C final : public UBindKeyPopupWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           ConflictsBorder;                                   // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ConflictsTextBlock;                                // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           ControlHintBorder;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void Construct();
+	void UpdateConflictedMappings(bool bIsConflicted, const TArray<class FText>& ConflictedMappingNames);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateIsBindingKey(bool bNewIsBinding);
+
+	class FText ConflictsArrayToText(class FText& InText, TArray<class FText>& InConflictNames) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BindKeyPopup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BindKeyPopup_C")
+	}
+	static class USKEL_WBP_BindKeyPopup_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BindKeyPopup_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BindKeyPopup_C;
 
 SDK_NAMESPACE_END

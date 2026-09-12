@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_CargoTrain.BP_CargoTrain_C
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x03C0 - 0x03C0)
 class ABP_CargoTrain_C final : public ATrain
 {
 public:
@@ -34,5 +35,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_CargoTrain_C;
+
+// BlueprintGeneratedClass BP_CargoTrain.SKEL_BP_CargoTrain_C
+// 0x0010 (0x03D0 - 0x03C0)
+class ASKEL_BP_CargoTrain_C final : public ATrain
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_CargoTrain_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_CargoTrain_C")
+	}
+	static class ASKEL_BP_CargoTrain_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_CargoTrain_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_CargoTrain_C;
 
 SDK_NAMESPACE_END

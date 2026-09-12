@@ -11,13 +11,14 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MK18_StaticInfo.BP_MK18_StaticInfo_C
-// 0x0000 (0x0810 - 0x0810)
-class UBP_MK18_StaticInfo_C final : public UFirearmStaticInfo
+// 0x0000 (0x08C0 - 0x08C0)
+class UBP_MK18_StaticInfo_C : public UFirearmStaticInfo
 {
 public:
 	static class UClass* StaticClass()
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_MK18_StaticInfo_C;
+
+// BlueprintGeneratedClass BP_MK18_StaticInfo.SKEL_BP_MK18_StaticInfo_C
+// 0x0010 (0x08D0 - 0x08C0)
+class USKEL_BP_MK18_StaticInfo_C : public UFirearmStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_MK18_StaticInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_MK18_StaticInfo_C")
+	}
+	static class USKEL_BP_MK18_StaticInfo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_MK18_StaticInfo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_MK18_StaticInfo_C;
 
 SDK_NAMESPACE_END

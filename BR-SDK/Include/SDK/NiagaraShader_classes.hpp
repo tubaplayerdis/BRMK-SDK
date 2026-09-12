@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Class NiagaraShader.NiagaraScriptBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UNiagaraScriptBase : public UObject
 {
 public:

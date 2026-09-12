@@ -105,4 +105,73 @@ void UABP_Character_Watch_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 }
 
 
+// Function ABP_Character_Watch.SKEL_ABP_Character_Watch_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_ABP_Character_Watch_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_Character_Watch_C", "BlueprintUpdateAnimation");
+
+	Params::SKEL_ABP_Character_Watch_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_Character_Watch.SKEL_ABP_Character_Watch_C.BlueprintBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void USKEL_ABP_Character_Watch_C::BlueprintBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_Character_Watch_C", "BlueprintBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_Character_Watch.SKEL_ABP_Character_Watch_C.UpdateTargetRotation
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_ABP_Character_Watch_C::UpdateTargetRotation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_Character_Watch_C", "UpdateTargetRotation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_Character_Watch.SKEL_ABP_Character_Watch_C.AnimGraph
+// (HasOutParams)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void USKEL_ABP_Character_Watch_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_Character_Watch_C", "AnimGraph");
+
+	Params::SKEL_ABP_Character_Watch_C_AnimGraph Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
+
 SDK_NAMESPACE_END

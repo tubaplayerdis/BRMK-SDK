@@ -11,17 +11,18 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Scoreboard.WBP_Scoreboard_C
-// 0x0010 (0x02F8 - 0x02E8)
+// 0x0010 (0x0498 - 0x0488)
 class UWBP_Scoreboard_C final : public UScoreboardWidget
 {
 public:
-	class UMenuButtonWidget*                      PlayerProfileButton;                               // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      KickButton;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      PlayerProfileButton;                               // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickButton;                                        // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -38,5 +39,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Scoreboard_C;
+
+// WidgetBlueprintGeneratedClass WBP_Scoreboard.SKEL_WBP_Scoreboard_C
+// 0x0020 (0x04A8 - 0x0488)
+class USKEL_WBP_Scoreboard_C final : public UScoreboardWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      PlayerProfileButton;                               // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickButton;                                        // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Scoreboard_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Scoreboard_C")
+	}
+	static class USKEL_WBP_Scoreboard_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Scoreboard_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Scoreboard_C;
 
 SDK_NAMESPACE_END

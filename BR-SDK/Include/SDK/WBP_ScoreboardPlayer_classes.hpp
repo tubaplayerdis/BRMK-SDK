@@ -11,25 +11,60 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 #include "AIModule_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C
+// 0x0038 (0x04C0 - 0x0488)
+class USKEL_WBP_ScoreboardPlayer_C final : public UScoreboardPlayerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            AdminIconImage;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            AliveIcon;                                         // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            DeathsIcon;                                        // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            KillsIcon;                                         // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            ScoreIcon;                                         // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateButtonStyle(bool bNewSelected, bool bIsLocalPlayer, ETeamAttitude TeamAttitude);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateIsAlive(bool bIsAlive);
+	void UpdateAdminRole(const EAdminRole Role);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ScoreboardPlayer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ScoreboardPlayer_C")
+	}
+	static class USKEL_WBP_ScoreboardPlayer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ScoreboardPlayer_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ScoreboardPlayer_C;
+
 // WidgetBlueprintGeneratedClass WBP_ScoreboardPlayer.WBP_ScoreboardPlayer_C
-// 0x0030 (0x0320 - 0x02F0)
+// 0x0038 (0x04C0 - 0x0488)
 class UWBP_ScoreboardPlayer_C final : public UScoreboardPlayerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            AdminIconImage;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            AliveIcon;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            DeathsIcon;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            KillsIcon;                                         // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            ScoreIcon;                                         // 0x0318(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            AdminIconImage;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            AliveIcon;                                         // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            DeathsIcon;                                        // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            KillsIcon;                                         // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            ScoreIcon;                                         // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_ScoreboardPlayer(int32 EntryPoint);

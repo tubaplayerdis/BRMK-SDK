@@ -73,5 +73,33 @@ public:
 };
 DUMPER7_ASSERTS_BTT_ZombieAttack_C_ReceiveExecute;
 
+// Function BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C.ReceiveExecute
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_BTT_ZombieAttack_C_ReceiveExecute final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BTT_ZombieAttack_C_ReceiveExecute;
+
+// Function BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C.ReceiveTick
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_BTT_ZombieAttack_C_ReceiveTick final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BTT_ZombieAttack_C_ReceiveTick;
+
+// Function BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C.ReceiveAbort
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_BTT_ZombieAttack_C_ReceiveAbort final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BTT_ZombieAttack_C_ReceiveAbort;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

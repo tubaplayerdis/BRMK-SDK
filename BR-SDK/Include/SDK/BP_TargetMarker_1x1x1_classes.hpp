@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_TargetMarker_1x1x1.BP_TargetMarker_1x1x1_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0800 - 0x0800)
 class UBP_TargetMarker_1x1x1_C final : public UTargetMarkerBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_TargetMarker_1x1x1_C;
+
+// BlueprintGeneratedClass BP_TargetMarker_1x1x1.SKEL_BP_TargetMarker_1x1x1_C
+// 0x0010 (0x0810 - 0x0800)
+class USKEL_BP_TargetMarker_1x1x1_C final : public UTargetMarkerBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0800(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_TargetMarker_1x1x1_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_TargetMarker_1x1x1_C")
+	}
+	static class USKEL_BP_TargetMarker_1x1x1_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_TargetMarker_1x1x1_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_TargetMarker_1x1x1_C;
 
 SDK_NAMESPACE_END

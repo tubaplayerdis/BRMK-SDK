@@ -19,38 +19,15 @@
 
 SDK_NAMESPACE_START
 
-// Class ApexDestruction.DestructibleMesh
-// 0x00A0 (0x0440 - 0x03A0)
-class UDestructibleMesh final : public USkeletalMesh
-{
-public:
-	struct FDestructibleParameters                DefaultDestructibleParameters;                     // 0x03A0(0x0088)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FFractureEffect>                FractureEffects;                                   // 0x0428(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DestructibleMesh")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DestructibleMesh")
-	}
-	static class UDestructibleMesh* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDestructibleMesh>();
-	}
-};
-DUMPER7_ASSERTS_UDestructibleMesh;
-
 // Class ApexDestruction.DestructibleActor
-// 0x0018 (0x0238 - 0x0220)
+// 0x0020 (0x0318 - 0x02F8)
 class ADestructibleActor final : public AActor
 {
 public:
-	class UDestructibleComponent*                 DestructibleComponent;                             // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(const struct FVector& HitPoint, const struct FVector& HitDirection)> OnActorFracture; // 0x0228(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UDestructibleComponent*                 DestructibleComponent;                             // 0x02F8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(const struct FVector& HitPoint, const struct FVector& HitDirection)> OnActorFracture; // 0x0300(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         bAffectNavigation : 1;                             // 0x0310(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, Config, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -69,19 +46,20 @@ public:
 DUMPER7_ASSERTS_ADestructibleActor;
 
 // Class ApexDestruction.DestructibleComponent
-// 0x00E0 (0x07E0 - 0x0700)
+// 0x00E0 (0x08A0 - 0x07C0)
 class UDestructibleComponent final : public USkinnedMeshComponent
 {
 public:
-	uint8                                         bFractureEffectOverride : 1;                       // 0x0700(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_701[0x7];                                      // 0x0701(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFractureEffect>                FractureEffects;                                   // 0x0708(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bEnableHardSleeping;                               // 0x0718(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_719[0x3];                                      // 0x0719(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LargeChunkThreshold;                               // 0x071C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_720[0x10];                                     // 0x0720(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FVector& HitPoint, const struct FVector& HitDirection)> OnComponentFracture; // 0x0730(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_740[0xA0];                                     // 0x0740(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bFractureEffectOverride : 1;                       // 0x07C0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_7C1[0x7];                                      // 0x07C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFractureEffect>                FractureEffects;                                   // 0x07C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableHardSleeping;                               // 0x07D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7D9[0x3];                                      // 0x07D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LargeChunkThreshold;                               // 0x07DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDestructibleMesh*                      DestructibleMesh;                                  // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7E8[0x10];                                     // 0x07E8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FVector& HitPoint, const struct FVector& HitDirection)> OnComponentFracture; // 0x07F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_808[0x98];                                     // 0x0808(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ApplyDamage(float DamageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength);
@@ -106,20 +84,20 @@ public:
 DUMPER7_ASSERTS_UDestructibleComponent;
 
 // Class ApexDestruction.DestructibleFractureSettings
-// 0x0090 (0x00B8 - 0x0028)
+// 0x0090 (0x00C0 - 0x0030)
 class UDestructibleFractureSettings final : public UObject
 {
 public:
-	int32                                         CellSiteCount;                                     // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFractureMaterial                      FractureMaterialDesc;                              // 0x002C(0x0024)(Edit, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         RandomSeed;                                        // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        VoronoiSites;                                      // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         OriginalSubmeshCount;                              // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             Materials;                                         // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FDestructibleChunkParameters>   ChunkParameters;                                   // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x28];                                      // 0x0090(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         CellSiteCount;                                     // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFractureMaterial                      FractureMaterialDesc;                              // 0x0034(0x0024)(Edit, Transient, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         RandomSeed;                                        // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        VoronoiSites;                                      // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         OriginalSubmeshCount;                              // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             Materials;                                         // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDestructibleChunkParameters>   ChunkParameters;                                   // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x28];                                      // 0x0098(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -136,5 +114,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UDestructibleFractureSettings;
+
+// Class ApexDestruction.DestructibleMesh
+// 0x00C8 (0x0730 - 0x0668)
+class UDestructibleMesh final : public USkeletalMesh
+{
+public:
+	struct FDestructibleParameters                DefaultDestructibleParameters;                     // 0x0668(0x0088)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FFractureEffect>                FractureEffects;                                   // 0x06F0(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UDestructibleFractureSettings*          FractureSettings;                                  // 0x0700(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, EditorOnly, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            SourceStaticMesh;                                  // 0x0708(0x0008)(ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              SourceSMImportTimestamp;                           // 0x0710(0x0008)(ZeroConstructor, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UStaticMesh*>                    FractureChunkMeshes;                               // 0x0718(0x0010)(ZeroConstructor, Transient, EditorOnly, NativeAccessSpecifierPublic)
+	uint8                                         Pad_728[0x8];                                      // 0x0728(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DestructibleMesh")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DestructibleMesh")
+	}
+	static class UDestructibleMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDestructibleMesh>();
+	}
+};
+DUMPER7_ASSERTS_UDestructibleMesh;
 
 SDK_NAMESPACE_END

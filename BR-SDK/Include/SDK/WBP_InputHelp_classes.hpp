@@ -11,28 +11,28 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputHelp.WBP_InputHelp_C
-// 0x0018 (0x0290 - 0x0278)
+// 0x0020 (0x0430 - 0x0410)
 class UWBP_InputHelp_C final : public UInputHelpWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateIsAlwaysOpen(bool bNewAlwaysOpen);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_InputHelp(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void UpdateIsAlwaysOpen(bool bNewAlwaysOpen);
 
 public:
 	static class UClass* StaticClass()
@@ -49,5 +49,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputHelp_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputHelp.SKEL_WBP_InputHelp_C
+// 0x0020 (0x0430 - 0x0410)
+class USKEL_WBP_InputHelp_C final : public UInputHelpWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateIsAlwaysOpen(bool bNewAlwaysOpen);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void PreConstruct(bool IsDesignTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputHelp_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputHelp_C")
+	}
+	static class USKEL_WBP_InputHelp_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputHelp_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputHelp_C;
 
 SDK_NAMESPACE_END

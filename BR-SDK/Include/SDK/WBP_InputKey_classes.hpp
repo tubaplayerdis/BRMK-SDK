@@ -11,23 +11,23 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputKey.WBP_InputKey_C
-// 0x0028 (0x02B0 - 0x0288)
+// 0x0030 (0x0458 - 0x0428)
 class UWBP_InputKey_C final : public UInputKeyWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            HoldImage;                                         // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           KeyBorder;                                         // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            KeyImage;                                          // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        KeyTextBlock;                                      // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            HoldImage;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           KeyBorder;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            KeyImage;                                          // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        KeyTextBlock;                                      // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InputKey(int32 EntryPoint);
@@ -48,5 +48,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputKey_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputKey.SKEL_WBP_InputKey_C
+// 0x0030 (0x0458 - 0x0428)
+class USKEL_WBP_InputKey_C final : public UInputKeyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            HoldImage;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           KeyBorder;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            KeyImage;                                          // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        KeyTextBlock;                                      // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsGamepadKey);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputKey_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputKey_C")
+	}
+	static class USKEL_WBP_InputKey_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputKey_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputKey_C;
 
 SDK_NAMESPACE_END

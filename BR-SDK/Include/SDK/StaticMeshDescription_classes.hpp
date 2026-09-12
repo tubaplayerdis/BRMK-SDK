@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Class StaticMeshDescription.StaticMeshDescription
-// 0x0000 (0x0390 - 0x0390)
+// 0x0000 (0x0398 - 0x0398)
 class UStaticMeshDescription final : public UMeshDescriptionBase
 {
 public:

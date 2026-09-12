@@ -46,5 +46,23 @@ public:
 };
 DUMPER7_ASSERTS_WBP_DashboardSlider_C_UpdateIcon;
 
+// Function WBP_DashboardSlider.SKEL_WBP_DashboardSlider_C.UpdateIcon
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_DashboardSlider_C_UpdateIcon final
+{
+public:
+	int32                                         IconIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_DashboardSlider_C_UpdateIcon;
+
+// Function WBP_DashboardSlider.SKEL_WBP_DashboardSlider_C.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_DashboardSlider_C_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_DashboardSlider_C_UpdateColorStyle;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

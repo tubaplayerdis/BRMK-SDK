@@ -16,6 +16,26 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_LoadoutContainer.BP_LoadoutContainer_C.UpdateAnimation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   InAnimRatio_UpdateAnimation                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LoadoutContainer_C::UpdateAnimation(float InAnimRatio_UpdateAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LoadoutContainer_C", "UpdateAnimation");
+
+	Params::BP_LoadoutContainer_C_UpdateAnimation Parms{};
+
+	Parms.InAnimRatio_UpdateAnimation = InAnimRatio_UpdateAnimation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LoadoutContainer.BP_LoadoutContainer_C.ExecuteUbergraph_BP_LoadoutContainer
 // (Final, UbergraphFunction)
 // Parameters:
@@ -36,21 +56,35 @@ void ABP_LoadoutContainer_C::ExecuteUbergraph_BP_LoadoutContainer(int32 EntryPoi
 }
 
 
-// Function BP_LoadoutContainer.BP_LoadoutContainer_C.UpdateAnimation
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// float                                   InAnimRatio                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_LoadoutContainer.SKEL_BP_LoadoutContainer_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
 
-void ABP_LoadoutContainer_C::UpdateAnimation(float InAnimRatio)
+void ASKEL_BP_LoadoutContainer_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LoadoutContainer_C", "UpdateAnimation");
+		Func = Class->GetFunction("SKEL_BP_LoadoutContainer_C", "UserConstructionScript");
 
-	Params::BP_LoadoutContainer_C_UpdateAnimation Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InAnimRatio = InAnimRatio;
+
+// Function BP_LoadoutContainer.SKEL_BP_LoadoutContainer_C.UpdateAnimation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   InAnimRatio_UpdateAnimation                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_LoadoutContainer_C::UpdateAnimation(float InAnimRatio_UpdateAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_LoadoutContainer_C", "UpdateAnimation");
+
+	Params::SKEL_BP_LoadoutContainer_C_UpdateAnimation Parms{};
+
+	Parms.InAnimRatio_UpdateAnimation = InAnimRatio_UpdateAnimation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

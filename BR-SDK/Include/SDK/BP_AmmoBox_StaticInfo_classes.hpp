@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_AmmoBox_StaticInfo.BP_AmmoBox_StaticInfo_C
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x03F0 - 0x03F0)
 class UBP_AmmoBox_StaticInfo_C : public UAmmoBoxStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_AmmoBox_StaticInfo_C;
+
+// BlueprintGeneratedClass BP_AmmoBox_StaticInfo.SKEL_BP_AmmoBox_StaticInfo_C
+// 0x0010 (0x0400 - 0x03F0)
+class USKEL_BP_AmmoBox_StaticInfo_C : public UAmmoBoxStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_AmmoBox_StaticInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_AmmoBox_StaticInfo_C")
+	}
+	static class USKEL_BP_AmmoBox_StaticInfo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_AmmoBox_StaticInfo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_AmmoBox_StaticInfo_C;
 
 SDK_NAMESPACE_END

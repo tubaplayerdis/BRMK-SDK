@@ -87,5 +87,51 @@ public:
 };
 DUMPER7_ASSERTS_WBP_InputActionCategory_C_GetWidgetToFocus;
 
+// Function WBP_InputActionCategory.SKEL_WBP_InputActionCategory_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InputActionCategory_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionCategory_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InputActionCategory.SKEL_WBP_InputActionCategory_C.InitializeCategory
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_InputActionCategory_C_InitializeCategory final
+{
+public:
+	class FText                                   InCategoryName;                                    // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionCategory_C_InitializeCategory;
+
+// Function WBP_InputActionCategory.SKEL_WBP_InputActionCategory_C.UpdateIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputActionCategory_C_UpdateIsSelected final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionCategory_C_UpdateIsSelected;
+
+// Function WBP_InputActionCategory.SKEL_WBP_InputActionCategory_C.UpdateInputActionListMode
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputActionCategory_C_UpdateInputActionListMode final
+{
+public:
+	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionCategory_C_UpdateInputActionListMode;
+
+// Function WBP_InputActionCategory.SKEL_WBP_InputActionCategory_C.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_InputActionCategory_C_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionCategory_C_GetWidgetToFocus;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

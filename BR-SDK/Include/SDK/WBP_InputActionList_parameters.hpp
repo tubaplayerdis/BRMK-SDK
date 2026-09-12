@@ -56,5 +56,23 @@ public:
 };
 DUMPER7_ASSERTS_WBP_InputActionList_C_PreConstruct;
 
+// Function WBP_InputActionList.SKEL_WBP_InputActionList_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputActionList_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionList_C_PreConstruct;
+
+// Function WBP_InputActionList.SKEL_WBP_InputActionList_C.UpdateInputActionListMode
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputActionList_C_UpdateInputActionListMode final
+{
+public:
+	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputActionList_C_UpdateInputActionListMode;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

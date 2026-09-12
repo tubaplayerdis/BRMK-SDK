@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PropertiesPanel.WBP_PropertiesPanel_C
-// 0x0010 (0x02E0 - 0x02D0)
+// 0x0018 (0x0488 - 0x0470)
 class UWBP_PropertiesPanel_C final : public UPropertiesPanelWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickVerticalBox*                      MainBox;                                           // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      MainBox;                                           // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_PropertiesPanel(int32 EntryPoint);
@@ -43,5 +43,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_PropertiesPanel_C;
+
+// WidgetBlueprintGeneratedClass WBP_PropertiesPanel.SKEL_WBP_PropertiesPanel_C
+// 0x0018 (0x0488 - 0x0470)
+class USKEL_WBP_PropertiesPanel_C final : public UPropertiesPanelWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      MainBox;                                           // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddCategoryWidget(class UPropertyCategoryWidget* Widget, int32 Index_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PropertiesPanel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PropertiesPanel_C")
+	}
+	static class USKEL_WBP_PropertiesPanel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PropertiesPanel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PropertiesPanel_C;
 
 SDK_NAMESPACE_END

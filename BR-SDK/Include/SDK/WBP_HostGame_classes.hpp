@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HostGame.WBP_HostGame_C
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0018 (0x0448 - 0x0430)
 class UWBP_HostGame_C final : public UHostGamePageWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMenuButtonWidget*                      PlayButton;                                        // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      PlayButton;                                        // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_HostGame(int32 EntryPoint);
@@ -44,5 +44,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_HostGame_C;
+
+// WidgetBlueprintGeneratedClass WBP_HostGame.SKEL_WBP_HostGame_C
+// 0x0018 (0x0448 - 0x0430)
+class USKEL_WBP_HostGame_C final : public UHostGamePageWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      PlayButton;                                        // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UpdatePlayButton(bool bCanPlay, bool bIsOnline);
+	void Construct();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_HostGame_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_HostGame_C")
+	}
+	static class USKEL_WBP_HostGame_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_HostGame_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_HostGame_C;
 
 SDK_NAMESPACE_END

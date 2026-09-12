@@ -19,46 +19,47 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Character.ABP_Character_C
-// 0x1270 (0x1F70 - 0x0D00)
+// 0x13E0 (0x21C0 - 0x0DE0)
 class UABP_Character_C final : public UBrickCharacterAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0D08(0x0030)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0D38(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0D80(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_2;                       // 0x0DA8(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0E70(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0x0E98(0x00C8)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_7;                    // 0x0F60(0x0080)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6;                    // 0x0FE0(0x0080)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x1060(0x0158)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x11B8(0x0048)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x1200(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x1228(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x1250(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5;                    // 0x1278(0x0080)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x12F8(0x0030)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x1328(0x0080)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x13A8(0x0030)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x13D8(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x1458(0x00A0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x14F8(0x0080)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_2;                  // 0x1578(0x00E8)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x1660(0x00A0)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x1700(0x00A0)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x17A0(0x00C8)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x1868(0x00E8)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1950(0x00E8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1A38(0x0030)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1A68(0x00B0)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1B18(0x0048)()
-	struct FAnimNode_ItemBlend                    AnimGraphNode_ItemBlend;                           // 0x1B60(0x0140)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x1CA0(0x00A0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x1D40(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x1DC0(0x00A0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1E60(0x0080)()
-	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x1EE0(0x0090)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0DE0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0DF0(0x0040)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0E30(0x0058)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0E88(0x0038)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_2;                       // 0x0EC0(0x00D8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0F98(0x0038)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0x0FD0(0x00D8)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_7;                    // 0x10A8(0x0088)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6;                    // 0x1130(0x0088)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x11B8(0x0160)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x1318(0x0058)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x1370(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x1398(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x13C0(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_5;                    // 0x13E8(0x0088)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x1470(0x0040)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x14B0(0x0088)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x1538(0x0040)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x1578(0x0088)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x1600(0x00A0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x16A0(0x0088)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_2;                  // 0x1728(0x00F0)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x1818(0x00A0)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x18B8(0x00A0)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x1958(0x00D8)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x1A30(0x00F0)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1B20(0x00F0)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1C10(0x0040)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1C50(0x00B0)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1D00(0x0058)()
+	uint8                                         Pad_1D58[0x8];                                     // 0x1D58(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_ItemBlend                    AnimGraphNode_ItemBlend;                           // 0x1D60(0x0170)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x1ED0(0x00A0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x1F70(0x0088)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x1FF8(0x00A0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x2098(0x0088)()
+	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x2120(0x00A0)()
 
 public:
 	void ExecuteUbergraph_ABP_Character(int32 EntryPoint);
@@ -79,5 +80,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Character_C;
+
+// AnimBlueprintGeneratedClass ABP_Character.SKEL_ABP_Character_C
+// 0x0010 (0x0DF0 - 0x0DE0)
+class USKEL_ABP_Character_C final : public UBrickCharacterAnimInstance
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0DE0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Character_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Character_C")
+	}
+	static class USKEL_ABP_Character_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Character_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Character_C;
 
 SDK_NAMESPACE_END

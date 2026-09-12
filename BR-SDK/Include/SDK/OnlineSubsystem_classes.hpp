@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // Class OnlineSubsystem.NamedInterfaces
-// 0x0038 (0x0060 - 0x0028)
+// 0x0038 (0x0068 - 0x0030)
 class UNamedInterfaces final : public UObject
 {
 public:
-	TArray<struct FNamedInterface>                NamedInterfaces;                                   // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FNamedInterfaceDef>             NamedInterfaceDefs;                                // 0x0038(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FNamedInterface>                NamedInterfaces;                                   // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FNamedInterfaceDef>             NamedInterfaceDefs;                                // 0x0040(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_50[0x18];                                      // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

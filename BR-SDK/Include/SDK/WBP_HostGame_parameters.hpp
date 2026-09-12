@@ -20,8 +20,7 @@ struct WBP_HostGame_C_ExecuteUbergraph_WBP_HostGame final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0014)(ZeroConstructor, NoDestructor)
 	class FText                                   Temp_text_Variable;                                // 0x0018(0x0018)()
 	class FText                                   Temp_text_Variable_1;                              // 0x0030(0x0018)()
 	bool                                          Temp_bool_Variable;                                // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -52,6 +51,16 @@ public:
 	bool                                          bIsOnline;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_HostGame_C_UpdatePlayButton;
+
+// Function WBP_HostGame.SKEL_WBP_HostGame_C.UpdatePlayButton
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_HostGame_C_UpdatePlayButton final
+{
+public:
+	bool                                          bCanPlay;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsOnline;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HostGame_C_UpdatePlayButton;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

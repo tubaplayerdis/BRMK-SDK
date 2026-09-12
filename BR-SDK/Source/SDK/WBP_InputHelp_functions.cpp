@@ -16,37 +16,43 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_InputHelp.WBP_InputHelp_C.UpdateIsAlwaysOpen
-// (BlueprintEvent)
+// Function WBP_InputHelp.WBP_InputHelp_C.ExecuteUbergraph_WBP_InputHelp
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bNewAlwaysOpen                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_InputHelp_C::UpdateIsAlwaysOpen(bool bNewAlwaysOpen)
+void UWBP_InputHelp_C::ExecuteUbergraph_WBP_InputHelp(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputHelp_C", "UpdateIsAlwaysOpen");
+		Func = Class->GetFunction("WBP_InputHelp_C", "ExecuteUbergraph_WBP_InputHelp");
 
-	Params::WBP_InputHelp_C_UpdateIsAlwaysOpen Parms{};
+	Params::WBP_InputHelp_C_ExecuteUbergraph_WBP_InputHelp Parms{};
 
-	Parms.bNewAlwaysOpen = bNewAlwaysOpen;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_InputHelp.WBP_InputHelp_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_InputHelp.WBP_InputHelp_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_InputHelp_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+void UWBP_InputHelp_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputHelp_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+		Func = Class->GetFunction("WBP_InputHelp_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_InputHelp_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -72,41 +78,111 @@ void UWBP_InputHelp_C::BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1
 }
 
 
-// Function WBP_InputHelp.WBP_InputHelp_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function WBP_InputHelp.WBP_InputHelp_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_InputHelp_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_InputHelp_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputHelp_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_InputHelp_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
-	Params::WBP_InputHelp_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+
+// Function WBP_InputHelp.WBP_InputHelp_C.UpdateIsAlwaysOpen
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bNewAlwaysOpen                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_InputHelp_C::UpdateIsAlwaysOpen(bool bNewAlwaysOpen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_InputHelp_C", "UpdateIsAlwaysOpen");
+
+	Params::WBP_InputHelp_C_UpdateIsAlwaysOpen Parms{};
+
+	Parms.bNewAlwaysOpen = bNewAlwaysOpen;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_InputHelp.WBP_InputHelp_C.ExecuteUbergraph_WBP_InputHelp
-// (Final, UbergraphFunction)
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.UpdateIsAlwaysOpen
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bNewAlwaysOpen                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_InputHelp_C::ExecuteUbergraph_WBP_InputHelp(int32 EntryPoint)
+void USKEL_WBP_InputHelp_C::UpdateIsAlwaysOpen(bool bNewAlwaysOpen)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputHelp_C", "ExecuteUbergraph_WBP_InputHelp");
+		Func = Class->GetFunction("SKEL_WBP_InputHelp_C", "UpdateIsAlwaysOpen");
 
-	Params::WBP_InputHelp_C_ExecuteUbergraph_WBP_InputHelp Parms{};
+	Params::SKEL_WBP_InputHelp_C_UpdateIsAlwaysOpen Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bNewAlwaysOpen = bNewAlwaysOpen;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_InputHelp_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputHelp_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputHelp_C::BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputHelp_C", "BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputHelp_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputHelp_C", "PreConstruct");
+
+	Params::SKEL_WBP_InputHelp_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_WorldSettings.BP_WorldSettings_C
-// 0x0008 (0x04B0 - 0x04A8)
+// 0x0010 (0x07A0 - 0x0790)
 class ABP_WorldSettings_C final : public ABrickWorldSettings
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0790(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_WorldSettings_C;
+
+// BlueprintGeneratedClass BP_WorldSettings.SKEL_BP_WorldSettings_C
+// 0x0020 (0x07B0 - 0x0790)
+class ASKEL_BP_WorldSettings_C final : public ABrickWorldSettings
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_WorldSettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_WorldSettings_C")
+	}
+	static class ASKEL_BP_WorldSettings_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_WorldSettings_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_WorldSettings_C;
 
 SDK_NAMESPACE_END

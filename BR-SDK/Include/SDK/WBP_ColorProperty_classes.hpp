@@ -12,34 +12,34 @@
 
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ColorProperty.WBP_ColorProperty_C
-// 0x0088 (0x0308 - 0x0280)
+// 0x0090 (0x04A8 - 0x0418)
 class UWBP_ColorProperty_C final : public UColorPropertyWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickSlider_C*                     AlphaSlider;                                       // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           ColorBorder;                                       // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        ColorNameTextBlock;                                // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ColorPalette_C*                    ColorPalette;                                      // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ColorWheel_C*                      ColorWheel;                                        // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickButton_C*                     DisplayModeButton;                                 // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        DisplayModeTextBlock;                              // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickTextBox_C*                    HexTextBox;                                        // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickSlider_C*                     HueSlider;                                         // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickSlider_C*                     SaturationSlider;                                  // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickSlider_C*                     ValueSlider;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           CurrentColor;                                      // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CurrentColorHSV;                                   // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 LastUpdatedValue;                                  // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bInitializedColor;                                 // 0x0304(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickSlider_C*                     AlphaSlider;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           ColorBorder;                                       // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ColorNameTextBlock;                                // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ColorPalette_C*                    ColorPalette;                                      // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ColorWheel_C*                      ColorWheel;                                        // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     DisplayModeButton;                                 // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        DisplayModeTextBlock;                              // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickTextBox_C*                    HexTextBox;                                        // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     HueSlider;                                         // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     SaturationSlider;                                  // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     ValueSlider;                                       // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           CurrentColor;                                      // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CurrentColorHSV;                                   // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 LastUpdatedValue;                                  // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInitializedColor;                                 // 0x04A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WBP_ColorProperty(int32 EntryPoint);
@@ -77,5 +77,63 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ColorProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_ColorProperty.SKEL_WBP_ColorProperty_C
+// 0x0090 (0x04A8 - 0x0418)
+class USKEL_WBP_ColorProperty_C final : public UColorPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickSlider_C*                     AlphaSlider;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           ColorBorder;                                       // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ColorNameTextBlock;                                // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ColorPalette_C*                    ColorPalette;                                      // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ColorWheel_C*                      ColorWheel;                                        // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     DisplayModeButton;                                 // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        DisplayModeTextBlock;                              // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickTextBox_C*                    HexTextBox;                                        // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     HueSlider;                                         // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     SaturationSlider;                                  // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     ValueSlider;                                       // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           CurrentColor;                                      // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CurrentColorHSV;                                   // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 LastUpdatedValue;                                  // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInitializedColor;                                 // 0x04A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void Construct();
+	void Destruct();
+	void UpdateColorDisplayMode();
+	void BndEvt__WBP_ColorProperty_ColorWheel_K2Node_ComponentBoundEvent_2_ColorChanged__DelegateSignature(const struct FLinearColor& NewColor, EValueChangedEventType EventType);
+	void BndEvt__WBP_ColorProperty_ColorPalette_K2Node_ComponentBoundEvent_3_OnColorChanged__DelegateSignature(const struct FLinearColor& NewColor, EValueChangedEventType EventType);
+	void BndEvt__WBP_ColorProperty_HueSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType);
+	void BndEvt__WBP_ColorProperty_SaturationSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType);
+	void BndEvt__WBP_ColorProperty_ValueSlider_K2Node_ComponentBoundEvent_6_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType);
+	void BndEvt__WBP_ColorProperty_AlphaSlider_K2Node_ComponentBoundEvent_7_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType);
+	void BndEvt__WBP_ColorProperty_HexTextBox_K2Node_ComponentBoundEvent_8_OnTextBoxChanged__DelegateSignature(const class FText& NewText, EValueChangedEventType EventType);
+	void OnColorDisplayModeChanged(const EColorDisplayMode NewDisplayMode);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateColorPropertyValue(const struct FColor& NewColor, const bool bValueChanged);
+	void CycleColorDisplayMode();
+	void SetCurrentColor(const struct FLinearColor& NewColor, const EValueChangedEventType EventType, bool bIsHSV);
+	void UpdateCurrentColor(bool bUpdateHex);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ColorProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ColorProperty_C")
+	}
+	static class USKEL_WBP_ColorProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ColorProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ColorProperty_C;
 
 SDK_NAMESPACE_END

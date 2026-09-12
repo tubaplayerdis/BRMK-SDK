@@ -16,6 +16,85 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_ConnectorSpacingProperty.SKEL_WBP_ConnectorSpacingProperty_C.OnAxisClicked
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFluAxisSigned                          Axis                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_ConnectorSpacingProperty_C::OnAxisClicked(EFluAxisSigned Axis)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingProperty_C", "OnAxisClicked");
+
+	Params::SKEL_WBP_ConnectorSpacingProperty_C_OnAxisClicked Parms{};
+
+	Parms.Axis = Axis;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ConnectorSpacingProperty.SKEL_WBP_ConnectorSpacingProperty_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_ConnectorSpacingProperty_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingProperty_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ConnectorSpacingProperty.SKEL_WBP_ConnectorSpacingProperty_C.UpdateConnectorSpacing
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FScalableBrickConnectorSpacing&NewSpacing                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const uint8                             AxisFlags                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ConnectorSpacingProperty_C::UpdateConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing, const uint8 AxisFlags)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingProperty_C", "UpdateConnectorSpacing");
+
+	Params::SKEL_WBP_ConnectorSpacingProperty_C_UpdateConnectorSpacing Parms{};
+
+	Parms.NewSpacing = std::move(NewSpacing);
+	Parms.AxisFlags = AxisFlags;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ConnectorSpacingProperty.SKEL_WBP_ConnectorSpacingProperty_C.GetFocusedSubProperty
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// const struct FWidgetPathWrapper&        WidgetPath                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName USKEL_WBP_ConnectorSpacingProperty_C::GetFocusedSubProperty(const struct FWidgetPathWrapper& WidgetPath) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingProperty_C", "GetFocusedSubProperty");
+
+	Params::SKEL_WBP_ConnectorSpacingProperty_C_GetFocusedSubProperty Parms{};
+
+	Parms.WidgetPath = std::move(WidgetPath);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ConnectorSpacingProperty.WBP_ConnectorSpacingProperty_C.ExecuteUbergraph_WBP_ConnectorSpacingProperty
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

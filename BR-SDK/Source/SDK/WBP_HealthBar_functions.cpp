@@ -96,4 +96,64 @@ void UWBP_HealthBar_C::UpdateHealth(float NewHealth)
 }
 
 
+// Function WBP_HealthBar.SKEL_WBP_HealthBar_C.UpdateHealth
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   NewHealth                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HealthBar_C::UpdateHealth(float NewHealth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HealthBar_C", "UpdateHealth");
+
+	Params::SKEL_WBP_HealthBar_C_UpdateHealth Parms{};
+
+	Parms.NewHealth = NewHealth;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HealthBar.SKEL_WBP_HealthBar_C.UpdateCanBeDamaged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    bNewCanBeDamaged                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HealthBar_C::UpdateCanBeDamaged(bool bNewCanBeDamaged)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HealthBar_C", "UpdateCanBeDamaged");
+
+	Params::SKEL_WBP_HealthBar_C_UpdateCanBeDamaged Parms{};
+
+	Parms.bNewCanBeDamaged = bNewCanBeDamaged;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HealthBar.SKEL_WBP_HealthBar_C.UpdateHealingState
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// ECharacterHealingState                  NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HealthBar_C::UpdateHealingState(ECharacterHealingState NewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HealthBar_C", "UpdateHealingState");
+
+	Params::SKEL_WBP_HealthBar_C_UpdateHealingState Parms{};
+
+	Parms.NewState = NewState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

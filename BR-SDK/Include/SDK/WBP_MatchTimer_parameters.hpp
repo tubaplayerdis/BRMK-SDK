@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_MatchTimer.WBP_MatchTimer_C.UpdateTimer
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_MatchTimer_C_UpdateTimer final
-{
-public:
-	int32                                         NewTime_UpdateTimer;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_MatchTimer_C_UpdateTimer;
-
 // Function WBP_MatchTimer.WBP_MatchTimer_C.ExecuteUbergraph_WBP_MatchTimer
 // 0x0040 (0x0040 - 0x0000)
 struct WBP_MatchTimer_C_ExecuteUbergraph_WBP_MatchTimer final
@@ -47,6 +38,24 @@ public:
 	EBrickUIColorStyle                            K2Node_Select_Default;                             // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_MatchTimer_C_ExecuteUbergraph_WBP_MatchTimer;
+
+// Function WBP_MatchTimer.WBP_MatchTimer_C.UpdateTimer
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_MatchTimer_C_UpdateTimer final
+{
+public:
+	int32                                         NewTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MatchTimer_C_UpdateTimer;
+
+// Function WBP_MatchTimer.SKEL_WBP_MatchTimer_C.UpdateTimer
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_MatchTimer_C_UpdateTimer final
+{
+public:
+	int32                                         NewTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_MatchTimer_C_UpdateTimer;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_HurtMarker.SKEL_WBP_HurtMarker_C.PlayHurtMarkerAnimation
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_HurtMarker_C::PlayHurtMarkerAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HurtMarker_C", "PlayHurtMarkerAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_HurtMarker.WBP_HurtMarker_C.ExecuteUbergraph_WBP_HurtMarker
 // (Final, UbergraphFunction)
 // Parameters:

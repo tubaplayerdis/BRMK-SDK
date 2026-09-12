@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
+#include "Slate_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
-#include "Slate_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GenericProperty.WBP_GenericProperty_C
-// 0x0020 (0x02A8 - 0x0288)
+// 0x0028 (0x0448 - 0x0420)
 class UWBP_GenericProperty_C final : public UGenericPropertyWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickRichTextBlock*                    RichTextBlock;                                     // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           RichTextBorder;                                    // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickTextBox_C*                    TextBox;                                           // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickRichTextBlock*                    RichTextBlock;                                     // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           RichTextBorder;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickTextBox_C*                    TextBox;                                           // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_GenericProperty(int32 EntryPoint);
@@ -35,7 +35,7 @@ public:
 	void UpdateIsReadOnly(bool bNewReadOnly);
 	void UpdateTextBoxes();
 	void ToggleDisplayRichText();
-	void UpdateText(const class FText& Text, const ETextJustify Justification, const int32 MaxLength, const bool bAllowMultiLine, const bool bIsPassword, const bool bValidateText, const bool bAllowRichText, const class FName& TextFormat);
+	void UpdateText(const class FText& Text, const ETextJustify Justification, const int32 MaxLength, const bool bAllowMultiline, const bool bIsPassword, const bool bValidateText, const bool bAllowRichText, const class FName& TextFormat);
 
 public:
 	static class UClass* StaticClass()
@@ -52,5 +52,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_GenericProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_GenericProperty.SKEL_WBP_GenericProperty_C
+// 0x0028 (0x0448 - 0x0420)
+class USKEL_WBP_GenericProperty_C final : public UGenericPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickRichTextBlock*                    RichTextBlock;                                     // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           RichTextBorder;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickTextBox_C*                    TextBox;                                           // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateText(const class FText& Text, const ETextJustify Justification, const int32 MaxLength, const bool bAllowMultiline, const bool bIsPassword, const bool bValidateText, const bool bAllowRichText, const class FName& TextFormat);
+	void ToggleDisplayRichText();
+	void UpdateTextBoxes();
+	void UpdateIsReadOnly(bool bNewReadOnly);
+	void BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature(const class FText& NewText, EValueChangedEventType EventType);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_GenericProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_GenericProperty_C")
+	}
+	static class USKEL_WBP_GenericProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_GenericProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_GenericProperty_C;
 
 SDK_NAMESPACE_END

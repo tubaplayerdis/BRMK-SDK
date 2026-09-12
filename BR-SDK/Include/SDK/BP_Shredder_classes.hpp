@@ -16,23 +16,56 @@
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Shredder.SKEL_BP_Shredder_C
+// 0x0030 (0x0328 - 0x02F8)
+class ASKEL_BP_Shredder_C final : public AActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Rotor2;                                            // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Rotor1;                                            // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Shredder;                                          // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Speed;                                             // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFunnel;                                           // 0x0324(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bRamp;                                             // 0x0325(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+public:
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Shredder_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Shredder_C")
+	}
+	static class ASKEL_BP_Shredder_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Shredder_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Shredder_C;
+
 // BlueprintGeneratedClass BP_Shredder.BP_Shredder_C
-// 0x0028 (0x0248 - 0x0220)
+// 0x0030 (0x0328 - 0x02F8)
 class ABP_Shredder_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Rotor2;                                            // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Rotor1;                                            // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Shredder;                                          // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Speed;                                             // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFunnel;                                           // 0x0244(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bRamp;                                             // 0x0245(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Rotor2;                                            // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Rotor1;                                            // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Shredder;                                          // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Speed;                                             // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFunnel;                                           // 0x0324(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bRamp;                                             // 0x0325(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ExecuteUbergraph_BP_Shredder(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

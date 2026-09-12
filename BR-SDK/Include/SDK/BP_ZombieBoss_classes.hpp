@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Zombie_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ZombieBoss.BP_ZombieBoss_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x08B0 - 0x08B0)
 class ABP_ZombieBoss_C final : public ABP_Zombie_C
 {
 public:
@@ -34,5 +35,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_ZombieBoss_C;
+
+// BlueprintGeneratedClass BP_ZombieBoss.SKEL_BP_ZombieBoss_C
+// 0x0010 (0x08D0 - 0x08C0)
+class ASKEL_BP_ZombieBoss_C final : public ASKEL_BP_Zombie_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_ZombieBoss_C;               // 0x08C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ZombieBoss_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ZombieBoss_C")
+	}
+	static class ASKEL_BP_ZombieBoss_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_ZombieBoss_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_ZombieBoss_C;
 
 SDK_NAMESPACE_END

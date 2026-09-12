@@ -16,6 +16,94 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.PlayFadeInAnim
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_RestrictedArea_C::PlayFadeInAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "PlayFadeInAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.PlayFadeOutAnim
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_RestrictedArea_C::PlayFadeOutAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "PlayFadeOutAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.UpdateTimerRemaining
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   TimeRemaining                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_RestrictedArea_C::UpdateTimerRemaining(float TimeRemaining)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "UpdateTimerRemaining");
+
+	Params::SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining Parms{};
+
+	Parms.TimeRemaining = TimeRemaining;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_RestrictedArea.WBP_RestrictedArea_C.ExecuteUbergraph_WBP_RestrictedArea
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_RestrictedArea_C::ExecuteUbergraph_WBP_RestrictedArea(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RestrictedArea_C", "ExecuteUbergraph_WBP_RestrictedArea");
+
+	Params::WBP_RestrictedArea_C_ExecuteUbergraph_WBP_RestrictedArea Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_RestrictedArea.WBP_RestrictedArea_C.UpdateTimerRemaining
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   TimeRemaining                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_RestrictedArea_C::UpdateTimerRemaining(float TimeRemaining)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RestrictedArea_C", "UpdateTimerRemaining");
+
+	Params::WBP_RestrictedArea_C_UpdateTimerRemaining Parms{};
+
+	Parms.TimeRemaining = TimeRemaining;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_RestrictedArea.WBP_RestrictedArea_C.PlayFadeOutAnim
 // (Event, Protected, BlueprintEvent)
 
@@ -41,46 +129,6 @@ void UWBP_RestrictedArea_C::PlayFadeInAnim()
 		Func = Class->GetFunction("WBP_RestrictedArea_C", "PlayFadeInAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_RestrictedArea.WBP_RestrictedArea_C.UpdateTimerRemaining
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// float                                   TimeRemaining_UpdateTimerRemaining                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_RestrictedArea_C::UpdateTimerRemaining(float TimeRemaining_UpdateTimerRemaining)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RestrictedArea_C", "UpdateTimerRemaining");
-
-	Params::WBP_RestrictedArea_C_UpdateTimerRemaining Parms{};
-
-	Parms.TimeRemaining_UpdateTimerRemaining = TimeRemaining_UpdateTimerRemaining;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_RestrictedArea.WBP_RestrictedArea_C.ExecuteUbergraph_WBP_RestrictedArea
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_RestrictedArea_C::ExecuteUbergraph_WBP_RestrictedArea(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RestrictedArea_C", "ExecuteUbergraph_WBP_RestrictedArea");
-
-	Params::WBP_RestrictedArea_C_ExecuteUbergraph_WBP_RestrictedArea Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

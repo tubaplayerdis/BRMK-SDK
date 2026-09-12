@@ -24,12 +24,12 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInteractionWidget*                     K2Node_Event_Widget;                               // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMapCrosshairWidget*>            K2Node_Event_Widgets;                              // 0x0010(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMapCrosshairWidget*                    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue_1;             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMapCrosshairWidget*                    CallFunc_Array_Get_Item_1;                         // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue_1;             // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue_2;             // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HUDIconContainer_C_ExecuteUbergraph_WBP_HUDIconContainer;
@@ -51,6 +51,24 @@ public:
 	class UInteractionWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HUDIconContainer_C_AddInteractionWidget;
+
+// Function WBP_HUDIconContainer.SKEL_WBP_HUDIconContainer_C.AddInteractionWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_HUDIconContainer_C_AddInteractionWidget final
+{
+public:
+	class UInteractionWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HUDIconContainer_C_AddInteractionWidget;
+
+// Function WBP_HUDIconContainer.SKEL_WBP_HUDIconContainer_C.AddCrosshairWidgets
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_HUDIconContainer_C_AddCrosshairWidgets final
+{
+public:
+	TArray<class UMapCrosshairWidget*>            Widgets;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HUDIconContainer_C_AddCrosshairWidgets;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

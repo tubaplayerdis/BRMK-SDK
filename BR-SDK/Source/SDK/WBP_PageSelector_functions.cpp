@@ -130,4 +130,98 @@ void UWBP_PageSelector_C::BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClic
 }
 
 
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_PageSelector_C::BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PageSelector_C", "BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_PageSelector_C::BndEvt__NextButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PageSelector_C", "BndEvt__NextButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PageSelector_C::BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PageSelector_C", "BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_PageSelector_C_BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PageSelector_C::BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PageSelector_C", "BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_PageSelector_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.UpdateButtons
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanGoBack                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bCanGoForward                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PageSelector_C::UpdateButtons(bool bCanGoBack, bool bCanGoForward)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PageSelector_C", "UpdateButtons");
+
+	Params::SKEL_WBP_PageSelector_C_UpdateButtons Parms{};
+
+	Parms.bCanGoBack = bCanGoBack;
+	Parms.bCanGoForward = bCanGoForward;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

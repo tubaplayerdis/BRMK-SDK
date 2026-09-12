@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class DeveloperSettings.DeveloperSettings
-// 0x0010 (0x0038 - 0x0028)
+// 0x0030 (0x0060 - 0x0030)
 class UDeveloperSettings : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

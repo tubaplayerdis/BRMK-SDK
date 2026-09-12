@@ -54,5 +54,16 @@ public:
 };
 DUMPER7_ASSERTS_WBP_VehicleIcon_C_UpdateVehicleIcon;
 
+// Function WBP_VehicleIcon.SKEL_WBP_VehicleIcon_C.UpdateVehicleIcon
+// 0x0003 (0x0003 - 0x0000)
+struct SKEL_WBP_VehicleIcon_C_UpdateVehicleIcon final
+{
+public:
+	bool                                          bNewIsLocalPlayer;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewCanBeDamaged;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVehiclePinMode                               NewPinMode;                                        // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_VehicleIcon_C_UpdateVehicleIcon;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

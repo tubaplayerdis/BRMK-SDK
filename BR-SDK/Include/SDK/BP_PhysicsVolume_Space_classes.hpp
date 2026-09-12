@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PhysicsVolume_Space.BP_PhysicsVolume_Space_C
-// 0x0000 (0x0270 - 0x0270)
+// 0x0000 (0x0350 - 0x0350)
 class ABP_PhysicsVolume_Space_C final : public ADefaultPhysicsVolume
 {
 public:
@@ -34,5 +35,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_PhysicsVolume_Space_C;
+
+// BlueprintGeneratedClass BP_PhysicsVolume_Space.SKEL_BP_PhysicsVolume_Space_C
+// 0x0010 (0x0360 - 0x0350)
+class ASKEL_BP_PhysicsVolume_Space_C final : public ADefaultPhysicsVolume
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_PhysicsVolume_Space_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_PhysicsVolume_Space_C")
+	}
+	static class ASKEL_BP_PhysicsVolume_Space_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_PhysicsVolume_Space_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_PhysicsVolume_Space_C;
 
 SDK_NAMESPACE_END

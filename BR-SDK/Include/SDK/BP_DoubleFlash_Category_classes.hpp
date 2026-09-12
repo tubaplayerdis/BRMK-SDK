@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_DoubleFlash_Category.SKEL_BP_DoubleFlash_Category_C
+// 0x0010 (0x0098 - 0x0088)
+class USKEL_BP_DoubleFlash_Category_C : public USirenSequence
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0088(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_DoubleFlash_Category_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_DoubleFlash_Category_C")
+	}
+	static class USKEL_BP_DoubleFlash_Category_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_DoubleFlash_Category_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_DoubleFlash_Category_C;
+
 // BlueprintGeneratedClass BP_DoubleFlash_Category.BP_DoubleFlash_Category_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class UBP_DoubleFlash_Category_C : public USirenSequence
 {
 public:

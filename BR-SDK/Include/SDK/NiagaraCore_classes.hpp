@@ -10,15 +10,20 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class NiagaraCore.NiagaraMergeable
-// 0x0000 (0x0028 - 0x0028)
+// 0x0028 (0x0058 - 0x0030)
 class UNiagaraMergeable : public UObject
 {
+public:
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  MergeId;                                           // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -36,7 +41,7 @@ public:
 DUMPER7_ASSERTS_UNiagaraMergeable;
 
 // Class NiagaraCore.NiagaraDataInterfaceBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0058 - 0x0058)
 class UNiagaraDataInterfaceBase : public UNiagaraMergeable
 {
 public:

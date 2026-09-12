@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CrosshairArrow.WBP_CrosshairArrow_C
-// 0x0008 (0x0268 - 0x0260)
+// 0x0008 (0x0400 - 0x03F8)
 class UWBP_CrosshairArrow_C final : public UUserWidget
 {
 public:
-	class UBrickImage*                            BrickImage_36;                                     // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_36;                                     // 0x03F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_CrosshairArrow_C;
+
+// WidgetBlueprintGeneratedClass WBP_CrosshairArrow.SKEL_WBP_CrosshairArrow_C
+// 0x0018 (0x0410 - 0x03F8)
+class USKEL_WBP_CrosshairArrow_C final : public UUserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            BrickImage_36;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_CrosshairArrow_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_CrosshairArrow_C")
+	}
+	static class USKEL_WBP_CrosshairArrow_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_CrosshairArrow_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_CrosshairArrow_C;
 
 SDK_NAMESPACE_END

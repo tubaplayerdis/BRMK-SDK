@@ -76,4 +76,44 @@ void UWBP_DashboardSlider_C::UpdateIcon(int32 IconIndex)
 }
 
 
+// Function WBP_DashboardSlider.SKEL_WBP_DashboardSlider_C.UpdateIcon
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   IconIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_DashboardSlider_C::UpdateIcon(int32 IconIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_DashboardSlider_C", "UpdateIcon");
+
+	Params::SKEL_WBP_DashboardSlider_C_UpdateIcon Parms{};
+
+	Parms.IconIndex = IconIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_DashboardSlider.SKEL_WBP_DashboardSlider_C.UpdateColorStyle
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      NewStyle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_DashboardSlider_C::UpdateColorStyle(EBrickUIColorStyle NewStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_DashboardSlider_C", "UpdateColorStyle");
+
+	Params::SKEL_WBP_DashboardSlider_C_UpdateColorStyle Parms{};
+
+	Parms.NewStyle = NewStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

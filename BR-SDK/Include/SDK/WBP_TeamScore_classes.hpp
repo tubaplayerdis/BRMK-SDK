@@ -19,20 +19,20 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TeamScore.WBP_TeamScore_C
-// 0x0020 (0x0298 - 0x0278)
+// 0x0028 (0x0438 - 0x0410)
 class UWBP_TeamScore_C final : public UTeamScoreWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            IconImage;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        ScoreTextBlock;                                    // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            IconImage;                                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ScoreTextBlock;                                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateScore(int32 NewScore_UpdateScore, int32 NewMaxScore_UpdateScore);
-	void UpdateTeamAttitude(ETeamAttitude NewTeamAttitude_UpdateTeamAttitude);
-	void UpdateTeamIcon(class UTexture2D* NewIcon_UpdateTeamIcon);
 	void ExecuteUbergraph_WBP_TeamScore(int32 EntryPoint);
+	void UpdateTeamIcon(class UTexture2D* NewIcon);
+	void UpdateTeamAttitude(ETeamAttitude NewTeamAttitude);
+	void UpdateScore(int32 NewScore, int32 NewMaxScore);
 
 public:
 	static class UClass* StaticClass()
@@ -49,5 +49,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_TeamScore_C;
+
+// WidgetBlueprintGeneratedClass WBP_TeamScore.SKEL_WBP_TeamScore_C
+// 0x0028 (0x0438 - 0x0410)
+class USKEL_WBP_TeamScore_C final : public UTeamScoreWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            IconImage;                                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ScoreTextBlock;                                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateScore(int32 NewScore, int32 NewMaxScore);
+	void UpdateTeamAttitude(ETeamAttitude NewTeamAttitude);
+	void UpdateTeamIcon(class UTexture2D* NewIcon);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_TeamScore_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_TeamScore_C")
+	}
+	static class USKEL_WBP_TeamScore_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_TeamScore_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_TeamScore_C;
 
 SDK_NAMESPACE_END

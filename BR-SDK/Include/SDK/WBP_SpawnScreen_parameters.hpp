@@ -27,5 +27,15 @@ public:
 };
 DUMPER7_ASSERTS_WBP_SpawnScreen_C_AddGameOverlayWidget;
 
+// Function WBP_SpawnScreen.SKEL_WBP_SpawnScreen_C.AddGameOverlayWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_SpawnScreen_C_AddGameOverlayWidget final
+{
+public:
+	class UGameOverlayWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_SpawnScreen_C_AddGameOverlayWidget;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

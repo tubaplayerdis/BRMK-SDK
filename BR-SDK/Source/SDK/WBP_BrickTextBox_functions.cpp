@@ -16,20 +16,20 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
 // Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+void USKEL_WBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickTextBox_C", "BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_BrickTextBox_C", "BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
 
-	Params::WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+	Params::SKEL_WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
 
 	Parms.InColorStyle = InColorStyle;
 	Parms.InContentStyleState = InContentStyleState;
@@ -38,55 +38,55 @@ void UWBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_
 }
 
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
 
-void UWBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+void USKEL_WBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickTextBox_C", "BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_BrickTextBox_C", "BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdateIsPassword
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.UpdateIsPassword
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bNewIsPassword_UpdateIsPassword                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bNewIsPassword                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_BrickTextBox_C::UpdateIsPassword(bool bNewIsPassword_UpdateIsPassword)
+void USKEL_WBP_BrickTextBox_C::UpdateIsPassword(bool bNewIsPassword)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickTextBox_C", "UpdateIsPassword");
+		Func = Class->GetFunction("SKEL_WBP_BrickTextBox_C", "UpdateIsPassword");
 
-	Params::WBP_BrickTextBox_C_UpdateIsPassword Parms{};
+	Params::SKEL_WBP_BrickTextBox_C_UpdateIsPassword Parms{};
 
-	Parms.bNewIsPassword_UpdateIsPassword = bNewIsPassword_UpdateIsPassword;
+	Parms.bNewIsPassword = bNewIsPassword;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdatePasswordVisible
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.UpdatePasswordVisible
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bNewVisible_UpdatePasswordVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_BrickTextBox_C::UpdatePasswordVisible(bool bNewVisible_UpdatePasswordVisible)
+void USKEL_WBP_BrickTextBox_C::UpdatePasswordVisible(bool bNewVisible)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickTextBox_C", "UpdatePasswordVisible");
+		Func = Class->GetFunction("SKEL_WBP_BrickTextBox_C", "UpdatePasswordVisible");
 
-	Params::WBP_BrickTextBox_C_UpdatePasswordVisible Parms{};
+	Params::SKEL_WBP_BrickTextBox_C_UpdatePasswordVisible Parms{};
 
-	Parms.bNewVisible_UpdatePasswordVisible = bNewVisible_UpdatePasswordVisible;
+	Parms.bNewVisible = bNewVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -107,6 +107,82 @@ void UWBP_BrickTextBox_C::ExecuteUbergraph_WBP_BrickTextBox(int32 EntryPoint)
 	Params::WBP_BrickTextBox_C_ExecuteUbergraph_WBP_BrickTextBox Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdatePasswordVisible
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_BrickTextBox_C::UpdatePasswordVisible(bool bNewVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BrickTextBox_C", "UpdatePasswordVisible");
+
+	Params::WBP_BrickTextBox_C_UpdatePasswordVisible Parms{};
+
+	Parms.bNewVisible = bNewVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdateIsPassword
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewIsPassword                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_BrickTextBox_C::UpdateIsPassword(bool bNewIsPassword)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BrickTextBox_C", "UpdateIsPassword");
+
+	Params::WBP_BrickTextBox_C_UpdateIsPassword Parms{};
+
+	Parms.bNewIsPassword = bNewIsPassword;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BrickTextBox_C", "BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BrickTextBox_C::BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BrickTextBox_C", "BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

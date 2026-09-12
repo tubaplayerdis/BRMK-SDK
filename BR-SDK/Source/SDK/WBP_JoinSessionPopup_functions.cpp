@@ -94,4 +94,62 @@ void UWBP_JoinSessionPopup_C::Construct()
 }
 
 
+// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_JoinSessionPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_JoinSessionPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_JoinSessionPopup_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_JoinSessionPopup_C", "PreConstruct");
+
+	Params::SKEL_WBP_JoinSessionPopup_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.UpdateJoinState
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EJoinSessionState                       InJoinState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInPasswordRequired                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInHasPassword                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_JoinSessionPopup_C::UpdateJoinState(EJoinSessionState InJoinState, bool bInPasswordRequired, bool bInHasPassword)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_JoinSessionPopup_C", "UpdateJoinState");
+
+	Params::SKEL_WBP_JoinSessionPopup_C_UpdateJoinState Parms{};
+
+	Parms.InJoinState = InJoinState;
+	Parms.bInPasswordRequired = bInPasswordRequired;
+	Parms.bInHasPassword = bInHasPassword;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

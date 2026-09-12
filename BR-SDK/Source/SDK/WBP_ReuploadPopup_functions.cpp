@@ -70,4 +70,38 @@ class FText UWBP_ReuploadPopup_C::GetPopupTitle() const
 }
 
 
+// Function WBP_ReuploadPopup.SKEL_WBP_ReuploadPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_ReuploadPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ReuploadPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ReuploadPopup.SKEL_WBP_ReuploadPopup_C.GetPopupTitle
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class FText                             ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+class FText USKEL_WBP_ReuploadPopup_C::GetPopupTitle() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ReuploadPopup_C", "GetPopupTitle");
+
+	Params::SKEL_WBP_ReuploadPopup_C_GetPopupTitle Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "BrickRigs_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_PropertyContainer.WBP_PropertyContainer_C.ExecuteUbergraph_WBP_PropertyContainer
-// 0x0068 (0x0068 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct WBP_PropertyContainer_C_ExecuteUbergraph_WBP_PropertyContainer final
 {
 public:
@@ -37,21 +37,22 @@ public:
 	EHorizontalAlignment                          Temp_byte_Variable_3;                              // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EHorizontalAlignment                          Temp_byte_Variable_4;                              // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor)
-	class UPropertyWidget*                        K2Node_Event_Widget;                               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOrientation                                  K2Node_Event_InOrientation_1;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenContextMenu_ReturnValue;              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select_Default;                             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default_1;                           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOrientation                                  K2Node_Event_InOrientation;                        // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue;               // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHorizontalAlignment                          K2Node_Select_Default_2;                           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_Event_InColorStyle;                         // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHorizontalBoxSlot*                     CallFunc_SlotAsHorizontalBoxSlot_ReturnValue;      // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPropertyWidget*                        K2Node_Event_Widget;                               // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EOrientation                                  K2Node_Event_InOrientation_1;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenContextMenu_ReturnValue;              // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default;                             // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_1;                           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EOrientation                                  K2Node_Event_InOrientation;                        // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue;               // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          K2Node_Select_Default_2;                           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            K2Node_Event_InColorStyle;                         // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHorizontalBoxSlot*                     CallFunc_SlotAsHorizontalBoxSlot_ReturnValue;      // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PropertyContainer_C_ExecuteUbergraph_WBP_PropertyContainer;
 
@@ -84,21 +85,60 @@ public:
 DUMPER7_ASSERTS_WBP_PropertyContainer_C_AddPropertyWidget;
 
 // Function WBP_PropertyContainer.WBP_PropertyContainer_C.OnMouseButtonUp
-// 0x02F0 (0x02F0 - 0x0000)
+// 0x0318 (0x0318 - 0x0000)
 struct WBP_PropertyContainer_C_OnMouseButtonUp final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0160(0x00B8)()
-	struct FKey                                   CallFunc_PointerEvent_GetEffectingButton_ReturnValue; // 0x0218(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_OpenContextMenu_ReturnValue;              // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_232[0x6];                                      // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0238(0x00B8)()
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0170(0x00C0)()
+	struct FKey                                   CallFunc_PointerEvent_GetEffectingButton_ReturnValue; // 0x0230(0x0020)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_OpenContextMenu_ReturnValue;              // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_252[0x6];                                      // 0x0252(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0258(0x00C0)()
 };
 DUMPER7_ASSERTS_WBP_PropertyContainer_C_OnMouseButtonUp;
+
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.AddPropertyWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_PropertyContainer_C_AddPropertyWidget final
+{
+public:
+	class UPropertyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOrientation                                  InOrientation;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyContainer_C_AddPropertyWidget;
+
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.UpdateOrientation
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_PropertyContainer_C_UpdateOrientation final
+{
+public:
+	EOrientation                                  InOrientation;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyContainer_C_UpdateOrientation;
+
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_PropertyContainer_C_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyContainer_C_UpdateColorStyle;
+
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.OnMouseButtonUp
+// 0x0170 (0x0170 - 0x0000)
+struct SKEL_WBP_PropertyContainer_C_OnMouseButtonUp final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyContainer_C_OnMouseButtonUp;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

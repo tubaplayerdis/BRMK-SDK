@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Zombie.BP_Zombie_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x08B0 - 0x08B0)
 class ABP_Zombie_C : public AZombie
 {
 public:
@@ -34,5 +35,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Zombie_C;
+
+// BlueprintGeneratedClass BP_Zombie.SKEL_BP_Zombie_C
+// 0x0010 (0x08C0 - 0x08B0)
+class ASKEL_BP_Zombie_C : public AZombie
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Zombie_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Zombie_C")
+	}
+	static class ASKEL_BP_Zombie_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Zombie_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Zombie_C;
 
 SDK_NAMESPACE_END

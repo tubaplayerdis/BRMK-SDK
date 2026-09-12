@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Crosshair.WBP_Crosshair_C
-// 0x0018 (0x02E0 - 0x02C8)
+// 0x0020 (0x0480 - 0x0460)
 class UWBP_Crosshair_C final : public UCrosshairWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       HitMarkerAnim;                                     // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBrickImage*                            WinchIcon;                                         // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       HitMarkerAnim;                                     // 0x0470(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickImage*                            WinchIcon;                                         // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_Crosshair(int32 EntryPoint);
@@ -48,5 +48,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Crosshair_C;
+
+// WidgetBlueprintGeneratedClass WBP_Crosshair.SKEL_WBP_Crosshair_C
+// 0x0020 (0x0480 - 0x0460)
+class USKEL_WBP_Crosshair_C final : public UCrosshairWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       HitMarkerAnim;                                     // 0x0470(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickImage*                            WinchIcon;                                         // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void PlayHitAnimation(const struct FClientDamageInfo& DamageInfo);
+	void UpdateIsAttachingWinch(bool bNewAttaching);
+	void UpdateWinchAttachment(bool bBlockingHit, bool bWithinRange);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Crosshair_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Crosshair_C")
+	}
+	static class USKEL_WBP_Crosshair_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Crosshair_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Crosshair_C;
 
 SDK_NAMESPACE_END

@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ContextMenu.WBP_ContextMenu_C
-// 0x0020 (0x02C0 - 0x02A0)
+// 0x0028 (0x0460 - 0x0438)
 class UWBP_ContextMenu_C final : public UContextMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USizeBox*                               SizeBox_0;                                         // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           TitleBorder;                                       // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TitleTextBlock;                                    // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USizeBox*                               SizeBox_0;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           TitleBorder;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TitleTextBlock;                                    // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_ContextMenu(int32 EntryPoint);
@@ -46,5 +46,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ContextMenu_C;
+
+// WidgetBlueprintGeneratedClass WBP_ContextMenu.SKEL_WBP_ContextMenu_C
+// 0x0028 (0x0460 - 0x0438)
+class USKEL_WBP_ContextMenu_C final : public UContextMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USizeBox*                               SizeBox_0;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           TitleBorder;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TitleTextBlock;                                    // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateTitleText(const class FText& InText);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ContextMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ContextMenu_C")
+	}
+	static class USKEL_WBP_ContextMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ContextMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ContextMenu_C;
 
 SDK_NAMESPACE_END

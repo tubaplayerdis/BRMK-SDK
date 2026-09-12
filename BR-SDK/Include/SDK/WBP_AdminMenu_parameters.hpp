@@ -17,7 +17,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_AdminMenu.WBP_AdminMenu_C.ExecuteUbergraph_WBP_AdminMenu
-// 0x0088 (0x0088 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct WBP_AdminMenu_C_ExecuteUbergraph_WBP_AdminMenu final
 {
 public:
@@ -26,22 +26,21 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuWidget*                            CallFunc_GetMenuWidget_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0014)(ZeroConstructor, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuButtonWidget*                      CallFunc_CreateShowProfileButton_ReturnValue;      // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0040(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateRefreshButton_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0064(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_1;               // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bNewSelected;                         // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bNewCanViewAndEdit;                   // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0030(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0044(0x0014)(ZeroConstructor, NoDestructor)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateRefreshButton_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x006C(0x0014)(ZeroConstructor, NoDestructor)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_1;               // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bNewSelected;                         // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bNewCanViewAndEdit;                   // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_AdminMenu_C_ExecuteUbergraph_WBP_AdminMenu;
 
@@ -62,6 +61,24 @@ public:
 	bool                                          bNewSelected;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_AdminMenu_C_UpdateHasSelectedKick;
+
+// Function WBP_AdminMenu.SKEL_WBP_AdminMenu_C.UpdateHasSelectedKick
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_AdminMenu_C_UpdateHasSelectedKick final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_AdminMenu_C_UpdateHasSelectedKick;
+
+// Function WBP_AdminMenu.SKEL_WBP_AdminMenu_C.UpdateCanViewAndEditKicks
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_AdminMenu_C_UpdateCanViewAndEditKicks final
+{
+public:
+	bool                                          bNewCanViewAndEdit;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_AdminMenu_C_UpdateCanViewAndEditKicks;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

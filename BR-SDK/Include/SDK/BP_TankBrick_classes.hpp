@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_TankBrick.SKEL_BP_TankBrick_C
+// 0x0010 (0x0200 - 0x01F0)
+class USKEL_BP_TankBrick_C final : public UTankBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_TankBrick_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_TankBrick_C")
+	}
+	static class USKEL_BP_TankBrick_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_TankBrick_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_TankBrick_C;
+
 // BlueprintGeneratedClass BP_TankBrick.BP_TankBrick_C
-// 0x0000 (0x01E0 - 0x01E0)
+// 0x0000 (0x01F0 - 0x01F0)
 class UBP_TankBrick_C final : public UTankBrickStaticInfo
 {
 public:

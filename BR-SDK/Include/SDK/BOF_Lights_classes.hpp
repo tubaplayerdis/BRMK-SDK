@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BOF_Lights.SKEL_BOF_Lights_C
+// 0x0010 (0x00D0 - 0x00C0)
+class USKEL_BOF_Lights_C final : public UBrickEditorObjectFilter
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BOF_Lights_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BOF_Lights_C")
+	}
+	static class USKEL_BOF_Lights_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BOF_Lights_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BOF_Lights_C;
+
 // BlueprintGeneratedClass BOF_Lights.BOF_Lights_C
-// 0x0000 (0x00B0 - 0x00B0)
+// 0x0000 (0x00C0 - 0x00C0)
 class UBOF_Lights_C final : public UBrickEditorObjectFilter
 {
 public:

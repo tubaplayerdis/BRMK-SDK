@@ -23,12 +23,11 @@ struct ABP_Character_Watch_C_ExecuteUbergraph_ABP_Character_Watch final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	float                                         K2Node_Event_DeltaTimeX;                           // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue_1;         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_RInterpTo_ReturnValue;                    // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0014)(ZeroConstructor, NoDestructor)
+	float                                         K2Node_Event_DeltaTimeX;                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue_1;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_RInterpTo_ReturnValue;                    // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_RandomFloatInRange_ReturnValue_2;         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetTimeSeconds_ReturnValue;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -52,13 +51,31 @@ public:
 DUMPER7_ASSERTS_ABP_Character_Watch_C_BlueprintUpdateAnimation;
 
 // Function ABP_Character_Watch.ABP_Character_Watch_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct ABP_Character_Watch_C_AnimGraph final
 {
 public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_ABP_Character_Watch_C_AnimGraph;
+
+// Function ABP_Character_Watch.SKEL_ABP_Character_Watch_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_ABP_Character_Watch_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_ABP_Character_Watch_C_BlueprintUpdateAnimation;
+
+// Function ABP_Character_Watch.SKEL_ABP_Character_Watch_C.AnimGraph
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_ABP_Character_Watch_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_ABP_Character_Watch_C_AnimGraph;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

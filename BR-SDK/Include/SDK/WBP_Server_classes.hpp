@@ -18,14 +18,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Server.WBP_Server_C
-// 0x0020 (0x0440 - 0x0420)
+// 0x0028 (0x05E0 - 0x05B8)
 class UWBP_Server_C final : public UServerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            DedicatedIcon;                                     // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            ModsIcon;                                          // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            PasswordIcon;                                      // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            DedicatedIcon;                                     // 0x05C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            ModsIcon;                                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            PasswordIcon;                                      // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_Server(int32 EntryPoint);
@@ -49,5 +49,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Server_C;
+
+// WidgetBlueprintGeneratedClass WBP_Server.SKEL_WBP_Server_C
+// 0x0028 (0x05E0 - 0x05B8)
+class USKEL_WBP_Server_C final : public UServerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            DedicatedIcon;                                     // 0x05C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            ModsIcon;                                          // 0x05D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            PasswordIcon;                                      // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateServer(const struct FBrickOnlineSessionInfo& SessionInfo);
+
+	int32 GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllowDifferentMods) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Server_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Server_C")
+	}
+	static class USKEL_WBP_Server_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Server_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Server_C;
 
 SDK_NAMESPACE_END

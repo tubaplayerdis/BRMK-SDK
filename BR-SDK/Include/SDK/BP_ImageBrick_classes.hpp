@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ImageBrick.BP_ImageBrick_C
-// 0x0000 (0x01E0 - 0x01E0)
+// 0x0000 (0x01F0 - 0x01F0)
 class UBP_ImageBrick_C final : public UImageBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_ImageBrick_C;
+
+// BlueprintGeneratedClass BP_ImageBrick.SKEL_BP_ImageBrick_C
+// 0x0010 (0x0200 - 0x01F0)
+class USKEL_BP_ImageBrick_C final : public UImageBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ImageBrick_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ImageBrick_C")
+	}
+	static class USKEL_BP_ImageBrick_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_ImageBrick_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_ImageBrick_C;
 
 SDK_NAMESPACE_END

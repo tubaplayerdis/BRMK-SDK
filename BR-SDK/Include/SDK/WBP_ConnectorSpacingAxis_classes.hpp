@@ -11,26 +11,61 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "BrickRigs_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_classes.hpp"
-#include "BrickRigs_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C
+// 0x0048 (0x0440 - 0x03F8)
+class USKEL_WBP_ConnectorSpacingAxis_C final : public UUserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            Icon;                                              // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EFluAxisSigned                                SpacingAxis;                                       // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EFluAxisSigned Axis)> OnClicked;                                   // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	EConnectorSpacing                             ConnectorSpacing;                                  // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void UpdateSpacingAxis(EFluAxisSigned InSpacingAxis, EConnectorSpacing InSpacing);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ConnectorSpacingAxis_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ConnectorSpacingAxis_C")
+	}
+	static class USKEL_WBP_ConnectorSpacingAxis_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ConnectorSpacingAxis_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ConnectorSpacingAxis_C;
+
 // WidgetBlueprintGeneratedClass WBP_ConnectorSpacingAxis.WBP_ConnectorSpacingAxis_C
-// 0x0040 (0x02A0 - 0x0260)
+// 0x0048 (0x0440 - 0x03F8)
 class UWBP_ConnectorSpacingAxis_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            Icon;                                              // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	EFluAxisSigned                                SpacingAxis;                                       // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EFluAxisSigned Axis)> OnClicked;                                   // 0x0288(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	EConnectorSpacing                             ConnectorSpacing;                                  // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            Icon;                                              // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EFluAxisSigned                                SpacingAxis;                                       // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EFluAxisSigned Axis)> OnClicked;                                   // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	EConnectorSpacing                             ConnectorSpacing;                                  // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_ConnectorSpacingAxis(int32 EntryPoint);

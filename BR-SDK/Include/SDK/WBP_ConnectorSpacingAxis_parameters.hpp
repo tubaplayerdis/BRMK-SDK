@@ -10,13 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_ConnectorSpacingAxis_C_BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ConnectorSpacingAxis_C_BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.UpdateSpacingAxis
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_ConnectorSpacingAxis_C_UpdateSpacingAxis final
+{
+public:
+	EFluAxisSigned                                InSpacingAxis;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EConnectorSpacing                             InSpacing;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ConnectorSpacingAxis_C_UpdateSpacingAxis;
 
 // Function WBP_ConnectorSpacingAxis.WBP_ConnectorSpacingAxis_C.ExecuteUbergraph_WBP_ConnectorSpacingAxis
 // 0x0140 (0x0140 - 0x0000)

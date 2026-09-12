@@ -144,4 +144,112 @@ void UWBP_BrickEditorObjectProperty_C::UpdateSelectedObjects(const class FText& 
 }
 
 
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.UpdateSelectedObjects
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      FirstObjectName                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   NumSelectedObjects                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDefaultObjects                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickEditorObjectProperty_C::UpdateSelectedObjects(const class FText& FirstObjectName, int32 NumSelectedObjects, bool bDefaultObjects)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorObjectProperty_C", "UpdateSelectedObjects");
+
+	Params::SKEL_WBP_BrickEditorObjectProperty_C_UpdateSelectedObjects Parms{};
+
+	Parms.FirstObjectName = std::move(FirstObjectName);
+	Parms.NumSelectedObjects = NumSelectedObjects;
+	Parms.bDefaultObjects = bDefaultObjects;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.BndEvt__PickObjectsButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_BrickEditorObjectProperty_C::BndEvt__PickObjectsButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorObjectProperty_C", "BndEvt__PickObjectsButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.BndEvt__WBP_BrickButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_BrickEditorObjectProperty_C::BndEvt__WBP_BrickButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorObjectProperty_C", "BndEvt__WBP_BrickButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickEditorObjectProperty_C::BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorObjectProperty_C", "BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_BrickEditorObjectProperty_C_BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_BrickEditorObjectProperty_C::BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorObjectProperty_C", "BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.UpdateIsReadOnly
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewReadOnly                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickEditorObjectProperty_C::UpdateIsReadOnly(bool bNewReadOnly)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorObjectProperty_C", "UpdateIsReadOnly");
+
+	Params::SKEL_WBP_BrickEditorObjectProperty_C_UpdateIsReadOnly Parms{};
+
+	Parms.bNewReadOnly = bNewReadOnly;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

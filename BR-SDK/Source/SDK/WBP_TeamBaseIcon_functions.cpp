@@ -36,4 +36,24 @@ class FText UWBP_TeamBaseIcon_C::GetIconDisplayName() const
 }
 
 
+// Function WBP_TeamBaseIcon.SKEL_WBP_TeamBaseIcon_C.GetIconDisplayName
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class FText                             ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+class FText USKEL_WBP_TeamBaseIcon_C::GetIconDisplayName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TeamBaseIcon_C", "GetIconDisplayName");
+
+	Params::SKEL_WBP_TeamBaseIcon_C_GetIconDisplayName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

@@ -40,5 +40,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_WindowManager_C_AddActiveWidget;
 
+// Function WBP_WindowManager.SKEL_WBP_WindowManager_C.AddActiveWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_WindowManager_C_AddActiveWidget final
+{
+public:
+	class UMainWidgetBase*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_WindowManager_C_AddActiveWidget;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

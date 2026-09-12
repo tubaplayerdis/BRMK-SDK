@@ -11,21 +11,22 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Construction_Building.BP_Construction_Building_C
-// 0x0010 (0x0320 - 0x0310)
+// 0x0010 (0x0410 - 0x0400)
 class ABP_Construction_Building_C final : public ALegacyBuilding
 {
 public:
-	class UInstancedStaticMeshComponent*          Molds;                                             // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInstancedStaticMeshComponent*          Molds;                                             // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BuildSide(int32 Num, int32 OtherNum, bool bIsY);
-	void BuildWall(int32 NumX, int32 NumY);
 	void UserConstructionScript();
+	void BuildWall(int32 NumX, int32 NumY);
+	void BuildSide(int32 Num, int32 OtherNum, bool bIsY);
 
 public:
 	static class UClass* StaticClass()
@@ -42,5 +43,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Construction_Building_C;
+
+// BlueprintGeneratedClass BP_Construction_Building.SKEL_BP_Construction_Building_C
+// 0x0020 (0x0420 - 0x0400)
+class ASKEL_BP_Construction_Building_C final : public ALegacyBuilding
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0400(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UInstancedStaticMeshComponent*          Molds;                                             // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UserConstructionScript();
+	void BuildWall(int32 NumX, int32 NumY);
+	void BuildSide(int32 Num, int32 OtherNum, bool bIsY);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Construction_Building_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Construction_Building_C")
+	}
+	static class ASKEL_BP_Construction_Building_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Construction_Building_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Construction_Building_C;
 
 SDK_NAMESPACE_END

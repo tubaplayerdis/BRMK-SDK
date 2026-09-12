@@ -10,69 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function WBP_BrickSlider.WBP_BrickSlider_C.PoolModifierHintWidget
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_BrickSlider_C_PoolModifierHintWidget final
-{
-public:
-	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_BrickSlider_C_PoolModifierHintWidget;
-
-// Function WBP_BrickSlider.WBP_BrickSlider_C.CreateModifierHintWidget
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_BrickSlider_C_CreateModifierHintWidget final
-{
-public:
-	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   Key;                                               // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FVector2D                              Pivot;                                             // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EVerticalAlignment                            VerticalAlignment;                                 // 0x0029(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_InputKey_C*                        CallFunc_GetWidget_ReturnValue;                    // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BrickSlider_C_CreateModifierHintWidget;
-
-// Function WBP_BrickSlider.WBP_BrickSlider_C.UpdateSliderPosition
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_BrickSlider_C_UpdateSliderPosition final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BrickSlider_C_UpdateSliderPosition;
-
-// Function WBP_BrickSlider.WBP_BrickSlider_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BrickSlider_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_BrickSlider_C_PreConstruct;
-
-// Function WBP_BrickSlider.WBP_BrickSlider_C.UpdateIsDragging
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BrickSlider_C_UpdateIsDragging final
-{
-public:
-	bool                                          bIsDragging;                                       // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_BrickSlider_C_UpdateIsDragging;
 
 // Function WBP_BrickSlider.WBP_BrickSlider_C.ExecuteUbergraph_WBP_BrickSlider
 // 0x0038 (0x0038 - 0x0000)
@@ -91,6 +36,109 @@ public:
 	bool                                          K2Node_Event_bIsDragging;                          // 0x0031(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_BrickSlider_C_ExecuteUbergraph_WBP_BrickSlider;
+
+// Function WBP_BrickSlider.WBP_BrickSlider_C.UpdateIsDragging
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BrickSlider_C_UpdateIsDragging final
+{
+public:
+	bool                                          bIsDragging;                                       // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickSlider_C_UpdateIsDragging;
+
+// Function WBP_BrickSlider.WBP_BrickSlider_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BrickSlider_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickSlider_C_PreConstruct;
+
+// Function WBP_BrickSlider.WBP_BrickSlider_C.UpdateSliderPosition
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_BrickSlider_C_UpdateSliderPosition final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BrickSlider_C_UpdateSliderPosition;
+
+// Function WBP_BrickSlider.WBP_BrickSlider_C.CreateModifierHintWidget
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_BrickSlider_C_CreateModifierHintWidget final
+{
+public:
+	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   Key;                                               // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FVector2D                              Pivot;                                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EVerticalAlignment                            VerticalAlignment;                                 // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_InputKey_C*                        CallFunc_GetWidget_ReturnValue;                    // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BrickSlider_C_CreateModifierHintWidget;
+
+// Function WBP_BrickSlider.WBP_BrickSlider_C.PoolModifierHintWidget
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_BrickSlider_C_PoolModifierHintWidget final
+{
+public:
+	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickSlider_C_PoolModifierHintWidget;
+
+// Function WBP_BrickSlider.SKEL_WBP_BrickSlider_C.UpdateSliderPosition
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_BrickSlider_C_UpdateSliderPosition final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickSlider_C_UpdateSliderPosition;
+
+// Function WBP_BrickSlider.SKEL_WBP_BrickSlider_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickSlider_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickSlider_C_PreConstruct;
+
+// Function WBP_BrickSlider.SKEL_WBP_BrickSlider_C.UpdateIsDragging
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickSlider_C_UpdateIsDragging final
+{
+public:
+	bool                                          bIsDragging;                                       // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickSlider_C_UpdateIsDragging;
+
+// Function WBP_BrickSlider.SKEL_WBP_BrickSlider_C.CreateModifierHintWidget
+// 0x0038 (0x0038 - 0x0000)
+struct SKEL_WBP_BrickSlider_C_CreateModifierHintWidget final
+{
+public:
+	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   Key;                                               // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FVector2D                              Pivot;                                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EVerticalAlignment                            VerticalAlignment;                                 // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickSlider_C_CreateModifierHintWidget;
+
+// Function WBP_BrickSlider.SKEL_WBP_BrickSlider_C.PoolModifierHintWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_BrickSlider_C_PoolModifierHintWidget final
+{
+public:
+	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickSlider_C_PoolModifierHintWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

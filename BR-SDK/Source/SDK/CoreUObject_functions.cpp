@@ -8,9 +8,6 @@
 
 // Package: CoreUObject
 
-#include <windows.h>
-#include <libloaderapi.h>
-
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
@@ -62,29 +59,13 @@ class UObject* UObject::FindObjectImpl(const std::string& FullName, EClassCastFl
 // Predefined Function
 // Returns the name of this object in the format 'Class Package.Outer.Object'
 
-namespace
-{
-	template<typename T>
-	T& GetMember(void* base, std::size_t offset)
-	{
-		return *reinterpret_cast<T*>(reinterpret_cast<std::uint8_t*>(base) + offset);
-	}
-
-	static const bool IsInEditorBinary = GetModuleHandle(L"BrickRigsModKitSteam.exe") != nullptr;
-}
-
-class UObject* UObject::Outer() const
-{
-	return IsInEditorBinary ? GetMember<UObject*>((void*)this, 0x28) : GetMember<UObject*>((void*)this, 0x20);
-}
-
 std::string UObject::GetFullName() const
 {
 	if (this && Class)
 	{
 		std::string Temp;
 
-		for (UObject* NextOuter = Outer(); NextOuter; NextOuter = NextOuter->Outer())
+		for (UObject* NextOuter = Outer; NextOuter; NextOuter = NextOuter->Outer)
 		{
 			Temp = NextOuter->GetName() + "." + Temp;
 		}
@@ -115,7 +96,7 @@ std::string UObject::GetName() const
 
 bool UObject::HasTypeFlag(EClassCastFlags TypeFlags) const
 {
-	return (Class->GetCastFlags() & TypeFlags);
+	return (Class->CastFlags & TypeFlags);
 }
 
 
@@ -124,7 +105,7 @@ bool UObject::HasTypeFlag(EClassCastFlags TypeFlags) const
 
 bool UObject::IsA(EClassCastFlags TypeFlags) const
 {
-	return (Class->GetCastFlags() & TypeFlags);
+	return (Class->CastFlags & TypeFlags);
 }
 
 
@@ -205,19 +186,43 @@ bool UStruct::IsSubclassOf(const FName& BaseClassName) const
 	return false;
 }
 
-class UObject* UClass::GetClassDefaultObject() const
-{
-	return IsInEditorBinary ? GetMember<UObject*>((void*)this, 0x138) : ClassDefaultObject;
-}
 
-enum EClassCastFlags UClass::GetCastFlags() const
+// Predefined Function
+// Gets a UFunction from this UClasses' 'Children' list
+
+class UFunction* UClass::GetFunction(const FName& ClassName, const FName& FuncName) const
 {
-	if (!this)
+	for (const UStruct* Clss = this; Clss; Clss = Clss->SuperStruct)
 	{
-		return EClassCastFlags::None;
+		if (Clss->Name != ClassName)
+			continue;
+
+		for (UField* Field = Clss->Children; Field; Field = Field->Next)
+		{
+			if (Field->HasTypeFlag(EClassCastFlags::Function) && Field->Name == FuncName)
+				return static_cast<class UFunction*>(Field);
+		}
 	}
 
-	return IsInEditorBinary ? GetMember<EClassCastFlags>((void*)this, 0xE0) : CastFlags;
+	return nullptr;
+}
+
+
+// Predefined Function
+// Gets the first UFunction from the UClass inheritance hierarchy
+
+class UFunction* UClass::GetFunction(const FName& FuncName) const
+{
+	for (const UStruct* Clss = this; Clss; Clss = Clss->SuperStruct)
+	{
+		for (UField* Field = Clss->Children; Field; Field = Field->Next)
+		{
+			if (Field->HasTypeFlag(EClassCastFlags::Function) && Field->Name == FuncName)
+				return static_cast<class UFunction*>(Field);
+		}
+	}
+
+	return nullptr;
 }
 
 

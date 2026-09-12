@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_BoolProperty.WBP_BoolProperty_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x0420 - 0x0420)
 class UWBP_BoolProperty_C final : public UBoolPropertyWidget
 {
 public:
@@ -34,5 +35,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_BoolProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_BoolProperty.SKEL_WBP_BoolProperty_C
+// 0x0010 (0x0430 - 0x0420)
+class USKEL_WBP_BoolProperty_C final : public UBoolPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BoolProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BoolProperty_C")
+	}
+	static class USKEL_WBP_BoolProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BoolProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BoolProperty_C;
 
 SDK_NAMESPACE_END

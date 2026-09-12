@@ -16,27 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Construction_Building.BP_Construction_Building_C.BuildSide
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherNum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsY                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function BP_Construction_Building.BP_Construction_Building_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Construction_Building_C::BuildSide(int32 Num, int32 OtherNum, bool bIsY)
+void ABP_Construction_Building_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Construction_Building_C", "BuildSide");
+		Func = Class->GetFunction("BP_Construction_Building_C", "UserConstructionScript");
 
-	Params::BP_Construction_Building_C_BuildSide Parms{};
-
-	Parms.Num = Num;
-	Parms.OtherNum = OtherNum;
-	Parms.bIsY = bIsY;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -62,17 +52,87 @@ void ABP_Construction_Building_C::BuildWall(int32 NumX, int32 NumY)
 }
 
 
-// Function BP_Construction_Building.BP_Construction_Building_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_Construction_Building.BP_Construction_Building_C.BuildSide
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherNum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsY                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_Construction_Building_C::UserConstructionScript()
+void ABP_Construction_Building_C::BuildSide(int32 Num, int32 OtherNum, bool bIsY)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Construction_Building_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_Construction_Building_C", "BuildSide");
+
+	Params::BP_Construction_Building_C_BuildSide Parms{};
+
+	Parms.Num = Num;
+	Parms.OtherNum = OtherNum;
+	Parms.bIsY = bIsY;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Construction_Building.SKEL_BP_Construction_Building_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_Construction_Building_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Construction_Building_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Construction_Building.SKEL_BP_Construction_Building_C.BuildWall
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   NumX                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   NumY                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASKEL_BP_Construction_Building_C::BuildWall(int32 NumX, int32 NumY)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Construction_Building_C", "BuildWall");
+
+	Params::SKEL_BP_Construction_Building_C_BuildWall Parms{};
+
+	Parms.NumX = NumX;
+	Parms.NumY = NumY;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Construction_Building.SKEL_BP_Construction_Building_C.BuildSide
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherNum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsY                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ASKEL_BP_Construction_Building_C::BuildSide(int32 Num, int32 OtherNum, bool bIsY)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Construction_Building_C", "BuildSide");
+
+	Params::SKEL_BP_Construction_Building_C_BuildSide Parms{};
+
+	Parms.Num = Num;
+	Parms.OtherNum = OtherNum;
+	Parms.bIsY = bIsY;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

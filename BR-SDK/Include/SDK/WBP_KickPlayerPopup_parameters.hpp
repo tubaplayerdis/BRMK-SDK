@@ -15,7 +15,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_KickPlayerPopup.WBP_KickPlayerPopup_C.ExecuteUbergraph_WBP_KickPlayerPopup
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WBP_KickPlayerPopup_C_ExecuteUbergraph_WBP_KickPlayerPopup final
 {
 public:
@@ -27,10 +27,11 @@ public:
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuButtonWidget*                      CallFunc_CreateCancelButton_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMenuButtonWidget*                      CallFunc_CreateConfirmButton_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bCanRevoke;                           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bNewCanConfirm;                       // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bCanRevoke;                           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bNewCanConfirm;                       // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_KickPlayerPopup_C_ExecuteUbergraph_WBP_KickPlayerPopup;
 
@@ -60,6 +61,33 @@ public:
 	bool                                          bNewLoading;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_KickPlayerPopup_C_UpdateIsLoadingKick;
+
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.UpdateIsLoadingKick
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_KickPlayerPopup_C_UpdateIsLoadingKick final
+{
+public:
+	bool                                          bNewLoading;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_KickPlayerPopup_C_UpdateIsLoadingKick;
+
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.UpdateCanRevokeKick
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_KickPlayerPopup_C_UpdateCanRevokeKick final
+{
+public:
+	bool                                          bCanRevoke;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_KickPlayerPopup_C_UpdateCanRevokeKick;
+
+// Function WBP_KickPlayerPopup.SKEL_WBP_KickPlayerPopup_C.UpdateCanConfirmKick
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_KickPlayerPopup_C_UpdateCanConfirmKick final
+{
+public:
+	bool                                          bNewCanConfirm;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_KickPlayerPopup_C_UpdateCanConfirmKick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

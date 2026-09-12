@@ -60,4 +60,28 @@ void UWBP_VehicleIcon_C::UpdateVehicleIcon(bool bNewIsLocalPlayer, bool bNewCanB
 }
 
 
+// Function WBP_VehicleIcon.SKEL_WBP_VehicleIcon_C.UpdateVehicleIcon
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewIsLocalPlayer                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNewCanBeDamaged                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EVehiclePinMode                         NewPinMode                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_VehicleIcon_C::UpdateVehicleIcon(bool bNewIsLocalPlayer, bool bNewCanBeDamaged, EVehiclePinMode NewPinMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_VehicleIcon_C", "UpdateVehicleIcon");
+
+	Params::SKEL_WBP_VehicleIcon_C_UpdateVehicleIcon Parms{};
+
+	Parms.bNewIsLocalPlayer = bNewIsLocalPlayer;
+	Parms.bNewCanBeDamaged = bNewCanBeDamaged;
+	Parms.NewPinMode = NewPinMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

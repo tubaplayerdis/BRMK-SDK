@@ -10,156 +10,20 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "AudioMixer_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class AudioMixer.SubmixEffectReverbPreset
-// 0x00A8 (0x0110 - 0x0068)
-class USubmixEffectReverbPreset final : public USoundEffectSubmixPreset
-{
-public:
-	uint8                                         Pad_68[0x68];                                      // 0x0068(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSubmixEffectReverbSettings            Settings;                                          // 0x00D0(0x0040)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	void SetSettings(const struct FSubmixEffectReverbSettings& InSettings);
-	void SetSettingsWithReverbEffect(const class UReverbEffect* InReverbEffect, const float WetLevel, const float DryLevel);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SubmixEffectReverbPreset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SubmixEffectReverbPreset")
-	}
-	static class USubmixEffectReverbPreset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USubmixEffectReverbPreset>();
-	}
-};
-DUMPER7_ASSERTS_USubmixEffectReverbPreset;
-
-// Class AudioMixer.SynthComponent
-// 0x04C0 (0x06C0 - 0x0200)
-class USynthComponent : public USceneComponent
-{
-public:
-	uint8                                         bAutoDestroy : 1;                                  // 0x01F8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bStopWhenOwnerDestroyed : 1;                       // 0x01F8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAllowSpatialization : 1;                          // 0x01F8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideAttenuation : 1;                          // 0x01F8(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BitPad_1F8_4 : 4;                                  // 0x01F8(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bEnableBusSends : 1;                               // 0x01FC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEnableBaseSubmix : 1;                             // 0x01FC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEnableSubmixSends : 1;                            // 0x01FC(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      AttenuationSettings;                               // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoundAttenuationSettings              AttenuationOverrides;                              // 0x0208(0x03A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class USoundConcurrency*                      ConcurrencySettings;                               // 0x05A8(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class USoundConcurrency*>                ConcurrencySet;                                    // 0x05B0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class USoundClass*                            SoundClass;                                        // 0x0600(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundEffectSourcePresetChain*          SourceEffectChain;                                 // 0x0608(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundSubmixBase*                       SoundSubmix;                                       // 0x0610(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FSoundSubmixSendInfo>           SoundSubmixSends;                                  // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSoundSourceBusSendInfo>        BusSends;                                          // 0x0628(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSoundSourceBusSendInfo>        PreEffectBusSends;                                 // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         bIsUISound : 1;                                    // 0x0648(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsPreviewSound : 1;                               // 0x0648(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_649[0x3];                                      // 0x0649(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         EnvelopeFollowerAttackTime;                        // 0x064C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EnvelopeFollowerReleaseTime;                       // 0x0650(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_654[0x4];                                      // 0x0654(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const float EnvelopeValue)> OnAudioEnvelopeValue;                  // 0x0658(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_668[0x20];                                     // 0x0668(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class USynthSound*                            Synth;                                             // 0x0688(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UAudioComponent*                        AudioComponent;                                    // 0x0690(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_698[0x28];                                     // 0x0698(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetLowPassFilterEnabled(bool InLowPassFilterEnabled);
-	void SetLowPassFilterFrequency(float InLowPassFilterFrequency);
-	void SetOutputToBusOnly(bool bInOutputToBusOnly);
-	void SetSubmixSend(class USoundSubmixBase* Submix, float SendLevel);
-	void SetVolumeMultiplier(float VolumeMultiplier);
-	void Start();
-	void Stop();
-
-	bool IsPlaying() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SynthComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SynthComponent")
-	}
-	static class USynthComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USynthComponent>();
-	}
-};
-DUMPER7_ASSERTS_USynthComponent;
-
-// Class AudioMixer.QuartzSubsystem
-// 0x0110 (0x0150 - 0x0040)
-class UQuartzSubsystem final : public UTickableWorldSubsystem
-{
-public:
-	uint8                                         Pad_40[0x110];                                     // 0x0040(0x0110)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UQuartzClockHandle* CreateNewClock(const class UObject* WorldContextObject, class FName ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists, bool bUseAudioEngineClockManager);
-	void DeleteClockByHandle(const class UObject* WorldContextObject, class UQuartzClockHandle*& InClockHandle);
-	void DeleteClockByName(const class UObject* WorldContextObject, class FName ClockName);
-	bool DoesClockExist(const class UObject* WorldContextObject, class FName ClockName);
-	float GetAudioRenderThreadToGameThreadAverageLatency();
-	float GetAudioRenderThreadToGameThreadMaxLatency();
-	float GetAudioRenderThreadToGameThreadMinLatency();
-	struct FQuartzTransportTimeStamp GetCurrentClockTimestamp(const class UObject* WorldContextObject, const class FName& InClockName);
-	float GetDurationOfQuantizationTypeInSeconds(const class UObject* WorldContextObject, class FName ClockName, const EQuartzCommandQuantization& QuantizationType, float Multiplier);
-	float GetEstimatedClockRunTime(const class UObject* WorldContextObject, const class FName& InClockName);
-	float GetGameThreadToAudioRenderThreadAverageLatency(const class UObject* WorldContextObject);
-	float GetGameThreadToAudioRenderThreadMaxLatency(const class UObject* WorldContextObject);
-	float GetGameThreadToAudioRenderThreadMinLatency(const class UObject* WorldContextObject);
-	class UQuartzClockHandle* GetHandleForClock(const class UObject* WorldContextObject, class FName ClockName);
-	float GetRoundTripAverageLatency(const class UObject* WorldContextObject);
-	float GetRoundTripMaxLatency(const class UObject* WorldContextObject);
-	float GetRoundTripMinLatency(const class UObject* WorldContextObject);
-	bool IsClockRunning(const class UObject* WorldContextObject, class FName ClockName);
-	bool IsQuartzEnabled();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("QuartzSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"QuartzSubsystem")
-	}
-	static class UQuartzSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UQuartzSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UQuartzSubsystem;
-
 // Class AudioMixer.AudioGenerator
-// 0x0080 (0x00A8 - 0x0028)
+// 0x0080 (0x00B0 - 0x0030)
 class UAudioGenerator final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x80];                                      // 0x0028(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x80];                                      // 0x0030(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -178,7 +42,7 @@ public:
 DUMPER7_ASSERTS_UAudioGenerator;
 
 // Class AudioMixer.AudioMixerBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UAudioMixerBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
@@ -233,15 +97,59 @@ public:
 };
 DUMPER7_ASSERTS_UAudioMixerBlueprintLibrary;
 
+// Class AudioMixer.QuartzSubsystem
+// 0x0118 (0x0160 - 0x0048)
+class UQuartzSubsystem final : public UTickableWorldSubsystem
+{
+public:
+	uint8                                         Pad_48[0x118];                                     // 0x0048(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UQuartzClockHandle* CreateNewClock(const class UObject* WorldContextObject, class FName ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists, bool bUseAudioEngineClockManager);
+	void DeleteClockByHandle(const class UObject* WorldContextObject, class UQuartzClockHandle*& InClockHandle);
+	void DeleteClockByName(const class UObject* WorldContextObject, class FName ClockName);
+	bool DoesClockExist(const class UObject* WorldContextObject, class FName ClockName);
+	float GetAudioRenderThreadToGameThreadAverageLatency();
+	float GetAudioRenderThreadToGameThreadMaxLatency();
+	float GetAudioRenderThreadToGameThreadMinLatency();
+	struct FQuartzTransportTimeStamp GetCurrentClockTimestamp(const class UObject* WorldContextObject, const class FName& InClockName);
+	float GetDurationOfQuantizationTypeInSeconds(const class UObject* WorldContextObject, class FName ClockName, const EQuartzCommandQuantization& QuantizationType, float Multiplier);
+	float GetEstimatedClockRunTime(const class UObject* WorldContextObject, const class FName& InClockName);
+	float GetGameThreadToAudioRenderThreadAverageLatency(const class UObject* WorldContextObject);
+	float GetGameThreadToAudioRenderThreadMaxLatency(const class UObject* WorldContextObject);
+	float GetGameThreadToAudioRenderThreadMinLatency(const class UObject* WorldContextObject);
+	class UQuartzClockHandle* GetHandleForClock(const class UObject* WorldContextObject, class FName ClockName);
+	float GetRoundTripAverageLatency(const class UObject* WorldContextObject);
+	float GetRoundTripMaxLatency(const class UObject* WorldContextObject);
+	float GetRoundTripMinLatency(const class UObject* WorldContextObject);
+	bool IsClockRunning(const class UObject* WorldContextObject, class FName ClockName);
+	bool IsQuartzEnabled();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("QuartzSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"QuartzSubsystem")
+	}
+	static class UQuartzSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UQuartzSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UQuartzSubsystem;
+
 // Class AudioMixer.QuartzClockHandle
-// 0x0168 (0x0190 - 0x0028)
+// 0x0170 (0x01A0 - 0x0030)
 class UQuartzClockHandle final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x140];                                     // 0x0028(0x0140)(Fixing Size After Last Property [ Dumper-7 ])
-	class UQuartzSubsystem*                       QuartzSubsystem;                                   // 0x0168(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_170[0x18];                                     // 0x0170(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWorld*                                 WorldPtr;                                          // 0x0188(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_30[0x140];                                     // 0x0030(0x0140)(Fixing Size After Last Property [ Dumper-7 ])
+	class UQuartzSubsystem*                       QuartzSubsystem;                                   // 0x0170(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_178[0x20];                                     // 0x0178(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWorld*                                 WorldPtr;                                          // 0x0198(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	struct FQuartzTransportTimeStamp GetCurrentTimestamp(const class UObject* WorldContextObject);
@@ -288,12 +196,12 @@ public:
 DUMPER7_ASSERTS_UQuartzClockHandle;
 
 // Class AudioMixer.SubmixEffectDynamicsProcessorPreset
-// 0x00E8 (0x0150 - 0x0068)
+// 0x00E8 (0x0158 - 0x0070)
 class USubmixEffectDynamicsProcessorPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_68[0x88];                                      // 0x0068(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSubmixEffectDynamicsProcessorSettings Settings;                                          // 0x00F0(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x88];                                      // 0x0070(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSubmixEffectDynamicsProcessorSettings Settings;                                          // 0x00F8(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	void ResetKey();
@@ -317,13 +225,37 @@ public:
 };
 DUMPER7_ASSERTS_USubmixEffectDynamicsProcessorPreset;
 
+// Class AudioMixer.SynthSound
+// 0x0020 (0x0570 - 0x0550)
+class alignas(0x10) USynthSound final : public USoundWaveProcedural
+{
+public:
+	class USynthComponent*                        OwningSynthComponent;                              // 0x0550(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_558[0x18];                                     // 0x0558(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SynthSound")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SynthSound")
+	}
+	static class USynthSound* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USynthSound>();
+	}
+};
+DUMPER7_ASSERTS_USynthSound;
+
 // Class AudioMixer.SubmixEffectSubmixEQPreset
-// 0x0048 (0x00B0 - 0x0068)
+// 0x0048 (0x00B8 - 0x0070)
 class USubmixEffectSubmixEQPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_68[0x38];                                      // 0x0068(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSubmixEffectSubmixEQSettings          Settings;                                          // 0x00A0(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x38];                                      // 0x0070(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSubmixEffectSubmixEQSettings          Settings;                                          // 0x00A8(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	void SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings);
@@ -344,28 +276,97 @@ public:
 };
 DUMPER7_ASSERTS_USubmixEffectSubmixEQPreset;
 
-// Class AudioMixer.SynthSound
-// 0x0020 (0x03E0 - 0x03C0)
-class alignas(0x10) USynthSound final : public USoundWaveProcedural
+// Class AudioMixer.SubmixEffectReverbPreset
+// 0x00A8 (0x0118 - 0x0070)
+class USubmixEffectReverbPreset final : public USoundEffectSubmixPreset
 {
 public:
-	class USynthComponent*                        OwningSynthComponent;                              // 0x03C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3C8[0x18];                                     // 0x03C8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x68];                                      // 0x0070(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSubmixEffectReverbSettings            Settings;                                          // 0x00D8(0x0040)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	void SetSettings(const struct FSubmixEffectReverbSettings& InSettings);
+	void SetSettingsWithReverbEffect(const class UReverbEffect* InReverbEffect, const float WetLevel, const float DryLevel);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SynthSound")
+		STATIC_CLASS_IMPL("SubmixEffectReverbPreset")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SynthSound")
+		STATIC_NAME_IMPL(L"SubmixEffectReverbPreset")
 	}
-	static class USynthSound* GetDefaultObj()
+	static class USubmixEffectReverbPreset* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USynthSound>();
+		return GetDefaultObjImpl<USubmixEffectReverbPreset>();
 	}
 };
-DUMPER7_ASSERTS_USynthSound;
+DUMPER7_ASSERTS_USubmixEffectReverbPreset;
+
+// Class AudioMixer.SynthComponent
+// 0x04F0 (0x0720 - 0x0230)
+class USynthComponent : public USceneComponent
+{
+public:
+	uint8                                         bAutoDestroy : 1;                                  // 0x0228(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bStopWhenOwnerDestroyed : 1;                       // 0x0228(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAllowSpatialization : 1;                          // 0x0228(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideAttenuation : 1;                          // 0x0228(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BitPad_228_4 : 4;                                  // 0x0228(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
+	uint8                                         Pad_229[0x3];                                      // 0x0229(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOutputToBusOnly : 1;                              // 0x022C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Deprecated, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableBusSends : 1;                               // 0x022C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableBaseSubmix : 1;                             // 0x022C(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableSubmixSends : 1;                            // 0x022C(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_22D[0x3];                                      // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      AttenuationSettings;                               // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoundAttenuationSettings              AttenuationOverrides;                              // 0x0238(0x03C8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class USoundConcurrency*                      ConcurrencySettings;                               // 0x0600(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<class USoundConcurrency*>                ConcurrencySet;                                    // 0x0608(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class USoundClass*                            SoundClass;                                        // 0x0658(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundEffectSourcePresetChain*          SourceEffectChain;                                 // 0x0660(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundSubmixBase*                       SoundSubmix;                                       // 0x0668(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSoundSubmixSendInfo>           SoundSubmixSends;                                  // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSoundSourceBusSendInfo>        BusSends;                                          // 0x0680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSoundSourceBusSendInfo>        PreEffectBusSends;                                 // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         bIsUISound : 1;                                    // 0x06A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIsPreviewSound : 1;                               // 0x06A0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_6A1[0x3];                                      // 0x06A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         EnvelopeFollowerAttackTime;                        // 0x06A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EnvelopeFollowerReleaseTime;                       // 0x06A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const float EnvelopeValue)> OnAudioEnvelopeValue;                  // 0x06B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C0[0x20];                                     // 0x06C0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class USynthSound*                            Synth;                                             // 0x06E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAudioComponent*                        AudioComponent;                                    // 0x06E8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_6F0[0x30];                                     // 0x06F0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetLowPassFilterEnabled(bool InLowPassFilterEnabled);
+	void SetLowPassFilterFrequency(float InLowPassFilterFrequency);
+	void SetOutputToBusOnly(bool bInOutputToBusOnly);
+	void SetSubmixSend(class USoundSubmixBase* Submix, float SendLevel);
+	void SetVolumeMultiplier(float VolumeMultiplier);
+	void Start();
+	void Stop();
+
+	bool IsPlaying() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SynthComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SynthComponent")
+	}
+	static class USynthComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USynthComponent>();
+	}
+};
+DUMPER7_ASSERTS_USynthComponent;
 
 SDK_NAMESPACE_END

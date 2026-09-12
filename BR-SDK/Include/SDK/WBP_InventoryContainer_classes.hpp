@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InventoryContainer.WBP_InventoryContainer_C
-// 0x0018 (0x0288 - 0x0270)
+// 0x0020 (0x0428 - 0x0408)
 class UWBP_InventoryContainer_C final : public UInventoryContainerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           MoneyBorder;                                       // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        MoneyTextBlock;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           MoneyBorder;                                       // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        MoneyTextBlock;                                    // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InventoryContainer(int32 EntryPoint);
@@ -47,5 +47,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InventoryContainer_C;
+
+// WidgetBlueprintGeneratedClass WBP_InventoryContainer.SKEL_WBP_InventoryContainer_C
+// 0x0020 (0x0428 - 0x0408)
+class USKEL_WBP_InventoryContainer_C final : public UInventoryContainerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           MoneyBorder;                                       // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        MoneyTextBlock;                                    // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateHasInventory(bool bHasInventory);
+	void UpdateOwnerMoney(float NewMoney);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InventoryContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InventoryContainer_C")
+	}
+	static class USKEL_WBP_InventoryContainer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InventoryContainer_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InventoryContainer_C;
 
 SDK_NAMESPACE_END

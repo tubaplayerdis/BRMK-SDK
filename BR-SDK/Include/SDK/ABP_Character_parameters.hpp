@@ -26,13 +26,22 @@ public:
 DUMPER7_ASSERTS_ABP_Character_C_ExecuteUbergraph_ABP_Character;
 
 // Function ABP_Character.ABP_Character_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct ABP_Character_C_AnimGraph final
 {
 public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_ABP_Character_C_AnimGraph;
+
+// Function ABP_Character.SKEL_ABP_Character_C.AnimGraph
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_ABP_Character_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_ABP_Character_C_AnimGraph;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

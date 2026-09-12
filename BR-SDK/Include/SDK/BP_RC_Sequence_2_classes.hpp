@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BP_RC_Sequence_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RC_Sequence_2.BP_RC_Sequence_2_C
-// 0x0008 (0x02A0 - 0x0298)
+// 0x0008 (0x0380 - 0x0378)
 class ABP_RC_Sequence_2_C : public ABP_RC_Sequence_C
 {
 public:
-	class USkeletalMeshComponent*                 Parent;                                            // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Parent;                                            // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	struct FVector GetHandTargetLocation() const;
@@ -40,5 +41,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_RC_Sequence_2_C;
+
+// BlueprintGeneratedClass BP_RC_Sequence_2.SKEL_BP_RC_Sequence_2_C
+// 0x0018 (0x0390 - 0x0378)
+class ASKEL_BP_RC_Sequence_2_C : public ASKEL_BP_RC_Sequence_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_RC_Sequence_2_C;            // 0x0378(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 Parent;                                            // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+	struct FVector GetHandTargetLocation() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_RC_Sequence_2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_RC_Sequence_2_C")
+	}
+	static class ASKEL_BP_RC_Sequence_2_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_RC_Sequence_2_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_RC_Sequence_2_C;
 
 SDK_NAMESPACE_END

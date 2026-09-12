@@ -16,33 +16,33 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ChatMessage.WBP_ChatMessage_C.UpdateColorStyle
+// Function WBP_ChatMessage.SKEL_WBP_ChatMessage_C.UpdateColorStyle
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_ChatMessage_C_UpdateColorStyle final
+struct SKEL_WBP_ChatMessage_C_UpdateColorStyle final
 {
 public:
-	EBrickUIColorStyle                            NewColorStyle_UpdateColorStyle;                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_ChatMessage_C_UpdateColorStyle;
+DUMPER7_ASSERTS_SKEL_WBP_ChatMessage_C_UpdateColorStyle;
 
-// Function WBP_ChatMessage.WBP_ChatMessage_C.UpdateMessageText
+// Function WBP_ChatMessage.SKEL_WBP_ChatMessage_C.UpdateMessageText
 // 0x0018 (0x0018 - 0x0000)
-struct WBP_ChatMessage_C_UpdateMessageText final
+struct SKEL_WBP_ChatMessage_C_UpdateMessageText final
 {
 public:
-	class FText                                   NewText_UpdateMessageText;                         // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_ChatMessage_C_UpdateMessageText;
+DUMPER7_ASSERTS_SKEL_WBP_ChatMessage_C_UpdateMessageText;
 
-// Function WBP_ChatMessage.WBP_ChatMessage_C.BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// Function WBP_ChatMessage.SKEL_WBP_ChatMessage_C.BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
 // 0x0002 (0x0002 - 0x0000)
-struct WBP_ChatMessage_C_BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+struct SKEL_WBP_ChatMessage_C_BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
 {
 public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_ChatMessage_C_BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+DUMPER7_ASSERTS_SKEL_WBP_ChatMessage_C_BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
 
 // Function WBP_ChatMessage.WBP_ChatMessage_C.ExecuteUbergraph_WBP_ChatMessage
 // 0x0028 (0x0028 - 0x0000)
@@ -57,6 +57,34 @@ public:
 	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState;    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ChatMessage_C_ExecuteUbergraph_WBP_ChatMessage;
+
+// Function WBP_ChatMessage.WBP_ChatMessage_C.BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_ChatMessage_C_BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ChatMessage_C_BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_ChatMessage.WBP_ChatMessage_C.UpdateMessageText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_ChatMessage_C_UpdateMessageText final
+{
+public:
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_ChatMessage_C_UpdateMessageText;
+
+// Function WBP_ChatMessage.WBP_ChatMessage_C.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ChatMessage_C_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ChatMessage_C_UpdateColorStyle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

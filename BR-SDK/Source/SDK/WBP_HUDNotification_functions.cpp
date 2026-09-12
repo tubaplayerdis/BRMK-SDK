@@ -16,17 +16,67 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_HUDNotification.WBP_HUDNotification_C.PlayFadeInAnim
-// (Event, Protected, BlueprintEvent)
+// Function WBP_HUDNotification.WBP_HUDNotification_C.ExecuteUbergraph_WBP_HUDNotification
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUDNotification_C::PlayFadeInAnim()
+void UWBP_HUDNotification_C::ExecuteUbergraph_WBP_HUDNotification(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDNotification_C", "PlayFadeInAnim");
+		Func = Class->GetFunction("WBP_HUDNotification_C", "ExecuteUbergraph_WBP_HUDNotification");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_HUDNotification_C_ExecuteUbergraph_WBP_HUDNotification Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDNotification.WBP_HUDNotification_C.InitializeNotification
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FBrickUIIconSlot&          InIconSlot                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const class FText&                      InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUDNotification_C", "InitializeNotification");
+
+	Params::WBP_HUDNotification_C_InitializeNotification Parms{};
+
+	Parms.InIconSlot = std::move(InIconSlot);
+	Parms.InText = std::move(InText);
+	Parms.InColorStyle = InColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDNotification.WBP_HUDNotification_C.UpdateIsThumbnailNotification
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewIsThumbnail                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_HUDNotification_C::UpdateIsThumbnailNotification(bool bNewIsThumbnail)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUDNotification_C", "UpdateIsThumbnailNotification");
+
+	Params::WBP_HUDNotification_C_UpdateIsThumbnailNotification Parms{};
+
+	Parms.bNewIsThumbnail = bNewIsThumbnail;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -44,65 +94,87 @@ void UWBP_HUDNotification_C::PlayFadeOutAnim()
 }
 
 
-// Function WBP_HUDNotification.WBP_HUDNotification_C.UpdateIsThumbnailNotification
+// Function WBP_HUDNotification.WBP_HUDNotification_C.PlayFadeInAnim
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_HUDNotification_C::PlayFadeInAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUDNotification_C", "PlayFadeInAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.PlayFadeInAnim
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_HUDNotification_C::PlayFadeInAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HUDNotification_C", "PlayFadeInAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.PlayFadeOutAnim
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_HUDNotification_C::PlayFadeOutAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HUDNotification_C", "PlayFadeOutAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.UpdateIsThumbnailNotification
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bNewIsThumbnail_UpdateIsThumbnailNotification          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bNewIsThumbnail                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_HUDNotification_C::UpdateIsThumbnailNotification(bool bNewIsThumbnail_UpdateIsThumbnailNotification)
+void USKEL_WBP_HUDNotification_C::UpdateIsThumbnailNotification(bool bNewIsThumbnail)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDNotification_C", "UpdateIsThumbnailNotification");
+		Func = Class->GetFunction("SKEL_WBP_HUDNotification_C", "UpdateIsThumbnailNotification");
 
-	Params::WBP_HUDNotification_C_UpdateIsThumbnailNotification Parms{};
+	Params::SKEL_WBP_HUDNotification_C_UpdateIsThumbnailNotification Parms{};
 
-	Parms.bNewIsThumbnail_UpdateIsThumbnailNotification = bNewIsThumbnail_UpdateIsThumbnailNotification;
+	Parms.bNewIsThumbnail = bNewIsThumbnail;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_HUDNotification.WBP_HUDNotification_C.InitializeNotification
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.InitializeNotification
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FBrickUIIconSlot&          InIconSlot_InitializeNotification                      (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// const class FText&                      InText_InitializeNotification                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EBrickUIColorStyle                      InColorStyle_InitializeNotification                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FBrickUIIconSlot&          InIconSlot                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const class FText&                      InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIconSlot& InIconSlot_InitializeNotification, const class FText& InText_InitializeNotification, EBrickUIColorStyle InColorStyle_InitializeNotification)
+void USKEL_WBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDNotification_C", "InitializeNotification");
+		Func = Class->GetFunction("SKEL_WBP_HUDNotification_C", "InitializeNotification");
 
-	Params::WBP_HUDNotification_C_InitializeNotification Parms{};
+	Params::SKEL_WBP_HUDNotification_C_InitializeNotification Parms{};
 
-	Parms.InIconSlot_InitializeNotification = std::move(InIconSlot_InitializeNotification);
-	Parms.InText_InitializeNotification = std::move(InText_InitializeNotification);
-	Parms.InColorStyle_InitializeNotification = InColorStyle_InitializeNotification;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUDNotification.WBP_HUDNotification_C.ExecuteUbergraph_WBP_HUDNotification
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUDNotification_C::ExecuteUbergraph_WBP_HUDNotification(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDNotification_C", "ExecuteUbergraph_WBP_HUDNotification");
-
-	Params::WBP_HUDNotification_C_ExecuteUbergraph_WBP_HUDNotification Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.InIconSlot = std::move(InIconSlot);
+	Parms.InText = std::move(InText);
+	Parms.InColorStyle = InColorStyle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

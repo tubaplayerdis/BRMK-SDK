@@ -163,13 +163,14 @@ enum class EPhysicalSurface : uint8
 };
 
 // Enum PhysicsCore.EFrictionCombineMode
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EFrictionCombineMode : uint8
 {
 	Average                                  = 0,
 	Min                                      = 1,
 	Multiply                                 = 2,
 	Max                                      = 3,
+	EFrictionCombineMode_MAX                 = 4,
 };
 
 // ScriptStruct PhysicsCore.BodyInstanceCore

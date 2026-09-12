@@ -90,4 +90,58 @@ void UWBP_InputActionList_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WBP_InputActionList.SKEL_WBP_InputActionList_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputActionList_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputActionList_C", "PreConstruct");
+
+	Params::SKEL_WBP_InputActionList_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputActionList.SKEL_WBP_InputActionList_C.UpdateInputActionListMode
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EInputActionListMode                    NewMode                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputActionList_C::UpdateInputActionListMode(EInputActionListMode NewMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputActionList_C", "UpdateInputActionListMode");
+
+	Params::SKEL_WBP_InputActionList_C_UpdateInputActionListMode Parms{};
+
+	Parms.NewMode = NewMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputActionList.SKEL_WBP_InputActionList_C.FadeIn
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_InputActionList_C::FadeIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputActionList_C", "FadeIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

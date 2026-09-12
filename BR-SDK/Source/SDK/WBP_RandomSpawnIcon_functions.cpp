@@ -36,4 +36,24 @@ class FText UWBP_RandomSpawnIcon_C::GetIconDisplayName() const
 }
 
 
+// Function WBP_RandomSpawnIcon.SKEL_WBP_RandomSpawnIcon_C.GetIconDisplayName
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class FText                             ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+class FText USKEL_WBP_RandomSpawnIcon_C::GetIconDisplayName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RandomSpawnIcon_C", "GetIconDisplayName");
+
+	Params::SKEL_WBP_RandomSpawnIcon_C_GetIconDisplayName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

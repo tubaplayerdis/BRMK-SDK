@@ -11,18 +11,19 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_CarPark.BP_CarPark_C
-// 0x0020 (0x0330 - 0x0310)
+// 0x0020 (0x0420 - 0x0400)
 class ABP_CarPark_C final : public ALegacyBuilding
 {
 public:
-	class UInstancedStaticMeshComponent*          Ramps;                                             // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UInstancedStaticMeshComponent*          Ceilings;                                          // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UInstancedStaticMeshComponent*          Poles;                                             // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInstancedStaticMeshComponent*          Ramps;                                             // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInstancedStaticMeshComponent*          Ceilings;                                          // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInstancedStaticMeshComponent*          Poles;                                             // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -42,5 +43,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_CarPark_C;
+
+// BlueprintGeneratedClass BP_CarPark.SKEL_BP_CarPark_C
+// 0x0030 (0x0430 - 0x0400)
+class ASKEL_BP_CarPark_C final : public ALegacyBuilding
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0400(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UInstancedStaticMeshComponent*          Ramps;                                             // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInstancedStaticMeshComponent*          Ceilings;                                          // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UInstancedStaticMeshComponent*          Poles;                                             // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_CarPark_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_CarPark_C")
+	}
+	static class ASKEL_BP_CarPark_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_CarPark_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_CarPark_C;
 
 SDK_NAMESPACE_END

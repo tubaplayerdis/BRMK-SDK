@@ -17,6 +17,44 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_Shredder.SKEL_BP_Shredder_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_Shredder_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_Shredder_C_ReceiveTick;
+
+// Function BP_Shredder.BP_Shredder_C.ExecuteUbergraph_BP_Shredder
+// 0x0160 (0x0160 - 0x0000)
+struct BP_Shredder_C_ExecuteUbergraph_BP_Shredder final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetServerWorldTimeSeconds_ReturnValue;    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_NormalizeAxis_ReturnValue;                // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x003C(0x0090)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult_1;  // 0x00CC(0x0090)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_BP_Shredder_C_ExecuteUbergraph_BP_Shredder;
+
+// Function BP_Shredder.BP_Shredder_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_Shredder_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Shredder_C_ReceiveTick;
+
 // Function BP_Shredder.BP_Shredder_C.UserConstructionScript
 // 0x0150 (0x0150 - 0x0000)
 struct BP_Shredder_C_UserConstructionScript final
@@ -46,35 +84,6 @@ public:
 	int32                                         CallFunc_AddInstance_ReturnValue_2;                // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Shredder_C_UserConstructionScript;
-
-// Function BP_Shredder.BP_Shredder_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_Shredder_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Shredder_C_ReceiveTick;
-
-// Function BP_Shredder.BP_Shredder_C.ExecuteUbergraph_BP_Shredder
-// 0x0150 (0x0150 - 0x0000)
-struct BP_Shredder_C_ExecuteUbergraph_BP_Shredder final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetServerWorldTimeSeconds_ReturnValue;    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_NormalizeAxis_ReturnValue;                // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x003C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult_1;  // 0x00C4(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_Shredder_C_ExecuteUbergraph_BP_Shredder;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

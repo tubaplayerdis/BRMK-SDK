@@ -35,12 +35,12 @@ public:
 DUMPER7_ASSERTS_StaticMeshDescription_CreateCube;
 
 // Function StaticMeshDescription.StaticMeshDescription.SetPolygonGroupMaterialSlotName
-// 0x000C (0x000C - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct StaticMeshDescription_SetPolygonGroupMaterialSlotName final
 {
 public:
 	struct FPolygonGroupID                        PolygonGroupID;                                    // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SlotName;                                          // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SlotName;                                          // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_StaticMeshDescription_SetPolygonGroupMaterialSlotName;
 

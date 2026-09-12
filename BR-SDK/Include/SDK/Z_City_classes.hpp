@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Z_City.Z_City_C
-// 0x0000 (0x0228 - 0x0228)
+// 0x0000 (0x0300 - 0x0300)
 class AZ_City_C final : public ALevelScriptActor
 {
 public:
@@ -34,5 +35,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AZ_City_C;
+
+// BlueprintGeneratedClass Z_City.SKEL_Z_City_C
+// 0x0010 (0x0310 - 0x0300)
+class ASKEL_Z_City_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_Z_City_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_Z_City_C")
+	}
+	static class ASKEL_Z_City_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_Z_City_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_Z_City_C;
 
 SDK_NAMESPACE_END

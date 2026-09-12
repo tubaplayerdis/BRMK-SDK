@@ -67,6 +67,16 @@ public:
 };
 DUMPER7_ASSERTS_FNavCollisionBox;
 
+// ScriptStruct NavigationSystem.NavLinkCustomInstanceData
+// 0x0008 (0x0070 - 0x0068)
+struct FNavLinkCustomInstanceData final : public FActorComponentInstanceData
+{
+public:
+	uint32                                        NavLinkUserId;                                     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FNavLinkCustomInstanceData;
+
 // ScriptStruct NavigationSystem.NavCollisionCylinder
 // 0x0014 (0x0014 - 0x0000)
 struct FNavCollisionCylinder final
@@ -148,16 +158,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FNavigationFilterArea;
-
-// ScriptStruct NavigationSystem.NavLinkCustomInstanceData
-// 0x0008 (0x0070 - 0x0068)
-struct FNavLinkCustomInstanceData final : public FActorComponentInstanceData
-{
-public:
-	uint32                                        NavLinkUserId;                                     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FNavLinkCustomInstanceData;
 
 // ScriptStruct NavigationSystem.RecastNavMeshGenerationProperties
 // 0x0040 (0x0040 - 0x0000)

@@ -16,25 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_InteractionOption.WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
-
-// Function WBP_InteractionOption.WBP_InteractionOption_C.UpdateColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_InteractionOption_C_UpdateColorStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle_UpdateColorStyle;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_InteractionOption_C_UpdateColorStyle;
-
 // Function WBP_InteractionOption.WBP_InteractionOption_C.ExecuteUbergraph_WBP_InteractionOption
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_InteractionOption_C_ExecuteUbergraph_WBP_InteractionOption final
@@ -46,6 +27,44 @@ public:
 	EBrickUIColorStyle                            K2Node_Event_InColorStyle;                         // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_InteractionOption_C_ExecuteUbergraph_WBP_InteractionOption;
+
+// Function WBP_InteractionOption.WBP_InteractionOption_C.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_InteractionOption_C_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_InteractionOption_C_UpdateColorStyle;
+
+// Function WBP_InteractionOption.WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InteractionOption.SKEL_WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InteractionOption.SKEL_WBP_InteractionOption_C.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InteractionOption_C_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InteractionOption_C_UpdateColorStyle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

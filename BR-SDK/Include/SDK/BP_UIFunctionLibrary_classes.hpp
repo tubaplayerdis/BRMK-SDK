@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_UIFunctionLibrary.BP_UIFunctionLibrary_C
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UBP_UIFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
@@ -39,5 +39,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_UIFunctionLibrary_C;
+
+// BlueprintGeneratedClass BP_UIFunctionLibrary.SKEL_BP_UIFunctionLibrary_C
+// 0x0000 (0x0030 - 0x0030)
+class USKEL_BP_UIFunctionLibrary_C final : public UBlueprintFunctionLibrary
+{
+public:
+	static void Get_Ammo_Type_Display_Info(EAmmoType AmmoType, class UObject* __WorldContext, int32* IconSlot, EBrickUIColorStyle* ColorStyle);
+	static void UpdateHUDWidgetOpacity(class UWidget* Widget, bool bIsFocused, class UObject* __WorldContext);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_UIFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_UIFunctionLibrary_C")
+	}
+	static class USKEL_BP_UIFunctionLibrary_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_UIFunctionLibrary_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_UIFunctionLibrary_C;
 
 SDK_NAMESPACE_END

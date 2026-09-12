@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -98,6 +98,53 @@ public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_InputAction_C_GetWidgetToFocus;
+
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateCanActionBeRebound
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputAction_C_UpdateCanActionBeRebound final
+{
+public:
+	bool                                          bInCanBeRebound;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_UpdateCanActionBeRebound;
+
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateInputActionListMode
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputAction_C_UpdateInputActionListMode final
+{
+public:
+	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_UpdateInputActionListMode;
+
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_InputAction_C_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_GetWidgetToFocus;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

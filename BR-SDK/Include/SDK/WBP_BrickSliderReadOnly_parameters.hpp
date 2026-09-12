@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BrickSliderReadOnly_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_BrickSliderReadOnly_C_PreConstruct;
-
 // Function WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C.ExecuteUbergraph_WBP_BrickSliderReadOnly
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_BrickSliderReadOnly_C_ExecuteUbergraph_WBP_BrickSliderReadOnly final
@@ -32,6 +23,24 @@ public:
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_BrickSliderReadOnly_C_ExecuteUbergraph_WBP_BrickSliderReadOnly;
+
+// Function WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BrickSliderReadOnly_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickSliderReadOnly_C_PreConstruct;
+
+// Function WBP_BrickSliderReadOnly.SKEL_WBP_BrickSliderReadOnly_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickSliderReadOnly_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickSliderReadOnly_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

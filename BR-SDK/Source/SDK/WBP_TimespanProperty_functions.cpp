@@ -206,4 +206,174 @@ void UWBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan& Tim
 }
 
 
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.UpdateTimespanProperty
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FTimespan&                 Timespan                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTimespan&                 MinValue_0                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTimespan&                 MaxValue_0                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAllowInfinite                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan& Timespan, const struct FTimespan& MinValue_0, const struct FTimespan& MaxValue_0, bool bAllowInfinite)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "UpdateTimespanProperty");
+
+	Params::SKEL_WBP_TimespanProperty_C_UpdateTimespanProperty Parms{};
+
+	Parms.Timespan = std::move(Timespan);
+	Parms.MinValue_0 = std::move(MinValue_0);
+	Parms.MaxValue_0 = std::move(MaxValue_0);
+	Parms.bAllowInfinite = bAllowInfinite;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_SecondsSlider_K2Node_ComponentBoundEvent_2_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_SecondsSlider_K2Node_ComponentBoundEvent_2_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_SecondsSlider_K2Node_ComponentBoundEvent_2_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_SecondsSlider_K2Node_ComponentBoundEvent_2_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature
+// (Public)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature");
+
+	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.EventType = EventType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TimespanProperty_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "PreConstruct");
+
+	Params::SKEL_WBP_TimespanProperty_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

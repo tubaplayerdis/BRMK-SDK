@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass RaceOval.RaceOval_C
-// 0x0000 (0x0228 - 0x0228)
+// 0x0000 (0x0300 - 0x0300)
 class ARaceOval_C final : public ALevelScriptActor
 {
 public:
@@ -34,5 +35,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ARaceOval_C;
+
+// BlueprintGeneratedClass RaceOval.SKEL_RaceOval_C
+// 0x0010 (0x0310 - 0x0300)
+class ASKEL_RaceOval_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_RaceOval_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_RaceOval_C")
+	}
+	static class ASKEL_RaceOval_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_RaceOval_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_RaceOval_C;
 
 SDK_NAMESPACE_END

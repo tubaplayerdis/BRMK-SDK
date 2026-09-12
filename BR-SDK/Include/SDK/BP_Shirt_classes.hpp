@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Shirt.BP_Shirt_C
-// 0x0000 (0x02A8 - 0x02A8)
+// 0x0000 (0x0380 - 0x0380)
 class ABP_Shirt_C : public AWearable
 {
 public:
@@ -34,5 +35,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Shirt_C;
+
+// BlueprintGeneratedClass BP_Shirt.SKEL_BP_Shirt_C
+// 0x0010 (0x0390 - 0x0380)
+class ASKEL_BP_Shirt_C : public AWearable
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0380(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Shirt_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Shirt_C")
+	}
+	static class ASKEL_BP_Shirt_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Shirt_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Shirt_C;
 
 SDK_NAMESPACE_END

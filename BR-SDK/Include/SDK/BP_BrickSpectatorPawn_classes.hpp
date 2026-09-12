@@ -11,12 +11,42 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_BrickSpectatorPawn.SKEL_BP_BrickSpectatorPawn_C
+// 0x0010 (0x0620 - 0x0610)
+class ASKEL_BP_BrickSpectatorPawn_C final : public ABrickSpectatorPawn
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0610(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_BrickSpectatorPawn_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_BrickSpectatorPawn_C")
+	}
+	static class ASKEL_BP_BrickSpectatorPawn_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_BrickSpectatorPawn_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_BrickSpectatorPawn_C;
+
 // BlueprintGeneratedClass BP_BrickSpectatorPawn.BP_BrickSpectatorPawn_C
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0610 - 0x0610)
 class ABP_BrickSpectatorPawn_C final : public ABrickSpectatorPawn
 {
 public:

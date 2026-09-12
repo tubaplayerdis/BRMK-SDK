@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BrickRigs_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -60,7 +60,7 @@ public:
 	EBrickUIColorStyle                            Temp_byte_Variable_11;                             // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBrickUIColorStyle                            Temp_byte_Variable_12;                             // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_37[0x1];                                       // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue_1;             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   K2Node_Event_InTitleText;                          // 0x0040(0x0018)(ConstParm)
@@ -223,12 +223,11 @@ public:
 	uint8                                         Pad_A13[0x1];                                      // 0x0A13(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default_15;                          // 0x0A14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default_16;                          // 0x0A18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0A1C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A1D[0x3];                                      // 0x0A1D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EBrickUIColorStyle                            K2Node_ComponentBoundEvent_InColorStyle;           // 0x0A1C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState;    // 0x0A1D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1E[0x2];                                      // 0x0A1E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGridSlot*                              CallFunc_SlotAsGridSlot_ReturnValue;               // 0x0A20(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_ComponentBoundEvent_InColorStyle;           // 0x0A28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState;    // 0x0A29(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bInIsEnabled;                   // 0x0A2A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_bInIsEnabled;                   // 0x0A28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_PagedListHeader_C_ExecuteUbergraph_WBP_PagedListHeader;
 
@@ -312,6 +311,87 @@ public:
 	bool                                          bInHasUnsavedChanges;                              // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_PagedListHeader_C_UpdateEntry;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateEntry
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_UpdateEntry final
+{
+public:
+	class FText                                   InTitleText;                                       // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bInHasEntry;                                       // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInHasUnsavedChanges;                              // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_UpdateEntry;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateNumObjects
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_UpdateNumObjects final
+{
+public:
+	int32                                         InNumObjects;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InMaxNumObjects;                                   // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumHiddenObjects;                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumObjectsWithAerodynamics;                      // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_UpdateNumObjects;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateDimensions
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_UpdateDimensions final
+{
+public:
+	struct FVector                                InDimensions;                                      // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InMaxDimensions;                                   // 0x000C(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_UpdateDimensions;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdatePrice
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_UpdatePrice final
+{
+public:
+	float                                         InPrice;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMoney;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_UpdatePrice;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateMass
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_UpdateMass final
+{
+public:
+	float                                         InMass;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMaxMass;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_UpdateMass;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_PreConstruct;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C.UpdateClearButton
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_PagedListHeader_C_UpdateClearButton final
+{
+public:
+	bool                                          bInIsEnabled;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeader_C_UpdateClearButton;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

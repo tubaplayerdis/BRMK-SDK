@@ -16,46 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Chat.WBP_Chat_C.UpdateIsFocused
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewFocused_UpdateIsFocused                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_Chat_C::UpdateIsFocused(bool bNewFocused_UpdateIsFocused)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Chat_C", "UpdateIsFocused");
-
-	Params::WBP_Chat_C_UpdateIsFocused Parms{};
-
-	Parms.bNewFocused_UpdateIsFocused = bNewFocused_UpdateIsFocused;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Chat.WBP_Chat_C.UpdateIsTyping
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewTyping_UpdateIsTyping                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_Chat_C::UpdateIsTyping(bool bNewTyping_UpdateIsTyping)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Chat_C", "UpdateIsTyping");
-
-	Params::WBP_Chat_C_UpdateIsTyping Parms{};
-
-	Parms.bNewTyping_UpdateIsTyping = bNewTyping_UpdateIsTyping;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Chat.WBP_Chat_C.ExecuteUbergraph_WBP_Chat
 // (Final, UbergraphFunction)
 // Parameters:
@@ -71,6 +31,86 @@ void UWBP_Chat_C::ExecuteUbergraph_WBP_Chat(int32 EntryPoint)
 	Params::WBP_Chat_C_ExecuteUbergraph_WBP_Chat Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Chat.WBP_Chat_C.UpdateIsTyping
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewTyping                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_Chat_C::UpdateIsTyping(bool bNewTyping)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Chat_C", "UpdateIsTyping");
+
+	Params::WBP_Chat_C_UpdateIsTyping Parms{};
+
+	Parms.bNewTyping = bNewTyping;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Chat.WBP_Chat_C.UpdateIsFocused
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewFocused                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_Chat_C::UpdateIsFocused(bool bNewFocused)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Chat_C", "UpdateIsFocused");
+
+	Params::WBP_Chat_C_UpdateIsFocused Parms{};
+
+	Parms.bNewFocused = bNewFocused;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Chat.SKEL_WBP_Chat_C.UpdateIsFocused
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewFocused                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Chat_C::UpdateIsFocused(bool bNewFocused)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Chat_C", "UpdateIsFocused");
+
+	Params::SKEL_WBP_Chat_C_UpdateIsFocused Parms{};
+
+	Parms.bNewFocused = bNewFocused;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Chat.SKEL_WBP_Chat_C.UpdateIsTyping
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewTyping                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Chat_C::UpdateIsTyping(bool bNewTyping)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Chat_C", "UpdateIsTyping");
+
+	Params::SKEL_WBP_Chat_C_UpdateIsTyping Parms{};
+
+	Parms.bNewTyping = bNewTyping;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

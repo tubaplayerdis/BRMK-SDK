@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Paint_StaticInfo.SKEL_BP_Paint_StaticInfo_C
+// 0x0010 (0x03D0 - 0x03C0)
+class USKEL_BP_Paint_StaticInfo_C : public UPaintAttachmentStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Paint_StaticInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Paint_StaticInfo_C")
+	}
+	static class USKEL_BP_Paint_StaticInfo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Paint_StaticInfo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Paint_StaticInfo_C;
+
 // BlueprintGeneratedClass BP_Paint_StaticInfo.BP_Paint_StaticInfo_C
-// 0x0000 (0x0390 - 0x0390)
+// 0x0000 (0x03C0 - 0x03C0)
 class UBP_Paint_StaticInfo_C : public UPaintAttachmentStaticInfo
 {
 public:

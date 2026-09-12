@@ -16,6 +16,34 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_ZombieAIController.SKEL_BP_ZombieAIController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_ZombieAIController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_ZombieAIController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ZombieAIController.SKEL_BP_ZombieAIController_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_ZombieAIController_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_ZombieAIController_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_ZombieAIController.BP_ZombieAIController_C.ExecuteUbergraph_BP_ZombieAIController
 // (Final, UbergraphFunction)
 // Parameters:

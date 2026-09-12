@@ -90,4 +90,58 @@ void UWBP_PlayersMenu_C::UpdateCanShowPlayerProfile(bool bCanShow)
 }
 
 
+// Function WBP_PlayersMenu.SKEL_WBP_PlayersMenu_C.UpdateCanShowPlayerProfile
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanShow                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PlayersMenu_C::UpdateCanShowPlayerProfile(bool bCanShow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PlayersMenu_C", "UpdateCanShowPlayerProfile");
+
+	Params::SKEL_WBP_PlayersMenu_C_UpdateCanShowPlayerProfile Parms{};
+
+	Parms.bCanShow = bCanShow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PlayersMenu.SKEL_WBP_PlayersMenu_C.UpdateCanKickPlayer
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanKick                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PlayersMenu_C::UpdateCanKickPlayer(bool bCanKick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PlayersMenu_C", "UpdateCanKickPlayer");
+
+	Params::SKEL_WBP_PlayersMenu_C_UpdateCanKickPlayer Parms{};
+
+	Parms.bCanKick = bCanKick;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PlayersMenu.SKEL_WBP_PlayersMenu_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_PlayersMenu_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PlayersMenu_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

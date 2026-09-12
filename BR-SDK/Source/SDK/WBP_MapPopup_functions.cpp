@@ -78,4 +78,46 @@ void UWBP_MapPopup_C::Construct()
 }
 
 
+// Function WBP_MapPopup.SKEL_WBP_MapPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_MapPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MapPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MapPopup.SKEL_WBP_MapPopup_C.OnClickedExit
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_MapPopup_C::OnClickedExit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MapPopup_C", "OnClickedExit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MapPopup.SKEL_WBP_MapPopup_C.OnClickedReset
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_MapPopup_C::OnClickedReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MapPopup_C", "OnClickedReset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

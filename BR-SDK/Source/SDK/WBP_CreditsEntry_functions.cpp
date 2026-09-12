@@ -72,4 +72,40 @@ void UWBP_CreditsEntry_C::Construct()
 }
 
 
+// Function WBP_CreditsEntry.SKEL_WBP_CreditsEntry_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_CreditsEntry_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CreditsEntry_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CreditsEntry.SKEL_WBP_CreditsEntry_C.BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature
+// (Public)
+// Parameters:
+// class UExpandableArea*                  Area                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CreditsEntry_C::BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature(class UExpandableArea* Area, bool bIsExpanded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CreditsEntry_C", "BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature");
+
+	Params::SKEL_WBP_CreditsEntry_C_BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature Parms{};
+
+	Parms.Area = Area;
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

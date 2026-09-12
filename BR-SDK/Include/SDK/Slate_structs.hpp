@@ -10,31 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// Enum Slate.ETextJustify
-// NumValues: 0x0004
-enum class ETextJustify : uint8
-{
-	Left                                     = 0,
-	Center                                   = 1,
-	Right                                    = 2,
-	ETextJustify_MAX                         = 3,
-};
-
-// Enum Slate.ETextFlowDirection
-// NumValues: 0x0004
-enum class ETextFlowDirection : uint8
-{
-	Auto                                     = 0,
-	LeftToRight                              = 1,
-	RightToLeft                              = 2,
-	ETextFlowDirection_MAX                   = 3,
-};
 
 // Enum Slate.EVirtualKeyboardDismissAction
 // NumValues: 0x0004
@@ -53,15 +33,6 @@ enum class EVirtualKeyboardTrigger : uint8
 	OnFocusByPointer                         = 0,
 	OnAllFocusEvents                         = 1,
 	EVirtualKeyboardTrigger_MAX              = 2,
-};
-
-// Enum Slate.ETextWrappingPolicy
-// NumValues: 0x0003
-enum class ETextWrappingPolicy : uint8
-{
-	DefaultWrapping                          = 0,
-	AllowPerCharacterWrapping                = 1,
-	ETextWrappingPolicy_MAX                  = 2,
 };
 
 // Enum Slate.ETableViewMode
@@ -186,6 +157,25 @@ enum class EListItemAlignment : uint8
 	EListItemAlignment_MAX                   = 7,
 };
 
+// Enum Slate.ETextFlowDirection
+// NumValues: 0x0004
+enum class ETextFlowDirection : uint8
+{
+	Auto                                     = 0,
+	LeftToRight                              = 1,
+	RightToLeft                              = 2,
+	ETextFlowDirection_MAX                   = 3,
+};
+
+// Enum Slate.ETextWrappingPolicy
+// NumValues: 0x0003
+enum class ETextWrappingPolicy : uint8
+{
+	DefaultWrapping                          = 0,
+	AllowPerCharacterWrapping                = 1,
+	ETextWrappingPolicy_MAX                  = 2,
+};
+
 // Enum Slate.ETextTransformPolicy
 // NumValues: 0x0004
 enum class ETextTransformPolicy : uint8
@@ -194,6 +184,16 @@ enum class ETextTransformPolicy : uint8
 	ToLower                                  = 1,
 	ToUpper                                  = 2,
 	ETextTransformPolicy_MAX                 = 3,
+};
+
+// Enum Slate.ETextJustify
+// NumValues: 0x0004
+enum class ETextJustify : uint8
+{
+	Left                                     = 0,
+	Center                                   = 1,
+	Right                                    = 2,
+	ETextJustify_MAX                         = 3,
 };
 
 // Enum Slate.ECustomizedToolMenuVisibility
@@ -247,29 +247,6 @@ public:
 };
 DUMPER7_ASSERTS_FVirtualKeyboardOptions;
 
-// ScriptStruct Slate.InputChord
-// 0x0020 (0x0020 - 0x0000)
-struct FInputChord final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bShift : 1;                                        // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCtrl : 1;                                         // 0x0018(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAlt : 1;                                          // 0x0018(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCmd : 1;                                          // 0x0018(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FInputChord;
-
-// ScriptStruct Slate.CustomizedToolMenuNameArray
-// 0x0010 (0x0010 - 0x0000)
-struct FCustomizedToolMenuNameArray final
-{
-public:
-	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizedToolMenuNameArray;
-
 // ScriptStruct Slate.Anchors
 // 0x0010 (0x0010 - 0x0000)
 struct FAnchors final
@@ -280,6 +257,20 @@ public:
 };
 DUMPER7_ASSERTS_FAnchors;
 
+// ScriptStruct Slate.InputChord
+// 0x0028 (0x0028 - 0x0000)
+struct FInputChord final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bShift : 1;                                        // 0x0020(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCtrl : 1;                                         // 0x0020(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAlt : 1;                                          // 0x0020(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCmd : 1;                                          // 0x0020(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FInputChord;
+
 // ScriptStruct Slate.CustomizedToolMenuSection
 // 0x0004 (0x0004 - 0x0000)
 struct FCustomizedToolMenuSection final
@@ -289,17 +280,27 @@ public:
 };
 DUMPER7_ASSERTS_FCustomizedToolMenuSection;
 
+// ScriptStruct Slate.CustomizedToolMenuNameArray
+// 0x0010 (0x0010 - 0x0000)
+struct FCustomizedToolMenuNameArray final
+{
+public:
+	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuNameArray;
+
 // ScriptStruct Slate.CustomizedToolMenu
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x01F0 (0x01F0 - 0x0000)
 struct FCustomizedToolMenu final
 {
 public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0008(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0058(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x00A8(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class FName>                           SectionOrder;                                      // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108[0xE0];                                     // 0x0108(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Name;                                              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0010(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0060(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x00B0(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class FName>                           SectionOrder;                                      // 0x0100(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0xE0];                                     // 0x0110(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCustomizedToolMenu;
 

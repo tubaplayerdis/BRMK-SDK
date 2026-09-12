@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Blinker_Category_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Blinker_Sequence.SKEL_BP_Blinker_Sequence_C
+// 0x0010 (0x00A8 - 0x0098)
+class USKEL_BP_Blinker_Sequence_C final : public USKEL_BP_Blinker_Category_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Blinker_Sequence_C;         // 0x0098(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Blinker_Sequence_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Blinker_Sequence_C")
+	}
+	static class USKEL_BP_Blinker_Sequence_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Blinker_Sequence_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Blinker_Sequence_C;
+
 // BlueprintGeneratedClass BP_Blinker_Sequence.BP_Blinker_Sequence_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class UBP_Blinker_Sequence_C final : public UBP_Blinker_Category_C
 {
 public:

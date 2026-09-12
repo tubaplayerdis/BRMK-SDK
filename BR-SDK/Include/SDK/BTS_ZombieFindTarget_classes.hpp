@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BTS_ZombieFindTarget.BTS_ZombieFindTarget_C
-// 0x0008 (0x00A0 - 0x0098)
+// 0x0010 (0x00C8 - 0x00B8)
 class UBTS_ZombieFindTarget_C final : public UBTService_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BTS_ZombieFindTarget(int32 EntryPoint);
@@ -43,5 +43,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBTS_ZombieFindTarget_C;
+
+// BlueprintGeneratedClass BTS_ZombieFindTarget.SKEL_BTS_ZombieFindTarget_C
+// 0x0010 (0x00C8 - 0x00B8)
+class USKEL_BTS_ZombieFindTarget_C final : public UBTService_BlueprintBase
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveTick(class AActor* OwnerActor, float DeltaSeconds);
+	class ABrickCharacter* GetClosestCharacter(class AZombie* Zombie);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BTS_ZombieFindTarget_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BTS_ZombieFindTarget_C")
+	}
+	static class USKEL_BTS_ZombieFindTarget_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BTS_ZombieFindTarget_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BTS_ZombieFindTarget_C;
 
 SDK_NAMESPACE_END

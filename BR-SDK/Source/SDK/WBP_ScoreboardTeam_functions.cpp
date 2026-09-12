@@ -134,4 +134,102 @@ void UWBP_ScoreboardTeam_C::UpdateTeamAttitude(bool bIsOwnTeam, ETeamAttitude Ne
 }
 
 
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.UpdateTeamAttitude
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsOwnTeam                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ETeamAttitude                           NewAttitude                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardTeam_C::UpdateTeamAttitude(bool bIsOwnTeam, ETeamAttitude NewAttitude)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardTeam_C", "UpdateTeamAttitude");
+
+	Params::SKEL_WBP_ScoreboardTeam_C_UpdateTeamAttitude Parms{};
+
+	Parms.bIsOwnTeam = bIsOwnTeam;
+	Parms.NewAttitude = NewAttitude;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.BndEvt__JoinButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_ScoreboardTeam_C::BndEvt__JoinButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardTeam_C", "BndEvt__JoinButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.UpdateCanEverJoinTeam
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanJoin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardTeam_C::UpdateCanEverJoinTeam(bool bCanJoin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardTeam_C", "UpdateCanEverJoinTeam");
+
+	Params::SKEL_WBP_ScoreboardTeam_C_UpdateCanEverJoinTeam Parms{};
+
+	Parms.bCanJoin = bCanJoin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.UpdateCanJoinTeam
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanJoin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardTeam_C::UpdateCanJoinTeam(bool bCanJoin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardTeam_C", "UpdateCanJoinTeam");
+
+	Params::SKEL_WBP_ScoreboardTeam_C_UpdateCanJoinTeam Parms{};
+
+	Parms.bCanJoin = bCanJoin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardTeam_C::BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardTeam_C", "BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_ScoreboardTeam_C_BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

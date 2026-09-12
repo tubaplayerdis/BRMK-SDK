@@ -33,5 +33,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_Brick_8x8x1s_C_ReceiveTick_1;
 
+// Function BP_Brick_8x8x1s.SKEL_BP_Brick_8x8x1s_C.ReceiveTick_1
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_Brick_8x8x1s_C_ReceiveTick_1 final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_Brick_8x8x1s_C_ReceiveTick_1;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

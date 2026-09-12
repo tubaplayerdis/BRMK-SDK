@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Chat.WBP_Chat_C.UpdateIsFocused
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Chat_C_UpdateIsFocused final
-{
-public:
-	bool                                          bNewFocused_UpdateIsFocused;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_Chat_C_UpdateIsFocused;
-
-// Function WBP_Chat.WBP_Chat_C.UpdateIsTyping
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Chat_C_UpdateIsTyping final
-{
-public:
-	bool                                          bNewTyping_UpdateIsTyping;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_Chat_C_UpdateIsTyping;
-
 // Function WBP_Chat.WBP_Chat_C.ExecuteUbergraph_WBP_Chat
 // 0x000C (0x000C - 0x0000)
 struct WBP_Chat_C_ExecuteUbergraph_WBP_Chat final
@@ -48,6 +30,42 @@ public:
 	bool                                          K2Node_Event_bNewFocused;                          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_Chat_C_ExecuteUbergraph_WBP_Chat;
+
+// Function WBP_Chat.WBP_Chat_C.UpdateIsTyping
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Chat_C_UpdateIsTyping final
+{
+public:
+	bool                                          bNewTyping;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_Chat_C_UpdateIsTyping;
+
+// Function WBP_Chat.WBP_Chat_C.UpdateIsFocused
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Chat_C_UpdateIsFocused final
+{
+public:
+	bool                                          bNewFocused;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_Chat_C_UpdateIsFocused;
+
+// Function WBP_Chat.SKEL_WBP_Chat_C.UpdateIsFocused
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_Chat_C_UpdateIsFocused final
+{
+public:
+	bool                                          bNewFocused;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Chat_C_UpdateIsFocused;
+
+// Function WBP_Chat.SKEL_WBP_Chat_C.UpdateIsTyping
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_Chat_C_UpdateIsTyping final
+{
+public:
+	bool                                          bNewTyping;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Chat_C_UpdateIsTyping;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

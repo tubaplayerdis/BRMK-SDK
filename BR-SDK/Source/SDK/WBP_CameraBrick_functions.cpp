@@ -58,4 +58,26 @@ void UWBP_CameraBrick_C::UpdateTargetRange(bool bHitSomething, float Distance)
 }
 
 
+// Function WBP_CameraBrick.SKEL_WBP_CameraBrick_C.UpdateTargetRange
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bHitSomething                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CameraBrick_C::UpdateTargetRange(bool bHitSomething, float Distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CameraBrick_C", "UpdateTargetRange");
+
+	Params::SKEL_WBP_CameraBrick_C_UpdateTargetRange Parms{};
+
+	Parms.bHitSomething = bHitSomething;
+	Parms.Distance = Distance;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

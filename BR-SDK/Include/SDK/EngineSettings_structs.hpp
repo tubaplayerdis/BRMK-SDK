@@ -66,12 +66,12 @@ public:
 DUMPER7_ASSERTS_FAutoCompleteCommand;
 
 // ScriptStruct EngineSettings.GameModeName
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FGameModeName final
 {
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftClassPath                         GameMode;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                         GameMode;                                          // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGameModeName;
 

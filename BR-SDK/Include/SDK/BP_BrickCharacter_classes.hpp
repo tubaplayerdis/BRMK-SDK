@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BrickCharacter.BP_BrickCharacter_C
-// 0x0010 (0x0920 - 0x0910)
+// 0x0010 (0x0A10 - 0x0A00)
 class ABP_BrickCharacter_C final : public ABrickCharacter
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0910(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A00(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_BrickCharacter(int32 EntryPoint);
@@ -42,5 +42,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_BrickCharacter_C;
+
+// BlueprintGeneratedClass BP_BrickCharacter.SKEL_BP_BrickCharacter_C
+// 0x0010 (0x0A10 - 0x0A00)
+class ASKEL_BP_BrickCharacter_C final : public ABrickCharacter
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A00(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void GiveTestLoadout();
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_BrickCharacter_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_BrickCharacter_C")
+	}
+	static class ASKEL_BP_BrickCharacter_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_BrickCharacter_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_BrickCharacter_C;
 
 SDK_NAMESPACE_END

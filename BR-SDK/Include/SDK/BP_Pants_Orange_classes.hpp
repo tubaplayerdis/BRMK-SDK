@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BP_Pants_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Pants_Orange.BP_Pants_Orange_C
-// 0x0000 (0x02A8 - 0x02A8)
+// 0x0000 (0x0380 - 0x0380)
 class ABP_Pants_Orange_C final : public ABP_Pants_C
 {
 public:
@@ -34,5 +35,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Pants_Orange_C;
+
+// BlueprintGeneratedClass BP_Pants_Orange.SKEL_BP_Pants_Orange_C
+// 0x0010 (0x03A0 - 0x0390)
+class ASKEL_BP_Pants_Orange_C final : public ASKEL_BP_Pants_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Pants_Orange_C;             // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Pants_Orange_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Pants_Orange_C")
+	}
+	static class ASKEL_BP_Pants_Orange_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Pants_Orange_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Pants_Orange_C;
 
 SDK_NAMESPACE_END

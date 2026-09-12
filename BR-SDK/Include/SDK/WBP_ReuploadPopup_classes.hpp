@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ReuploadPopup.WBP_ReuploadPopup_C
-// 0x0008 (0x02D0 - 0x02C8)
+// 0x0010 (0x0470 - 0x0460)
 class UWBP_ReuploadPopup_C final : public UReuploadPopupWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_ReuploadPopup(int32 EntryPoint);
@@ -44,5 +44,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ReuploadPopup_C;
+
+// WidgetBlueprintGeneratedClass WBP_ReuploadPopup.SKEL_WBP_ReuploadPopup_C
+// 0x0010 (0x0470 - 0x0460)
+class USKEL_WBP_ReuploadPopup_C final : public UReuploadPopupWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void Construct();
+
+	class FText GetPopupTitle() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ReuploadPopup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ReuploadPopup_C")
+	}
+	static class USKEL_WBP_ReuploadPopup_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ReuploadPopup_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ReuploadPopup_C;
 
 SDK_NAMESPACE_END

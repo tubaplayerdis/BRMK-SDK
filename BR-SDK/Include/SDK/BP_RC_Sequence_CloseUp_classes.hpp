@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BP_RC_Sequence_2_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RC_Sequence_CloseUp.BP_RC_Sequence_CloseUp_C
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0000 (0x0380 - 0x0380)
 class ABP_RC_Sequence_CloseUp_C final : public ABP_RC_Sequence_2_C
 {
 public:
@@ -34,5 +35,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_RC_Sequence_CloseUp_C;
+
+// BlueprintGeneratedClass BP_RC_Sequence_CloseUp.SKEL_BP_RC_Sequence_CloseUp_C
+// 0x0010 (0x03A0 - 0x0390)
+class ASKEL_BP_RC_Sequence_CloseUp_C final : public ASKEL_BP_RC_Sequence_2_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_RC_Sequence_CloseUp_C;      // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_RC_Sequence_CloseUp_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_RC_Sequence_CloseUp_C")
+	}
+	static class ASKEL_BP_RC_Sequence_CloseUp_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_RC_Sequence_CloseUp_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_RC_Sequence_CloseUp_C;
 
 SDK_NAMESPACE_END

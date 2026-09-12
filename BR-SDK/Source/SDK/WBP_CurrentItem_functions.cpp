@@ -190,4 +190,158 @@ void UWBP_CurrentItem_C::UpdateFireMode(const EFireMode NewMode, const bool bHas
 }
 
 
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateFireMode
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const EFireMode                         NewMode                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bHasFirearm                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CurrentItem_C::UpdateFireMode(const EFireMode NewMode, const bool bHasFirearm)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "UpdateFireMode");
+
+	Params::SKEL_WBP_CurrentItem_C_UpdateFireMode Parms{};
+
+	Parms.NewMode = NewMode;
+	Parms.bHasFirearm = bHasFirearm;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateAmmoType
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EAmmoType                               NewType                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CurrentItem_C::UpdateAmmoType(EAmmoType NewType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "UpdateAmmoType");
+
+	Params::SKEL_WBP_CurrentItem_C_UpdateAmmoType Parms{};
+
+	Parms.NewType = NewType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateAmmo
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Capacity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Ammo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CurrentItem_C::UpdateAmmo(int32 Current, int32 Capacity, int32 Ammo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "UpdateAmmo");
+
+	Params::SKEL_WBP_CurrentItem_C_UpdateAmmo Parms{};
+
+	Parms.Current = Current;
+	Parms.Capacity = Capacity;
+	Parms.Ammo = Ammo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.FadeIn
+// (Event, Public, BlueprintEvent)
+
+void USKEL_WBP_CurrentItem_C::FadeIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "FadeIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.FadeOut
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    bImmediate                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CurrentItem_C::FadeOut(bool bImmediate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "FadeOut");
+
+	Params::SKEL_WBP_CurrentItem_C_FadeOut Parms{};
+
+	Parms.bImmediate = bImmediate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateItemName
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      NewName                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CurrentItem_C::UpdateItemName(const class FText& NewName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "UpdateItemName");
+
+	Params::SKEL_WBP_CurrentItem_C_UpdateItemName Parms{};
+
+	Parms.NewName = std::move(NewName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.BndEvt__WBP_CurrentItem_FadingPanel_K2Node_ComponentBoundEvent_0_OnFadedOut__DelegateSignature
+// (Public)
+
+void USKEL_WBP_CurrentItem_C::BndEvt__WBP_CurrentItem_FadingPanel_K2Node_ComponentBoundEvent_0_OnFadedOut__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "BndEvt__WBP_CurrentItem_FadingPanel_K2Node_ComponentBoundEvent_0_OnFadedOut__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_CurrentItem_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_CurrentItem_C", "PreConstruct");
+
+	Params::SKEL_WBP_CurrentItem_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

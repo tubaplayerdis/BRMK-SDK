@@ -58,4 +58,26 @@ void UWBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, c
 }
 
 
+// Function WBP_InputKey.SKEL_WBP_InputKey_C.UpdateKey
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FKeyDisplayTableRow&       DisplayInfo                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const bool                              bIsGamepadKey                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsGamepadKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputKey_C", "UpdateKey");
+
+	Params::SKEL_WBP_InputKey_C_UpdateKey Parms{};
+
+	Parms.DisplayInfo = std::move(DisplayInfo);
+	Parms.bIsGamepadKey = bIsGamepadKey;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

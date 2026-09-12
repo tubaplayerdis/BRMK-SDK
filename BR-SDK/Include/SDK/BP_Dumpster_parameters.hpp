@@ -28,5 +28,23 @@ public:
 };
 DUMPER7_ASSERTS_BP_Dumpster_C_UserConstructionScript;
 
+// Function BP_Dumpster.SKEL_BP_Dumpster_C.ReceiveActorBeginOverlap
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_BP_Dumpster_C_ReceiveActorBeginOverlap final
+{
+public:
+	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_Dumpster_C_ReceiveActorBeginOverlap;
+
+// Function BP_Dumpster.SKEL_BP_Dumpster_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_Dumpster_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_Dumpster_C_ReceiveTick;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

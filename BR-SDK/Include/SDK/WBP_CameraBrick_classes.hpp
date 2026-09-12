@@ -18,12 +18,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CameraBrick.WBP_CameraBrick_C
-// 0x0010 (0x0288 - 0x0278)
+// 0x0018 (0x0428 - 0x0410)
 class UWBP_CameraBrick_C final : public UCameraBrickWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickTextBlock*                        TargetRangeTextBlock;                              // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickTextBlock*                        TargetRangeTextBlock;                              // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_CameraBrick(int32 EntryPoint);
@@ -44,5 +44,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_CameraBrick_C;
+
+// WidgetBlueprintGeneratedClass WBP_CameraBrick.SKEL_WBP_CameraBrick_C
+// 0x0018 (0x0428 - 0x0410)
+class USKEL_WBP_CameraBrick_C final : public UCameraBrickWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickTextBlock*                        TargetRangeTextBlock;                              // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateTargetRange(bool bHitSomething, float Distance);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_CameraBrick_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_CameraBrick_C")
+	}
+	static class USKEL_WBP_CameraBrick_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_CameraBrick_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_CameraBrick_C;
 
 SDK_NAMESPACE_END

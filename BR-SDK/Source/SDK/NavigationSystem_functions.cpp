@@ -1073,6 +1073,25 @@ void ANavModifierVolume::SetAreaClass(TSubclassOf<class UNavArea> NewAreaClass)
 }
 
 
+// Function NavigationSystem.NavSystemConfigOverride.ApplyChanges
+// (Final, Native, Public, EditorOnly)
+
+void ANavSystemConfigOverride::ApplyChanges()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NavSystemConfigOverride", "ApplyChanges");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -51,6 +51,15 @@ public:
 	struct FTooltipContent                        InContent;                                         // 0x0000(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_Tooltip_C_UpdateTooltipContent;
+
+// Function WBP_Tooltip.SKEL_WBP_Tooltip_C.UpdateTooltipContent
+// 0x0040 (0x0040 - 0x0000)
+struct SKEL_WBP_Tooltip_C_UpdateTooltipContent final
+{
+public:
+	struct FTooltipContent                        InContent;                                         // 0x0000(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Tooltip_C_UpdateTooltipContent;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

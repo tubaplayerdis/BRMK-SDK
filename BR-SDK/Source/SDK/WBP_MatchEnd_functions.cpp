@@ -106,4 +106,74 @@ void UWBP_MatchEnd_C::UpdateContinueButton(int32 TimeRemaining, bool bIsHost)
 }
 
 
+// Function WBP_MatchEnd.SKEL_WBP_MatchEnd_C.UpdateContinueButton
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   TimeRemaining                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsHost                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_MatchEnd_C::UpdateContinueButton(int32 TimeRemaining, bool bIsHost)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchEnd_C", "UpdateContinueButton");
+
+	Params::SKEL_WBP_MatchEnd_C_UpdateContinueButton Parms{};
+
+	Parms.TimeRemaining = TimeRemaining;
+	Parms.bIsHost = bIsHost;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MatchEnd.SKEL_WBP_MatchEnd_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_MatchEnd_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchEnd_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MatchEnd.SKEL_WBP_MatchEnd_C.OnClickedExit
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_MatchEnd_C::OnClickedExit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchEnd_C", "OnClickedExit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MatchEnd.SKEL_WBP_MatchEnd_C.OnClosedExitMatchPopup
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPopupResult                            Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_MatchEnd_C::OnClosedExitMatchPopup(EPopupResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchEnd_C", "OnClosedExitMatchPopup");
+
+	Params::SKEL_WBP_MatchEnd_C_OnClosedExitMatchPopup Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

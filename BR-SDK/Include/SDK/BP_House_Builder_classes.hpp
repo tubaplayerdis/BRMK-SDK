@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_House_Builder.BP_House_Builder_C
-// 0x0000 (0x0310 - 0x0310)
+// 0x0000 (0x0400 - 0x0400)
 class ABP_House_Builder_C final : public ALegacyBuilding
 {
 public:
@@ -37,5 +38,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_House_Builder_C;
+
+// BlueprintGeneratedClass BP_House_Builder.SKEL_BP_House_Builder_C
+// 0x0010 (0x0410 - 0x0400)
+class ASKEL_BP_House_Builder_C final : public ALegacyBuilding
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0400(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_House_Builder_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_House_Builder_C")
+	}
+	static class ASKEL_BP_House_Builder_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_House_Builder_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_House_Builder_C;
 
 SDK_NAMESPACE_END

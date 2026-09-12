@@ -16,16 +16,42 @@
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_UIStyle_White.SKEL_BP_UIStyle_White_C
+// 0x0010 (0x8210 - 0x8200)
+class USKEL_BP_UIStyle_White_C final : public USKEL_BP_UIStyle_Default_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_UIStyle_White_C;            // 0x8200(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void BuildStyle();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_UIStyle_White_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_UIStyle_White_C")
+	}
+	static class USKEL_BP_UIStyle_White_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_UIStyle_White_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_UIStyle_White_C;
+
 // BlueprintGeneratedClass BP_UIStyle_White.BP_UIStyle_White_C
-// 0x0008 (0x7100 - 0x70F8)
+// 0x0010 (0x8210 - 0x8200)
 class UBP_UIStyle_White_C final : public UBP_UIStyle_Default_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UIStyle_White_C;                 // 0x70F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UIStyle_White_C;                 // 0x8200(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_BP_UIStyle_White(int32 EntryPoint);
 	void BuildStyle();
+	void ExecuteUbergraph_BP_UIStyle_White(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

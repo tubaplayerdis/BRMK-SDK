@@ -70,4 +70,38 @@ void UBP_Brick_8x8x1s_C::ReceiveBeginPlay_1()
 }
 
 
+// Function BP_Brick_8x8x1s.SKEL_BP_Brick_8x8x1s_C.ReceiveBeginPlay_1
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_BP_Brick_8x8x1s_C::ReceiveBeginPlay_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Brick_8x8x1s_C", "ReceiveBeginPlay_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Brick_8x8x1s.SKEL_BP_Brick_8x8x1s_C.ReceiveTick_1
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_BP_Brick_8x8x1s_C::ReceiveTick_1(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Brick_8x8x1s_C", "ReceiveTick_1");
+
+	Params::SKEL_BP_Brick_8x8x1s_C_ReceiveTick_1 Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

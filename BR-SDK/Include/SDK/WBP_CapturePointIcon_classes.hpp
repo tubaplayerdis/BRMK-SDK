@@ -11,12 +11,39 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_CapturePointIcon.SKEL_WBP_CapturePointIcon_C
+// 0x0010 (0x0470 - 0x0460)
+class USKEL_WBP_CapturePointIcon_C final : public UCapturePointIconWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	class FText GetIconDisplayName() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_CapturePointIcon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_CapturePointIcon_C")
+	}
+	static class USKEL_WBP_CapturePointIcon_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_CapturePointIcon_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_CapturePointIcon_C;
+
 // WidgetBlueprintGeneratedClass WBP_CapturePointIcon.WBP_CapturePointIcon_C
-// 0x0000 (0x02C8 - 0x02C8)
+// 0x0000 (0x0460 - 0x0460)
 class UWBP_CapturePointIcon_C final : public UCapturePointIconWidget
 {
 public:

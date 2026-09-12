@@ -30,4 +30,18 @@ void ABP_Fluppism_Sequence_C::UserConstructionScript()
 }
 
 
+// Function BP_Fluppism_Sequence.SKEL_BP_Fluppism_Sequence_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_Fluppism_Sequence_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Fluppism_Sequence_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

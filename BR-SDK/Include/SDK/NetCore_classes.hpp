@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // Class NetCore.NetAnalyticsAggregatorConfig
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UNetAnalyticsAggregatorConfig final : public UObject
 {
 public:
-	TArray<struct FNetAnalyticsDataConfig>        NetAnalyticsData;                                  // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FNetAnalyticsDataConfig>        NetAnalyticsData;                                  // 0x0030(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

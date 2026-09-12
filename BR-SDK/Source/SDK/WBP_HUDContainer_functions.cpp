@@ -16,46 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_HUDContainer.WBP_HUDContainer_C.AddGameOverlayWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UGameOverlayWidget*               Widget_AddGameOverlayWidget                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUDContainer_C::AddGameOverlayWidget(class UGameOverlayWidget* Widget_AddGameOverlayWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDContainer_C", "AddGameOverlayWidget");
-
-	Params::WBP_HUDContainer_C_AddGameOverlayWidget Parms{};
-
-	Parms.Widget_AddGameOverlayWidget = Widget_AddGameOverlayWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUDContainer.WBP_HUDContainer_C.AddHUDWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      Widget_AddHUDWidget                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUDContainer_C::AddHUDWidget(class UUserWidget* Widget_AddHUDWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUDContainer_C", "AddHUDWidget");
-
-	Params::WBP_HUDContainer_C_AddHUDWidget Parms{};
-
-	Parms.Widget_AddHUDWidget = Widget_AddHUDWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_HUDContainer.WBP_HUDContainer_C.ExecuteUbergraph_WBP_HUDContainer
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -71,6 +31,86 @@ void UWBP_HUDContainer_C::ExecuteUbergraph_WBP_HUDContainer(int32 EntryPoint)
 	Params::WBP_HUDContainer_C_ExecuteUbergraph_WBP_HUDContainer Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDContainer.WBP_HUDContainer_C.AddHUDWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUDContainer_C::AddHUDWidget(class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUDContainer_C", "AddHUDWidget");
+
+	Params::WBP_HUDContainer_C_AddHUDWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDContainer.WBP_HUDContainer_C.AddGameOverlayWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UGameOverlayWidget*               Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUDContainer_C::AddGameOverlayWidget(class UGameOverlayWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUDContainer_C", "AddGameOverlayWidget");
+
+	Params::WBP_HUDContainer_C_AddGameOverlayWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDContainer.SKEL_WBP_HUDContainer_C.AddGameOverlayWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UGameOverlayWidget*               Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HUDContainer_C::AddGameOverlayWidget(class UGameOverlayWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HUDContainer_C", "AddGameOverlayWidget");
+
+	Params::SKEL_WBP_HUDContainer_C_AddGameOverlayWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDContainer.SKEL_WBP_HUDContainer_C.AddHUDWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HUDContainer_C::AddHUDWidget(class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HUDContainer_C", "AddHUDWidget");
+
+	Params::SKEL_WBP_HUDContainer_C_AddHUDWidget Parms{};
+
+	Parms.Widget = Widget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

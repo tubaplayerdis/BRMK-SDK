@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_MatchTimer.WBP_MatchTimer_C.UpdateTimer
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   NewTime_UpdateTimer                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_MatchTimer_C::UpdateTimer(int32 NewTime_UpdateTimer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MatchTimer_C", "UpdateTimer");
-
-	Params::WBP_MatchTimer_C_UpdateTimer Parms{};
-
-	Parms.NewTime_UpdateTimer = NewTime_UpdateTimer;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_MatchTimer.WBP_MatchTimer_C.ExecuteUbergraph_WBP_MatchTimer
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,6 +31,46 @@ void UWBP_MatchTimer_C::ExecuteUbergraph_WBP_MatchTimer(int32 EntryPoint)
 	Params::WBP_MatchTimer_C_ExecuteUbergraph_WBP_MatchTimer Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MatchTimer.WBP_MatchTimer_C.UpdateTimer
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   NewTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MatchTimer_C::UpdateTimer(int32 NewTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MatchTimer_C", "UpdateTimer");
+
+	Params::WBP_MatchTimer_C_UpdateTimer Parms{};
+
+	Parms.NewTime = NewTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MatchTimer.SKEL_WBP_MatchTimer_C.UpdateTimer
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   NewTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_MatchTimer_C::UpdateTimer(int32 NewTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchTimer_C", "UpdateTimer");
+
+	Params::SKEL_WBP_MatchTimer_C_UpdateTimer Parms{};
+
+	Parms.NewTime = NewTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

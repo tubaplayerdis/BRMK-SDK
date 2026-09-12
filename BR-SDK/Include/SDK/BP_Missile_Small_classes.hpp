@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BP_Missile_Large_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Missile_Small.BP_Missile_Small_C
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x04E0 - 0x04E0)
 class ABP_Missile_Small_C final : public ABP_Missile_Large_C
 {
 public:
@@ -34,5 +35,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Missile_Small_C;
+
+// BlueprintGeneratedClass BP_Missile_Small.SKEL_BP_Missile_Small_C
+// 0x0010 (0x0500 - 0x04F0)
+class ASKEL_BP_Missile_Small_C final : public ASKEL_BP_Missile_Large_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Missile_Small_C;            // 0x04F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Missile_Small_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Missile_Small_C")
+	}
+	static class ASKEL_BP_Missile_Small_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Missile_Small_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Missile_Small_C;
 
 SDK_NAMESPACE_END

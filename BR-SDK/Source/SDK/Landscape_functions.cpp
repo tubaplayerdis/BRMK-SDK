@@ -245,6 +245,96 @@ bool ALandscapeProxy::LandscapeExportHeightmapToRenderTarget(class UTextureRende
 }
 
 
+// Function Landscape.LandscapeProxy.LandscapeExportWeightmapToRenderTarget
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// class UTextureRenderTarget2D*           InRenderTarget                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InLayerName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ALandscapeProxy::LandscapeExportWeightmapToRenderTarget(class UTextureRenderTarget2D* InRenderTarget, class FName InLayerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeProxy", "LandscapeExportWeightmapToRenderTarget");
+
+	Params::LandscapeProxy_LandscapeExportWeightmapToRenderTarget Parms{};
+
+	Parms.InRenderTarget = InRenderTarget;
+	Parms.InLayerName = InLayerName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Landscape.LandscapeProxy.LandscapeImportHeightmapFromRenderTarget
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// class UTextureRenderTarget2D*           InRenderTarget                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InImportHeightFromRGChannel                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ALandscapeProxy::LandscapeImportHeightmapFromRenderTarget(class UTextureRenderTarget2D* InRenderTarget, bool InImportHeightFromRGChannel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeProxy", "LandscapeImportHeightmapFromRenderTarget");
+
+	Params::LandscapeProxy_LandscapeImportHeightmapFromRenderTarget Parms{};
+
+	Parms.InRenderTarget = InRenderTarget;
+	Parms.InImportHeightFromRGChannel = InImportHeightFromRGChannel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Landscape.LandscapeProxy.LandscapeImportWeightmapFromRenderTarget
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// class UTextureRenderTarget2D*           InRenderTarget                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InLayerName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ALandscapeProxy::LandscapeImportWeightmapFromRenderTarget(class UTextureRenderTarget2D* InRenderTarget, class FName InLayerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeProxy", "LandscapeImportWeightmapFromRenderTarget");
+
+	Params::LandscapeProxy_LandscapeImportWeightmapFromRenderTarget Parms{};
+
+	Parms.InRenderTarget = InRenderTarget;
+	Parms.InLayerName = InLayerName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:

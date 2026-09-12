@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Class AudioExtensions.AudioEndpointSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UAudioEndpointSettingsBase : public UObject
 {
 public:
@@ -36,7 +36,7 @@ public:
 DUMPER7_ASSERTS_UAudioEndpointSettingsBase;
 
 // Class AudioExtensions.DummyEndpointSettings
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UDummyEndpointSettings final : public UAudioEndpointSettingsBase
 {
 public:
@@ -56,7 +56,7 @@ public:
 DUMPER7_ASSERTS_UDummyEndpointSettings;
 
 // Class AudioExtensions.SpatializationPluginSourceSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class USpatializationPluginSourceSettingsBase final : public UObject
 {
 public:
@@ -76,7 +76,7 @@ public:
 DUMPER7_ASSERTS_USpatializationPluginSourceSettingsBase;
 
 // Class AudioExtensions.OcclusionPluginSourceSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UOcclusionPluginSourceSettingsBase final : public UObject
 {
 public:
@@ -96,7 +96,7 @@ public:
 DUMPER7_ASSERTS_UOcclusionPluginSourceSettingsBase;
 
 // Class AudioExtensions.ReverbPluginSourceSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UReverbPluginSourceSettingsBase final : public UObject
 {
 public:
@@ -116,7 +116,7 @@ public:
 DUMPER7_ASSERTS_UReverbPluginSourceSettingsBase;
 
 // Class AudioExtensions.SoundModulatorBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class USoundModulatorBase final : public UObject
 {
 public:
@@ -136,7 +136,7 @@ public:
 DUMPER7_ASSERTS_USoundModulatorBase;
 
 // Class AudioExtensions.SoundfieldEndpointSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class USoundfieldEndpointSettingsBase final : public UObject
 {
 public:
@@ -156,7 +156,7 @@ public:
 DUMPER7_ASSERTS_USoundfieldEndpointSettingsBase;
 
 // Class AudioExtensions.SoundfieldEncodingSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class USoundfieldEncodingSettingsBase final : public UObject
 {
 public:
@@ -176,7 +176,7 @@ public:
 DUMPER7_ASSERTS_USoundfieldEncodingSettingsBase;
 
 // Class AudioExtensions.SoundfieldEffectSettingsBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class USoundfieldEffectSettingsBase final : public UObject
 {
 public:
@@ -196,11 +196,11 @@ public:
 DUMPER7_ASSERTS_USoundfieldEffectSettingsBase;
 
 // Class AudioExtensions.SoundfieldEffectBase
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class USoundfieldEffectBase final : public UObject
 {
 public:
-	class USoundfieldEffectSettingsBase*          Settings;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundfieldEffectSettingsBase*          Settings;                                          // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

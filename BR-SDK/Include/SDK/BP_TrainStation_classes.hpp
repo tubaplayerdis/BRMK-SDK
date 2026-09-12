@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_TrainStation.BP_TrainStation_C
-// 0x0000 (0x0340 - 0x0340)
+// 0x0000 (0x0440 - 0x0440)
 class ABP_TrainStation_C final : public AGarage
 {
 public:
@@ -34,5 +35,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_TrainStation_C;
+
+// BlueprintGeneratedClass BP_TrainStation.SKEL_BP_TrainStation_C
+// 0x0010 (0x0450 - 0x0440)
+class ASKEL_BP_TrainStation_C final : public AGarage
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_TrainStation_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_TrainStation_C")
+	}
+	static class ASKEL_BP_TrainStation_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_TrainStation_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_TrainStation_C;
 
 SDK_NAMESPACE_END

@@ -56,4 +56,44 @@ class UMaterialInstanceDynamic* UWBP_Map_C::CreateMapMID() const
 }
 
 
+// Function WBP_Map.SKEL_WBP_Map_C.AddGameOverlayWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UGameOverlayWidget*               Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_Map_C::AddGameOverlayWidget(class UGameOverlayWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Map_C", "AddGameOverlayWidget");
+
+	Params::SKEL_WBP_Map_C_AddGameOverlayWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Map.SKEL_WBP_Map_C.CreateMapMID
+// (Event, Protected, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UMaterialInstanceDynamic*         ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInstanceDynamic* USKEL_WBP_Map_C::CreateMapMID() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Map_C", "CreateMapMID");
+
+	Params::SKEL_WBP_Map_C_CreateMapMID Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

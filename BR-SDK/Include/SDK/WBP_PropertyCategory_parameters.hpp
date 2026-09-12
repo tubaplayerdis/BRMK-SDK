@@ -16,6 +16,35 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.UpdateCategory
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_PropertyCategory_C_UpdateCategory final
+{
+public:
+	class FText                                   DisplayName;                                       // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyCategory_C_UpdateCategory;
+
+// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.UpdatePropertyContainerWidgetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_PropertyCategory_C_UpdatePropertyContainerWidgetSlot final
+{
+public:
+	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPerRow;                                         // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyCategory_C_UpdatePropertyContainerWidgetSlot;
+
+// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.AddPropertyContainerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_PropertyCategory_C_AddPropertyContainerWidget final
+{
+public:
+	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PropertyCategory_C_AddPropertyContainerWidget;
+
 // Function WBP_PropertyCategory.WBP_PropertyCategory_C.ExecuteUbergraph_WBP_PropertyCategory
 // 0x0058 (0x0058 - 0x0000)
 struct WBP_PropertyCategory_C_ExecuteUbergraph_WBP_PropertyCategory final

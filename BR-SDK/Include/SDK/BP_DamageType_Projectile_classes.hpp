@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DamageType_Projectile.BP_DamageType_Projectile_C
-// 0x0000 (0x0040 - 0x0040)
+// 0x0000 (0x0048 - 0x0048)
 class UBP_DamageType_Projectile_C final : public UDamageType
 {
 public:
@@ -34,5 +34,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_DamageType_Projectile_C;
+
+// BlueprintGeneratedClass BP_DamageType_Projectile.SKEL_BP_DamageType_Projectile_C
+// 0x0000 (0x0048 - 0x0048)
+class USKEL_BP_DamageType_Projectile_C final : public UDamageType
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_DamageType_Projectile_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_DamageType_Projectile_C")
+	}
+	static class USKEL_BP_DamageType_Projectile_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_DamageType_Projectile_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_DamageType_Projectile_C;
 
 SDK_NAMESPACE_END

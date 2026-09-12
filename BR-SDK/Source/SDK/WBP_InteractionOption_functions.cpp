@@ -16,17 +16,43 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_InteractionOption.WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_InteractionOption.WBP_InteractionOption_C.ExecuteUbergraph_WBP_InteractionOption
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_InteractionOption_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+void UWBP_InteractionOption_C::ExecuteUbergraph_WBP_InteractionOption(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InteractionOption_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+		Func = Class->GetFunction("WBP_InteractionOption_C", "ExecuteUbergraph_WBP_InteractionOption");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_InteractionOption_C_ExecuteUbergraph_WBP_InteractionOption Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InteractionOption.WBP_InteractionOption_C.UpdateColorStyle
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_InteractionOption_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_InteractionOption_C", "UpdateColorStyle");
+
+	Params::WBP_InteractionOption_C_UpdateColorStyle Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -52,41 +78,71 @@ void UWBP_InteractionOption_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpd
 }
 
 
-// Function WBP_InteractionOption.WBP_InteractionOption_C.UpdateColorStyle
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle_UpdateColorStyle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_InteractionOption.WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_InteractionOption_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle_UpdateColorStyle)
+void UWBP_InteractionOption_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InteractionOption_C", "UpdateColorStyle");
+		Func = Class->GetFunction("WBP_InteractionOption_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
-	Params::WBP_InteractionOption_C_UpdateColorStyle Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InColorStyle_UpdateColorStyle = InColorStyle_UpdateColorStyle;
+
+// Function WBP_InteractionOption.SKEL_WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_InteractionOption_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InteractionOption_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_InteractionOption.SKEL_WBP_InteractionOption_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InteractionOption_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InteractionOption_C", "BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_InteractionOption_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_InteractionOption.WBP_InteractionOption_C.ExecuteUbergraph_WBP_InteractionOption
-// (Final, UbergraphFunction)
+// Function WBP_InteractionOption.SKEL_WBP_InteractionOption_C.UpdateColorStyle
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_InteractionOption_C::ExecuteUbergraph_WBP_InteractionOption(int32 EntryPoint)
+void USKEL_WBP_InteractionOption_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InteractionOption_C", "ExecuteUbergraph_WBP_InteractionOption");
+		Func = Class->GetFunction("SKEL_WBP_InteractionOption_C", "UpdateColorStyle");
 
-	Params::WBP_InteractionOption_C_ExecuteUbergraph_WBP_InteractionOption Parms{};
+	Params::SKEL_WBP_InteractionOption_C_UpdateColorStyle Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InColorStyle = InColorStyle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

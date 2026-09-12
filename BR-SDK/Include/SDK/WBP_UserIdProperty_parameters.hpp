@@ -80,5 +80,43 @@ public:
 };
 DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateUsername;
 
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUsername
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_UserIdProperty_C_UpdateUsername final
+{
+public:
+	class FText                                   InUsername;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateUsername;
+
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUserId
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_UserIdProperty_C_UpdateUserId final
+{
+public:
+	class FText                                   InUserId;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValid;                                          // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateUserId;
+
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly final
+{
+public:
+	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

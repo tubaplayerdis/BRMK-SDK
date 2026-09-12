@@ -51,15 +51,15 @@ public:
 DUMPER7_ASSERTS_MatineeCameraShake_StartMatineeCameraShakeFromSource;
 
 // Function GameplayCameras.MatineeCameraShake.BlueprintUpdateCameraShake
-// 0x0BF0 (0x0BF0 - 0x0000)
+// 0x0C50 (0x0C50 - 0x0000)
 struct MatineeCameraShake_BlueprintUpdateCameraShake final
 {
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Alpha;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       POV;                                               // 0x0010(0x05F0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       ModifiedPOV;                                       // 0x0600(0x05F0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       POV;                                               // 0x0010(0x0620)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       ModifiedPOV;                                       // 0x0630(0x0620)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MatineeCameraShake_BlueprintUpdateCameraShake;
 

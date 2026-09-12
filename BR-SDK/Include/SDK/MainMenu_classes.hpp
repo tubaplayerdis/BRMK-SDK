@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MainMenu.MainMenu_C
-// 0x0000 (0x0228 - 0x0228)
+// 0x0000 (0x0300 - 0x0300)
 class AMainMenu_C final : public ALevelScriptActor
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AMainMenu_C;
+
+// BlueprintGeneratedClass MainMenu.SKEL_MainMenu_C
+// 0x0010 (0x0310 - 0x0300)
+class ASKEL_MainMenu_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_MainMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_MainMenu_C")
+	}
+	static class ASKEL_MainMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_MainMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_MainMenu_C;
 
 SDK_NAMESPACE_END

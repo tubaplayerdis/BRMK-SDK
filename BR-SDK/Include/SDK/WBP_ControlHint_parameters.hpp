@@ -68,5 +68,32 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ControlHint_C_SetIconSize;
 
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateInputChordVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ControlHint_C_UpdateInputChordVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ControlHint_C_UpdateInputChordVisibility;
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateTextVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ControlHint_C_UpdateTextVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ControlHint_C_UpdateTextVisibility;
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.SetIconSize
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_ControlHint_C_SetIconSize final
+{
+public:
+	float                                         NewSize;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ControlHint_C_SetIconSize;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

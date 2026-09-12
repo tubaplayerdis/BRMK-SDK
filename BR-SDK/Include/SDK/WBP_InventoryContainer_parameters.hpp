@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
 #include "UMG_structs.hpp"
+#include "BrickRigs_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -62,6 +62,24 @@ public:
 	bool                                          bHasInventory;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_InventoryContainer_C_UpdateHasInventory;
+
+// Function WBP_InventoryContainer.SKEL_WBP_InventoryContainer_C.UpdateHasInventory
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InventoryContainer_C_UpdateHasInventory final
+{
+public:
+	bool                                          bHasInventory;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InventoryContainer_C_UpdateHasInventory;
+
+// Function WBP_InventoryContainer.SKEL_WBP_InventoryContainer_C.UpdateOwnerMoney
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_InventoryContainer_C_UpdateOwnerMoney final
+{
+public:
+	float                                         NewMoney;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InventoryContainer_C_UpdateOwnerMoney;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

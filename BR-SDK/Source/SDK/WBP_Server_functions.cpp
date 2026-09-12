@@ -105,4 +105,73 @@ int32 UWBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllo
 }
 
 
+// Function WBP_Server.SKEL_WBP_Server_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Server_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Server_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_Server_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Server.SKEL_WBP_Server_C.UpdateServer
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FBrickOnlineSessionInfo&   SessionInfo                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Server_C::UpdateServer(const struct FBrickOnlineSessionInfo& SessionInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Server_C", "UpdateServer");
+
+	Params::SKEL_WBP_Server_C_UpdateServer Parms{};
+
+	Parms.SessionInfo = std::move(SessionInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Server.SKEL_WBP_Server_C.GetModIconSlot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    bHasMods                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bHasSameMods                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bAllowDifferentMods                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 USKEL_WBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllowDifferentMods) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Server_C", "GetModIconSlot");
+
+	Params::SKEL_WBP_Server_C_GetModIconSlot Parms{};
+
+	Parms.bHasMods = bHasMods;
+	Parms.bHasSameMods = bHasSameMods;
+	Parms.bAllowDifferentMods = bAllowDifferentMods;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

@@ -90,4 +90,58 @@ void UWBP_PagedList_C::UpdateIsLoading(bool bNewLoading)
 }
 
 
+// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsLoading
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewLoading                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedList_C::UpdateIsLoading(bool bNewLoading)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "UpdateIsLoading");
+
+	Params::SKEL_WBP_PagedList_C_UpdateIsLoading Parms{};
+
+	Parms.bNewLoading = bNewLoading;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsEntrySelected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsEntrySelected                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedList_C::UpdateIsEntrySelected(bool bIsEntrySelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "UpdateIsEntrySelected");
+
+	Params::SKEL_WBP_PagedList_C_UpdateIsEntrySelected Parms{};
+
+	Parms.bIsEntrySelected = bIsEntrySelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedList.SKEL_WBP_PagedList_C.BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_PagedList_C::BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

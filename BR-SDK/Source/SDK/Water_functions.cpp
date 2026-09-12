@@ -16,32 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
-// (Native, Event, Public, HasOutParams, BlueprintEvent, Const)
-// Parameters:
-// TArray<struct FGerstnerWave>*           OutWaves                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UGerstnerWaterWaveGeneratorBase::GenerateGerstnerWaves(TArray<struct FGerstnerWave>* OutWaves) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GerstnerWaterWaveGeneratorBase", "GenerateGerstnerWaves");
-
-	Params::GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutWaves != nullptr)
-		*OutWaves = std::move(Parms.OutWaves);
-}
-
-
 // Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -192,6 +166,32 @@ bool ABuoyancyManager::GetBuoyancyComponentManager(const class UObject* WorldCon
 		*Manager = Parms.Manager;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
+// (Native, Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// TArray<struct FGerstnerWave>*           OutWaves                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UGerstnerWaterWaveGeneratorBase::GenerateGerstnerWaves(TArray<struct FGerstnerWave>* OutWaves) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GerstnerWaterWaveGeneratorBase", "GenerateGerstnerWaves");
+
+	Params::GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutWaves != nullptr)
+		*OutWaves = std::move(Parms.OutWaves);
 }
 
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -63,6 +63,35 @@ public:
 	bool                                          bCanAdd;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_InputMappingProperty_C_UpdateCanAddMapping;
+
+// Function WBP_InputMappingProperty.SKEL_WBP_InputMappingProperty_C.UpdateCanAddMapping
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputMappingProperty_C_UpdateCanAddMapping final
+{
+public:
+	bool                                          bCanAdd;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputMappingProperty_C_UpdateCanAddMapping;
+
+// Function WBP_InputMappingProperty.SKEL_WBP_InputMappingProperty_C.BndEvt__AddButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InputMappingProperty_C_BndEvt__AddButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputMappingProperty_C_BndEvt__AddButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InputMappingProperty.SKEL_WBP_InputMappingProperty_C.AddKeyWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_InputMappingProperty_C_AddKeyWidget final
+{
+public:
+	class UInputMappingKeyWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputMappingProperty_C_AddKeyWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

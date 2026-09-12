@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class FluUGC.FluUGCSubsystem
-// 0x0030 (0x0060 - 0x0030)
+// 0x0030 (0x0068 - 0x0038)
 class UFluUGCSubsystem : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x30];                                      // 0x0038(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UFluUGCSubsystem* Get(const class FName& SubsystemName);

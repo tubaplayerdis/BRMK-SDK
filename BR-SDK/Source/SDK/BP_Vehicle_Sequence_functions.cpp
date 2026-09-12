@@ -138,4 +138,100 @@ bool ABP_Vehicle_Sequence_C::IsMenuSequenceReady() const
 }
 
 
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_Vehicle_Sequence_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.OnDefaultVehiclesQueried
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const TArray<struct FUGCFileInfo>&      FileInfos                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_Vehicle_Sequence_C::OnDefaultVehiclesQueried(const TArray<struct FUGCFileInfo>& FileInfos)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "OnDefaultVehiclesQueried");
+
+	Params::SKEL_BP_Vehicle_Sequence_C_OnDefaultVehiclesQueried Parms{};
+
+	Parms.FileInfos = std::move(FileInfos);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.OnVehicleConstructed
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_BP_Vehicle_Sequence_C::OnVehicleConstructed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "OnVehicleConstructed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.RepairVehicle
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_BP_Vehicle_Sequence_C::RepairVehicle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "RepairVehicle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_Vehicle_Sequence_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.IsMenuSequenceReady
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ASKEL_BP_Vehicle_Sequence_C::IsMenuSequenceReady() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "IsMenuSequenceReady");
+
+	Params::SKEL_BP_Vehicle_Sequence_C_IsMenuSequenceReady Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

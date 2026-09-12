@@ -19,11 +19,12 @@
 SDK_NAMESPACE_START
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
-// 0x0008 (0x0040 - 0x0038)
+// 0x0010 (0x0050 - 0x0040)
 class UAnimNotify_PlayMontageNotify final : public UAnimNotify
 {
 public:
-	class FName                                   NotifyName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -42,11 +43,12 @@ public:
 DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotify;
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
-// 0x0008 (0x0038 - 0x0030)
+// 0x0010 (0x0048 - 0x0038)
 class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
 {
 public:
-	class FName                                   NotifyName;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   NotifyName;                                        // 0x0038(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -65,7 +67,7 @@ public:
 DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotifyWindow;
 
 // Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x0300 - 0x0300)
 class UAnimSequencerInstance final : public UAnimInstance
 {
 public:
@@ -85,7 +87,7 @@ public:
 DUMPER7_ASSERTS_UAnimSequencerInstance;
 
 // Class AnimGraphRuntime.KismetAnimationLibrary
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UKismetAnimationLibrary final : public UBlueprintFunctionLibrary
 {
 public:
@@ -117,16 +119,16 @@ public:
 DUMPER7_ASSERTS_UKismetAnimationLibrary;
 
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
-// 0x0080 (0x00A8 - 0x0028)
+// 0x0080 (0x00B0 - 0x0030)
 class UPlayMontageCallbackProxy final : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x30];                                      // 0x0078(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x30];                                      // 0x0080(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, class FName StartingSection);

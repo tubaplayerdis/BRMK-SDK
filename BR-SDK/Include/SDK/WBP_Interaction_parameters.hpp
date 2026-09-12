@@ -14,16 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Interaction.WBP_Interaction_C.AddOptionWidget
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Interaction_C_AddOptionWidget final
-{
-public:
-	class UInteractionOptionWidget*               Widget_AddOptionWidget;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         OptionIndex_AddOptionWidget;                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Interaction_C_AddOptionWidget;
-
 // Function WBP_Interaction.WBP_Interaction_C.ExecuteUbergraph_WBP_Interaction
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_Interaction_C_ExecuteUbergraph_WBP_Interaction final
@@ -37,6 +27,26 @@ public:
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Interaction_C_ExecuteUbergraph_WBP_Interaction;
+
+// Function WBP_Interaction.WBP_Interaction_C.AddOptionWidget
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Interaction_C_AddOptionWidget final
+{
+public:
+	class UInteractionOptionWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         OptionIndex;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Interaction_C_AddOptionWidget;
+
+// Function WBP_Interaction.SKEL_WBP_Interaction_C.AddOptionWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_Interaction_C_AddOptionWidget final
+{
+public:
+	class UInteractionOptionWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OptionIndex;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Interaction_C_AddOptionWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

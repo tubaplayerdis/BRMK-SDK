@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Brick_8x8x1s.BP_Brick_8x8x1s_C
-// 0x0008 (0x0198 - 0x0190)
+// 0x0010 (0x01B0 - 0x01A0)
 class UBP_Brick_8x8x1s_C final : public UBrickStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0190(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_Brick_8x8x1s(int32 EntryPoint);
@@ -43,5 +43,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_Brick_8x8x1s_C;
+
+// BlueprintGeneratedClass BP_Brick_8x8x1s.SKEL_BP_Brick_8x8x1s_C
+// 0x0010 (0x01B0 - 0x01A0)
+class USKEL_BP_Brick_8x8x1s_C final : public UBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay_1();
+	void ReceiveTick_1(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Brick_8x8x1s_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Brick_8x8x1s_C")
+	}
+	static class USKEL_BP_Brick_8x8x1s_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Brick_8x8x1s_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Brick_8x8x1s_C;
 
 SDK_NAMESPACE_END

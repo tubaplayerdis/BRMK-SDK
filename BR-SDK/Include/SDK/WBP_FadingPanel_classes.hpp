@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_FadingPanel.WBP_FadingPanel_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x0420 - 0x0420)
 class UWBP_FadingPanel_C final : public UFadingPanelWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_FadingPanel_C;
+
+// WidgetBlueprintGeneratedClass WBP_FadingPanel.SKEL_WBP_FadingPanel_C
+// 0x0010 (0x0430 - 0x0420)
+class USKEL_WBP_FadingPanel_C final : public UFadingPanelWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_FadingPanel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_FadingPanel_C")
+	}
+	static class USKEL_WBP_FadingPanel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_FadingPanel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_FadingPanel_C;
 
 SDK_NAMESPACE_END

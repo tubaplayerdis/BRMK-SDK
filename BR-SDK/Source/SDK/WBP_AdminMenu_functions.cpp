@@ -90,4 +90,58 @@ void UWBP_AdminMenu_C::Construct()
 }
 
 
+// Function WBP_AdminMenu.SKEL_WBP_AdminMenu_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_AdminMenu_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_AdminMenu_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_AdminMenu.SKEL_WBP_AdminMenu_C.UpdateHasSelectedKick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewSelected                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_AdminMenu_C::UpdateHasSelectedKick(bool bNewSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_AdminMenu_C", "UpdateHasSelectedKick");
+
+	Params::SKEL_WBP_AdminMenu_C_UpdateHasSelectedKick Parms{};
+
+	Parms.bNewSelected = bNewSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_AdminMenu.SKEL_WBP_AdminMenu_C.UpdateCanViewAndEditKicks
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewCanViewAndEdit                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_AdminMenu_C::UpdateCanViewAndEditKicks(bool bNewCanViewAndEdit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_AdminMenu_C", "UpdateCanViewAndEditKicks");
+
+	Params::SKEL_WBP_AdminMenu_C_UpdateCanViewAndEditKicks Parms{};
+
+	Parms.bNewCanViewAndEdit = bNewCanViewAndEdit;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

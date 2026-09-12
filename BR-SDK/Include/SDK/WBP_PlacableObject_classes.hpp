@@ -18,11 +18,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PlacableObject.WBP_PlacableObject_C
-// 0x0008 (0x02B0 - 0x02A8)
+// 0x0010 (0x0458 - 0x0448)
 class UWBP_PlacableObject_C final : public UPlacableObjectWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_PlacableObject(int32 EntryPoint);
@@ -45,5 +45,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_PlacableObject_C;
+
+// WidgetBlueprintGeneratedClass WBP_PlacableObject.SKEL_WBP_PlacableObject_C
+// 0x0010 (0x0458 - 0x0448)
+class USKEL_WBP_PlacableObject_C final : public UPlacableObjectWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateIsFilterWidget(bool bNewIsFilter);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PlacableObject_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PlacableObject_C")
+	}
+	static class USKEL_WBP_PlacableObject_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PlacableObject_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PlacableObject_C;
 
 SDK_NAMESPACE_END

@@ -66,5 +66,34 @@ public:
 };
 DUMPER7_ASSERTS_WBP_InputChord_C_AddKeyWidget;
 
+// Function WBP_InputChord.SKEL_WBP_InputChord_C.AddKeyWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_InputChord_C_AddKeyWidget final
+{
+public:
+	class UInputKeyWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputChord_C_AddKeyWidget;
+
+// Function WBP_InputChord.SKEL_WBP_InputChord_C.AddSpacerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_InputChord_C_AddSpacerWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputChord_C_AddSpacerWidget;
+
+// Function WBP_InputChord.SKEL_WBP_InputChord_C.UpdateSpacerColorStyleAndStyleState
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_InputChord_C_UpdateSpacerColorStyleAndStyleState final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            NewStyleState;                                     // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputChord_C_UpdateSpacerColorStyleAndStyleState;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

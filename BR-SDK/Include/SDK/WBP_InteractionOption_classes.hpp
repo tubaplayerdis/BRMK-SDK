@@ -18,18 +18,18 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InteractionOption.WBP_InteractionOption_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0018 (0x0480 - 0x0468)
 class UWBP_InteractionOption_C final : public UInteractionOptionWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void UpdateColorStyle(EBrickUIColorStyle InColorStyle_UpdateColorStyle);
 	void ExecuteUbergraph_WBP_InteractionOption(int32 EntryPoint);
+	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()
@@ -46,5 +46,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InteractionOption_C;
+
+// WidgetBlueprintGeneratedClass WBP_InteractionOption.SKEL_WBP_InteractionOption_C
+// 0x0018 (0x0480 - 0x0468)
+class USKEL_WBP_InteractionOption_C final : public UInteractionOptionWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InteractionOption_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InteractionOption_C")
+	}
+	static class USKEL_WBP_InteractionOption_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InteractionOption_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InteractionOption_C;
 
 SDK_NAMESPACE_END

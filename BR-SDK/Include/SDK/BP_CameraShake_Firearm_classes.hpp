@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "GameplayCameras_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_CameraShake_Firearm_C;
+
+// BlueprintGeneratedClass BP_CameraShake_Firearm.SKEL_BP_CameraShake_Firearm_C
+// 0x0010 (0x01C0 - 0x01B0)
+class USKEL_BP_CameraShake_Firearm_C final : public UMatineeCameraShake
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_CameraShake_Firearm_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_CameraShake_Firearm_C")
+	}
+	static class USKEL_BP_CameraShake_Firearm_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_CameraShake_Firearm_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_CameraShake_Firearm_C;
 
 SDK_NAMESPACE_END

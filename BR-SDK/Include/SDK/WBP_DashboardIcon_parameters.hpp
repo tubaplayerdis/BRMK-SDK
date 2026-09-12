@@ -49,5 +49,17 @@ public:
 };
 DUMPER7_ASSERTS_WBP_DashboardIcon_C_UpdateIconImage;
 
+// Function WBP_DashboardIcon.SKEL_WBP_DashboardIcon_C.UpdateIconImage
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_DashboardIcon_C_UpdateIconImage final
+{
+public:
+	bool                                          bInVisible;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InIconIndex;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_DashboardIcon_C_UpdateIconImage;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

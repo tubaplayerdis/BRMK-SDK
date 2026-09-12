@@ -16,37 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Shredder.BP_Shredder_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_Shredder.SKEL_BP_Shredder_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ABP_Shredder_C::UserConstructionScript()
+void ASKEL_BP_Shredder_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Shredder_C", "UserConstructionScript");
+		Func = Class->GetFunction("SKEL_BP_Shredder_C", "ReceiveTick");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::SKEL_BP_Shredder_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Shredder.BP_Shredder_C.ReceiveTick
+// Function BP_Shredder.SKEL_BP_Shredder_C.UserConstructionScript
 // (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Shredder_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void ASKEL_BP_Shredder_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Shredder_C", "ReceiveTick");
+		Func = Class->GetFunction("SKEL_BP_Shredder_C", "UserConstructionScript");
 
-	Params::BP_Shredder_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -67,6 +67,40 @@ void ABP_Shredder_C::ExecuteUbergraph_BP_Shredder(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Shredder.BP_Shredder_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Shredder_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Shredder_C", "ReceiveTick");
+
+	Params::BP_Shredder_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Shredder.BP_Shredder_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_Shredder_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Shredder_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

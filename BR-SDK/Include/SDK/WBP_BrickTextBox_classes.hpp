@@ -11,27 +11,57 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_BrickTextBox.WBP_BrickTextBox_C
-// 0x0010 (0x02B8 - 0x02A8)
-class UWBP_BrickTextBox_C final : public UBrickTextBoxWidget
+// WidgetBlueprintGeneratedClass WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C
+// 0x0018 (0x0458 - 0x0440)
+class USKEL_WBP_BrickTextBox_C final : public UBrickTextBoxWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            PasswordButtonImage;                               // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            PasswordButtonImage;                               // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void UpdateIsPassword(bool bNewIsPassword_UpdateIsPassword);
-	void UpdatePasswordVisible(bool bNewVisible_UpdatePasswordVisible);
+	void UpdateIsPassword(bool bNewIsPassword);
+	void UpdatePasswordVisible(bool bNewVisible);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BrickTextBox_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BrickTextBox_C")
+	}
+	static class USKEL_WBP_BrickTextBox_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BrickTextBox_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BrickTextBox_C;
+
+// WidgetBlueprintGeneratedClass WBP_BrickTextBox.WBP_BrickTextBox_C
+// 0x0018 (0x0458 - 0x0440)
+class UWBP_BrickTextBox_C final : public UBrickTextBoxWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            PasswordButtonImage;                               // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
 	void ExecuteUbergraph_WBP_BrickTextBox(int32 EntryPoint);
+	void UpdatePasswordVisible(bool bNewVisible);
+	void UpdateIsPassword(bool bNewIsPassword);
+	void BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 
 public:
 	static class UClass* StaticClass()

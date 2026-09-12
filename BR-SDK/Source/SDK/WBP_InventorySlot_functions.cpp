@@ -112,4 +112,80 @@ void UWBP_InventorySlot_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateC
 }
 
 
+// Function WBP_InventorySlot.SKEL_WBP_InventorySlot_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InventorySlot_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InventorySlot_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_InventorySlot_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InventorySlot.SKEL_WBP_InventorySlot_C.AddSubInventoryWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UInventoryContainerWidget*        Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InventorySlot_C::AddSubInventoryWidget(class UInventoryContainerWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InventorySlot_C", "AddSubInventoryWidget");
+
+	Params::SKEL_WBP_InventorySlot_C_AddSubInventoryWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InventorySlot.SKEL_WBP_InventorySlot_C.UpdateSlotApperance
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bInIsDragWidget                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsSpecialSlot                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsValidSlot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInCanDrag                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsDragging                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInCanDrop                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInDropReplace                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsDragOver                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InventorySlot_C::UpdateSlotApperance(bool bInIsDragWidget, bool bInIsSpecialSlot, bool bInIsValidSlot, bool bInCanDrag, bool bInIsDragging, bool bInCanDrop, bool bInDropReplace, bool bInIsDragOver)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InventorySlot_C", "UpdateSlotApperance");
+
+	Params::SKEL_WBP_InventorySlot_C_UpdateSlotApperance Parms{};
+
+	Parms.bInIsDragWidget = bInIsDragWidget;
+	Parms.bInIsSpecialSlot = bInIsSpecialSlot;
+	Parms.bInIsValidSlot = bInIsValidSlot;
+	Parms.bInCanDrag = bInCanDrag;
+	Parms.bInIsDragging = bInIsDragging;
+	Parms.bInCanDrop = bInCanDrop;
+	Parms.bInDropReplace = bInDropReplace;
+	Parms.bInIsDragOver = bInIsDragOver;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

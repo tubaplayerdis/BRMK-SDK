@@ -17,15 +17,15 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C
-// 0x0008 (0x0338 - 0x0330)
+// 0x0010 (0x04E0 - 0x04D0)
 class UWBP_BrickSliderReadOnly_C final : public UWBP_BrickSlider_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WBP_BrickSliderReadOnly_C;          // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WBP_BrickSliderReadOnly_C;          // 0x04D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_BrickSliderReadOnly(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()
@@ -42,5 +42,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_BrickSliderReadOnly_C;
+
+// WidgetBlueprintGeneratedClass WBP_BrickSliderReadOnly.SKEL_WBP_BrickSliderReadOnly_C
+// 0x0010 (0x04E0 - 0x04D0)
+class USKEL_WBP_BrickSliderReadOnly_C final : public USKEL_WBP_BrickSlider_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_WBP_BrickSliderReadOnly_C;     // 0x04D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void PreConstruct(bool IsDesignTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BrickSliderReadOnly_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BrickSliderReadOnly_C")
+	}
+	static class USKEL_WBP_BrickSliderReadOnly_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BrickSliderReadOnly_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BrickSliderReadOnly_C;
 
 SDK_NAMESPACE_END

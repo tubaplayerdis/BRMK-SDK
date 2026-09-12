@@ -62,4 +62,30 @@ void UWBP_PagedListHeaderField_C::UpdateItem(bool bNewVisible, const class FText
 }
 
 
+// Function WBP_PagedListHeaderField.SKEL_WBP_PagedListHeaderField_C.UpdateItem
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// EBrickUIColorStyle                      NewColorStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUITextStyle                       NewTextStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_PagedListHeaderField_C::UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeaderField_C", "UpdateItem");
+
+	Params::SKEL_WBP_PagedListHeaderField_C_UpdateItem Parms{};
+
+	Parms.bNewVisible = bNewVisible;
+	Parms.NewText = std::move(NewText);
+	Parms.NewColorStyle = NewColorStyle;
+	Parms.NewTextStyle = NewTextStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -60,4 +60,28 @@ void UWBP_DashboardIcon_C::UpdateIconImage(bool bInVisible, EBrickUIColorStyle I
 }
 
 
+// Function WBP_DashboardIcon.SKEL_WBP_DashboardIcon_C.UpdateIconImage
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bInVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InIconIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_DashboardIcon_C::UpdateIconImage(bool bInVisible, EBrickUIColorStyle InColorStyle, int32 InIconIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_DashboardIcon_C", "UpdateIconImage");
+
+	Params::SKEL_WBP_DashboardIcon_C_UpdateIconImage Parms{};
+
+	Parms.bInVisible = bInVisible;
+	Parms.InColorStyle = InColorStyle;
+	Parms.InIconIndex = InIconIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuGameMode.BP_MenuGameMode_C
-// 0x0008 (0x0338 - 0x0330)
+// 0x0008 (0x0448 - 0x0440)
 class ABP_MenuGameMode_C final : public AMenuGameMode
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_MenuGameMode_C;
+
+// BlueprintGeneratedClass BP_MenuGameMode.SKEL_BP_MenuGameMode_C
+// 0x0018 (0x0458 - 0x0440)
+class ASKEL_BP_MenuGameMode_C final : public AMenuGameMode
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_MenuGameMode_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_MenuGameMode_C")
+	}
+	static class ASKEL_BP_MenuGameMode_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_MenuGameMode_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_MenuGameMode_C;
 
 SDK_NAMESPACE_END

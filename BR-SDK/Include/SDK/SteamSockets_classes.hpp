@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class SteamSockets.SteamSocketsNetConnection
-// 0x0010 (0x1BB8 - 0x1BA8)
+// 0x0010 (0x1C48 - 0x1C38)
 class USteamSocketsNetConnection final : public UNetConnection
 {
 public:
-	uint8                                         Pad_1BA8[0x10];                                    // 0x1BA8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C38[0x10];                                    // 0x1C38(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -39,11 +39,11 @@ public:
 DUMPER7_ASSERTS_USteamSocketsNetConnection;
 
 // Class SteamSockets.SteamSocketsNetDriver
-// 0x0010 (0x0770 - 0x0760)
+// 0x0010 (0x07D8 - 0x07C8)
 class USteamSocketsNetDriver final : public UNetDriver
 {
 public:
-	uint8                                         Pad_760[0x10];                                     // 0x0760(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C8[0x10];                                     // 0x07C8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

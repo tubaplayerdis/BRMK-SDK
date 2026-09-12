@@ -10,32 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function WBP_HUDNotification.WBP_HUDNotification_C.UpdateIsThumbnailNotification
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HUDNotification_C_UpdateIsThumbnailNotification final
-{
-public:
-	bool                                          bNewIsThumbnail_UpdateIsThumbnailNotification;     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_HUDNotification_C_UpdateIsThumbnailNotification;
-
-// Function WBP_HUDNotification.WBP_HUDNotification_C.InitializeNotification
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_HUDNotification_C_InitializeNotification final
-{
-public:
-	struct FBrickUIIconSlot                       InIconSlot_InitializeNotification;                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	class FText                                   InText_InitializeNotification;                     // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	EBrickUIColorStyle                            InColorStyle_InitializeNotification;               // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HUDNotification_C_InitializeNotification;
 
 // Function WBP_HUDNotification.WBP_HUDNotification_C.ExecuteUbergraph_WBP_HUDNotification
 // 0x0058 (0x0058 - 0x0000)
@@ -63,6 +43,46 @@ public:
 	EBrickUIColorStyle                            K2Node_Event_InColorStyle;                         // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HUDNotification_C_ExecuteUbergraph_WBP_HUDNotification;
+
+// Function WBP_HUDNotification.WBP_HUDNotification_C.InitializeNotification
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_HUDNotification_C_InitializeNotification final
+{
+public:
+	struct FBrickUIIconSlot                       InIconSlot;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	class FText                                   InText;                                            // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HUDNotification_C_InitializeNotification;
+
+// Function WBP_HUDNotification.WBP_HUDNotification_C.UpdateIsThumbnailNotification
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HUDNotification_C_UpdateIsThumbnailNotification final
+{
+public:
+	bool                                          bNewIsThumbnail;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_HUDNotification_C_UpdateIsThumbnailNotification;
+
+// Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.UpdateIsThumbnailNotification
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_HUDNotification_C_UpdateIsThumbnailNotification final
+{
+public:
+	bool                                          bNewIsThumbnail;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HUDNotification_C_UpdateIsThumbnailNotification;
+
+// Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.InitializeNotification
+// 0x0028 (0x0028 - 0x0000)
+struct SKEL_WBP_HUDNotification_C_InitializeNotification final
+{
+public:
+	struct FBrickUIIconSlot                       InIconSlot;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class FText                                   InText;                                            // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HUDNotification_C_InitializeNotification;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_CarHorn.BP_CarHorn_C
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_CarHorn_C final : public USirenType
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_CarHorn_C;
+
+// BlueprintGeneratedClass BP_CarHorn.SKEL_BP_CarHorn_C
+// 0x0010 (0x0078 - 0x0068)
+class USKEL_BP_CarHorn_C final : public USirenType
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0068(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_CarHorn_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_CarHorn_C")
+	}
+	static class USKEL_BP_CarHorn_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_CarHorn_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_CarHorn_C;
 
 SDK_NAMESPACE_END

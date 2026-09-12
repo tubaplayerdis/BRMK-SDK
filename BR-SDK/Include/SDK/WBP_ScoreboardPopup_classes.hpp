@@ -11,17 +11,18 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ScoreboardPopup.WBP_ScoreboardPopup_C
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0010 (0x0440 - 0x0430)
 class UWBP_ScoreboardPopup_C final : public UScoreboardPopupWidget
 {
 public:
-	class UWBP_MatchTimer_C*                      WBP_MatchTimer;                                    // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Scoreboard_C*                      WBP_Scoreboard;                                    // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_MatchTimer_C*                      WBP_MatchTimer;                                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Scoreboard_C*                      WBP_Scoreboard;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -38,5 +39,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ScoreboardPopup_C;
+
+// WidgetBlueprintGeneratedClass WBP_ScoreboardPopup.SKEL_WBP_ScoreboardPopup_C
+// 0x0020 (0x0450 - 0x0430)
+class USKEL_WBP_ScoreboardPopup_C final : public UScoreboardPopupWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_MatchTimer_C*                      WBP_MatchTimer;                                    // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Scoreboard_C*                      WBP_Scoreboard;                                    // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ScoreboardPopup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ScoreboardPopup_C")
+	}
+	static class USKEL_WBP_ScoreboardPopup_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ScoreboardPopup_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ScoreboardPopup_C;
 
 SDK_NAMESPACE_END

@@ -367,10 +367,10 @@ bool UMediaPlayer::CanPlaySource(class UMediaSource* MediaSource)
 // Function MediaAssets.MediaPlayer.CanPlayUrl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Url                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMediaPlayer::CanPlayUrl(const class FString& URL)
+bool UMediaPlayer::CanPlayUrl(const class FString& Url)
 {
 	static class UFunction* Func = nullptr;
 
@@ -379,7 +379,7 @@ bool UMediaPlayer::CanPlayUrl(const class FString& URL)
 
 	Params::MediaPlayer_CanPlayUrl Parms{};
 
-	Parms.URL = std::move(URL);
+	Parms.Url = std::move(Url);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -618,10 +618,10 @@ bool UMediaPlayer::OpenSourceWithOptions(class UMediaSource* MediaSource, const 
 // Function MediaAssets.MediaPlayer.OpenUrl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Url                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMediaPlayer::OpenUrl(const class FString& URL)
+bool UMediaPlayer::OpenUrl(const class FString& Url)
 {
 	static class UFunction* Func = nullptr;
 
@@ -630,7 +630,7 @@ bool UMediaPlayer::OpenUrl(const class FString& URL)
 
 	Params::MediaPlayer_OpenUrl Parms{};
 
-	Parms.URL = std::move(URL);
+	Parms.Url = std::move(Url);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2339,10 +2339,10 @@ bool UMediaPlaylist::AddFile(const class FString& FilePath)
 // Function MediaAssets.MediaPlaylist.AddUrl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Url                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMediaPlaylist::AddUrl(const class FString& URL)
+bool UMediaPlaylist::AddUrl(const class FString& Url)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2351,7 +2351,7 @@ bool UMediaPlaylist::AddUrl(const class FString& URL)
 
 	Params::MediaPlaylist_AddUrl Parms{};
 
-	Parms.URL = std::move(URL);
+	Parms.Url = std::move(Url);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

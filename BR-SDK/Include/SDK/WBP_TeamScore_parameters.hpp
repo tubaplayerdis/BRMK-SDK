@@ -18,34 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_TeamScore.WBP_TeamScore_C.UpdateScore
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_TeamScore_C_UpdateScore final
-{
-public:
-	int32                                         NewScore_UpdateScore;                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NewMaxScore_UpdateScore;                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TeamScore_C_UpdateScore;
-
-// Function WBP_TeamScore.WBP_TeamScore_C.UpdateTeamAttitude
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_TeamScore_C_UpdateTeamAttitude final
-{
-public:
-	ETeamAttitude                                 NewTeamAttitude_UpdateTeamAttitude;                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TeamScore_C_UpdateTeamAttitude;
-
-// Function WBP_TeamScore.WBP_TeamScore_C.UpdateTeamIcon
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_TeamScore_C_UpdateTeamIcon final
-{
-public:
-	class UTexture2D*                             NewIcon_UpdateTeamIcon;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TeamScore_C_UpdateTeamIcon;
-
 // Function WBP_TeamScore.WBP_TeamScore_C.ExecuteUbergraph_WBP_TeamScore
 // 0x0108 (0x0108 - 0x0000)
 struct WBP_TeamScore_C_ExecuteUbergraph_WBP_TeamScore final
@@ -72,6 +44,62 @@ public:
 	class FText                                   K2Node_Select_Default;                             // 0x00F0(0x0018)()
 };
 DUMPER7_ASSERTS_WBP_TeamScore_C_ExecuteUbergraph_WBP_TeamScore;
+
+// Function WBP_TeamScore.WBP_TeamScore_C.UpdateTeamIcon
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_TeamScore_C_UpdateTeamIcon final
+{
+public:
+	class UTexture2D*                             NewIcon;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TeamScore_C_UpdateTeamIcon;
+
+// Function WBP_TeamScore.WBP_TeamScore_C.UpdateTeamAttitude
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_TeamScore_C_UpdateTeamAttitude final
+{
+public:
+	ETeamAttitude                                 NewTeamAttitude;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TeamScore_C_UpdateTeamAttitude;
+
+// Function WBP_TeamScore.WBP_TeamScore_C.UpdateScore
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_TeamScore_C_UpdateScore final
+{
+public:
+	int32                                         NewScore;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NewMaxScore;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TeamScore_C_UpdateScore;
+
+// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateScore
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_TeamScore_C_UpdateScore final
+{
+public:
+	int32                                         NewScore;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewMaxScore;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TeamScore_C_UpdateScore;
+
+// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateTeamAttitude
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_TeamScore_C_UpdateTeamAttitude final
+{
+public:
+	ETeamAttitude                                 NewTeamAttitude;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TeamScore_C_UpdateTeamAttitude;
+
+// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateTeamIcon
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_TeamScore_C_UpdateTeamIcon final
+{
+public:
+	class UTexture2D*                             NewIcon;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TeamScore_C_UpdateTeamIcon;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

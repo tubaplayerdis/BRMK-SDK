@@ -11,28 +11,28 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HUDNotification.WBP_HUDNotification_C
-// 0x0018 (0x02B8 - 0x02A0)
+// 0x0020 (0x0458 - 0x0438)
 class UWBP_HUDNotification_C final : public UHUDNotificationWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeAnimation;                                     // 0x02A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBrickBorder*                           Border;                                            // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickBorder*                           Border;                                            // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PlayFadeInAnim();
-	void PlayFadeOutAnim();
-	void UpdateIsThumbnailNotification(bool bNewIsThumbnail_UpdateIsThumbnailNotification);
-	void InitializeNotification(const struct FBrickUIIconSlot& InIconSlot_InitializeNotification, const class FText& InText_InitializeNotification, EBrickUIColorStyle InColorStyle_InitializeNotification);
 	void ExecuteUbergraph_WBP_HUDNotification(int32 EntryPoint);
+	void InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle);
+	void UpdateIsThumbnailNotification(bool bNewIsThumbnail);
+	void PlayFadeOutAnim();
+	void PlayFadeInAnim();
 
 public:
 	static class UClass* StaticClass()
@@ -49,5 +49,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_HUDNotification_C;
+
+// WidgetBlueprintGeneratedClass WBP_HUDNotification.SKEL_WBP_HUDNotification_C
+// 0x0020 (0x0458 - 0x0438)
+class USKEL_WBP_HUDNotification_C final : public UHUDNotificationWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickBorder*                           Border;                                            // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void PlayFadeInAnim();
+	void PlayFadeOutAnim();
+	void UpdateIsThumbnailNotification(bool bNewIsThumbnail);
+	void InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_HUDNotification_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_HUDNotification_C")
+	}
+	static class USKEL_WBP_HUDNotification_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_HUDNotification_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_HUDNotification_C;
 
 SDK_NAMESPACE_END

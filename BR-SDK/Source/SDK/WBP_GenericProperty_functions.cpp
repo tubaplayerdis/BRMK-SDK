@@ -112,13 +112,13 @@ void UWBP_GenericProperty_C::ToggleDisplayRichText()
 // const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const ETextJustify                      Justification                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const int32                             MaxLength                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const bool                              bAllowMultiLine                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const bool                              bAllowMultiline                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const bool                              bIsPassword                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const bool                              bValidateText                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const bool                              bAllowRichText                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const class FName&                      TextFormat                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GenericProperty_C::UpdateText(const class FText& Text, const ETextJustify Justification, const int32 MaxLength, const bool bAllowMultiLine, const bool bIsPassword, const bool bValidateText, const bool bAllowRichText, const class FName& TextFormat)
+void UWBP_GenericProperty_C::UpdateText(const class FText& Text, const ETextJustify Justification, const int32 MaxLength, const bool bAllowMultiline, const bool bIsPassword, const bool bValidateText, const bool bAllowRichText, const class FName& TextFormat)
 {
 	static class UFunction* Func = nullptr;
 
@@ -130,11 +130,115 @@ void UWBP_GenericProperty_C::UpdateText(const class FText& Text, const ETextJust
 	Parms.Text = std::move(Text);
 	Parms.Justification = Justification;
 	Parms.MaxLength = MaxLength;
-	Parms.bAllowMultiLine = bAllowMultiLine;
+	Parms.bAllowMultiline = bAllowMultiline;
 	Parms.bIsPassword = bIsPassword;
 	Parms.bValidateText = bValidateText;
 	Parms.bAllowRichText = bAllowRichText;
 	Parms.TextFormat = TextFormat;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateText
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const ETextJustify                      Justification                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             MaxLength                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bAllowMultiline                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bIsPassword                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bValidateText                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bAllowRichText                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      TextFormat                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_GenericProperty_C::UpdateText(const class FText& Text, const ETextJustify Justification, const int32 MaxLength, const bool bAllowMultiline, const bool bIsPassword, const bool bValidateText, const bool bAllowRichText, const class FName& TextFormat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GenericProperty_C", "UpdateText");
+
+	Params::SKEL_WBP_GenericProperty_C_UpdateText Parms{};
+
+	Parms.Text = std::move(Text);
+	Parms.Justification = Justification;
+	Parms.MaxLength = MaxLength;
+	Parms.bAllowMultiline = bAllowMultiline;
+	Parms.bIsPassword = bIsPassword;
+	Parms.bValidateText = bValidateText;
+	Parms.bAllowRichText = bAllowRichText;
+	Parms.TextFormat = TextFormat;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.ToggleDisplayRichText
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_GenericProperty_C::ToggleDisplayRichText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GenericProperty_C", "ToggleDisplayRichText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateTextBoxes
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_GenericProperty_C::UpdateTextBoxes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GenericProperty_C", "UpdateTextBoxes");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateIsReadOnly
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewReadOnly                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_GenericProperty_C::UpdateIsReadOnly(bool bNewReadOnly)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GenericProperty_C", "UpdateIsReadOnly");
+
+	Params::SKEL_WBP_GenericProperty_C_UpdateIsReadOnly Parms{};
+
+	Parms.bNewReadOnly = bNewReadOnly;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature
+// (Public)
+// Parameters:
+// const class FText&                      NewText                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_GenericProperty_C::BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature(const class FText& NewText, EValueChangedEventType EventType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GenericProperty_C", "BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature");
+
+	Params::SKEL_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature Parms{};
+
+	Parms.NewText = std::move(NewText);
+	Parms.EventType = EventType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -41,5 +41,14 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Character_RC_Parent_C_BlueprintUpdateAnimation;
 
+// Function ABP_Character_RC_Parent.SKEL_ABP_Character_RC_Parent_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_ABP_Character_RC_Parent_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_ABP_Character_RC_Parent_C_BlueprintUpdateAnimation;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

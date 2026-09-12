@@ -41,5 +41,23 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Map_C_CreateMapMID;
 
+// Function WBP_Map.SKEL_WBP_Map_C.AddGameOverlayWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Map_C_AddGameOverlayWidget final
+{
+public:
+	class UGameOverlayWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Map_C_AddGameOverlayWidget;
+
+// Function WBP_Map.SKEL_WBP_Map_C.CreateMapMID
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Map_C_CreateMapMID final
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Map_C_CreateMapMID;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayCameras_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
+#include "GameplayCameras_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -39,35 +39,15 @@ public:
 };
 DUMPER7_ASSERTS_UTestCameraShake;
 
-// Class GameplayCameras.MovieSceneMatineeCameraShakeEvaluator
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneMatineeCameraShakeEvaluator final : public UMovieSceneCameraShakeEvaluator
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneMatineeCameraShakeEvaluator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneMatineeCameraShakeEvaluator")
-	}
-	static class UMovieSceneMatineeCameraShakeEvaluator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneMatineeCameraShakeEvaluator>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneMatineeCameraShakeEvaluator;
-
 // Class GameplayCameras.SimpleCameraShakePattern
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class USimpleCameraShakePattern : public UCameraShakePattern
 {
 public:
-	float                                         Duration;                                          // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendInTime;                                       // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendOutTime;                                      // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Duration;                                          // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendInTime;                                       // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendOutTime;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -86,12 +66,12 @@ public:
 DUMPER7_ASSERTS_USimpleCameraShakePattern;
 
 // Class GameplayCameras.ConstantCameraShakePattern
-// 0x0018 (0x0050 - 0x0038)
+// 0x0018 (0x0058 - 0x0040)
 class UConstantCameraShakePattern final : public USimpleCameraShakePattern
 {
 public:
-	struct FVector                                LocationOffset;                                    // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationOffset;                                    // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                LocationOffset;                                    // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationOffset;                                    // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -110,12 +90,12 @@ public:
 DUMPER7_ASSERTS_UConstantCameraShakePattern;
 
 // Class GameplayCameras.CompositeCameraShakePattern
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UCompositeCameraShakePattern final : public UCameraShakePattern
 {
 public:
-	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0030(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -207,7 +187,7 @@ public:
 DUMPER7_ASSERTS_UMatineeCameraShake;
 
 // Class GameplayCameras.MatineeCameraShakePattern
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UMatineeCameraShakePattern final : public UCameraShakePattern
 {
 public:
@@ -226,8 +206,28 @@ public:
 };
 DUMPER7_ASSERTS_UMatineeCameraShakePattern;
 
+// Class GameplayCameras.MovieSceneMatineeCameraShakeEvaluator
+// 0x0000 (0x0030 - 0x0030)
+class UMovieSceneMatineeCameraShakeEvaluator final : public UMovieSceneCameraShakeEvaluator
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneMatineeCameraShakeEvaluator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMatineeCameraShakeEvaluator")
+	}
+	static class UMovieSceneMatineeCameraShakeEvaluator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneMatineeCameraShakeEvaluator>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneMatineeCameraShakeEvaluator;
+
 // Class GameplayCameras.MatineeCameraShakeFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UMatineeCameraShakeFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
@@ -250,22 +250,22 @@ public:
 DUMPER7_ASSERTS_UMatineeCameraShakeFunctionLibrary;
 
 // Class GameplayCameras.PerlinNoiseCameraShakePattern
-// 0x0080 (0x00B8 - 0x0038)
+// 0x0080 (0x00C0 - 0x0040)
 class UPerlinNoiseCameraShakePattern final : public USimpleCameraShakePattern
 {
 public:
-	float                                         LocationAmplitudeMultiplier;                       // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationFrequencyMultiplier;                       // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     X;                                                 // 0x0040(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     Y;                                                 // 0x0048(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     Z;                                                 // 0x0050(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         RotationAmplitudeMultiplier;                       // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationFrequencyMultiplier;                       // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     Pitch;                                             // 0x0060(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     Yaw;                                               // 0x0068(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     Roll;                                              // 0x0070(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerlinNoiseShaker                     FOV;                                               // 0x0078(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x38];                                      // 0x0080(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         LocationAmplitudeMultiplier;                       // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationFrequencyMultiplier;                       // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     X;                                                 // 0x0048(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     Y;                                                 // 0x0050(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     Z;                                                 // 0x0058(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         RotationAmplitudeMultiplier;                       // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationFrequencyMultiplier;                       // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     Pitch;                                             // 0x0068(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     Yaw;                                               // 0x0070(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     Roll;                                              // 0x0078(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseShaker                     FOV;                                               // 0x0080(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x38];                                      // 0x0088(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -284,22 +284,22 @@ public:
 DUMPER7_ASSERTS_UPerlinNoiseCameraShakePattern;
 
 // Class GameplayCameras.WaveOscillatorCameraShakePattern
-// 0x00A0 (0x00D8 - 0x0038)
+// 0x00A0 (0x00E0 - 0x0040)
 class UWaveOscillatorCameraShakePattern final : public USimpleCameraShakePattern
 {
 public:
-	float                                         LocationAmplitudeMultiplier;                       // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocationFrequencyMultiplier;                       // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        X;                                                 // 0x0040(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        Y;                                                 // 0x004C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        Z;                                                 // 0x0058(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         RotationAmplitudeMultiplier;                       // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationFrequencyMultiplier;                       // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        Pitch;                                             // 0x006C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        Yaw;                                               // 0x0078(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        Roll;                                              // 0x0084(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWaveOscillator                        FOV;                                               // 0x0090(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9C[0x3C];                                      // 0x009C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         LocationAmplitudeMultiplier;                       // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocationFrequencyMultiplier;                       // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        X;                                                 // 0x0048(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        Y;                                                 // 0x0054(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        Z;                                                 // 0x0060(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         RotationAmplitudeMultiplier;                       // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationFrequencyMultiplier;                       // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        Pitch;                                             // 0x0074(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        Yaw;                                               // 0x0080(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        Roll;                                              // 0x008C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaveOscillator                        FOV;                                               // 0x0098(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x3C];                                      // 0x00A4(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

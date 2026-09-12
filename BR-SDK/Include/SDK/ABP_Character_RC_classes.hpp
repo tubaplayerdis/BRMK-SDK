@@ -13,33 +13,34 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Character_RC.ABP_Character_RC_C
-// 0x04B0 (0x0770 - 0x02C0)
+// 0x05D0 (0x08D0 - 0x0300)
 class UABP_Character_RC_C : public UAnimInstance
 {
 public:
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02C8(0x0030)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x02F8(0x0080)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0378(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0398(0x0020)()
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK;                           // 0x03C0(0x01E0)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x05A0(0x00A0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0640(0x0080)()
-	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x06C0(0x0090)()
-	struct FRotator                               ViewRotation;                                      // 0x0750(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                         LookRatio;                                         // 0x075C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HandTargetLocation;                                // 0x0760(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseHandIK;                                        // 0x076C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bVehicleGone;                                      // 0x076D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0310(0x0040)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0350(0x0088)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x03D8(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0400(0x0028)()
+	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK;                           // 0x0430(0x02B0)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x06E0(0x00A0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0780(0x0088)()
+	uint8                                         Pad_808[0x8];                                      // 0x0808(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x0810(0x00A0)()
+	struct FRotator                               ViewRotation;                                      // 0x08B0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         LookRatio;                                         // 0x08BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HandTargetLocation;                                // 0x08C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseHandIK;                                        // 0x08CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bVehicleGone;                                      // 0x08CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_ABP_Character_RC(int32 EntryPoint);
@@ -62,5 +63,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Character_RC_C;
+
+// AnimBlueprintGeneratedClass ABP_Character_RC.SKEL_ABP_Character_RC_C
+// 0x0030 (0x0330 - 0x0300)
+class USKEL_ABP_Character_RC_C : public UAnimInstance
+{
+public:
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRotator                               ViewRotation;                                      // 0x0310(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         LookRatio;                                         // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HandTargetLocation;                                // 0x0320(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseHandIK;                                        // 0x032C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bVehicleGone;                                      // 0x032D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Character_RC_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Character_RC_C")
+	}
+	static class USKEL_ABP_Character_RC_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Character_RC_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Character_RC_C;
 
 SDK_NAMESPACE_END

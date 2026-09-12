@@ -16,6 +16,46 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_LoadingScreen.SKEL_WBP_LoadingScreen_C.SetBackgroundColor
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              InColor                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_LoadingScreen_C::SetBackgroundColor(const struct FLinearColor& InColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_LoadingScreen_C", "SetBackgroundColor");
+
+	Params::SKEL_WBP_LoadingScreen_C_SetBackgroundColor Parms{};
+
+	Parms.InColor = std::move(InColor);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_LoadingScreen.SKEL_WBP_LoadingScreen_C.SetLoadingText
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_LoadingScreen_C::SetLoadingText(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_LoadingScreen_C", "SetLoadingText");
+
+	Params::SKEL_WBP_LoadingScreen_C_SetLoadingText Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_LoadingScreen.WBP_LoadingScreen_C.ExecuteUbergraph_WBP_LoadingScreen
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

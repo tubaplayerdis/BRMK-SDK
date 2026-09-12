@@ -11,12 +11,42 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_SniperScope.SKEL_BP_SniperScope_C
+// 0x0010 (0x03A0 - 0x0390)
+class ASKEL_BP_SniperScope_C final : public ASightAttachment
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_SniperScope_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_SniperScope_C")
+	}
+	static class ASKEL_BP_SniperScope_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_SniperScope_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_SniperScope_C;
+
 // BlueprintGeneratedClass BP_SniperScope.BP_SniperScope_C
-// 0x0000 (0x02B8 - 0x02B8)
+// 0x0000 (0x0390 - 0x0390)
 class ABP_SniperScope_C final : public ASightAttachment
 {
 public:

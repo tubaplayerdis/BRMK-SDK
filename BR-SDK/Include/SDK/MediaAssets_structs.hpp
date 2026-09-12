@@ -110,7 +110,7 @@ struct FMediaCaptureDevice final
 {
 public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
-	class FString                                 URL;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Url;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMediaCaptureDevice;
 

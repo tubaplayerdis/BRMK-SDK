@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Class ImageWriteQueue.ImageWriteBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UImageWriteBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:

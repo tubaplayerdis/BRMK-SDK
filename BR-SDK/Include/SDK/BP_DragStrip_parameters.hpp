@@ -21,7 +21,7 @@ SDK_PARAM_NAMESPACE_START
 struct BP_DragStrip_C_CreateTreeMID final
 {
 public:
-	class UMaterialInstanceDynamic*               ReturnValue_CreateTreeMID;                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DragStrip_C_CreateTreeMID;
@@ -31,11 +31,38 @@ DUMPER7_ASSERTS_BP_DragStrip_C_CreateTreeMID;
 struct BP_DragStrip_C_GetInteractionLocation final
 {
 public:
-	struct FVector                                ReturnValue_GetInteractionLocation;                // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DragStrip_C_GetInteractionLocation;
+
+// Function BP_DragStrip.SKEL_BP_DragStrip_C.UserConstructionScript
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_DragStrip_C_UserConstructionScript final
+{
+public:
+	float                                         CurrentX;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_DragStrip_C_UserConstructionScript;
+
+// Function BP_DragStrip.SKEL_BP_DragStrip_C.CreateTreeMID
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_BP_DragStrip_C_CreateTreeMID final
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_DragStrip_C_CreateTreeMID;
+
+// Function BP_DragStrip.SKEL_BP_DragStrip_C.GetInteractionLocation
+// 0x000C (0x000C - 0x0000)
+struct SKEL_BP_DragStrip_C_GetInteractionLocation final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_DragStrip_C_GetInteractionLocation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

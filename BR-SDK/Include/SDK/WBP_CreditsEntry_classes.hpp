@@ -17,15 +17,15 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CreditsEntry.WBP_CreditsEntry_C
-// 0x0030 (0x0290 - 0x0260)
+// 0x0038 (0x0430 - 0x03F8)
 class UWBP_CreditsEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickRichTextBlock*                    BodyTextBlock;                                     // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickExpandableArea*                   ExpandableArea;                                    // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        HeaderTextBlock;                                   // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 LicenseFilename;                                   // 0x0280(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickRichTextBlock*                    BodyTextBlock;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickExpandableArea*                   ExpandableArea;                                    // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        HeaderTextBlock;                                   // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 LicenseFilename;                                   // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_CreditsEntry(int32 EntryPoint);
@@ -47,5 +47,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_CreditsEntry_C;
+
+// WidgetBlueprintGeneratedClass WBP_CreditsEntry.SKEL_WBP_CreditsEntry_C
+// 0x0038 (0x0430 - 0x03F8)
+class USKEL_WBP_CreditsEntry_C final : public UUserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickRichTextBlock*                    BodyTextBlock;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickExpandableArea*                   ExpandableArea;                                    // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        HeaderTextBlock;                                   // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 LicenseFilename;                                   // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+
+public:
+	void Construct();
+	void BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature(class UExpandableArea* Area, bool bIsExpanded);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_CreditsEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_CreditsEntry_C")
+	}
+	static class USKEL_WBP_CreditsEntry_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_CreditsEntry_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_CreditsEntry_C;
 
 SDK_NAMESPACE_END

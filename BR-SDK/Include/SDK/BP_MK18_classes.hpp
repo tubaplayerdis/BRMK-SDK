@@ -11,13 +11,14 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MK18.BP_MK18_C
-// 0x0000 (0x02B0 - 0x02B0)
-class ABP_MK18_C final : public AFirearm
+// 0x0000 (0x0388 - 0x0388)
+class ABP_MK18_C : public AFirearm
 {
 public:
 	static class UClass* StaticClass()
@@ -34,5 +35,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_MK18_C;
+
+// BlueprintGeneratedClass BP_MK18.SKEL_BP_MK18_C
+// 0x0010 (0x0398 - 0x0388)
+class ASKEL_BP_MK18_C : public AFirearm
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_MK18_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_MK18_C")
+	}
+	static class ASKEL_BP_MK18_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_MK18_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_MK18_C;
 
 SDK_NAMESPACE_END

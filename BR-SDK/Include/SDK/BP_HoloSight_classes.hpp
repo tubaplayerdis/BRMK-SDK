@@ -10,13 +10,42 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_HoloSight.SKEL_BP_HoloSight_C
+// 0x0010 (0x03A0 - 0x0390)
+class ASKEL_BP_HoloSight_C final : public ASightAttachment
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveBeginPlay();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_HoloSight_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_HoloSight_C")
+	}
+	static class ASKEL_BP_HoloSight_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_HoloSight_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_HoloSight_C;
+
 // BlueprintGeneratedClass BP_HoloSight.BP_HoloSight_C
-// 0x0000 (0x02B8 - 0x02B8)
+// 0x0000 (0x0390 - 0x0390)
 class ABP_HoloSight_C final : public ASightAttachment
 {
 public:

@@ -18,14 +18,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MatchEnd.WBP_MatchEnd_C
-// 0x0020 (0x0288 - 0x0268)
+// 0x0028 (0x0428 - 0x0400)
 class UWBP_MatchEnd_C final : public UMatchEndWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_MenuButtonPanel_C*                 ButtonPanel;                                       // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      ContinueButton;                                    // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPopupHandle                           LeavePopupHandle;                                  // 0x0280(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0400(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_MenuButtonPanel_C*                 ButtonPanel;                                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ContinueButton;                                    // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPopupHandle                           LeavePopupHandle;                                  // 0x0420(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WBP_MatchEnd(int32 EntryPoint);
@@ -49,5 +49,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_MatchEnd_C;
+
+// WidgetBlueprintGeneratedClass WBP_MatchEnd.SKEL_WBP_MatchEnd_C
+// 0x0028 (0x0428 - 0x0400)
+class USKEL_WBP_MatchEnd_C final : public UMatchEndWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0400(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_MenuButtonPanel_C*                 ButtonPanel;                                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ContinueButton;                                    // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPopupHandle                           LeavePopupHandle;                                  // 0x0420(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+
+public:
+	void UpdateContinueButton(int32 TimeRemaining, bool bIsHost);
+	void Construct();
+	void OnClickedExit();
+	void OnClosedExitMatchPopup(EPopupResult Result);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_MatchEnd_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_MatchEnd_C")
+	}
+	static class USKEL_WBP_MatchEnd_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_MatchEnd_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_MatchEnd_C;
 
 SDK_NAMESPACE_END

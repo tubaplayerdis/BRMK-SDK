@@ -16,18 +16,46 @@
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_StructProperty.SKEL_WBP_StructProperty_C
+// 0x0018 (0x0440 - 0x0428)
+class USKEL_WBP_StructProperty_C final : public UStructPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget);
+	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_StructProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_StructProperty_C")
+	}
+	static class USKEL_WBP_StructProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_StructProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_StructProperty_C;
+
 // WidgetBlueprintGeneratedClass WBP_StructProperty.WBP_StructProperty_C
-// 0x0010 (0x02A0 - 0x0290)
+// 0x0018 (0x0440 - 0x0428)
 class UWBP_StructProperty_C final : public UStructPropertyWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot);
+	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget);
 	void ExecuteUbergraph_WBP_StructProperty(int32 EntryPoint);
-	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget);
-	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow);
 
 public:
 	static class UClass* StaticClass()

@@ -36,5 +36,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_UGCMetaDataPopup_C_GetPopupTitle;
 
+// Function WBP_UGCMetaDataPopup.SKEL_WBP_UGCMetaDataPopup_C.GetPopupTitle
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_UGCMetaDataPopup_C_GetPopupTitle final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCMetaDataPopup_C_GetPopupTitle;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_BrickComboBoxItemContainer.WBP_BrickComboBoxItemContainer_C
-// 0x0008 (0x0298 - 0x0290)
+// 0x0010 (0x0440 - 0x0430)
 class UWBP_BrickComboBoxItemContainer_C final : public UBrickComboBoxItemContainerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_BrickComboBoxItemContainer(int32 EntryPoint);
@@ -44,5 +44,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_BrickComboBoxItemContainer_C;
+
+// WidgetBlueprintGeneratedClass WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C
+// 0x0010 (0x0440 - 0x0430)
+class USKEL_WBP_BrickComboBoxItemContainer_C final : public UBrickComboBoxItemContainerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void AddItemWidget(class UBrickComboBoxItemWidget* Widget);
+	void UpdateIsSelected(bool bNewSelected);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BrickComboBoxItemContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BrickComboBoxItemContainer_C")
+	}
+	static class USKEL_WBP_BrickComboBoxItemContainer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BrickComboBoxItemContainer_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BrickComboBoxItemContainer_C;
 
 SDK_NAMESPACE_END

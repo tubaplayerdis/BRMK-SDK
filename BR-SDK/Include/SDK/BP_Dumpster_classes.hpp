@@ -11,17 +11,18 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Dumpster.BP_Dumpster_C
-// 0x0008 (0x0238 - 0x0230)
+// 0x0008 (0x0310 - 0x0308)
 class ABP_Dumpster_C final : public AStaticMeshActor
 {
 public:
-	struct FRandomStream                          RandomStream;                                      // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
+	struct FRandomStream                          RandomStream;                                      // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
 
 public:
 	void UserConstructionScript();
@@ -41,5 +42,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Dumpster_C;
+
+// BlueprintGeneratedClass BP_Dumpster.SKEL_BP_Dumpster_C
+// 0x0018 (0x0320 - 0x0308)
+class ASKEL_BP_Dumpster_C final : public AStaticMeshActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRandomStream                          RandomStream;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Dumpster_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Dumpster_C")
+	}
+	static class ASKEL_BP_Dumpster_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Dumpster_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Dumpster_C;
 
 SDK_NAMESPACE_END

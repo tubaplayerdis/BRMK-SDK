@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Gun_2x2x2_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Gun_2x2x2_Ballistic.BP_Gun_2x2x2_Ballistic_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x02F0 - 0x02F0)
 class UBP_Gun_2x2x2_Ballistic_C final : public UBP_Gun_2x2x2_C
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_Gun_2x2x2_Ballistic_C;
+
+// BlueprintGeneratedClass BP_Gun_2x2x2_Ballistic.SKEL_BP_Gun_2x2x2_Ballistic_C
+// 0x0010 (0x0310 - 0x0300)
+class USKEL_BP_Gun_2x2x2_Ballistic_C final : public USKEL_BP_Gun_2x2x2_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Gun_2x2x2_Ballistic_C;      // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Gun_2x2x2_Ballistic_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Gun_2x2x2_Ballistic_C")
+	}
+	static class USKEL_BP_Gun_2x2x2_Ballistic_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Gun_2x2x2_Ballistic_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Gun_2x2x2_Ballistic_C;
 
 SDK_NAMESPACE_END

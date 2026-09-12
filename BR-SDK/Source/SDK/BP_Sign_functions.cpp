@@ -15,6 +15,20 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_Sign.SKEL_BP_Sign_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_Sign_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Sign_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Sign.BP_Sign_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

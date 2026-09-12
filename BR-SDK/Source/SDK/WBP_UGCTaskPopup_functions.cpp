@@ -92,4 +92,60 @@ void UWBP_UGCTaskPopup_C::UpdateProgress(float NewProgress)
 }
 
 
+// Function WBP_UGCTaskPopup.SKEL_WBP_UGCTaskPopup_C.UpdateProgress
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   NewProgress                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UGCTaskPopup_C::UpdateProgress(float NewProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UGCTaskPopup_C", "UpdateProgress");
+
+	Params::SKEL_WBP_UGCTaskPopup_C_UpdateProgress Parms{};
+
+	Parms.NewProgress = NewProgress;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UGCTaskPopup.SKEL_WBP_UGCTaskPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_UGCTaskPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UGCTaskPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UGCTaskPopup.SKEL_WBP_UGCTaskPopup_C.UpdateIsFinished
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewFinished                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNewSuccess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UGCTaskPopup_C::UpdateIsFinished(bool bNewFinished, bool bNewSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UGCTaskPopup_C", "UpdateIsFinished");
+
+	Params::SKEL_WBP_UGCTaskPopup_C_UpdateIsFinished Parms{};
+
+	Parms.bNewFinished = bNewFinished;
+	Parms.bNewSuccess = bNewSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

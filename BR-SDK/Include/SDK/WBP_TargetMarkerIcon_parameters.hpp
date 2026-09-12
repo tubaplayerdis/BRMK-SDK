@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -83,6 +83,42 @@ public:
 	EAmmoType                                     NewType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_TargetMarkerIcon_C_UpdateAmmoType;
+
+// Function WBP_TargetMarkerIcon.SKEL_WBP_TargetMarkerIcon_C.UpdateAmmoType
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_TargetMarkerIcon_C_UpdateAmmoType final
+{
+public:
+	EAmmoType                                     NewType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TargetMarkerIcon_C_UpdateAmmoType;
+
+// Function WBP_TargetMarkerIcon.SKEL_WBP_TargetMarkerIcon_C.UpdateTargetDistance
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_TargetMarkerIcon_C_UpdateTargetDistance final
+{
+public:
+	float                                         NewDist;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TargetMarkerIcon_C_UpdateTargetDistance;
+
+// Function WBP_TargetMarkerIcon.SKEL_WBP_TargetMarkerIcon_C.UpdateFireAction
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_TargetMarkerIcon_C_UpdateFireAction final
+{
+public:
+	int32                                         NewActionIndex;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TargetMarkerIcon_C_UpdateFireAction;
+
+// Function WBP_TargetMarkerIcon.SKEL_WBP_TargetMarkerIcon_C.UpdateHasValidTarget
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_TargetMarkerIcon_C_UpdateHasValidTarget final
+{
+public:
+	bool                                          bNewHasValidTarget;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TargetMarkerIcon_C_UpdateHasValidTarget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

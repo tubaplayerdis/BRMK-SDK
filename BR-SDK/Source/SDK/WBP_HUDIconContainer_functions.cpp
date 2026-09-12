@@ -76,4 +76,44 @@ void UWBP_HUDIconContainer_C::AddInteractionWidget(class UInteractionWidget* Wid
 }
 
 
+// Function WBP_HUDIconContainer.SKEL_WBP_HUDIconContainer_C.AddInteractionWidget
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UInteractionWidget*               Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HUDIconContainer_C::AddInteractionWidget(class UInteractionWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HUDIconContainer_C", "AddInteractionWidget");
+
+	Params::SKEL_WBP_HUDIconContainer_C_AddInteractionWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUDIconContainer.SKEL_WBP_HUDIconContainer_C.AddCrosshairWidgets
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const TArray<class UMapCrosshairWidget*>&Widgets                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HUDIconContainer_C::AddCrosshairWidgets(const TArray<class UMapCrosshairWidget*>& Widgets)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HUDIconContainer_C", "AddCrosshairWidgets");
+
+	Params::SKEL_WBP_HUDIconContainer_C_AddCrosshairWidgets Parms{};
+
+	Parms.Widgets = std::move(Widgets);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

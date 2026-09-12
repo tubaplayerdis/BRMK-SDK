@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ColorWheel.WBP_ColorWheel_C
-// 0x0008 (0x0310 - 0x0308)
+// 0x0008 (0x04C0 - 0x04B8)
 class UWBP_ColorWheel_C final : public UColorWheelWidget
 {
 public:
-	class UBrickImage*                            Image;                                             // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            Image;                                             // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ColorWheel_C;
+
+// WidgetBlueprintGeneratedClass WBP_ColorWheel.SKEL_WBP_ColorWheel_C
+// 0x0018 (0x04D0 - 0x04B8)
+class USKEL_WBP_ColorWheel_C final : public UColorWheelWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            Image;                                             // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ColorWheel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ColorWheel_C")
+	}
+	static class USKEL_WBP_ColorWheel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ColorWheel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ColorWheel_C;
 
 SDK_NAMESPACE_END

@@ -41,13 +41,14 @@ enum class EFieldPhysicsDefaultFields : uint8
 };
 
 // Enum Chaos.EFieldOutputType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EFieldOutputType : uint8
 {
 	Field_Output_Vector                      = 0,
 	Field_Output_Scalar                      = 1,
 	Field_Output_Integer                     = 2,
 	Field_Output_Max                         = 3,
+	Field_Output_MAX                         = 4,
 };
 
 // Enum Chaos.EFieldIntegerType
@@ -127,7 +128,7 @@ enum class EFieldFalloffType : uint8
 };
 
 // Enum Chaos.EFieldFilterType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EFieldFilterType : uint8
 {
 	Field_Filter_Dynamic                     = 0,
@@ -135,16 +136,18 @@ enum class EFieldFilterType : uint8
 	Field_Filter_Static                      = 2,
 	Field_Filter_All                         = 3,
 	Field_Filter_Max                         = 4,
+	Field_Filter_MAX                         = 5,
 };
 
 // Enum Chaos.EFieldResolutionType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EFieldResolutionType : uint8
 {
 	Field_Resolution_Minimal                 = 0,
 	Field_Resolution_DisabledParents         = 1,
 	Field_Resolution_Maximum                 = 2,
 	Field_Resolution_Max                     = 3,
+	Field_Resolution_MAX                     = 4,
 };
 
 // Enum Chaos.EFieldCullingOperationType
@@ -169,7 +172,7 @@ enum class EFieldOperationType : uint8
 };
 
 // Enum Chaos.EWaveFunctionType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EWaveFunctionType : uint8
 {
 	Field_Wave_Cosine                        = 0,
@@ -177,6 +180,7 @@ enum class EWaveFunctionType : uint8
 	Field_Wave_Falloff                       = 2,
 	Field_Wave_Decay                         = 3,
 	Field_Wave_Max                           = 4,
+	Field_Wave_MAX                           = 5,
 };
 
 // Enum Chaos.ESetMaskConditionType
@@ -190,25 +194,27 @@ enum class ESetMaskConditionType : uint8
 };
 
 // Enum Chaos.EEmissionPatternTypeEnum
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EEmissionPatternTypeEnum : uint8
 {
 	Chaos_Emission_Pattern_First_Frame       = 0,
 	Chaos_Emission_Pattern_On_Demand         = 1,
 	Chaos_Max                                = 2,
+	Chaos_MAX                                = 3,
 };
 
 // Enum Chaos.EInitialVelocityTypeEnum
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EInitialVelocityTypeEnum : uint8
 {
 	Chaos_Initial_Velocity_User_Defined      = 0,
 	Chaos_Initial_Velocity_None              = 1,
 	Chaos_Max                                = 2,
+	Chaos_MAX                                = 3,
 };
 
 // Enum Chaos.EGeometryCollectionPhysicsTypeEnum
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class EGeometryCollectionPhysicsTypeEnum : uint8
 {
 	Chaos_AngularVelocity                    = 0,
@@ -220,10 +226,11 @@ enum class EGeometryCollectionPhysicsTypeEnum : uint8
 	Chaos_LinearForce                        = 6,
 	Chaos_AngularTorque                      = 7,
 	Chaos_Max                                = 8,
+	Chaos_MAX                                = 9,
 };
 
 // Enum Chaos.EObjectStateTypeEnum
-// NumValues: 0x0007
+// NumValues: 0x0008
 enum class EObjectStateTypeEnum : uint8
 {
 	Chaos_NONE                               = 0,
@@ -233,10 +240,11 @@ enum class EObjectStateTypeEnum : uint8
 	Chaos_Object_Dynamic                     = 4,
 	Chaos_Object_UserDefined                 = 100,
 	Chaos_Max                                = 101,
+	Chaos_MAX                                = 102,
 };
 
 // Enum Chaos.EImplicitTypeEnum
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EImplicitTypeEnum : uint8
 {
 	Chaos_Implicit_Box                       = 0,
@@ -245,15 +253,17 @@ enum class EImplicitTypeEnum : uint8
 	Chaos_Implicit_LevelSet                  = 3,
 	Chaos_Implicit_None                      = 4,
 	Chaos_Max                                = 5,
+	Chaos_MAX                                = 6,
 };
 
 // Enum Chaos.ECollisionTypeEnum
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class ECollisionTypeEnum : uint8
 {
 	Chaos_Volumetric                         = 0,
 	Chaos_Surface_Volumetric                 = 1,
 	Chaos_Max                                = 2,
+	Chaos_MAX                                = 3,
 };
 
 // Enum Chaos.EChaosBufferMode

@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BP_ZombieMeleeAction_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ZombieBossMeleeAction.BP_ZombieBossMeleeAction_C
-// 0x0000 (0x0098 - 0x0098)
+// 0x0000 (0x00A0 - 0x00A0)
 class UBP_ZombieBossMeleeAction_C final : public UBP_ZombieMeleeAction_C
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_ZombieBossMeleeAction_C;
+
+// BlueprintGeneratedClass BP_ZombieBossMeleeAction.SKEL_BP_ZombieBossMeleeAction_C
+// 0x0010 (0x00C0 - 0x00B0)
+class USKEL_BP_ZombieBossMeleeAction_C final : public USKEL_BP_ZombieMeleeAction_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_ZombieBossMeleeAction_C;    // 0x00B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ZombieBossMeleeAction_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ZombieBossMeleeAction_C")
+	}
+	static class USKEL_BP_ZombieBossMeleeAction_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_ZombieBossMeleeAction_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_ZombieBossMeleeAction_C;
 
 SDK_NAMESPACE_END

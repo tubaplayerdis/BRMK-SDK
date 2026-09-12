@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ServerBrowser.WBP_ServerBrowser_C
-// 0x0018 (0x02C0 - 0x02A8)
+// 0x0020 (0x0460 - 0x0440)
 class UWBP_ServerBrowser_C final : public UServerBrowserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMenuButtonWidget*                      RefreshButton;                                     // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      JoinButton;                                        // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      RefreshButton;                                     // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      JoinButton;                                        // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_ServerBrowser(int32 EntryPoint);
@@ -46,5 +46,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ServerBrowser_C;
+
+// WidgetBlueprintGeneratedClass WBP_ServerBrowser.SKEL_WBP_ServerBrowser_C
+// 0x0020 (0x0460 - 0x0440)
+class USKEL_WBP_ServerBrowser_C final : public UServerBrowserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      RefreshButton;                                     // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      JoinButton;                                        // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void Construct();
+	void UpdateCanRefresh(bool bCanRefresh);
+	void UpdateCanJoin(bool bCanJoin);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ServerBrowser_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ServerBrowser_C")
+	}
+	static class USKEL_WBP_ServerBrowser_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ServerBrowser_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ServerBrowser_C;
 
 SDK_NAMESPACE_END

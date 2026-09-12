@@ -16,6 +16,54 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_InputMappings.SKEL_WBP_InputMappings_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_InputMappings_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputMappings_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_InputMappings.SKEL_WBP_InputMappings_C.OnClickedRevertInput
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_InputMappings_C::OnClickedRevertInput()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputMappings_C", "OnClickedRevertInput");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_InputMappings.SKEL_WBP_InputMappings_C.OnRevertInputPopupClosed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPopupResult                            Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_InputMappings_C::OnRevertInputPopupClosed(EPopupResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputMappings_C", "OnRevertInputPopupClosed");
+
+	Params::SKEL_WBP_InputMappings_C_OnRevertInputPopupClosed Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_InputMappings.WBP_InputMappings_C.ExecuteUbergraph_WBP_InputMappings
 // (Final, UbergraphFunction)
 // Parameters:

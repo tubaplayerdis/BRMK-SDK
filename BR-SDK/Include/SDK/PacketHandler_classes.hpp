@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Class PacketHandler.HandlerComponentFactory
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UHandlerComponentFactory : public UObject
 {
 public:
@@ -36,11 +36,11 @@ public:
 DUMPER7_ASSERTS_UHandlerComponentFactory;
 
 // Class PacketHandler.PacketHandlerProfileConfig
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UPacketHandlerProfileConfig final : public UObject
 {
 public:
-	TArray<class FString>                         Components;                                        // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Components;                                        // 0x0030(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

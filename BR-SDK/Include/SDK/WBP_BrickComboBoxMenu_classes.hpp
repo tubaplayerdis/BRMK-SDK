@@ -11,12 +11,36 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_BrickComboBoxMenu.SKEL_WBP_BrickComboBoxMenu_C
+// 0x0010 (0x0420 - 0x0410)
+class USKEL_WBP_BrickComboBoxMenu_C final : public UBrickComboBoxMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BrickComboBoxMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BrickComboBoxMenu_C")
+	}
+	static class USKEL_WBP_BrickComboBoxMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BrickComboBoxMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BrickComboBoxMenu_C;
+
 // WidgetBlueprintGeneratedClass WBP_BrickComboBoxMenu.WBP_BrickComboBoxMenu_C
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x0410 - 0x0410)
 class UWBP_BrickComboBoxMenu_C final : public UBrickComboBoxMenuWidget
 {
 public:

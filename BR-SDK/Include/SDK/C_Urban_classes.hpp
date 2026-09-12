@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass C_Urban.C_Urban_C
-// 0x0000 (0x0050 - 0x0050)
+// 0x0000 (0x0058 - 0x0058)
 class UC_Urban_C final : public UBrickPattern
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UC_Urban_C;
+
+// BlueprintGeneratedClass C_Urban.SKEL_C_Urban_C
+// 0x0010 (0x0068 - 0x0058)
+class USKEL_C_Urban_C final : public UBrickPattern
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0058(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_C_Urban_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_C_Urban_C")
+	}
+	static class USKEL_C_Urban_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_C_Urban_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_C_Urban_C;
 
 SDK_NAMESPACE_END

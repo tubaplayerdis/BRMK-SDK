@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class AnimationCore.AnimationDataSourceRegistry
-// 0x0050 (0x0078 - 0x0028)
+// 0x0050 (0x0080 - 0x0030)
 class UAnimationDataSourceRegistry final : public UObject
 {
 public:
-	TMap<class FName, TWeakObjectPtr<class UObject>> DataSources;                                    // 0x0028(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FName, TWeakObjectPtr<class UObject>> DataSources;                                    // 0x0030(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()

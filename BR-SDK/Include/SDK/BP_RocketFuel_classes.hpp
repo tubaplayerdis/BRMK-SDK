@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RocketFuel.BP_RocketFuel_C
-// 0x0000 (0x0088 - 0x0088)
+// 0x0000 (0x0090 - 0x0090)
 class UBP_RocketFuel_C final : public UExplosiveMaterial
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_RocketFuel_C;
+
+// BlueprintGeneratedClass BP_RocketFuel.SKEL_BP_RocketFuel_C
+// 0x0010 (0x00A0 - 0x0090)
+class USKEL_BP_RocketFuel_C final : public UExplosiveMaterial
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0090(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_RocketFuel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_RocketFuel_C")
+	}
+	static class USKEL_BP_RocketFuel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_RocketFuel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_RocketFuel_C;
 
 SDK_NAMESPACE_END

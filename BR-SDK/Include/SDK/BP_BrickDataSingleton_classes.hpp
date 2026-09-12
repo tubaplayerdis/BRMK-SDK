@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BrickDataSingleton.BP_BrickDataSingleton_C
-// 0x0000 (0x1550 - 0x1550)
+// 0x0000 (0x1590 - 0x1590)
 class UBP_BrickDataSingleton_C final : public UBrickDataSingleton
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_BrickDataSingleton_C;
+
+// BlueprintGeneratedClass BP_BrickDataSingleton.SKEL_BP_BrickDataSingleton_C
+// 0x0010 (0x15A0 - 0x1590)
+class USKEL_BP_BrickDataSingleton_C final : public UBrickDataSingleton
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1590(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_BrickDataSingleton_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_BrickDataSingleton_C")
+	}
+	static class USKEL_BP_BrickDataSingleton_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_BrickDataSingleton_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_BrickDataSingleton_C;
 
 SDK_NAMESPACE_END

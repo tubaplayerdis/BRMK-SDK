@@ -19,10 +19,10 @@ SDK_NAMESPACE_START
 // Function BP_FuelTank.BP_FuelTank_C.ShouldSpawnLeakOnHit
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FHitResult&                Hit_ShouldSpawnLeakOnHit                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// bool                                    ReturnValue_ShouldSpawnLeakOnHit                       (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool ABP_FuelTank_C::ShouldSpawnLeakOnHit(const struct FHitResult& Hit_ShouldSpawnLeakOnHit)
+bool ABP_FuelTank_C::ShouldSpawnLeakOnHit(const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,11 +31,48 @@ bool ABP_FuelTank_C::ShouldSpawnLeakOnHit(const struct FHitResult& Hit_ShouldSpa
 
 	Params::BP_FuelTank_C_ShouldSpawnLeakOnHit Parms{};
 
-	Parms.Hit_ShouldSpawnLeakOnHit = std::move(Hit_ShouldSpawnLeakOnHit);
+	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue_ShouldSpawnLeakOnHit;
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_FuelTank.SKEL_BP_FuelTank_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_FuelTank_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_FuelTank_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FuelTank.SKEL_BP_FuelTank_C.ShouldSpawnLeakOnHit
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ASKEL_BP_FuelTank_C::ShouldSpawnLeakOnHit(const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_FuelTank_C", "ShouldSpawnLeakOnHit");
+
+	Params::SKEL_BP_FuelTank_C_ShouldSpawnLeakOnHit Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

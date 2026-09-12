@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "AIModule_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -78,6 +78,44 @@ public:
 	ETeamAttitude                                 NewAttitude;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ScoreboardTeam_C_UpdateTeamAttitude;
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.UpdateTeamAttitude
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_ScoreboardTeam_C_UpdateTeamAttitude final
+{
+public:
+	bool                                          bIsOwnTeam;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamAttitude                                 NewAttitude;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardTeam_C_UpdateTeamAttitude;
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.UpdateCanEverJoinTeam
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ScoreboardTeam_C_UpdateCanEverJoinTeam final
+{
+public:
+	bool                                          bCanJoin;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardTeam_C_UpdateCanEverJoinTeam;
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.UpdateCanJoinTeam
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ScoreboardTeam_C_UpdateCanJoinTeam final
+{
+public:
+	bool                                          bCanJoin;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardTeam_C_UpdateCanJoinTeam;
+
+// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_ScoreboardTeam_C_BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardTeam_C_BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,12 +16,39 @@
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_ZombieAIController.SKEL_BP_ZombieAIController_C
+// 0x0010 (0x0420 - 0x0410)
+class ASKEL_BP_ZombieAIController_C final : public ABrickAIController
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ZombieAIController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ZombieAIController_C")
+	}
+	static class ASKEL_BP_ZombieAIController_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_ZombieAIController_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_ZombieAIController_C;
+
 // BlueprintGeneratedClass BP_ZombieAIController.BP_ZombieAIController_C
-// 0x0008 (0x0338 - 0x0330)
+// 0x0010 (0x0420 - 0x0410)
 class ABP_ZombieAIController_C final : public ABrickAIController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_ZombieAIController(int32 EntryPoint);

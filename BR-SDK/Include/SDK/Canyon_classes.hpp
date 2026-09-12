@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Canyon.Canyon_C
-// 0x0000 (0x0228 - 0x0228)
+// 0x0000 (0x0300 - 0x0300)
 class ACanyon_C final : public ALevelScriptActor
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ACanyon_C;
+
+// BlueprintGeneratedClass Canyon.SKEL_Canyon_C
+// 0x0010 (0x0310 - 0x0300)
+class ASKEL_Canyon_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_Canyon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_Canyon_C")
+	}
+	static class ASKEL_Canyon_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_Canyon_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_Canyon_C;
 
 SDK_NAMESPACE_END

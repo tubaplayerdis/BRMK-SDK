@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
+#include "GameLogoEnum_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
-#include "GameLogoEnum_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_IntroSequence.WBP_IntroSequence_C
-// 0x0028 (0x02A0 - 0x0278)
+// 0x0030 (0x0440 - 0x0410)
 class UWBP_IntroSequence_C final : public UMainWidgetBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_GameLogo_C*                        Logo;                                              // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	float                                         SequenceDuration;                                  // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeTime;                                          // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadePauseTime;                                     // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SequenceIndex;                                     // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SequenceElapsed;                                   // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_GameLogo_C*                        Logo;                                              // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	float                                         SequenceDuration;                                  // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeTime;                                          // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FadePauseTime;                                     // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SequenceIndex;                                     // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SequenceElapsed;                                   // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_IntroSequence(int32 EntryPoint);
@@ -56,5 +56,44 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_IntroSequence_C;
+
+// WidgetBlueprintGeneratedClass WBP_IntroSequence.SKEL_WBP_IntroSequence_C
+// 0x0030 (0x0440 - 0x0410)
+class USKEL_WBP_IntroSequence_C final : public UMainWidgetBase
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_GameLogo_C*                        Logo;                                              // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	float                                         SequenceDuration;                                  // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeTime;                                          // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FadePauseTime;                                     // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SequenceIndex;                                     // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SequenceElapsed;                                   // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Construct();
+	void InitSequence();
+	void UpdateFade();
+	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
+	void NextSequence();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_IntroSequence_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_IntroSequence_C")
+	}
+	static class USKEL_WBP_IntroSequence_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_IntroSequence_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_IntroSequence_C;
 
 SDK_NAMESPACE_END

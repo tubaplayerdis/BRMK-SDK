@@ -267,4 +267,235 @@ void UBP_UIStyle_Default_C::MakeDefaultColors(struct FLinearColor* Dark, struct 
 }
 
 
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.BuildStyle
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_BP_UIStyle_Default_C::BuildStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "BuildStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.SetColorStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      ColorStyle                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              DefaultColor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              ForergoundColor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              FocusedColor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              FocusedForegroundColor                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              SelectedColor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              SelectedForegroundColor                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_BP_UIStyle_Default_C::SetColorStyle(EBrickUIColorStyle ColorStyle, const struct FLinearColor& DefaultColor, const struct FLinearColor& ForergoundColor, const struct FLinearColor& FocusedColor, const struct FLinearColor& FocusedForegroundColor, const struct FLinearColor& SelectedColor, const struct FLinearColor& SelectedForegroundColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "SetColorStyle");
+
+	Params::SKEL_BP_UIStyle_Default_C_SetColorStyle Parms{};
+
+	Parms.ColorStyle = ColorStyle;
+	Parms.DefaultColor = std::move(DefaultColor);
+	Parms.ForergoundColor = std::move(ForergoundColor);
+	Parms.FocusedColor = std::move(FocusedColor);
+	Parms.FocusedForegroundColor = std::move(FocusedForegroundColor);
+	Parms.SelectedColor = std::move(SelectedColor);
+	Parms.SelectedForegroundColor = std::move(SelectedForegroundColor);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.SetBrushStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EBrickUIBrushStyle                      BrushStyle                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FSlateBrush&               Brush                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               FocusedBrush                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               PressedBrush                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               SelectedBrush                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               MarqueeBrush                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void USKEL_BP_UIStyle_Default_C::SetBrushStyle(EBrickUIBrushStyle BrushStyle, const struct FSlateBrush& Brush, const struct FSlateBrush& FocusedBrush, const struct FSlateBrush& PressedBrush, const struct FSlateBrush& SelectedBrush, const struct FSlateBrush& MarqueeBrush)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "SetBrushStyle");
+
+	Params::SKEL_BP_UIStyle_Default_C_SetBrushStyle Parms{};
+
+	Parms.BrushStyle = BrushStyle;
+	Parms.Brush = std::move(Brush);
+	Parms.FocusedBrush = std::move(FocusedBrush);
+	Parms.PressedBrush = std::move(PressedBrush);
+	Parms.SelectedBrush = std::move(SelectedBrush);
+	Parms.MarqueeBrush = std::move(MarqueeBrush);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.BuildDefaultStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              DefaultColor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              ForegroundColor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              HighlightColor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              HighlightForegroundColor                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              SelectedColor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              SelectedForegroundColor                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              LogoColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              LogoForegroundColor                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              LogoForegroundContrastColor                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_BP_UIStyle_Default_C::BuildDefaultStyle(const struct FLinearColor& DefaultColor, const struct FLinearColor& ForegroundColor, const struct FLinearColor& HighlightColor, const struct FLinearColor& HighlightForegroundColor, const struct FLinearColor& SelectedColor, const struct FLinearColor& SelectedForegroundColor, const struct FLinearColor& LogoColor, const struct FLinearColor& LogoForegroundColor, const struct FLinearColor& LogoForegroundContrastColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "BuildDefaultStyle");
+
+	Params::SKEL_BP_UIStyle_Default_C_BuildDefaultStyle Parms{};
+
+	Parms.DefaultColor = std::move(DefaultColor);
+	Parms.ForegroundColor = std::move(ForegroundColor);
+	Parms.HighlightColor = std::move(HighlightColor);
+	Parms.HighlightForegroundColor = std::move(HighlightForegroundColor);
+	Parms.SelectedColor = std::move(SelectedColor);
+	Parms.SelectedForegroundColor = std::move(SelectedForegroundColor);
+	Parms.LogoColor = std::move(LogoColor);
+	Parms.LogoForegroundColor = std::move(LogoForegroundColor);
+	Parms.LogoForegroundContrastColor = std::move(LogoForegroundContrastColor);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.MakeTextStyle
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class FName                             Typeface                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Font_Material                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OutlineSize                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bStrike                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bUnderline                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FLinearColor&              ColorMultiplier                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FTextBlockStyle                  ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FTextBlockStyle USKEL_BP_UIStyle_Default_C::MakeTextStyle(class FName Typeface, float Scale, class UObject* Font_Material, int32 OutlineSize, bool bStrike, bool bUnderline, const struct FLinearColor& ColorMultiplier) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "MakeTextStyle");
+
+	Params::SKEL_BP_UIStyle_Default_C_MakeTextStyle Parms{};
+
+	Parms.Typeface = Typeface;
+	Parms.Scale = Scale;
+	Parms.Font_Material = Font_Material;
+	Parms.OutlineSize = OutlineSize;
+	Parms.bStrike = bStrike;
+	Parms.bUnderline = bUnderline;
+	Parms.ColorMultiplier = std::move(ColorMultiplier);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.MakeLiteralColor
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FLinearColor USKEL_BP_UIStyle_Default_C::MakeLiteralColor(const struct FLinearColor& Color) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "MakeLiteralColor");
+
+	Params::SKEL_BP_UIStyle_Default_C_MakeLiteralColor Parms{};
+
+	Parms.Color = std::move(Color);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_UIStyle_Default.SKEL_BP_UIStyle_Default_C.MakeDefaultColors
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FLinearColor*                    Dark                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Medium                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Bright                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Negative                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Positive                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Background                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    BrightBackground                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Border                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    BrickRigs                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Fluppisoft                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    FluppisoftForeground                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_BP_UIStyle_Default_C::MakeDefaultColors(struct FLinearColor* Dark, struct FLinearColor* Medium, struct FLinearColor* Bright, struct FLinearColor* Negative, struct FLinearColor* Positive, struct FLinearColor* Background, struct FLinearColor* BrightBackground, struct FLinearColor* Border, struct FLinearColor* BrickRigs, struct FLinearColor* Fluppisoft, struct FLinearColor* FluppisoftForeground) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Default_C", "MakeDefaultColors");
+
+	Params::SKEL_BP_UIStyle_Default_C_MakeDefaultColors Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Dark != nullptr)
+		*Dark = std::move(Parms.Dark);
+
+	if (Medium != nullptr)
+		*Medium = std::move(Parms.Medium);
+
+	if (Bright != nullptr)
+		*Bright = std::move(Parms.Bright);
+
+	if (Negative != nullptr)
+		*Negative = std::move(Parms.Negative);
+
+	if (Positive != nullptr)
+		*Positive = std::move(Parms.Positive);
+
+	if (Background != nullptr)
+		*Background = std::move(Parms.Background);
+
+	if (BrightBackground != nullptr)
+		*BrightBackground = std::move(Parms.BrightBackground);
+
+	if (Border != nullptr)
+		*Border = std::move(Parms.Border);
+
+	if (BrickRigs != nullptr)
+		*BrickRigs = std::move(Parms.BrickRigs);
+
+	if (Fluppisoft != nullptr)
+		*Fluppisoft = std::move(Parms.Fluppisoft);
+
+	if (FluppisoftForeground != nullptr)
+		*FluppisoftForeground = std::move(Parms.FluppisoftForeground);
+}
+
+
 SDK_NAMESPACE_END

@@ -16,6 +16,186 @@
 
 SDK_NAMESPACE_START
 
+// Function AssetTags.AssetTagsSubsystem.AddAssetDatasToCollection
+// (Final, Native, Public, HasOutParams, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FAssetData>&        AssetDatas                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::AddAssetDatasToCollection(const class FName Name_0, const TArray<struct FAssetData>& AssetDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "AddAssetDatasToCollection");
+
+	Params::AssetTagsSubsystem_AddAssetDatasToCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetDatas = std::move(AssetDatas);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetDataToCollection
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FAssetData&                AssetData                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::AddAssetDataToCollection(const class FName Name_0, const struct FAssetData& AssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "AddAssetDataToCollection");
+
+	Params::AssetTagsSubsystem_AddAssetDataToCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetData = std::move(AssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetPtrsToCollection
+// (Final, Native, Public, HasOutParams, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UObject*>&           AssetPtrs                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::AddAssetPtrsToCollection(const class FName Name_0, const TArray<class UObject*>& AssetPtrs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "AddAssetPtrsToCollection");
+
+	Params::AssetTagsSubsystem_AddAssetPtrsToCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPtrs = std::move(AssetPtrs);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetPtrToCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    AssetPtr                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::AddAssetPtrToCollection(const class FName Name_0, const class UObject* AssetPtr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "AddAssetPtrToCollection");
+
+	Params::AssetTagsSubsystem_AddAssetPtrToCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPtr = AssetPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetsToCollection
+// (Final, Native, Public, HasOutParams, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              AssetPathNames                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::AddAssetsToCollection(const class FName Name_0, const TArray<class FName>& AssetPathNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "AddAssetsToCollection");
+
+	Params::AssetTagsSubsystem_AddAssetsToCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPathNames = std::move(AssetPathNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetToCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       AssetPathName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::AddAssetToCollection(const class FName Name_0, const class FName AssetPathName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "AddAssetToCollection");
+
+	Params::AssetTagsSubsystem_AddAssetToCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPathName = AssetPathName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AssetTags.AssetTagsSubsystem.CollectionExists
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -30,6 +210,92 @@ bool UAssetTagsSubsystem::CollectionExists(const class FName Name_0)
 		Func = Class->GetFunction("AssetTagsSubsystem", "CollectionExists");
 
 	Params::AssetTagsSubsystem_CollectionExists Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.CreateCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const ECollectionScriptingShareType     ShareType                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::CreateCollection(const class FName Name_0, const ECollectionScriptingShareType ShareType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "CreateCollection");
+
+	Params::AssetTagsSubsystem_CreateCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.ShareType = ShareType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.DestroyCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::DestroyCollection(const class FName Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "DestroyCollection");
+
+	Params::AssetTagsSubsystem_DestroyCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.EmptyCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::EmptyCollection(const class FName Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "EmptyCollection");
+
+	Params::AssetTagsSubsystem_EmptyCollection Parms{};
 
 	Parms.Name_0 = Name_0;
 
@@ -169,6 +435,246 @@ TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetPtr(const 
 	Params::AssetTagsSubsystem_GetCollectionsContainingAssetPtr Parms{};
 
 	Parms.AssetPtr = AssetPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetDataFromCollection
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FAssetData&                AssetData                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RemoveAssetDataFromCollection(const class FName Name_0, const struct FAssetData& AssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RemoveAssetDataFromCollection");
+
+	Params::AssetTagsSubsystem_RemoveAssetDataFromCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetData = std::move(AssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetDatasFromCollection
+// (Final, Native, Public, HasOutParams, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FAssetData>&        AssetDatas                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RemoveAssetDatasFromCollection(const class FName Name_0, const TArray<struct FAssetData>& AssetDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RemoveAssetDatasFromCollection");
+
+	Params::AssetTagsSubsystem_RemoveAssetDatasFromCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetDatas = std::move(AssetDatas);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetFromCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       AssetPathName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RemoveAssetFromCollection(const class FName Name_0, const class FName AssetPathName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RemoveAssetFromCollection");
+
+	Params::AssetTagsSubsystem_RemoveAssetFromCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPathName = AssetPathName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetPtrFromCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    AssetPtr                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RemoveAssetPtrFromCollection(const class FName Name_0, const class UObject* AssetPtr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RemoveAssetPtrFromCollection");
+
+	Params::AssetTagsSubsystem_RemoveAssetPtrFromCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPtr = AssetPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetPtrsFromCollection
+// (Final, Native, Public, HasOutParams, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UObject*>&           AssetPtrs                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RemoveAssetPtrsFromCollection(const class FName Name_0, const TArray<class UObject*>& AssetPtrs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RemoveAssetPtrsFromCollection");
+
+	Params::AssetTagsSubsystem_RemoveAssetPtrsFromCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPtrs = std::move(AssetPtrs);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetsFromCollection
+// (Final, Native, Public, HasOutParams, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              AssetPathNames                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RemoveAssetsFromCollection(const class FName Name_0, const TArray<class FName>& AssetPathNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RemoveAssetsFromCollection");
+
+	Params::AssetTagsSubsystem_RemoveAssetsFromCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.AssetPathNames = std::move(AssetPathNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.RenameCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       NewName                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::RenameCollection(const class FName Name_0, const class FName NewName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "RenameCollection");
+
+	Params::AssetTagsSubsystem_RenameCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.NewName = NewName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AssetTags.AssetTagsSubsystem.ReparentCollection
+// (Final, Native, Public, BlueprintCallable, EditorOnly)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       NewParentName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAssetTagsSubsystem::ReparentCollection(const class FName Name_0, const class FName NewParentName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AssetTagsSubsystem", "ReparentCollection");
+
+	Params::AssetTagsSubsystem_ReparentCollection Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.NewParentName = NewParentName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

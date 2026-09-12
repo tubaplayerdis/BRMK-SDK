@@ -70,4 +70,38 @@ void UWBP_Tooltip_C::FadeIn()
 }
 
 
+// Function WBP_Tooltip.SKEL_WBP_Tooltip_C.FadeIn
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_Tooltip_C::FadeIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Tooltip_C", "FadeIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Tooltip.SKEL_WBP_Tooltip_C.UpdateTooltipContent
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FTooltipContent&           InContent                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Tooltip_C::UpdateTooltipContent(const struct FTooltipContent& InContent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Tooltip_C", "UpdateTooltipContent");
+
+	Params::SKEL_WBP_Tooltip_C_UpdateTooltipContent Parms{};
+
+	Parms.InContent = std::move(InContent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

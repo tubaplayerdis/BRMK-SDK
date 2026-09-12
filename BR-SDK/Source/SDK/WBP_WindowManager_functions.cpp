@@ -56,4 +56,24 @@ void UWBP_WindowManager_C::AddActiveWidget(class UMainWidgetBase* Widget)
 }
 
 
+// Function WBP_WindowManager.SKEL_WBP_WindowManager_C.AddActiveWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UMainWidgetBase*                  Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_WindowManager_C::AddActiveWidget(class UMainWidgetBase* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_WindowManager_C", "AddActiveWidget");
+
+	Params::SKEL_WBP_WindowManager_C_AddActiveWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

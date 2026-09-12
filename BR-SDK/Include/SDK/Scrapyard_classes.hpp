@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Scrapyard.Scrapyard_C
-// 0x0000 (0x0228 - 0x0228)
+// 0x0000 (0x0300 - 0x0300)
 class AScrapyard_C final : public ALevelScriptActor
 {
 public:
@@ -34,5 +35,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AScrapyard_C;
+
+// BlueprintGeneratedClass Scrapyard.SKEL_Scrapyard_C
+// 0x0010 (0x0310 - 0x0300)
+class ASKEL_Scrapyard_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_Scrapyard_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_Scrapyard_C")
+	}
+	static class ASKEL_Scrapyard_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_Scrapyard_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_Scrapyard_C;
 
 SDK_NAMESPACE_END

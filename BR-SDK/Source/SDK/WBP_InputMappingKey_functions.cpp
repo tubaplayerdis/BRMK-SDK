@@ -78,4 +78,46 @@ void UWBP_InputMappingKey_C::UpdateConflictedState(bool bNewConflicted)
 }
 
 
+// Function WBP_InputMappingKey.SKEL_WBP_InputMappingKey_C.UpdateConflictedState
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewConflicted                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputMappingKey_C::UpdateConflictedState(bool bNewConflicted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputMappingKey_C", "UpdateConflictedState");
+
+	Params::SKEL_WBP_InputMappingKey_C_UpdateConflictedState Parms{};
+
+	Parms.bNewConflicted = bNewConflicted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InputMappingKey.SKEL_WBP_InputMappingKey_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InputMappingKey_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputMappingKey_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_InputMappingKey_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

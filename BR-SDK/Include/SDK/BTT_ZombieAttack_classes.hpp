@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BTT_ZombieAttack.BTT_ZombieAttack_C
-// 0x0008 (0x00B0 - 0x00A8)
+// 0x0010 (0x00D8 - 0x00C8)
 class UBTT_ZombieAttack_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00C8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BTT_ZombieAttack(int32 EntryPoint);
@@ -44,5 +44,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBTT_ZombieAttack_C;
+
+// BlueprintGeneratedClass BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C
+// 0x0010 (0x00D8 - 0x00C8)
+class USKEL_BTT_ZombieAttack_C final : public UBTTask_BlueprintBase
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00C8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveExecute(class AActor* OwnerActor);
+	void ReceiveTick(class AActor* OwnerActor, float DeltaSeconds);
+	void ReceiveAbort(class AActor* OwnerActor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BTT_ZombieAttack_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BTT_ZombieAttack_C")
+	}
+	static class USKEL_BTT_ZombieAttack_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BTT_ZombieAttack_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BTT_ZombieAttack_C;
 
 SDK_NAMESPACE_END

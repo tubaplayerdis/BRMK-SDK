@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FlapBrick.BP_FlapBrick_C
-// 0x0000 (0x01D8 - 0x01D8)
+// 0x0000 (0x01E8 - 0x01E8)
 class UBP_FlapBrick_C final : public UFlapBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_FlapBrick_C;
+
+// BlueprintGeneratedClass BP_FlapBrick.SKEL_BP_FlapBrick_C
+// 0x0010 (0x01F8 - 0x01E8)
+class USKEL_BP_FlapBrick_C final : public UFlapBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01E8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_FlapBrick_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_FlapBrick_C")
+	}
+	static class USKEL_BP_FlapBrick_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_FlapBrick_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_FlapBrick_C;
 
 SDK_NAMESPACE_END

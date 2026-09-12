@@ -18,12 +18,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputChord.WBP_InputChord_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0018 (0x0478 - 0x0460)
 class UWBP_InputChord_C final : public UInputChordWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    KeysBox;                                           // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    KeysBox;                                           // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InputChord(int32 EntryPoint);
@@ -46,5 +46,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputChord_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputChord.SKEL_WBP_InputChord_C
+// 0x0018 (0x0478 - 0x0460)
+class USKEL_WBP_InputChord_C final : public UInputChordWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    KeysBox;                                           // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddKeyWidget(class UInputKeyWidget* Widget);
+	void AddSpacerWidget(class UUserWidget* Widget);
+	void UpdateSpacerColorStyleAndStyleState(class UUserWidget* Widget, EBrickUIColorStyle NewColorStyle, EBrickUIStyleState NewStyleState);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputChord_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputChord_C")
+	}
+	static class USKEL_WBP_InputChord_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputChord_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputChord_C;
 
 SDK_NAMESPACE_END

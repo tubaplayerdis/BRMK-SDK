@@ -11,18 +11,18 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ControlHint.WBP_ControlHint_C
-// 0x0008 (0x0360 - 0x0358)
+// 0x0010 (0x0508 - 0x04F8)
 class UWBP_ControlHint_C final : public UControlHintWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_ControlHint(int32 EntryPoint);
@@ -45,5 +45,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ControlHint_C;
+
+// WidgetBlueprintGeneratedClass WBP_ControlHint.SKEL_WBP_ControlHint_C
+// 0x0010 (0x0508 - 0x04F8)
+class USKEL_WBP_ControlHint_C final : public UControlHintWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UpdateInputChordVisibility(bool bNewVisible);
+	void UpdateTextVisibility(bool bNewVisible);
+	void SetIconSize(float NewSize);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ControlHint_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ControlHint_C")
+	}
+	static class USKEL_WBP_ControlHint_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ControlHint_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ControlHint_C;
 
 SDK_NAMESPACE_END

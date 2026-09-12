@@ -50,4 +50,32 @@ void ABP_BrickCharacter_C::GiveTestLoadout()
 }
 
 
+// Function BP_BrickCharacter.SKEL_BP_BrickCharacter_C.GiveTestLoadout
+// (Exec, Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_BrickCharacter_C::GiveTestLoadout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_BrickCharacter_C", "GiveTestLoadout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BrickCharacter.SKEL_BP_BrickCharacter_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_BrickCharacter_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_BrickCharacter_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

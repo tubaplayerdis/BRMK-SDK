@@ -1362,10 +1362,10 @@ void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const
 // Function HeadMountedDisplay.HandKeypointConversion.Conv_HandKeypointToInt32
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// EHandKeypoint                           Input                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EHandKeypoint                           input                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UHandKeypointConversion::Conv_HandKeypointToInt32(EHandKeypoint Input)
+int32 UHandKeypointConversion::Conv_HandKeypointToInt32(EHandKeypoint input)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1374,7 +1374,7 @@ int32 UHandKeypointConversion::Conv_HandKeypointToInt32(EHandKeypoint Input)
 
 	Params::HandKeypointConversion_Conv_HandKeypointToInt32 Parms{};
 
-	Parms.Input = Input;
+	Parms.input = input;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -56,4 +56,24 @@ void UABP_Character_RC_Parent_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
+// Function ABP_Character_RC_Parent.SKEL_ABP_Character_RC_Parent_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_ABP_Character_RC_Parent_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_Character_RC_Parent_C", "BlueprintUpdateAnimation");
+
+	Params::SKEL_ABP_Character_RC_Parent_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

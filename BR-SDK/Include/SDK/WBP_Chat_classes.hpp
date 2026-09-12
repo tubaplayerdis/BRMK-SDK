@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Chat.WBP_Chat_C
-// 0x0010 (0x02C0 - 0x02B0)
+// 0x0018 (0x0460 - 0x0448)
 class UWBP_Chat_C final : public UChatWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           WarningBorder;                                     // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           WarningBorder;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateIsFocused(bool bNewFocused_UpdateIsFocused);
-	void UpdateIsTyping(bool bNewTyping_UpdateIsTyping);
 	void ExecuteUbergraph_WBP_Chat(int32 EntryPoint);
+	void UpdateIsTyping(bool bNewTyping);
+	void UpdateIsFocused(bool bNewFocused);
 
 public:
 	static class UClass* StaticClass()
@@ -45,5 +45,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Chat_C;
+
+// WidgetBlueprintGeneratedClass WBP_Chat.SKEL_WBP_Chat_C
+// 0x0018 (0x0460 - 0x0448)
+class USKEL_WBP_Chat_C final : public UChatWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           WarningBorder;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateIsFocused(bool bNewFocused);
+	void UpdateIsTyping(bool bNewTyping);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Chat_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Chat_C")
+	}
+	static class USKEL_WBP_Chat_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Chat_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Chat_C;
 
 SDK_NAMESPACE_END

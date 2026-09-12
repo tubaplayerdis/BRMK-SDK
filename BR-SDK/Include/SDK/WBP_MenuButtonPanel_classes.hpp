@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MenuButtonPanel.WBP_MenuButtonPanel_C
-// 0x0000 (0x0290 - 0x0290)
+// 0x0000 (0x0428 - 0x0428)
 class UWBP_MenuButtonPanel_C final : public UMenuButtonPanelWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_MenuButtonPanel_C;
+
+// WidgetBlueprintGeneratedClass WBP_MenuButtonPanel.SKEL_WBP_MenuButtonPanel_C
+// 0x0010 (0x0438 - 0x0428)
+class USKEL_WBP_MenuButtonPanel_C final : public UMenuButtonPanelWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_MenuButtonPanel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_MenuButtonPanel_C")
+	}
+	static class USKEL_WBP_MenuButtonPanel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_MenuButtonPanel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_MenuButtonPanel_C;
 
 SDK_NAMESPACE_END

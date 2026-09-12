@@ -10,389 +10,438 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "AIModule_structs.hpp"
+#include "BrickRigs_structs.hpp"
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "AIModule_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "FluUGC_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BrickRigs.HUDIconComponent.MakeAxisInteractionOption
-// 0x0080 (0x0080 - 0x0000)
-struct HUDIconComponent_MakeAxisInteractionOption final
-{
-public:
-	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class ABrickPlayerController* InPC, float Val)> OnInteractionAxis;                // 0x001C(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInteractionOption                     ReturnValue;                                       // 0x0030(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_MakeAxisInteractionOption;
-
-// Function BrickRigs.HUDIconComponent.MakeInteractionOption
-// 0x0080 (0x0080 - 0x0000)
-struct HUDIconComponent_MakeInteractionOption final
-{
-public:
-	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class ABrickPlayerController* InPC)> OnInteraction;                               // 0x001C(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInteractionOption                     ReturnValue;                                       // 0x0030(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_MakeInteractionOption;
-
-// Function BrickRigs.HUDIconComponent.Interact_PlaceMarker
-// 0x0008 (0x0008 - 0x0000)
-struct HUDIconComponent_Interact_PlaceMarker final
-{
-public:
-	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_Interact_PlaceMarker;
-
-// Function BrickRigs.HUDIconComponent.Interact_Spawn
-// 0x0008 (0x0008 - 0x0000)
-struct HUDIconComponent_Interact_Spawn final
-{
-public:
-	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_Interact_Spawn;
-
-// Function BrickRigs.HUDIconComponent.SetGetInteractionOptionsDelegate
-// 0x0010 (0x0010 - 0x0000)
-struct HUDIconComponent_SetGetInteractionOptionsDelegate final
-{
-public:
-	TDelegate<void(class ABrickPlayerController* PC, struct FInteractionOptions* OutOptions)> Delegate; // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_SetGetInteractionOptionsDelegate;
-
-// Function BrickRigs.HUDIconComponent.SetGetMaxDrawDistDelegate
-// 0x0010 (0x0010 - 0x0000)
-struct HUDIconComponent_SetGetMaxDrawDistDelegate final
-{
-public:
-	TDelegate<void(class ABrickPlayerController* PC)> Delegate;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_SetGetMaxDrawDistDelegate;
-
-// Function BrickRigs.HUDIconComponent.SetIconLocation
-// 0x000C (0x000C - 0x0000)
-struct HUDIconComponent_SetIconLocation final
-{
-public:
-	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_SetIconLocation;
-
-// Function BrickRigs.HUDIconComponent.SetIconLocationDelegate
-// 0x0010 (0x0010 - 0x0000)
-struct HUDIconComponent_SetIconLocationDelegate final
-{
-public:
-	TDelegate<void()>                             Delegate;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_SetIconLocationDelegate;
-
-// Function BrickRigs.HUDIconComponent.SetShouldIconBeVisibleDelegate
-// 0x0010 (0x0010 - 0x0000)
-struct HUDIconComponent_SetShouldIconBeVisibleDelegate final
-{
-public:
-	TDelegate<void(class ABrickPlayerController* PC, const struct FHUDIconContext& Context)> Delegate; // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconComponent_SetShouldIconBeVisibleDelegate;
-
-// Function BrickRigs.BrickBorder.SetBrushStyle
+// Function BrickRigs.PopupWidget.CancelPopup
 // 0x0001 (0x0001 - 0x0000)
-struct BrickBorder_SetBrushStyle final
-{
-public:
-	EBrickUIBrushStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickBorder_SetBrushStyle;
-
-// Function BrickRigs.BrickBorder.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickBorder_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickBorder_SetColorStyle;
-
-// Function BrickRigs.BrickBorder.SetPaddingStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickBorder_SetPaddingStyle final
-{
-public:
-	EBrickUIPaddingStyle                          NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickBorder_SetPaddingStyle;
-
-// Function BrickRigs.BrickBorder.SetStyleState
-// 0x0001 (0x0001 - 0x0000)
-struct BrickBorder_SetStyleState final
-{
-public:
-	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickBorder_SetStyleState;
-
-// Function BrickRigs.BrickVerticalBox.SetSlotSpacingStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVerticalBox_SetSlotSpacingStyle final
-{
-public:
-	EBrickUISpacingStyle                          NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVerticalBox_SetSlotSpacingStyle;
-
-// Function BrickRigs.BasePlayerController.ClientReceiveKickedPlayerList
-// 0x0020 (0x0020 - 0x0000)
-struct BasePlayerController_ClientReceiveKickedPlayerList final
-{
-public:
-	struct FKickedPlayerList                      PlayerList;                                        // 0x0000(0x0018)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         RequestID;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BasePlayerController_ClientReceiveKickedPlayerList;
-
-// Function BrickRigs.BasePlayerController.KickPlayer
-// 0x0050 (0x0050 - 0x0000)
-struct BasePlayerController_KickPlayer final
-{
-public:
-	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OtherPlayerName;                                   // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 KickReason;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              KickDuration;                                      // 0x0048(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BasePlayerController_KickPlayer;
-
-// Function BrickRigs.BasePlayerController.OpenKickPlayerPopup
-// 0x0038 (0x0038 - 0x0000)
-struct BasePlayerController_OpenKickPlayerPopup final
-{
-public:
-	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OtherPlayerName;                                   // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BasePlayerController_OpenKickPlayerPopup;
-
-// Function BrickRigs.BasePlayerController.RevokeKick
-// 0x0028 (0x0028 - 0x0000)
-struct BasePlayerController_RevokeKick final
-{
-public:
-	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BasePlayerController_RevokeKick;
-
-// Function BrickRigs.BasePlayerController.ServerKickPlayer
-// 0x0050 (0x0050 - 0x0000)
-struct BasePlayerController_ServerKickPlayer final
-{
-public:
-	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OtherPlayerName;                                   // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 KickReason;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              KickDuration;                                      // 0x0048(0x0008)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BasePlayerController_ServerKickPlayer;
-
-// Function BrickRigs.BasePlayerController.ServerRequestKickedPlayerList
-// 0x0038 (0x0038 - 0x0000)
-struct BasePlayerController_ServerRequestKickedPlayerList final
-{
-public:
-	struct FKickedPlayerListRequest               Request;                                           // 0x0000(0x0030)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         RequestID;                                         // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BasePlayerController_ServerRequestKickedPlayerList;
-
-// Function BrickRigs.BasePlayerController.ServerRevokeKick
-// 0x0028 (0x0028 - 0x0000)
-struct BasePlayerController_ServerRevokeKick final
-{
-public:
-	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BasePlayerController_ServerRevokeKick;
-
-// Function BrickRigs.BasePlayerController.CanKickPlayer
-// 0x0030 (0x0030 - 0x0000)
-struct BasePlayerController_CanKickPlayer final
-{
-public:
-	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BasePlayerController_CanKickPlayer;
-
-// Function BrickRigs.BasePlayerController.CanViewAndEditKicks
-// 0x0001 (0x0001 - 0x0000)
-struct BasePlayerController_CanViewAndEditKicks final
+struct PopupWidget_CancelPopup final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BasePlayerController_CanViewAndEditKicks;
+DUMPER7_ASSERTS_PopupWidget_CancelPopup;
 
-// Function BrickRigs.BasePlayerController.GetDesiredViewTarget
-// 0x0018 (0x0018 - 0x0000)
-struct BasePlayerController_GetDesiredViewTarget final
+// Function BrickRigs.PopupWidget.ClosePopup
+// 0x0001 (0x0001 - 0x0000)
+struct PopupWidget_ClosePopup final
 {
 public:
-	struct FViewTargetTransitionParams            OutTransitionParams;                               // 0x0000(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPopupResult                                  Result;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BasePlayerController_GetDesiredViewTarget;
+DUMPER7_ASSERTS_PopupWidget_ClosePopup;
 
-// Function BrickRigs.BasePlayerController.GetPlayerId
-// 0x0028 (0x0028 - 0x0000)
-struct BasePlayerController_GetPlayerId final
+// Function BrickRigs.PopupWidget.ConfirmPopup
+// 0x0001 (0x0001 - 0x0000)
+struct PopupWidget_ConfirmPopup final
 {
 public:
-	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BasePlayerController_GetPlayerId;
+DUMPER7_ASSERTS_PopupWidget_ConfirmPopup;
 
-// Function BrickRigs.BasePlayerController.GetStaticInfo
+// Function BrickRigs.PopupWidget.GetPopupParams
+// 0x0010 (0x0010 - 0x0000)
+struct PopupWidget_GetPopupParams final
+{
+public:
+	TSubclassOf<class UPopupParams>               Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPopupParams*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_GetPopupParams;
+
+// Function BrickRigs.PopupWidget.GetWidgetToFocus
 // 0x0008 (0x0008 - 0x0000)
-struct BasePlayerController_GetStaticInfo final
+struct PopupWidget_GetWidgetToFocus final
 {
 public:
-	const class UPlayerControllerStaticInfo*      ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BasePlayerController_GetStaticInfo;
+DUMPER7_ASSERTS_PopupWidget_GetWidgetToFocus;
 
-// Function BrickRigs.AdminLoginWidget.OnTextChanged
+// Function BrickRigs.PopupWidget.StepBack
+// 0x0001 (0x0001 - 0x0000)
+struct PopupWidget_StepBack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_StepBack;
+
+// Function BrickRigs.PopupWidget.CanPopupBeClosed
+// 0x0001 (0x0001 - 0x0000)
+struct PopupWidget_CanPopupBeClosed final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_CanPopupBeClosed;
+
+// Function BrickRigs.PopupWidget.GetButtonPanel
+// 0x0008 (0x0008 - 0x0000)
+struct PopupWidget_GetButtonPanel final
+{
+public:
+	class UMenuButtonPanelWidget*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_GetButtonPanel;
+
+// Function BrickRigs.PopupWidget.GetPopupContainer
+// 0x0008 (0x0008 - 0x0000)
+struct PopupWidget_GetPopupContainer final
+{
+public:
+	class UPopupContainerWidget*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_GetPopupContainer;
+
+// Function BrickRigs.PopupWidget.GetPopupSizeRule
+// 0x0001 (0x0001 - 0x0000)
+struct PopupWidget_GetPopupSizeRule final
+{
+public:
+	EPopupSizeRule                                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_GetPopupSizeRule;
+
+// Function BrickRigs.PopupWidget.GetPopupTitle
+// 0x0018 (0x0018 - 0x0000)
+struct PopupWidget_GetPopupTitle final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_GetPopupTitle;
+
+// Function BrickRigs.PopupWidget.ShouldBeVisibleInPopupContainer
+// 0x0001 (0x0001 - 0x0000)
+struct PopupWidget_ShouldBeVisibleInPopupContainer final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupWidget_ShouldBeVisibleInPopupContainer;
+
+// Function BrickRigs.UGCBrowserWidget.AddOrRemoveSelectedItem
+// 0x0001 (0x0001 - 0x0000)
+struct UGCBrowserWidget_AddOrRemoveSelectedItem final
+{
+public:
+	bool                                          bAdd;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCBrowserWidget_AddOrRemoveSelectedItem;
+
+// Function BrickRigs.UGCBrowserWidget.CreateAddOrRemoveItemButton
+// 0x0002 (0x0002 - 0x0000)
+struct UGCBrowserWidget_CreateAddOrRemoveItemButton final
+{
+public:
+	bool                                          bIsArrayProperty;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSelected;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCBrowserWidget_CreateAddOrRemoveItemButton;
+
+// Function BrickRigs.UGCBrowserWidget.CreateClearItemsButton
+// 0x0001 (0x0001 - 0x0000)
+struct UGCBrowserWidget_CreateClearItemsButton final
+{
+public:
+	bool                                          bIsArrayProperty;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCBrowserWidget_CreateClearItemsButton;
+
+// Function BrickRigs.UGCBrowserWidget.CreateSpawnButton
 // 0x0020 (0x0020 - 0x0000)
-struct AdminLoginWidget_OnTextChanged final
+struct UGCBrowserWidget_CreateSpawnButton final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bCanReplaceCurrent;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanSpawn;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   SpawnFailureText;                                  // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AdminLoginWidget_OnTextChanged;
+DUMPER7_ASSERTS_UGCBrowserWidget_CreateSpawnButton;
 
-// Function BrickRigs.AdminLoginWidget.UpdateCanEverBeAdmin
+// Function BrickRigs.UGCBrowserWidget.CreateSpawnInvincibilityButton
+// 0x0018 (0x0018 - 0x0000)
+struct UGCBrowserWidget_CreateSpawnInvincibilityButton final
+{
+public:
+	class FText                                   CurrentInvincibilityText;                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCBrowserWidget_CreateSpawnInvincibilityButton;
+
+// Function BrickRigs.UGCBrowserWidget.CreateSubscribeButton
 // 0x0001 (0x0001 - 0x0000)
-struct AdminLoginWidget_UpdateCanEverBeAdmin final
+struct UGCBrowserWidget_CreateSubscribeButton final
 {
 public:
-	bool                                          bCanBeAdmin;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSubscribed;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AdminLoginWidget_UpdateCanEverBeAdmin;
+DUMPER7_ASSERTS_UGCBrowserWidget_CreateSubscribeButton;
 
-// Function BrickRigs.AdminLoginWidget.UpdateIsAdmin
+// Function BrickRigs.UGCBrowserWidget.CreateVoteButtons
 // 0x0001 (0x0001 - 0x0000)
-struct AdminLoginWidget_UpdateIsAdmin final
+struct UGCBrowserWidget_CreateVoteButtons final
 {
 public:
-	bool                                          bNewIsAdmin;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFluUGCItemVote                               Vote;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AdminLoginWidget_UpdateIsAdmin;
+DUMPER7_ASSERTS_UGCBrowserWidget_CreateVoteButtons;
 
-// Function BrickRigs.MatchTimerWidget.UpdateTimer
+// Function BrickRigs.UGCBrowserWidget.FavoriteSelectedItem
+// 0x0001 (0x0001 - 0x0000)
+struct UGCBrowserWidget_FavoriteSelectedItem final
+{
+public:
+	bool                                          bFavorite;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCBrowserWidget_FavoriteSelectedItem;
+
+// Function BrickRigs.UGCBrowserWidget.OnListEntrySelected
+// 0x0010 (0x0010 - 0x0000)
+struct UGCBrowserWidget_OnListEntrySelected final
+{
+public:
+	class UPagedListEntryWidget*                  Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoubleClick;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UGCBrowserWidget_OnListEntrySelected;
+
+// Function BrickRigs.UGCBrowserWidget.OnLoadListPage
 // 0x0004 (0x0004 - 0x0000)
-struct MatchTimerWidget_UpdateTimer final
+struct UGCBrowserWidget_OnLoadListPage final
 {
 public:
-	int32                                         NewTime;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MatchTimerWidget_UpdateTimer;
+DUMPER7_ASSERTS_UGCBrowserWidget_OnLoadListPage;
 
-// Function BrickRigs.ButtonWidgetBase.OnUpdateContentStyle
-// 0x0002 (0x0002 - 0x0000)
-struct ButtonWidgetBase_OnUpdateContentStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InStyleState;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ButtonWidgetBase_OnUpdateContentStyle;
-
-// Function BrickRigs.ButtonWidgetBase.SetBrushStyle
+// Function BrickRigs.UGCBrowserWidget.SaveItem
 // 0x0001 (0x0001 - 0x0000)
-struct ButtonWidgetBase_SetBrushStyle final
+struct UGCBrowserWidget_SaveItem final
 {
 public:
-	EBrickUIBrushStyle                            NewBrushStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverwriteSelected;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ButtonWidgetBase_SetBrushStyle;
+DUMPER7_ASSERTS_UGCBrowserWidget_SaveItem;
 
-// Function BrickRigs.ButtonWidgetBase.SetColorStyle
+// Function BrickRigs.UGCBrowserWidget.SetSelectedItemVote
 // 0x0001 (0x0001 - 0x0000)
-struct ButtonWidgetBase_SetColorStyle final
+struct UGCBrowserWidget_SetSelectedItemVote final
 {
 public:
-	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFluUGCItemVote                               Vote;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ButtonWidgetBase_SetColorStyle;
+DUMPER7_ASSERTS_UGCBrowserWidget_SetSelectedItemVote;
 
-// Function BrickRigs.ButtonWidgetBase.SetCustomFocus
-// 0x0002 (0x0002 - 0x0000)
-struct ButtonWidgetBase_SetCustomFocus final
-{
-public:
-	bool                                          bNewUseCustomFocus;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNewFocused;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ButtonWidgetBase_SetCustomFocus;
-
-// Function BrickRigs.ButtonWidgetBase.SetHiddenWhileUnfocused
+// Function BrickRigs.UGCBrowserWidget.SpawnSelectedItem
 // 0x0001 (0x0001 - 0x0000)
-struct ButtonWidgetBase_SetHiddenWhileUnfocused final
+struct UGCBrowserWidget_SpawnSelectedItem final
 {
 public:
-	bool                                          bNewHidden;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReplaceCurrent;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ButtonWidgetBase_SetHiddenWhileUnfocused;
+DUMPER7_ASSERTS_UGCBrowserWidget_SpawnSelectedItem;
 
-// Function BrickRigs.ButtonWidgetBase.SetIsSelected
+// Function BrickRigs.UGCBrowserWidget.SubscribeSelectedItem
 // 0x0001 (0x0001 - 0x0000)
-struct ButtonWidgetBase_SetIsSelected final
+struct UGCBrowserWidget_SubscribeSelectedItem final
 {
 public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSubscribe;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ButtonWidgetBase_SetIsSelected;
+DUMPER7_ASSERTS_UGCBrowserWidget_SubscribeSelectedItem;
 
-// Function BrickRigs.ButtonWidgetBase.GetButtonStyleState
+// Function BrickRigs.UGCBrowserWidget.UploadItem
 // 0x0001 (0x0001 - 0x0000)
-struct ButtonWidgetBase_GetButtonStyleState final
+struct UGCBrowserWidget_UploadItem final
 {
 public:
-	EBrickUIStyleState                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateSelected;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ButtonWidgetBase_GetButtonStyleState;
+DUMPER7_ASSERTS_UGCBrowserWidget_UploadItem;
 
-// Function BrickRigs.ButtonWidgetBase.GetContentStyleState
-// 0x0001 (0x0001 - 0x0000)
-struct ButtonWidgetBase_GetContentStyleState final
+// Function BrickRigs.PhysicsConstraintConnection.OnConstraintBroken
+// 0x0004 (0x0004 - 0x0000)
+struct PhysicsConstraintConnection_OnConstraintBroken final
 {
 public:
-	EBrickUIStyleState                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ConstraintIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ButtonWidgetBase_GetContentStyleState;
+DUMPER7_ASSERTS_PhysicsConstraintConnection_OnConstraintBroken;
+
+// Function BrickRigs.BrickComboBoxWidget.AddItemContainerWidget
+// 0x0010 (0x0010 - 0x0000)
+struct BrickComboBoxWidget_AddItemContainerWidget final
+{
+public:
+	class UBrickComboBoxItemContainerWidget*      Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_AddItemContainerWidget;
+
+// Function BrickRigs.BrickComboBoxWidget.AddSelectedItemWidget
+// 0x0008 (0x0008 - 0x0000)
+struct BrickComboBoxWidget_AddSelectedItemWidget final
+{
+public:
+	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_AddSelectedItemWidget;
+
+// Function BrickRigs.BrickComboBoxWidget.InitItems
+// 0x0008 (0x0008 - 0x0000)
+struct BrickComboBoxWidget_InitItems final
+{
+public:
+	int32                                         InNumItems;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InSelectedItem;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_InitItems;
+
+// Function BrickRigs.BrickComboBoxWidget.InitItemsComplex
+// 0x0018 (0x0018 - 0x0000)
+struct BrickComboBoxWidget_InitItemsComplex final
+{
+public:
+	TArray<int32>                                 InItems;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         InSelectedItem;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_InitItemsComplex;
+
+// Function BrickRigs.BrickComboBoxWidget.OnComboBoxMenuItemSelected
+// 0x0008 (0x0008 - 0x0000)
+struct BrickComboBoxWidget_OnComboBoxMenuItemSelected final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_OnComboBoxMenuItemSelected;
+
+// Function BrickRigs.BrickComboBoxWidget.SetComboBoxExpanded
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxWidget_SetComboBoxExpanded final
+{
+public:
+	bool                                          bNewExpanded;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_SetComboBoxExpanded;
+
+// Function BrickRigs.BrickComboBoxWidget.SetMaxItemsPerRow
+// 0x0004 (0x0004 - 0x0000)
+struct BrickComboBoxWidget_SetMaxItemsPerRow final
+{
+public:
+	int32                                         InMaxItemsPerRow;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_SetMaxItemsPerRow;
+
+// Function BrickRigs.BrickComboBoxWidget.SetMaxListItems
+// 0x0004 (0x0004 - 0x0000)
+struct BrickComboBoxWidget_SetMaxListItems final
+{
+public:
+	int32                                         InMaxListItems;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_SetMaxListItems;
+
+// Function BrickRigs.BrickComboBoxWidget.SetSelectedItem
+// 0x0004 (0x0004 - 0x0000)
+struct BrickComboBoxWidget_SetSelectedItem final
+{
+public:
+	int32                                         InItem;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_SetSelectedItem;
+
+// Function BrickRigs.BrickComboBoxWidget.UpdateIsExpanded
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxWidget_UpdateIsExpanded final
+{
+public:
+	bool                                          bInIsExpanded;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_UpdateIsExpanded;
+
+// Function BrickRigs.BrickComboBoxWidget.UpdateUseItemList
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxWidget_UpdateUseItemList final
+{
+public:
+	bool                                          bInUseItemList;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_UpdateUseItemList;
+
+// Function BrickRigs.BrickComboBoxWidget.GetNumItems
+// 0x0004 (0x0004 - 0x0000)
+struct BrickComboBoxWidget_GetNumItems final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_GetNumItems;
+
+// Function BrickRigs.BrickComboBoxWidget.GetSelectedItem
+// 0x0004 (0x0004 - 0x0000)
+struct BrickComboBoxWidget_GetSelectedItem final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_GetSelectedItem;
+
+// Function BrickRigs.BrickComboBoxWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct BrickComboBoxWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_GetWidgetToFocus;
+
+// Function BrickRigs.BrickComboBoxWidget.IsComboBoxExpanded
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxWidget_IsComboBoxExpanded final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxWidget_IsComboBoxExpanded;
+
+// Function BrickRigs.BrickCheatManager.AddMoney
+// 0x0004 (0x0004 - 0x0000)
+struct BrickCheatManager_AddMoney final
+{
+public:
+	float                                         Amount;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickCheatManager_AddMoney;
+
+// Function BrickRigs.BrickCheatManager.AddScore
+// 0x0004 (0x0004 - 0x0000)
+struct BrickCheatManager_AddScore final
+{
+public:
+	float                                         Amount;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickCheatManager_AddScore;
 
 // Function BrickRigs.BrickEditorObject.GetBodyTransform
 // 0x0030 (0x0030 - 0x0000)
@@ -595,69 +644,6 @@ public:
 };
 DUMPER7_ASSERTS_BrickEditorObject_IsSpawned;
 
-// Function BrickRigs.InventoryContainerWidget.UpdateHasInventory
-// 0x0001 (0x0001 - 0x0000)
-struct InventoryContainerWidget_UpdateHasInventory final
-{
-public:
-	bool                                          bHasInventory;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InventoryContainerWidget_UpdateHasInventory;
-
-// Function BrickRigs.InventoryContainerWidget.UpdateOwnerMoney
-// 0x0004 (0x0004 - 0x0000)
-struct InventoryContainerWidget_UpdateOwnerMoney final
-{
-public:
-	float                                         NewMoney;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InventoryContainerWidget_UpdateOwnerMoney;
-
-// Function BrickRigs.BrickButtonWidget.AddContentWidget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickButtonWidget_AddContentWidget final
-{
-public:
-	class UWidget*                                InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickButtonWidget_AddContentWidget;
-
-// Function BrickRigs.BrickButtonWidget.SetContentHorizontalAlignment
-// 0x0001 (0x0001 - 0x0000)
-struct BrickButtonWidget_SetContentHorizontalAlignment final
-{
-public:
-	EHorizontalAlignment                          InAlignment;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickButtonWidget_SetContentHorizontalAlignment;
-
-// Function BrickRigs.BrickButtonWidget.SetContentPadding
-// 0x0010 (0x0010 - 0x0000)
-struct BrickButtonWidget_SetContentPadding final
-{
-public:
-	struct FMargin                                InPadding;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickButtonWidget_SetContentPadding;
-
-// Function BrickRigs.BrickButtonWidget.SetContentPaddingStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickButtonWidget_SetContentPaddingStyle final
-{
-public:
-	EBrickUIPaddingStyle                          InStyle;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickButtonWidget_SetContentPaddingStyle;
-
-// Function BrickRigs.BrickButtonWidget.SetContentVerticalAlignment
-// 0x0001 (0x0001 - 0x0000)
-struct BrickButtonWidget_SetContentVerticalAlignment final
-{
-public:
-	EVerticalAlignment                            InAlignment;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickButtonWidget_SetContentVerticalAlignment;
-
 // Function BrickRigs.Brick.ClusterConsumeFuel
 // 0x0008 (0x0008 - 0x0000)
 struct Brick_ClusterConsumeFuel final
@@ -688,12 +674,13 @@ public:
 DUMPER7_ASSERTS_Brick_Interact_PickUp;
 
 // Function BrickRigs.Brick.K2_RegisterInputChannel
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct Brick_K2_RegisterInputChannel final
 {
 public:
 	struct FVehicleInputChannel                   InputChannel;                                      // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FInputChannelChangedParams& Params_0)> Delegate;                     // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FInputChannelChangedParams& Params_0)> Delegate;                     // 0x0028(0x0014)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_Brick_K2_RegisterInputChannel;
 
@@ -926,6 +913,35 @@ public:
 };
 DUMPER7_ASSERTS_ActuatorBrick_Interact_Actuate;
 
+// Function BrickRigs.AdminLoginWidget.OnTextChanged
+// 0x0020 (0x0020 - 0x0000)
+struct AdminLoginWidget_OnTextChanged final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AdminLoginWidget_OnTextChanged;
+
+// Function BrickRigs.AdminLoginWidget.UpdateCanEverBeAdmin
+// 0x0001 (0x0001 - 0x0000)
+struct AdminLoginWidget_UpdateCanEverBeAdmin final
+{
+public:
+	bool                                          bCanBeAdmin;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AdminLoginWidget_UpdateCanEverBeAdmin;
+
+// Function BrickRigs.AdminLoginWidget.UpdateIsAdmin
+// 0x0001 (0x0001 - 0x0000)
+struct AdminLoginWidget_UpdateIsAdmin final
+{
+public:
+	bool                                          bNewIsAdmin;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AdminLoginWidget_UpdateIsAdmin;
+
 // Function BrickRigs.MenuPageWidget.StepBack
 // 0x0001 (0x0001 - 0x0000)
 struct MenuPageWidget_StepBack final
@@ -952,110 +968,6 @@ public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MenuPageWidget_GetWidgetToFocus;
-
-// Function BrickRigs.PopupParams.BindOnPopupClosedDelegate
-// 0x0010 (0x0010 - 0x0000)
-struct PopupParams_BindOnPopupClosedDelegate final
-{
-public:
-	TDelegate<void(EPopupResult Result)>          Delegate;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupParams_BindOnPopupClosedDelegate;
-
-// Function BrickRigs.PopupParams.OnPopupClosed
-// 0x0001 (0x0001 - 0x0000)
-struct PopupParams_OnPopupClosed final
-{
-public:
-	EPopupResult                                  Result;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupParams_OnPopupClosed;
-
-// Function BrickRigs.PopupParams.GetOwningPlayer
-// 0x0008 (0x0008 - 0x0000)
-struct PopupParams_GetOwningPlayer final
-{
-public:
-	class ABasePlayerController*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupParams_GetOwningPlayer;
-
-// Function BrickRigs.BrickCheatManager.AddMoney
-// 0x0004 (0x0004 - 0x0000)
-struct BrickCheatManager_AddMoney final
-{
-public:
-	float                                         Amount;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickCheatManager_AddMoney;
-
-// Function BrickRigs.BrickCheatManager.AddScore
-// 0x0004 (0x0004 - 0x0000)
-struct BrickCheatManager_AddScore final
-{
-public:
-	float                                         Amount;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickCheatManager_AddScore;
-
-// Function BrickRigs.PropertyWidget.UpdateIsReadOnly
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyWidget_UpdateIsReadOnly final
-{
-public:
-	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyWidget_UpdateIsReadOnly;
-
-// Function BrickRigs.PropertyWidget.GetFocusedSubProperty
-// 0x0010 (0x0010 - 0x0000)
-struct PropertyWidget_GetFocusedSubProperty final
-{
-public:
-	struct FWidgetPathWrapper                     WidgetPath;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyWidget_GetFocusedSubProperty;
-
-// Function BrickRigs.PropertyWidget.GetPropertyContainerWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PropertyWidget_GetPropertyContainerWidget final
-{
-public:
-	class UPropertyContainerWidget*               ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyWidget_GetPropertyContainerWidget;
-
-// Function BrickRigs.PropertyWidget.IsReadOnly
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyWidget_IsReadOnly final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyWidget_IsReadOnly;
-
-// Function BrickRigs.ObjectPropertyWidget.InitializeItem
-// 0x0148 (0x0148 - 0x0000)
-struct ObjectPropertyWidget_InitializeItem final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ObjectPropertyWidget_InitializeItem;
-
-// Function BrickRigs.ObjectPropertyWidget.OnItemSelected
-// 0x0008 (0x0008 - 0x0000)
-struct ObjectPropertyWidget_OnItemSelected final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ObjectPropertyWidget_OnItemSelected;
 
 // Function BrickRigs.AdminMenuWidget.OnListEntrySelected
 // 0x0010 (0x0010 - 0x0000)
@@ -1095,49 +1007,6 @@ public:
 };
 DUMPER7_ASSERTS_AdminMenuWidget_UpdateHasSelectedKick;
 
-// Function BrickRigs.BrickEditorInterfaceComponent.FocusCameraOnBrickEditorObjects
-// 0x0060 (0x0060 - 0x0000)
-struct BrickEditorInterfaceComponent_FocusCameraOnBrickEditorObjects final
-{
-public:
-	TArray<class UBrickEditorObject*>             Objects;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTransform                             CameraTransform;                                   // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              FOV;                                               // 0x0040(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Margin;                                            // 0x0048(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x004C(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickEditorInterfaceComponent_FocusCameraOnBrickEditorObjects;
-
-// Function BrickRigs.BrickUserWidget.GetTooltipContent
-// 0x0048 (0x0048 - 0x0000)
-struct BrickUserWidget_GetTooltipContent final
-{
-public:
-	struct FTooltipContent                        OutContent;                                        // 0x0000(0x0040)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickUserWidget_GetTooltipContent;
-
-// Function BrickRigs.BrickUserWidget.InitializeTooltip
-// 0x0008 (0x0008 - 0x0000)
-struct BrickUserWidget_InitializeTooltip final
-{
-public:
-	class UTooltipWidget*                         Tooltip;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserWidget_InitializeTooltip;
-
-// Function BrickRigs.BrickUserWidget.GetTooltipClass
-// 0x0008 (0x0008 - 0x0000)
-struct BrickUserWidget_GetTooltipClass final
-{
-public:
-	class UClass*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserWidget_GetTooltipClass;
-
 // Function BrickRigs.InventoryItem.GetInteractionOptions
 // 0x0070 (0x0070 - 0x0000)
 struct InventoryItem_GetInteractionOptions final
@@ -1158,12 +1027,13 @@ public:
 DUMPER7_ASSERTS_InventoryItem_Interact_PickUp;
 
 // Function BrickRigs.InventoryItem.OnStaticMeshSleep
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct InventoryItem_OnStaticMeshSleep final
 {
 public:
 	class UPrimitiveComponent*                    Primitive;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InventoryItem_OnStaticMeshSleep;
 
@@ -1311,707 +1181,60 @@ public:
 };
 DUMPER7_ASSERTS_InventoryItem_UpdateThumbnailMID;
 
-// Function BrickRigs.BrickComboBoxItemContainerWidget.AddItemWidget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickComboBoxItemContainerWidget_AddItemWidget final
-{
-public:
-	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_AddItemWidget;
-
-// Function BrickRigs.BrickComboBoxItemContainerWidget.OnUpdateButtonContentStyle
-// 0x0002 (0x0002 - 0x0000)
-struct BrickComboBoxItemContainerWidget_OnUpdateButtonContentStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_OnUpdateButtonContentStyle;
-
-// Function BrickRigs.BrickComboBoxItemContainerWidget.UpdateIsSelected
+// Function BrickRigs.BrickTextBlock.SetColorStyle
 // 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxItemContainerWidget_UpdateIsSelected final
+struct BrickTextBlock_SetColorStyle final
 {
 public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_UpdateIsSelected;
+DUMPER7_ASSERTS_BrickTextBlock_SetColorStyle;
 
-// Function BrickRigs.BrickComboBoxItemContainerWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct BrickComboBoxItemContainerWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_GetWidgetToFocus;
-
-// Function BrickRigs.MapWidget.OnMeasurementSystemChanged
+// Function BrickRigs.BrickTextBlock.SetStyleState
 // 0x0001 (0x0001 - 0x0000)
-struct MapWidget_OnMeasurementSystemChanged final
+struct BrickTextBlock_SetStyleState final
 {
 public:
-	EMeasurementSystem                            NewSystem;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MapWidget_OnMeasurementSystemChanged;
+DUMPER7_ASSERTS_BrickTextBlock_SetStyleState;
 
-// Function BrickRigs.MapWidget.ResetPanAndZoom
+// Function BrickRigs.BrickTextBlock.SetTextStyle
 // 0x0001 (0x0001 - 0x0000)
-struct MapWidget_ResetPanAndZoom final
+struct BrickTextBlock_SetTextStyle final
 {
 public:
-	bool                                          bInitialize;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUITextStyle                             NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MapWidget_ResetPanAndZoom;
+DUMPER7_ASSERTS_BrickTextBlock_SetTextStyle;
 
-// Function BrickRigs.MapWidget.UpdateViewportPannedOrZoomed
-// 0x0001 (0x0001 - 0x0000)
-struct MapWidget_UpdateViewportPannedOrZoomed final
-{
-public:
-	bool                                          bValue;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MapWidget_UpdateViewportPannedOrZoomed;
-
-// Function BrickRigs.MapWidget.CreateMapMID
-// 0x0008 (0x0008 - 0x0000)
-struct MapWidget_CreateMapMID final
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MapWidget_CreateMapMID;
-
-// Function BrickRigs.MapWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct MapWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MapWidget_GetWidgetToFocus;
-
-// Function BrickRigs.BrickComboBoxItemWidget.InitializeItem
-// 0x0148 (0x0148 - 0x0000)
-struct BrickComboBoxItemWidget_InitializeItem final
-{
-public:
-	int32                                         InItem;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               Params_0;                                          // 0x0008(0x0140)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemWidget_InitializeItem;
-
-// Function BrickRigs.BrickComboBoxItemWidget.UpdateIconVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxItemWidget_UpdateIconVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemWidget_UpdateIconVisibility;
-
-// Function BrickRigs.BrickComboBoxItemWidget.UpdateItemStyle
-// 0x0002 (0x0002 - 0x0000)
-struct BrickComboBoxItemWidget_UpdateItemStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InStyleState;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemWidget_UpdateItemStyle;
-
-// Function BrickRigs.BrickComboBoxItemWidget.UpdateTextVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxItemWidget_UpdateTextVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxItemWidget_UpdateTextVisibility;
-
-// Function BrickRigs.MenuAnchorWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct MenuAnchorWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuAnchorWidget_GetWidgetToFocus;
-
-// Function BrickRigs.BuildingPart.Fill
-// 0x0001 (0x0001 - 0x0000)
-struct BuildingPart_Fill final
-{
-public:
-	uint8                                         MeshIdx;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuildingPart_Fill;
-
-// Function BrickRigs.BuildingPart.Floor
-// 0x0008 (0x0008 - 0x0000)
-struct BuildingPart_Floor final
-{
-public:
-	int32                                         Floor_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         MeshIdx;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BuildingPart_Floor;
-
-// Function BrickRigs.BuildingPart.Grid
-// 0x0008 (0x0008 - 0x0000)
-struct BuildingPart_Grid final
-{
-public:
-	int32                                         Dist;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         MeshIdx;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BuildingPart_Grid;
-
-// Function BrickRigs.BuildingPart.Place
+// Function BrickRigs.BrickWorldSettings.Get
 // 0x0010 (0x0010 - 0x0000)
-struct BuildingPart_Place final
+struct BrickWorldSettings_Get final
 {
 public:
-	EBuildingSide                                 Side;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Floor;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Position;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         MeshIdx;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABrickWorldSettings*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BuildingPart_Place;
+DUMPER7_ASSERTS_BrickWorldSettings_Get;
 
-// Function BrickRigs.BuildingPart.Rect
-// 0x0018 (0x0018 - 0x0000)
-struct BuildingPart_Rect final
-{
-public:
-	EBuildingSide                                 Side;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         StartFloor;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EndFloor;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StartPosition;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EndPosition;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         MeshIdx;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BuildingPart_Rect;
-
-// Function BrickRigs.BrickComboBoxWidget.AddItemContainerWidget
-// 0x0010 (0x0010 - 0x0000)
-struct BrickComboBoxWidget_AddItemContainerWidget final
-{
-public:
-	class UBrickComboBoxItemContainerWidget*      Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_AddItemContainerWidget;
-
-// Function BrickRigs.BrickComboBoxWidget.AddSelectedItemWidget
+// Function BrickRigs.BrickWorldSettings.AddHeatSeekingTarget
 // 0x0008 (0x0008 - 0x0000)
-struct BrickComboBoxWidget_AddSelectedItemWidget final
+struct BrickWorldSettings_AddHeatSeekingTarget final
 {
 public:
-	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BrickComboBoxWidget_AddSelectedItemWidget;
+DUMPER7_ASSERTS_BrickWorldSettings_AddHeatSeekingTarget;
 
-// Function BrickRigs.BrickComboBoxWidget.InitItems
+// Function BrickRigs.BrickWorldSettings.RemoveHeatSeekingTarget
 // 0x0008 (0x0008 - 0x0000)
-struct BrickComboBoxWidget_InitItems final
+struct BrickWorldSettings_RemoveHeatSeekingTarget final
 {
 public:
-	int32                                         InNumItems;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InSelectedItem;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BrickComboBoxWidget_InitItems;
-
-// Function BrickRigs.BrickComboBoxWidget.InitItemsComplex
-// 0x0018 (0x0018 - 0x0000)
-struct BrickComboBoxWidget_InitItemsComplex final
-{
-public:
-	TArray<int32>                                 InItems;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         InSelectedItem;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_InitItemsComplex;
-
-// Function BrickRigs.BrickComboBoxWidget.OnComboBoxMenuItemSelected
-// 0x0008 (0x0008 - 0x0000)
-struct BrickComboBoxWidget_OnComboBoxMenuItemSelected final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_OnComboBoxMenuItemSelected;
-
-// Function BrickRigs.BrickComboBoxWidget.SetComboBoxExpanded
-// 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxWidget_SetComboBoxExpanded final
-{
-public:
-	bool                                          bNewExpanded;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_SetComboBoxExpanded;
-
-// Function BrickRigs.BrickComboBoxWidget.SetMaxItemsPerRow
-// 0x0004 (0x0004 - 0x0000)
-struct BrickComboBoxWidget_SetMaxItemsPerRow final
-{
-public:
-	int32                                         InMaxItemsPerRow;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_SetMaxItemsPerRow;
-
-// Function BrickRigs.BrickComboBoxWidget.SetMaxListItems
-// 0x0004 (0x0004 - 0x0000)
-struct BrickComboBoxWidget_SetMaxListItems final
-{
-public:
-	int32                                         InMaxListItems;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_SetMaxListItems;
-
-// Function BrickRigs.BrickComboBoxWidget.SetSelectedItem
-// 0x0004 (0x0004 - 0x0000)
-struct BrickComboBoxWidget_SetSelectedItem final
-{
-public:
-	int32                                         InItem;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_SetSelectedItem;
-
-// Function BrickRigs.BrickComboBoxWidget.UpdateIsExpanded
-// 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxWidget_UpdateIsExpanded final
-{
-public:
-	bool                                          bInIsExpanded;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_UpdateIsExpanded;
-
-// Function BrickRigs.BrickComboBoxWidget.UpdateUseItemList
-// 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxWidget_UpdateUseItemList final
-{
-public:
-	bool                                          bInUseItemList;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_UpdateUseItemList;
-
-// Function BrickRigs.BrickComboBoxWidget.GetNumItems
-// 0x0004 (0x0004 - 0x0000)
-struct BrickComboBoxWidget_GetNumItems final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_GetNumItems;
-
-// Function BrickRigs.BrickComboBoxWidget.GetSelectedItem
-// 0x0004 (0x0004 - 0x0000)
-struct BrickComboBoxWidget_GetSelectedItem final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_GetSelectedItem;
-
-// Function BrickRigs.BrickComboBoxWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct BrickComboBoxWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_GetWidgetToFocus;
-
-// Function BrickRigs.BrickComboBoxWidget.IsComboBoxExpanded
-// 0x0001 (0x0001 - 0x0000)
-struct BrickComboBoxWidget_IsComboBoxExpanded final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickComboBoxWidget_IsComboBoxExpanded;
-
-// Function BrickRigs.BrickVehicle.BindOnVehicleConstructed
-// 0x0010 (0x0010 - 0x0000)
-struct BrickVehicle_BindOnVehicleConstructed final
-{
-public:
-	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_BindOnVehicleConstructed;
-
-// Function BrickRigs.BrickVehicle.ConstructVehicle
-// 0x0100 (0x0100 - 0x0000)
-struct BrickVehicle_ConstructVehicle final
-{
-public:
-	struct FUGCFileInfo                           InFileInfo;                                        // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class AActor*                                 InSpawnPoint;                                      // 0x00E8(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABrickPlayerController*                 InSpawningPC;                                      // 0x00F0(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAvoidCollision;                                   // 0x00F8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickVehicle_ConstructVehicle;
-
-// Function BrickRigs.BrickVehicle.Interact_EnterVehicle
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_Interact_EnterVehicle final
-{
-public:
-	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_Interact_EnterVehicle;
-
-// Function BrickRigs.BrickVehicle.Interact_ScrapVehicleFromInteraction
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_Interact_ScrapVehicleFromInteraction final
-{
-public:
-	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_Interact_ScrapVehicleFromInteraction;
-
-// Function BrickRigs.BrickVehicle.Interact_ScrapVehicleFromMap
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_Interact_ScrapVehicleFromMap final
-{
-public:
-	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_Interact_ScrapVehicleFromMap;
-
-// Function BrickRigs.BrickVehicle.PlayHandlingSound
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_PlayHandlingSound final
-{
-public:
-	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_PlayHandlingSound;
-
-// Function BrickRigs.BrickVehicle.RepairVehicle
-// 0x0028 (0x0028 - 0x0000)
-struct BrickVehicle_RepairVehicle final
-{
-public:
-	struct FVector                                InLocation;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               InRotation;                                        // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class AActor*                                 InSpawnPoint;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAvoidCollision;                                   // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRepair;                                           // 0x0021(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickVehicle_RepairVehicle;
-
-// Function BrickRigs.BrickVehicle.ServerApplySeatCollisionDamage
-// 0x000C (0x000C - 0x0000)
-struct BrickVehicle_ServerApplySeatCollisionDamage final
-{
-public:
-	struct FBrickEditorObjectID                   SeatID;                                            // 0x0000(0x0002)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DamageAmount;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0008(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickVehicle_ServerApplySeatCollisionDamage;
-
-// Function BrickRigs.BrickVehicle.ServerExplodeTankBricks
-// 0x0018 (0x0018 - 0x0000)
-struct BrickVehicle_ServerExplodeTankBricks final
-{
-public:
-	TArray<struct FBrickEditorObjectID>           Tanks;                                             // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0010(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickVehicle_ServerExplodeTankBricks;
-
-// Function BrickRigs.BrickVehicle.ServerOnBrokeDestructibleInstances
-// 0x0020 (0x0020 - 0x0000)
-struct BrickVehicle_ServerOnBrokeDestructibleInstances final
-{
-public:
-	class UDestructibleInstancesComponent*        Comp;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint16>                                Instances;                                         // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0018(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickVehicle_ServerOnBrokeDestructibleInstances;
-
-// Function BrickRigs.BrickVehicle.SetFuelLevel
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_SetFuelLevel final
-{
-public:
-	float                                         NewLevel;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_SetFuelLevel;
-
-// Function BrickRigs.BrickVehicle.SetPinMode
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVehicle_SetPinMode final
-{
-public:
-	EVehiclePinMode                               NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_SetPinMode;
-
-// Function BrickRigs.BrickVehicle.SetRelativeFuelLevel
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_SetRelativeFuelLevel final
-{
-public:
-	float                                         NewLevel;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_SetRelativeFuelLevel;
-
-// Function BrickRigs.BrickVehicle.GetAmmo
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_GetAmmo final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetAmmo;
-
-// Function BrickRigs.BrickVehicle.GetAmmoCapacity
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_GetAmmoCapacity final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetAmmoCapacity;
-
-// Function BrickRigs.BrickVehicle.GetBricks
-// 0x0010 (0x0010 - 0x0000)
-struct BrickVehicle_GetBricks final
-{
-public:
-	TArray<class UBrick*>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetBricks;
-
-// Function BrickRigs.BrickVehicle.GetCameras
-// 0x0010 (0x0010 - 0x0000)
-struct BrickVehicle_GetCameras final
-{
-public:
-	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetCameras;
-
-// Function BrickRigs.BrickVehicle.GetDriverCharacter
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetDriverCharacter final
-{
-public:
-	class ABrickCharacter*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetDriverCharacter;
-
-// Function BrickRigs.BrickVehicle.GetDriverSeat
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetDriverSeat final
-{
-public:
-	class USeatBrick*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetDriverSeat;
-
-// Function BrickRigs.BrickVehicle.GetFuelCapacity
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_GetFuelCapacity final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetFuelCapacity;
-
-// Function BrickRigs.BrickVehicle.GetFuelLevel
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_GetFuelLevel final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetFuelLevel;
-
-// Function BrickRigs.BrickVehicle.GetGuns
-// 0x0010 (0x0010 - 0x0000)
-struct BrickVehicle_GetGuns final
-{
-public:
-	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetGuns;
-
-// Function BrickRigs.BrickVehicle.GetInventoryComponent
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetInventoryComponent final
-{
-public:
-	class UInventoryComponent*                    ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetInventoryComponent;
-
-// Function BrickRigs.BrickVehicle.GetNumPassengers
-// 0x0004 (0x0004 - 0x0000)
-struct BrickVehicle_GetNumPassengers final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetNumPassengers;
-
-// Function BrickRigs.BrickVehicle.GetPassengers
-// 0x0010 (0x0010 - 0x0000)
-struct BrickVehicle_GetPassengers final
-{
-public:
-	TArray<class ABrickCharacter*>                OutPassengers;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetPassengers;
-
-// Function BrickRigs.BrickVehicle.GetPinMode
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVehicle_GetPinMode final
-{
-public:
-	EVehiclePinMode                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetPinMode;
-
-// Function BrickRigs.BrickVehicle.GetRootBrick
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetRootBrick final
-{
-public:
-	class UBrick*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetRootBrick;
-
-// Function BrickRigs.BrickVehicle.GetSeats
-// 0x0010 (0x0010 - 0x0000)
-struct BrickVehicle_GetSeats final
-{
-public:
-	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetSeats;
-
-// Function BrickRigs.BrickVehicle.GetSpawningPlayerState
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetSpawningPlayerState final
-{
-public:
-	class ABrickPlayerState*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetSpawningPlayerState;
-
-// Function BrickRigs.BrickVehicle.GetStaticInfo
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetStaticInfo final
-{
-public:
-	const class UBrickVehicleStaticInfo*          ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetStaticInfo;
-
-// Function BrickRigs.BrickVehicle.GetVehicleComponent
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetVehicleComponent final
-{
-public:
-	class UBrickVehicleComponent*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetVehicleComponent;
-
-// Function BrickRigs.BrickVehicle.GetVehicleDisplayName
-// 0x0018 (0x0018 - 0x0000)
-struct BrickVehicle_GetVehicleDisplayName final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetVehicleDisplayName;
-
-// Function BrickRigs.BrickVehicle.GetVehicleFileInfo
-// 0x00E8 (0x00E8 - 0x0000)
-struct BrickVehicle_GetVehicleFileInfo final
-{
-public:
-	struct FUGCFileInfo                           ReturnValue;                                       // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetVehicleFileInfo;
-
-// Function BrickRigs.BrickVehicle.GetViewedSeat
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetViewedSeat final
-{
-public:
-	class USeatBrick*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetViewedSeat;
-
-// Function BrickRigs.BrickVehicle.GetViewTargetCamera
-// 0x0008 (0x0008 - 0x0000)
-struct BrickVehicle_GetViewTargetCamera final
-{
-public:
-	class UCameraBrick*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_GetViewTargetCamera;
-
-// Function BrickRigs.BrickVehicle.HasVisibleSeat
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVehicle_HasVisibleSeat final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_HasVisibleSeat;
-
-// Function BrickRigs.BrickVehicle.IsInteracting
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVehicle_IsInteracting final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_IsInteracting;
-
-// Function BrickRigs.BrickVehicle.IsVehicleBeingConstructed
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVehicle_IsVehicleBeingConstructed final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_IsVehicleBeingConstructed;
-
-// Function BrickRigs.BrickVehicle.IsVehicleConstructed
-// 0x0001 (0x0001 - 0x0000)
-struct BrickVehicle_IsVehicleConstructed final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickVehicle_IsVehicleConstructed;
+DUMPER7_ASSERTS_BrickWorldSettings_RemoveHeatSeekingTarget;
 
 // Function BrickRigs.Attachment.GetFirearm
 // 0x0008 (0x0008 - 0x0000)
@@ -2022,258 +1245,246 @@ public:
 };
 DUMPER7_ASSERTS_Attachment_GetFirearm;
 
-// Function BrickRigs.PhysicsConstraintConnection.OnConstraintBroken
-// 0x0004 (0x0004 - 0x0000)
-struct PhysicsConstraintConnection_OnConstraintBroken final
+// Function BrickRigs.BrickUserSettings.GetUserSettings
+// 0x0008 (0x0008 - 0x0000)
+struct BrickUserSettings_GetUserSettings final
 {
 public:
-	int32                                         ConstraintIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBrickUserSettings*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PhysicsConstraintConnection_OnConstraintBroken;
+DUMPER7_ASSERTS_BrickUserSettings_GetUserSettings;
 
-// Function BrickRigs.MenuButtonPanelWidget.ClearButtons
+// Function BrickRigs.BrickUserSettings.SetBrickUnitsDisplayMode
 // 0x0001 (0x0001 - 0x0000)
-struct MenuButtonPanelWidget_ClearButtons final
+struct BrickUserSettings_SetBrickUnitsDisplayMode final
 {
 public:
-	bool                                          bManualRemove;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUnitsDisplayMode                        NewMode;                                           // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuButtonPanelWidget_ClearButtons;
+DUMPER7_ASSERTS_BrickUserSettings_SetBrickUnitsDisplayMode;
 
-// Function BrickRigs.MenuButtonPanelWidget.CreateButton
+// Function BrickRigs.BrickUserSettings.SetColorDisplayMode
+// 0x0001 (0x0001 - 0x0000)
+struct BrickUserSettings_SetColorDisplayMode final
+{
+public:
+	EColorDisplayMode                             NewMode;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickUserSettings_SetColorDisplayMode;
+
+// Function BrickRigs.BrickUserSettings.GetBrickUnitsDisplayMode
+// 0x0001 (0x0001 - 0x0000)
+struct BrickUserSettings_GetBrickUnitsDisplayMode final
+{
+public:
+	EBrickUnitsDisplayMode                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickUserSettings_GetBrickUnitsDisplayMode;
+
+// Function BrickRigs.BrickUserSettings.GetColorDisplayMode
+// 0x0001 (0x0001 - 0x0000)
+struct BrickUserSettings_GetColorDisplayMode final
+{
+public:
+	EColorDisplayMode                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickUserSettings_GetColorDisplayMode;
+
+// Function BrickRigs.BrickStatics.ColorToHex
+// 0x0028 (0x0028 - 0x0000)
+struct BrickStatics_ColorToHex final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeAlpha;                                     // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_ColorToHex;
+
+// Function BrickRigs.BrickStatics.CreateUniqueNetId
+// 0x0048 (0x0048 - 0x0000)
+struct BrickStatics_CreateUniqueNetId final
+{
+public:
+	class FName                                   OSSName;                                           // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Str;                                               // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0020(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_CreateUniqueNetId;
+
+// Function BrickRigs.BrickStatics.ExtinguishActor
+// 0x0094 (0x0094 - 0x0000)
+struct BrickStatics_ExtinguishActor final
+{
+public:
+	struct FHitResult                             Hit;                                               // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickStatics_ExtinguishActor;
+
+// Function BrickRigs.BrickStatics.GetPlayerUniqueNetId
+// 0x0030 (0x0030 - 0x0000)
+struct BrickStatics_GetPlayerUniqueNetId final
+{
+public:
+	const class APlayerController*                PC;                                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_GetPlayerUniqueNetId;
+
+// Function BrickRigs.BrickStatics.GetProjectVersion
+// 0x0010 (0x0010 - 0x0000)
+struct BrickStatics_GetProjectVersion final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_GetProjectVersion;
+
+// Function BrickRigs.BrickStatics.GetScalableBrickConnectorSpacingAxis
+// 0x0004 (0x0004 - 0x0000)
+struct BrickStatics_GetScalableBrickConnectorSpacingAxis final
+{
+public:
+	struct FScalableBrickConnectorSpacing         ConnectorSpacing;                                  // 0x0000(0x0002)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EFluAxisSigned                                Axis;                                              // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EConnectorSpacing                             ReturnValue;                                       // 0x0003(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_GetScalableBrickConnectorSpacingAxis;
+
+// Function BrickRigs.BrickStatics.HexToColor
+// 0x0020 (0x0020 - 0x0000)
+struct BrickStatics_HexToColor final
+{
+public:
+	class FString                                 Hex;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_HexToColor;
+
+// Function BrickRigs.BrickStatics.IsModdedAsset
+// 0x0010 (0x0010 - 0x0000)
+struct BrickStatics_IsModdedAsset final
+{
+public:
+	const class UObject*                          Asset;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickStatics_IsModdedAsset;
+
+// Function BrickRigs.BrickStatics.SetActorOnFire
+// 0x00A8 (0x00A8 - 0x0000)
+struct BrickStatics_SetActorOnFire final
+{
+public:
+	struct FHitResult                             Hit;                                               // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class APawn*                                  Instigator;                                        // 0x0090(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 DamageCauser;                                      // 0x0098(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickStatics_SetActorOnFire;
+
+// Function BrickRigs.BrickStatics.SetScalableBrickConnectorSpacingAxis
+// 0x0004 (0x0004 - 0x0000)
+struct BrickStatics_SetScalableBrickConnectorSpacingAxis final
+{
+public:
+	struct FScalableBrickConnectorSpacing         ConnectorSpacing;                                  // 0x0000(0x0002)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EFluAxisSigned                                Axis;                                              // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EConnectorSpacing                             NewSpacing;                                        // 0x0003(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickStatics_SetScalableBrickConnectorSpacingAxis;
+
+// Function BrickRigs.BrickStatics.ShowPlayerProfileUI
 // 0x0038 (0x0038 - 0x0000)
-struct MenuButtonPanelWidget_CreateButton final
+struct BrickStatics_ShowPlayerProfileUI final
 {
 public:
-	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	int32                                         IconIndex;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             Delegate;                                          // 0x001C(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	const class APlayerController*                OwnPC;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickStatics_ShowPlayerProfileUI;
+
+// Function BrickRigs.BrickStatics.SpawnExplosion
+// 0x0050 (0x0050 - 0x0000)
+struct BrickStatics_SpawnExplosion final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UExplosiveMaterial>         ExplosiveMaterial;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Volume;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0014(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  Instigator;                                        // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 DamageCauser;                                      // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UPrimitiveComponent*>            ComponentsToIgnore;                                // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuButtonPanelWidget_CreateButton;
+DUMPER7_ASSERTS_BrickStatics_SpawnExplosion;
 
-// Function BrickRigs.MenuButtonPanelWidget.SetNumButtonsPerRow
-// 0x0004 (0x0004 - 0x0000)
-struct MenuButtonPanelWidget_SetNumButtonsPerRow final
+// Function BrickRigs.BrickStatics.SpreadFire
+// 0x0070 (0x0070 - 0x0000)
+struct BrickStatics_SpreadFire final
 {
 public:
-	int32                                         NewNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsMin;                                         // 0x0040(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsMax;                                         // 0x004C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpreadDistance;                                    // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpreadProbability;                                 // 0x005C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MenuButtonPanelWidget_SetNumButtonsPerRow;
+DUMPER7_ASSERTS_BrickStatics_SpreadFire;
 
-// Function BrickRigs.MenuButtonPanelWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct MenuButtonPanelWidget_GetWidgetToFocus final
+// Function BrickRigs.BrickStatics.UniqueNetIdToString
+// 0x0038 (0x0038 - 0x0000)
+struct BrickStatics_UniqueNetIdToString final
 {
 public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UniqueNetId;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuButtonPanelWidget_GetWidgetToFocus;
+DUMPER7_ASSERTS_BrickStatics_UniqueNetIdToString;
 
-// Function BrickRigs.BrickProjectile.OnRep_SeekingTarget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickProjectile_OnRep_SeekingTarget final
-{
-public:
-	class AActor*                                 OldTarget;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickProjectile_OnRep_SeekingTarget;
-
-// Function BrickRigs.MapCrosshairWidget.SetColorStyle
+// Function BrickRigs.BrickVerticalBox.SetSlotSpacingStyle
 // 0x0001 (0x0001 - 0x0000)
-struct MapCrosshairWidget_SetColorStyle final
+struct BrickVerticalBox_SetSlotSpacingStyle final
 {
 public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUISpacingStyle                          NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MapCrosshairWidget_SetColorStyle;
+DUMPER7_ASSERTS_BrickVerticalBox_SetSlotSpacingStyle;
 
-// Function BrickRigs.MapCrosshairWidget.SetStyleState
+// Function BrickRigs.PagedListEntryWidget.UpdateButtonSelected
 // 0x0001 (0x0001 - 0x0000)
-struct MapCrosshairWidget_SetStyleState final
-{
-public:
-	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MapCrosshairWidget_SetStyleState;
-
-// Function BrickRigs.InputActionCategoryWidget.InitializeCategory
-// 0x0018 (0x0018 - 0x0000)
-struct InputActionCategoryWidget_InitializeCategory final
-{
-public:
-	class FText                                   InCategoryName;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputActionCategoryWidget_InitializeCategory;
-
-// Function BrickRigs.InputActionCategoryWidget.UpdateInputActionListMode
-// 0x0001 (0x0001 - 0x0000)
-struct InputActionCategoryWidget_UpdateInputActionListMode final
-{
-public:
-	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputActionCategoryWidget_UpdateInputActionListMode;
-
-// Function BrickRigs.InputActionCategoryWidget.UpdateIsSelected
-// 0x0001 (0x0001 - 0x0000)
-struct InputActionCategoryWidget_UpdateIsSelected final
+struct PagedListEntryWidget_UpdateButtonSelected final
 {
 public:
 	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_InputActionCategoryWidget_UpdateIsSelected;
+DUMPER7_ASSERTS_PagedListEntryWidget_UpdateButtonSelected;
 
-// Function BrickRigs.InputActionCategoryWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct InputActionCategoryWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputActionCategoryWidget_GetWidgetToFocus;
-
-// Function BrickRigs.BaseCharacter.ClientOnReceivedDamage
-// 0x000C (0x000C - 0x0000)
-struct BaseCharacter_ClientOnReceivedDamage final
-{
-public:
-	struct FCharacterDamageInfo                   DamageInfo;                                        // 0x0000(0x000C)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_ClientOnReceivedDamage;
-
-// Function BrickRigs.BaseCharacter.Interact_Possess
-// 0x0008 (0x0008 - 0x0000)
-struct BaseCharacter_Interact_Possess final
-{
-public:
-	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_Interact_Possess;
-
-// Function BrickRigs.BaseCharacter.IsPerformingMeleeAction
-// 0x0001 (0x0001 - 0x0000)
-struct BaseCharacter_IsPerformingMeleeAction final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_IsPerformingMeleeAction;
-
-// Function BrickRigs.BaseCharacter.OnMeshHit
-// 0x00B0 (0x00B0 - 0x0000)
-struct BaseCharacter_OnMeshHit final
-{
-public:
-	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                NormalImpulse;                                     // 0x0018(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             Hit;                                               // 0x0024(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BaseCharacter_OnMeshHit;
-
-// Function BrickRigs.BaseCharacter.PerformMeleeAction
-// 0x0001 (0x0001 - 0x0000)
-struct BaseCharacter_PerformMeleeAction final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_PerformMeleeAction;
-
-// Function BrickRigs.BaseCharacter.ServerAcknowledgeRestartTransform
-// 0x0001 (0x0001 - 0x0000)
-struct BaseCharacter_ServerAcknowledgeRestartTransform final
-{
-public:
-	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0000(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_ServerAcknowledgeRestartTransform;
-
-// Function BrickRigs.BaseCharacter.ServerMoveInventoryItems
-// 0x003C (0x003C - 0x0000)
-struct BaseCharacter_ServerMoveInventoryItems final
-{
-public:
-	struct FMoveInventoryItemParams               Params_0;                                          // 0x0000(0x0024)(ConstParm, Parm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FPlayerViewPoint                       ViewPoint;                                         // 0x0024(0x0018)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_ServerMoveInventoryItems;
-
-// Function BrickRigs.BaseCharacter.IsConscious
-// 0x0001 (0x0001 - 0x0000)
-struct BaseCharacter_IsConscious final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseCharacter_IsConscious;
-
-// Function BrickRigs.BaseInputComponent.LookRight
+// Function BrickRigs.UGCItemWidget.UpdateItemWidget
 // 0x0004 (0x0004 - 0x0000)
-struct BaseInputComponent_LookRight final
+struct UGCItemWidget_UpdateItemWidget final
 {
 public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsSelected;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsLegacyFile;                                   // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInHasAutoSave;                                    // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsDedicatedAutoSave;                            // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BaseInputComponent_LookRight;
-
-// Function BrickRigs.BaseInputComponent.LookUp
-// 0x0004 (0x0004 - 0x0000)
-struct BaseInputComponent_LookUp final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseInputComponent_LookUp;
-
-// Function BrickRigs.BaseInputComponent.MouseMoveRight
-// 0x0004 (0x0004 - 0x0000)
-struct BaseInputComponent_MouseMoveRight final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseInputComponent_MouseMoveRight;
-
-// Function BrickRigs.BaseInputComponent.MouseMoveUp
-// 0x0004 (0x0004 - 0x0000)
-struct BaseInputComponent_MouseMoveUp final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseInputComponent_MouseMoveUp;
-
-// Function BrickRigs.BaseInputComponent.SpeedUp
-// 0x0004 (0x0004 - 0x0000)
-struct BaseInputComponent_SpeedUp final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseInputComponent_SpeedUp;
-
-// Function BrickRigs.BaseInputComponent.ZoomIn
-// 0x0004 (0x0004 - 0x0000)
-struct BaseInputComponent_ZoomIn final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseInputComponent_ZoomIn;
-
-// Function BrickRigs.BaseInputComponent.GetCycleHUDVisibilityValueText
-// 0x0018 (0x0018 - 0x0000)
-struct BaseInputComponent_GetCycleHUDVisibilityValueText final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseInputComponent_GetCycleHUDVisibilityValueText;
+DUMPER7_ASSERTS_UGCItemWidget_UpdateItemWidget;
 
 // Function BrickRigs.BrickGameMode.Get
 // 0x0010 (0x0010 - 0x0000)
@@ -2333,7 +1544,7 @@ DUMPER7_ASSERTS_BrickGameMode_AddScoreToAllPlayers;
 struct BrickGameMode_AddScoreToAllPlayersOfTeam final
 {
 public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Score;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2344,7 +1555,7 @@ DUMPER7_ASSERTS_BrickGameMode_AddScoreToAllPlayersOfTeam;
 struct BrickGameMode_AddTeamScore final
 {
 public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Score;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2375,7 +1586,7 @@ struct BrickGameMode_MovePlayerToTeam final
 {
 public:
 	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGenericTeamId                         TeamID;                                            // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGenericTeamId                         TeamId;                                            // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BrickGameMode_MovePlayerToTeam;
@@ -2496,149 +1707,456 @@ public:
 };
 DUMPER7_ASSERTS_BrickGameMode_IsReadyToStartWarmup;
 
-// Function BrickRigs.DashboardIconWidget.UpdateIconImage
+// Function BrickRigs.HUDIconWidget.SetIconColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct HUDIconWidget_SetIconColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconWidget_SetIconColorStyle;
+
+// Function BrickRigs.HUDIconWidget.SetIconSlot
 // 0x0008 (0x0008 - 0x0000)
-struct DashboardIconWidget_UpdateIconImage final
+struct HUDIconWidget_SetIconSlot final
 {
 public:
-	bool                                          bInVisible;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InIconIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBrickUIIconSlot                       NewSlot;                                           // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DashboardIconWidget_UpdateIconImage;
+DUMPER7_ASSERTS_HUDIconWidget_SetIconSlot;
 
-// Function BrickRigs.DestructibleInstancesComponent.AddInstance
-// 0x0060 (0x0060 - 0x0000)
-struct DestructibleInstancesComponent_AddInstance final
+// Function BrickRigs.HUDIconWidget.UpdateIconRotation
+// 0x0004 (0x0004 - 0x0000)
+struct HUDIconWidget_UpdateIconRotation final
 {
 public:
-	class UDestructibleInstanceTemplate*          Template;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             MaterialOverrides;                                 // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InstanceTransform;                                 // 0x0020(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class AActor*                                 Owner;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         NewRotation;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DestructibleInstancesComponent_AddInstance;
+DUMPER7_ASSERTS_HUDIconWidget_UpdateIconRotation;
 
-// Function BrickRigs.DestructibleInstancesComponent.ClearInstances
-// 0x0008 (0x0008 - 0x0000)
-struct DestructibleInstancesComponent_ClearInstances final
+// Function BrickRigs.HUDIconWidget.UpdateIconStyle
+// 0x0002 (0x0002 - 0x0000)
+struct HUDIconWidget_UpdateIconStyle final
 {
 public:
-	class AActor*                                 Owner;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InStyleState;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DestructibleInstancesComponent_ClearInstances;
+DUMPER7_ASSERTS_HUDIconWidget_UpdateIconStyle;
 
-// Function BrickRigs.PopupWidget.CancelPopup
-// 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_CancelPopup final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_CancelPopup;
-
-// Function BrickRigs.PopupWidget.ClosePopup
-// 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_ClosePopup final
-{
-public:
-	EPopupResult                                  Result;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_ClosePopup;
-
-// Function BrickRigs.PopupWidget.ConfirmPopup
-// 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_ConfirmPopup final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_ConfirmPopup;
-
-// Function BrickRigs.PopupWidget.GetPopupParams
-// 0x0010 (0x0010 - 0x0000)
-struct PopupWidget_GetPopupParams final
-{
-public:
-	TSubclassOf<class UPopupParams>               Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPopupParams*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_GetPopupParams;
-
-// Function BrickRigs.PopupWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct PopupWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_GetWidgetToFocus;
-
-// Function BrickRigs.PopupWidget.StepBack
-// 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_StepBack final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_StepBack;
-
-// Function BrickRigs.PopupWidget.CanPopupBeClosed
-// 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_CanPopupBeClosed final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_CanPopupBeClosed;
-
-// Function BrickRigs.PopupWidget.GetButtonPanel
-// 0x0008 (0x0008 - 0x0000)
-struct PopupWidget_GetButtonPanel final
-{
-public:
-	class UMenuButtonPanelWidget*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_GetButtonPanel;
-
-// Function BrickRigs.PopupWidget.GetPopupContainer
-// 0x0008 (0x0008 - 0x0000)
-struct PopupWidget_GetPopupContainer final
-{
-public:
-	class UPopupContainerWidget*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_GetPopupContainer;
-
-// Function BrickRigs.PopupWidget.GetPopupSizeRule
-// 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_GetPopupSizeRule final
-{
-public:
-	EPopupSizeRule                                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupWidget_GetPopupSizeRule;
-
-// Function BrickRigs.PopupWidget.GetPopupTitle
+// Function BrickRigs.HUDIconWidget.GetIconDisplayName
 // 0x0018 (0x0018 - 0x0000)
-struct PopupWidget_GetPopupTitle final
+struct HUDIconWidget_GetIconDisplayName final
 {
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PopupWidget_GetPopupTitle;
+DUMPER7_ASSERTS_HUDIconWidget_GetIconDisplayName;
 
-// Function BrickRigs.PopupWidget.ShouldBeVisibleInPopupContainer
+// Function BrickRigs.HUDIconWidget.GetIconWorldRotation
+// 0x0008 (0x0008 - 0x0000)
+struct HUDIconWidget_GetIconWorldRotation final
+{
+public:
+	float                                         OutRotation;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HUDIconWidget_GetIconWorldRotation;
+
+// Function BrickRigs.BaseCharacter.ClientOnReceivedDamage
+// 0x000C (0x000C - 0x0000)
+struct BaseCharacter_ClientOnReceivedDamage final
+{
+public:
+	struct FCharacterDamageInfo                   DamageInfo;                                        // 0x0000(0x000C)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseCharacter_ClientOnReceivedDamage;
+
+// Function BrickRigs.BaseCharacter.Interact_Possess
+// 0x0008 (0x0008 - 0x0000)
+struct BaseCharacter_Interact_Possess final
+{
+public:
+	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseCharacter_Interact_Possess;
+
+// Function BrickRigs.BaseCharacter.IsPerformingMeleeAction
 // 0x0001 (0x0001 - 0x0000)
-struct PopupWidget_ShouldBeVisibleInPopupContainer final
+struct BaseCharacter_IsPerformingMeleeAction final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PopupWidget_ShouldBeVisibleInPopupContainer;
+DUMPER7_ASSERTS_BaseCharacter_IsPerformingMeleeAction;
+
+// Function BrickRigs.BaseCharacter.OnMeshHit
+// 0x00B8 (0x00B8 - 0x0000)
+struct BaseCharacter_OnMeshHit final
+{
+public:
+	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NormalImpulse;                                     // 0x0018(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x0024(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BaseCharacter_OnMeshHit;
+
+// Function BrickRigs.BaseCharacter.PerformMeleeAction
+// 0x0001 (0x0001 - 0x0000)
+struct BaseCharacter_PerformMeleeAction final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseCharacter_PerformMeleeAction;
+
+// Function BrickRigs.BaseCharacter.ServerAcknowledgeRestartTransform
+// 0x0001 (0x0001 - 0x0000)
+struct BaseCharacter_ServerAcknowledgeRestartTransform final
+{
+public:
+	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0000(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseCharacter_ServerAcknowledgeRestartTransform;
+
+// Function BrickRigs.BaseCharacter.ServerMoveInventoryItems
+// 0x003C (0x003C - 0x0000)
+struct BaseCharacter_ServerMoveInventoryItems final
+{
+public:
+	struct FMoveInventoryItemParams               Params_0;                                          // 0x0000(0x0024)(ConstParm, Parm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FPlayerViewPoint                       ViewPoint;                                         // 0x0024(0x0018)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseCharacter_ServerMoveInventoryItems;
+
+// Function BrickRigs.BaseCharacter.IsConscious
+// 0x0001 (0x0001 - 0x0000)
+struct BaseCharacter_IsConscious final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseCharacter_IsConscious;
+
+// Function BrickRigs.PropertyWidget.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyWidget_UpdateIsReadOnly final
+{
+public:
+	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyWidget_UpdateIsReadOnly;
+
+// Function BrickRigs.PropertyWidget.GetFocusedSubProperty
+// 0x0018 (0x0018 - 0x0000)
+struct PropertyWidget_GetFocusedSubProperty final
+{
+public:
+	struct FWidgetPathWrapper                     WidgetPath;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PropertyWidget_GetFocusedSubProperty;
+
+// Function BrickRigs.PropertyWidget.GetPropertyContainerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PropertyWidget_GetPropertyContainerWidget final
+{
+public:
+	class UPropertyContainerWidget*               ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyWidget_GetPropertyContainerWidget;
+
+// Function BrickRigs.PropertyWidget.IsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyWidget_IsReadOnly final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyWidget_IsReadOnly;
+
+// Function BrickRigs.UGCTagsPropertyWidget.InitializeDepartmentItem
+// 0x0168 (0x0168 - 0x0000)
+struct UGCTagsPropertyWidget_InitializeDepartmentItem final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0160)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCTagsPropertyWidget_InitializeDepartmentItem;
+
+// Function BrickRigs.UGCTagsPropertyWidget.InitializeEraItem
+// 0x0168 (0x0168 - 0x0000)
+struct UGCTagsPropertyWidget_InitializeEraItem final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0160)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCTagsPropertyWidget_InitializeEraItem;
+
+// Function BrickRigs.UGCTagsPropertyWidget.InitializeTypeItem
+// 0x0168 (0x0168 - 0x0000)
+struct UGCTagsPropertyWidget_InitializeTypeItem final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0160)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCTagsPropertyWidget_InitializeTypeItem;
+
+// Function BrickRigs.UGCTagsPropertyWidget.OnDepartmentItemSelected
+// 0x0008 (0x0008 - 0x0000)
+struct UGCTagsPropertyWidget_OnDepartmentItemSelected final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UGCTagsPropertyWidget_OnDepartmentItemSelected;
+
+// Function BrickRigs.UGCTagsPropertyWidget.OnEraItemSelected
+// 0x0008 (0x0008 - 0x0000)
+struct UGCTagsPropertyWidget_OnEraItemSelected final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UGCTagsPropertyWidget_OnEraItemSelected;
+
+// Function BrickRigs.UGCTagsPropertyWidget.OnTypeItemSelected
+// 0x0008 (0x0008 - 0x0000)
+struct UGCTagsPropertyWidget_OnTypeItemSelected final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UGCTagsPropertyWidget_OnTypeItemSelected;
+
+// Function BrickRigs.PopupParams.BindOnPopupClosedDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct PopupParams_BindOnPopupClosedDelegate final
+{
+public:
+	TDelegate<void(EPopupResult Result)>          Delegate;                                          // 0x0000(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupParams_BindOnPopupClosedDelegate;
+
+// Function BrickRigs.PopupParams.OnPopupClosed
+// 0x0001 (0x0001 - 0x0000)
+struct PopupParams_OnPopupClosed final
+{
+public:
+	EPopupResult                                  Result;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupParams_OnPopupClosed;
+
+// Function BrickRigs.PopupParams.GetOwningPlayer
+// 0x0008 (0x0008 - 0x0000)
+struct PopupParams_GetOwningPlayer final
+{
+public:
+	class ABasePlayerController*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupParams_GetOwningPlayer;
+
+// Function BrickRigs.BaseInputComponent.LookRight
+// 0x0004 (0x0004 - 0x0000)
+struct BaseInputComponent_LookRight final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_LookRight;
+
+// Function BrickRigs.BaseInputComponent.LookUp
+// 0x0004 (0x0004 - 0x0000)
+struct BaseInputComponent_LookUp final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_LookUp;
+
+// Function BrickRigs.BaseInputComponent.MouseMoveRight
+// 0x0004 (0x0004 - 0x0000)
+struct BaseInputComponent_MouseMoveRight final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_MouseMoveRight;
+
+// Function BrickRigs.BaseInputComponent.MouseMoveUp
+// 0x0004 (0x0004 - 0x0000)
+struct BaseInputComponent_MouseMoveUp final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_MouseMoveUp;
+
+// Function BrickRigs.BaseInputComponent.SpeedUp
+// 0x0004 (0x0004 - 0x0000)
+struct BaseInputComponent_SpeedUp final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_SpeedUp;
+
+// Function BrickRigs.BaseInputComponent.ZoomIn
+// 0x0004 (0x0004 - 0x0000)
+struct BaseInputComponent_ZoomIn final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_ZoomIn;
+
+// Function BrickRigs.BaseInputComponent.GetCycleHUDVisibilityValueText
+// 0x0018 (0x0018 - 0x0000)
+struct BaseInputComponent_GetCycleHUDVisibilityValueText final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseInputComponent_GetCycleHUDVisibilityValueText;
+
+// Function BrickRigs.BasePlayerController.ClientReceiveKickedPlayerList
+// 0x0020 (0x0020 - 0x0000)
+struct BasePlayerController_ClientReceiveKickedPlayerList final
+{
+public:
+	struct FKickedPlayerList                      PlayerList;                                        // 0x0000(0x0018)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         RequestId;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BasePlayerController_ClientReceiveKickedPlayerList;
+
+// Function BrickRigs.BasePlayerController.KickPlayer
+// 0x0050 (0x0050 - 0x0000)
+struct BasePlayerController_KickPlayer final
+{
+public:
+	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OtherPlayerName;                                   // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 KickReason;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              KickDuration;                                      // 0x0048(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_KickPlayer;
+
+// Function BrickRigs.BasePlayerController.OpenKickPlayerPopup
+// 0x0038 (0x0038 - 0x0000)
+struct BasePlayerController_OpenKickPlayerPopup final
+{
+public:
+	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OtherPlayerName;                                   // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_OpenKickPlayerPopup;
+
+// Function BrickRigs.BasePlayerController.RevokeKick
+// 0x0028 (0x0028 - 0x0000)
+struct BasePlayerController_RevokeKick final
+{
+public:
+	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_RevokeKick;
+
+// Function BrickRigs.BasePlayerController.ServerKickPlayer
+// 0x0050 (0x0050 - 0x0000)
+struct BasePlayerController_ServerKickPlayer final
+{
+public:
+	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OtherPlayerName;                                   // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 KickReason;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              KickDuration;                                      // 0x0048(0x0008)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_ServerKickPlayer;
+
+// Function BrickRigs.BasePlayerController.ServerRequestKickedPlayerList
+// 0x0038 (0x0038 - 0x0000)
+struct BasePlayerController_ServerRequestKickedPlayerList final
+{
+public:
+	struct FKickedPlayerListRequest               Request;                                           // 0x0000(0x0030)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         RequestId;                                         // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BasePlayerController_ServerRequestKickedPlayerList;
+
+// Function BrickRigs.BasePlayerController.ServerRevokeKick
+// 0x0028 (0x0028 - 0x0000)
+struct BasePlayerController_ServerRevokeKick final
+{
+public:
+	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_ServerRevokeKick;
+
+// Function BrickRigs.BasePlayerController.CanKickPlayer
+// 0x0030 (0x0030 - 0x0000)
+struct BasePlayerController_CanKickPlayer final
+{
+public:
+	struct FUniqueNetIdRepl                       OtherPlayerId;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BasePlayerController_CanKickPlayer;
+
+// Function BrickRigs.BasePlayerController.CanViewAndEditKicks
+// 0x0001 (0x0001 - 0x0000)
+struct BasePlayerController_CanViewAndEditKicks final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_CanViewAndEditKicks;
+
+// Function BrickRigs.BasePlayerController.GetDesiredViewTarget
+// 0x0018 (0x0018 - 0x0000)
+struct BasePlayerController_GetDesiredViewTarget final
+{
+public:
+	struct FViewTargetTransitionParams            OutTransitionParams;                               // 0x0000(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_GetDesiredViewTarget;
+
+// Function BrickRigs.BasePlayerController.GetPlayerId
+// 0x0028 (0x0028 - 0x0000)
+struct BasePlayerController_GetPlayerId final
+{
+public:
+	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_GetPlayerId;
+
+// Function BrickRigs.BasePlayerController.GetStaticInfo
+// 0x0008 (0x0008 - 0x0000)
+struct BasePlayerController_GetStaticInfo final
+{
+public:
+	const class UPlayerControllerStaticInfo*      ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_GetStaticInfo;
 
 // Function BrickRigs.BindKeyPopupWidget.UpdateConflictedMappings
 // 0x0018 (0x0018 - 0x0000)
@@ -2661,13 +2179,13 @@ public:
 DUMPER7_ASSERTS_BindKeyPopupWidget_UpdateIsBindingKey;
 
 // Function BrickRigs.BoolPropertyWidget.InitializeItem
-// 0x0148 (0x0148 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct BoolPropertyWidget_InitializeItem final
 {
 public:
 	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0160)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BoolPropertyWidget_InitializeItem;
 
@@ -2690,6 +2208,170 @@ public:
 	class UBrickAssetManager*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickAssetManager_Get;
+
+// Function BrickRigs.BrickBorder.SetBrushStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickBorder_SetBrushStyle final
+{
+public:
+	EBrickUIBrushStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickBorder_SetBrushStyle;
+
+// Function BrickRigs.BrickBorder.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickBorder_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickBorder_SetColorStyle;
+
+// Function BrickRigs.BrickBorder.SetPaddingStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickBorder_SetPaddingStyle final
+{
+public:
+	EBrickUIPaddingStyle                          NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickBorder_SetPaddingStyle;
+
+// Function BrickRigs.BrickBorder.SetStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct BrickBorder_SetStyleState final
+{
+public:
+	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickBorder_SetStyleState;
+
+// Function BrickRigs.ServerWidget.UpdateServer
+// 0x0168 (0x0168 - 0x0000)
+struct ServerWidget_UpdateServer final
+{
+public:
+	struct FBrickOnlineSessionInfo                SessionInfo;                                       // 0x0000(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ServerWidget_UpdateServer;
+
+// Function BrickRigs.ButtonWidgetBase.OnUpdateContentStyle
+// 0x0002 (0x0002 - 0x0000)
+struct ButtonWidgetBase_OnUpdateContentStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InStyleState;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_OnUpdateContentStyle;
+
+// Function BrickRigs.ButtonWidgetBase.SetBrushStyle
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonWidgetBase_SetBrushStyle final
+{
+public:
+	EBrickUIBrushStyle                            NewBrushStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_SetBrushStyle;
+
+// Function BrickRigs.ButtonWidgetBase.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonWidgetBase_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_SetColorStyle;
+
+// Function BrickRigs.ButtonWidgetBase.SetCustomFocus
+// 0x0002 (0x0002 - 0x0000)
+struct ButtonWidgetBase_SetCustomFocus final
+{
+public:
+	bool                                          bNewUseCustomFocus;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewFocused;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_SetCustomFocus;
+
+// Function BrickRigs.ButtonWidgetBase.SetHiddenWhileUnfocused
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonWidgetBase_SetHiddenWhileUnfocused final
+{
+public:
+	bool                                          bNewHidden;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_SetHiddenWhileUnfocused;
+
+// Function BrickRigs.ButtonWidgetBase.SetIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonWidgetBase_SetIsSelected final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_SetIsSelected;
+
+// Function BrickRigs.ButtonWidgetBase.GetButtonStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonWidgetBase_GetButtonStyleState final
+{
+public:
+	EBrickUIStyleState                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_GetButtonStyleState;
+
+// Function BrickRigs.ButtonWidgetBase.GetContentStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct ButtonWidgetBase_GetContentStyleState final
+{
+public:
+	EBrickUIStyleState                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ButtonWidgetBase_GetContentStyleState;
+
+// Function BrickRigs.BrickButtonWidget.AddContentWidget
+// 0x0008 (0x0008 - 0x0000)
+struct BrickButtonWidget_AddContentWidget final
+{
+public:
+	class UWidget*                                InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickButtonWidget_AddContentWidget;
+
+// Function BrickRigs.BrickButtonWidget.SetContentHorizontalAlignment
+// 0x0001 (0x0001 - 0x0000)
+struct BrickButtonWidget_SetContentHorizontalAlignment final
+{
+public:
+	EHorizontalAlignment                          InAlignment;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickButtonWidget_SetContentHorizontalAlignment;
+
+// Function BrickRigs.BrickButtonWidget.SetContentPadding
+// 0x0010 (0x0010 - 0x0000)
+struct BrickButtonWidget_SetContentPadding final
+{
+public:
+	struct FMargin                                InPadding;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickButtonWidget_SetContentPadding;
+
+// Function BrickRigs.BrickButtonWidget.SetContentPaddingStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickButtonWidget_SetContentPaddingStyle final
+{
+public:
+	EBrickUIPaddingStyle                          InStyle;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickButtonWidget_SetContentPaddingStyle;
+
+// Function BrickRigs.BrickButtonWidget.SetContentVerticalAlignment
+// 0x0001 (0x0001 - 0x0000)
+struct BrickButtonWidget_SetContentVerticalAlignment final
+{
+public:
+	EVerticalAlignment                            InAlignment;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickButtonWidget_SetContentVerticalAlignment;
 
 // Function BrickRigs.BrickCameraManager.GetCachedEffectiveFOV
 // 0x0008 (0x0008 - 0x0000)
@@ -3076,6 +2758,1524 @@ public:
 };
 DUMPER7_ASSERTS_BrickCharacter_ShouldFire;
 
+// Function BrickRigs.BrickUserWidget.GetTooltipContent
+// 0x0048 (0x0048 - 0x0000)
+struct BrickUserWidget_GetTooltipContent final
+{
+public:
+	struct FTooltipContent                        OutContent;                                        // 0x0000(0x0040)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickUserWidget_GetTooltipContent;
+
+// Function BrickRigs.BrickUserWidget.InitializeTooltip
+// 0x0008 (0x0008 - 0x0000)
+struct BrickUserWidget_InitializeTooltip final
+{
+public:
+	class UTooltipWidget*                         Tooltip;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickUserWidget_InitializeTooltip;
+
+// Function BrickRigs.BrickUserWidget.GetTooltipClass
+// 0x0008 (0x0008 - 0x0000)
+struct BrickUserWidget_GetTooltipClass final
+{
+public:
+	class UClass*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickUserWidget_GetTooltipClass;
+
+// Function BrickRigs.BrickComboBoxItemContainerWidget.AddItemWidget
+// 0x0008 (0x0008 - 0x0000)
+struct BrickComboBoxItemContainerWidget_AddItemWidget final
+{
+public:
+	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_AddItemWidget;
+
+// Function BrickRigs.BrickComboBoxItemContainerWidget.OnUpdateButtonContentStyle
+// 0x0002 (0x0002 - 0x0000)
+struct BrickComboBoxItemContainerWidget_OnUpdateButtonContentStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_OnUpdateButtonContentStyle;
+
+// Function BrickRigs.BrickComboBoxItemContainerWidget.UpdateIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxItemContainerWidget_UpdateIsSelected final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_UpdateIsSelected;
+
+// Function BrickRigs.BrickComboBoxItemContainerWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct BrickComboBoxItemContainerWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemContainerWidget_GetWidgetToFocus;
+
+// Function BrickRigs.BrickComboBoxItemWidget.InitializeItem
+// 0x0168 (0x0168 - 0x0000)
+struct BrickComboBoxItemWidget_InitializeItem final
+{
+public:
+	int32                                         InItem;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickComboBoxItemParams               Params_0;                                          // 0x0008(0x0160)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemWidget_InitializeItem;
+
+// Function BrickRigs.BrickComboBoxItemWidget.UpdateIconVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxItemWidget_UpdateIconVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemWidget_UpdateIconVisibility;
+
+// Function BrickRigs.BrickComboBoxItemWidget.UpdateItemStyle
+// 0x0002 (0x0002 - 0x0000)
+struct BrickComboBoxItemWidget_UpdateItemStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InStyleState;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemWidget_UpdateItemStyle;
+
+// Function BrickRigs.BrickComboBoxItemWidget.UpdateTextVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct BrickComboBoxItemWidget_UpdateTextVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickComboBoxItemWidget_UpdateTextVisibility;
+
+// Function BrickRigs.MenuAnchorWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct MenuAnchorWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuAnchorWidget_GetWidgetToFocus;
+
+// Function BrickRigs.PawnInputComponent.GetDestroyPawnEnabled
+// 0x0002 (0x0002 - 0x0000)
+struct PawnInputComponent_GetDestroyPawnEnabled final
+{
+public:
+	bool                                          bInSecondaryAction;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnInputComponent_GetDestroyPawnEnabled;
+
+// Function BrickRigs.PawnInputComponent.GetInventoryEnabled
+// 0x0002 (0x0002 - 0x0000)
+struct PawnInputComponent_GetInventoryEnabled final
+{
+public:
+	bool                                          bInSecondaryAction;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnInputComponent_GetInventoryEnabled;
+
+// Function BrickRigs.SpectatorInputComponent.MoveForward
+// 0x0004 (0x0004 - 0x0000)
+struct SpectatorInputComponent_MoveForward final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpectatorInputComponent_MoveForward;
+
+// Function BrickRigs.SpectatorInputComponent.MoveRight
+// 0x0004 (0x0004 - 0x0000)
+struct SpectatorInputComponent_MoveRight final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpectatorInputComponent_MoveRight;
+
+// Function BrickRigs.SpectatorInputComponent.MoveUp
+// 0x0004 (0x0004 - 0x0000)
+struct SpectatorInputComponent_MoveUp final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpectatorInputComponent_MoveUp;
+
+// Function BrickRigs.SpectatorInputComponent.RotatePawnCW
+// 0x0004 (0x0004 - 0x0000)
+struct SpectatorInputComponent_RotatePawnCW final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpectatorInputComponent_RotatePawnCW;
+
+// Function BrickRigs.HUDIconComponent.MakeAxisInteractionOption
+// 0x0090 (0x0090 - 0x0000)
+struct HUDIconComponent_MakeAxisInteractionOption final
+{
+public:
+	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class ABrickPlayerController* InPC, float Val)> OnInteractionAxis;                // 0x001C(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInteractionOption                     ReturnValue;                                       // 0x0030(0x0060)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_MakeAxisInteractionOption;
+
+// Function BrickRigs.HUDIconComponent.MakeInteractionOption
+// 0x0090 (0x0090 - 0x0000)
+struct HUDIconComponent_MakeInteractionOption final
+{
+public:
+	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class ABrickPlayerController* InPC)> OnInteraction;                               // 0x001C(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInteractionOption                     ReturnValue;                                       // 0x0030(0x0060)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_MakeInteractionOption;
+
+// Function BrickRigs.HUDIconComponent.Interact_PlaceMarker
+// 0x0008 (0x0008 - 0x0000)
+struct HUDIconComponent_Interact_PlaceMarker final
+{
+public:
+	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_Interact_PlaceMarker;
+
+// Function BrickRigs.HUDIconComponent.Interact_Spawn
+// 0x0008 (0x0008 - 0x0000)
+struct HUDIconComponent_Interact_Spawn final
+{
+public:
+	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_Interact_Spawn;
+
+// Function BrickRigs.HUDIconComponent.SetGetInteractionOptionsDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct HUDIconComponent_SetGetInteractionOptionsDelegate final
+{
+public:
+	TDelegate<void(class ABrickPlayerController* PC, struct FInteractionOptions* OutOptions)> Delegate; // 0x0000(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_SetGetInteractionOptionsDelegate;
+
+// Function BrickRigs.HUDIconComponent.SetGetMaxDrawDistDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct HUDIconComponent_SetGetMaxDrawDistDelegate final
+{
+public:
+	TDelegate<void(class ABrickPlayerController* PC)> Delegate;                                      // 0x0000(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_SetGetMaxDrawDistDelegate;
+
+// Function BrickRigs.HUDIconComponent.SetIconLocation
+// 0x000C (0x000C - 0x0000)
+struct HUDIconComponent_SetIconLocation final
+{
+public:
+	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_SetIconLocation;
+
+// Function BrickRigs.HUDIconComponent.SetIconLocationDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct HUDIconComponent_SetIconLocationDelegate final
+{
+public:
+	TDelegate<void()>                             Delegate;                                          // 0x0000(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_SetIconLocationDelegate;
+
+// Function BrickRigs.HUDIconComponent.SetShouldIconBeVisibleDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct HUDIconComponent_SetShouldIconBeVisibleDelegate final
+{
+public:
+	TDelegate<void(class ABrickPlayerController* PC, const struct FHUDIconContext& Context)> Delegate; // 0x0000(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HUDIconComponent_SetShouldIconBeVisibleDelegate;
+
+// Function BrickRigs.BrickVehicle.BindOnVehicleConstructed
+// 0x0014 (0x0014 - 0x0000)
+struct BrickVehicle_BindOnVehicleConstructed final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0014)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_BindOnVehicleConstructed;
+
+// Function BrickRigs.BrickVehicle.ConstructVehicle
+// 0x0100 (0x0100 - 0x0000)
+struct BrickVehicle_ConstructVehicle final
+{
+public:
+	struct FUGCFileInfo                           InFileInfo;                                        // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class AActor*                                 InSpawnPoint;                                      // 0x00E8(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABrickPlayerController*                 InSpawningPC;                                      // 0x00F0(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAvoidCollision;                                   // 0x00F8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickVehicle_ConstructVehicle;
+
+// Function BrickRigs.BrickVehicle.Interact_EnterVehicle
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_Interact_EnterVehicle final
+{
+public:
+	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_Interact_EnterVehicle;
+
+// Function BrickRigs.BrickVehicle.Interact_ScrapVehicleFromInteraction
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_Interact_ScrapVehicleFromInteraction final
+{
+public:
+	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_Interact_ScrapVehicleFromInteraction;
+
+// Function BrickRigs.BrickVehicle.Interact_ScrapVehicleFromMap
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_Interact_ScrapVehicleFromMap final
+{
+public:
+	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_Interact_ScrapVehicleFromMap;
+
+// Function BrickRigs.BrickVehicle.PlayHandlingSound
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_PlayHandlingSound final
+{
+public:
+	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_PlayHandlingSound;
+
+// Function BrickRigs.BrickVehicle.RepairVehicle
+// 0x0028 (0x0028 - 0x0000)
+struct BrickVehicle_RepairVehicle final
+{
+public:
+	struct FVector                                InLocation;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               InRotation;                                        // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class AActor*                                 InSpawnPoint;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAvoidCollision;                                   // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRepair;                                           // 0x0021(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickVehicle_RepairVehicle;
+
+// Function BrickRigs.BrickVehicle.ServerApplySeatCollisionDamage
+// 0x000C (0x000C - 0x0000)
+struct BrickVehicle_ServerApplySeatCollisionDamage final
+{
+public:
+	struct FBrickEditorObjectID                   SeatID;                                            // 0x0000(0x0002)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DamageAmount;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0008(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickVehicle_ServerApplySeatCollisionDamage;
+
+// Function BrickRigs.BrickVehicle.ServerExplodeTankBricks
+// 0x0018 (0x0018 - 0x0000)
+struct BrickVehicle_ServerExplodeTankBricks final
+{
+public:
+	TArray<struct FBrickEditorObjectID>           Tanks;                                             // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0010(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickVehicle_ServerExplodeTankBricks;
+
+// Function BrickRigs.BrickVehicle.ServerOnBrokeDestructibleInstances
+// 0x0020 (0x0020 - 0x0000)
+struct BrickVehicle_ServerOnBrokeDestructibleInstances final
+{
+public:
+	class UDestructibleInstancesComponent*        Comp;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint16>                                Instances;                                         // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRestartTransformVersion               ComparisonIndex;                                   // 0x0018(0x0001)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickVehicle_ServerOnBrokeDestructibleInstances;
+
+// Function BrickRigs.BrickVehicle.SetFuelLevel
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_SetFuelLevel final
+{
+public:
+	float                                         NewLevel;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_SetFuelLevel;
+
+// Function BrickRigs.BrickVehicle.SetPinMode
+// 0x0001 (0x0001 - 0x0000)
+struct BrickVehicle_SetPinMode final
+{
+public:
+	EVehiclePinMode                               NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_SetPinMode;
+
+// Function BrickRigs.BrickVehicle.SetRelativeFuelLevel
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_SetRelativeFuelLevel final
+{
+public:
+	float                                         NewLevel;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_SetRelativeFuelLevel;
+
+// Function BrickRigs.BrickVehicle.GetAmmo
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_GetAmmo final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetAmmo;
+
+// Function BrickRigs.BrickVehicle.GetAmmoCapacity
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_GetAmmoCapacity final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetAmmoCapacity;
+
+// Function BrickRigs.BrickVehicle.GetBricks
+// 0x0010 (0x0010 - 0x0000)
+struct BrickVehicle_GetBricks final
+{
+public:
+	TArray<class UBrick*>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetBricks;
+
+// Function BrickRigs.BrickVehicle.GetCameras
+// 0x0010 (0x0010 - 0x0000)
+struct BrickVehicle_GetCameras final
+{
+public:
+	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetCameras;
+
+// Function BrickRigs.BrickVehicle.GetDriverCharacter
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetDriverCharacter final
+{
+public:
+	class ABrickCharacter*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetDriverCharacter;
+
+// Function BrickRigs.BrickVehicle.GetDriverSeat
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetDriverSeat final
+{
+public:
+	class USeatBrick*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetDriverSeat;
+
+// Function BrickRigs.BrickVehicle.GetFuelCapacity
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_GetFuelCapacity final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetFuelCapacity;
+
+// Function BrickRigs.BrickVehicle.GetFuelLevel
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_GetFuelLevel final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetFuelLevel;
+
+// Function BrickRigs.BrickVehicle.GetGuns
+// 0x0010 (0x0010 - 0x0000)
+struct BrickVehicle_GetGuns final
+{
+public:
+	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetGuns;
+
+// Function BrickRigs.BrickVehicle.GetInventoryComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetInventoryComponent final
+{
+public:
+	class UInventoryComponent*                    ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetInventoryComponent;
+
+// Function BrickRigs.BrickVehicle.GetNumPassengers
+// 0x0004 (0x0004 - 0x0000)
+struct BrickVehicle_GetNumPassengers final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetNumPassengers;
+
+// Function BrickRigs.BrickVehicle.GetPassengers
+// 0x0010 (0x0010 - 0x0000)
+struct BrickVehicle_GetPassengers final
+{
+public:
+	TArray<class ABrickCharacter*>                OutPassengers;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetPassengers;
+
+// Function BrickRigs.BrickVehicle.GetPinMode
+// 0x0001 (0x0001 - 0x0000)
+struct BrickVehicle_GetPinMode final
+{
+public:
+	EVehiclePinMode                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetPinMode;
+
+// Function BrickRigs.BrickVehicle.GetRootBrick
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetRootBrick final
+{
+public:
+	class UBrick*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetRootBrick;
+
+// Function BrickRigs.BrickVehicle.GetSeats
+// 0x0010 (0x0010 - 0x0000)
+struct BrickVehicle_GetSeats final
+{
+public:
+	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetSeats;
+
+// Function BrickRigs.BrickVehicle.GetSpawningPlayerState
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetSpawningPlayerState final
+{
+public:
+	class ABrickPlayerState*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetSpawningPlayerState;
+
+// Function BrickRigs.BrickVehicle.GetStaticInfo
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetStaticInfo final
+{
+public:
+	const class UBrickVehicleStaticInfo*          ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetStaticInfo;
+
+// Function BrickRigs.BrickVehicle.GetVehicleComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetVehicleComponent final
+{
+public:
+	class UBrickVehicleComponent*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetVehicleComponent;
+
+// Function BrickRigs.BrickVehicle.GetVehicleDisplayName
+// 0x0018 (0x0018 - 0x0000)
+struct BrickVehicle_GetVehicleDisplayName final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetVehicleDisplayName;
+
+// Function BrickRigs.BrickVehicle.GetVehicleFileInfo
+// 0x00E8 (0x00E8 - 0x0000)
+struct BrickVehicle_GetVehicleFileInfo final
+{
+public:
+	struct FUGCFileInfo                           ReturnValue;                                       // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetVehicleFileInfo;
+
+// Function BrickRigs.BrickVehicle.GetViewedSeat
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetViewedSeat final
+{
+public:
+	class USeatBrick*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetViewedSeat;
+
+// Function BrickRigs.BrickVehicle.GetViewTargetCamera
+// 0x0008 (0x0008 - 0x0000)
+struct BrickVehicle_GetViewTargetCamera final
+{
+public:
+	class UCameraBrick*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_GetViewTargetCamera;
+
+// Function BrickRigs.BrickVehicle.HasVisibleSeat
+// 0x0001 (0x0001 - 0x0000)
+struct BrickVehicle_HasVisibleSeat final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_HasVisibleSeat;
+
+// Function BrickRigs.BrickVehicle.IsInteracting
+// 0x0001 (0x0001 - 0x0000)
+struct BrickVehicle_IsInteracting final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_IsInteracting;
+
+// Function BrickRigs.BrickVehicle.IsVehicleBeingConstructed
+// 0x0001 (0x0001 - 0x0000)
+struct BrickVehicle_IsVehicleBeingConstructed final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_IsVehicleBeingConstructed;
+
+// Function BrickRigs.BrickVehicle.IsVehicleConstructed
+// 0x0001 (0x0001 - 0x0000)
+struct BrickVehicle_IsVehicleConstructed final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickVehicle_IsVehicleConstructed;
+
+// Function BrickRigs.PlayerWidget.AddCameraBrickWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerWidget_AddCameraBrickWidget final
+{
+public:
+	class UCameraBrickWidget*                     InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_AddCameraBrickWidget;
+
+// Function BrickRigs.PlayerWidget.AddCrosshairWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerWidget_AddCrosshairWidget final
+{
+public:
+	class UCrosshairWidget*                       InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_AddCrosshairWidget;
+
+// Function BrickRigs.PlayerWidget.AddCurrentItemWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerWidget_AddCurrentItemWidget final
+{
+public:
+	class UCurrentItemWidget*                     InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_AddCurrentItemWidget;
+
+// Function BrickRigs.PlayerWidget.AddDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerWidget_AddDashboardWidget final
+{
+public:
+	class UDashboardWidget*                       InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_AddDashboardWidget;
+
+// Function BrickRigs.PlayerWidget.AddHealthBarWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerWidget_AddHealthBarWidget final
+{
+public:
+	class UHealthBarWidget*                       InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_AddHealthBarWidget;
+
+// Function BrickRigs.PlayerWidget.AddRestrictedAreaWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerWidget_AddRestrictedAreaWidget final
+{
+public:
+	class URestrictedAreaWidget*                  InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_AddRestrictedAreaWidget;
+
+// Function BrickRigs.PlayerWidget.OnHUDVisibilityChanged
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerWidget_OnHUDVisibilityChanged final
+{
+public:
+	EHUDVisibility                                NewVisibility;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerWidget_OnHUDVisibilityChanged;
+
+// Function BrickRigs.BrickConnectorsISMComponent.SetStyle
+// 0x0004 (0x0004 - 0x0000)
+struct BrickConnectorsISMComponent_SetStyle final
+{
+public:
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            NewFocusedColorStyle;                              // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            NewStyleState;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            NewFocusedStyleState;                              // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickConnectorsISMComponent_SetStyle;
+
+// Function BrickRigs.BrickDataSingleton.Get
+// 0x0008 (0x0008 - 0x0000)
+struct BrickDataSingleton_Get final
+{
+public:
+	class UBrickDataSingleton*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickDataSingleton_Get;
+
+// Function BrickRigs.BrickDataSingleton.GetColorDisplayName
+// 0x0030 (0x0030 - 0x0000)
+struct BrickDataSingleton_GetColorDisplayName final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRoundValue;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickDataSingleton_GetColorDisplayName;
+
+// Function BrickRigs.ProjectileManagerComponent.OnParticleComponentFinished
+// 0x0008 (0x0008 - 0x0000)
+struct ProjectileManagerComponent_OnParticleComponentFinished final
+{
+public:
+	class UParticleSystemComponent*               PSC;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ProjectileManagerComponent_OnParticleComponentFinished;
+
+// Function BrickRigs.UGCTaskPopupWidget.UpdateIsFinished
+// 0x0002 (0x0002 - 0x0000)
+struct UGCTaskPopupWidget_UpdateIsFinished final
+{
+public:
+	bool                                          bNewFinished;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewSuccess;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCTaskPopupWidget_UpdateIsFinished;
+
+// Function BrickRigs.UGCTaskPopupWidget.UpdateProgress
+// 0x0004 (0x0004 - 0x0000)
+struct UGCTaskPopupWidget_UpdateProgress final
+{
+public:
+	float                                         NewProgress;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCTaskPopupWidget_UpdateProgress;
+
+// Function BrickRigs.BrickEditorArrowComponent.SetArrowType
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorArrowComponent_SetArrowType final
+{
+public:
+	EBrickEditorArrowType                         NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorArrowComponent_SetArrowType;
+
+// Function BrickRigs.BrickEditorArrowComponent.SetCircularArrowAngle
+// 0x0004 (0x0004 - 0x0000)
+struct BrickEditorArrowComponent_SetCircularArrowAngle final
+{
+public:
+	float                                         NewAngle;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorArrowComponent_SetCircularArrowAngle;
+
+// Function BrickRigs.BrickEditorArrowComponent.SetCircularArrowRadius
+// 0x0004 (0x0004 - 0x0000)
+struct BrickEditorArrowComponent_SetCircularArrowRadius final
+{
+public:
+	float                                         NewRadius;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorArrowComponent_SetCircularArrowRadius;
+
+// Function BrickRigs.BrickEditorArrowComponent.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorArrowComponent_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorArrowComponent_SetColorStyle;
+
+// Function BrickRigs.BrickEditorArrowComponent.SetLinearArrowLength
+// 0x0004 (0x0004 - 0x0000)
+struct BrickEditorArrowComponent_SetLinearArrowLength final
+{
+public:
+	float                                         NewLength;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorArrowComponent_SetLinearArrowLength;
+
+// Function BrickRigs.PropertyCategoryWidget.UpdateCategory
+// 0x0018 (0x0018 - 0x0000)
+struct PropertyCategoryWidget_UpdateCategory final
+{
+public:
+	class FText                                   DisplayName;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyCategoryWidget_UpdateCategory;
+
+// Function BrickRigs.BrickEditorInterfaceComponent.FocusCameraOnBrickEditorObjects
+// 0x0060 (0x0060 - 0x0000)
+struct BrickEditorInterfaceComponent_FocusCameraOnBrickEditorObjects final
+{
+public:
+	TArray<class UBrickEditorObject*>             Objects;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTransform                             CameraTransform;                                   // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              FOV;                                               // 0x0040(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Margin;                                            // 0x0048(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x004C(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickEditorInterfaceComponent_FocusCameraOnBrickEditorObjects;
+
+// Function BrickRigs.VehicleResourceSubsystem.Get
+// 0x0010 (0x0010 - 0x0000)
+struct VehicleResourceSubsystem_Get final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVehicleResourceSubsystem*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VehicleResourceSubsystem_Get;
+
+// Function BrickRigs.BrickEditorMirrorAxisWidget.UpdateCanBeSelected
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorMirrorAxisWidget_UpdateCanBeSelected final
+{
+public:
+	bool                                          bNewCanBeSelected;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorMirrorAxisWidget_UpdateCanBeSelected;
+
+// Function BrickRigs.BrickEditorMirrorAxisWidget.UpdateIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorMirrorAxisWidget_UpdateIsSelected final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorMirrorAxisWidget_UpdateIsSelected;
+
+// Function BrickRigs.BrickEditorMirrorAxisWidget.UpdateMirrorAxis
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorMirrorAxisWidget_UpdateMirrorAxis final
+{
+public:
+	EAxis                                         InAxis;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorMirrorAxisWidget_UpdateMirrorAxis;
+
+// Function BrickRigs.BaseEditorInputComponent.GetCycleViewModeValueText
+// 0x0018 (0x0018 - 0x0000)
+struct BaseEditorInputComponent_GetCycleViewModeValueText final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseEditorInputComponent_GetCycleViewModeValueText;
+
+// Function BrickRigs.BaseEditorInputComponent.GetExitEditorWithVehicleEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct BaseEditorInputComponent_GetExitEditorWithVehicleEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseEditorInputComponent_GetExitEditorWithVehicleEnabled;
+
+// Function BrickRigs.BaseEditorInputComponent.GetSaveItemAsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct BaseEditorInputComponent_GetSaveItemAsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseEditorInputComponent_GetSaveItemAsEnabled;
+
+// Function BrickRigs.BaseEditorInputComponent.GetSaveItemEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct BaseEditorInputComponent_GetSaveItemEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseEditorInputComponent_GetSaveItemEnabled;
+
+// Function BrickRigs.BaseEditorInputComponent.GetUploadItemAsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct BaseEditorInputComponent_GetUploadItemAsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseEditorInputComponent_GetUploadItemAsEnabled;
+
+// Function BrickRigs.BaseEditorInputComponent.GetUploadItemEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct BaseEditorInputComponent_GetUploadItemEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseEditorInputComponent_GetUploadItemEnabled;
+
+// Function BrickRigs.BrickEditorNiagaraComponent.OnSystemFinishedCallback
+// 0x0008 (0x0008 - 0x0000)
+struct BrickEditorNiagaraComponent_OnSystemFinishedCallback final
+{
+public:
+	class UNiagaraComponent*                      PSystem;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorNiagaraComponent_OnSystemFinishedCallback;
+
+// Function BrickRigs.BrickEditorObjectPropertyWidget.UpdateSelectedObjects
+// 0x0020 (0x0020 - 0x0000)
+struct BrickEditorObjectPropertyWidget_UpdateSelectedObjects final
+{
+public:
+	class FText                                   FirstObjectName;                                   // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         NumSelectedObjects;                                // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDefaultObjects;                                   // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickEditorObjectPropertyWidget_UpdateSelectedObjects;
+
+// Function BrickRigs.BrickEditorParticleComponent.OnSystemFinishedCallback
+// 0x0008 (0x0008 - 0x0000)
+struct BrickEditorParticleComponent_OnSystemFinishedCallback final
+{
+public:
+	class UParticleSystemComponent*               InParticleComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorParticleComponent_OnSystemFinishedCallback;
+
+// Function BrickRigs.BrickEditorWidget.AddMirrorModeWidget
+// 0x0010 (0x0010 - 0x0000)
+struct BrickEditorWidget_AddMirrorModeWidget final
+{
+public:
+	class UBrickEditorMirrorAxisWidget*           Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickEditorWidget_AddMirrorModeWidget;
+
+// Function BrickRigs.BrickEditorWidget.AddModeWidget
+// 0x0008 (0x0008 - 0x0000)
+struct BrickEditorWidget_AddModeWidget final
+{
+public:
+	class UBrickEditorModeWidget*                 Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorWidget_AddModeWidget;
+
+// Function BrickRigs.BrickEditorWidget.OnMeasurementSystemChanged
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorWidget_OnMeasurementSystemChanged final
+{
+public:
+	EMeasurementSystem                            NewSystem;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorWidget_OnMeasurementSystemChanged;
+
+// Function BrickRigs.BrickEditorWidget.OnPlacableSearchTextChanged
+// 0x0020 (0x0020 - 0x0000)
+struct BrickEditorWidget_OnPlacableSearchTextChanged final
+{
+public:
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickEditorWidget_OnPlacableSearchTextChanged;
+
+// Function BrickRigs.BrickEditorWidget.UpdateCanClearPlacableFilter
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorWidget_UpdateCanClearPlacableFilter final
+{
+public:
+	bool                                          bNewCanClear;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorWidget_UpdateCanClearPlacableFilter;
+
+// Function BrickRigs.BrickEditorWidget.UpdateCanPlaceObjects
+// 0x0001 (0x0001 - 0x0000)
+struct BrickEditorWidget_UpdateCanPlaceObjects final
+{
+public:
+	bool                                          bNewCanPlace;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorWidget_UpdateCanPlaceObjects;
+
+// Function BrickRigs.BrickEditorWidget.UpdateEditorUIScale
+// 0x0004 (0x0004 - 0x0000)
+struct BrickEditorWidget_UpdateEditorUIScale final
+{
+public:
+	float                                         NewScale;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickEditorWidget_UpdateEditorUIScale;
+
+// Function BrickRigs.BrickEditorWidget.UpdateSelection
+// 0x0020 (0x0020 - 0x0000)
+struct BrickEditorWidget_UpdateSelection final
+{
+public:
+	class FText                                   SelectionName;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bAnythingSelected;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickEditorWidget_UpdateSelection;
+
+// Function BrickRigs.BrickGameInstance.Get
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameInstance_Get final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBrickGameInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameInstance_Get;
+
+// Function BrickRigs.BrickGameInstance.ClosePopup
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameInstance_ClosePopup final
+{
+public:
+	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EPopupResult                                  Result;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickGameInstance_ClosePopup;
+
+// Function BrickRigs.BrickGameInstance.CreatePopupParams
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameInstance_CreatePopupParams final
+{
+public:
+	TSubclassOf<class UPopupParams>               ParamsClass;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPopupParams*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameInstance_CreatePopupParams;
+
+// Function BrickRigs.BrickGameInstance.OpenLinkInBrowser
+// 0x0018 (0x0018 - 0x0000)
+struct BrickGameInstance_OpenLinkInBrowser final
+{
+public:
+	class FString                                 Link;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTrusted;                                        // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickGameInstance_OpenLinkInBrowser;
+
+// Function BrickRigs.BrickGameInstance.OpenMainMenu
+// 0x0001 (0x0001 - 0x0000)
+struct BrickGameInstance_OpenMainMenu final
+{
+public:
+	bool                                          bForceExit;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameInstance_OpenMainMenu;
+
+// Function BrickRigs.BrickGameInstance.OpenMessagePopup
+// 0x0040 (0x0040 - 0x0000)
+struct BrickGameInstance_OpenMessagePopup final
+{
+public:
+	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Message;                                           // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bCanCancel;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EPopupResult Result)>          ClosedDelegate;                                    // 0x0024(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickGameInstance_OpenMessagePopup;
+
+// Function BrickRigs.BrickGameInstance.OpenPopup
+// 0x0018 (0x0018 - 0x0000)
+struct BrickGameInstance_OpenPopup final
+{
+public:
+	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPopupParams*                           PopupParams;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bToggleOpen;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickGameInstance_OpenPopup;
+
+// Function BrickRigs.BrickGameInstance.QuitGame
+// 0x0001 (0x0001 - 0x0000)
+struct BrickGameInstance_QuitGame final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameInstance_QuitGame;
+
+// Function BrickRigs.BrickGameInstance.IsPopupOpen
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameInstance_IsPopupOpen final
+{
+public:
+	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickGameInstance_IsPopupOpen;
+
+// Function BrickRigs.BrickGameSession.Get
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameSession_Get final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABrickGameSession*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameSession_Get;
+
+// Function BrickRigs.BrickGameState.Get
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameState_Get final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABrickGameState*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_Get;
+
+// Function BrickRigs.BrickGameState.SetCurrentRound
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGameState_SetCurrentRound final
+{
+public:
+	int32                                         NewRound;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_SetCurrentRound;
+
+// Function BrickRigs.BrickGameState.SetMatchSettings
+// 0x00C8 (0x00C8 - 0x0000)
+struct BrickGameState_SetMatchSettings final
+{
+public:
+	struct FMatchSettings                         NewSettings;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_SetMatchSettings;
+
+// Function BrickRigs.BrickGameState.SetMatchWinner
+// 0x0001 (0x0001 - 0x0000)
+struct BrickGameState_SetMatchWinner final
+{
+public:
+	struct FMatchWinner                           InWinner;                                          // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_SetMatchWinner;
+
+// Function BrickRigs.BrickGameState.SetNextMatchSettings
+// 0x00C8 (0x00C8 - 0x0000)
+struct BrickGameState_SetNextMatchSettings final
+{
+public:
+	struct FMatchSettings                         NewSettings;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_SetNextMatchSettings;
+
+// Function BrickRigs.BrickGameState.CanPlayerJoinTeam
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameState_CanPlayerJoinTeam final
+{
+public:
+	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGenericTeamId                         TeamId;                                            // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickGameState_CanPlayerJoinTeam;
+
+// Function BrickRigs.BrickGameState.DoesTeamExist
+// 0x0002 (0x0002 - 0x0000)
+struct BrickGameState_DoesTeamExist final
+{
+public:
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_DoesTeamExist;
+
+// Function BrickRigs.BrickGameState.FindTeam
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameState_FindTeam final
+{
+public:
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickTeam*                             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_FindTeam;
+
+// Function BrickRigs.BrickGameState.GetCurrentRound
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGameState_GetCurrentRound final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetCurrentRound;
+
+// Function BrickRigs.BrickGameState.GetDefaultTeam
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameState_GetDefaultTeam final
+{
+public:
+	class UBrickTeam*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetDefaultTeam;
+
+// Function BrickRigs.BrickGameState.GetDummyTeam
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameState_GetDummyTeam final
+{
+public:
+	class UBrickTeam*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetDummyTeam;
+
+// Function BrickRigs.BrickGameState.GetMatchRandomSeed
+// 0x0001 (0x0001 - 0x0000)
+struct BrickGameState_GetMatchRandomSeed final
+{
+public:
+	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetMatchRandomSeed;
+
+// Function BrickRigs.BrickGameState.GetMatchSettings
+// 0x00C8 (0x00C8 - 0x0000)
+struct BrickGameState_GetMatchSettings final
+{
+public:
+	struct FMatchSettings                         ReturnValue;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetMatchSettings;
+
+// Function BrickRigs.BrickGameState.GetMatchTimerRate
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGameState_GetMatchTimerRate final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetMatchTimerRate;
+
+// Function BrickRigs.BrickGameState.GetMatchTimerRemaining
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGameState_GetMatchTimerRemaining final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetMatchTimerRemaining;
+
+// Function BrickRigs.BrickGameState.GetMatchWinner
+// 0x0001 (0x0001 - 0x0000)
+struct BrickGameState_GetMatchWinner final
+{
+public:
+	struct FMatchWinner                           ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetMatchWinner;
+
+// Function BrickRigs.BrickGameState.GetMaxPlayersInTeam
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameState_GetMaxPlayersInTeam final
+{
+public:
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetMaxPlayersInTeam;
+
+// Function BrickRigs.BrickGameState.GetNextMatchSettings
+// 0x00C8 (0x00C8 - 0x0000)
+struct BrickGameState_GetNextMatchSettings final
+{
+public:
+	struct FMatchSettings                         ReturnValue;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetNextMatchSettings;
+
+// Function BrickRigs.BrickGameState.GetNumFreeSlotsInTeam
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameState_GetNumFreeSlotsInTeam final
+{
+public:
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetNumFreeSlotsInTeam;
+
+// Function BrickRigs.BrickGameState.GetNumPlayersInTeam
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameState_GetNumPlayersInTeam final
+{
+public:
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetNumPlayersInTeam;
+
+// Function BrickRigs.BrickGameState.GetNumPlayersToStartWarmup
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGameState_GetNumPlayersToStartWarmup final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetNumPlayersToStartWarmup;
+
+// Function BrickRigs.BrickGameState.GetTeams
+// 0x0010 (0x0010 - 0x0000)
+struct BrickGameState_GetTeams final
+{
+public:
+	TArray<class UBrickTeam*>                     ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetTeams;
+
+// Function BrickRigs.BrickGameState.GetVehiclePrice
+// 0x001C (0x001C - 0x0000)
+struct BrickGameState_GetVehiclePrice final
+{
+public:
+	struct FVehicleSpawnProperties                Props;                                             // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetVehiclePrice;
+
+// Function BrickRigs.BrickGameState.GetZombieTeam
+// 0x0008 (0x0008 - 0x0000)
+struct BrickGameState_GetZombieTeam final
+{
+public:
+	class UBrickTeam*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGameState_GetZombieTeam;
+
+// Function BrickRigs.BrickGridPanel.SetDefaultColumnFill
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGridPanel_SetDefaultColumnFill final
+{
+public:
+	float                                         Coefficient;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGridPanel_SetDefaultColumnFill;
+
+// Function BrickRigs.BrickGridPanel.SetDefaultRowFill
+// 0x0004 (0x0004 - 0x0000)
+struct BrickGridPanel_SetDefaultRowFill final
+{
+public:
+	float                                         Coefficient;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGridPanel_SetDefaultRowFill;
+
+// Function BrickRigs.BrickGridPanel.SetSlotSpacingStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickGridPanel_SetSlotSpacingStyle final
+{
+public:
+	EBrickUISpacingStyle                          NewStyle;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickGridPanel_SetSlotSpacingStyle;
+
+// Function BrickRigs.BrickHorizontalBox.SetSlotSpacingStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickHorizontalBox_SetSlotSpacingStyle final
+{
+public:
+	EBrickUISpacingStyle                          NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickHorizontalBox_SetSlotSpacingStyle;
+
+// Function BrickRigs.BrickImage.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct BrickImage_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_SetColorStyle;
+
+// Function BrickRigs.BrickImage.SetIconAtlas
+// 0x0001 (0x0001 - 0x0000)
+struct BrickImage_SetIconAtlas final
+{
+public:
+	EBrickUIIconAtlas                             NewAtlas;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_SetIconAtlas;
+
+// Function BrickRigs.BrickImage.SetIconAtlasAndSlot
+// 0x000C (0x000C - 0x0000)
+struct BrickImage_SetIconAtlasAndSlot final
+{
+public:
+	EBrickUIIconAtlas                             NewAtlas;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickUIIconSlot                       NewSlot;                                           // 0x0004(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_SetIconAtlasAndSlot;
+
+// Function BrickRigs.BrickImage.SetIconSlot
+// 0x0008 (0x0008 - 0x0000)
+struct BrickImage_SetIconSlot final
+{
+public:
+	struct FBrickUIIconSlot                       NewSlot;                                           // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_SetIconSlot;
+
+// Function BrickRigs.BrickImage.SetIsThrobber
+// 0x0001 (0x0001 - 0x0000)
+struct BrickImage_SetIsThrobber final
+{
+public:
+	bool                                          bNewIsThrobber;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_SetIsThrobber;
+
+// Function BrickRigs.BrickImage.SetStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct BrickImage_SetStyleState final
+{
+public:
+	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_SetStyleState;
+
+// Function BrickRigs.BrickImage.IsLoadingImage
+// 0x0001 (0x0001 - 0x0000)
+struct BrickImage_IsLoadingImage final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickImage_IsLoadingImage;
+
+// Function BrickRigs.BrickObjectPool.Get
+// 0x0010 (0x0010 - 0x0000)
+struct BrickObjectPool_Get final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBrickObjectPool*                       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickObjectPool_Get;
+
+// Function BrickRigs.BrickObjectPool.GetWidget
+// 0x0018 (0x0018 - 0x0000)
+struct BrickObjectPool_GetWidget final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUserWidget*                            ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickObjectPool_GetWidget;
+
+// Function BrickRigs.BrickObjectPool.PoolWidget
+// 0x0008 (0x0008 - 0x0000)
+struct BrickObjectPool_PoolWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickObjectPool_PoolWidget;
+
+// Function BrickRigs.BrickObjectPool.PoolWidgets
+// 0x0018 (0x0018 - 0x0000)
+struct BrickObjectPool_PoolWidgets final
+{
+public:
+	TArray<class UUserWidget*>                    Widgets;                                           // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         NumToKeep;                                         // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BrickObjectPool_PoolWidgets;
+
+// Function BrickRigs.BrickObjectPool.RecycleWidget
+// 0x0030 (0x0030 - 0x0000)
+struct BrickObjectPool_RecycleWidget final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UUserWidget*>                    Widgets;                                           // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutRecycled;                                      // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            ReturnValue;                                       // 0x0028(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickObjectPool_RecycleWidget;
+
 // Function BrickRigs.InventoryComponent.IsSlotCompatible
 // 0x0048 (0x0048 - 0x0000)
 struct InventoryComponent_IsSlotCompatible final
@@ -3102,13 +4302,13 @@ public:
 DUMPER7_ASSERTS_InventoryComponent_MoveItems;
 
 // Function BrickRigs.InventoryComponent.ConsumeAmmo
-// 0x0014 (0x0014 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct InventoryComponent_ConsumeAmmo final
 {
 public:
-	struct FAmmoInfo                              InAmmo;                                            // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NumRequired;                                       // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAmmoInfo                              InAmmo;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         NumRequired;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InventoryComponent_ConsumeAmmo;
 
@@ -3162,11 +4362,11 @@ public:
 DUMPER7_ASSERTS_InventoryComponent_SetContentHidden;
 
 // Function BrickRigs.InventoryComponent.SetInventoryProperties
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct InventoryComponent_SetInventoryProperties final
 {
 public:
-	struct FInventoryProperties                   InProps;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FInventoryProperties                   InProps;                                           // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InventoryComponent_SetInventoryProperties;
 
@@ -3410,1140 +4610,6 @@ public:
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InventoryComponent_RequiresSpecialSlot;
-
-// Function BrickRigs.BrickConnectorsISMComponent.SetStyle
-// 0x0004 (0x0004 - 0x0000)
-struct BrickConnectorsISMComponent_SetStyle final
-{
-public:
-	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIColorStyle                            NewFocusedColorStyle;                              // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            NewStyleState;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            NewFocusedStyleState;                              // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickConnectorsISMComponent_SetStyle;
-
-// Function BrickRigs.HUDIconWidget.SetIconColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct HUDIconWidget_SetIconColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconWidget_SetIconColorStyle;
-
-// Function BrickRigs.HUDIconWidget.SetIconSlot
-// 0x0008 (0x0008 - 0x0000)
-struct HUDIconWidget_SetIconSlot final
-{
-public:
-	struct FBrickUIIconSlot                       NewSlot;                                           // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconWidget_SetIconSlot;
-
-// Function BrickRigs.HUDIconWidget.UpdateIconRotation
-// 0x0004 (0x0004 - 0x0000)
-struct HUDIconWidget_UpdateIconRotation final
-{
-public:
-	float                                         NewRotation;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconWidget_UpdateIconRotation;
-
-// Function BrickRigs.HUDIconWidget.UpdateIconStyle
-// 0x0002 (0x0002 - 0x0000)
-struct HUDIconWidget_UpdateIconStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InStyleState;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconWidget_UpdateIconStyle;
-
-// Function BrickRigs.HUDIconWidget.GetIconDisplayName
-// 0x0018 (0x0018 - 0x0000)
-struct HUDIconWidget_GetIconDisplayName final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HUDIconWidget_GetIconDisplayName;
-
-// Function BrickRigs.HUDIconWidget.GetIconWorldRotation
-// 0x0008 (0x0008 - 0x0000)
-struct HUDIconWidget_GetIconWorldRotation final
-{
-public:
-	float                                         OutRotation;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_HUDIconWidget_GetIconWorldRotation;
-
-// Function BrickRigs.BrickDataSingleton.Get
-// 0x0008 (0x0008 - 0x0000)
-struct BrickDataSingleton_Get final
-{
-public:
-	class UBrickDataSingleton*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickDataSingleton_Get;
-
-// Function BrickRigs.BrickDataSingleton.GetColorDisplayName
-// 0x0030 (0x0030 - 0x0000)
-struct BrickDataSingleton_GetColorDisplayName final
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRoundValue;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickDataSingleton_GetColorDisplayName;
-
-// Function BrickRigs.BrickEditorArrowComponent.SetArrowType
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorArrowComponent_SetArrowType final
-{
-public:
-	EBrickEditorArrowType                         NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorArrowComponent_SetArrowType;
-
-// Function BrickRigs.BrickEditorArrowComponent.SetCircularArrowAngle
-// 0x0004 (0x0004 - 0x0000)
-struct BrickEditorArrowComponent_SetCircularArrowAngle final
-{
-public:
-	float                                         NewAngle;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorArrowComponent_SetCircularArrowAngle;
-
-// Function BrickRigs.BrickEditorArrowComponent.SetCircularArrowRadius
-// 0x0004 (0x0004 - 0x0000)
-struct BrickEditorArrowComponent_SetCircularArrowRadius final
-{
-public:
-	float                                         NewRadius;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorArrowComponent_SetCircularArrowRadius;
-
-// Function BrickRigs.BrickEditorArrowComponent.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorArrowComponent_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorArrowComponent_SetColorStyle;
-
-// Function BrickRigs.BrickEditorArrowComponent.SetLinearArrowLength
-// 0x0004 (0x0004 - 0x0000)
-struct BrickEditorArrowComponent_SetLinearArrowLength final
-{
-public:
-	float                                         NewLength;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorArrowComponent_SetLinearArrowLength;
-
-// Function BrickRigs.BrickEditorMirrorAxisWidget.UpdateCanBeSelected
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorMirrorAxisWidget_UpdateCanBeSelected final
-{
-public:
-	bool                                          bNewCanBeSelected;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorMirrorAxisWidget_UpdateCanBeSelected;
-
-// Function BrickRigs.BrickEditorMirrorAxisWidget.UpdateIsSelected
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorMirrorAxisWidget_UpdateIsSelected final
-{
-public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorMirrorAxisWidget_UpdateIsSelected;
-
-// Function BrickRigs.BrickEditorMirrorAxisWidget.UpdateMirrorAxis
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorMirrorAxisWidget_UpdateMirrorAxis final
-{
-public:
-	EAxis                                         InAxis;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorMirrorAxisWidget_UpdateMirrorAxis;
-
-// Function BrickRigs.ChatMessageWidget.UpdateColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct ChatMessageWidget_UpdateColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ChatMessageWidget_UpdateColorStyle;
-
-// Function BrickRigs.ChatMessageWidget.UpdateMessageText
-// 0x0018 (0x0018 - 0x0000)
-struct ChatMessageWidget_UpdateMessageText final
-{
-public:
-	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ChatMessageWidget_UpdateMessageText;
-
-// Function BrickRigs.BaseEditorInputComponent.GetCycleViewModeValueText
-// 0x0018 (0x0018 - 0x0000)
-struct BaseEditorInputComponent_GetCycleViewModeValueText final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseEditorInputComponent_GetCycleViewModeValueText;
-
-// Function BrickRigs.BaseEditorInputComponent.GetExitEditorWithVehicleEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct BaseEditorInputComponent_GetExitEditorWithVehicleEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseEditorInputComponent_GetExitEditorWithVehicleEnabled;
-
-// Function BrickRigs.BaseEditorInputComponent.GetSaveItemAsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct BaseEditorInputComponent_GetSaveItemAsEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseEditorInputComponent_GetSaveItemAsEnabled;
-
-// Function BrickRigs.BaseEditorInputComponent.GetSaveItemEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct BaseEditorInputComponent_GetSaveItemEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseEditorInputComponent_GetSaveItemEnabled;
-
-// Function BrickRigs.BaseEditorInputComponent.GetUploadItemAsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct BaseEditorInputComponent_GetUploadItemAsEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseEditorInputComponent_GetUploadItemAsEnabled;
-
-// Function BrickRigs.BaseEditorInputComponent.GetUploadItemEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct BaseEditorInputComponent_GetUploadItemEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BaseEditorInputComponent_GetUploadItemEnabled;
-
-// Function BrickRigs.FluGameUserSettings.Get
-// 0x0008 (0x0008 - 0x0000)
-struct FluGameUserSettings_Get final
-{
-public:
-	class UFluGameUserSettings*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FluGameUserSettings_Get;
-
-// Function BrickRigs.CrosshairWidget.OnHUDVisibilityChanged
-// 0x0001 (0x0001 - 0x0000)
-struct CrosshairWidget_OnHUDVisibilityChanged final
-{
-public:
-	EHUDVisibility                                NewVisibility;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CrosshairWidget_OnHUDVisibilityChanged;
-
-// Function BrickRigs.CrosshairWidget.PlayHitAnimation
-// 0x000C (0x000C - 0x0000)
-struct CrosshairWidget_PlayHitAnimation final
-{
-public:
-	struct FClientDamageInfo                      DamageInfo;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CrosshairWidget_PlayHitAnimation;
-
-// Function BrickRigs.CrosshairWidget.UpdateIsAttachingWinch
-// 0x0001 (0x0001 - 0x0000)
-struct CrosshairWidget_UpdateIsAttachingWinch final
-{
-public:
-	bool                                          bNewAttaching;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CrosshairWidget_UpdateIsAttachingWinch;
-
-// Function BrickRigs.CrosshairWidget.UpdateWinchAttachment
-// 0x0002 (0x0002 - 0x0000)
-struct CrosshairWidget_UpdateWinchAttachment final
-{
-public:
-	bool                                          bBlockingHit;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWithinRange;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CrosshairWidget_UpdateWinchAttachment;
-
-// Function BrickRigs.BrickEditorNiagaraComponent.OnSystemFinishedCallback
-// 0x0008 (0x0008 - 0x0000)
-struct BrickEditorNiagaraComponent_OnSystemFinishedCallback final
-{
-public:
-	class UNiagaraComponent*                      PSystem;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorNiagaraComponent_OnSystemFinishedCallback;
-
-// Function BrickRigs.FuelTank.ShouldSpawnLeakOnHit
-// 0x008C (0x008C - 0x0000)
-struct FuelTank_ShouldSpawnLeakOnHit final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FuelTank_ShouldSpawnLeakOnHit;
-
-// Function BrickRigs.BrickEditorObjectPropertyWidget.UpdateSelectedObjects
-// 0x0020 (0x0020 - 0x0000)
-struct BrickEditorObjectPropertyWidget_UpdateSelectedObjects final
-{
-public:
-	class FText                                   FirstObjectName;                                   // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         NumSelectedObjects;                                // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDefaultObjects;                                   // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickEditorObjectPropertyWidget_UpdateSelectedObjects;
-
-// Function BrickRigs.BrickEditorParticleComponent.OnSystemFinishedCallback
-// 0x0008 (0x0008 - 0x0000)
-struct BrickEditorParticleComponent_OnSystemFinishedCallback final
-{
-public:
-	class UParticleSystemComponent*               InParticleComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorParticleComponent_OnSystemFinishedCallback;
-
-// Function BrickRigs.ControlHintWidget.OnInputMethodChanged
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_OnInputMethodChanged final
-{
-public:
-	EInputMethod                                  NewInputMethod;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_OnInputMethodChanged;
-
-// Function BrickRigs.ControlHintWidget.SetAction
-// 0x000C (0x000C - 0x0000)
-struct ControlHintWidget_SetAction final
-{
-public:
-	class FName                                   InActionName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInputActionTriggerType                       InTriggerType;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetAction;
-
-// Function BrickRigs.ControlHintWidget.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetColorStyle;
-
-// Function BrickRigs.ControlHintWidget.SetDisplayInfo
-// 0x0028 (0x0028 - 0x0000)
-struct ControlHintWidget_SetDisplayInfo final
-{
-public:
-	struct FDisplayInfo                           InDisplayInfo;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetDisplayInfo;
-
-// Function BrickRigs.ControlHintWidget.SetDisplayInfoMode
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_SetDisplayInfoMode final
-{
-public:
-	EControlHintDisplayInfoMode                   NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetDisplayInfoMode;
-
-// Function BrickRigs.ControlHintWidget.SetInputChordScale
-// 0x0004 (0x0004 - 0x0000)
-struct ControlHintWidget_SetInputChordScale final
-{
-public:
-	float                                         InScale;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetInputChordScale;
-
-// Function BrickRigs.ControlHintWidget.SetShowInputChord
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_SetShowInputChord final
-{
-public:
-	bool                                          bShow;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetShowInputChord;
-
-// Function BrickRigs.ControlHintWidget.SetShowUnboundKey
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_SetShowUnboundKey final
-{
-public:
-	bool                                          bShow;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetShowUnboundKey;
-
-// Function BrickRigs.ControlHintWidget.SetStyleState
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_SetStyleState final
-{
-public:
-	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetStyleState;
-
-// Function BrickRigs.ControlHintWidget.SetTextStyle
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_SetTextStyle final
-{
-public:
-	EBrickUITextStyle                             NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_SetTextStyle;
-
-// Function BrickRigs.ControlHintWidget.UpdateDisplayInfo
-// 0x0028 (0x0028 - 0x0000)
-struct ControlHintWidget_UpdateDisplayInfo final
-{
-public:
-	struct FDisplayInfo                           NewDisplayInfo;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateDisplayInfo;
-
-// Function BrickRigs.ControlHintWidget.UpdateHoldProgress
-// 0x0004 (0x0004 - 0x0000)
-struct ControlHintWidget_UpdateHoldProgress final
-{
-public:
-	float                                         InHoldProgress;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateHoldProgress;
-
-// Function BrickRigs.ControlHintWidget.UpdateIconVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_UpdateIconVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateIconVisibility;
-
-// Function BrickRigs.ControlHintWidget.UpdateInputChordStyleState
-// 0x0002 (0x0002 - 0x0000)
-struct ControlHintWidget_UpdateInputChordStyleState final
-{
-public:
-	EBrickUIStyleState                            InStyleState;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsHoldAction;                                   // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateInputChordStyleState;
-
-// Function BrickRigs.ControlHintWidget.UpdateInputChordVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_UpdateInputChordVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateInputChordVisibility;
-
-// Function BrickRigs.ControlHintWidget.UpdateIsHoldAction
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_UpdateIsHoldAction final
-{
-public:
-	bool                                          bIsHoldAction;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateIsHoldAction;
-
-// Function BrickRigs.ControlHintWidget.UpdateTextVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct ControlHintWidget_UpdateTextVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ControlHintWidget_UpdateTextVisibility;
-
-// Function BrickRigs.BrickEditorWidget.AddMirrorModeWidget
-// 0x0010 (0x0010 - 0x0000)
-struct BrickEditorWidget_AddMirrorModeWidget final
-{
-public:
-	class UBrickEditorMirrorAxisWidget*           Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickEditorWidget_AddMirrorModeWidget;
-
-// Function BrickRigs.BrickEditorWidget.AddModeWidget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickEditorWidget_AddModeWidget final
-{
-public:
-	class UBrickEditorModeWidget*                 Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorWidget_AddModeWidget;
-
-// Function BrickRigs.BrickEditorWidget.OnMeasurementSystemChanged
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorWidget_OnMeasurementSystemChanged final
-{
-public:
-	EMeasurementSystem                            NewSystem;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorWidget_OnMeasurementSystemChanged;
-
-// Function BrickRigs.BrickEditorWidget.OnPlacableSearchTextChanged
-// 0x0020 (0x0020 - 0x0000)
-struct BrickEditorWidget_OnPlacableSearchTextChanged final
-{
-public:
-	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickEditorWidget_OnPlacableSearchTextChanged;
-
-// Function BrickRigs.BrickEditorWidget.UpdateCanClearPlacableFilter
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorWidget_UpdateCanClearPlacableFilter final
-{
-public:
-	bool                                          bNewCanClear;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorWidget_UpdateCanClearPlacableFilter;
-
-// Function BrickRigs.BrickEditorWidget.UpdateCanPlaceObjects
-// 0x0001 (0x0001 - 0x0000)
-struct BrickEditorWidget_UpdateCanPlaceObjects final
-{
-public:
-	bool                                          bNewCanPlace;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorWidget_UpdateCanPlaceObjects;
-
-// Function BrickRigs.BrickEditorWidget.UpdateEditorUIScale
-// 0x0004 (0x0004 - 0x0000)
-struct BrickEditorWidget_UpdateEditorUIScale final
-{
-public:
-	float                                         NewScale;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickEditorWidget_UpdateEditorUIScale;
-
-// Function BrickRigs.BrickEditorWidget.UpdateSelection
-// 0x0020 (0x0020 - 0x0000)
-struct BrickEditorWidget_UpdateSelection final
-{
-public:
-	class FText                                   SelectionName;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bAnythingSelected;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickEditorWidget_UpdateSelection;
-
-// Function BrickRigs.BrickGameInstance.Get
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameInstance_Get final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBrickGameInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameInstance_Get;
-
-// Function BrickRigs.BrickGameInstance.ClosePopup
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameInstance_ClosePopup final
-{
-public:
-	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EPopupResult                                  Result;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickGameInstance_ClosePopup;
-
-// Function BrickRigs.BrickGameInstance.CreatePopupParams
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameInstance_CreatePopupParams final
-{
-public:
-	TSubclassOf<class UPopupParams>               ParamsClass;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPopupParams*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameInstance_CreatePopupParams;
-
-// Function BrickRigs.BrickGameInstance.OpenLinkInBrowser
-// 0x0018 (0x0018 - 0x0000)
-struct BrickGameInstance_OpenLinkInBrowser final
-{
-public:
-	class FString                                 Link;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsTrusted;                                        // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickGameInstance_OpenLinkInBrowser;
-
-// Function BrickRigs.BrickGameInstance.OpenMainMenu
-// 0x0001 (0x0001 - 0x0000)
-struct BrickGameInstance_OpenMainMenu final
-{
-public:
-	bool                                          bForceExit;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameInstance_OpenMainMenu;
-
-// Function BrickRigs.BrickGameInstance.OpenMessagePopup
-// 0x0038 (0x0038 - 0x0000)
-struct BrickGameInstance_OpenMessagePopup final
-{
-public:
-	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Message;                                           // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
-	bool                                          bCanCancel;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EPopupResult Result)>          ClosedDelegate;                                    // 0x0024(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0034(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickGameInstance_OpenMessagePopup;
-
-// Function BrickRigs.BrickGameInstance.OpenPopup
-// 0x0018 (0x0018 - 0x0000)
-struct BrickGameInstance_OpenPopup final
-{
-public:
-	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPopupParams*                           PopupParams;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bToggleOpen;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickGameInstance_OpenPopup;
-
-// Function BrickRigs.BrickGameInstance.QuitGame
-// 0x0001 (0x0001 - 0x0000)
-struct BrickGameInstance_QuitGame final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameInstance_QuitGame;
-
-// Function BrickRigs.BrickGameInstance.IsPopupOpen
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameInstance_IsPopupOpen final
-{
-public:
-	struct FPopupHandle                           Handle;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickGameInstance_IsPopupOpen;
-
-// Function BrickRigs.BrickGameSession.Get
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameSession_Get final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABrickGameSession*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameSession_Get;
-
-// Function BrickRigs.EnumPropertyWidget.InitializeItem
-// 0x0148 (0x0148 - 0x0000)
-struct EnumPropertyWidget_InitializeItem final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EnumPropertyWidget_InitializeItem;
-
-// Function BrickRigs.EnumPropertyWidget.OnItemSelected
-// 0x0008 (0x0008 - 0x0000)
-struct EnumPropertyWidget_OnItemSelected final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_EnumPropertyWidget_OnItemSelected;
-
-// Function BrickRigs.BrickGameState.Get
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameState_Get final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABrickGameState*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_Get;
-
-// Function BrickRigs.BrickGameState.SetCurrentRound
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGameState_SetCurrentRound final
-{
-public:
-	int32                                         NewRound;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_SetCurrentRound;
-
-// Function BrickRigs.BrickGameState.SetMatchSettings
-// 0x00C8 (0x00C8 - 0x0000)
-struct BrickGameState_SetMatchSettings final
-{
-public:
-	struct FMatchSettings                         NewSettings;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_SetMatchSettings;
-
-// Function BrickRigs.BrickGameState.SetMatchWinner
-// 0x0001 (0x0001 - 0x0000)
-struct BrickGameState_SetMatchWinner final
-{
-public:
-	struct FMatchWinner                           InWinner;                                          // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_SetMatchWinner;
-
-// Function BrickRigs.BrickGameState.SetNextMatchSettings
-// 0x00C8 (0x00C8 - 0x0000)
-struct BrickGameState_SetNextMatchSettings final
-{
-public:
-	struct FMatchSettings                         NewSettings;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_SetNextMatchSettings;
-
-// Function BrickRigs.BrickGameState.CanPlayerJoinTeam
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameState_CanPlayerJoinTeam final
-{
-public:
-	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGenericTeamId                         TeamID;                                            // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickGameState_CanPlayerJoinTeam;
-
-// Function BrickRigs.BrickGameState.DoesTeamExist
-// 0x0002 (0x0002 - 0x0000)
-struct BrickGameState_DoesTeamExist final
-{
-public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_DoesTeamExist;
-
-// Function BrickRigs.BrickGameState.FindTeam
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameState_FindTeam final
-{
-public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickTeam*                             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_FindTeam;
-
-// Function BrickRigs.BrickGameState.GetCurrentRound
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGameState_GetCurrentRound final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetCurrentRound;
-
-// Function BrickRigs.BrickGameState.GetDefaultTeam
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameState_GetDefaultTeam final
-{
-public:
-	class UBrickTeam*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetDefaultTeam;
-
-// Function BrickRigs.BrickGameState.GetDummyTeam
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameState_GetDummyTeam final
-{
-public:
-	class UBrickTeam*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetDummyTeam;
-
-// Function BrickRigs.BrickGameState.GetMatchRandomSeed
-// 0x0001 (0x0001 - 0x0000)
-struct BrickGameState_GetMatchRandomSeed final
-{
-public:
-	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetMatchRandomSeed;
-
-// Function BrickRigs.BrickGameState.GetMatchSettings
-// 0x00C8 (0x00C8 - 0x0000)
-struct BrickGameState_GetMatchSettings final
-{
-public:
-	struct FMatchSettings                         ReturnValue;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetMatchSettings;
-
-// Function BrickRigs.BrickGameState.GetMatchTimerRate
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGameState_GetMatchTimerRate final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetMatchTimerRate;
-
-// Function BrickRigs.BrickGameState.GetMatchTimerRemaining
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGameState_GetMatchTimerRemaining final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetMatchTimerRemaining;
-
-// Function BrickRigs.BrickGameState.GetMatchWinner
-// 0x0001 (0x0001 - 0x0000)
-struct BrickGameState_GetMatchWinner final
-{
-public:
-	struct FMatchWinner                           ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetMatchWinner;
-
-// Function BrickRigs.BrickGameState.GetMaxPlayersInTeam
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameState_GetMaxPlayersInTeam final
-{
-public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetMaxPlayersInTeam;
-
-// Function BrickRigs.BrickGameState.GetNextMatchSettings
-// 0x00C8 (0x00C8 - 0x0000)
-struct BrickGameState_GetNextMatchSettings final
-{
-public:
-	struct FMatchSettings                         ReturnValue;                                       // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetNextMatchSettings;
-
-// Function BrickRigs.BrickGameState.GetNumFreeSlotsInTeam
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameState_GetNumFreeSlotsInTeam final
-{
-public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetNumFreeSlotsInTeam;
-
-// Function BrickRigs.BrickGameState.GetNumPlayersInTeam
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameState_GetNumPlayersInTeam final
-{
-public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetNumPlayersInTeam;
-
-// Function BrickRigs.BrickGameState.GetNumPlayersToStartWarmup
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGameState_GetNumPlayersToStartWarmup final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetNumPlayersToStartWarmup;
-
-// Function BrickRigs.BrickGameState.GetTeams
-// 0x0010 (0x0010 - 0x0000)
-struct BrickGameState_GetTeams final
-{
-public:
-	TArray<class UBrickTeam*>                     ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetTeams;
-
-// Function BrickRigs.BrickGameState.GetVehiclePrice
-// 0x001C (0x001C - 0x0000)
-struct BrickGameState_GetVehiclePrice final
-{
-public:
-	struct FVehicleSpawnProperties                Props;                                             // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetVehiclePrice;
-
-// Function BrickRigs.BrickGameState.GetZombieTeam
-// 0x0008 (0x0008 - 0x0000)
-struct BrickGameState_GetZombieTeam final
-{
-public:
-	class UBrickTeam*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGameState_GetZombieTeam;
-
-// Function BrickRigs.BrickGridPanel.SetDefaultColumnFill
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGridPanel_SetDefaultColumnFill final
-{
-public:
-	float                                         Coefficient;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGridPanel_SetDefaultColumnFill;
-
-// Function BrickRigs.BrickGridPanel.SetDefaultRowFill
-// 0x0004 (0x0004 - 0x0000)
-struct BrickGridPanel_SetDefaultRowFill final
-{
-public:
-	float                                         Coefficient;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGridPanel_SetDefaultRowFill;
-
-// Function BrickRigs.BrickGridPanel.SetSlotSpacingStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickGridPanel_SetSlotSpacingStyle final
-{
-public:
-	EBrickUISpacingStyle                          NewStyle;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickGridPanel_SetSlotSpacingStyle;
-
-// Function BrickRigs.BrickHorizontalBox.SetSlotSpacingStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickHorizontalBox_SetSlotSpacingStyle final
-{
-public:
-	EBrickUISpacingStyle                          NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickHorizontalBox_SetSlotSpacingStyle;
-
-// Function BrickRigs.DashboardWidget.AddIconWidget
-// 0x0010 (0x0010 - 0x0000)
-struct DashboardWidget_AddIconWidget final
-{
-public:
-	class UDashboardIconWidget*                   Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DashboardWidget_AddIconWidget;
-
-// Function BrickRigs.DashboardWidget.AddSliderWidget
-// 0x0008 (0x0008 - 0x0000)
-struct DashboardWidget_AddSliderWidget final
-{
-public:
-	class UDashboardSliderWidget*                 Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DashboardWidget_AddSliderWidget;
-
-// Function BrickRigs.DashboardWidget.UpdateSliderWidgetSlot
-// 0x0010 (0x0010 - 0x0000)
-struct DashboardWidget_UpdateSliderWidgetSlot final
-{
-public:
-	class UDashboardSliderWidget*                 Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumSliders;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DashboardWidget_UpdateSliderWidgetSlot;
-
-// Function BrickRigs.BrickImage.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickImage_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_SetColorStyle;
-
-// Function BrickRigs.BrickImage.SetIconAtlas
-// 0x0001 (0x0001 - 0x0000)
-struct BrickImage_SetIconAtlas final
-{
-public:
-	EBrickUIIconAtlas                             NewAtlas;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_SetIconAtlas;
-
-// Function BrickRigs.BrickImage.SetIconAtlasAndSlot
-// 0x000C (0x000C - 0x0000)
-struct BrickImage_SetIconAtlasAndSlot final
-{
-public:
-	EBrickUIIconAtlas                             NewAtlas;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickUIIconSlot                       NewSlot;                                           // 0x0004(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_SetIconAtlasAndSlot;
-
-// Function BrickRigs.BrickImage.SetIconSlot
-// 0x0008 (0x0008 - 0x0000)
-struct BrickImage_SetIconSlot final
-{
-public:
-	struct FBrickUIIconSlot                       NewSlot;                                           // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_SetIconSlot;
-
-// Function BrickRigs.BrickImage.SetIsThrobber
-// 0x0001 (0x0001 - 0x0000)
-struct BrickImage_SetIsThrobber final
-{
-public:
-	bool                                          bNewIsThrobber;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_SetIsThrobber;
-
-// Function BrickRigs.BrickImage.SetStyleState
-// 0x0001 (0x0001 - 0x0000)
-struct BrickImage_SetStyleState final
-{
-public:
-	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_SetStyleState;
-
-// Function BrickRigs.BrickImage.IsLoadingImage
-// 0x0001 (0x0001 - 0x0000)
-struct BrickImage_IsLoadingImage final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickImage_IsLoadingImage;
-
-// Function BrickRigs.EditorInputComponent.MoveForward
-// 0x0004 (0x0004 - 0x0000)
-struct EditorInputComponent_MoveForward final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EditorInputComponent_MoveForward;
-
-// Function BrickRigs.EditorInputComponent.MoveRight
-// 0x0004 (0x0004 - 0x0000)
-struct EditorInputComponent_MoveRight final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EditorInputComponent_MoveRight;
-
-// Function BrickRigs.EditorInputComponent.MoveUp
-// 0x0004 (0x0004 - 0x0000)
-struct EditorInputComponent_MoveUp final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EditorInputComponent_MoveUp;
-
-// Function BrickRigs.BrickObjectPool.Get
-// 0x0010 (0x0010 - 0x0000)
-struct BrickObjectPool_Get final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBrickObjectPool*                       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickObjectPool_Get;
-
-// Function BrickRigs.BrickObjectPool.GetWidget
-// 0x0018 (0x0018 - 0x0000)
-struct BrickObjectPool_GetWidget final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUserWidget*                            ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickObjectPool_GetWidget;
-
-// Function BrickRigs.BrickObjectPool.PoolWidget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickObjectPool_PoolWidget final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickObjectPool_PoolWidget;
-
-// Function BrickRigs.BrickObjectPool.PoolWidgets
-// 0x0018 (0x0018 - 0x0000)
-struct BrickObjectPool_PoolWidgets final
-{
-public:
-	TArray<class UUserWidget*>                    Widgets;                                           // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	int32                                         NumToKeep;                                         // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickObjectPool_PoolWidgets;
-
-// Function BrickRigs.BrickObjectPool.RecycleWidget
-// 0x0030 (0x0030 - 0x0000)
-struct BrickObjectPool_RecycleWidget final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UUserWidget*>                    Widgets;                                           // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOutRecycled;                                      // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            ReturnValue;                                       // 0x0028(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickObjectPool_RecycleWidget;
 
 // Function BrickRigs.BrickPlayerController.AccessInventory
 // 0x0008 (0x0008 - 0x0000)
@@ -5210,11 +5276,11 @@ public:
 DUMPER7_ASSERTS_BrickPlayerController_SetVehiclePinMode;
 
 // Function BrickRigs.BrickPlayerController.ShowHUDWidget
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct BrickPlayerController_ShowHUDWidget final
 {
 public:
-	TSoftClassPtr<class UClass>                   HUDWidgetClass;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   HUDWidgetClass;                                    // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickPlayerController_ShowHUDWidget;
 
@@ -5783,6 +5849,46 @@ public:
 };
 DUMPER7_ASSERTS_BrickPlayerState_IsTeamLeader;
 
+// Function BrickRigs.MatchEndWidget.UpdateContinueButton
+// 0x0008 (0x0008 - 0x0000)
+struct MatchEndWidget_UpdateContinueButton final
+{
+public:
+	int32                                         TimeRemaining;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsHost;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MatchEndWidget_UpdateContinueButton;
+
+// Function BrickRigs.MatchEndWidget.UpdateMatchWinner
+// 0x0010 (0x0010 - 0x0000)
+struct MatchEndWidget_UpdateMatchWinner final
+{
+public:
+	class UBrickTeam*                             WinnerTeam;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamAttitude                                 TeamAttitude;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MatchEndWidget_UpdateMatchWinner;
+
+// Function BrickRigs.MatchEndWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct MatchEndWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MatchEndWidget_GetWidgetToFocus;
+
+// Function BrickRigs.BrickProjectile.OnRep_SeekingTarget
+// 0x0008 (0x0008 - 0x0000)
+struct BrickProjectile_OnRep_SeekingTarget final
+{
+public:
+	class AActor*                                 OldTarget;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrickProjectile_OnRep_SeekingTarget;
+
 // Function BrickRigs.BrickScrollBox.SetSlotSpacingStyle
 // 0x0001 (0x0001 - 0x0000)
 struct BrickScrollBox_SetSlotSpacingStyle final
@@ -5921,171 +6027,6 @@ public:
 };
 DUMPER7_ASSERTS_BrickSpacer_SetColorStyle;
 
-// Function BrickRigs.BrickStatics.ColorToHex
-// 0x0028 (0x0028 - 0x0000)
-struct BrickStatics_ColorToHex final
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeAlpha;                                     // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_ColorToHex;
-
-// Function BrickRigs.BrickStatics.CreateUniqueNetId
-// 0x0040 (0x0040 - 0x0000)
-struct BrickStatics_CreateUniqueNetId final
-{
-public:
-	class FName                                   OSSName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0018(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_CreateUniqueNetId;
-
-// Function BrickRigs.BrickStatics.ExtinguishActor
-// 0x008C (0x008C - 0x0000)
-struct BrickStatics_ExtinguishActor final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickStatics_ExtinguishActor;
-
-// Function BrickRigs.BrickStatics.GetPlayerUniqueNetId
-// 0x0030 (0x0030 - 0x0000)
-struct BrickStatics_GetPlayerUniqueNetId final
-{
-public:
-	const class APlayerController*                PC;                                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_GetPlayerUniqueNetId;
-
-// Function BrickRigs.BrickStatics.GetProjectVersion
-// 0x0010 (0x0010 - 0x0000)
-struct BrickStatics_GetProjectVersion final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_GetProjectVersion;
-
-// Function BrickRigs.BrickStatics.GetScalableBrickConnectorSpacingAxis
-// 0x0004 (0x0004 - 0x0000)
-struct BrickStatics_GetScalableBrickConnectorSpacingAxis final
-{
-public:
-	struct FScalableBrickConnectorSpacing         ConnectorSpacing;                                  // 0x0000(0x0002)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EFluAxisSigned                                Axis;                                              // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EConnectorSpacing                             ReturnValue;                                       // 0x0003(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_GetScalableBrickConnectorSpacingAxis;
-
-// Function BrickRigs.BrickStatics.HexToColor
-// 0x0020 (0x0020 - 0x0000)
-struct BrickStatics_HexToColor final
-{
-public:
-	class FString                                 Hex;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_HexToColor;
-
-// Function BrickRigs.BrickStatics.IsModdedAsset
-// 0x0010 (0x0010 - 0x0000)
-struct BrickStatics_IsModdedAsset final
-{
-public:
-	const class UObject*                          Asset;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickStatics_IsModdedAsset;
-
-// Function BrickRigs.BrickStatics.SetActorOnFire
-// 0x00A0 (0x00A0 - 0x0000)
-struct BrickStatics_SetActorOnFire final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class APawn*                                  Instigator;                                        // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 DamageCauser;                                      // 0x0090(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0098(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickStatics_SetActorOnFire;
-
-// Function BrickRigs.BrickStatics.SetScalableBrickConnectorSpacingAxis
-// 0x0004 (0x0004 - 0x0000)
-struct BrickStatics_SetScalableBrickConnectorSpacingAxis final
-{
-public:
-	struct FScalableBrickConnectorSpacing         ConnectorSpacing;                                  // 0x0000(0x0002)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EFluAxisSigned                                Axis;                                              // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EConnectorSpacing                             NewSpacing;                                        // 0x0003(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_SetScalableBrickConnectorSpacingAxis;
-
-// Function BrickRigs.BrickStatics.ShowPlayerProfileUI
-// 0x0038 (0x0038 - 0x0000)
-struct BrickStatics_ShowPlayerProfileUI final
-{
-public:
-	const class APlayerController*                OwnPC;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickStatics_ShowPlayerProfileUI;
-
-// Function BrickRigs.BrickStatics.SpawnExplosion
-// 0x0050 (0x0050 - 0x0000)
-struct BrickStatics_SpawnExplosion final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UExplosiveMaterial>         ExplosiveMaterial;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Volume;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0014(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  Instigator;                                        // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 DamageCauser;                                      // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UPrimitiveComponent*>            ComponentsToIgnore;                                // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_SpawnExplosion;
-
-// Function BrickRigs.BrickStatics.SpreadFire
-// 0x0070 (0x0070 - 0x0000)
-struct BrickStatics_SpreadFire final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsMin;                                         // 0x0040(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsMax;                                         // 0x004C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpreadDistance;                                    // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpreadProbability;                                 // 0x005C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BrickStatics_SpreadFire;
-
-// Function BrickRigs.BrickStatics.UniqueNetIdToString
-// 0x0038 (0x0038 - 0x0000)
-struct BrickStatics_UniqueNetIdToString final
-{
-public:
-	struct FUniqueNetIdRepl                       UniqueNetId;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickStatics_UniqueNetIdToString;
-
 // Function BrickRigs.BrickTeam.SetMaxScore
 // 0x0004 (0x0004 - 0x0000)
 struct BrickTeam_SetMaxScore final
@@ -6139,33 +6080,6 @@ public:
 	struct FGenericTeamId                         ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickTeam_GetTeamId;
-
-// Function BrickRigs.BrickTextBlock.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickTextBlock_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickTextBlock_SetColorStyle;
-
-// Function BrickRigs.BrickTextBlock.SetStyleState
-// 0x0001 (0x0001 - 0x0000)
-struct BrickTextBlock_SetStyleState final
-{
-public:
-	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickTextBlock_SetStyleState;
-
-// Function BrickRigs.BrickTextBlock.SetTextStyle
-// 0x0001 (0x0001 - 0x0000)
-struct BrickTextBlock_SetTextStyle final
-{
-public:
-	EBrickUITextStyle                             NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickTextBlock_SetTextStyle;
 
 // Function BrickRigs.BrickTextBoxWidget.OnTextChanged
 // 0x0018 (0x0018 - 0x0000)
@@ -6377,6 +6291,42 @@ public:
 };
 DUMPER7_ASSERTS_BrickTextBoxWidget_IsTyping;
 
+// Function BrickRigs.TargetMarkerIconWidget.UpdateAmmoType
+// 0x0001 (0x0001 - 0x0000)
+struct TargetMarkerIconWidget_UpdateAmmoType final
+{
+public:
+	EAmmoType                                     NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateAmmoType;
+
+// Function BrickRigs.TargetMarkerIconWidget.UpdateFireAction
+// 0x0004 (0x0004 - 0x0000)
+struct TargetMarkerIconWidget_UpdateFireAction final
+{
+public:
+	int32                                         NewActionIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateFireAction;
+
+// Function BrickRigs.TargetMarkerIconWidget.UpdateHasValidTarget
+// 0x0001 (0x0001 - 0x0000)
+struct TargetMarkerIconWidget_UpdateHasValidTarget final
+{
+public:
+	bool                                          bNewHasValidTarget;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateHasValidTarget;
+
+// Function BrickRigs.TargetMarkerIconWidget.UpdateTargetDistance
+// 0x0004 (0x0004 - 0x0000)
+struct TargetMarkerIconWidget_UpdateTargetDistance final
+{
+public:
+	float                                         NewDist;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateTargetDistance;
+
 // Function BrickRigs.BrickUIStyle.FormatRichTextStyle
 // 0x0038 (0x0038 - 0x0000)
 struct BrickUIStyle_FormatRichTextStyle final
@@ -6410,11 +6360,11 @@ public:
 DUMPER7_ASSERTS_BrickUIStyle_GetTeamAttitudeTextStyle;
 
 // Function BrickRigs.BrickUIStyle.GetUIStyle
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct BrickUIStyle_GetUIStyle final
 {
 public:
-	TDelegate<void(const class UBrickUIStyle* Style)> Delegate;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class UBrickUIStyle* Style)> Delegate;                                      // 0x0000(0x0014)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickUIStyle_GetUIStyle;
 
@@ -6448,14 +6398,14 @@ public:
 DUMPER7_ASSERTS_BrickUIStyle_UnbindUIStyle;
 
 // Function BrickRigs.BrickUIStyle.SetBrush
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct BrickUIStyle_SetBrush final
 {
 public:
 	EBrickUIBrushStyle                            BrushStyle;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBrickUIStyleState                            StyleState;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            InBrush;                                           // 0x0008(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            InBrush;                                           // 0x0008(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickUIStyle_SetBrush;
 
@@ -6505,26 +6455,26 @@ public:
 DUMPER7_ASSERTS_BrickUIStyle_SetSpacingStyle;
 
 // Function BrickRigs.BrickUIStyle.SetTextStyle
-// 0x0278 (0x0278 - 0x0000)
+// 0x02D0 (0x02D0 - 0x0000)
 struct BrickUIStyle_SetTextStyle final
 {
 public:
 	EBrickUITextStyle                             TextStyle;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTextBlockStyle                        InTextStyle;                                       // 0x0008(0x0270)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTextBlockStyle                        InTextStyle;                                       // 0x0008(0x02C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickUIStyle_SetTextStyle;
 
 // Function BrickRigs.BrickUIStyle.GetBrush
-// 0x0118 (0x0118 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct BrickUIStyle_GetBrush final
 {
 public:
 	EBrickUIBrushStyle                            BrushStyle;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBrickUIStyleState                            StyleState;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            Fallback;                                          // 0x0008(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            ReturnValue;                                       // 0x0090(0x0088)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            Fallback;                                          // 0x0008(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            ReturnValue;                                       // 0x00A8(0x00A0)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickUIStyle_GetBrush;
 
@@ -6566,61 +6516,16 @@ public:
 DUMPER7_ASSERTS_BrickUIStyle_GetSpacing;
 
 // Function BrickRigs.BrickUIStyle.GetTextStyle
-// 0x04E8 (0x04E8 - 0x0000)
+// 0x0598 (0x0598 - 0x0000)
 struct BrickUIStyle_GetTextStyle final
 {
 public:
 	EBrickUITextStyle                             TextStyle;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTextBlockStyle                        Fallback;                                          // 0x0008(0x0270)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTextBlockStyle                        ReturnValue;                                       // 0x0278(0x0270)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTextBlockStyle                        Fallback;                                          // 0x0008(0x02C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTextBlockStyle                        ReturnValue;                                       // 0x02D0(0x02C8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickUIStyle_GetTextStyle;
-
-// Function BrickRigs.BrickUserSettings.GetUserSettings
-// 0x0008 (0x0008 - 0x0000)
-struct BrickUserSettings_GetUserSettings final
-{
-public:
-	class UBrickUserSettings*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserSettings_GetUserSettings;
-
-// Function BrickRigs.BrickUserSettings.SetBrickUnitsDisplayMode
-// 0x0001 (0x0001 - 0x0000)
-struct BrickUserSettings_SetBrickUnitsDisplayMode final
-{
-public:
-	EBrickUnitsDisplayMode                        NewMode;                                           // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserSettings_SetBrickUnitsDisplayMode;
-
-// Function BrickRigs.BrickUserSettings.SetColorDisplayMode
-// 0x0001 (0x0001 - 0x0000)
-struct BrickUserSettings_SetColorDisplayMode final
-{
-public:
-	EColorDisplayMode                             NewMode;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserSettings_SetColorDisplayMode;
-
-// Function BrickRigs.BrickUserSettings.GetBrickUnitsDisplayMode
-// 0x0001 (0x0001 - 0x0000)
-struct BrickUserSettings_GetBrickUnitsDisplayMode final
-{
-public:
-	EBrickUnitsDisplayMode                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserSettings_GetBrickUnitsDisplayMode;
-
-// Function BrickRigs.BrickUserSettings.GetColorDisplayMode
-// 0x0001 (0x0001 - 0x0000)
-struct BrickUserSettings_GetColorDisplayMode final
-{
-public:
-	EColorDisplayMode                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickUserSettings_GetColorDisplayMode;
 
 // Function BrickRigs.BrickViewportClient.Get
 // 0x0010 (0x0010 - 0x0000)
@@ -6631,34 +6536,6 @@ public:
 	class UBrickViewportClient*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BrickViewportClient_Get;
-
-// Function BrickRigs.BrickWorldSettings.Get
-// 0x0010 (0x0010 - 0x0000)
-struct BrickWorldSettings_Get final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABrickWorldSettings*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickWorldSettings_Get;
-
-// Function BrickRigs.BrickWorldSettings.AddHeatSeekingTarget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickWorldSettings_AddHeatSeekingTarget final
-{
-public:
-	class AActor*                                 Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickWorldSettings_AddHeatSeekingTarget;
-
-// Function BrickRigs.BrickWorldSettings.RemoveHeatSeekingTarget
-// 0x0008 (0x0008 - 0x0000)
-struct BrickWorldSettings_RemoveHeatSeekingTarget final
-{
-public:
-	class AActor*                                 Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BrickWorldSettings_RemoveHeatSeekingTarget;
 
 // Function BrickRigs.CameraBrickWidget.UpdateTargetRange
 // 0x0008 (0x0008 - 0x0000)
@@ -6672,7 +6549,7 @@ public:
 DUMPER7_ASSERTS_CameraBrickWidget_UpdateTargetRange;
 
 // Function BrickRigs.CapturePoint.OnTriggerBeginOverlap
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct CapturePoint_OnTriggerBeginOverlap final
 {
 public:
@@ -6682,7 +6559,7 @@ public:
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CapturePoint_OnTriggerBeginOverlap;
 
@@ -6704,7 +6581,7 @@ DUMPER7_ASSERTS_CapturePoint_OnTriggerEndOverlap;
 struct CapturePoint_SetCapturedBy final
 {
 public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bNewHasBeenCaptured;                               // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -6726,7 +6603,7 @@ DUMPER7_ASSERTS_CapturePoint_SetCaptureRatio;
 struct CapturePoint_SetCapturingTeam final
 {
 public:
-	struct FGenericTeamId                         TeamID;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGenericTeamId                         TeamId;                                            // 0x0000(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CapturePoint_SetCapturingTeam;
@@ -6798,36 +6675,6 @@ public:
 };
 DUMPER7_ASSERTS_CapturePoint_IsCharacterOnCapturePoint;
 
-// Function BrickRigs.CarWheelBrick.OnRootComponentWake
-// 0x0010 (0x0010 - 0x0000)
-struct CarWheelBrick_OnRootComponentWake final
-{
-public:
-	class UPrimitiveComponent*                    SleepingComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CarWheelBrick_OnRootComponentWake;
-
-// Function BrickRigs.PawnInputComponent.GetDestroyPawnEnabled
-// 0x0002 (0x0002 - 0x0000)
-struct PawnInputComponent_GetDestroyPawnEnabled final
-{
-public:
-	bool                                          bInSecondaryAction;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnInputComponent_GetDestroyPawnEnabled;
-
-// Function BrickRigs.PawnInputComponent.GetInventoryEnabled
-// 0x0002 (0x0002 - 0x0000)
-struct PawnInputComponent_GetInventoryEnabled final
-{
-public:
-	bool                                          bInSecondaryAction;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnInputComponent_GetInventoryEnabled;
-
 // Function BrickRigs.WinchBrick.Interact_AttachWinch
 // 0x0008 (0x0008 - 0x0000)
 struct WinchBrick_Interact_AttachWinch final
@@ -6855,6 +6702,28 @@ public:
 };
 DUMPER7_ASSERTS_WinchBrick_OnRep_AttachTarget;
 
+// Function BrickRigs.CarWheelBrick.OnRootComponentWake
+// 0x0018 (0x0018 - 0x0000)
+struct CarWheelBrick_OnRootComponentWake final
+{
+public:
+	class UPrimitiveComponent*                    SleepingComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_CarWheelBrick_OnRootComponentWake;
+
+// Function BrickRigs.InteractionWidget.AddOptionWidget
+// 0x0010 (0x0010 - 0x0000)
+struct InteractionWidget_AddOptionWidget final
+{
+public:
+	class UInteractionOptionWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OptionIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InteractionWidget_AddOptionWidget;
+
 // Function BrickRigs.CharacterInputComponent.WalkForward
 // 0x0004 (0x0004 - 0x0000)
 struct CharacterInputComponent_WalkForward final
@@ -6873,6 +6742,271 @@ public:
 };
 DUMPER7_ASSERTS_CharacterInputComponent_WalkRight;
 
+// Function BrickRigs.ModHook.OnCharacterBeginPlay
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_OnCharacterBeginPlay final
+{
+public:
+	class ABaseCharacter*                         Character;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OnCharacterBeginPlay;
+
+// Function BrickRigs.ModHook.OnPlayerControllerBeginPlay
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_OnPlayerControllerBeginPlay final
+{
+public:
+	class ABasePlayerController*                  PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OnPlayerControllerBeginPlay;
+
+// Function BrickRigs.ModHook.OnSpectatorBeginPlay
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_OnSpectatorBeginPlay final
+{
+public:
+	class ABrickSpectatorPawn*                    Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OnSpectatorBeginPlay;
+
+// Function BrickRigs.ModHook.OnVehicleBeginPlay
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_OnVehicleBeginPlay final
+{
+public:
+	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OnVehicleBeginPlay;
+
+// Function BrickRigs.ModHook.OverrideBillboardTexture
+// 0x0068 (0x0068 - 0x0000)
+struct ModHook_OverrideBillboardTexture final
+{
+public:
+	TSoftObjectPtr<class UTexture2D>              Texture;                                           // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABillboard*                             Billboard;                                         // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0038(0x0030)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideBillboardTexture;
+
+// Function BrickRigs.ModHook.OverrideCharacterLoadout
+// 0x0028 (0x0028 - 0x0000)
+struct ModHook_OverrideCharacterLoadout final
+{
+public:
+	struct FInventoryLoadout                      Loadout;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class ABaseCharacter*                         Character;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInventoryLoadout                      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideCharacterLoadout;
+
+// Function BrickRigs.ModHook.OverrideGameModeClass
+// 0x0040 (0x0040 - 0x0000)
+struct ModHook_OverrideGameModeClass final
+{
+public:
+	TSubclassOf<class AGameModeBase>              GameModeClass;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MapName;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Options;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Portal;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameModeBase>              ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideGameModeClass;
+
+// Function BrickRigs.ModHook.OverrideGameStateClass
+// 0x0010 (0x0010 - 0x0000)
+struct ModHook_OverrideGameStateClass final
+{
+public:
+	TSubclassOf<class AGameStateBase>             GameStateClass;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameStateBase>             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideGameStateClass;
+
+// Function BrickRigs.ModHook.OverrideLoadoutContainerItems
+// 0x0020 (0x0020 - 0x0000)
+struct ModHook_OverrideLoadoutContainerItems final
+{
+public:
+	TArray<TSubclassOf<class AInventoryItem>>     ItemClasses;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class AInventoryItem>>     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideLoadoutContainerItems;
+
+// Function BrickRigs.ModHook.OverrideLoadSubLevel
+// 0x0028 (0x0028 - 0x0000)
+struct ModHook_OverrideLoadSubLevel final
+{
+public:
+	bool                                          bLoadLevel;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 LevelName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameModeInfo*                          GameMode;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ModHook_OverrideLoadSubLevel;
+
+// Function BrickRigs.ModHook.OverrideMenu
+// 0x0018 (0x0018 - 0x0000)
+struct ModHook_OverrideMenu final
+{
+public:
+	class UMenuWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Context;                                           // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ModHook_OverrideMenu;
+
+// Function BrickRigs.ModHook.OverrideMenuSequence
+// 0x0060 (0x0060 - 0x0000)
+struct ModHook_OverrideMenuSequence final
+{
+public:
+	TSoftClassPtr<class UClass>                   SequenceClass;                                     // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideMenuSequence;
+
+// Function BrickRigs.ModHook.OverrideMenuWorldSetupParams
+// 0x0060 (0x0060 - 0x0000)
+struct ModHook_OverrideMenuWorldSetupParams final
+{
+public:
+	struct FWorldSetupParams                      Params_0;                                          // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FWorldSetupParams                      ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideMenuWorldSetupParams;
+
+// Function BrickRigs.ModHook.OverridePawnClass
+// 0x0018 (0x0018 - 0x0000)
+struct ModHook_OverridePawnClass final
+{
+public:
+	TSubclassOf<class APawn>                      PawnClass;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AController*                            Controller;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class APawn>                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverridePawnClass;
+
+// Function BrickRigs.ModHook.OverridePlayerCameraManagerClass
+// 0x0018 (0x0018 - 0x0000)
+struct ModHook_OverridePlayerCameraManagerClass final
+{
+public:
+	TSubclassOf<class APlayerCameraManager>       PlayerCameraManagerClass;                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABasePlayerController*                  PC;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class APlayerCameraManager>       ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverridePlayerCameraManagerClass;
+
+// Function BrickRigs.ModHook.OverridePlayerControllerClass
+// 0x0010 (0x0010 - 0x0000)
+struct ModHook_OverridePlayerControllerClass final
+{
+public:
+	TSubclassOf<class APlayerController>          PlayerControllerClass;                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class APlayerController>          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverridePlayerControllerClass;
+
+// Function BrickRigs.ModHook.OverrideReplayPlayerControllerClass
+// 0x0010 (0x0010 - 0x0000)
+struct ModHook_OverrideReplayPlayerControllerClass final
+{
+public:
+	TSubclassOf<class APlayerController>          PlayerControllerClass;                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class APlayerController>          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideReplayPlayerControllerClass;
+
+// Function BrickRigs.ModHook.OverrideSpectatorClass
+// 0x0010 (0x0010 - 0x0000)
+struct ModHook_OverrideSpectatorClass final
+{
+public:
+	TSubclassOf<class ASpectatorPawn>             SpectatorClass;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ASpectatorPawn>             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideSpectatorClass;
+
+// Function BrickRigs.ModHook.OverrideTrainClass
+// 0x0010 (0x0010 - 0x0000)
+struct ModHook_OverrideTrainClass final
+{
+public:
+	TSubclassOf<class ATrain>                     TrainClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ATrain>                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideTrainClass;
+
+// Function BrickRigs.ModHook.OverrideVehicleClass
+// 0x0130 (0x0130 - 0x0000)
+struct ModHook_OverrideVehicleClass final
+{
+public:
+	TSubclassOf<class ABrickVehicle>              VehicleClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABrickPlayerController*                 PC;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerSpawnRequest                    SpawnRequest;                                      // 0x0010(0x0118)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class ABrickVehicle>              ReturnValue;                                       // 0x0128(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_OverrideVehicleClass;
+
+// Function BrickRigs.ModHook.PostConstructVehicle
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_PostConstructVehicle final
+{
+public:
+	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_PostConstructVehicle;
+
+// Function BrickRigs.ModHook.PostSpawnPawn
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_PostSpawnPawn final
+{
+public:
+	class APawn*                                  Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_PostSpawnPawn;
+
+// Function BrickRigs.ModHook.PostSpawnPlayerController
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_PostSpawnPlayerController final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_PostSpawnPlayerController;
+
+// Function BrickRigs.ModHook.PostSpawnSpectatorPawn
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_PostSpawnSpectatorPawn final
+{
+public:
+	class ASpectatorPawn*                         Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_PostSpawnSpectatorPawn;
+
+// Function BrickRigs.ModHook.PostSpawnVehicle
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_PostSpawnVehicle final
+{
+public:
+	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_PostSpawnVehicle;
+
+// Function BrickRigs.ModHook.PreConstructVehicle
+// 0x0008 (0x0008 - 0x0000)
+struct ModHook_PreConstructVehicle final
+{
+public:
+	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ModHook_PreConstructVehicle;
+
 // Function BrickRigs.ChatMessageInputComponent.GetKickPlayerEnabled
 // 0x0001 (0x0001 - 0x0000)
 struct ChatMessageInputComponent_GetKickPlayerEnabled final
@@ -6881,6 +7015,33 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ChatMessageInputComponent_GetKickPlayerEnabled;
+
+// Function BrickRigs.InputMappingKeyWidget.UpdateConflictedState
+// 0x0001 (0x0001 - 0x0000)
+struct InputMappingKeyWidget_UpdateConflictedState final
+{
+public:
+	bool                                          bNewConflicted;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputMappingKeyWidget_UpdateConflictedState;
+
+// Function BrickRigs.ChatMessageWidget.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct ChatMessageWidget_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChatMessageWidget_UpdateColorStyle;
+
+// Function BrickRigs.ChatMessageWidget.UpdateMessageText
+// 0x0018 (0x0018 - 0x0000)
+struct ChatMessageWidget_UpdateMessageText final
+{
+public:
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChatMessageWidget_UpdateMessageText;
 
 // Function BrickRigs.ChatWidget.GetWidgetToFocus
 // 0x0008 (0x0008 - 0x0000)
@@ -6969,6 +7130,17 @@ public:
 };
 DUMPER7_ASSERTS_ColorWheelWidget_SetColor;
 
+// Function BrickRigs.InventoryPopupWidget.UpdateDropArea
+// 0x0003 (0x0003 - 0x0000)
+struct InventoryPopupWidget_UpdateDropArea final
+{
+public:
+	bool                                          bInIsDragging;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInCanDrop;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsDragOver;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InventoryPopupWidget_UpdateDropArea;
+
 // Function BrickRigs.ConnectorSpacingPropertyWidget.SetConnectorSpacing
 // 0x0002 (0x0002 - 0x0000)
 struct ConnectorSpacingPropertyWidget_SetConnectorSpacing final
@@ -6990,13 +7162,13 @@ public:
 DUMPER7_ASSERTS_ConnectorSpacingPropertyWidget_UpdateConnectorSpacing;
 
 // Function BrickRigs.ContextMenuWidget.OnActionTriggered
-// 0x000C (0x000C - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct ContextMenuWidget_OnActionTriggered final
 {
 public:
-	class FName                                   ActionName;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReleased;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   ActionName;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReleased;                                         // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_ContextMenuWidget_OnActionTriggered;
 
@@ -7008,6 +7180,200 @@ public:
 	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ContextMenuWidget_UpdateTitleText;
+
+// Function BrickRigs.KickPlayerPopupWidget.UpdateCanConfirmKick
+// 0x0001 (0x0001 - 0x0000)
+struct KickPlayerPopupWidget_UpdateCanConfirmKick final
+{
+public:
+	bool                                          bNewCanConfirm;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KickPlayerPopupWidget_UpdateCanConfirmKick;
+
+// Function BrickRigs.KickPlayerPopupWidget.UpdateCanRevokeKick
+// 0x0001 (0x0001 - 0x0000)
+struct KickPlayerPopupWidget_UpdateCanRevokeKick final
+{
+public:
+	bool                                          bCanRevoke;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KickPlayerPopupWidget_UpdateCanRevokeKick;
+
+// Function BrickRigs.KickPlayerPopupWidget.UpdateIsLoadingKick
+// 0x0001 (0x0001 - 0x0000)
+struct KickPlayerPopupWidget_UpdateIsLoadingKick final
+{
+public:
+	bool                                          bNewLoading;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KickPlayerPopupWidget_UpdateIsLoadingKick;
+
+// Function BrickRigs.ControlHintWidget.OnInputMethodChanged
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_OnInputMethodChanged final
+{
+public:
+	EInputMethod                                  NewInputMethod;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_OnInputMethodChanged;
+
+// Function BrickRigs.ControlHintWidget.SetAction
+// 0x0010 (0x0010 - 0x0000)
+struct ControlHintWidget_SetAction final
+{
+public:
+	class FName                                   InActionName;                                      // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInputActionTriggerType                       InTriggerType;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetAction;
+
+// Function BrickRigs.ControlHintWidget.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetColorStyle;
+
+// Function BrickRigs.ControlHintWidget.SetDisplayInfo
+// 0x0028 (0x0028 - 0x0000)
+struct ControlHintWidget_SetDisplayInfo final
+{
+public:
+	struct FDisplayInfo                           InDisplayInfo;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetDisplayInfo;
+
+// Function BrickRigs.ControlHintWidget.SetDisplayInfoMode
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_SetDisplayInfoMode final
+{
+public:
+	EControlHintDisplayInfoMode                   NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetDisplayInfoMode;
+
+// Function BrickRigs.ControlHintWidget.SetInputChordScale
+// 0x0004 (0x0004 - 0x0000)
+struct ControlHintWidget_SetInputChordScale final
+{
+public:
+	float                                         InScale;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetInputChordScale;
+
+// Function BrickRigs.ControlHintWidget.SetShowInputChord
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_SetShowInputChord final
+{
+public:
+	bool                                          bShow;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetShowInputChord;
+
+// Function BrickRigs.ControlHintWidget.SetShowUnboundKey
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_SetShowUnboundKey final
+{
+public:
+	bool                                          bShow;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetShowUnboundKey;
+
+// Function BrickRigs.ControlHintWidget.SetStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_SetStyleState final
+{
+public:
+	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetStyleState;
+
+// Function BrickRigs.ControlHintWidget.SetTextStyle
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_SetTextStyle final
+{
+public:
+	EBrickUITextStyle                             NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_SetTextStyle;
+
+// Function BrickRigs.ControlHintWidget.UpdateDisplayInfo
+// 0x0028 (0x0028 - 0x0000)
+struct ControlHintWidget_UpdateDisplayInfo final
+{
+public:
+	struct FDisplayInfo                           NewDisplayInfo;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateDisplayInfo;
+
+// Function BrickRigs.ControlHintWidget.UpdateHoldProgress
+// 0x0004 (0x0004 - 0x0000)
+struct ControlHintWidget_UpdateHoldProgress final
+{
+public:
+	float                                         InHoldProgress;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateHoldProgress;
+
+// Function BrickRigs.ControlHintWidget.UpdateIconVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_UpdateIconVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateIconVisibility;
+
+// Function BrickRigs.ControlHintWidget.UpdateInputChordStyleState
+// 0x0002 (0x0002 - 0x0000)
+struct ControlHintWidget_UpdateInputChordStyleState final
+{
+public:
+	EBrickUIStyleState                            InStyleState;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsHoldAction;                                   // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateInputChordStyleState;
+
+// Function BrickRigs.ControlHintWidget.UpdateInputChordVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_UpdateInputChordVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateInputChordVisibility;
+
+// Function BrickRigs.ControlHintWidget.UpdateIsHoldAction
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_UpdateIsHoldAction final
+{
+public:
+	bool                                          bIsHoldAction;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateIsHoldAction;
+
+// Function BrickRigs.ControlHintWidget.UpdateTextVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct ControlHintWidget_UpdateTextVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ControlHintWidget_UpdateTextVisibility;
+
+// Function BrickRigs.ReuploadPopupWidget.GetOriginalAuthorName
+// 0x0020 (0x0020 - 0x0000)
+struct ReuploadPopupWidget_GetOriginalAuthorName final
+{
+public:
+	class FText                                   OutName;                                           // 0x0000(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ReuploadPopupWidget_GetOriginalAuthorName;
 
 // Function BrickRigs.CouplingBrick.Interact_DisengageCoupling
 // 0x0008 (0x0008 - 0x0000)
@@ -7026,6 +7392,43 @@ public:
 	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CouplingBrick_Interact_EngageCoupling;
+
+// Function BrickRigs.CrosshairWidget.OnHUDVisibilityChanged
+// 0x0001 (0x0001 - 0x0000)
+struct CrosshairWidget_OnHUDVisibilityChanged final
+{
+public:
+	EHUDVisibility                                NewVisibility;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CrosshairWidget_OnHUDVisibilityChanged;
+
+// Function BrickRigs.CrosshairWidget.PlayHitAnimation
+// 0x000C (0x000C - 0x0000)
+struct CrosshairWidget_PlayHitAnimation final
+{
+public:
+	struct FClientDamageInfo                      DamageInfo;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CrosshairWidget_PlayHitAnimation;
+
+// Function BrickRigs.CrosshairWidget.UpdateIsAttachingWinch
+// 0x0001 (0x0001 - 0x0000)
+struct CrosshairWidget_UpdateIsAttachingWinch final
+{
+public:
+	bool                                          bNewAttaching;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CrosshairWidget_UpdateIsAttachingWinch;
+
+// Function BrickRigs.CrosshairWidget.UpdateWinchAttachment
+// 0x0002 (0x0002 - 0x0000)
+struct CrosshairWidget_UpdateWinchAttachment final
+{
+public:
+	bool                                          bBlockingHit;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWithinRange;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CrosshairWidget_UpdateWinchAttachment;
 
 // Function BrickRigs.CurrentItemWidget.FadeOut
 // 0x0001 (0x0001 - 0x0000)
@@ -7075,6 +7478,117 @@ public:
 };
 DUMPER7_ASSERTS_CurrentItemWidget_UpdateItemName;
 
+// Function BrickRigs.MainWidgetBase.GetButtonPanel
+// 0x0008 (0x0008 - 0x0000)
+struct MainWidgetBase_GetButtonPanel final
+{
+public:
+	class UMenuButtonPanelWidget*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MainWidgetBase_GetButtonPanel;
+
+// Function BrickRigs.MainWidgetBase.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct MainWidgetBase_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MainWidgetBase_GetWidgetToFocus;
+
+// Function BrickRigs.MainWidgetBase.GetWindowManager
+// 0x0008 (0x0008 - 0x0000)
+struct MainWidgetBase_GetWindowManager final
+{
+public:
+	class UWindowManagerWidget*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MainWidgetBase_GetWindowManager;
+
+// Function BrickRigs.LoadingScreenWidget.SetBackgroundColor
+// 0x0010 (0x0010 - 0x0000)
+struct LoadingScreenWidget_SetBackgroundColor final
+{
+public:
+	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LoadingScreenWidget_SetBackgroundColor;
+
+// Function BrickRigs.LoadingScreenWidget.SetLoadingText
+// 0x0018 (0x0018 - 0x0000)
+struct LoadingScreenWidget_SetLoadingText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LoadingScreenWidget_SetLoadingText;
+
+// Function BrickRigs.MenuButtonWidget.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct MenuButtonWidget_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuButtonWidget_SetColorStyle;
+
+// Function BrickRigs.MenuButtonWidget.SetDisplayIcon
+// 0x0004 (0x0004 - 0x0000)
+struct MenuButtonWidget_SetDisplayIcon final
+{
+public:
+	int32                                         InIconIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuButtonWidget_SetDisplayIcon;
+
+// Function BrickRigs.MenuButtonWidget.SetDisplayText
+// 0x0018 (0x0018 - 0x0000)
+struct MenuButtonWidget_SetDisplayText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuButtonWidget_SetDisplayText;
+
+// Function BrickRigs.MenuButtonWidget.UpdateDisplayText
+// 0x0018 (0x0018 - 0x0000)
+struct MenuButtonWidget_UpdateDisplayText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuButtonWidget_UpdateDisplayText;
+
+// Function BrickRigs.DashboardIconWidget.UpdateIconImage
+// 0x0008 (0x0008 - 0x0000)
+struct DashboardIconWidget_UpdateIconImage final
+{
+public:
+	bool                                          bInVisible;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InIconIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DashboardIconWidget_UpdateIconImage;
+
+// Function BrickRigs.MenuSequence.OnDefaultVehiclesQueried
+// 0x0010 (0x0010 - 0x0000)
+struct MenuSequence_OnDefaultVehiclesQueried final
+{
+public:
+	TArray<struct FUGCFileInfo>                   FileInfos;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuSequence_OnDefaultVehiclesQueried;
+
+// Function BrickRigs.MenuSequence.IsMenuSequenceReady
+// 0x0001 (0x0001 - 0x0000)
+struct MenuSequence_IsMenuSequenceReady final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuSequence_IsMenuSequenceReady;
+
 // Function BrickRigs.DashboardSliderWidget.UpdateColorStyle
 // 0x0001 (0x0001 - 0x0000)
 struct DashboardSliderWidget_UpdateColorStyle final
@@ -7093,6 +7607,131 @@ public:
 };
 DUMPER7_ASSERTS_DashboardSliderWidget_UpdateIcon;
 
+// Function BrickRigs.DashboardWidget.AddIconWidget
+// 0x0010 (0x0010 - 0x0000)
+struct DashboardWidget_AddIconWidget final
+{
+public:
+	class UDashboardIconWidget*                   Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DashboardWidget_AddIconWidget;
+
+// Function BrickRigs.DashboardWidget.AddSliderWidget
+// 0x0008 (0x0008 - 0x0000)
+struct DashboardWidget_AddSliderWidget final
+{
+public:
+	class UDashboardSliderWidget*                 Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DashboardWidget_AddSliderWidget;
+
+// Function BrickRigs.DashboardWidget.UpdateSliderWidgetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct DashboardWidget_UpdateSliderWidgetSlot final
+{
+public:
+	class UDashboardSliderWidget*                 Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumSliders;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DashboardWidget_UpdateSliderWidgetSlot;
+
+// Function BrickRigs.MatchStateWidget.UpdateMatchState
+// 0x0020 (0x0020 - 0x0000)
+struct MatchStateWidget_UpdateMatchState final
+{
+public:
+	class FText                                   NewDisplayText;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFadeOut;                                          // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MatchStateWidget_UpdateMatchState;
+
+// Function BrickRigs.DestructibleInstancesComponent.AddInstance
+// 0x0060 (0x0060 - 0x0000)
+struct DestructibleInstancesComponent_AddInstance final
+{
+public:
+	class UDestructibleInstanceTemplate*          Template;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             MaterialOverrides;                                 // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InstanceTransform;                                 // 0x0020(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class AActor*                                 Owner;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DestructibleInstancesComponent_AddInstance;
+
+// Function BrickRigs.DestructibleInstancesComponent.ClearInstances
+// 0x0008 (0x0008 - 0x0000)
+struct DestructibleInstancesComponent_ClearInstances final
+{
+public:
+	class AActor*                                 Owner;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DestructibleInstancesComponent_ClearInstances;
+
+// Function BrickRigs.LegacyBuilding.ConstructBuildingPart
+// 0x0020 (0x0020 - 0x0000)
+struct LegacyBuilding_ConstructBuildingPart final
+{
+public:
+	int32                                         NumX;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumY;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Floors;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBuildingPart*                          ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LegacyBuilding_ConstructBuildingPart;
+
+// Function BrickRigs.LegacyBuilding.ConstructFlatRoof
+// 0x0010 (0x0010 - 0x0000)
+struct LegacyBuilding_ConstructFlatRoof final
+{
+public:
+	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Mesh;                                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LegacyBuilding_ConstructFlatRoof;
+
+// Function BrickRigs.LegacyBuilding.ConstructIndustrialRoof
+// 0x0010 (0x0010 - 0x0000)
+struct LegacyBuilding_ConstructIndustrialRoof final
+{
+public:
+	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         RoofSlopeMesh;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         RoofMesh;                                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         WallMesh;                                          // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LegacyBuilding_ConstructIndustrialRoof;
+
+// Function BrickRigs.LegacyBuilding.ConstructRoof
+// 0x0010 (0x0010 - 0x0000)
+struct LegacyBuilding_ConstructRoof final
+{
+public:
+	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         RoofGableMesh;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         RoofMesh;                                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRotate;                                           // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LegacyBuilding_ConstructRoof;
+
+// Function BrickRigs.LegacyBuilding.SpawnBuildingPart
+// 0x0008 (0x0008 - 0x0000)
+struct LegacyBuilding_SpawnBuildingPart final
+{
+public:
+	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LegacyBuilding_SpawnBuildingPart;
+
 // Function BrickRigs.DetonatorBrick.Interact_Detonate
 // 0x0008 (0x0008 - 0x0000)
 struct DetonatorBrick_Interact_Detonate final
@@ -7101,6 +7740,46 @@ public:
 	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DetonatorBrick_Interact_Detonate;
+
+// Function BrickRigs.InputActionListWidget.AddActionWidget
+// 0x0010 (0x0010 - 0x0000)
+struct InputActionListWidget_AddActionWidget final
+{
+public:
+	class UInputActionWidget*                     Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ActionIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InputActionListWidget_AddActionWidget;
+
+// Function BrickRigs.InputActionListWidget.AddCategoryWidget
+// 0x0010 (0x0010 - 0x0000)
+struct InputActionListWidget_AddCategoryWidget final
+{
+public:
+	class UInputActionCategoryWidget*             Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CategoryIndex;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InputActionListWidget_AddCategoryWidget;
+
+// Function BrickRigs.InputActionListWidget.UpdateInputActionListMode
+// 0x0001 (0x0001 - 0x0000)
+struct InputActionListWidget_UpdateInputActionListMode final
+{
+public:
+	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputActionListWidget_UpdateInputActionListMode;
+
+// Function BrickRigs.InputActionListWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct InputActionListWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputActionListWidget_GetWidgetToFocus;
 
 // Function BrickRigs.DragStrip.CreateTreeMID
 // 0x0008 (0x0008 - 0x0000)
@@ -7210,6 +7889,51 @@ public:
 };
 DUMPER7_ASSERTS_DriverInputComponent_GetToggleAutoCounterSteeringValueText;
 
+// Function BrickRigs.InputHelpWidget.GetGameOverlay
+// 0x0008 (0x0008 - 0x0000)
+struct InputHelpWidget_GetGameOverlay final
+{
+public:
+	class UGameOverlayWidget*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputHelpWidget_GetGameOverlay;
+
+// Function BrickRigs.InputHelpWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct InputHelpWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputHelpWidget_GetWidgetToFocus;
+
+// Function BrickRigs.EditorInputComponent.MoveForward
+// 0x0004 (0x0004 - 0x0000)
+struct EditorInputComponent_MoveForward final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EditorInputComponent_MoveForward;
+
+// Function BrickRigs.EditorInputComponent.MoveRight
+// 0x0004 (0x0004 - 0x0000)
+struct EditorInputComponent_MoveRight final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EditorInputComponent_MoveRight;
+
+// Function BrickRigs.EditorInputComponent.MoveUp
+// 0x0004 (0x0004 - 0x0000)
+struct EditorInputComponent_MoveUp final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EditorInputComponent_MoveUp;
+
 // Function BrickRigs.Elevator.Interact_ElevatorDown
 // 0x0008 (0x0008 - 0x0000)
 struct Elevator_Interact_ElevatorDown final
@@ -7274,6 +7998,182 @@ public:
 };
 DUMPER7_ASSERTS_Elevator_GetInteractionLocation;
 
+// Function BrickRigs.EnumPropertyWidget.InitializeItem
+// 0x0168 (0x0168 - 0x0000)
+struct EnumPropertyWidget_InitializeItem final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0160)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnumPropertyWidget_InitializeItem;
+
+// Function BrickRigs.EnumPropertyWidget.OnItemSelected
+// 0x0008 (0x0008 - 0x0000)
+struct EnumPropertyWidget_OnItemSelected final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_EnumPropertyWidget_OnItemSelected;
+
+// Function BrickRigs.PlayerIconWidget.UpdatePlayerIcon
+// 0x0004 (0x0004 - 0x0000)
+struct PlayerIconWidget_UpdatePlayerIcon final
+{
+public:
+	bool                                          bNewIsLocalPlayer;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewIsTeamLeader;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECharacterStateOfHealth                       NewStateOfHealth;                                  // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewCanBeDamaged;                                  // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerIconWidget_UpdatePlayerIcon;
+
+// Function BrickRigs.PageSelectorWidget.GotoNextPage
+// 0x0002 (0x0002 - 0x0000)
+struct PageSelectorWidget_GotoNextPage final
+{
+public:
+	bool                                          bForward;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSkipToEnd;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PageSelectorWidget_GotoNextPage;
+
+// Function BrickRigs.PageSelectorWidget.InitializePages
+// 0x000C (0x000C - 0x0000)
+struct PageSelectorWidget_InitializePages final
+{
+public:
+	int32                                         InNumPages;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InCurrentPage;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumResults;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PageSelectorWidget_InitializePages;
+
+// Function BrickRigs.PageSelectorWidget.OnSliderValueChanged
+// 0x0008 (0x0008 - 0x0000)
+struct PageSelectorWidget_OnSliderValueChanged final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PageSelectorWidget_OnSliderValueChanged;
+
+// Function BrickRigs.PageSelectorWidget.SetCurrentPage
+// 0x0004 (0x0004 - 0x0000)
+struct PageSelectorWidget_SetCurrentPage final
+{
+public:
+	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PageSelectorWidget_SetCurrentPage;
+
+// Function BrickRigs.PageSelectorWidget.UpdateButtons
+// 0x0002 (0x0002 - 0x0000)
+struct PageSelectorWidget_UpdateButtons final
+{
+public:
+	bool                                          bCanGoBack;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanGoForward;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PageSelectorWidget_UpdateButtons;
+
+// Function BrickRigs.PageSelectorWidget.GetCurrentPage
+// 0x0004 (0x0004 - 0x0000)
+struct PageSelectorWidget_GetCurrentPage final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PageSelectorWidget_GetCurrentPage;
+
+// Function BrickRigs.PopupContainerWidget.AddPopupWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PopupContainerWidget_AddPopupWidget final
+{
+public:
+	class UPopupWidget*                           Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_AddPopupWidget;
+
+// Function BrickRigs.PopupContainerWidget.CreateCancelButton
+// 0x0008 (0x0008 - 0x0000)
+struct PopupContainerWidget_CreateCancelButton final
+{
+public:
+	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_CreateCancelButton;
+
+// Function BrickRigs.PopupContainerWidget.CreateConfirmButton
+// 0x0008 (0x0008 - 0x0000)
+struct PopupContainerWidget_CreateConfirmButton final
+{
+public:
+	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_CreateConfirmButton;
+
+// Function BrickRigs.PopupContainerWidget.SetButtonPanelVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct PopupContainerWidget_SetButtonPanelVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_SetButtonPanelVisibility;
+
+// Function BrickRigs.PopupContainerWidget.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct PopupContainerWidget_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_SetColorStyle;
+
+// Function BrickRigs.PopupContainerWidget.UpdateButtonPanelVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct PopupContainerWidget_UpdateButtonPanelVisibility final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_UpdateButtonPanelVisibility;
+
+// Function BrickRigs.PopupContainerWidget.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct PopupContainerWidget_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_UpdateColorStyle;
+
+// Function BrickRigs.PopupContainerWidget.UpdateContentSlot
+// 0x0002 (0x0002 - 0x0000)
+struct PopupContainerWidget_UpdateContentSlot final
+{
+public:
+	bool                                          bShowContent;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPopupSizeRule                                SizeRule;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_UpdateContentSlot;
+
+// Function BrickRigs.PopupContainerWidget.UpdateTitleText
+// 0x0018 (0x0018 - 0x0000)
+struct PopupContainerWidget_UpdateTitleText final
+{
+public:
+	class FText                                   NewTitle;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PopupContainerWidget_UpdateTitleText;
+
 // Function BrickRigs.ExplosiveItem.Explode
 // 0x0028 (0x0028 - 0x0000)
 struct ExplosiveItem_Explode final
@@ -7304,88 +8204,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ExplosiveItem_IsPrimed;
-
-// Function BrickRigs.PagedListWidget.ClearSelectedEntryWidget
-// 0x0001 (0x0001 - 0x0000)
-struct PagedListWidget_ClearSelectedEntryWidget final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_ClearSelectedEntryWidget;
-
-// Function BrickRigs.PagedListWidget.InitializePropertiesPanel
-// 0x0008 (0x0008 - 0x0000)
-struct PagedListWidget_InitializePropertiesPanel final
-{
-public:
-	class UObject*                                Container;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_InitializePropertiesPanel;
-
-// Function BrickRigs.PagedListWidget.OnEntriesLoaded
-// 0x0008 (0x0008 - 0x0000)
-struct PagedListWidget_OnEntriesLoaded final
-{
-public:
-	int32                                         InTotalNumEntries;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InMaxPages;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_OnEntriesLoaded;
-
-// Function BrickRigs.PagedListWidget.OnPageChanged
-// 0x0004 (0x0004 - 0x0000)
-struct PagedListWidget_OnPageChanged final
-{
-public:
-	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_OnPageChanged;
-
-// Function BrickRigs.PagedListWidget.SetCurrentPage
-// 0x0004 (0x0004 - 0x0000)
-struct PagedListWidget_SetCurrentPage final
-{
-public:
-	int32                                         InPage;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_SetCurrentPage;
-
-// Function BrickRigs.PagedListWidget.UpdateIsEntrySelected
-// 0x0001 (0x0001 - 0x0000)
-struct PagedListWidget_UpdateIsEntrySelected final
-{
-public:
-	bool                                          bIsEntrySelected;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_UpdateIsEntrySelected;
-
-// Function BrickRigs.PagedListWidget.UpdateIsLoading
-// 0x0001 (0x0001 - 0x0000)
-struct PagedListWidget_UpdateIsLoading final
-{
-public:
-	bool                                          bNewLoading;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_UpdateIsLoading;
-
-// Function BrickRigs.PagedListWidget.GetCurrentPage
-// 0x0004 (0x0004 - 0x0000)
-struct PagedListWidget_GetCurrentPage final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_GetCurrentPage;
-
-// Function BrickRigs.PagedListWidget.GetSelectedEntryWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PagedListWidget_GetSelectedEntryWidget final
-{
-public:
-	class UPagedListEntryWidget*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListWidget_GetSelectedEntryWidget;
 
 // Function BrickRigs.FadingPanelWidget.FadeIn
 // 0x0001 (0x0001 - 0x0000)
@@ -7441,167 +8259,50 @@ public:
 };
 DUMPER7_ASSERTS_FadingPanelWidget_IsFadingOut;
 
-// Function BrickRigs.PagedListEntryWidget.UpdateButtonSelected
+// Function BrickRigs.PlacableObjectWidget.UpdateIsFilterWidget
 // 0x0001 (0x0001 - 0x0000)
-struct PagedListEntryWidget_UpdateButtonSelected final
+struct PlacableObjectWidget_UpdateIsFilterWidget final
 {
 public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewIsFilter;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PagedListEntryWidget_UpdateButtonSelected;
+DUMPER7_ASSERTS_PlacableObjectWidget_UpdateIsFilterWidget;
 
-// Function BrickRigs.ServerWidget.UpdateServer
-// 0x0168 (0x0168 - 0x0000)
-struct ServerWidget_UpdateServer final
-{
-public:
-	struct FBrickOnlineSessionInfo                SessionInfo;                                       // 0x0000(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ServerWidget_UpdateServer;
-
-// Function BrickRigs.SeatBrick.Interact_EnterSeat
-// 0x0008 (0x0008 - 0x0000)
-struct SeatBrick_Interact_EnterSeat final
-{
-public:
-	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_Interact_EnterSeat;
-
-// Function BrickRigs.SeatBrick.OnRep_Character
-// 0x0008 (0x0008 - 0x0000)
-struct SeatBrick_OnRep_Character final
-{
-public:
-	class ABrickCharacter*                        OldCharacter;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_OnRep_Character;
-
-// Function BrickRigs.SeatBrick.SetInputAction
-// 0x0002 (0x0002 - 0x0000)
-struct SeatBrick_SetInputAction final
-{
-public:
-	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnable;                                           // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_SetInputAction;
-
-// Function BrickRigs.SeatBrick.SetInputActionForced
-// 0x0002 (0x0002 - 0x0000)
-struct SeatBrick_SetInputActionForced final
-{
-public:
-	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnable;                                           // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_SetInputActionForced;
-
-// Function BrickRigs.SeatBrick.SetInputAxis
-// 0x0008 (0x0008 - 0x0000)
-struct SeatBrick_SetInputAxis final
-{
-public:
-	EVehicleInputAxis                             Axis;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Val;                                               // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_SetInputAxis;
-
-// Function BrickRigs.SeatBrick.SetInputAxisForced
-// 0x0008 (0x0008 - 0x0000)
-struct SeatBrick_SetInputAxisForced final
-{
-public:
-	EVehicleInputAxis                             Axis;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Val;                                               // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_SetInputAxisForced;
-
-// Function BrickRigs.SeatBrick.ToggleInputAction
+// Function BrickRigs.PropertyContainerInputComponent.GetCopyValueEnabled
 // 0x0001 (0x0001 - 0x0000)
-struct SeatBrick_ToggleInputAction final
-{
-public:
-	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_ToggleInputAction;
-
-// Function BrickRigs.SeatBrick.GetControlledMotors
-// 0x0010 (0x0010 - 0x0000)
-struct SeatBrick_GetControlledMotors final
-{
-public:
-	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_GetControlledMotors;
-
-// Function BrickRigs.SeatBrick.GetCurrentGear
-// 0x0004 (0x0004 - 0x0000)
-struct SeatBrick_GetCurrentGear final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_GetCurrentGear;
-
-// Function BrickRigs.SeatBrick.GetCurrentRPM
-// 0x0004 (0x0004 - 0x0000)
-struct SeatBrick_GetCurrentRPM final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_GetCurrentRPM;
-
-// Function BrickRigs.SeatBrick.GetFlipMotorThrottle
-// 0x0001 (0x0001 - 0x0000)
-struct SeatBrick_GetFlipMotorThrottle final
+struct PropertyContainerInputComponent_GetCopyValueEnabled final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SeatBrick_GetFlipMotorThrottle;
+DUMPER7_ASSERTS_PropertyContainerInputComponent_GetCopyValueEnabled;
 
-// Function BrickRigs.SeatBrick.GetInputAction
-// 0x0002 (0x0002 - 0x0000)
-struct SeatBrick_GetInputAction final
+// Function BrickRigs.PropertyContainerInputComponent.GetPasteValueEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerInputComponent_GetPasteValueEnabled final
 {
 public:
-	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SeatBrick_GetInputAction;
+DUMPER7_ASSERTS_PropertyContainerInputComponent_GetPasteValueEnabled;
 
-// Function BrickRigs.SeatBrick.GetInputAxis
-// 0x0008 (0x0008 - 0x0000)
-struct SeatBrick_GetInputAxis final
+// Function BrickRigs.PropertyContainerInputComponent.GetPickValueEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerInputComponent_GetPickValueEnabled final
 {
 public:
-	EVehicleInputAxis                             Axis;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SeatBrick_GetInputAxis;
+DUMPER7_ASSERTS_PropertyContainerInputComponent_GetPickValueEnabled;
 
-// Function BrickRigs.SeatBrick.GetMainMotor
-// 0x0008 (0x0008 - 0x0000)
-struct SeatBrick_GetMainMotor final
+// Function BrickRigs.PropertyContainerInputComponent.GetSelectByValueEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerInputComponent_GetSelectByValueEnabled final
 {
 public:
-	class UMotorBrick*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SeatBrick_GetMainMotor;
-
-// Function BrickRigs.SeatBrick.GetMaxRPM
-// 0x0004 (0x0004 - 0x0000)
-struct SeatBrick_GetMaxRPM final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SeatBrick_GetMaxRPM;
+DUMPER7_ASSERTS_PropertyContainerInputComponent_GetSelectByValueEnabled;
 
 // Function BrickRigs.Firearm.EjectShell
 // 0x0001 (0x0001 - 0x0000)
@@ -7784,6 +8485,56 @@ public:
 };
 DUMPER7_ASSERTS_Firearm_IsFiring;
 
+// Function BrickRigs.NumericPropertyWidget.AddSliderWidget
+// 0x0008 (0x0008 - 0x0000)
+struct NumericPropertyWidget_AddSliderWidget final
+{
+public:
+	class UBrickSliderWidget*                     Slider;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NumericPropertyWidget_AddSliderWidget;
+
+// Function BrickRigs.NumericPropertyWidget.LockAxes
+// 0x0001 (0x0001 - 0x0000)
+struct NumericPropertyWidget_LockAxes final
+{
+public:
+	bool                                          bLock;                                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NumericPropertyWidget_LockAxes;
+
+// Function BrickRigs.NumericPropertyWidget.OnSliderValueChanged
+// 0x000C (0x000C - 0x0000)
+struct NumericPropertyWidget_OnSliderValueChanged final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NumericPropertyWidget_OnSliderValueChanged;
+
+// Function BrickRigs.NumericPropertyWidget.UpdateNumericProperty
+// 0x0008 (0x0008 - 0x0000)
+struct NumericPropertyWidget_UpdateNumericProperty final
+{
+public:
+	ENumericValueType                             ValueType;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumAxes;                                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NumericPropertyWidget_UpdateNumericProperty;
+
+// Function BrickRigs.NumericPropertyWidget.AreAxesLocked
+// 0x0001 (0x0001 - 0x0000)
+struct NumericPropertyWidget_AreAxesLocked final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NumericPropertyWidget_AreAxesLocked;
+
 // Function BrickRigs.FirearmComponent.OnRep_FirearmState
 // 0x0006 (0x0006 - 0x0000)
 struct FirearmComponent_OnRep_FirearmState final
@@ -7793,151 +8544,67 @@ public:
 };
 DUMPER7_ASSERTS_FirearmComponent_OnRep_FirearmState;
 
-// Function BrickRigs.NewItemCountWidget.SetNumNewItems
-// 0x0004 (0x0004 - 0x0000)
-struct NewItemCountWidget_SetNumNewItems final
-{
-public:
-	int32                                         NewNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NewItemCountWidget_SetNumNewItems;
-
-// Function BrickRigs.NewItemCountWidget.UpdateNumItems
-// 0x0004 (0x0004 - 0x0000)
-struct NewItemCountWidget_UpdateNumItems final
-{
-public:
-	int32                                         NewNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NewItemCountWidget_UpdateNumItems;
-
-// Function BrickRigs.PlayerWidget.AddCameraBrickWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerWidget_AddCameraBrickWidget final
-{
-public:
-	class UCameraBrickWidget*                     InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_AddCameraBrickWidget;
-
-// Function BrickRigs.PlayerWidget.AddCrosshairWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerWidget_AddCrosshairWidget final
-{
-public:
-	class UCrosshairWidget*                       InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_AddCrosshairWidget;
-
-// Function BrickRigs.PlayerWidget.AddCurrentItemWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerWidget_AddCurrentItemWidget final
-{
-public:
-	class UCurrentItemWidget*                     InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_AddCurrentItemWidget;
-
-// Function BrickRigs.PlayerWidget.AddDashboardWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerWidget_AddDashboardWidget final
-{
-public:
-	class UDashboardWidget*                       InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_AddDashboardWidget;
-
-// Function BrickRigs.PlayerWidget.AddHealthBarWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerWidget_AddHealthBarWidget final
-{
-public:
-	class UHealthBarWidget*                       InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_AddHealthBarWidget;
-
-// Function BrickRigs.PlayerWidget.AddRestrictedAreaWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerWidget_AddRestrictedAreaWidget final
-{
-public:
-	class URestrictedAreaWidget*                  InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_AddRestrictedAreaWidget;
-
-// Function BrickRigs.PlayerWidget.OnHUDVisibilityChanged
-// 0x0001 (0x0001 - 0x0000)
-struct PlayerWidget_OnHUDVisibilityChanged final
-{
-public:
-	EHUDVisibility                                NewVisibility;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerWidget_OnHUDVisibilityChanged;
-
-// Function BrickRigs.PropertyContainerWidget.AddPropertyWidget
+// Function BrickRigs.TimespanPropertyWidget.SetTimespanPropertyValue
 // 0x0010 (0x0010 - 0x0000)
-struct PropertyContainerWidget_AddPropertyWidget final
+struct TimespanPropertyWidget_SetTimespanPropertyValue final
 {
 public:
-	class UPropertyWidget*                        Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOrientation                                  InOrientation;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EValueChangedEventType                        EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              NewValue;                                          // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PropertyContainerWidget_AddPropertyWidget;
+DUMPER7_ASSERTS_TimespanPropertyWidget_SetTimespanPropertyValue;
 
-// Function BrickRigs.PropertyContainerWidget.OpenContextMenu
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerWidget_OpenContextMenu final
+// Function BrickRigs.TimespanPropertyWidget.UpdateTimespanProperty
+// 0x0020 (0x0020 - 0x0000)
+struct TimespanPropertyWidget_UpdateTimespanProperty final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              Timespan;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              MinValue;                                          // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              MaxValue;                                          // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowInfinite;                                    // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PropertyContainerWidget_OpenContextMenu;
+DUMPER7_ASSERTS_TimespanPropertyWidget_UpdateTimespanProperty;
 
-// Function BrickRigs.PropertyContainerWidget.UpdateColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerWidget_UpdateColorStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyContainerWidget_UpdateColorStyle;
-
-// Function BrickRigs.PropertyContainerWidget.UpdateIsReadOnly
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerWidget_UpdateIsReadOnly final
-{
-public:
-	bool                                          bInReadOnly;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyContainerWidget_UpdateIsReadOnly;
-
-// Function BrickRigs.PropertyContainerWidget.UpdateOrientation
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerWidget_UpdateOrientation final
-{
-public:
-	EOrientation                                  InOrientation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyContainerWidget_UpdateOrientation;
-
-// Function BrickRigs.PropertyContainerWidget.GetMenuButtonPanelWidget
+// Function BrickRigs.PropertyListInterface.AddPropertyContainerWidget
 // 0x0008 (0x0008 - 0x0000)
-struct PropertyContainerWidget_GetMenuButtonPanelWidget final
+struct PropertyListInterface_AddPropertyContainerWidget final
 {
 public:
-	class UMenuButtonPanelWidget*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PropertyContainerWidget_GetMenuButtonPanelWidget;
+DUMPER7_ASSERTS_PropertyListInterface_AddPropertyContainerWidget;
 
-// Function BrickRigs.PropertyContainerWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct PropertyContainerWidget_GetWidgetToFocus final
+// Function BrickRigs.PropertyListInterface.UpdatePropertyContainerWidgetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct PropertyListInterface_UpdatePropertyContainerWidgetSlot final
 {
 public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPerRow;                                         // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PropertyContainerWidget_GetWidgetToFocus;
+DUMPER7_ASSERTS_PropertyListInterface_UpdatePropertyContainerWidgetSlot;
+
+// Function BrickRigs.PlayersMenuWidget.UpdateCanKickPlayer
+// 0x0001 (0x0001 - 0x0000)
+struct PlayersMenuWidget_UpdateCanKickPlayer final
+{
+public:
+	bool                                          bCanKick;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayersMenuWidget_UpdateCanKickPlayer;
+
+// Function BrickRigs.PlayersMenuWidget.UpdateCanShowPlayerProfile
+// 0x0001 (0x0001 - 0x0000)
+struct PlayersMenuWidget_UpdateCanShowPlayerProfile final
+{
+public:
+	bool                                          bCanShow;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayersMenuWidget_UpdateCanShowPlayerProfile;
 
 // Function BrickRigs.FlashSequenceItemWidget.UpdateIsLit
 // 0x0001 (0x0001 - 0x0000)
@@ -7948,32 +8615,87 @@ public:
 };
 DUMPER7_ASSERTS_FlashSequenceItemWidget_UpdateIsLit;
 
-// Function BrickRigs.ProjectileManagerComponent.OnParticleComponentFinished
+// Function BrickRigs.ObjectPropertyWidget.InitializeItem
+// 0x0168 (0x0168 - 0x0000)
+struct ObjectPropertyWidget_InitializeItem final
+{
+public:
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0160)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ObjectPropertyWidget_InitializeItem;
+
+// Function BrickRigs.ObjectPropertyWidget.OnItemSelected
 // 0x0008 (0x0008 - 0x0000)
-struct ProjectileManagerComponent_OnParticleComponentFinished final
+struct ObjectPropertyWidget_OnItemSelected final
 {
 public:
-	class UParticleSystemComponent*               PSC;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_ProjectileManagerComponent_OnParticleComponentFinished;
+DUMPER7_ASSERTS_ObjectPropertyWidget_OnItemSelected;
 
-// Function BrickRigs.PlayerInputComponent.InteractAxis
-// 0x0004 (0x0004 - 0x0000)
-struct PlayerInputComponent_InteractAxis final
+// Function BrickRigs.ScoreboardPlayerWidget.UpdateAdminRole
+// 0x0001 (0x0001 - 0x0000)
+struct ScoreboardPlayerWidget_UpdateAdminRole final
 {
 public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAdminRole                                    Role;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayerInputComponent_InteractAxis;
+DUMPER7_ASSERTS_ScoreboardPlayerWidget_UpdateAdminRole;
 
-// Function BrickRigs.PlayerInputComponent.GetCycleMeasurementSystemValueText
-// 0x0018 (0x0018 - 0x0000)
-struct PlayerInputComponent_GetCycleMeasurementSystemValueText final
+// Function BrickRigs.ScoreboardPlayerWidget.UpdateButtonStyle
+// 0x0003 (0x0003 - 0x0000)
+struct ScoreboardPlayerWidget_UpdateButtonStyle final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLocalPlayer;                                    // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamAttitude                                 TeamAttitude;                                      // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayerInputComponent_GetCycleMeasurementSystemValueText;
+DUMPER7_ASSERTS_ScoreboardPlayerWidget_UpdateButtonStyle;
+
+// Function BrickRigs.ScoreboardPlayerWidget.UpdateIsAlive
+// 0x0001 (0x0001 - 0x0000)
+struct ScoreboardPlayerWidget_UpdateIsAlive final
+{
+public:
+	bool                                          bIsAlive;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScoreboardPlayerWidget_UpdateIsAlive;
+
+// Function BrickRigs.FluGameUserSettings.Get
+// 0x0008 (0x0008 - 0x0000)
+struct FluGameUserSettings_Get final
+{
+public:
+	class UFluGameUserSettings*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FluGameUserSettings_Get;
+
+// Function BrickRigs.JoinSessionPopupWidget.OnPasswordChanged
+// 0x0020 (0x0020 - 0x0000)
+struct JoinSessionPopupWidget_OnPasswordChanged final
+{
+public:
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_JoinSessionPopupWidget_OnPasswordChanged;
+
+// Function BrickRigs.JoinSessionPopupWidget.UpdateJoinState
+// 0x0003 (0x0003 - 0x0000)
+struct JoinSessionPopupWidget_UpdateJoinState final
+{
+public:
+	EJoinSessionState                             InJoinState;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInPasswordRequired;                               // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInHasPassword;                                    // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_JoinSessionPopupWidget_UpdateJoinState;
 
 // Function BrickRigs.FluMathStatics.AxisSignedToVector
 // 0x0010 (0x0010 - 0x0000)
@@ -8002,7 +8724,7 @@ DUMPER7_ASSERTS_FluMathStatics_AxisToIndex;
 struct FluMathStatics_BitmaskHasFlag final
 {
 public:
-	int32                                         BitMask;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Bitmask;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Index_0;                                           // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -8014,7 +8736,7 @@ DUMPER7_ASSERTS_FluMathStatics_BitmaskHasFlag;
 struct FluMathStatics_BitmaskSetFlag final
 {
 public:
-	int32                                         BitMask;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Bitmask;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Index_0;                                           // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFlag;                                             // 0x0005(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
@@ -8186,6 +8908,17 @@ public:
 };
 DUMPER7_ASSERTS_FluMathStatics_WrapIndex;
 
+// Function BrickRigs.FuelTank.ShouldSpawnLeakOnHit
+// 0x0094 (0x0094 - 0x0000)
+struct FuelTank_ShouldSpawnLeakOnHit final
+{
+public:
+	struct FHitResult                             Hit;                                               // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FuelTank_ShouldSpawnLeakOnHit;
+
 // Function BrickRigs.GameOverlayWidget.Get
 // 0x0010 (0x0010 - 0x0000)
 struct GameOverlayWidget_Get final
@@ -8259,9 +8992,9 @@ DUMPER7_ASSERTS_GameOverlayWidget_AddTeamScoreWidget;
 struct GameOverlayWidget_CreateHUDNotification final
 {
 public:
-	class FName                                   Context;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldFadeOut;                                    // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Context;                                           // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldFadeOut;                                    // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UHUDNotificationWidget*                 ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GameOverlayWidget_CreateHUDNotification;
@@ -8500,15 +9233,6 @@ public:
 };
 DUMPER7_ASSERTS_Garage_Interact_SpawnVehicle;
 
-// Function BrickRigs.RadioButtonWidget.SetIsSelected
-// 0x0001 (0x0001 - 0x0000)
-struct RadioButtonWidget_SetIsSelected final
-{
-public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RadioButtonWidget_SetIsSelected;
-
 // Function BrickRigs.GenericPropertyWidget.OnTextChanged
 // 0x0020 (0x0020 - 0x0000)
 struct GenericPropertyWidget_OnTextChanged final
@@ -8538,12 +9262,11 @@ public:
 	ETextJustify                                  Justification;                                     // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxLength;                                         // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultiLine;                                   // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultiline;                                   // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsPassword;                                       // 0x0021(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bValidateText;                                     // 0x0022(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowRichText;                                    // 0x0023(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TextFormat;                                        // 0x0024(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   TextFormat;                                        // 0x0024(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GenericPropertyWidget_UpdateText;
 
@@ -8573,6 +9296,142 @@ public:
 	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GravelSilo_Interact_OpenSilo;
+
+// Function BrickRigs.RadioButtonPanel.GetSelectedWidgets
+// 0x0010 (0x0010 - 0x0000)
+struct RadioButtonPanel_GetSelectedWidgets final
+{
+public:
+	TArray<class URadioButtonWidget*>             OutWidgets;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RadioButtonPanel_GetSelectedWidgets;
+
+// Function BrickRigs.RadioButtonPanel.SelectButton
+// 0x0008 (0x0008 - 0x0000)
+struct RadioButtonPanel_SelectButton final
+{
+public:
+	class URadioButtonWidget*                     Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RadioButtonPanel_SelectButton;
+
+// Function BrickRigs.RadioButtonPanel.UnselectButton
+// 0x0008 (0x0008 - 0x0000)
+struct RadioButtonPanel_UnselectButton final
+{
+public:
+	class URadioButtonWidget*                     Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RadioButtonPanel_UnselectButton;
+
+// Function BrickRigs.RadioButtonPanel.GetNumSelectedWidgets
+// 0x0004 (0x0004 - 0x0000)
+struct RadioButtonPanel_GetNumSelectedWidgets final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RadioButtonPanel_GetNumSelectedWidgets;
+
+// Function BrickRigs.RadioButtonPanel.GetSelectedWidget
+// 0x0008 (0x0008 - 0x0000)
+struct RadioButtonPanel_GetSelectedWidget final
+{
+public:
+	class URadioButtonWidget*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RadioButtonPanel_GetSelectedWidget;
+
+// Function BrickRigs.ScoreboardTeamWidget.UpdateCanEverJoinTeam
+// 0x0001 (0x0001 - 0x0000)
+struct ScoreboardTeamWidget_UpdateCanEverJoinTeam final
+{
+public:
+	bool                                          bCanJoin;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScoreboardTeamWidget_UpdateCanEverJoinTeam;
+
+// Function BrickRigs.ScoreboardTeamWidget.UpdateCanJoinTeam
+// 0x0001 (0x0001 - 0x0000)
+struct ScoreboardTeamWidget_UpdateCanJoinTeam final
+{
+public:
+	bool                                          bCanJoin;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScoreboardTeamWidget_UpdateCanJoinTeam;
+
+// Function BrickRigs.ScoreboardTeamWidget.UpdateTeamAttitude
+// 0x0002 (0x0002 - 0x0000)
+struct ScoreboardTeamWidget_UpdateTeamAttitude final
+{
+public:
+	bool                                          bIsOwnTeam;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamAttitude                                 NewAttitude;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScoreboardTeamWidget_UpdateTeamAttitude;
+
+// Function BrickRigs.PagedListHeaderWidget.OnMeasurementSystemChanged
+// 0x0001 (0x0001 - 0x0000)
+struct PagedListHeaderWidget_OnMeasurementSystemChanged final
+{
+public:
+	EMeasurementSystem                            NewSystem;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListHeaderWidget_OnMeasurementSystemChanged;
+
+// Function BrickRigs.PagedListHeaderWidget.UpdateDimensions
+// 0x0018 (0x0018 - 0x0000)
+struct PagedListHeaderWidget_UpdateDimensions final
+{
+public:
+	struct FVector                                InDimensions;                                      // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InMaxDimensions;                                   // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateDimensions;
+
+// Function BrickRigs.PagedListHeaderWidget.UpdateEntry
+// 0x0020 (0x0020 - 0x0000)
+struct PagedListHeaderWidget_UpdateEntry final
+{
+public:
+	class FText                                   InTitleText;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bInHasEntry;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInHasUnsavedChanges;                              // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateEntry;
+
+// Function BrickRigs.PagedListHeaderWidget.UpdateMass
+// 0x0008 (0x0008 - 0x0000)
+struct PagedListHeaderWidget_UpdateMass final
+{
+public:
+	float                                         InMass;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMaxMass;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateMass;
+
+// Function BrickRigs.PagedListHeaderWidget.UpdateNumObjects
+// 0x0010 (0x0010 - 0x0000)
+struct PagedListHeaderWidget_UpdateNumObjects final
+{
+public:
+	int32                                         InNumObjects;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InMaxNumObjects;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumHiddenObjects;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumObjectsWithAerodynamics;                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateNumObjects;
+
+// Function BrickRigs.PagedListHeaderWidget.UpdatePrice
+// 0x0008 (0x0008 - 0x0000)
+struct PagedListHeaderWidget_UpdatePrice final
+{
+public:
+	float                                         InPrice;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMoney;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListHeaderWidget_UpdatePrice;
 
 // Function BrickRigs.HealthBarWidget.OnHUDVisibilityChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -8610,6 +9469,15 @@ public:
 };
 DUMPER7_ASSERTS_HealthBarWidget_UpdateHealth;
 
+// Function BrickRigs.RestrictedAreaWidget.UpdateTimerRemaining
+// 0x0004 (0x0004 - 0x0000)
+struct RestrictedAreaWidget_UpdateTimerRemaining final
+{
+public:
+	float                                         TimeRemaining;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RestrictedAreaWidget_UpdateTimerRemaining;
+
 // Function BrickRigs.HostGamePageWidget.UpdatePlayButton
 // 0x0002 (0x0002 - 0x0000)
 struct HostGamePageWidget_UpdatePlayButton final
@@ -8619,33 +9487,6 @@ public:
 	bool                                          bIsOnline;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HostGamePageWidget_UpdatePlayButton;
-
-// Function BrickRigs.MainWidgetBase.GetButtonPanel
-// 0x0008 (0x0008 - 0x0000)
-struct MainWidgetBase_GetButtonPanel final
-{
-public:
-	class UMenuButtonPanelWidget*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MainWidgetBase_GetButtonPanel;
-
-// Function BrickRigs.MainWidgetBase.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct MainWidgetBase_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MainWidgetBase_GetWidgetToFocus;
-
-// Function BrickRigs.MainWidgetBase.GetWindowManager
-// 0x0008 (0x0008 - 0x0000)
-struct MainWidgetBase_GetWindowManager final
-{
-public:
-	class UWindowManagerWidget*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MainWidgetBase_GetWindowManager;
 
 // Function BrickRigs.HUDContainerWidget.AddGameOverlayWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -8665,33 +9506,106 @@ public:
 };
 DUMPER7_ASSERTS_HUDContainerWidget_AddHUDWidget;
 
-// Function BrickRigs.RestrictedAreaVolume.OnBeginOverlap
-// 0x00A8 (0x00A8 - 0x0000)
-struct RestrictedAreaVolume_OnBeginOverlap final
+// Function BrickRigs.ServerBrowserWidget.OnListEntrySelected
+// 0x0010 (0x0010 - 0x0000)
+struct ServerBrowserWidget_OnListEntrySelected final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UPagedListEntryWidget*                  Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoubleClick;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_RestrictedAreaVolume_OnBeginOverlap;
+DUMPER7_ASSERTS_ServerBrowserWidget_OnListEntrySelected;
 
-// Function BrickRigs.RestrictedAreaVolume.OnEndOverlap
-// 0x0020 (0x0020 - 0x0000)
-struct RestrictedAreaVolume_OnEndOverlap final
+// Function BrickRigs.ServerBrowserWidget.OnLoadListPage
+// 0x0004 (0x0004 - 0x0000)
+struct ServerBrowserWidget_OnLoadListPage final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RestrictedAreaVolume_OnEndOverlap;
+DUMPER7_ASSERTS_ServerBrowserWidget_OnLoadListPage;
+
+// Function BrickRigs.ServerBrowserWidget.UpdateCanJoin
+// 0x0001 (0x0001 - 0x0000)
+struct ServerBrowserWidget_UpdateCanJoin final
+{
+public:
+	bool                                          bCanJoin;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ServerBrowserWidget_UpdateCanJoin;
+
+// Function BrickRigs.ServerBrowserWidget.UpdateCanRefresh
+// 0x0001 (0x0001 - 0x0000)
+struct ServerBrowserWidget_UpdateCanRefresh final
+{
+public:
+	bool                                          bCanRefresh;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ServerBrowserWidget_UpdateCanRefresh;
+
+// Function BrickRigs.PingIndicatorWidget.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct PingIndicatorWidget_SetColorStyle final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_SetColorStyle;
+
+// Function BrickRigs.PingIndicatorWidget.SetMinDisplayPing
+// 0x0004 (0x0004 - 0x0000)
+struct PingIndicatorWidget_SetMinDisplayPing final
+{
+public:
+	int32                                         InPing;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_SetMinDisplayPing;
+
+// Function BrickRigs.PingIndicatorWidget.SetPing
+// 0x0004 (0x0004 - 0x0000)
+struct PingIndicatorWidget_SetPing final
+{
+public:
+	int32                                         InPing;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_SetPing;
+
+// Function BrickRigs.PingIndicatorWidget.SetPlayerState
+// 0x0008 (0x0008 - 0x0000)
+struct PingIndicatorWidget_SetPlayerState final
+{
+public:
+	class ABrickPlayerState*                      InPlayerState;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_SetPlayerState;
+
+// Function BrickRigs.PingIndicatorWidget.SetStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct PingIndicatorWidget_SetStyleState final
+{
+public:
+	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_SetStyleState;
+
+// Function BrickRigs.PingIndicatorWidget.SetTextStyle
+// 0x0001 (0x0001 - 0x0000)
+struct PingIndicatorWidget_SetTextStyle final
+{
+public:
+	EBrickUITextStyle                             NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_SetTextStyle;
+
+// Function BrickRigs.PingIndicatorWidget.UpdatePing
+// 0x0004 (0x0004 - 0x0000)
+struct PingIndicatorWidget_UpdatePing final
+{
+public:
+	int32                                         InPing;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PingIndicatorWidget_UpdatePing;
 
 // Function BrickRigs.HUDIconContainerWidget.AddCrosshairWidgets
 // 0x0010 (0x0010 - 0x0000)
@@ -8773,94 +9687,41 @@ public:
 };
 DUMPER7_ASSERTS_HUDWidgetInterface_AddGameOverlayWidget;
 
-// Function BrickRigs.UserIdPropertyWidget.OnUserIdTextChanged
-// 0x0020 (0x0020 - 0x0000)
-struct UserIdPropertyWidget_OnUserIdTextChanged final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UserIdPropertyWidget_OnUserIdTextChanged;
-
-// Function BrickRigs.UserIdPropertyWidget.UpdateUserId
-// 0x0020 (0x0020 - 0x0000)
-struct UserIdPropertyWidget_UpdateUserId final
-{
-public:
-	class FText                                   InUserId;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bIsValid;                                          // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UserIdPropertyWidget_UpdateUserId;
-
-// Function BrickRigs.UserIdPropertyWidget.UpdateUsername
+// Function BrickRigs.InputActionCategoryWidget.InitializeCategory
 // 0x0018 (0x0018 - 0x0000)
-struct UserIdPropertyWidget_UpdateUsername final
+struct InputActionCategoryWidget_InitializeCategory final
 {
 public:
-	class FText                                   InUsername;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   InCategoryName;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserIdPropertyWidget_UpdateUsername;
+DUMPER7_ASSERTS_InputActionCategoryWidget_InitializeCategory;
 
-// Function BrickRigs.VideoSettingsPageWidget.UpdateApplyButton
+// Function BrickRigs.InputActionCategoryWidget.UpdateInputActionListMode
 // 0x0001 (0x0001 - 0x0000)
-struct VideoSettingsPageWidget_UpdateApplyButton final
-{
-public:
-	bool                                          bCanApply;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VideoSettingsPageWidget_UpdateApplyButton;
-
-// Function BrickRigs.VideoSettingsPageWidget.AreVideoSettingsDirty
-// 0x0001 (0x0001 - 0x0000)
-struct VideoSettingsPageWidget_AreVideoSettingsDirty final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VideoSettingsPageWidget_AreVideoSettingsDirty;
-
-// Function BrickRigs.InputActionListWidget.AddActionWidget
-// 0x0010 (0x0010 - 0x0000)
-struct InputActionListWidget_AddActionWidget final
-{
-public:
-	class UInputActionWidget*                     Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ActionIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InputActionListWidget_AddActionWidget;
-
-// Function BrickRigs.InputActionListWidget.AddCategoryWidget
-// 0x0010 (0x0010 - 0x0000)
-struct InputActionListWidget_AddCategoryWidget final
-{
-public:
-	class UInputActionCategoryWidget*             Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CategoryIndex;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InputActionListWidget_AddCategoryWidget;
-
-// Function BrickRigs.InputActionListWidget.UpdateInputActionListMode
-// 0x0001 (0x0001 - 0x0000)
-struct InputActionListWidget_UpdateInputActionListMode final
+struct InputActionCategoryWidget_UpdateInputActionListMode final
 {
 public:
 	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_InputActionListWidget_UpdateInputActionListMode;
+DUMPER7_ASSERTS_InputActionCategoryWidget_UpdateInputActionListMode;
 
-// Function BrickRigs.InputActionListWidget.GetWidgetToFocus
+// Function BrickRigs.InputActionCategoryWidget.UpdateIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct InputActionCategoryWidget_UpdateIsSelected final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputActionCategoryWidget_UpdateIsSelected;
+
+// Function BrickRigs.InputActionCategoryWidget.GetWidgetToFocus
 // 0x0008 (0x0008 - 0x0000)
-struct InputActionListWidget_GetWidgetToFocus final
+struct InputActionCategoryWidget_GetWidgetToFocus final
 {
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_InputActionListWidget_GetWidgetToFocus;
+DUMPER7_ASSERTS_InputActionCategoryWidget_GetWidgetToFocus;
 
 // Function BrickRigs.InputActionWidget.UpdateCanActionBeRebound
 // 0x0001 (0x0001 - 0x0000)
@@ -8935,14 +9796,14 @@ public:
 DUMPER7_ASSERTS_InputChordWidget_SetColorStyle;
 
 // Function BrickRigs.InputChordWidget.SetInputChord
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct InputChordWidget_SetInputChord final
 {
 public:
-	struct FInputChord                            InInputChord;                                      // 0x0000(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInputActionTriggerType                       InTriggerType;                                     // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowAsGamepadKey;                                 // 0x0021(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FInputChord                            InInputChord;                                      // 0x0000(0x0028)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInputActionTriggerType                       InTriggerType;                                     // 0x0028(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowAsGamepadKey;                                 // 0x0029(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InputChordWidget_SetInputChord;
 
@@ -8976,62 +9837,15 @@ public:
 };
 DUMPER7_ASSERTS_InputChordWidget_UpdateSpacerColorStyleAndStyleState;
 
-// Function BrickRigs.SpectatorWidget.SpectateNextCharacter
-// 0x0001 (0x0001 - 0x0000)
-struct SpectatorWidget_SpectateNextCharacter final
-{
-public:
-	bool                                          bNext;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpectatorWidget_SpectateNextCharacter;
-
-// Function BrickRigs.SpectatorWidget.UpdateSpectatedPlayer
-// 0x0020 (0x0020 - 0x0000)
-struct SpectatorWidget_UpdateSpectatedPlayer final
-{
-public:
-	class FText                                   PlayerName;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bIsValidPlayer;                                    // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SpectatorWidget_UpdateSpectatedPlayer;
-
-// Function BrickRigs.SpectatorWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct SpectatorWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpectatorWidget_GetWidgetToFocus;
-
-// Function BrickRigs.InputHelpWidget.GetGameOverlay
-// 0x0008 (0x0008 - 0x0000)
-struct InputHelpWidget_GetGameOverlay final
-{
-public:
-	class UGameOverlayWidget*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputHelpWidget_GetGameOverlay;
-
-// Function BrickRigs.InputHelpWidget.GetWidgetToFocus
-// 0x0008 (0x0008 - 0x0000)
-struct InputHelpWidget_GetWidgetToFocus final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputHelpWidget_GetWidgetToFocus;
-
 // Function BrickRigs.InputKeyWidget.SetKey
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct InputKeyWidget_SetKey final
 {
 public:
-	struct FKey                                   InKey;                                             // 0x0000(0x0018)(ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInputActionTriggerType                       InTriggerType;                                     // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInUsedAsModifier;                                 // 0x0019(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKey                                   InKey;                                             // 0x0000(0x0020)(ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInputActionTriggerType                       InTriggerType;                                     // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInUsedAsModifier;                                 // 0x0021(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InputKeyWidget_SetKey;
 
@@ -9045,15 +9859,6 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InputKeyWidget_UpdateKey;
-
-// Function BrickRigs.InputMappingKeyWidget.UpdateConflictedState
-// 0x0001 (0x0001 - 0x0000)
-struct InputMappingKeyWidget_UpdateConflictedState final
-{
-public:
-	bool                                          bNewConflicted;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputMappingKeyWidget_UpdateConflictedState;
 
 // Function BrickRigs.InputMappingPropertyWidget.AddKeyWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -9093,47 +9898,23 @@ public:
 };
 DUMPER7_ASSERTS_InteractionOptionWidget_UpdateColorStyle;
 
-// Function BrickRigs.SwitchBrick.Interact_Deactivate
-// 0x0008 (0x0008 - 0x0000)
-struct SwitchBrick_Interact_Deactivate final
+// Function BrickRigs.InventoryContainerWidget.UpdateHasInventory
+// 0x0001 (0x0001 - 0x0000)
+struct InventoryContainerWidget_UpdateHasInventory final
 {
 public:
-	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasInventory;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SwitchBrick_Interact_Deactivate;
+DUMPER7_ASSERTS_InventoryContainerWidget_UpdateHasInventory;
 
-// Function BrickRigs.SwitchBrick.Interact_Switch
-// 0x0010 (0x0010 - 0x0000)
-struct SwitchBrick_Interact_Switch final
+// Function BrickRigs.InventoryContainerWidget.UpdateOwnerMoney
+// 0x0004 (0x0004 - 0x0000)
+struct InventoryContainerWidget_UpdateOwnerMoney final
 {
 public:
-	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Val;                                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         NewMoney;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SwitchBrick_Interact_Switch;
-
-// Function BrickRigs.InteractionWidget.AddOptionWidget
-// 0x0010 (0x0010 - 0x0000)
-struct InteractionWidget_AddOptionWidget final
-{
-public:
-	class UInteractionOptionWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OptionIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InteractionWidget_AddOptionWidget;
-
-// Function BrickRigs.InventoryPopupWidget.UpdateDropArea
-// 0x0003 (0x0003 - 0x0000)
-struct InventoryPopupWidget_UpdateDropArea final
-{
-public:
-	bool                                          bInIsDragging;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInCanDrop;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsDragOver;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InventoryPopupWidget_UpdateDropArea;
+DUMPER7_ASSERTS_InventoryContainerWidget_UpdateOwnerMoney;
 
 // Function BrickRigs.InventorySlotWidget.AddSubInventoryWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -9145,13 +9926,13 @@ public:
 DUMPER7_ASSERTS_InventorySlotWidget_AddSubInventoryWidget;
 
 // Function BrickRigs.InventorySlotWidget.OnButtonDragged
-// 0x0160 (0x0160 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct InventorySlotWidget_OnButtonDragged final
 {
 public:
 	struct FGeometry                              InGeometry;                                        // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InventorySlotWidget_OnButtonDragged;
 
@@ -9171,164 +9952,66 @@ public:
 };
 DUMPER7_ASSERTS_InventorySlotWidget_UpdateSlotApperance;
 
-// Function BrickRigs.JoinSessionPopupWidget.OnPasswordChanged
-// 0x0020 (0x0020 - 0x0000)
-struct JoinSessionPopupWidget_OnPasswordChanged final
-{
-public:
-	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_JoinSessionPopupWidget_OnPasswordChanged;
-
-// Function BrickRigs.JoinSessionPopupWidget.UpdateJoinState
-// 0x0003 (0x0003 - 0x0000)
-struct JoinSessionPopupWidget_UpdateJoinState final
-{
-public:
-	EJoinSessionState                             InJoinState;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInPasswordRequired;                               // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInHasPassword;                                    // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_JoinSessionPopupWidget_UpdateJoinState;
-
-// Function BrickRigs.KickPlayerPopupWidget.UpdateCanConfirmKick
+// Function BrickRigs.BuildingPart.Fill
 // 0x0001 (0x0001 - 0x0000)
-struct KickPlayerPopupWidget_UpdateCanConfirmKick final
+struct BuildingPart_Fill final
 {
 public:
-	bool                                          bNewCanConfirm;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         MeshIdx;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KickPlayerPopupWidget_UpdateCanConfirmKick;
+DUMPER7_ASSERTS_BuildingPart_Fill;
 
-// Function BrickRigs.KickPlayerPopupWidget.UpdateCanRevokeKick
-// 0x0001 (0x0001 - 0x0000)
-struct KickPlayerPopupWidget_UpdateCanRevokeKick final
-{
-public:
-	bool                                          bCanRevoke;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KickPlayerPopupWidget_UpdateCanRevokeKick;
-
-// Function BrickRigs.KickPlayerPopupWidget.UpdateIsLoadingKick
-// 0x0001 (0x0001 - 0x0000)
-struct KickPlayerPopupWidget_UpdateIsLoadingKick final
-{
-public:
-	bool                                          bNewLoading;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KickPlayerPopupWidget_UpdateIsLoadingKick;
-
-// Function BrickRigs.PropertyCategoryWidget.UpdateCategory
-// 0x0018 (0x0018 - 0x0000)
-struct PropertyCategoryWidget_UpdateCategory final
-{
-public:
-	class FText                                   DisplayName;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyCategoryWidget_UpdateCategory;
-
-// Function BrickRigs.LegacyBuilding.ConstructBuildingPart
-// 0x0020 (0x0020 - 0x0000)
-struct LegacyBuilding_ConstructBuildingPart final
-{
-public:
-	int32                                         NumX;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumY;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Floors;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBuildingPart*                          ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LegacyBuilding_ConstructBuildingPart;
-
-// Function BrickRigs.LegacyBuilding.ConstructFlatRoof
-// 0x0010 (0x0010 - 0x0000)
-struct LegacyBuilding_ConstructFlatRoof final
-{
-public:
-	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Mesh;                                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LegacyBuilding_ConstructFlatRoof;
-
-// Function BrickRigs.LegacyBuilding.ConstructIndustrialRoof
-// 0x0010 (0x0010 - 0x0000)
-struct LegacyBuilding_ConstructIndustrialRoof final
-{
-public:
-	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         RoofSlopeMesh;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         RoofMesh;                                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         WallMesh;                                          // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LegacyBuilding_ConstructIndustrialRoof;
-
-// Function BrickRigs.LegacyBuilding.ConstructRoof
-// 0x0010 (0x0010 - 0x0000)
-struct LegacyBuilding_ConstructRoof final
-{
-public:
-	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         RoofGableMesh;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         RoofMesh;                                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRotate;                                           // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LegacyBuilding_ConstructRoof;
-
-// Function BrickRigs.LegacyBuilding.SpawnBuildingPart
+// Function BrickRigs.BuildingPart.Floor
 // 0x0008 (0x0008 - 0x0000)
-struct LegacyBuilding_SpawnBuildingPart final
+struct BuildingPart_Floor final
 {
 public:
-	class UBuildingPart*                          Part;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Floor_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         MeshIdx;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_LegacyBuilding_SpawnBuildingPart;
+DUMPER7_ASSERTS_BuildingPart_Floor;
 
-// Function BrickRigs.TimespanPropertyWidget.SetTimespanPropertyValue
+// Function BrickRigs.BuildingPart.Grid
+// 0x0008 (0x0008 - 0x0000)
+struct BuildingPart_Grid final
+{
+public:
+	int32                                         Dist;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         MeshIdx;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BuildingPart_Grid;
+
+// Function BrickRigs.BuildingPart.Place
 // 0x0010 (0x0010 - 0x0000)
-struct TimespanPropertyWidget_SetTimespanPropertyValue final
+struct BuildingPart_Place final
 {
 public:
-	EValueChangedEventType                        EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              NewValue;                                          // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBuildingSide                                 Side;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Floor;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Position;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         MeshIdx;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_TimespanPropertyWidget_SetTimespanPropertyValue;
+DUMPER7_ASSERTS_BuildingPart_Place;
 
-// Function BrickRigs.TimespanPropertyWidget.UpdateTimespanProperty
-// 0x0020 (0x0020 - 0x0000)
-struct TimespanPropertyWidget_UpdateTimespanProperty final
-{
-public:
-	struct FTimespan                              Timespan;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              MinValue;                                          // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              MaxValue;                                          // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowInfinite;                                    // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TimespanPropertyWidget_UpdateTimespanProperty;
-
-// Function BrickRigs.LoadingScreenWidget.SetBackgroundColor
-// 0x0010 (0x0010 - 0x0000)
-struct LoadingScreenWidget_SetBackgroundColor final
-{
-public:
-	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LoadingScreenWidget_SetBackgroundColor;
-
-// Function BrickRigs.LoadingScreenWidget.SetLoadingText
+// Function BrickRigs.BuildingPart.Rect
 // 0x0018 (0x0018 - 0x0000)
-struct LoadingScreenWidget_SetLoadingText final
+struct BuildingPart_Rect final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EBuildingSide                                 Side;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StartFloor;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EndFloor;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StartPosition;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EndPosition;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         MeshIdx;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_LoadingScreenWidget_SetLoadingText;
+DUMPER7_ASSERTS_BuildingPart_Rect;
 
 // Function BrickRigs.LoadoutContainer.Interact_Inventory
 // 0x0008 (0x0008 - 0x0000)
@@ -9348,36 +10031,68 @@ public:
 };
 DUMPER7_ASSERTS_LoadoutContainer_UpdateAnimation;
 
-// Function BrickRigs.MatchEndWidget.UpdateContinueButton
-// 0x0008 (0x0008 - 0x0000)
-struct MatchEndWidget_UpdateContinueButton final
+// Function BrickRigs.MapCrosshairWidget.SetColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct MapCrosshairWidget_SetColorStyle final
 {
 public:
-	int32                                         TimeRemaining;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsHost;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MatchEndWidget_UpdateContinueButton;
+DUMPER7_ASSERTS_MapCrosshairWidget_SetColorStyle;
 
-// Function BrickRigs.MatchEndWidget.UpdateMatchWinner
-// 0x0010 (0x0010 - 0x0000)
-struct MatchEndWidget_UpdateMatchWinner final
+// Function BrickRigs.MapCrosshairWidget.SetStyleState
+// 0x0001 (0x0001 - 0x0000)
+struct MapCrosshairWidget_SetStyleState final
 {
 public:
-	class UBrickTeam*                             WinnerTeam;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETeamAttitude                                 TeamAttitude;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MatchEndWidget_UpdateMatchWinner;
+DUMPER7_ASSERTS_MapCrosshairWidget_SetStyleState;
 
-// Function BrickRigs.MatchEndWidget.GetWidgetToFocus
+// Function BrickRigs.MapWidget.OnMeasurementSystemChanged
+// 0x0001 (0x0001 - 0x0000)
+struct MapWidget_OnMeasurementSystemChanged final
+{
+public:
+	EMeasurementSystem                            NewSystem;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MapWidget_OnMeasurementSystemChanged;
+
+// Function BrickRigs.MapWidget.ResetPanAndZoom
+// 0x0001 (0x0001 - 0x0000)
+struct MapWidget_ResetPanAndZoom final
+{
+public:
+	bool                                          bInitialize;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MapWidget_ResetPanAndZoom;
+
+// Function BrickRigs.MapWidget.UpdateViewportPannedOrZoomed
+// 0x0001 (0x0001 - 0x0000)
+struct MapWidget_UpdateViewportPannedOrZoomed final
+{
+public:
+	bool                                          bValue;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MapWidget_UpdateViewportPannedOrZoomed;
+
+// Function BrickRigs.MapWidget.CreateMapMID
 // 0x0008 (0x0008 - 0x0000)
-struct MatchEndWidget_GetWidgetToFocus final
+struct MapWidget_CreateMapMID final
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MapWidget_CreateMapMID;
+
+// Function BrickRigs.MapWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct MapWidget_GetWidgetToFocus final
 {
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MatchEndWidget_GetWidgetToFocus;
+DUMPER7_ASSERTS_MapWidget_GetWidgetToFocus;
 
 // Function BrickRigs.MatchMenuWidget.UpdateAdminRole
 // 0x0001 (0x0001 - 0x0000)
@@ -9398,90 +10113,53 @@ public:
 };
 DUMPER7_ASSERTS_MatchMenuWidget_UpdateRestartMatchButton;
 
-// Function BrickRigs.Train.SetTrainTrack
+// Function BrickRigs.MatchTimerWidget.UpdateTimer
 // 0x0004 (0x0004 - 0x0000)
-struct Train_SetTrainTrack final
+struct MatchTimerWidget_UpdateTimer final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewTime;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Train_SetTrainTrack;
+DUMPER7_ASSERTS_MatchTimerWidget_UpdateTimer;
 
-// Function BrickRigs.MatchStateWidget.UpdateMatchState
-// 0x0020 (0x0020 - 0x0000)
-struct MatchStateWidget_UpdateMatchState final
-{
-public:
-	class FText                                   NewDisplayText;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFadeOut;                                          // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MatchStateWidget_UpdateMatchState;
-
-// Function BrickRigs.MenuButtonWidget.SetColorStyle
+// Function BrickRigs.MenuButtonPanelWidget.ClearButtons
 // 0x0001 (0x0001 - 0x0000)
-struct MenuButtonWidget_SetColorStyle final
+struct MenuButtonPanelWidget_ClearButtons final
 {
 public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bManualRemove;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuButtonWidget_SetColorStyle;
+DUMPER7_ASSERTS_MenuButtonPanelWidget_ClearButtons;
 
-// Function BrickRigs.MenuButtonWidget.SetDisplayIcon
+// Function BrickRigs.MenuButtonPanelWidget.CreateButton
+// 0x0038 (0x0038 - 0x0000)
+struct MenuButtonPanelWidget_CreateButton final
+{
+public:
+	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	int32                                         IconIndex;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             Delegate;                                          // 0x001C(0x0014)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuButtonPanelWidget_CreateButton;
+
+// Function BrickRigs.MenuButtonPanelWidget.SetNumButtonsPerRow
 // 0x0004 (0x0004 - 0x0000)
-struct MenuButtonWidget_SetDisplayIcon final
+struct MenuButtonPanelWidget_SetNumButtonsPerRow final
 {
 public:
-	int32                                         InIconIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuButtonWidget_SetDisplayIcon;
+DUMPER7_ASSERTS_MenuButtonPanelWidget_SetNumButtonsPerRow;
 
-// Function BrickRigs.MenuButtonWidget.SetDisplayText
-// 0x0018 (0x0018 - 0x0000)
-struct MenuButtonWidget_SetDisplayText final
+// Function BrickRigs.MenuButtonPanelWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct MenuButtonPanelWidget_GetWidgetToFocus final
 {
 public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuButtonWidget_SetDisplayText;
-
-// Function BrickRigs.MenuButtonWidget.UpdateDisplayText
-// 0x0018 (0x0018 - 0x0000)
-struct MenuButtonWidget_UpdateDisplayText final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuButtonWidget_UpdateDisplayText;
-
-// Function BrickRigs.UGCFunctionLibrary.MakeOnlineUGCItemId
-// 0x0020 (0x0020 - 0x0000)
-struct UGCFunctionLibrary_MakeOnlineUGCItemId final
-{
-public:
-	class FString                                 ItemId;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFluUGCItemIdWrapper                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCFunctionLibrary_MakeOnlineUGCItemId;
-
-// Function BrickRigs.MenuSequence.OnDefaultVehiclesQueried
-// 0x0010 (0x0010 - 0x0000)
-struct MenuSequence_OnDefaultVehiclesQueried final
-{
-public:
-	TArray<struct FUGCFileInfo>                   FileInfos;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuSequence_OnDefaultVehiclesQueried;
-
-// Function BrickRigs.MenuSequence.IsMenuSequenceReady
-// 0x0001 (0x0001 - 0x0000)
-struct MenuSequence_IsMenuSequenceReady final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuSequence_IsMenuSequenceReady;
+DUMPER7_ASSERTS_MenuButtonPanelWidget_GetWidgetToFocus;
 
 // Function BrickRigs.MenuWidget.AddMenuPage
 // 0x0008 (0x0008 - 0x0000)
@@ -9493,20 +10171,20 @@ public:
 DUMPER7_ASSERTS_MenuWidget_AddMenuPage;
 
 // Function BrickRigs.MenuWidget.OnMenuContextChanged
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct MenuWidget_OnMenuContextChanged final
 {
 public:
-	class FName                                   NewContext;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NewContext;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MenuWidget_OnMenuContextChanged;
 
 // Function BrickRigs.MenuWidget.OpenMenu
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct MenuWidget_OpenMenu final
 {
 public:
-	class FName                                   InMenu;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMenu;                                            // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MenuWidget_OpenMenu;
 
@@ -9529,12 +10207,12 @@ public:
 DUMPER7_ASSERTS_MenuWidget_SetTitleText;
 
 // Function BrickRigs.MenuWidget.ShowMenuPage
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct MenuWidget_ShowMenuPage final
 {
 public:
-	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   TitleText;                                         // 0x0028(0x0018)(Parm, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0000(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   TitleText;                                         // 0x0030(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MenuWidget_ShowMenuPage;
 
@@ -9556,280 +10234,6 @@ public:
 };
 DUMPER7_ASSERTS_MenuWidget_IsMainMenu;
 
-// Function BrickRigs.UGCPropertyWidget.UpdateItemsText
-// 0x0004 (0x0004 - 0x0000)
-struct UGCPropertyWidget_UpdateItemsText final
-{
-public:
-	int32                                         NumSelected;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCPropertyWidget_UpdateItemsText;
-
-// Function BrickRigs.ModHook.OnCharacterBeginPlay
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_OnCharacterBeginPlay final
-{
-public:
-	class ABaseCharacter*                         Character;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OnCharacterBeginPlay;
-
-// Function BrickRigs.ModHook.OnPlayerControllerBeginPlay
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_OnPlayerControllerBeginPlay final
-{
-public:
-	class ABasePlayerController*                  PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OnPlayerControllerBeginPlay;
-
-// Function BrickRigs.ModHook.OnSpectatorBeginPlay
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_OnSpectatorBeginPlay final
-{
-public:
-	class ABrickSpectatorPawn*                    Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OnSpectatorBeginPlay;
-
-// Function BrickRigs.ModHook.OnVehicleBeginPlay
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_OnVehicleBeginPlay final
-{
-public:
-	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OnVehicleBeginPlay;
-
-// Function BrickRigs.ModHook.OverrideBillboardTexture
-// 0x0058 (0x0058 - 0x0000)
-struct ModHook_OverrideBillboardTexture final
-{
-public:
-	TSoftObjectPtr<class UTexture2D>              Texture;                                           // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABillboard*                             Billboard;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideBillboardTexture;
-
-// Function BrickRigs.ModHook.OverrideCharacterLoadout
-// 0x0028 (0x0028 - 0x0000)
-struct ModHook_OverrideCharacterLoadout final
-{
-public:
-	struct FInventoryLoadout                      Loadout;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class ABaseCharacter*                         Character;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInventoryLoadout                      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideCharacterLoadout;
-
-// Function BrickRigs.ModHook.OverrideGameModeClass
-// 0x0040 (0x0040 - 0x0000)
-struct ModHook_OverrideGameModeClass final
-{
-public:
-	TSubclassOf<class AGameModeBase>              GameModeClass;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MapName;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Options;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Portal;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameModeBase>              ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideGameModeClass;
-
-// Function BrickRigs.ModHook.OverrideGameStateClass
-// 0x0010 (0x0010 - 0x0000)
-struct ModHook_OverrideGameStateClass final
-{
-public:
-	TSubclassOf<class AGameStateBase>             GameStateClass;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameStateBase>             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideGameStateClass;
-
-// Function BrickRigs.ModHook.OverrideLoadoutContainerItems
-// 0x0020 (0x0020 - 0x0000)
-struct ModHook_OverrideLoadoutContainerItems final
-{
-public:
-	TArray<TSubclassOf<class AInventoryItem>>     ItemClasses;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class AInventoryItem>>     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideLoadoutContainerItems;
-
-// Function BrickRigs.ModHook.OverrideLoadSubLevel
-// 0x0028 (0x0028 - 0x0000)
-struct ModHook_OverrideLoadSubLevel final
-{
-public:
-	bool                                          bLoadLevel;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 LevelName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGameModeInfo*                          GameMode;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ModHook_OverrideLoadSubLevel;
-
-// Function BrickRigs.ModHook.OverrideMenu
-// 0x0018 (0x0018 - 0x0000)
-struct ModHook_OverrideMenu final
-{
-public:
-	class UMenuWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Context;                                           // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ModHook_OverrideMenu;
-
-// Function BrickRigs.ModHook.OverrideMenuSequence
-// 0x0050 (0x0050 - 0x0000)
-struct ModHook_OverrideMenuSequence final
-{
-public:
-	TSoftClassPtr<class UClass>                   SequenceClass;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0028(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideMenuSequence;
-
-// Function BrickRigs.ModHook.OverrideMenuWorldSetupParams
-// 0x0060 (0x0060 - 0x0000)
-struct ModHook_OverrideMenuWorldSetupParams final
-{
-public:
-	struct FWorldSetupParams                      Params_0;                                          // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FWorldSetupParams                      ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideMenuWorldSetupParams;
-
-// Function BrickRigs.ModHook.OverridePawnClass
-// 0x0018 (0x0018 - 0x0000)
-struct ModHook_OverridePawnClass final
-{
-public:
-	TSubclassOf<class APawn>                      PawnClass;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AController*                            Controller;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class APawn>                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverridePawnClass;
-
-// Function BrickRigs.ModHook.OverridePlayerCameraManagerClass
-// 0x0018 (0x0018 - 0x0000)
-struct ModHook_OverridePlayerCameraManagerClass final
-{
-public:
-	TSubclassOf<class APlayerCameraManager>       PlayerCameraManagerClass;                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABasePlayerController*                  PC;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class APlayerCameraManager>       ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverridePlayerCameraManagerClass;
-
-// Function BrickRigs.ModHook.OverridePlayerControllerClass
-// 0x0010 (0x0010 - 0x0000)
-struct ModHook_OverridePlayerControllerClass final
-{
-public:
-	TSubclassOf<class APlayerController>          PlayerControllerClass;                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class APlayerController>          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverridePlayerControllerClass;
-
-// Function BrickRigs.ModHook.OverrideReplayPlayerControllerClass
-// 0x0010 (0x0010 - 0x0000)
-struct ModHook_OverrideReplayPlayerControllerClass final
-{
-public:
-	TSubclassOf<class APlayerController>          PlayerControllerClass;                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class APlayerController>          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideReplayPlayerControllerClass;
-
-// Function BrickRigs.ModHook.OverrideSpectatorClass
-// 0x0010 (0x0010 - 0x0000)
-struct ModHook_OverrideSpectatorClass final
-{
-public:
-	TSubclassOf<class ASpectatorPawn>             SpectatorClass;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ASpectatorPawn>             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideSpectatorClass;
-
-// Function BrickRigs.ModHook.OverrideTrainClass
-// 0x0010 (0x0010 - 0x0000)
-struct ModHook_OverrideTrainClass final
-{
-public:
-	TSubclassOf<class ATrain>                     TrainClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ATrain>                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideTrainClass;
-
-// Function BrickRigs.ModHook.OverrideVehicleClass
-// 0x0130 (0x0130 - 0x0000)
-struct ModHook_OverrideVehicleClass final
-{
-public:
-	TSubclassOf<class ABrickVehicle>              VehicleClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABrickPlayerController*                 PC;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPlayerSpawnRequest                    SpawnRequest;                                      // 0x0010(0x0118)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSubclassOf<class ABrickVehicle>              ReturnValue;                                       // 0x0128(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_OverrideVehicleClass;
-
-// Function BrickRigs.ModHook.PostConstructVehicle
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_PostConstructVehicle final
-{
-public:
-	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_PostConstructVehicle;
-
-// Function BrickRigs.ModHook.PostSpawnPawn
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_PostSpawnPawn final
-{
-public:
-	class APawn*                                  Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_PostSpawnPawn;
-
-// Function BrickRigs.ModHook.PostSpawnPlayerController
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_PostSpawnPlayerController final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_PostSpawnPlayerController;
-
-// Function BrickRigs.ModHook.PostSpawnSpectatorPawn
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_PostSpawnSpectatorPawn final
-{
-public:
-	class ASpectatorPawn*                         Pawn;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_PostSpawnSpectatorPawn;
-
-// Function BrickRigs.ModHook.PostSpawnVehicle
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_PostSpawnVehicle final
-{
-public:
-	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_PostSpawnVehicle;
-
-// Function BrickRigs.ModHook.PreConstructVehicle
-// 0x0008 (0x0008 - 0x0000)
-struct ModHook_PreConstructVehicle final
-{
-public:
-	class ABrickVehicle*                          Vehicle;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ModHook_PreConstructVehicle;
-
 // Function BrickRigs.ModHookSubsystem.GetModHookByClass
 // 0x0018 (0x0018 - 0x0000)
 struct ModHookSubsystem_GetModHookByClass final
@@ -9841,16 +10245,524 @@ public:
 };
 DUMPER7_ASSERTS_ModHookSubsystem_GetModHookByClass;
 
-// Function BrickRigs.VehicleIconWidget.UpdateVehicleIcon
-// 0x0003 (0x0003 - 0x0000)
-struct VehicleIconWidget_UpdateVehicleIcon final
+// Function BrickRigs.NewItemCountWidget.SetNumNewItems
+// 0x0004 (0x0004 - 0x0000)
+struct NewItemCountWidget_SetNumNewItems final
 {
 public:
-	bool                                          bNewIsLocalPlayer;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNewCanBeDamaged;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVehiclePinMode                               NewPinMode;                                        // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_VehicleIconWidget_UpdateVehicleIcon;
+DUMPER7_ASSERTS_NewItemCountWidget_SetNumNewItems;
+
+// Function BrickRigs.NewItemCountWidget.UpdateNumItems
+// 0x0004 (0x0004 - 0x0000)
+struct NewItemCountWidget_UpdateNumItems final
+{
+public:
+	int32                                         NewNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NewItemCountWidget_UpdateNumItems;
+
+// Function BrickRigs.PagedListWidget.ClearSelectedEntryWidget
+// 0x0001 (0x0001 - 0x0000)
+struct PagedListWidget_ClearSelectedEntryWidget final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_ClearSelectedEntryWidget;
+
+// Function BrickRigs.PagedListWidget.InitializePropertiesPanel
+// 0x0008 (0x0008 - 0x0000)
+struct PagedListWidget_InitializePropertiesPanel final
+{
+public:
+	class UObject*                                Container;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_InitializePropertiesPanel;
+
+// Function BrickRigs.PagedListWidget.OnEntriesLoaded
+// 0x0008 (0x0008 - 0x0000)
+struct PagedListWidget_OnEntriesLoaded final
+{
+public:
+	int32                                         InTotalNumEntries;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InMaxPages;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_OnEntriesLoaded;
+
+// Function BrickRigs.PagedListWidget.OnPageChanged
+// 0x0004 (0x0004 - 0x0000)
+struct PagedListWidget_OnPageChanged final
+{
+public:
+	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_OnPageChanged;
+
+// Function BrickRigs.PagedListWidget.SetCurrentPage
+// 0x0004 (0x0004 - 0x0000)
+struct PagedListWidget_SetCurrentPage final
+{
+public:
+	int32                                         InPage;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_SetCurrentPage;
+
+// Function BrickRigs.PagedListWidget.UpdateIsEntrySelected
+// 0x0001 (0x0001 - 0x0000)
+struct PagedListWidget_UpdateIsEntrySelected final
+{
+public:
+	bool                                          bIsEntrySelected;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_UpdateIsEntrySelected;
+
+// Function BrickRigs.PagedListWidget.UpdateIsLoading
+// 0x0001 (0x0001 - 0x0000)
+struct PagedListWidget_UpdateIsLoading final
+{
+public:
+	bool                                          bNewLoading;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_UpdateIsLoading;
+
+// Function BrickRigs.PagedListWidget.GetCurrentPage
+// 0x0004 (0x0004 - 0x0000)
+struct PagedListWidget_GetCurrentPage final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_GetCurrentPage;
+
+// Function BrickRigs.PagedListWidget.GetSelectedEntryWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PagedListWidget_GetSelectedEntryWidget final
+{
+public:
+	class UPagedListEntryWidget*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PagedListWidget_GetSelectedEntryWidget;
+
+// Function BrickRigs.PlayerInputComponent.InteractAxis
+// 0x0004 (0x0004 - 0x0000)
+struct PlayerInputComponent_InteractAxis final
+{
+public:
+	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerInputComponent_InteractAxis;
+
+// Function BrickRigs.PlayerInputComponent.GetCycleMeasurementSystemValueText
+// 0x0018 (0x0018 - 0x0000)
+struct PlayerInputComponent_GetCycleMeasurementSystemValueText final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerInputComponent_GetCycleMeasurementSystemValueText;
+
+// Function BrickRigs.PropertiesPanelWidget.AddCategoryWidget
+// 0x0010 (0x0010 - 0x0000)
+struct PropertiesPanelWidget_AddCategoryWidget final
+{
+public:
+	class UPropertyCategoryWidget*                Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PropertiesPanelWidget_AddCategoryWidget;
+
+// Function BrickRigs.PropertiesPanelWidget.AddProperties
+// 0x0028 (0x0028 - 0x0000)
+struct PropertiesPanelWidget_AddProperties final
+{
+public:
+	class UObject*                                ActiveObject;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBrickPropertyReflectionFilter         InFilter;                                          // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertiesPanelWidget_AddProperties;
+
+// Function BrickRigs.PropertiesPanelWidget.AddPropertiesForSelection
+// 0x0038 (0x0038 - 0x0000)
+struct PropertiesPanelWidget_AddPropertiesForSelection final
+{
+public:
+	class UObject*                                ActiveObject;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        SelectedObjects;                                   // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBrickPropertyReflectionFilter         InFilter;                                          // 0x0018(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertiesPanelWidget_AddPropertiesForSelection;
+
+// Function BrickRigs.PropertyContainerWidget.AddPropertyWidget
+// 0x0010 (0x0010 - 0x0000)
+struct PropertyContainerWidget_AddPropertyWidget final
+{
+public:
+	class UPropertyWidget*                        Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOrientation                                  InOrientation;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_AddPropertyWidget;
+
+// Function BrickRigs.PropertyContainerWidget.OpenContextMenu
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerWidget_OpenContextMenu final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_OpenContextMenu;
+
+// Function BrickRigs.PropertyContainerWidget.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerWidget_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_UpdateColorStyle;
+
+// Function BrickRigs.PropertyContainerWidget.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerWidget_UpdateIsReadOnly final
+{
+public:
+	bool                                          bInReadOnly;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_UpdateIsReadOnly;
+
+// Function BrickRigs.PropertyContainerWidget.UpdateOrientation
+// 0x0001 (0x0001 - 0x0000)
+struct PropertyContainerWidget_UpdateOrientation final
+{
+public:
+	EOrientation                                  InOrientation;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_UpdateOrientation;
+
+// Function BrickRigs.PropertyContainerWidget.GetMenuButtonPanelWidget
+// 0x0008 (0x0008 - 0x0000)
+struct PropertyContainerWidget_GetMenuButtonPanelWidget final
+{
+public:
+	class UMenuButtonPanelWidget*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_GetMenuButtonPanelWidget;
+
+// Function BrickRigs.PropertyContainerWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct PropertyContainerWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PropertyContainerWidget_GetWidgetToFocus;
+
+// Function BrickRigs.RadioButtonWidget.SetIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct RadioButtonWidget_SetIsSelected final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RadioButtonWidget_SetIsSelected;
+
+// Function BrickRigs.RestrictedAreaVolume.OnBeginOverlap
+// 0x00B0 (0x00B0 - 0x0000)
+struct RestrictedAreaVolume_OnBeginOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RestrictedAreaVolume_OnBeginOverlap;
+
+// Function BrickRigs.RestrictedAreaVolume.OnEndOverlap
+// 0x0020 (0x0020 - 0x0000)
+struct RestrictedAreaVolume_OnEndOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RestrictedAreaVolume_OnEndOverlap;
+
+// Function BrickRigs.SeatBrick.Interact_EnterSeat
+// 0x0008 (0x0008 - 0x0000)
+struct SeatBrick_Interact_EnterSeat final
+{
+public:
+	class ABrickPlayerController*                 PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_Interact_EnterSeat;
+
+// Function BrickRigs.SeatBrick.OnRep_Character
+// 0x0008 (0x0008 - 0x0000)
+struct SeatBrick_OnRep_Character final
+{
+public:
+	class ABrickCharacter*                        OldCharacter;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_OnRep_Character;
+
+// Function BrickRigs.SeatBrick.SetInputAction
+// 0x0002 (0x0002 - 0x0000)
+struct SeatBrick_SetInputAction final
+{
+public:
+	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnable;                                           // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_SetInputAction;
+
+// Function BrickRigs.SeatBrick.SetInputActionForced
+// 0x0002 (0x0002 - 0x0000)
+struct SeatBrick_SetInputActionForced final
+{
+public:
+	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnable;                                           // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_SetInputActionForced;
+
+// Function BrickRigs.SeatBrick.SetInputAxis
+// 0x0008 (0x0008 - 0x0000)
+struct SeatBrick_SetInputAxis final
+{
+public:
+	EVehicleInputAxis                             Axis;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Val;                                               // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_SetInputAxis;
+
+// Function BrickRigs.SeatBrick.SetInputAxisForced
+// 0x0008 (0x0008 - 0x0000)
+struct SeatBrick_SetInputAxisForced final
+{
+public:
+	EVehicleInputAxis                             Axis;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Val;                                               // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_SetInputAxisForced;
+
+// Function BrickRigs.SeatBrick.ToggleInputAction
+// 0x0001 (0x0001 - 0x0000)
+struct SeatBrick_ToggleInputAction final
+{
+public:
+	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_ToggleInputAction;
+
+// Function BrickRigs.SeatBrick.GetControlledMotors
+// 0x0010 (0x0010 - 0x0000)
+struct SeatBrick_GetControlledMotors final
+{
+public:
+	TArray<struct FBrickEditorObjectID>           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetControlledMotors;
+
+// Function BrickRigs.SeatBrick.GetCurrentGear
+// 0x0004 (0x0004 - 0x0000)
+struct SeatBrick_GetCurrentGear final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetCurrentGear;
+
+// Function BrickRigs.SeatBrick.GetCurrentRPM
+// 0x0004 (0x0004 - 0x0000)
+struct SeatBrick_GetCurrentRPM final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetCurrentRPM;
+
+// Function BrickRigs.SeatBrick.GetFlipMotorThrottle
+// 0x0001 (0x0001 - 0x0000)
+struct SeatBrick_GetFlipMotorThrottle final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetFlipMotorThrottle;
+
+// Function BrickRigs.SeatBrick.GetInputAction
+// 0x0002 (0x0002 - 0x0000)
+struct SeatBrick_GetInputAction final
+{
+public:
+	EVehicleInputAxis                             Action;                                            // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetInputAction;
+
+// Function BrickRigs.SeatBrick.GetInputAxis
+// 0x0008 (0x0008 - 0x0000)
+struct SeatBrick_GetInputAxis final
+{
+public:
+	EVehicleInputAxis                             Axis;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetInputAxis;
+
+// Function BrickRigs.SeatBrick.GetMainMotor
+// 0x0008 (0x0008 - 0x0000)
+struct SeatBrick_GetMainMotor final
+{
+public:
+	class UMotorBrick*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetMainMotor;
+
+// Function BrickRigs.SeatBrick.GetMaxRPM
+// 0x0004 (0x0004 - 0x0000)
+struct SeatBrick_GetMaxRPM final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SeatBrick_GetMaxRPM;
+
+// Function BrickRigs.SpectatorWidget.SpectateNextCharacter
+// 0x0001 (0x0001 - 0x0000)
+struct SpectatorWidget_SpectateNextCharacter final
+{
+public:
+	bool                                          bNext;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpectatorWidget_SpectateNextCharacter;
+
+// Function BrickRigs.SpectatorWidget.UpdateSpectatedPlayer
+// 0x0020 (0x0020 - 0x0000)
+struct SpectatorWidget_UpdateSpectatedPlayer final
+{
+public:
+	class FText                                   PlayerName;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValidPlayer;                                    // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SpectatorWidget_UpdateSpectatedPlayer;
+
+// Function BrickRigs.SpectatorWidget.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct SpectatorWidget_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpectatorWidget_GetWidgetToFocus;
+
+// Function BrickRigs.SwitchBrick.Interact_Deactivate
+// 0x0008 (0x0008 - 0x0000)
+struct SwitchBrick_Interact_Deactivate final
+{
+public:
+	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SwitchBrick_Interact_Deactivate;
+
+// Function BrickRigs.SwitchBrick.Interact_Switch
+// 0x0010 (0x0010 - 0x0000)
+struct SwitchBrick_Interact_Switch final
+{
+public:
+	class ABrickPlayerController*                 OtherPC;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Val;                                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SwitchBrick_Interact_Switch;
+
+// Function BrickRigs.TeamScoreWidget.UpdateScore
+// 0x0008 (0x0008 - 0x0000)
+struct TeamScoreWidget_UpdateScore final
+{
+public:
+	int32                                         NewScore;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewMaxScore;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TeamScoreWidget_UpdateScore;
+
+// Function BrickRigs.TeamScoreWidget.UpdateTeamAttitude
+// 0x0001 (0x0001 - 0x0000)
+struct TeamScoreWidget_UpdateTeamAttitude final
+{
+public:
+	ETeamAttitude                                 NewTeamAttitude;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TeamScoreWidget_UpdateTeamAttitude;
+
+// Function BrickRigs.TeamScoreWidget.UpdateTeamIcon
+// 0x0008 (0x0008 - 0x0000)
+struct TeamScoreWidget_UpdateTeamIcon final
+{
+public:
+	class UTexture2D*                             NewIcon;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TeamScoreWidget_UpdateTeamIcon;
+
+// Function BrickRigs.TeamScoreWidget.UpdateTeamName
+// 0x0018 (0x0018 - 0x0000)
+struct TeamScoreWidget_UpdateTeamName final
+{
+public:
+	class FText                                   NewName;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TeamScoreWidget_UpdateTeamName;
+
+// Function BrickRigs.TooltipWidget.UpdateTooltipContent
+// 0x0040 (0x0040 - 0x0000)
+struct TooltipWidget_UpdateTooltipContent final
+{
+public:
+	struct FTooltipContent                        InContent;                                         // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TooltipWidget_UpdateTooltipContent;
+
+// Function BrickRigs.Train.SetTrainTrack
+// 0x0004 (0x0004 - 0x0000)
+struct Train_SetTrainTrack final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Train_SetTrainTrack;
+
+// Function BrickRigs.UGCFunctionLibrary.MakeOnlineUGCItemId
+// 0x0020 (0x0020 - 0x0000)
+struct UGCFunctionLibrary_MakeOnlineUGCItemId final
+{
+public:
+	class FString                                 ItemId;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFluUGCItemIdWrapper                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCFunctionLibrary_MakeOnlineUGCItemId;
+
+// Function BrickRigs.UGCPropertyWidget.UpdateItemsText
+// 0x0004 (0x0004 - 0x0000)
+struct UGCPropertyWidget_UpdateItemsText final
+{
+public:
+	int32                                         NumSelected;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UGCPropertyWidget_UpdateItemsText;
 
 // Function BrickRigs.UIFunctionLibrary.BoolAsText
 // 0x0020 (0x0020 - 0x0000)
@@ -9900,13 +10812,14 @@ public:
 DUMPER7_ASSERTS_UIFunctionLibrary_ConvertToRealUnits;
 
 // Function BrickRigs.UIFunctionLibrary.ConvertToRichText
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct UIFunctionLibrary_ConvertToRichText final
 {
 public:
 	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FName                                   Format;                                            // 0x0018(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FName                                   Format;                                            // 0x0018(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UIFunctionLibrary_ConvertToRichText;
 
@@ -10093,976 +11006,65 @@ public:
 };
 DUMPER7_ASSERTS_UIFunctionLibrary_TimespanAsText;
 
-// Function BrickRigs.NumericPropertyWidget.AddSliderWidget
-// 0x0008 (0x0008 - 0x0000)
-struct NumericPropertyWidget_AddSliderWidget final
-{
-public:
-	class UBrickSliderWidget*                     Slider;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NumericPropertyWidget_AddSliderWidget;
-
-// Function BrickRigs.NumericPropertyWidget.LockAxes
-// 0x0001 (0x0001 - 0x0000)
-struct NumericPropertyWidget_LockAxes final
-{
-public:
-	bool                                          bLock;                                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NumericPropertyWidget_LockAxes;
-
-// Function BrickRigs.NumericPropertyWidget.OnSliderValueChanged
-// 0x000C (0x000C - 0x0000)
-struct NumericPropertyWidget_OnSliderValueChanged final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NumericPropertyWidget_OnSliderValueChanged;
-
-// Function BrickRigs.NumericPropertyWidget.UpdateNumericProperty
-// 0x0008 (0x0008 - 0x0000)
-struct NumericPropertyWidget_UpdateNumericProperty final
-{
-public:
-	ENumericValueType                             ValueType;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumAxes;                                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NumericPropertyWidget_UpdateNumericProperty;
-
-// Function BrickRigs.NumericPropertyWidget.AreAxesLocked
-// 0x0001 (0x0001 - 0x0000)
-struct NumericPropertyWidget_AreAxesLocked final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NumericPropertyWidget_AreAxesLocked;
-
-// Function BrickRigs.PagedListHeaderWidget.OnMeasurementSystemChanged
-// 0x0001 (0x0001 - 0x0000)
-struct PagedListHeaderWidget_OnMeasurementSystemChanged final
-{
-public:
-	EMeasurementSystem                            NewSystem;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListHeaderWidget_OnMeasurementSystemChanged;
-
-// Function BrickRigs.PagedListHeaderWidget.UpdateDimensions
-// 0x0018 (0x0018 - 0x0000)
-struct PagedListHeaderWidget_UpdateDimensions final
-{
-public:
-	struct FVector                                InDimensions;                                      // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InMaxDimensions;                                   // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateDimensions;
-
-// Function BrickRigs.PagedListHeaderWidget.UpdateEntry
+// Function BrickRigs.UserIdPropertyWidget.OnUserIdTextChanged
 // 0x0020 (0x0020 - 0x0000)
-struct PagedListHeaderWidget_UpdateEntry final
+struct UserIdPropertyWidget_OnUserIdTextChanged final
 {
 public:
-	class FText                                   InTitleText;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bInHasEntry;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInHasUnsavedChanges;                              // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateEntry;
+DUMPER7_ASSERTS_UserIdPropertyWidget_OnUserIdTextChanged;
 
-// Function BrickRigs.PagedListHeaderWidget.UpdateMass
-// 0x0008 (0x0008 - 0x0000)
-struct PagedListHeaderWidget_UpdateMass final
+// Function BrickRigs.UserIdPropertyWidget.UpdateUserId
+// 0x0020 (0x0020 - 0x0000)
+struct UserIdPropertyWidget_UpdateUserId final
 {
 public:
-	float                                         InMass;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InMaxMass;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   InUserId;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValid;                                          // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateMass;
+DUMPER7_ASSERTS_UserIdPropertyWidget_UpdateUserId;
 
-// Function BrickRigs.PagedListHeaderWidget.UpdateNumObjects
-// 0x0010 (0x0010 - 0x0000)
-struct PagedListHeaderWidget_UpdateNumObjects final
+// Function BrickRigs.UserIdPropertyWidget.UpdateUsername
+// 0x0018 (0x0018 - 0x0000)
+struct UserIdPropertyWidget_UpdateUsername final
 {
 public:
-	int32                                         InNumObjects;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InMaxNumObjects;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InNumHiddenObjects;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InNumObjectsWithAerodynamics;                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   InUsername;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PagedListHeaderWidget_UpdateNumObjects;
+DUMPER7_ASSERTS_UserIdPropertyWidget_UpdateUsername;
 
-// Function BrickRigs.PagedListHeaderWidget.UpdatePrice
-// 0x0008 (0x0008 - 0x0000)
-struct PagedListHeaderWidget_UpdatePrice final
-{
-public:
-	float                                         InPrice;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InMoney;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PagedListHeaderWidget_UpdatePrice;
-
-// Function BrickRigs.PageSelectorWidget.GotoNextPage
-// 0x0002 (0x0002 - 0x0000)
-struct PageSelectorWidget_GotoNextPage final
-{
-public:
-	bool                                          bForward;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSkipToEnd;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PageSelectorWidget_GotoNextPage;
-
-// Function BrickRigs.PageSelectorWidget.InitializePages
-// 0x000C (0x000C - 0x0000)
-struct PageSelectorWidget_InitializePages final
-{
-public:
-	int32                                         InNumPages;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InCurrentPage;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InNumResults;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PageSelectorWidget_InitializePages;
-
-// Function BrickRigs.PageSelectorWidget.OnSliderValueChanged
-// 0x0008 (0x0008 - 0x0000)
-struct PageSelectorWidget_OnSliderValueChanged final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PageSelectorWidget_OnSliderValueChanged;
-
-// Function BrickRigs.PageSelectorWidget.SetCurrentPage
-// 0x0004 (0x0004 - 0x0000)
-struct PageSelectorWidget_SetCurrentPage final
-{
-public:
-	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PageSelectorWidget_SetCurrentPage;
-
-// Function BrickRigs.PageSelectorWidget.UpdateButtons
-// 0x0002 (0x0002 - 0x0000)
-struct PageSelectorWidget_UpdateButtons final
-{
-public:
-	bool                                          bCanGoBack;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanGoForward;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PageSelectorWidget_UpdateButtons;
-
-// Function BrickRigs.PageSelectorWidget.GetCurrentPage
-// 0x0004 (0x0004 - 0x0000)
-struct PageSelectorWidget_GetCurrentPage final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PageSelectorWidget_GetCurrentPage;
-
-// Function BrickRigs.PingIndicatorWidget.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct PingIndicatorWidget_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_SetColorStyle;
-
-// Function BrickRigs.PingIndicatorWidget.SetMinDisplayPing
-// 0x0004 (0x0004 - 0x0000)
-struct PingIndicatorWidget_SetMinDisplayPing final
-{
-public:
-	int32                                         InPing;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_SetMinDisplayPing;
-
-// Function BrickRigs.PingIndicatorWidget.SetPing
-// 0x0004 (0x0004 - 0x0000)
-struct PingIndicatorWidget_SetPing final
-{
-public:
-	int32                                         InPing;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_SetPing;
-
-// Function BrickRigs.PingIndicatorWidget.SetPlayerState
-// 0x0008 (0x0008 - 0x0000)
-struct PingIndicatorWidget_SetPlayerState final
-{
-public:
-	class ABrickPlayerState*                      InPlayerState;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_SetPlayerState;
-
-// Function BrickRigs.PingIndicatorWidget.SetStyleState
-// 0x0001 (0x0001 - 0x0000)
-struct PingIndicatorWidget_SetStyleState final
-{
-public:
-	EBrickUIStyleState                            NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_SetStyleState;
-
-// Function BrickRigs.PingIndicatorWidget.SetTextStyle
-// 0x0001 (0x0001 - 0x0000)
-struct PingIndicatorWidget_SetTextStyle final
-{
-public:
-	EBrickUITextStyle                             NewStyle;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_SetTextStyle;
-
-// Function BrickRigs.PingIndicatorWidget.UpdatePing
-// 0x0004 (0x0004 - 0x0000)
-struct PingIndicatorWidget_UpdatePing final
-{
-public:
-	int32                                         InPing;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PingIndicatorWidget_UpdatePing;
-
-// Function BrickRigs.PlacableObjectWidget.UpdateIsFilterWidget
-// 0x0001 (0x0001 - 0x0000)
-struct PlacableObjectWidget_UpdateIsFilterWidget final
-{
-public:
-	bool                                          bNewIsFilter;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlacableObjectWidget_UpdateIsFilterWidget;
-
-// Function BrickRigs.PlayerIconWidget.UpdatePlayerIcon
-// 0x0004 (0x0004 - 0x0000)
-struct PlayerIconWidget_UpdatePlayerIcon final
+// Function BrickRigs.VehicleIconWidget.UpdateVehicleIcon
+// 0x0003 (0x0003 - 0x0000)
+struct VehicleIconWidget_UpdateVehicleIcon final
 {
 public:
 	bool                                          bNewIsLocalPlayer;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNewIsTeamLeader;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECharacterStateOfHealth                       NewStateOfHealth;                                  // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNewCanBeDamaged;                                  // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewCanBeDamaged;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVehiclePinMode                               NewPinMode;                                        // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayerIconWidget_UpdatePlayerIcon;
+DUMPER7_ASSERTS_VehicleIconWidget_UpdateVehicleIcon;
 
-// Function BrickRigs.PlayersMenuWidget.UpdateCanKickPlayer
+// Function BrickRigs.VideoSettingsPageWidget.UpdateApplyButton
 // 0x0001 (0x0001 - 0x0000)
-struct PlayersMenuWidget_UpdateCanKickPlayer final
+struct VideoSettingsPageWidget_UpdateApplyButton final
 {
 public:
-	bool                                          bCanKick;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanApply;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayersMenuWidget_UpdateCanKickPlayer;
+DUMPER7_ASSERTS_VideoSettingsPageWidget_UpdateApplyButton;
 
-// Function BrickRigs.PlayersMenuWidget.UpdateCanShowPlayerProfile
+// Function BrickRigs.VideoSettingsPageWidget.AreVideoSettingsDirty
 // 0x0001 (0x0001 - 0x0000)
-struct PlayersMenuWidget_UpdateCanShowPlayerProfile final
-{
-public:
-	bool                                          bCanShow;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayersMenuWidget_UpdateCanShowPlayerProfile;
-
-// Function BrickRigs.PopupContainerWidget.AddPopupWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PopupContainerWidget_AddPopupWidget final
-{
-public:
-	class UPopupWidget*                           Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_AddPopupWidget;
-
-// Function BrickRigs.PopupContainerWidget.CreateCancelButton
-// 0x0008 (0x0008 - 0x0000)
-struct PopupContainerWidget_CreateCancelButton final
-{
-public:
-	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_CreateCancelButton;
-
-// Function BrickRigs.PopupContainerWidget.CreateConfirmButton
-// 0x0008 (0x0008 - 0x0000)
-struct PopupContainerWidget_CreateConfirmButton final
-{
-public:
-	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_CreateConfirmButton;
-
-// Function BrickRigs.PopupContainerWidget.SetButtonPanelVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct PopupContainerWidget_SetButtonPanelVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_SetButtonPanelVisibility;
-
-// Function BrickRigs.PopupContainerWidget.SetColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct PopupContainerWidget_SetColorStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_SetColorStyle;
-
-// Function BrickRigs.PopupContainerWidget.UpdateButtonPanelVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct PopupContainerWidget_UpdateButtonPanelVisibility final
-{
-public:
-	bool                                          bNewVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_UpdateButtonPanelVisibility;
-
-// Function BrickRigs.PopupContainerWidget.UpdateColorStyle
-// 0x0001 (0x0001 - 0x0000)
-struct PopupContainerWidget_UpdateColorStyle final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_UpdateColorStyle;
-
-// Function BrickRigs.PopupContainerWidget.UpdateContentSlot
-// 0x0002 (0x0002 - 0x0000)
-struct PopupContainerWidget_UpdateContentSlot final
-{
-public:
-	bool                                          bShowContent;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPopupSizeRule                                SizeRule;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_UpdateContentSlot;
-
-// Function BrickRigs.PopupContainerWidget.UpdateTitleText
-// 0x0018 (0x0018 - 0x0000)
-struct PopupContainerWidget_UpdateTitleText final
-{
-public:
-	class FText                                   NewTitle;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PopupContainerWidget_UpdateTitleText;
-
-// Function BrickRigs.PropertiesPanelWidget.AddCategoryWidget
-// 0x0010 (0x0010 - 0x0000)
-struct PropertiesPanelWidget_AddCategoryWidget final
-{
-public:
-	class UPropertyCategoryWidget*                Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PropertiesPanelWidget_AddCategoryWidget;
-
-// Function BrickRigs.PropertiesPanelWidget.AddProperties
-// 0x0028 (0x0028 - 0x0000)
-struct PropertiesPanelWidget_AddProperties final
-{
-public:
-	class UObject*                                ActiveObject;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBrickPropertyReflectionFilter         InFilter;                                          // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertiesPanelWidget_AddProperties;
-
-// Function BrickRigs.PropertiesPanelWidget.AddPropertiesForSelection
-// 0x0038 (0x0038 - 0x0000)
-struct PropertiesPanelWidget_AddPropertiesForSelection final
-{
-public:
-	class UObject*                                ActiveObject;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        SelectedObjects;                                   // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FBrickPropertyReflectionFilter         InFilter;                                          // 0x0018(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertiesPanelWidget_AddPropertiesForSelection;
-
-// Function BrickRigs.PropertyContainerInputComponent.GetCopyValueEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerInputComponent_GetCopyValueEnabled final
+struct VideoSettingsPageWidget_AreVideoSettingsDirty final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PropertyContainerInputComponent_GetCopyValueEnabled;
-
-// Function BrickRigs.PropertyContainerInputComponent.GetPasteValueEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerInputComponent_GetPasteValueEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyContainerInputComponent_GetPasteValueEnabled;
-
-// Function BrickRigs.PropertyContainerInputComponent.GetPickValueEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerInputComponent_GetPickValueEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyContainerInputComponent_GetPickValueEnabled;
-
-// Function BrickRigs.PropertyContainerInputComponent.GetSelectByValueEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct PropertyContainerInputComponent_GetSelectByValueEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyContainerInputComponent_GetSelectByValueEnabled;
-
-// Function BrickRigs.PropertyListInterface.AddPropertyContainerWidget
-// 0x0008 (0x0008 - 0x0000)
-struct PropertyListInterface_AddPropertyContainerWidget final
-{
-public:
-	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyListInterface_AddPropertyContainerWidget;
-
-// Function BrickRigs.PropertyListInterface.UpdatePropertyContainerWidgetSlot
-// 0x0010 (0x0010 - 0x0000)
-struct PropertyListInterface_UpdatePropertyContainerWidgetSlot final
-{
-public:
-	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPerRow;                                         // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PropertyListInterface_UpdatePropertyContainerWidgetSlot;
-
-// Function BrickRigs.RadioButtonPanel.GetSelectedWidgets
-// 0x0010 (0x0010 - 0x0000)
-struct RadioButtonPanel_GetSelectedWidgets final
-{
-public:
-	TArray<class URadioButtonWidget*>             OutWidgets;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RadioButtonPanel_GetSelectedWidgets;
-
-// Function BrickRigs.RadioButtonPanel.SelectButton
-// 0x0008 (0x0008 - 0x0000)
-struct RadioButtonPanel_SelectButton final
-{
-public:
-	class URadioButtonWidget*                     Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RadioButtonPanel_SelectButton;
-
-// Function BrickRigs.RadioButtonPanel.UnselectButton
-// 0x0008 (0x0008 - 0x0000)
-struct RadioButtonPanel_UnselectButton final
-{
-public:
-	class URadioButtonWidget*                     Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RadioButtonPanel_UnselectButton;
-
-// Function BrickRigs.RadioButtonPanel.GetNumSelectedWidgets
-// 0x0004 (0x0004 - 0x0000)
-struct RadioButtonPanel_GetNumSelectedWidgets final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RadioButtonPanel_GetNumSelectedWidgets;
-
-// Function BrickRigs.RadioButtonPanel.GetSelectedWidget
-// 0x0008 (0x0008 - 0x0000)
-struct RadioButtonPanel_GetSelectedWidget final
-{
-public:
-	class URadioButtonWidget*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RadioButtonPanel_GetSelectedWidget;
-
-// Function BrickRigs.RestrictedAreaWidget.UpdateTimerRemaining
-// 0x0004 (0x0004 - 0x0000)
-struct RestrictedAreaWidget_UpdateTimerRemaining final
-{
-public:
-	float                                         TimeRemaining;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RestrictedAreaWidget_UpdateTimerRemaining;
-
-// Function BrickRigs.ReuploadPopupWidget.GetOriginalAuthorName
-// 0x0020 (0x0020 - 0x0000)
-struct ReuploadPopupWidget_GetOriginalAuthorName final
-{
-public:
-	class FText                                   OutName;                                           // 0x0000(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ReuploadPopupWidget_GetOriginalAuthorName;
-
-// Function BrickRigs.ScoreboardPlayerWidget.UpdateAdminRole
-// 0x0001 (0x0001 - 0x0000)
-struct ScoreboardPlayerWidget_UpdateAdminRole final
-{
-public:
-	EAdminRole                                    Role;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScoreboardPlayerWidget_UpdateAdminRole;
-
-// Function BrickRigs.ScoreboardPlayerWidget.UpdateButtonStyle
-// 0x0003 (0x0003 - 0x0000)
-struct ScoreboardPlayerWidget_UpdateButtonStyle final
-{
-public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLocalPlayer;                                    // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETeamAttitude                                 TeamAttitude;                                      // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScoreboardPlayerWidget_UpdateButtonStyle;
-
-// Function BrickRigs.ScoreboardPlayerWidget.UpdateIsAlive
-// 0x0001 (0x0001 - 0x0000)
-struct ScoreboardPlayerWidget_UpdateIsAlive final
-{
-public:
-	bool                                          bIsAlive;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScoreboardPlayerWidget_UpdateIsAlive;
-
-// Function BrickRigs.ScoreboardTeamWidget.UpdateCanEverJoinTeam
-// 0x0001 (0x0001 - 0x0000)
-struct ScoreboardTeamWidget_UpdateCanEverJoinTeam final
-{
-public:
-	bool                                          bCanJoin;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScoreboardTeamWidget_UpdateCanEverJoinTeam;
-
-// Function BrickRigs.ScoreboardTeamWidget.UpdateCanJoinTeam
-// 0x0001 (0x0001 - 0x0000)
-struct ScoreboardTeamWidget_UpdateCanJoinTeam final
-{
-public:
-	bool                                          bCanJoin;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScoreboardTeamWidget_UpdateCanJoinTeam;
-
-// Function BrickRigs.ScoreboardTeamWidget.UpdateTeamAttitude
-// 0x0002 (0x0002 - 0x0000)
-struct ScoreboardTeamWidget_UpdateTeamAttitude final
-{
-public:
-	bool                                          bIsOwnTeam;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETeamAttitude                                 NewAttitude;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScoreboardTeamWidget_UpdateTeamAttitude;
-
-// Function BrickRigs.ServerBrowserWidget.OnListEntrySelected
-// 0x0010 (0x0010 - 0x0000)
-struct ServerBrowserWidget_OnListEntrySelected final
-{
-public:
-	class UPagedListEntryWidget*                  Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoubleClick;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ServerBrowserWidget_OnListEntrySelected;
-
-// Function BrickRigs.ServerBrowserWidget.OnLoadListPage
-// 0x0004 (0x0004 - 0x0000)
-struct ServerBrowserWidget_OnLoadListPage final
-{
-public:
-	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ServerBrowserWidget_OnLoadListPage;
-
-// Function BrickRigs.ServerBrowserWidget.UpdateCanJoin
-// 0x0001 (0x0001 - 0x0000)
-struct ServerBrowserWidget_UpdateCanJoin final
-{
-public:
-	bool                                          bCanJoin;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ServerBrowserWidget_UpdateCanJoin;
-
-// Function BrickRigs.ServerBrowserWidget.UpdateCanRefresh
-// 0x0001 (0x0001 - 0x0000)
-struct ServerBrowserWidget_UpdateCanRefresh final
-{
-public:
-	bool                                          bCanRefresh;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ServerBrowserWidget_UpdateCanRefresh;
-
-// Function BrickRigs.SpectatorInputComponent.MoveForward
-// 0x0004 (0x0004 - 0x0000)
-struct SpectatorInputComponent_MoveForward final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpectatorInputComponent_MoveForward;
-
-// Function BrickRigs.SpectatorInputComponent.MoveRight
-// 0x0004 (0x0004 - 0x0000)
-struct SpectatorInputComponent_MoveRight final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpectatorInputComponent_MoveRight;
-
-// Function BrickRigs.SpectatorInputComponent.MoveUp
-// 0x0004 (0x0004 - 0x0000)
-struct SpectatorInputComponent_MoveUp final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpectatorInputComponent_MoveUp;
-
-// Function BrickRigs.SpectatorInputComponent.RotatePawnCW
-// 0x0004 (0x0004 - 0x0000)
-struct SpectatorInputComponent_RotatePawnCW final
-{
-public:
-	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpectatorInputComponent_RotatePawnCW;
-
-// Function BrickRigs.TargetMarkerIconWidget.UpdateAmmoType
-// 0x0001 (0x0001 - 0x0000)
-struct TargetMarkerIconWidget_UpdateAmmoType final
-{
-public:
-	EAmmoType                                     NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateAmmoType;
-
-// Function BrickRigs.TargetMarkerIconWidget.UpdateFireAction
-// 0x0004 (0x0004 - 0x0000)
-struct TargetMarkerIconWidget_UpdateFireAction final
-{
-public:
-	int32                                         NewActionIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateFireAction;
-
-// Function BrickRigs.TargetMarkerIconWidget.UpdateHasValidTarget
-// 0x0001 (0x0001 - 0x0000)
-struct TargetMarkerIconWidget_UpdateHasValidTarget final
-{
-public:
-	bool                                          bNewHasValidTarget;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateHasValidTarget;
-
-// Function BrickRigs.TargetMarkerIconWidget.UpdateTargetDistance
-// 0x0004 (0x0004 - 0x0000)
-struct TargetMarkerIconWidget_UpdateTargetDistance final
-{
-public:
-	float                                         NewDist;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TargetMarkerIconWidget_UpdateTargetDistance;
-
-// Function BrickRigs.TeamScoreWidget.UpdateScore
-// 0x0008 (0x0008 - 0x0000)
-struct TeamScoreWidget_UpdateScore final
-{
-public:
-	int32                                         NewScore;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NewMaxScore;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TeamScoreWidget_UpdateScore;
-
-// Function BrickRigs.TeamScoreWidget.UpdateTeamAttitude
-// 0x0001 (0x0001 - 0x0000)
-struct TeamScoreWidget_UpdateTeamAttitude final
-{
-public:
-	ETeamAttitude                                 NewTeamAttitude;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TeamScoreWidget_UpdateTeamAttitude;
-
-// Function BrickRigs.TeamScoreWidget.UpdateTeamIcon
-// 0x0008 (0x0008 - 0x0000)
-struct TeamScoreWidget_UpdateTeamIcon final
-{
-public:
-	class UTexture2D*                             NewIcon;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TeamScoreWidget_UpdateTeamIcon;
-
-// Function BrickRigs.TeamScoreWidget.UpdateTeamName
-// 0x0018 (0x0018 - 0x0000)
-struct TeamScoreWidget_UpdateTeamName final
-{
-public:
-	class FText                                   NewName;                                           // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TeamScoreWidget_UpdateTeamName;
-
-// Function BrickRigs.TooltipWidget.UpdateTooltipContent
-// 0x0040 (0x0040 - 0x0000)
-struct TooltipWidget_UpdateTooltipContent final
-{
-public:
-	struct FTooltipContent                        InContent;                                         // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TooltipWidget_UpdateTooltipContent;
-
-// Function BrickRigs.UGCBrowserWidget.AddOrRemoveSelectedItem
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_AddOrRemoveSelectedItem final
-{
-public:
-	bool                                          bAdd;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_AddOrRemoveSelectedItem;
-
-// Function BrickRigs.UGCBrowserWidget.CreateAddOrRemoveItemButton
-// 0x0002 (0x0002 - 0x0000)
-struct UGCBrowserWidget_CreateAddOrRemoveItemButton final
-{
-public:
-	bool                                          bIsArrayProperty;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSelected;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_CreateAddOrRemoveItemButton;
-
-// Function BrickRigs.UGCBrowserWidget.CreateClearItemsButton
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_CreateClearItemsButton final
-{
-public:
-	bool                                          bIsArrayProperty;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_CreateClearItemsButton;
-
-// Function BrickRigs.UGCBrowserWidget.CreateSpawnButton
-// 0x0020 (0x0020 - 0x0000)
-struct UGCBrowserWidget_CreateSpawnButton final
-{
-public:
-	bool                                          bCanReplaceCurrent;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanSpawn;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   SpawnFailureText;                                  // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_CreateSpawnButton;
-
-// Function BrickRigs.UGCBrowserWidget.CreateSpawnInvincibilityButton
-// 0x0018 (0x0018 - 0x0000)
-struct UGCBrowserWidget_CreateSpawnInvincibilityButton final
-{
-public:
-	class FText                                   CurrentInvincibilityText;                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_CreateSpawnInvincibilityButton;
-
-// Function BrickRigs.UGCBrowserWidget.CreateSubscribeButton
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_CreateSubscribeButton final
-{
-public:
-	bool                                          bIsSubscribed;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_CreateSubscribeButton;
-
-// Function BrickRigs.UGCBrowserWidget.CreateVoteButtons
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_CreateVoteButtons final
-{
-public:
-	EFluUGCItemVote                               Vote;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_CreateVoteButtons;
-
-// Function BrickRigs.UGCBrowserWidget.FavoriteSelectedItem
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_FavoriteSelectedItem final
-{
-public:
-	bool                                          bFavorite;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_FavoriteSelectedItem;
-
-// Function BrickRigs.UGCBrowserWidget.OnListEntrySelected
-// 0x0010 (0x0010 - 0x0000)
-struct UGCBrowserWidget_OnListEntrySelected final
-{
-public:
-	class UPagedListEntryWidget*                  Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoubleClick;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_OnListEntrySelected;
-
-// Function BrickRigs.UGCBrowserWidget.OnLoadListPage
-// 0x0004 (0x0004 - 0x0000)
-struct UGCBrowserWidget_OnLoadListPage final
-{
-public:
-	int32                                         NewPage;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_OnLoadListPage;
-
-// Function BrickRigs.UGCBrowserWidget.SaveItem
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_SaveItem final
-{
-public:
-	bool                                          bOverwriteSelected;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_SaveItem;
-
-// Function BrickRigs.UGCBrowserWidget.SetSelectedItemVote
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_SetSelectedItemVote final
-{
-public:
-	EFluUGCItemVote                               Vote;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_SetSelectedItemVote;
-
-// Function BrickRigs.UGCBrowserWidget.SpawnSelectedItem
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_SpawnSelectedItem final
-{
-public:
-	bool                                          bReplaceCurrent;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_SpawnSelectedItem;
-
-// Function BrickRigs.UGCBrowserWidget.SubscribeSelectedItem
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_SubscribeSelectedItem final
-{
-public:
-	bool                                          bSubscribe;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_SubscribeSelectedItem;
-
-// Function BrickRigs.UGCBrowserWidget.UploadItem
-// 0x0001 (0x0001 - 0x0000)
-struct UGCBrowserWidget_UploadItem final
-{
-public:
-	bool                                          bUpdateSelected;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCBrowserWidget_UploadItem;
-
-// Function BrickRigs.UGCItemWidget.UpdateItemWidget
-// 0x0004 (0x0004 - 0x0000)
-struct UGCItemWidget_UpdateItemWidget final
-{
-public:
-	bool                                          bInIsSelected;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsLegacyFile;                                   // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInHasAutoSave;                                    // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsDedicatedAutoSave;                            // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCItemWidget_UpdateItemWidget;
-
-// Function BrickRigs.UGCTagsPropertyWidget.InitializeDepartmentItem
-// 0x0148 (0x0148 - 0x0000)
-struct UGCTagsPropertyWidget_InitializeDepartmentItem final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCTagsPropertyWidget_InitializeDepartmentItem;
-
-// Function BrickRigs.UGCTagsPropertyWidget.InitializeEraItem
-// 0x0148 (0x0148 - 0x0000)
-struct UGCTagsPropertyWidget_InitializeEraItem final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCTagsPropertyWidget_InitializeEraItem;
-
-// Function BrickRigs.UGCTagsPropertyWidget.InitializeTypeItem
-// 0x0148 (0x0148 - 0x0000)
-struct UGCTagsPropertyWidget_InitializeTypeItem final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickComboBoxItemParams               OutParams;                                         // 0x0008(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCTagsPropertyWidget_InitializeTypeItem;
-
-// Function BrickRigs.UGCTagsPropertyWidget.OnDepartmentItemSelected
-// 0x0008 (0x0008 - 0x0000)
-struct UGCTagsPropertyWidget_OnDepartmentItemSelected final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UGCTagsPropertyWidget_OnDepartmentItemSelected;
-
-// Function BrickRigs.UGCTagsPropertyWidget.OnEraItemSelected
-// 0x0008 (0x0008 - 0x0000)
-struct UGCTagsPropertyWidget_OnEraItemSelected final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UGCTagsPropertyWidget_OnEraItemSelected;
-
-// Function BrickRigs.UGCTagsPropertyWidget.OnTypeItemSelected
-// 0x0008 (0x0008 - 0x0000)
-struct UGCTagsPropertyWidget_OnTypeItemSelected final
-{
-public:
-	int32                                         Item;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UGCTagsPropertyWidget_OnTypeItemSelected;
-
-// Function BrickRigs.UGCTaskPopupWidget.UpdateIsFinished
-// 0x0002 (0x0002 - 0x0000)
-struct UGCTaskPopupWidget_UpdateIsFinished final
-{
-public:
-	bool                                          bNewFinished;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNewSuccess;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCTaskPopupWidget_UpdateIsFinished;
-
-// Function BrickRigs.UGCTaskPopupWidget.UpdateProgress
-// 0x0004 (0x0004 - 0x0000)
-struct UGCTaskPopupWidget_UpdateProgress final
-{
-public:
-	float                                         NewProgress;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UGCTaskPopupWidget_UpdateProgress;
-
-// Function BrickRigs.VehicleResourceSubsystem.Get
-// 0x0010 (0x0010 - 0x0000)
-struct VehicleResourceSubsystem_Get final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVehicleResourceSubsystem*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VehicleResourceSubsystem_Get;
+DUMPER7_ASSERTS_VideoSettingsPageWidget_AreVideoSettingsDirty;
 
 // Function BrickRigs.WindowManagerWidget.Get
 // 0x0010 (0x0010 - 0x0000)

@@ -81,5 +81,44 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Spectator_C_GetWidgetToFocus;
 
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.UpdateSpectatedPlayer
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_Spectator_C_UpdateSpectatedPlayer final
+{
+public:
+	class FText                                   PlayerName;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValidPlayer;                                    // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Spectator_C_UpdateSpectatedPlayer;
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_Spectator_C_BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Spectator_C_BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_Spectator_C_BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Spectator_C_BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_Spectator.SKEL_WBP_Spectator_C.GetWidgetToFocus
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Spectator_C_GetWidgetToFocus final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Spectator_C_GetWidgetToFocus;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

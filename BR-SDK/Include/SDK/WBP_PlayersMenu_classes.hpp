@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PlayersMenu.WBP_PlayersMenu_C
-// 0x0018 (0x0290 - 0x0278)
+// 0x0020 (0x0430 - 0x0410)
 class UWBP_PlayersMenu_C final : public UPlayersMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMenuButtonWidget*                      ShowProfileButton;                                 // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      KickButton;                                        // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      ShowProfileButton;                                 // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickButton;                                        // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_PlayersMenu(int32 EntryPoint);
@@ -46,5 +46,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_PlayersMenu_C;
+
+// WidgetBlueprintGeneratedClass WBP_PlayersMenu.SKEL_WBP_PlayersMenu_C
+// 0x0020 (0x0430 - 0x0410)
+class USKEL_WBP_PlayersMenu_C final : public UPlayersMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMenuButtonWidget*                      ShowProfileButton;                                 // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickButton;                                        // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void UpdateCanShowPlayerProfile(bool bCanShow);
+	void UpdateCanKickPlayer(bool bCanKick);
+	void Construct();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PlayersMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PlayersMenu_C")
+	}
+	static class USKEL_WBP_PlayersMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PlayersMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PlayersMenu_C;
 
 SDK_NAMESPACE_END

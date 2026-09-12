@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameLogoEnum_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "GameLogoEnum_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -74,38 +74,38 @@ public:
 DUMPER7_ASSERTS_WBP_IntroSequence_C_UpdateFade;
 
 // Function WBP_IntroSequence.WBP_IntroSequence_C.OnKeyDown
-// 0x01E0 (0x01E0 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct WBP_IntroSequence_C_OnKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0070(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0128(0x00B8)()
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00C0)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0138(0x00C0)()
 };
 DUMPER7_ASSERTS_WBP_IntroSequence_C_OnKeyDown;
 
 // Function WBP_IntroSequence.WBP_IntroSequence_C.OnMouseButtonDown
-// 0x0218 (0x0218 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct WBP_IntroSequence_C_OnMouseButtonDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0160(0x00B8)()
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0170(0x00C0)()
 };
 DUMPER7_ASSERTS_WBP_IntroSequence_C_OnMouseButtonDown;
 
 // Function WBP_IntroSequence.WBP_IntroSequence_C.OnMouseButtonDoubleClick
-// 0x0218 (0x0218 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct WBP_IntroSequence_C_OnMouseButtonDoubleClick final
 {
 public:
 	struct FGeometry                              InMyGeometry;                                      // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0160(0x00B8)()
+	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0170(0x00C0)()
 };
 DUMPER7_ASSERTS_WBP_IntroSequence_C_OnMouseButtonDoubleClick;
 
@@ -114,13 +114,56 @@ DUMPER7_ASSERTS_WBP_IntroSequence_C_OnMouseButtonDoubleClick;
 struct WBP_IntroSequence_C_NextSequence final
 {
 public:
-	class UWindowManagerWidget*                   CallFunc_GetWindowManager_ReturnValue;             // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWindowManagerWidget*                   CallFunc_GetWindowManager_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_IntroSequence_C_NextSequence;
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct SKEL_WBP_IntroSequence_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_IntroSequence_C_Tick;
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.OnKeyDown
+// 0x0138 (0x0138 - 0x0000)
+struct SKEL_WBP_IntroSequence_C_OnKeyDown final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_IntroSequence_C_OnKeyDown;
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.OnMouseButtonDown
+// 0x0170 (0x0170 - 0x0000)
+struct SKEL_WBP_IntroSequence_C_OnMouseButtonDown final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_IntroSequence_C_OnMouseButtonDown;
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.OnMouseButtonDoubleClick
+// 0x0170 (0x0170 - 0x0000)
+struct SKEL_WBP_IntroSequence_C_OnMouseButtonDoubleClick final
+{
+public:
+	struct FGeometry                              InMyGeometry;                                      // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_IntroSequence_C_OnMouseButtonDoubleClick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

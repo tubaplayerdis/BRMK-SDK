@@ -19,23 +19,22 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Zombie.ABP_Zombie_C
-// 0x0590 (0x1090 - 0x0B00)
+// 0x0620 (0x1200 - 0x0BE0)
 class UABP_Zombie_C final : public UZombieAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B00(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0B08(0x0030)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0B38(0x0080)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0BB8(0x0048)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x0C00(0x00C8)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0CC8(0x0080)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x0D48(0x00C0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0E08(0x0158)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0F60(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0F88(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0FB0(0x0048)()
-	uint8                                         Pad_FF8[0x8];                                      // 0x0FF8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x1000(0x0090)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0BF0(0x0040)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0C30(0x0088)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0CB8(0x0058)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x0D10(0x00D8)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0DE8(0x0088)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x0E70(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0F38(0x0160)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1098(0x0038)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x10D0(0x0038)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1108(0x0058)()
+	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x1160(0x00A0)()
 
 public:
 	void ExecuteUbergraph_ABP_Zombie(int32 EntryPoint);
@@ -56,5 +55,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Zombie_C;
+
+// AnimBlueprintGeneratedClass ABP_Zombie.SKEL_ABP_Zombie_C
+// 0x0010 (0x0BF0 - 0x0BE0)
+class USKEL_ABP_Zombie_C final : public UZombieAnimInstance
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Zombie_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Zombie_C")
+	}
+	static class USKEL_ABP_Zombie_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Zombie_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Zombie_C;
 
 SDK_NAMESPACE_END

@@ -76,4 +76,44 @@ void UWBP_InventoryContainer_C::UpdateHasInventory(bool bHasInventory)
 }
 
 
+// Function WBP_InventoryContainer.SKEL_WBP_InventoryContainer_C.UpdateHasInventory
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bHasInventory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InventoryContainer_C::UpdateHasInventory(bool bHasInventory)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InventoryContainer_C", "UpdateHasInventory");
+
+	Params::SKEL_WBP_InventoryContainer_C_UpdateHasInventory Parms{};
+
+	Parms.bHasInventory = bHasInventory;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_InventoryContainer.SKEL_WBP_InventoryContainer_C.UpdateOwnerMoney
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   NewMoney                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_InventoryContainer_C::UpdateOwnerMoney(float NewMoney)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InventoryContainer_C", "UpdateOwnerMoney");
+
+	Params::SKEL_WBP_InventoryContainer_C_UpdateOwnerMoney Parms{};
+
+	Parms.NewMoney = NewMoney;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ScalablePyramid.BP_ScalablePyramid_C
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x01E0 - 0x01E0)
 class UBP_ScalablePyramid_C final : public UScalableBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_ScalablePyramid_C;
+
+// BlueprintGeneratedClass BP_ScalablePyramid.SKEL_BP_ScalablePyramid_C
+// 0x0010 (0x01F0 - 0x01E0)
+class USKEL_BP_ScalablePyramid_C final : public UScalableBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ScalablePyramid_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ScalablePyramid_C")
+	}
+	static class USKEL_BP_ScalablePyramid_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_ScalablePyramid_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_ScalablePyramid_C;
 
 SDK_NAMESPACE_END

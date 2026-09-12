@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Dashboard.WBP_Dashboard_C
-// 0x0018 (0x02D0 - 0x02B8)
+// 0x0020 (0x0470 - 0x0450)
 class UWBP_Dashboard_C final : public UDashboardWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    IconsBox;                                          // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickGridPanel*                        SlidersPanel;                                      // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    IconsBox;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        SlidersPanel;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_Dashboard(int32 EntryPoint);
@@ -46,5 +46,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Dashboard_C;
+
+// WidgetBlueprintGeneratedClass WBP_Dashboard.SKEL_WBP_Dashboard_C
+// 0x0020 (0x0470 - 0x0450)
+class USKEL_WBP_Dashboard_C final : public UDashboardWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    IconsBox;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        SlidersPanel;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddSliderWidget(class UDashboardSliderWidget* Widget);
+	void AddIconWidget(class UDashboardIconWidget* Widget, int32 Index_0);
+	void UpdateSliderWidgetSlot(class UDashboardSliderWidget* Widget, int32 Index_0, int32 NumSliders);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Dashboard_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Dashboard_C")
+	}
+	static class USKEL_WBP_Dashboard_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Dashboard_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Dashboard_C;
 
 SDK_NAMESPACE_END

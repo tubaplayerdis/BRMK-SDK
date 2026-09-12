@@ -98,4 +98,66 @@ void UWBP_Crosshair_C::PlayHitAnimation(const struct FClientDamageInfo& DamageIn
 }
 
 
+// Function WBP_Crosshair.SKEL_WBP_Crosshair_C.PlayHitAnimation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FClientDamageInfo&         DamageInfo                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Crosshair_C::PlayHitAnimation(const struct FClientDamageInfo& DamageInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Crosshair_C", "PlayHitAnimation");
+
+	Params::SKEL_WBP_Crosshair_C_PlayHitAnimation Parms{};
+
+	Parms.DamageInfo = std::move(DamageInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Crosshair.SKEL_WBP_Crosshair_C.UpdateIsAttachingWinch
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewAttaching                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Crosshair_C::UpdateIsAttachingWinch(bool bNewAttaching)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Crosshair_C", "UpdateIsAttachingWinch");
+
+	Params::SKEL_WBP_Crosshair_C_UpdateIsAttachingWinch Parms{};
+
+	Parms.bNewAttaching = bNewAttaching;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Crosshair.SKEL_WBP_Crosshair_C.UpdateWinchAttachment
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bBlockingHit                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bWithinRange                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Crosshair_C::UpdateWinchAttachment(bool bBlockingHit, bool bWithinRange)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Crosshair_C", "UpdateWinchAttachment");
+
+	Params::SKEL_WBP_Crosshair_C_UpdateWinchAttachment Parms{};
+
+	Parms.bBlockingHit = bBlockingHit;
+	Parms.bWithinRange = bWithinRange;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

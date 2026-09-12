@@ -17,17 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Vehicle_Sequence.BP_Vehicle_Sequence_C
-// 0x0038 (0x0288 - 0x0250)
+// 0x0040 (0x0368 - 0x0328)
 class ABP_Vehicle_Sequence_C final : public AMenuSequence
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0250(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   ResetButton;                                       // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        SpawnPoint;                                        // 0x0260(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       Camera;                                            // 0x0268(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0270(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ABP_BrickVehicle_C*                     Vehicle;                                           // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bVehicleReady;                                     // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   ResetButton;                                       // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        SpawnPoint;                                        // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       Camera;                                            // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ABP_BrickVehicle_C*                     Vehicle;                                           // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bVehicleReady;                                     // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_Vehicle_Sequence(int32 EntryPoint);
@@ -54,5 +54,43 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_Vehicle_Sequence_C;
+
+// BlueprintGeneratedClass BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C
+// 0x0040 (0x0368 - 0x0328)
+class ASKEL_BP_Vehicle_Sequence_C final : public AMenuSequence
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   ResetButton;                                       // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        SpawnPoint;                                        // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       Camera;                                            // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ABP_BrickVehicle_C*                     Vehicle;                                           // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bVehicleReady;                                     // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void ReceiveBeginPlay();
+	void OnDefaultVehiclesQueried(const TArray<struct FUGCFileInfo>& FileInfos);
+	void OnVehicleConstructed();
+	void RepairVehicle();
+	void UserConstructionScript();
+
+	bool IsMenuSequenceReady() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Vehicle_Sequence_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Vehicle_Sequence_C")
+	}
+	static class ASKEL_BP_Vehicle_Sequence_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Vehicle_Sequence_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Vehicle_Sequence_C;
 
 SDK_NAMESPACE_END

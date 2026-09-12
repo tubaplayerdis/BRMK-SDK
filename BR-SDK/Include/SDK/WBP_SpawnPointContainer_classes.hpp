@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_SpawnPointContainer.WBP_SpawnPointContainer_C
-// 0x0010 (0x02E0 - 0x02D0)
+// 0x0018 (0x0480 - 0x0468)
 class UWBP_SpawnPointContainer_C final : public UHUDIconContainerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    ContentBox;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    ContentBox;                                        // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_SpawnPointContainer(int32 EntryPoint);
@@ -43,5 +43,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_SpawnPointContainer_C;
+
+// WidgetBlueprintGeneratedClass WBP_SpawnPointContainer.SKEL_WBP_SpawnPointContainer_C
+// 0x0018 (0x0480 - 0x0468)
+class USKEL_WBP_SpawnPointContainer_C final : public UHUDIconContainerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    ContentBox;                                        // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddIconWidget(class UHUDIconWidget* Widget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_SpawnPointContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_SpawnPointContainer_C")
+	}
+	static class USKEL_WBP_SpawnPointContainer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_SpawnPointContainer_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_SpawnPointContainer_C;
 
 SDK_NAMESPACE_END

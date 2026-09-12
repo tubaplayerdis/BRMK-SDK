@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
-// 0x0010 (0x0010 - 0x0000)
-struct GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves final
-{
-public:
-	TArray<struct FGerstnerWave>                  OutWaves;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves;
-
 // Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
 // 0x0038 (0x0038 - 0x0000)
 struct BuoyancyComponent_GetLastWaterSurfaceInfo final
@@ -41,20 +32,20 @@ public:
 DUMPER7_ASSERTS_BuoyancyComponent_GetLastWaterSurfaceInfo;
 
 // Function Water.BuoyancyComponent.OnPontoonEnteredWater
-// 0x0220 (0x0220 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct BuoyancyComponent_OnPontoonEnteredWater final
 {
 public:
-	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x0220)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x0230)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BuoyancyComponent_OnPontoonEnteredWater;
 
 // Function Water.BuoyancyComponent.OnPontoonExitedWater
-// 0x0220 (0x0220 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct BuoyancyComponent_OnPontoonExitedWater final
 {
 public:
-	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x0220)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x0230)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BuoyancyComponent_OnPontoonExitedWater;
 
@@ -78,6 +69,15 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BuoyancyManager_GetBuoyancyComponentManager;
+
+// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
+// 0x0010 (0x0010 - 0x0000)
+struct GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves final
+{
+public:
+	TArray<struct FGerstnerWave>                  OutWaves;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves;
 
 // Function Water.NiagaraWaterFunctionLibrary.SetWaterBody
 // 0x0020 (0x0020 - 0x0000)

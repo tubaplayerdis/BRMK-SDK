@@ -10,13 +10,61 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_ScoreboardPlayer_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardPlayer_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateButtonStyle
+// 0x0003 (0x0003 - 0x0000)
+struct SKEL_WBP_ScoreboardPlayer_C_UpdateButtonStyle final
+{
+public:
+	bool                                          bNewSelected;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLocalPlayer;                                    // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamAttitude                                 TeamAttitude;                                      // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardPlayer_C_UpdateButtonStyle;
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ScoreboardPlayer_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardPlayer_C_PreConstruct;
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateIsAlive
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ScoreboardPlayer_C_UpdateIsAlive final
+{
+public:
+	bool                                          bIsAlive;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardPlayer_C_UpdateIsAlive;
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateAdminRole
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_ScoreboardPlayer_C_UpdateAdminRole final
+{
+public:
+	EAdminRole                                    Role;                                              // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ScoreboardPlayer_C_UpdateAdminRole;
 
 // Function WBP_ScoreboardPlayer.WBP_ScoreboardPlayer_C.ExecuteUbergraph_WBP_ScoreboardPlayer
 // 0x0038 (0x0038 - 0x0000)

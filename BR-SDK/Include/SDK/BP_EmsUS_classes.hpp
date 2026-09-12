@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_EmsUS.SKEL_BP_EmsUS_C
+// 0x0010 (0x0078 - 0x0068)
+class USKEL_BP_EmsUS_C final : public USirenType
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0068(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_EmsUS_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_EmsUS_C")
+	}
+	static class USKEL_BP_EmsUS_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_EmsUS_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_EmsUS_C;
+
 // BlueprintGeneratedClass BP_EmsUS.BP_EmsUS_C
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_EmsUS_C final : public USirenType
 {
 public:

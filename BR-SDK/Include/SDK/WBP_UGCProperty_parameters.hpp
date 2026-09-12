@@ -17,6 +17,25 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.UpdateItemsText
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_UGCProperty_C_UpdateItemsText final
+{
+public:
+	int32                                         NumSelected;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCProperty_C_UpdateItemsText;
+
+// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_UGCProperty_C_BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCProperty_C_BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
 // Function WBP_UGCProperty.WBP_UGCProperty_C.ExecuteUbergraph_WBP_UGCProperty
 // 0x0080 (0x0080 - 0x0000)
 struct WBP_UGCProperty_C_ExecuteUbergraph_WBP_UGCProperty final

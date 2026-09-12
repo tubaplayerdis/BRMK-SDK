@@ -10,40 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function WBP_InputHelp.WBP_InputHelp_C.UpdateIsAlwaysOpen
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_InputHelp_C_UpdateIsAlwaysOpen final
-{
-public:
-	bool                                          bNewAlwaysOpen;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_InputHelp_C_UpdateIsAlwaysOpen;
-
-// Function WBP_InputHelp.WBP_InputHelp_C.BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
-
-// Function WBP_InputHelp.WBP_InputHelp_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_InputHelp_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_InputHelp_C_PreConstruct;
 
 // Function WBP_InputHelp.WBP_InputHelp_C.ExecuteUbergraph_WBP_InputHelp
 // 0x0020 (0x0020 - 0x0000)
@@ -64,6 +36,62 @@ public:
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_InputHelp_C_ExecuteUbergraph_WBP_InputHelp;
+
+// Function WBP_InputHelp.WBP_InputHelp_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_InputHelp_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_InputHelp_C_PreConstruct;
+
+// Function WBP_InputHelp.WBP_InputHelp_C.BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InputHelp.WBP_InputHelp_C.UpdateIsAlwaysOpen
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_InputHelp_C_UpdateIsAlwaysOpen final
+{
+public:
+	bool                                          bNewAlwaysOpen;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_InputHelp_C_UpdateIsAlwaysOpen;
+
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.UpdateIsAlwaysOpen
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputHelp_C_UpdateIsAlwaysOpen final
+{
+public:
+	bool                                          bNewAlwaysOpen;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputHelp_C_UpdateIsAlwaysOpen;
+
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputHelp_C_BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_InputHelp.SKEL_WBP_InputHelp_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputHelp_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputHelp_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

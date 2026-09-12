@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_C4.BP_C4_C
-// 0x0000 (0x0088 - 0x0088)
+// 0x0000 (0x0090 - 0x0090)
 class UBP_C4_C final : public UExplosiveMaterial
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_C4_C;
+
+// BlueprintGeneratedClass BP_C4.SKEL_BP_C4_C
+// 0x0010 (0x00A0 - 0x0090)
+class USKEL_BP_C4_C final : public UExplosiveMaterial
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0090(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_C4_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_C4_C")
+	}
+	static class USKEL_BP_C4_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_C4_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_C4_C;
 
 SDK_NAMESPACE_END

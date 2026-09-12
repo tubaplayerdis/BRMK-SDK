@@ -124,4 +124,92 @@ bool UWBP_VideoSettings_C::StepBack()
 }
 
 
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_VideoSettings_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_VideoSettings_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.UpdateApplyButton
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanApply                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_VideoSettings_C::UpdateApplyButton(bool bCanApply)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_VideoSettings_C", "UpdateApplyButton");
+
+	Params::SKEL_WBP_VideoSettings_C_UpdateApplyButton Parms{};
+
+	Parms.bCanApply = bCanApply;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.OnSaveSettingsPopupClosed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPopupResult                            Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_VideoSettings_C::OnSaveSettingsPopupClosed(EPopupResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_VideoSettings_C", "OnSaveSettingsPopupClosed");
+
+	Params::SKEL_WBP_VideoSettings_C_OnSaveSettingsPopupClosed Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.AddProperties
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_VideoSettings_C::AddProperties()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_VideoSettings_C", "AddProperties");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.StepBack
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USKEL_WBP_VideoSettings_C::StepBack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_VideoSettings_C", "StepBack");
+
+	Params::SKEL_WBP_VideoSettings_C_StepBack Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

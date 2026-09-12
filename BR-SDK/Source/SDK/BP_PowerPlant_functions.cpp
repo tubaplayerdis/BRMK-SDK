@@ -30,4 +30,72 @@ void ABP_PowerPlant_C::UserConstructionScript()
 }
 
 
+// Function BP_PowerPlant.SKEL_BP_PowerPlant_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_PowerPlant_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_PowerPlant_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PowerPlant.SKEL_BP_PowerPlant_C.ReceiveActorBeginOverlap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_PowerPlant_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_PowerPlant_C", "ReceiveActorBeginOverlap");
+
+	Params::SKEL_BP_PowerPlant_C_ReceiveActorBeginOverlap Parms{};
+
+	Parms.OtherActor = OtherActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PowerPlant.SKEL_BP_PowerPlant_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_PowerPlant_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_PowerPlant_C", "ReceiveTick");
+
+	Params::SKEL_BP_PowerPlant_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PowerPlant.SKEL_BP_PowerPlant_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_PowerPlant_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_PowerPlant_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

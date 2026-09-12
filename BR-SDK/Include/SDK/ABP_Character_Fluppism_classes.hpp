@@ -18,24 +18,24 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Character_Fluppism.ABP_Character_Fluppism_C
-// 0x0390 (0x0650 - 0x02C0)
+// 0x04B0 (0x07B0 - 0x0300)
 class UABP_Character_Fluppism_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02C8(0x0030)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x02F8(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_2;                        // 0x0318(0x0108)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x0420(0x0108)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0528(0x0108)()
-	float                                         BowAngle;                                          // 0x0630(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAnimateBowing;                                    // 0x0634(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_635[0x3];                                      // 0x0635(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartTime;                                         // 0x0638(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NoiseAmplitude;                                    // 0x063C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PeriodLength;                                      // 0x0640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NoiseFrequency;                                    // 0x0644(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0310(0x0040)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0350(0x0028)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_2;                        // 0x0378(0x0160)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x04D8(0x0160)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0638(0x0160)()
+	float                                         BowAngle;                                          // 0x0798(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAnimateBowing;                                    // 0x079C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_79D[0x3];                                      // 0x079D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartTime;                                         // 0x07A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseAmplitude;                                    // 0x07A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PeriodLength;                                      // 0x07A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseFrequency;                                    // 0x07AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ABP_Character_Fluppism(int32 EntryPoint);
@@ -59,5 +59,41 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Character_Fluppism_C;
+
+// AnimBlueprintGeneratedClass ABP_Character_Fluppism.SKEL_ABP_Character_Fluppism_C
+// 0x0030 (0x0330 - 0x0300)
+class USKEL_ABP_Character_Fluppism_C final : public UAnimInstance
+{
+public:
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         BowAngle;                                          // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAnimateBowing;                                    // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_315[0x3];                                      // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartTime;                                         // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseAmplitude;                                    // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PeriodLength;                                      // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseFrequency;                                    // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void BlueprintBeginPlay();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Character_Fluppism_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Character_Fluppism_C")
+	}
+	static class USKEL_ABP_Character_Fluppism_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Character_Fluppism_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Character_Fluppism_C;
 
 SDK_NAMESPACE_END

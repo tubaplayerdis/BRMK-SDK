@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Desert.Desert_C
-// 0x0008 (0x0230 - 0x0228)
+// 0x0008 (0x0308 - 0x0300)
 class ADesert_C final : public ALevelScriptActor
 {
 public:
-	bool                                          NewVar;                                            // 0x0228(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          NewVar;                                            // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ADesert_C;
+
+// BlueprintGeneratedClass Desert.SKEL_Desert_C
+// 0x0018 (0x0318 - 0x0300)
+class ASKEL_Desert_C final : public ALevelScriptActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          NewVar;                                            // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_Desert_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_Desert_C")
+	}
+	static class ASKEL_Desert_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_Desert_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_Desert_C;
 
 SDK_NAMESPACE_END

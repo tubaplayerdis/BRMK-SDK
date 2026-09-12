@@ -11,22 +11,22 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_AdminMenu.WBP_AdminMenu_C
-// 0x0028 (0x02E0 - 0x02B8)
+// 0x0030 (0x0480 - 0x0450)
 class UWBP_AdminMenu_C final : public UAdminMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_AdminLogin_C*                      AdminLoginWidget;                                  // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      ShowProfileButton;                                 // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      EditKickButton;                                    // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      KickPlayerByIDButton;                              // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_AdminLogin_C*                      AdminLoginWidget;                                  // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ShowProfileButton;                                 // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      EditKickButton;                                    // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickPlayerByIDButton;                              // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_AdminMenu(int32 EntryPoint);
@@ -49,5 +49,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_AdminMenu_C;
+
+// WidgetBlueprintGeneratedClass WBP_AdminMenu.SKEL_WBP_AdminMenu_C
+// 0x0030 (0x0480 - 0x0450)
+class USKEL_WBP_AdminMenu_C final : public UAdminMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_AdminLogin_C*                      AdminLoginWidget;                                  // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ShowProfileButton;                                 // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      EditKickButton;                                    // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickPlayerByIDButton;                              // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void Construct();
+	void UpdateHasSelectedKick(bool bNewSelected);
+	void UpdateCanViewAndEditKicks(bool bNewCanViewAndEdit);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_AdminMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_AdminMenu_C")
+	}
+	static class USKEL_WBP_AdminMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_AdminMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_AdminMenu_C;
 
 SDK_NAMESPACE_END

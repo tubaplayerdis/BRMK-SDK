@@ -16,6 +16,34 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_UIStyle_Blue.SKEL_BP_UIStyle_Blue_C.BuildStyle
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_BP_UIStyle_Blue_C::BuildStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_UIStyle_Blue_C", "BuildStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_UIStyle_Blue.BP_UIStyle_Blue_C.BuildStyle
+// (Event, Protected, BlueprintEvent)
+
+void UBP_UIStyle_Blue_C::BuildStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIStyle_Blue_C", "BuildStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_UIStyle_Blue.BP_UIStyle_Blue_C.ExecuteUbergraph_BP_UIStyle_Blue
 // (Final, UbergraphFunction)
 // Parameters:
@@ -33,20 +61,6 @@ void UBP_UIStyle_Blue_C::ExecuteUbergraph_BP_UIStyle_Blue(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_UIStyle_Blue.BP_UIStyle_Blue_C.BuildStyle
-// (Event, Protected, BlueprintEvent)
-
-void UBP_UIStyle_Blue_C::BuildStyle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIStyle_Blue_C", "BuildStyle");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -50,4 +50,18 @@ void UWBP_NetworkErrorPopup_C::Construct()
 }
 
 
+// Function WBP_NetworkErrorPopup.SKEL_WBP_NetworkErrorPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_NetworkErrorPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_NetworkErrorPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

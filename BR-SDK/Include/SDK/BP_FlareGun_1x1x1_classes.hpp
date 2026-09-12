@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FlareGun_1x1x1.BP_FlareGun_1x1x1_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x02F0 - 0x02F0)
 class UBP_FlareGun_1x1x1_C final : public UFlareBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_FlareGun_1x1x1_C;
+
+// BlueprintGeneratedClass BP_FlareGun_1x1x1.SKEL_BP_FlareGun_1x1x1_C
+// 0x0010 (0x0300 - 0x02F0)
+class USKEL_BP_FlareGun_1x1x1_C final : public UFlareBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_FlareGun_1x1x1_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_FlareGun_1x1x1_C")
+	}
+	static class USKEL_BP_FlareGun_1x1x1_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_FlareGun_1x1x1_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_FlareGun_1x1x1_C;
 
 SDK_NAMESPACE_END

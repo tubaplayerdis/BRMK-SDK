@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_NetworkErrorPopup.WBP_NetworkErrorPopup_C
-// 0x0008 (0x02A8 - 0x02A0)
+// 0x0010 (0x0448 - 0x0438)
 class UWBP_NetworkErrorPopup_C final : public UNetworkErrorPopupWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_NetworkErrorPopup(int32 EntryPoint);
@@ -42,5 +42,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_NetworkErrorPopup_C;
+
+// WidgetBlueprintGeneratedClass WBP_NetworkErrorPopup.SKEL_WBP_NetworkErrorPopup_C
+// 0x0010 (0x0448 - 0x0438)
+class USKEL_WBP_NetworkErrorPopup_C final : public UNetworkErrorPopupWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void Construct();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_NetworkErrorPopup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_NetworkErrorPopup_C")
+	}
+	static class USKEL_WBP_NetworkErrorPopup_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_NetworkErrorPopup_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_NetworkErrorPopup_C;
 
 SDK_NAMESPACE_END

@@ -17,17 +17,17 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HUDContainer.WBP_HUDContainer_C
-// 0x0010 (0x02B8 - 0x02A8)
+// 0x0018 (0x0458 - 0x0440)
 class UWBP_HUDContainer_C final : public UHUDContainerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCanvasPanel*                           CanvasPanel_35;                                    // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCanvasPanel*                           CanvasPanel_35;                                    // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void AddGameOverlayWidget(class UGameOverlayWidget* Widget_AddGameOverlayWidget);
-	void AddHUDWidget(class UUserWidget* Widget_AddHUDWidget);
 	void ExecuteUbergraph_WBP_HUDContainer(int32 EntryPoint);
+	void AddHUDWidget(class UUserWidget* Widget);
+	void AddGameOverlayWidget(class UGameOverlayWidget* Widget);
 
 public:
 	static class UClass* StaticClass()
@@ -44,5 +44,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_HUDContainer_C;
+
+// WidgetBlueprintGeneratedClass WBP_HUDContainer.SKEL_WBP_HUDContainer_C
+// 0x0018 (0x0458 - 0x0440)
+class USKEL_WBP_HUDContainer_C final : public UHUDContainerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCanvasPanel*                           CanvasPanel_35;                                    // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddGameOverlayWidget(class UGameOverlayWidget* Widget);
+	void AddHUDWidget(class UUserWidget* Widget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_HUDContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_HUDContainer_C")
+	}
+	static class USKEL_WBP_HUDContainer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_HUDContainer_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_HUDContainer_C;
 
 SDK_NAMESPACE_END

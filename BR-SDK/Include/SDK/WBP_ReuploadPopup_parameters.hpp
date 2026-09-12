@@ -17,19 +17,19 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ReuploadPopup.WBP_ReuploadPopup_C.ExecuteUbergraph_WBP_ReuploadPopup
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct WBP_ReuploadPopup_C_ExecuteUbergraph_WBP_ReuploadPopup final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0014)(ZeroConstructor, NoDestructor)
 	class UPopupContainerWidget*                  CallFunc_GetPopupContainer_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0020(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateConfirmButton_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateShowProfileButton_ReturnValue;      // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateViewInBrowserButton_ReturnValue;    // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateCancelButton_ReturnValue;           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0020(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateConfirmButton_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateShowProfileButton_ReturnValue;      // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateViewInBrowserButton_ReturnValue;    // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateCancelButton_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ReuploadPopup_C_ExecuteUbergraph_WBP_ReuploadPopup;
 
@@ -51,6 +51,15 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0018)()
 };
 DUMPER7_ASSERTS_WBP_ReuploadPopup_C_GetPopupTitle;
+
+// Function WBP_ReuploadPopup.SKEL_WBP_ReuploadPopup_C.GetPopupTitle
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_ReuploadPopup_C_GetPopupTitle final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ReuploadPopup_C_GetPopupTitle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

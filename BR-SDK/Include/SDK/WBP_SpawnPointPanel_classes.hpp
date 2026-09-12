@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_SpawnPointPanel.WBP_SpawnPointPanel_C
-// 0x0000 (0x0308 - 0x0308)
+// 0x0000 (0x04A0 - 0x04A0)
 class UWBP_SpawnPointPanel_C final : public USpawnPointPanelWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_SpawnPointPanel_C;
+
+// WidgetBlueprintGeneratedClass WBP_SpawnPointPanel.SKEL_WBP_SpawnPointPanel_C
+// 0x0010 (0x04B0 - 0x04A0)
+class USKEL_WBP_SpawnPointPanel_C final : public USpawnPointPanelWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_SpawnPointPanel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_SpawnPointPanel_C")
+	}
+	static class USKEL_WBP_SpawnPointPanel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_SpawnPointPanel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_SpawnPointPanel_C;
 
 SDK_NAMESPACE_END

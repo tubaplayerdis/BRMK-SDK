@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Credits.WBP_Credits_C
-// 0x0010 (0x0280 - 0x0270)
+// 0x0018 (0x0420 - 0x0408)
 class UWBP_Credits_C final : public UMenuPageWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickScrollBox*                        LicensesScrollBox;                                 // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickScrollBox*                        LicensesScrollBox;                                 // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_Credits(int32 EntryPoint);
@@ -47,5 +47,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Credits_C;
+
+// WidgetBlueprintGeneratedClass WBP_Credits.SKEL_WBP_Credits_C
+// 0x0018 (0x0420 - 0x0408)
+class USKEL_WBP_Credits_C final : public UMenuPageWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickScrollBox*                        LicensesScrollBox;                                 // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void OnClickedOfficialWebsite();
+	void OnClickedBugTracker();
+	void OnClickedEULA();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Credits_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Credits_C")
+	}
+	static class USKEL_WBP_Credits_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Credits_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Credits_C;
 
 SDK_NAMESPACE_END

@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Grenade_StaticInfo.SKEL_BP_Grenade_StaticInfo_C
+// 0x0010 (0x04E0 - 0x04D0)
+class USKEL_BP_Grenade_StaticInfo_C : public UGrenadeStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Grenade_StaticInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Grenade_StaticInfo_C")
+	}
+	static class USKEL_BP_Grenade_StaticInfo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Grenade_StaticInfo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Grenade_StaticInfo_C;
+
 // BlueprintGeneratedClass BP_Grenade_StaticInfo.BP_Grenade_StaticInfo_C
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x04D0 - 0x04D0)
 class UBP_Grenade_StaticInfo_C : public UGrenadeStaticInfo
 {
 public:

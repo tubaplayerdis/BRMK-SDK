@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -97,26 +97,83 @@ public:
 DUMPER7_ASSERTS_WBP_PopupContainer_C_AddPopupWidget;
 
 // Function WBP_PopupContainer.WBP_PopupContainer_C.CreateConfirmButton
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_PopupContainer_C_CreateConfirmButton final
 {
 public:
 	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateConfirmButton_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateConfirmButton_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PopupContainer_C_CreateConfirmButton;
 
 // Function WBP_PopupContainer.WBP_PopupContainer_C.CreateCancelButton
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WBP_PopupContainer_C_CreateCancelButton final
 {
 public:
 	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateCancelButton_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateCancelButton_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PopupContainer_C_CreateCancelButton;
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.AddPopupWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_PopupContainer_C_AddPopupWidget final
+{
+public:
+	class UPopupWidget*                           Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PopupContainer_C_AddPopupWidget;
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.UpdateTitleText
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_PopupContainer_C_UpdateTitleText final
+{
+public:
+	class FText                                   NewTitle;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PopupContainer_C_UpdateTitleText;
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.UpdateContentSlot
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_PopupContainer_C_UpdateContentSlot final
+{
+public:
+	bool                                          bShowContent;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPopupSizeRule                                SizeRule;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PopupContainer_C_UpdateContentSlot;
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.UpdateColorStyle
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_PopupContainer_C_UpdateColorStyle final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PopupContainer_C_UpdateColorStyle;
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.CreateConfirmButton
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_PopupContainer_C_CreateConfirmButton final
+{
+public:
+	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PopupContainer_C_CreateConfirmButton;
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.CreateCancelButton
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_PopupContainer_C_CreateCancelButton final
+{
+public:
+	class UMenuButtonWidget*                      ReturnValue;                                       // 0x0000(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PopupContainer_C_CreateCancelButton;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

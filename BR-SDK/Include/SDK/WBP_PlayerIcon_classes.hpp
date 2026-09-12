@@ -17,12 +17,38 @@
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_PlayerIcon.SKEL_WBP_PlayerIcon_C
+// 0x0010 (0x0458 - 0x0448)
+class USKEL_WBP_PlayerIcon_C final : public UPlayerIconWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UpdatePlayerIcon(bool bNewIsLocalPlayer, bool bNewIsTeamLeader, ECharacterStateOfHealth NewStateOfHealth, bool bNewCanBeDamaged);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PlayerIcon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PlayerIcon_C")
+	}
+	static class USKEL_WBP_PlayerIcon_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PlayerIcon_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PlayerIcon_C;
+
 // WidgetBlueprintGeneratedClass WBP_PlayerIcon.WBP_PlayerIcon_C
-// 0x0008 (0x02B8 - 0x02B0)
+// 0x0010 (0x0458 - 0x0448)
 class UWBP_PlayerIcon_C final : public UPlayerIconWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_PlayerIcon(int32 EntryPoint);

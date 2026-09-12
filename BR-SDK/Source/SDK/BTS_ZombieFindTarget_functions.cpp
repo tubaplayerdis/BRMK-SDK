@@ -81,4 +81,49 @@ class ABrickCharacter* UBTS_ZombieFindTarget_C::GetClosestCharacter(class AZombi
 }
 
 
+// Function BTS_ZombieFindTarget.SKEL_BTS_ZombieFindTarget_C.ReceiveTick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_BTS_ZombieFindTarget_C::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BTS_ZombieFindTarget_C", "ReceiveTick");
+
+	Params::SKEL_BTS_ZombieFindTarget_C_ReceiveTick Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTS_ZombieFindTarget.SKEL_BTS_ZombieFindTarget_C.GetClosestCharacter
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AZombie*                          Zombie                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABrickCharacter*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class ABrickCharacter* USKEL_BTS_ZombieFindTarget_C::GetClosestCharacter(class AZombie* Zombie)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BTS_ZombieFindTarget_C", "GetClosestCharacter");
+
+	Params::SKEL_BTS_ZombieFindTarget_C_GetClosestCharacter Parms{};
+
+	Parms.Zombie = Zombie;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

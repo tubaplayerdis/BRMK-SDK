@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ShadowBorder.BP_ShadowBorder_C
-// 0x0000 (0x0270 - 0x0270)
+// 0x0000 (0x03D8 - 0x03D8)
 class UBP_ShadowBorder_C final : public UBorder
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_ShadowBorder_C;
+
+// BlueprintGeneratedClass BP_ShadowBorder.SKEL_BP_ShadowBorder_C
+// 0x0010 (0x03E8 - 0x03D8)
+class USKEL_BP_ShadowBorder_C final : public UBorder
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_ShadowBorder_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_ShadowBorder_C")
+	}
+	static class USKEL_BP_ShadowBorder_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_ShadowBorder_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_ShadowBorder_C;
 
 SDK_NAMESPACE_END

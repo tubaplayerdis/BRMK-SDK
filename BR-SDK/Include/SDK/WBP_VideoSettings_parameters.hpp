@@ -25,9 +25,9 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFluGameUserSettings*                   CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMenuWidget*                            CallFunc_GetMenuWidget_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          K2Node_Event_bCanApply;                            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0014)(ZeroConstructor, NoDestructor)
+	bool                                          K2Node_Event_bCanApply;                            // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuButtonWidget*                      CallFunc_CreateApplyButton_ReturnValue;            // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPopupResult                                  K2Node_CustomEvent_Result;                         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -58,21 +58,49 @@ public:
 DUMPER7_ASSERTS_WBP_VideoSettings_C_UpdateApplyButton;
 
 // Function WBP_VideoSettings.WBP_VideoSettings_C.StepBack
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WBP_VideoSettings_C_StepBack final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EPopupResult Result)>          K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
-	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance;          // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_StepBack_ReturnValue;                     // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_OpenMessagePopup_ReturnValue;             // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_AreVideoSettingsDirty_ReturnValue;        // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void(EPopupResult Result)>          K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_StepBack_ReturnValue;                     // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_OpenMessagePopup_ReturnValue;             // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_AreVideoSettingsDirty_ReturnValue;        // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_VideoSettings_C_StepBack;
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.UpdateApplyButton
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_VideoSettings_C_UpdateApplyButton final
+{
+public:
+	bool                                          bCanApply;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_VideoSettings_C_UpdateApplyButton;
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.OnSaveSettingsPopupClosed
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_VideoSettings_C_OnSaveSettingsPopupClosed final
+{
+public:
+	EPopupResult                                  Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_VideoSettings_C_OnSaveSettingsPopupClosed;
+
+// Function WBP_VideoSettings.SKEL_WBP_VideoSettings_C.StepBack
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_VideoSettings_C_StepBack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_VideoSettings_C_StepBack;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -60,5 +60,24 @@ public:
 };
 DUMPER7_ASSERTS_WBP_UGCTaskPopup_C_UpdateProgress;
 
+// Function WBP_UGCTaskPopup.SKEL_WBP_UGCTaskPopup_C.UpdateProgress
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_UGCTaskPopup_C_UpdateProgress final
+{
+public:
+	float                                         NewProgress;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCTaskPopup_C_UpdateProgress;
+
+// Function WBP_UGCTaskPopup.SKEL_WBP_UGCTaskPopup_C.UpdateIsFinished
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_UGCTaskPopup_C_UpdateIsFinished final
+{
+public:
+	bool                                          bNewFinished;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewSuccess;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_UGCTaskPopup_C_UpdateIsFinished;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

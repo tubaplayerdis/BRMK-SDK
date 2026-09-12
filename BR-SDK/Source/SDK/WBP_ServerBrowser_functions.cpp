@@ -90,4 +90,58 @@ void UWBP_ServerBrowser_C::Construct()
 }
 
 
+// Function WBP_ServerBrowser.SKEL_WBP_ServerBrowser_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_ServerBrowser_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ServerBrowser_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ServerBrowser.SKEL_WBP_ServerBrowser_C.UpdateCanRefresh
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanRefresh                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ServerBrowser_C::UpdateCanRefresh(bool bCanRefresh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ServerBrowser_C", "UpdateCanRefresh");
+
+	Params::SKEL_WBP_ServerBrowser_C_UpdateCanRefresh Parms{};
+
+	Parms.bCanRefresh = bCanRefresh;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ServerBrowser.SKEL_WBP_ServerBrowser_C.UpdateCanJoin
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanJoin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ServerBrowser_C::UpdateCanJoin(bool bCanJoin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ServerBrowser_C", "UpdateCanJoin");
+
+	Params::SKEL_WBP_ServerBrowser_C_UpdateCanJoin Parms{};
+
+	Parms.bCanJoin = bCanJoin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

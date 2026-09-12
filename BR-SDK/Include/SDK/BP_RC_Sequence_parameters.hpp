@@ -17,8 +17,53 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_RC_Sequence_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_RC_Sequence_C_ReceiveTick;
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.KickVehicle
+// 0x000C (0x000C - 0x0000)
+struct SKEL_BP_RC_Sequence_C_KickVehicle final
+{
+public:
+	struct FVector                                Impulse;                                           // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_RC_Sequence_C_KickVehicle;
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.GetLookAtTarget
+// 0x000C (0x000C - 0x0000)
+struct SKEL_BP_RC_Sequence_C_GetLookAtTarget final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_RC_Sequence_C_GetLookAtTarget;
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.GetTrailerRotation
+// 0x000C (0x000C - 0x0000)
+struct SKEL_BP_RC_Sequence_C_GetTrailerRotation final
+{
+public:
+	struct FRotator                               ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_BP_RC_Sequence_C_GetTrailerRotation;
+
+// Function BP_RC_Sequence.SKEL_BP_RC_Sequence_C.IsVehicleDestroyed
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_BP_RC_Sequence_C_IsVehicleDestroyed final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_BP_RC_Sequence_C_IsVehicleDestroyed;
+
 // Function BP_RC_Sequence.BP_RC_Sequence_C.ExecuteUbergraph_BP_RC_Sequence
-// 0x0100 (0x0100 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct BP_RC_Sequence_C_ExecuteUbergraph_BP_RC_Sequence final
 {
 public:
@@ -36,7 +81,7 @@ public:
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x0074(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x0074(0x0090)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 DUMPER7_ASSERTS_BP_RC_Sequence_C_ExecuteUbergraph_BP_RC_Sequence;
 

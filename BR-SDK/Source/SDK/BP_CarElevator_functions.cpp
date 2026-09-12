@@ -93,4 +93,61 @@ struct FVector ABP_CarElevator_C::GetInteractionLocation(int32 Index_0) const
 }
 
 
+// Function BP_CarElevator.SKEL_BP_CarElevator_C.OnElevatorStateChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const struct FElevatorState&            NewState                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_CarElevator_C::OnElevatorStateChanged(const struct FElevatorState& NewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_CarElevator_C", "OnElevatorStateChanged");
+
+	Params::SKEL_BP_CarElevator_C_OnElevatorStateChanged Parms{};
+
+	Parms.NewState = std::move(NewState);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CarElevator.SKEL_BP_CarElevator_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_CarElevator_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_CarElevator_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CarElevator.SKEL_BP_CarElevator_C.GetInteractionLocation
+// (Event, Protected, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector ASKEL_BP_CarElevator_C::GetInteractionLocation(int32 Index_0) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_CarElevator_C", "GetInteractionLocation");
+
+	Params::SKEL_BP_CarElevator_C_GetInteractionLocation Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

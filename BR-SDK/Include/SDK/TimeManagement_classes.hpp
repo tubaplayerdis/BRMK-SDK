@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // Class TimeManagement.FixedFrameRateCustomTimeStep
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UFixedFrameRateCustomTimeStep : public UEngineCustomTimeStep
 {
 public:
@@ -38,7 +38,7 @@ public:
 DUMPER7_ASSERTS_UFixedFrameRateCustomTimeStep;
 
 // Class TimeManagement.GenlockedCustomTimeStep
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UGenlockedCustomTimeStep : public UFixedFrameRateCustomTimeStep
 {
 public:
@@ -58,12 +58,12 @@ public:
 DUMPER7_ASSERTS_UGenlockedCustomTimeStep;
 
 // Class TimeManagement.GenlockedFixedRateCustomTimeStep
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UGenlockedFixedRateCustomTimeStep final : public UGenlockedCustomTimeStep
 {
 public:
-	struct FFrameRate                             FrameRate;                                         // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFrameRate                             FrameRate;                                         // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -82,12 +82,12 @@ public:
 DUMPER7_ASSERTS_UGenlockedFixedRateCustomTimeStep;
 
 // Class TimeManagement.GenlockedTimecodeProvider
-// 0x0028 (0x0058 - 0x0030)
+// 0x0028 (0x0060 - 0x0038)
 class UGenlockedTimecodeProvider final : public UTimecodeProvider
 {
 public:
-	bool                                          bUseGenlockToCount;                                // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x27];                                      // 0x0031(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseGenlockToCount;                                // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x27];                                      // 0x0039(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -106,7 +106,7 @@ public:
 DUMPER7_ASSERTS_UGenlockedTimecodeProvider;
 
 // Class TimeManagement.TimeManagementBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UTimeManagementBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
@@ -145,13 +145,13 @@ public:
 DUMPER7_ASSERTS_UTimeManagementBlueprintLibrary;
 
 // Class TimeManagement.TimeSynchronizationSource
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UTimeSynchronizationSource final : public UObject
 {
 public:
-	bool                                          bUseForSynchronization;                            // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         FrameOffset;                                       // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseForSynchronization;                            // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FrameOffset;                                       // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

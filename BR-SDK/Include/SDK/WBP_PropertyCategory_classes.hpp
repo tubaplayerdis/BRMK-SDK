@@ -11,21 +11,52 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// WidgetBlueprintGeneratedClass WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C
+// 0x0028 (0x0438 - 0x0410)
+class USKEL_WBP_PropertyCategory_C final : public UPropertyCategoryWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           NameBorder;                                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        PropertiesPanel;                                   // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateCategory(const class FText& DisplayName);
+	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow);
+	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PropertyCategory_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PropertyCategory_C")
+	}
+	static class USKEL_WBP_PropertyCategory_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PropertyCategory_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PropertyCategory_C;
+
 // WidgetBlueprintGeneratedClass WBP_PropertyCategory.WBP_PropertyCategory_C
-// 0x0020 (0x0298 - 0x0278)
+// 0x0028 (0x0438 - 0x0410)
 class UWBP_PropertyCategory_C final : public UPropertyCategoryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           NameBorder;                                        // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickGridPanel*                        PropertiesPanel;                                   // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           NameBorder;                                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        PropertiesPanel;                                   // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_PropertyCategory(int32 EntryPoint);

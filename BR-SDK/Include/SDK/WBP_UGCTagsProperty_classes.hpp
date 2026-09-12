@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_UGCTagsProperty.WBP_UGCTagsProperty_C
-// 0x0000 (0x0298 - 0x0298)
+// 0x0000 (0x0430 - 0x0430)
 class UWBP_UGCTagsProperty_C final : public UUGCTagsPropertyWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_UGCTagsProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_UGCTagsProperty.SKEL_WBP_UGCTagsProperty_C
+// 0x0010 (0x0440 - 0x0430)
+class USKEL_WBP_UGCTagsProperty_C final : public UUGCTagsPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_UGCTagsProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_UGCTagsProperty_C")
+	}
+	static class USKEL_WBP_UGCTagsProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_UGCTagsProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_UGCTagsProperty_C;
 
 SDK_NAMESPACE_END

@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // Class ClothingSystemRuntimeInterface.ClothConfigBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UClothConfigBase : public UObject
 {
 public:
@@ -38,7 +38,7 @@ public:
 DUMPER7_ASSERTS_UClothConfigBase;
 
 // Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UClothSharedSimConfigBase final : public UObject
 {
 public:
@@ -58,12 +58,12 @@ public:
 DUMPER7_ASSERTS_UClothSharedSimConfigBase;
 
 // Class ClothingSystemRuntimeInterface.ClothingAssetBase
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UClothingAssetBase : public UObject
 {
 public:
-	class FString                                 ImportedFilePath;                                  // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  AssetGuid;                                         // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 ImportedFilePath;                                  // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  AssetGuid;                                         // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -82,7 +82,7 @@ public:
 DUMPER7_ASSERTS_UClothingAssetBase;
 
 // Class ClothingSystemRuntimeInterface.ClothingSimulationFactory
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UClothingSimulationFactory : public UObject
 {
 public:
@@ -102,11 +102,11 @@ public:
 DUMPER7_ASSERTS_UClothingSimulationFactory;
 
 // Class ClothingSystemRuntimeInterface.ClothingInteractor
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UClothingInteractor final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -125,12 +125,12 @@ public:
 DUMPER7_ASSERTS_UClothingInteractor;
 
 // Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
-// 0x0068 (0x0090 - 0x0028)
+// 0x0068 (0x0098 - 0x0030)
 class UClothingSimulationInteractor : public UObject
 {
 public:
-	TMap<class FName, class UClothingInteractor*> ClothingInteractors;                               // 0x0028(0x0050)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x18];                                      // 0x0078(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<class FName, class UClothingInteractor*> ClothingInteractors;                               // 0x0030(0x0050)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClothConfigUpdated();
@@ -166,19 +166,20 @@ public:
 DUMPER7_ASSERTS_UClothingSimulationInteractor;
 
 // Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x00C8 (0x00F8 - 0x0030)
 class UClothPhysicalMeshDataBase_Legacy : public UObject
 {
 public:
-	TArray<struct FVector>                        Vertices;                                          // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        Normals;                                           // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<uint32>                                Indices;                                           // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 InverseMasses;                                     // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FClothVertBoneData>             BoneData;                                          // 0x0068(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         NumFixedVerts;                                     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxBoneWeights;                                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint32>                                SelfCollisionIndices;                              // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x50];                                      // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        Vertices;                                          // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Normals;                                           // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FColor>                         VertexColors;                                      // 0x0050(0x0010)(ZeroConstructor, EditorOnly, NativeAccessSpecifierPublic)
+	TArray<uint32>                                Indices;                                           // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 InverseMasses;                                     // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FClothVertBoneData>             BoneData;                                          // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         NumFixedVerts;                                     // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxBoneWeights;                                    // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint32>                                SelfCollisionIndices;                              // 0x0098(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x50];                                      // 0x00A8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

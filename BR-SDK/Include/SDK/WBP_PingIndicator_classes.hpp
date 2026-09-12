@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PingIndicator.WBP_PingIndicator_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0018 (0x0430 - 0x0418)
 class UWBP_PingIndicator_C final : public UPingIndicatorWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            ConnectionImage;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            ConnectionImage;                                   // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_PingIndicator(int32 EntryPoint);
@@ -43,5 +43,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_PingIndicator_C;
+
+// WidgetBlueprintGeneratedClass WBP_PingIndicator.SKEL_WBP_PingIndicator_C
+// 0x0018 (0x0430 - 0x0418)
+class USKEL_WBP_PingIndicator_C final : public UPingIndicatorWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            ConnectionImage;                                   // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdatePing(int32 InPing);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PingIndicator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PingIndicator_C")
+	}
+	static class USKEL_WBP_PingIndicator_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PingIndicator_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PingIndicator_C;
 
 SDK_NAMESPACE_END

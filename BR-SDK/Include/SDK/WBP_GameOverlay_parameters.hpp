@@ -12,238 +12,13 @@
 
 #include "BrickRigs_structs.hpp"
 #include "AIModule_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.AddHUDNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_AddHUDNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_AddHUDNotification;                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_AddHUDNotification;                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_AddHUDNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateSlomoNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateSlomoNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateSlomoNotification;                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SlomoSpeed_UpdateSlomoNotification;                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bInvertSpeed_UpdateSlomoNotification;              // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bSlomoEnabled_UpdateSlomoNotification;             // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bIsPaused_UpdateSlomoNotification;                 // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateSlomoNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateMoneyNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateMoneyNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateMoneyNotification;                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NewAmount_UpdateMoneyNotification;                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         AmountAdded_UpdateMoneyNotification;               // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateMoneyNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateFreeCamNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateFreeCamNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateFreeCamNotification;                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInFreeCam_UpdateFreeCamNotification;            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFreeCamMode                                  InFreeCamMode_UpdateFreeCamNotification;           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsFixedCam_UpdateFreeCamNotification;             // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateFreeCamNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateThumbnailNotification
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_GameOverlay_C_UpdateThumbnailNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateThumbnailNotification;                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateThumbnailNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.AddMatchTimerWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_GameOverlay_C_AddMatchTimerWidget final
-{
-public:
-	class UMatchTimerWidget*                      Widget_AddMatchTimerWidget;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_AddMatchTimerWidget;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleCameraNotification
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_GameOverlay_C_UpdateVehicleCameraNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateVehicleCameraNotification;            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CameraDisplayName_UpdateVehicleCameraNotification; // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleDownloadNotification
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_GameOverlay_C_UpdateVehicleDownloadNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateVehicleDownloadNotification;          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   VehicleDisplayName_UpdateVehicleDownloadNotification; // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	float                                         Progress_UpdateVehicleDownloadNotification;        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleDownloadNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.AddInputHelpWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_GameOverlay_C_AddInputHelpWidget final
-{
-public:
-	class UInputHelpWidget*                       Widget_AddInputHelpWidget;                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_AddInputHelpWidget;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.AddChatWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_GameOverlay_C_AddChatWidget final
-{
-public:
-	class UChatWidget*                            Widget_AddChatWidget;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_AddChatWidget;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateSaveNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateSaveNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateSaveNotification;                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSuccess_UpdateSaveNotification;                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bIsAutoSave_UpdateSaveNotification;                // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateSaveNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraSpeedNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateCameraSpeedNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateCameraSpeedNotification;              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NewSpeedRatio_UpdateCameraSpeedNotification;       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NewMaxSpeed_UpdateCameraSpeedNotification;         // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateCameraSpeedNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraZoomNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateCameraZoomNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateCameraZoomNotification;               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NewZoomRatio_UpdateCameraZoomNotification;         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateCameraZoomNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.AddMatchStateWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_GameOverlay_C_AddMatchStateWidget final
-{
-public:
-	class UMatchStateWidget*                      Widget_AddMatchStateWidget;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_AddMatchStateWidget;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.AddTeamScoreWidget
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_AddTeamScoreWidget final
-{
-public:
-	class UTeamScoreWidget*                       Widget_AddTeamScoreWidget;                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamAttitude                                 TeamAttitude_AddTeamScoreWidget;                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_AddTeamScoreWidget;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateHUDVisibilityNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateHUDVisibilityNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateHUDVisibilityNotification;            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHUDVisibility                                NewVisibility_UpdateHUDVisibilityNotification;     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateHUDVisibilityNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraModeNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateCameraModeNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateCameraModeNotification;               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECameraMode                                   NewMode_UpdateCameraModeNotification;              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateCameraModeNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateProjectileCameraNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateProjectileCameraNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateProjectileCameraNotification;         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bNewEnabled_UpdateProjectileCameraNotification;    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateProjectileCameraNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateRestartFailedNotification
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_GameOverlay_C_UpdateRestartFailedNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateRestartFailedNotification;            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Message_UpdateRestartFailedNotification;           // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateRestartFailedNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateRespawnDelayNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateRespawnDelayNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateRespawnDelayNotification;             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Remaining_UpdateRespawnDelayNotification;          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateRespawnDelayNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleSeatNotification
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_GameOverlay_C_UpdateVehicleSeatNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateVehicleSeatNotification;              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   SeatDisplayName_UpdateVehicleSeatNotification;     // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleSeatNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleConstructionNotification
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_GameOverlay_C_UpdateVehicleConstructionNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget_UpdateVehicleConstructionNotification;      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   VehicleDisplayName_UpdateVehicleConstructionNotification; // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	float                                         Progress_UpdateVehicleConstructionNotification;    // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleConstructionNotification;
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.ExecuteUbergraph_WBP_GameOverlay
 // 0x0D88 (0x0D88 - 0x0000)
@@ -296,12 +71,12 @@ public:
 	bool                                          Temp_bool_Variable_12;                             // 0x01BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1BF[0x1];                                      // 0x01BF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable_12;                             // 0x01C0(0x0018)()
-	float                                         CallFunc_BreakVector2D_X;                          // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y;                          // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_1;                        // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_13;                             // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E9[0x3];                                      // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_Variable_13;                             // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector2D_X;                          // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y;                          // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_1;                        // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x01EC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_BreakVector2D_X_2;                        // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_Y_2;                        // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -491,6 +266,456 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue_9;                     // 0x0D70(0x0018)()
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_ExecuteUbergraph_WBP_GameOverlay;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleConstructionNotification
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_GameOverlay_C_UpdateVehicleConstructionNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   VehicleDisplayName;                                // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	float                                         Progress;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleConstructionNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleSeatNotification
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_GameOverlay_C_UpdateVehicleSeatNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   SeatDisplayName;                                   // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleSeatNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateRespawnDelayNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateRespawnDelayNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Remaining;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateRespawnDelayNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateRestartFailedNotification
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_GameOverlay_C_UpdateRestartFailedNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Message;                                           // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateRestartFailedNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateProjectileCameraNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateProjectileCameraNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bNewEnabled;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateProjectileCameraNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraModeNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateCameraModeNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECameraMode                                   NewMode;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateCameraModeNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateHUDVisibilityNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateHUDVisibilityNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHUDVisibility                                NewVisibility;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateHUDVisibilityNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddTeamScoreWidget
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_AddTeamScoreWidget final
+{
+public:
+	class UTeamScoreWidget*                       Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamAttitude                                 TeamAttitude;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddTeamScoreWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddMatchStateWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_AddMatchStateWidget final
+{
+public:
+	class UMatchStateWidget*                      Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddMatchStateWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraZoomNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateCameraZoomNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewZoomRatio;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateCameraZoomNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraSpeedNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateCameraSpeedNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewSpeedRatio;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewMaxSpeed;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateCameraSpeedNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateSaveNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateSaveNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSuccess;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIsAutoSave;                                       // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateSaveNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddChatWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_AddChatWidget final
+{
+public:
+	class UChatWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddChatWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddInputHelpWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_AddInputHelpWidget final
+{
+public:
+	class UInputHelpWidget*                       Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddInputHelpWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleDownloadNotification
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_GameOverlay_C_UpdateVehicleDownloadNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   VehicleDisplayName;                                // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	float                                         Progress;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleDownloadNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleCameraNotification
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_GameOverlay_C_UpdateVehicleCameraNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CameraDisplayName;                                 // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddMatchTimerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_AddMatchTimerWidget final
+{
+public:
+	class UMatchTimerWidget*                      Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddMatchTimerWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateThumbnailNotification
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_UpdateThumbnailNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateThumbnailNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateFreeCamNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateFreeCamNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsInFreeCam;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFreeCamMode                                  InFreeCamMode;                                     // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsFixedCam;                                       // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateFreeCamNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateMoneyNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateMoneyNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewAmount;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AmountAdded;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateMoneyNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateSlomoNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_UpdateSlomoNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SlomoSpeed;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInvertSpeed;                                      // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bSlomoEnabled;                                     // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIsPaused;                                         // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateSlomoNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddHUDNotification
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_GameOverlay_C_AddHUDNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddHUDNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddHUDNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddHUDNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddHUDNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateSlomoNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateSlomoNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SlomoSpeed;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvertSpeed;                                      // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSlomoEnabled;                                     // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPaused;                                         // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateSlomoNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateMoneyNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateMoneyNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewAmount;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AmountAdded;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateMoneyNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateFreeCamNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateFreeCamNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInFreeCam;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFreeCamMode                                  InFreeCamMode;                                     // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsFixedCam;                                       // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateFreeCamNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateThumbnailNotification
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateThumbnailNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateThumbnailNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddMatchTimerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddMatchTimerWidget final
+{
+public:
+	class UMatchTimerWidget*                      Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddMatchTimerWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleCameraNotification
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateVehicleCameraNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   CameraDisplayName;                                 // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleDownloadNotification
+// 0x0028 (0x0028 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateVehicleDownloadNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   VehicleDisplayName;                                // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         Progress;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleDownloadNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddInputHelpWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddInputHelpWidget final
+{
+public:
+	class UInputHelpWidget*                       Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddInputHelpWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddChatWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddChatWidget final
+{
+public:
+	class UChatWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddChatWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateSaveNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateSaveNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccess;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsAutoSave;                                       // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateSaveNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateCameraSpeedNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateCameraSpeedNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewSpeedRatio;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewMaxSpeed;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateCameraSpeedNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateCameraZoomNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateCameraZoomNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewZoomRatio;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateCameraZoomNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddMatchStateWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddMatchStateWidget final
+{
+public:
+	class UMatchStateWidget*                      Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddMatchStateWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddTeamScoreWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddTeamScoreWidget final
+{
+public:
+	class UTeamScoreWidget*                       Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamAttitude                                 TeamAttitude;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddTeamScoreWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateHUDVisibilityNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateHUDVisibilityNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHUDVisibility                                NewVisibility;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateHUDVisibilityNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateCameraModeNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateCameraModeNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraMode                                   NewMode;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateCameraModeNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateProjectileCameraNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateProjectileCameraNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewEnabled;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateProjectileCameraNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateRestartFailedNotification
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateRestartFailedNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Message;                                           // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateRestartFailedNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateRespawnDelayNotification
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateRespawnDelayNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Remaining;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateRespawnDelayNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleSeatNotification
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateVehicleSeatNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   SeatDisplayName;                                   // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleSeatNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleConstructionNotification
+// 0x0028 (0x0028 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateVehicleConstructionNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   VehicleDisplayName;                                // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         Progress;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleConstructionNotification;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

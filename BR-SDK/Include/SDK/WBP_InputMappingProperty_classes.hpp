@@ -18,14 +18,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputMappingProperty.WBP_InputMappingProperty_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0028 (0x0498 - 0x0470)
 class UWBP_InputMappingProperty_C final : public UInputMappingPropertyWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     AddButton;                                         // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            AddImage;                                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickHorizontalBox*                    KeysBox;                                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     AddButton;                                         // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            AddImage;                                          // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    KeysBox;                                           // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InputMappingProperty(int32 EntryPoint);
@@ -49,5 +49,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputMappingProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputMappingProperty.SKEL_WBP_InputMappingProperty_C
+// 0x0028 (0x0498 - 0x0470)
+class USKEL_WBP_InputMappingProperty_C final : public UInputMappingPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     AddButton;                                         // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            AddImage;                                          // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    KeysBox;                                           // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateCanAddMapping(bool bCanAdd);
+	void BndEvt__AddButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__AddButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void AddKeyWidget(class UInputMappingKeyWidget* Widget, int32 Index_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputMappingProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputMappingProperty_C")
+	}
+	static class USKEL_WBP_InputMappingProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputMappingProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputMappingProperty_C;
 
 SDK_NAMESPACE_END

@@ -56,4 +56,24 @@ void UWBP_PingIndicator_C::UpdatePing(int32 InPing)
 }
 
 
+// Function WBP_PingIndicator.SKEL_WBP_PingIndicator_C.UpdatePing
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   InPing                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PingIndicator_C::UpdatePing(int32 InPing)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PingIndicator_C", "UpdatePing");
+
+	Params::SKEL_WBP_PingIndicator_C_UpdatePing Parms{};
+
+	Parms.InPing = InPing;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

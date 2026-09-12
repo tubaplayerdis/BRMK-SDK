@@ -29,5 +29,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TeamBaseIcon_C_GetIconDisplayName;
 
+// Function WBP_TeamBaseIcon.SKEL_WBP_TeamBaseIcon_C.GetIconDisplayName
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_TeamBaseIcon_C_GetIconDisplayName final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_TeamBaseIcon_C_GetIconDisplayName;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

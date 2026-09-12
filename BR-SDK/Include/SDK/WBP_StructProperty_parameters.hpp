@@ -14,6 +14,46 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_StructProperty.SKEL_WBP_StructProperty_C.AddPropertyContainerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_StructProperty_C_AddPropertyContainerWidget final
+{
+public:
+	class UPropertyContainerWidget*               Widget_AddPropertyContainerWidget;                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_StructProperty_C_AddPropertyContainerWidget;
+
+// Function WBP_StructProperty.SKEL_WBP_StructProperty_C.UpdatePropertyContainerWidgetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot final
+{
+public:
+	class UPropertyContainerWidget*               Widget_UpdatePropertyContainerWidgetSlot;          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_UpdatePropertyContainerWidgetSlot;           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPerRow_UpdatePropertyContainerWidgetSlot;       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot;
+
+// Function WBP_StructProperty.WBP_StructProperty_C.UpdatePropertyContainerWidgetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot final
+{
+public:
+	class UPropertyContainerWidget*               Widget_UpdatePropertyContainerWidgetSlot;          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_UpdatePropertyContainerWidgetSlot;           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumPerRow_UpdatePropertyContainerWidgetSlot;       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot;
+
+// Function WBP_StructProperty.WBP_StructProperty_C.AddPropertyContainerWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_StructProperty_C_AddPropertyContainerWidget final
+{
+public:
+	class UPropertyContainerWidget*               Widget_AddPropertyContainerWidget;                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_StructProperty_C_AddPropertyContainerWidget;
+
 // Function WBP_StructProperty.WBP_StructProperty_C.ExecuteUbergraph_WBP_StructProperty
 // 0x0030 (0x0030 - 0x0000)
 struct WBP_StructProperty_C_ExecuteUbergraph_WBP_StructProperty final
@@ -29,26 +69,6 @@ public:
 	class UGridSlot*                              CallFunc_SlotAsGridSlot_ReturnValue;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_StructProperty_C_ExecuteUbergraph_WBP_StructProperty;
-
-// Function WBP_StructProperty.WBP_StructProperty_C.AddPropertyContainerWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_StructProperty_C_AddPropertyContainerWidget final
-{
-public:
-	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_StructProperty_C_AddPropertyContainerWidget;
-
-// Function WBP_StructProperty.WBP_StructProperty_C.UpdatePropertyContainerWidgetSlot
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot final
-{
-public:
-	class UPropertyContainerWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumPerRow;                                         // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_StructProperty_C_UpdatePropertyContainerWidgetSlot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

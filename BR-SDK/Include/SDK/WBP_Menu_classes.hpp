@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
+#include "GameLogoEnum_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
-#include "GameLogoEnum_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Menu.WBP_Menu_C
-// 0x0030 (0x0320 - 0x02F0)
+// 0x0038 (0x04D0 - 0x0498)
 class UWBP_Menu_C final : public UMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_GameLogo_C*                        Logo;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           MenuPageBorder;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PropertiesPanel_C*                 TopPropertiesPanel;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FPopupHandle                           PopupHandle;                                       // 0x0318(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_GameLogo_C*                        Logo;                                              // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           MenuPageBorder;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PropertiesPanel_C*                 TopPropertiesPanel;                                // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPopupHandle                           PopupHandle;                                       // 0x04C8(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WBP_Menu(int32 EntryPoint);
@@ -72,5 +72,59 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Menu_C;
+
+// WidgetBlueprintGeneratedClass WBP_Menu.SKEL_WBP_Menu_C
+// 0x0038 (0x04D0 - 0x0498)
+class USKEL_WBP_Menu_C final : public UMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_GameLogo_C*                        Logo;                                              // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           MenuPageBorder;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PropertiesPanel_C*                 TopPropertiesPanel;                                // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPopupHandle                           PopupHandle;                                       // 0x04C8(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+
+public:
+	void OnMenuContextChanged(const class FName& NewContext);
+	void AddMenuPage(class UMenuPageWidget* Widget);
+	void OnClickedOptions();
+	void OnClickedHostGame();
+	void OnClickedJoinGame();
+	void OnClickedGameplaySettings();
+	void OnClickedVideoSettings();
+	void OnClickedInputSettings();
+	void OnClickedCredits();
+	void OnClickedUISettings();
+	void OnClosedQuitGamePopup(EPopupResult Result);
+	void OnClickedMatchMenu();
+	void OnClickedAdminSettings();
+	void OnClickedPlayersMenu();
+	void OnClickedInputMappings();
+	void OnClickedEditorSettings();
+	void OnClickedMainMenu();
+	void OnClosedMainMenuPopup(EPopupResult Result);
+	void OnClickedQuickGame();
+	void RemoveMenuPage(class UMenuPageWidget* Widget);
+	void OnInitialized();
+	void Construct();
+	void CreateBackButton();
+	void CreateAdminMenuButton();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Menu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Menu_C")
+	}
+	static class USKEL_WBP_Menu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Menu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Menu_C;
 
 SDK_NAMESPACE_END

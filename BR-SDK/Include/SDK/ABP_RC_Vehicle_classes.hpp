@@ -12,24 +12,24 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_RC_Vehicle.ABP_RC_Vehicle_C
-// 0x0180 (0x0440 - 0x02C0)
+// 0x0200 (0x0500 - 0x0300)
 class UABP_RC_Vehicle_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02C8(0x0030)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x02F8(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0318(0x0108)()
-	struct FAnimNode_MeshSpaceRefPose             AnimGraphNode_MeshRefPose;                         // 0x0420(0x0010)()
-	struct FRotator                               TrailerRotation;                                   // 0x0430(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0310(0x0040)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0350(0x0028)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0378(0x0160)()
+	struct FAnimNode_MeshSpaceRefPose             AnimGraphNode_MeshRefPose;                         // 0x04D8(0x0010)()
+	struct FRotator                               TrailerRotation;                                   // 0x04E8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_ABP_RC_Vehicle(int32 EntryPoint);
@@ -51,5 +51,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_RC_Vehicle_C;
+
+// AnimBlueprintGeneratedClass ABP_RC_Vehicle.SKEL_ABP_RC_Vehicle_C
+// 0x0020 (0x0320 - 0x0300)
+class USKEL_ABP_RC_Vehicle_C final : public UAnimInstance
+{
+public:
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRotator                               TrailerRotation;                                   // 0x0310(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_RC_Vehicle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_RC_Vehicle_C")
+	}
+	static class USKEL_ABP_RC_Vehicle_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_RC_Vehicle_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_RC_Vehicle_C;
 
 SDK_NAMESPACE_END

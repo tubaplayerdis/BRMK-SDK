@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_HUDContainer.WBP_HUDContainer_C.AddGameOverlayWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUDContainer_C_AddGameOverlayWidget final
-{
-public:
-	class UGameOverlayWidget*                     Widget_AddGameOverlayWidget;                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HUDContainer_C_AddGameOverlayWidget;
-
-// Function WBP_HUDContainer.WBP_HUDContainer_C.AddHUDWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUDContainer_C_AddHUDWidget final
-{
-public:
-	class UUserWidget*                            Widget_AddHUDWidget;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HUDContainer_C_AddHUDWidget;
-
 // Function WBP_HUDContainer.WBP_HUDContainer_C.ExecuteUbergraph_WBP_HUDContainer
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_HUDContainer_C_ExecuteUbergraph_WBP_HUDContainer final
@@ -49,6 +31,42 @@ public:
 	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_1;           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HUDContainer_C_ExecuteUbergraph_WBP_HUDContainer;
+
+// Function WBP_HUDContainer.WBP_HUDContainer_C.AddHUDWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUDContainer_C_AddHUDWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HUDContainer_C_AddHUDWidget;
+
+// Function WBP_HUDContainer.WBP_HUDContainer_C.AddGameOverlayWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUDContainer_C_AddGameOverlayWidget final
+{
+public:
+	class UGameOverlayWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HUDContainer_C_AddGameOverlayWidget;
+
+// Function WBP_HUDContainer.SKEL_WBP_HUDContainer_C.AddGameOverlayWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_HUDContainer_C_AddGameOverlayWidget final
+{
+public:
+	class UGameOverlayWidget*                     Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HUDContainer_C_AddGameOverlayWidget;
+
+// Function WBP_HUDContainer.SKEL_WBP_HUDContainer_C.AddHUDWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_HUDContainer_C_AddHUDWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_HUDContainer_C_AddHUDWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

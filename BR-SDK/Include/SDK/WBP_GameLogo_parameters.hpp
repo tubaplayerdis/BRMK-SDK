@@ -11,12 +11,48 @@
 #include "Basic.hpp"
 
 #include "GameLogoEnum_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.UpdateUIStyle
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameLogo_C_UpdateUIStyle final
+{
+public:
+	const class UBrickUIStyle*                    Style;                                             // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameLogo_C_UpdateUIStyle;
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.SetLogo
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_GameLogo_C_SetLogo final
+{
+public:
+	EGameLogoEnum                                 InLogo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameLogo_C_SetLogo;
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.InitMID
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameLogo_C_InitMID final
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameLogo_C_InitMID;
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.IsLogoReady
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_GameLogo_C_IsLogoReady final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameLogo_C_IsLogoReady;
 
 // Function WBP_GameLogo.WBP_GameLogo_C.ExecuteUbergraph_WBP_GameLogo
 // 0x0020 (0x0020 - 0x0000)
@@ -24,8 +60,7 @@ struct WBP_GameLogo_C_ExecuteUbergraph_WBP_GameLogo final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class UBrickUIStyle* Style)> K2Node_CreateDelegate_OutputDelegate;          // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const class UBrickUIStyle* Style)> K2Node_CreateDelegate_OutputDelegate;          // 0x0004(0x0014)(ZeroConstructor, NoDestructor)
 	const class UBrickUIStyle*                    K2Node_CustomEvent_Style;                          // 0x0018(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GameLogo_C_ExecuteUbergraph_WBP_GameLogo;

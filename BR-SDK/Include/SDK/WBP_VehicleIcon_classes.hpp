@@ -18,11 +18,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_VehicleIcon.WBP_VehicleIcon_C
-// 0x0008 (0x02B0 - 0x02A8)
+// 0x0010 (0x0450 - 0x0440)
 class UWBP_VehicleIcon_C final : public UVehicleIconWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_VehicleIcon(int32 EntryPoint);
@@ -43,5 +43,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_VehicleIcon_C;
+
+// WidgetBlueprintGeneratedClass WBP_VehicleIcon.SKEL_WBP_VehicleIcon_C
+// 0x0010 (0x0450 - 0x0440)
+class USKEL_WBP_VehicleIcon_C final : public UVehicleIconWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UpdateVehicleIcon(bool bNewIsLocalPlayer, bool bNewCanBeDamaged, EVehiclePinMode NewPinMode);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_VehicleIcon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_VehicleIcon_C")
+	}
+	static class USKEL_WBP_VehicleIcon_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_VehicleIcon_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_VehicleIcon_C;
 
 SDK_NAMESPACE_END

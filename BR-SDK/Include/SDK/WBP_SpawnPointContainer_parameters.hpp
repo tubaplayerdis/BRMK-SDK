@@ -35,5 +35,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_SpawnPointContainer_C_AddIconWidget;
 
+// Function WBP_SpawnPointContainer.SKEL_WBP_SpawnPointContainer_C.AddIconWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_SpawnPointContainer_C_AddIconWidget final
+{
+public:
+	class UHUDIconWidget*                         Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_SpawnPointContainer_C_AddIconWidget;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

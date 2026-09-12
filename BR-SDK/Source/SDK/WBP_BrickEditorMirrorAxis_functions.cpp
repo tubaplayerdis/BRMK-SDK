@@ -112,4 +112,80 @@ void UWBP_BrickEditorMirrorAxis_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_O
 }
 
 
+// Function WBP_BrickEditorMirrorAxis.SKEL_WBP_BrickEditorMirrorAxis_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_BrickEditorMirrorAxis_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorMirrorAxis_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BrickEditorMirrorAxis.SKEL_WBP_BrickEditorMirrorAxis_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
+// (Public)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickEditorMirrorAxis_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorMirrorAxis_C", "BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
+
+	Params::SKEL_WBP_BrickEditorMirrorAxis_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+	Parms.InContentStyleState = InContentStyleState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickEditorMirrorAxis.SKEL_WBP_BrickEditorMirrorAxis_C.UpdateIsSelected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewSelected                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickEditorMirrorAxis_C::UpdateIsSelected(bool bNewSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorMirrorAxis_C", "UpdateIsSelected");
+
+	Params::SKEL_WBP_BrickEditorMirrorAxis_C_UpdateIsSelected Parms{};
+
+	Parms.bNewSelected = bNewSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickEditorMirrorAxis.SKEL_WBP_BrickEditorMirrorAxis_C.UpdateMirrorAxis
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EAxis                                   InAxis                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickEditorMirrorAxis_C::UpdateMirrorAxis(EAxis InAxis)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickEditorMirrorAxis_C", "UpdateMirrorAxis");
+
+	Params::SKEL_WBP_BrickEditorMirrorAxis_C_UpdateMirrorAxis Parms{};
+
+	Parms.InAxis = InAxis;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

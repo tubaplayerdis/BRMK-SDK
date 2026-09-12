@@ -126,4 +126,94 @@ void UWBP_MatchMenu_C::Construct()
 }
 
 
+// Function WBP_MatchMenu.SKEL_WBP_MatchMenu_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_MatchMenu_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchMenu_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MatchMenu.SKEL_WBP_MatchMenu_C.OnClickedRestart
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_MatchMenu_C::OnClickedRestart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchMenu_C", "OnClickedRestart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MatchMenu.SKEL_WBP_MatchMenu_C.OnConfirmRestartPopupClosed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPopupResult                            Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_MatchMenu_C::OnConfirmRestartPopupClosed(EPopupResult Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchMenu_C", "OnConfirmRestartPopupClosed");
+
+	Params::SKEL_WBP_MatchMenu_C_OnConfirmRestartPopupClosed Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MatchMenu.SKEL_WBP_MatchMenu_C.UpdateCanApplyMatchSettings
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bCanApply                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USKEL_WBP_MatchMenu_C::UpdateCanApplyMatchSettings(bool bCanApply)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchMenu_C", "UpdateCanApplyMatchSettings");
+
+	Params::SKEL_WBP_MatchMenu_C_UpdateCanApplyMatchSettings Parms{};
+
+	Parms.bCanApply = bCanApply;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MatchMenu.SKEL_WBP_MatchMenu_C.UpdateRestartMatchButton
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanRestart                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSameLevelAndMode                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_MatchMenu_C::UpdateRestartMatchButton(bool bCanRestart, bool bSameLevelAndMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_MatchMenu_C", "UpdateRestartMatchButton");
+
+	Params::SKEL_WBP_MatchMenu_C_UpdateRestartMatchButton Parms{};
+
+	Parms.bCanRestart = bCanRestart;
+	Parms.bSameLevelAndMode = bSameLevelAndMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

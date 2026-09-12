@@ -17,15 +17,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_LoadoutContainer.BP_LoadoutContainer_C
-// 0x0008 (0x0290 - 0x0288)
+// 0x0010 (0x03A0 - 0x0390)
 class ABP_LoadoutContainer_C final : public ALoadoutContainer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
+	void UpdateAnimation(float InAnimRatio_UpdateAnimation);
 	void ExecuteUbergraph_BP_LoadoutContainer(int32 EntryPoint);
-	void UpdateAnimation(float InAnimRatio);
 
 public:
 	static class UClass* StaticClass()
@@ -42,5 +42,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_LoadoutContainer_C;
+
+// BlueprintGeneratedClass BP_LoadoutContainer.SKEL_BP_LoadoutContainer_C
+// 0x0010 (0x03A0 - 0x0390)
+class ASKEL_BP_LoadoutContainer_C final : public ALoadoutContainer
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	void UpdateAnimation(float InAnimRatio_UpdateAnimation);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_LoadoutContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_LoadoutContainer_C")
+	}
+	static class ASKEL_BP_LoadoutContainer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_LoadoutContainer_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_LoadoutContainer_C;
 
 SDK_NAMESPACE_END

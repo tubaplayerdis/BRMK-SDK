@@ -16,6 +16,24 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_LoadingScreen.SKEL_WBP_LoadingScreen_C.SetBackgroundColor
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_LoadingScreen_C_SetBackgroundColor final
+{
+public:
+	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_LoadingScreen_C_SetBackgroundColor;
+
+// Function WBP_LoadingScreen.SKEL_WBP_LoadingScreen_C.SetLoadingText
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_LoadingScreen_C_SetLoadingText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_LoadingScreen_C_SetLoadingText;
+
 // Function WBP_LoadingScreen.WBP_LoadingScreen_C.ExecuteUbergraph_WBP_LoadingScreen
 // 0x0030 (0x0030 - 0x0000)
 struct WBP_LoadingScreen_C_ExecuteUbergraph_WBP_LoadingScreen final

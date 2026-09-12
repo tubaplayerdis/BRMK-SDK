@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "FluUGC_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Enum BrickRigs.EBrickUITextStyle
-// NumValues: 0x0012
+// NumValues: 0x0013
 enum class EBrickUITextStyle : uint8
 {
 	Default                                  = 0,
@@ -43,10 +43,11 @@ enum class EBrickUITextStyle : uint8
 	Spoiler                                  = 15,
 	Custom                                   = 16,
 	Max                                      = 17,
+	EBrickUITextStyle_MAX                    = 18,
 };
 
 // Enum BrickRigs.EBrickUIStyleState
-// NumValues: 0x0010
+// NumValues: 0x0011
 enum class EBrickUIStyleState : uint8
 {
 	Default                                  = 0,
@@ -65,10 +66,11 @@ enum class EBrickUIStyleState : uint8
 	Background                               = 13,
 	Custom                                   = 14,
 	Max                                      = 15,
+	EBrickUIStyleState_MAX                   = 16,
 };
 
 // Enum BrickRigs.EBrickUIBrushStyle
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EBrickUIBrushStyle : uint8
 {
 	Default                                  = 0,
@@ -81,10 +83,11 @@ enum class EBrickUIBrushStyle : uint8
 	Spacer                                   = 7,
 	Custom                                   = 8,
 	Max                                      = 9,
+	EBrickUIBrushStyle_MAX                   = 10,
 };
 
 // Enum BrickRigs.EBrickUIColorStyle
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EBrickUIColorStyle : uint8
 {
 	Default                                  = 0,
@@ -97,10 +100,11 @@ enum class EBrickUIColorStyle : uint8
 	DeveloperLogo                            = 7,
 	Custom                                   = 8,
 	Max                                      = 9,
+	EBrickUIColorStyle_MAX                   = 10,
 };
 
 // Enum BrickRigs.EBrickUIPaddingStyle
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class EBrickUIPaddingStyle : uint8
 {
 	Border                                   = 0,
@@ -112,10 +116,11 @@ enum class EBrickUIPaddingStyle : uint8
 	Slider                                   = 6,
 	Custom                                   = 7,
 	Max                                      = 8,
+	EBrickUIPaddingStyle_MAX                 = 9,
 };
 
 // Enum BrickRigs.EBrickUISpacingStyle
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EBrickUISpacingStyle : uint8
 {
 	Small                                    = 0,
@@ -123,10 +128,11 @@ enum class EBrickUISpacingStyle : uint8
 	Large                                    = 2,
 	Custom                                   = 3,
 	Max                                      = 4,
+	EBrickUISpacingStyle_MAX                 = 5,
 };
 
 // Enum BrickRigs.EBrickUIIconAtlas
-// NumValues: 0x0013
+// NumValues: 0x0014
 enum class EBrickUIIconAtlas : uint8
 {
 	Default                                  = 0,
@@ -148,6 +154,7 @@ enum class EBrickUIIconAtlas : uint8
 	SpinnerBrickShapeIcons                   = 16,
 	Custom                                   = 17,
 	Max                                      = 18,
+	EBrickUIIconAtlas_MAX                    = 19,
 };
 
 // Enum BrickRigs.EInputActionTriggerType
@@ -208,13 +215,14 @@ enum class EHUDIconDomain : uint8
 };
 
 // Enum BrickRigs.EHUDVisibility
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EHUDVisibility : uint8
 {
 	Full                                     = 0,
 	Minimal                                  = 1,
 	Off                                      = 2,
 	Max                                      = 3,
+	EHUDVisibility_MAX                       = 4,
 };
 
 // Enum BrickRigs.EInputMethod
@@ -245,12 +253,13 @@ enum class EColorDisplayMode : uint8
 };
 
 // Enum BrickRigs.EMeasurementSystem
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EMeasurementSystem : uint8
 {
 	Metric                                   = 0,
 	Imperial                                 = 1,
 	Max                                      = 2,
+	EMeasurementSystem_MAX                   = 3,
 };
 
 // Enum BrickRigs.EBrickEditorViewMode
@@ -287,7 +296,7 @@ enum class ECameraMode : uint8
 };
 
 // Enum BrickRigs.EChatContext
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EChatContext : uint8
 {
 	None                                     = 0,
@@ -295,10 +304,11 @@ enum class EChatContext : uint8
 	Team                                     = 2,
 	Admin                                    = 3,
 	Max                                      = 4,
+	EChatContext_MAX                         = 5,
 };
 
 // Enum BrickRigs.EUGCDepartmentTag
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EUGCDepartmentTag : uint8
 {
 	None                                     = 0,
@@ -307,10 +317,11 @@ enum class EUGCDepartmentTag : uint8
 	Police                                   = 3,
 	FireDepartment                           = 4,
 	Max                                      = 5,
+	EUGCDepartmentTag_MAX                    = 6,
 };
 
 // Enum BrickRigs.EUGCEraTag
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class EUGCEraTag : uint8
 {
 	None                                     = 0,
@@ -322,10 +333,11 @@ enum class EUGCEraTag : uint8
 	WW2                                      = 6,
 	WW1                                      = 7,
 	Max                                      = 8,
+	EUGCEraTag_MAX                           = 9,
 };
 
 // Enum BrickRigs.EUGCTypeTag
-// NumValues: 0x0011
+// NumValues: 0x0012
 enum class EUGCTypeTag : uint8
 {
 	None                                     = 0,
@@ -345,20 +357,22 @@ enum class EUGCTypeTag : uint8
 	Bus                                      = 14,
 	Motorcycle                               = 15,
 	Max                                      = 16,
+	EUGCTypeTag_MAX                          = 17,
 };
 
 // Enum BrickRigs.EUGCContentVersion
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EUGCContentVersion : uint8
 {
 	Default                                  = 0,
 	AutoSave                                 = 1,
 	Backup                                   = 2,
 	Max                                      = 3,
+	EUGCContentVersion_MAX                   = 4,
 };
 
 // Enum BrickRigs.EUGCType
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EUGCType : uint8
 {
 	None                                     = 0,
@@ -367,10 +381,11 @@ enum class EUGCType : uint8
 	Mod                                      = 3,
 	Collection                               = 4,
 	Max                                      = 5,
+	EUGCType_MAX                             = 6,
 };
 
 // Enum BrickRigs.EUGCFileType
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class EUGCFileType : uint8
 {
 	None                                     = 0,
@@ -381,6 +396,7 @@ enum class EUGCFileType : uint8
 	Online                                   = 5,
 	Inline                                   = 6,
 	Max                                      = 7,
+	EUGCFileType_MAX                         = 8,
 };
 
 // Enum BrickRigs.EMatchVehicleFilter
@@ -486,7 +502,7 @@ enum class EAdminRole : uint8
 };
 
 // Enum BrickRigs.EAmmoType
-// NumValues: 0x0007
+// NumValues: 0x0008
 enum class EAmmoType : uint8
 {
 	Default                                  = 0,
@@ -496,6 +512,7 @@ enum class EAmmoType : uint8
 	Guided                                   = 4,
 	Flare                                    = 5,
 	Max                                      = 6,
+	EAmmoType_MAX                            = 7,
 };
 
 // Enum BrickRigs.EAttachmentTag
@@ -547,7 +564,7 @@ enum class EConnectorShape : uint8
 };
 
 // Enum BrickRigs.EConnectorSpacing
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class EConnectorSpacing : uint8
 {
 	None                                     = 0,
@@ -558,6 +575,7 @@ enum class EConnectorSpacing : uint8
 	Triple                                   = 5,
 	Quadruple                                = 6,
 	Max                                      = 7,
+	EConnectorSpacing_MAX                    = 8,
 };
 
 // Enum BrickRigs.EConnectorGender
@@ -966,7 +984,7 @@ enum class ELightBrickDirection : uint8
 };
 
 // Enum BrickRigs.EMathBrickOperation
-// NumValues: 0x0022
+// NumValues: 0x0023
 enum class EMathBrickOperation : uint8
 {
 	Add                                      = 0,
@@ -1003,6 +1021,7 @@ enum class EMathBrickOperation : uint8
 	Atan                                     = 30,
 	AtanDeg                                  = 31,
 	MAX_Unary                                = 30,
+	EMathBrickOperation_MAX                  = 32,
 };
 
 // Enum BrickRigs.EMenuPageSize
@@ -1168,7 +1187,7 @@ enum class ESensorType : uint8
 };
 
 // Enum BrickRigs.ESpinnerBrickShape
-// NumValues: 0x000E
+// NumValues: 0x000F
 enum class ESpinnerBrickShape : uint8
 {
 	Rectangle                                = 0,
@@ -1185,6 +1204,7 @@ enum class ESpinnerBrickShape : uint8
 	QuarterCircleOut                         = 11,
 	Diamond                                  = 12,
 	Max                                      = 13,
+	ESpinnerBrickShape_MAX                   = 14,
 };
 
 // Enum BrickRigs.EUGCBrowserMode
@@ -1213,7 +1233,7 @@ enum class EUGCTaskPopupType : uint8
 };
 
 // Enum BrickRigs.EUGCSortMethod
-// NumValues: 0x000B
+// NumValues: 0x000C
 enum class EUGCSortMethod : uint8
 {
 	TitleAsc                                 = 0,
@@ -1227,10 +1247,11 @@ enum class EUGCSortMethod : uint8
 	TotalUniqueSubscriptions                 = 8,
 	SearchRelevancy                          = 9,
 	Max                                      = 10,
+	EUGCSortMethod_MAX                       = 11,
 };
 
 // Enum BrickRigs.EUGCQueryType
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EUGCQueryType : uint8
 {
 	Local                                    = 0,
@@ -1243,10 +1264,11 @@ enum class EUGCQueryType : uint8
 	Featured                                 = 7,
 	Children                                 = 8,
 	Max                                      = 9,
+	EUGCQueryType_MAX                        = 10,
 };
 
 // Enum BrickRigs.EVehicleDashboardType
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EVehicleDashboardType : uint8
 {
 	None                                     = 0,
@@ -1255,10 +1277,11 @@ enum class EVehicleDashboardType : uint8
 	Aircraft                                 = 3,
 	Advanced                                 = 4,
 	Max                                      = 5,
+	EVehicleDashboardType_MAX                = 6,
 };
 
 // Enum BrickRigs.EVehicleInputAxis
-// NumValues: 0x002F
+// NumValues: 0x0030
 enum class EVehicleInputAxis : uint8
 {
 	None                                     = 0,
@@ -1308,6 +1331,7 @@ enum class EVehicleInputAxis : uint8
 	AlwaysOn                                 = 32,
 	Custom                                   = 33,
 	Max                                      = 34,
+	EVehicleInputAxis_MAX                    = 35,
 };
 
 // Enum BrickRigs.EWearableTag
@@ -1320,17 +1344,18 @@ enum class EWearableTag : uint8
 };
 
 // Enum BrickRigs.EPrecipitationType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EPrecipitationType : uint8
 {
 	None                                     = 0,
 	Rain                                     = 1,
 	Snow                                     = 2,
 	Max                                      = 3,
+	EPrecipitationType_MAX                   = 4,
 };
 
 // Enum BrickRigs.EMainWidgetType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMainWidgetType : uint8
 {
 	None                                     = 0,
@@ -1338,54 +1363,42 @@ enum class EMainWidgetType : uint8
 	Menu                                     = 2,
 	HUD                                      = 3,
 	Max                                      = 4,
+	EMainWidgetType_MAX                      = 5,
 };
 
-// ScriptStruct BrickRigs.AmmoInfo
-// 0x000C (0x000C - 0x0000)
-struct FAmmoInfo final
+// ScriptStruct BrickRigs.DestructibleInstanceDamageItem
+// 0x0010 (0x001C - 0x000C)
+struct FDestructibleInstanceDamageItem final : public FFastArraySerializerItem
 {
 public:
-	struct FGameplayTag                           Caliber;                                           // 0x0000(0x0008)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAmmoType                                     Type;                                              // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x10];                                       // 0x000C(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAmmoInfo;
+DUMPER7_ASSERTS_FDestructibleInstanceDamageItem;
 
 // ScriptStruct BrickRigs.BrickUIBrushStyle
-// 0x0770 (0x0770 - 0x0000)
+// 0x08C0 (0x08C0 - 0x0000)
 struct FBrickUIBrushStyle final
 {
 public:
-	struct FSlateBrush                            Brushes[0xE];                                      // 0x0000(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            Brushes[0xE];                                      // 0x0000(0x00A0)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FBrickUIBrushStyle;
 
-// ScriptStruct BrickRigs.BrickEditorObjectEditorParams
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x04) FBrickEditorObjectEditorParams
+// ScriptStruct BrickRigs.BrickStructPropertyInterface
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FBrickStructPropertyInterface
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBrickEditorObjectEditorParams;
+DUMPER7_ASSERTS_FBrickStructPropertyInterface;
 
-// ScriptStruct BrickRigs.BrickEditorParams
-// 0x0018 (0x0028 - 0x0010)
-struct alignas(0x08) FBrickEditorParams : public FBrickEditorObjectEditorParams
+// ScriptStruct BrickRigs.PagedListEntry
+// 0x0000 (0x0008 - 0x0008)
+struct FPagedListEntry : public FBrickStructPropertyInterface
 {
-public:
-	uint8                                         Pad_10[0x18];                                      // 0x0010(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBrickEditorParams;
-
-// ScriptStruct BrickRigs.AxleBrickEditorParams
-// 0x0010 (0x0038 - 0x0028)
-struct FAxleBrickEditorParams final : public FBrickEditorParams
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAxleBrickEditorParams;
+DUMPER7_ASSERTS_FPagedListEntry;
 
 // ScriptStruct BrickRigs.BrickUIIconAtlas
 // 0x0010 (0x0010 - 0x0000)
@@ -1399,251 +1412,6 @@ public:
 	int32                                         StartIndex;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FBrickUIIconAtlas;
-
-// ScriptStruct BrickRigs.WinchAttachTarget
-// 0x001C (0x001C - 0x0000)
-struct alignas(0x04) FWinchAttachTarget final
-{
-public:
-	uint8                                         Pad_0[0x1C];                                       // 0x0000(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FWinchAttachTarget;
-
-// ScriptStruct BrickRigs.ActuatorBrickEditorParams
-// 0x0010 (0x0038 - 0x0028)
-struct FActuatorBrickEditorParams final : public FBrickEditorParams
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FActuatorBrickEditorParams;
-
-// ScriptStruct BrickRigs.InteractionOption
-// 0x0050 (0x0050 - 0x0000)
-struct FInteractionOption final
-{
-public:
-	TDelegate<void(class ABrickPlayerController* InPC)> OnInteractionDelegate;                       // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	TDelegate<void(class ABrickPlayerController* InPC)> OnReleasedDelegate;                          // 0x0010(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	TDelegate<void(class ABrickPlayerController* InPC, float Val)> OnInteractionAxisDelegate;        // 0x0020(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	class FText                                   DisplayText;                                       // 0x0030(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0048(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FInteractionOption;
-
-// ScriptStruct BrickRigs.InteractionOptions
-// 0x0068 (0x0068 - 0x0000)
-struct FInteractionOptions final
-{
-public:
-	EHUDIconDomain                                Domain;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EInteractionOptionSlot, struct FInteractionOption> Options;                                 // 0x0008(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FInteractionOption>             AdditionalOptions;                                 // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FInteractionOptions;
-
-// ScriptStruct BrickRigs.BrickUIColorStyle
-// 0x00E0 (0x00E0 - 0x0000)
-struct FBrickUIColorStyle final
-{
-public:
-	struct FLinearColor                           Colors[0xE];                                       // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBrickUIColorStyle;
-
-// ScriptStruct BrickRigs.DestructibleInstance
-// 0x0040 (0x0040 - 0x0000)
-struct FDestructibleInstance final
-{
-public:
-	struct FTransform                             InstanceTransform;                                 // 0x0000(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDestructibleInstance;
-
-// ScriptStruct BrickRigs.DestructibleInstanceArray
-// 0x0038 (0x0038 - 0x0000)
-struct FDestructibleInstanceArray final
-{
-public:
-	class UDestructibleInstanceTemplate*          Template;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             MaterialOverrides;                                 // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDestructibleInstance>          Instances;                                         // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDestructibleInstanceArray;
-
-// ScriptStruct BrickRigs.HUDIconContext
-// 0x0008 (0x0008 - 0x0000)
-struct FHUDIconContext final
-{
-public:
-	EHUDIconDomain                                Domain;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EHUDVisibility                                hudvisibility;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShowInteraction;                                  // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DrawDistanceScale;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FHUDIconContext;
-
-// ScriptStruct BrickRigs.LegacyBrickMaterialReplacement
-// 0x0020 (0x0020 - 0x0000)
-struct FLegacyBrickMaterialReplacement final
-{
-public:
-	class UBrickMaterial*                         BrickMaterial;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UBrickPattern>              Pattern;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLegacyBrickMaterialReplacement;
-
-// ScriptStruct BrickRigs.TooltipContent
-// 0x0040 (0x0040 - 0x0000)
-struct FTooltipContent final
-{
-public:
-	class FText                                   TitleText;                                         // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   ContentText;                                       // 0x0018(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FName                                   ActionName;                                        // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInputActionTriggerType                       TriggerType;                                       // 0x0038(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIColorStyle                            ColorStyle;                                        // 0x0039(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTooltipContent;
-
-// ScriptStruct BrickRigs.HUDIconProperties
-// 0x0030 (0x0030 - 0x0000)
-struct FHUDIconProperties final
-{
-public:
-	TSoftClassPtr<class UClass>                   IconWidgetClass;                                   // 0x0000(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         VisibilityFlags;                                   // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHUDVisibility                                MaxHUDVisibility;                                  // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxDrawDist;                                       // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDIconProperties;
-
-// ScriptStruct BrickRigs.LegacyBrickEditorObjectClass
-// 0x0010 (0x0010 - 0x0000)
-struct FLegacyBrickEditorObjectClass final
-{
-public:
-	class FString                                 Suffix;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLegacyBrickEditorObjectClass;
-
-// ScriptStruct BrickRigs.LegacyBrickEditorObjectClassCategory
-// 0x0028 (0x0028 - 0x0000)
-struct FLegacyBrickEditorObjectClassCategory final
-{
-public:
-	class FString                                 Prefix;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UBrickEditorObjectStaticInfo> ReplacementClass;                                // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FLegacyBrickEditorObjectClass>  LegacyClasses;                                     // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLegacyBrickEditorObjectClassCategory;
-
-// ScriptStruct BrickRigs.InputChannelChangedParams
-// 0x0008 (0x0008 - 0x0000)
-struct FInputChannelChangedParams final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsRepairing;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FInputChannelChangedParams;
-
-// ScriptStruct BrickRigs.BoneFlinchInfo
-// 0x000C (0x000C - 0x0000)
-struct FBoneFlinchInfo final
-{
-public:
-	class FName                                   BoneName;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxFlinchAngle;                                    // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBoneFlinchInfo;
-
-// ScriptStruct BrickRigs.BrickStructPropertyInterface
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FBrickStructPropertyInterface
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBrickStructPropertyInterface;
-
-// ScriptStruct BrickRigs.MuzzleEffect
-// 0x0050 (0x0050 - 0x0000)
-struct FMuzzleEffect final
-{
-public:
-	TSoftObjectPtr<class UParticleSystem>         Emitter;                                           // 0x0000(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              Sound;                                             // 0x0028(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMuzzleEffect;
-
-// ScriptStruct BrickRigs.ProjectileParams
-// 0x0018 (0x0018 - 0x0000)
-struct FProjectileParams final
-{
-public:
-	float                                         InitialSpeed;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDamage;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinDamage;                                         // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DropoffStart;                                      // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DropoffEnd;                                        // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxRange;                                          // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FProjectileParams;
-
-// ScriptStruct BrickRigs.FirearmProperties
-// 0x0090 (0x0090 - 0x0000)
-struct FFirearmProperties final
-{
-public:
-	int32                                         AmmoCapacity;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Caliber;                                           // 0x0004(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAmmoType                                     DefaultAmmoType;                                   // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x1];                                        // 0x000D(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint16                                        SupportedAmmoTypes;                                // 0x000E(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ABrickProjectile>           ProjectileClass;                                   // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FProjectileParams                      ProjectileParams;                                  // 0x0018(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         NumProjectilesPerShot;                             // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SpreadRadius;                                      // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoltCycleTime;                                     // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bHasSemiMode : 1;                                  // 0x003C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bHasAutoMode : 1;                                  // 0x003C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BurstRounds;                                       // 0x003D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMuzzleEffect                          MuzzleEffect;                                      // 0x0040(0x0050)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFirearmProperties;
-
-// ScriptStruct BrickRigs.BoneDamageGroup
-// 0x0018 (0x0018 - 0x0000)
-struct FBoneDamageGroup final
-{
-public:
-	TArray<class FName>                           BoneNames;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         DamageScale;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeChildBones;                                // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBoneDamageGroup;
-
-// ScriptStruct BrickRigs.RepBrickDamageItem
-// 0x0034 (0x0040 - 0x000C)
-struct alignas(0x08) FRepBrickDamageItem final : public FFastArraySerializerItem
-{
-public:
-	uint8                                         Pad_C[0x34];                                       // 0x000C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRepBrickDamageItem;
 
 // ScriptStruct BrickRigs.WorldSetupParams
 // 0x0028 (0x0030 - 0x0008)
@@ -1661,93 +1429,64 @@ public:
 };
 DUMPER7_ASSERTS_FWorldSetupParams;
 
-// ScriptStruct BrickRigs.ItemAimParams
+// ScriptStruct BrickRigs.BrickUIColorStyle
+// 0x00E0 (0x00E0 - 0x0000)
+struct FBrickUIColorStyle final
+{
+public:
+	struct FLinearColor                           Colors[0xE];                                       // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBrickUIColorStyle;
+
+// ScriptStruct BrickRigs.InteractionOption
+// 0x0060 (0x0060 - 0x0000)
+struct FInteractionOption final
+{
+public:
+	TDelegate<void(class ABrickPlayerController* InPC)> OnInteractionDelegate;                       // 0x0000(0x0014)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(class ABrickPlayerController* InPC)> OnReleasedDelegate;                          // 0x0014(0x0014)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(class ABrickPlayerController* InPC, float Val)> OnInteractionAxisDelegate;        // 0x0028(0x0014)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayText;                                       // 0x0040(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0058(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FInteractionOption;
+
+// ScriptStruct BrickRigs.InteractionOptions
+// 0x0068 (0x0068 - 0x0000)
+struct FInteractionOptions final
+{
+public:
+	EHUDIconDomain                                Domain;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EInteractionOptionSlot, struct FInteractionOption> Options;                                 // 0x0008(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FInteractionOption>             AdditionalOptions;                                 // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FInteractionOptions;
+
+// ScriptStruct BrickRigs.BrickConnectionParams
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x02) FBrickConnectionParams final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBrickConnectionParams;
+
+// ScriptStruct BrickRigs.TooltipContent
 // 0x0040 (0x0040 - 0x0000)
-struct alignas(0x10) FItemAimParams final
+struct FTooltipContent final
 {
 public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EyeDistance;                                       // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinEyeDistance;                                    // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Magnification;                                     // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   TitleText;                                         // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   ContentText;                                       // 0x0018(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FName                                   ActionName;                                        // 0x0030(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInputActionTriggerType                       TriggerType;                                       // 0x003C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x003D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemAimParams;
-
-// ScriptStruct BrickRigs.CharacterAnimInstanceProxy
-// 0x00D0 (0x0840 - 0x0770)
-struct FCharacterAnimInstanceProxy : public FAnimInstanceProxy
-{
-public:
-	uint8                                         Pad_770[0x64];                                     // 0x0770(0x0064)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               ViewRotation;                                      // 0x07D4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsViewTarget;                                     // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsConscious;                                      // 0x07E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7E2[0x2];                                      // 0x07E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MovementDirection;                                 // 0x07E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Speed;                                             // 0x07E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxSpeed;                                          // 0x07EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WalkSpeedRatio;                                    // 0x07F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CrouchSpeedRatio;                                  // 0x07F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SprintRatio;                                       // 0x07F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BodyRotationOffset;                                // 0x07FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsMoving;                                         // 0x0800(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSprinting;                                      // 0x0801(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsCrouched;                                       // 0x0802(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsBodyRotating;                                   // 0x0803(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsMovingOrRotating;                               // 0x0804(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsWalking;                                        // 0x0805(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsFalling;                                        // 0x0806(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSwimming;                                       // 0x0807(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_808[0x8];                                      // 0x0808(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             RootTransform;                                     // 0x0810(0x0030)(Edit, BlueprintVisible, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCharacterAnimInstanceProxy;
-
-// ScriptStruct BrickRigs.BrickCharacterAnimInstanceProxy
-// 0x0200 (0x0A40 - 0x0840)
-struct FBrickCharacterAnimInstanceProxy final : public FCharacterAnimInstanceProxy
-{
-public:
-	uint8                                         Pad_840[0xD8];                                     // 0x0840(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AimRatio;                                          // 0x0918(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CameraDepthOffset;                                 // 0x091C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ArmsViewRotationAlpha;                             // 0x0920(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemBlendRatio;                                    // 0x0924(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_928[0x8];                                      // 0x0928(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FItemAimParams                         ItemAimParams;                                     // 0x0930(0x0040)(Edit, BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               ItemSwayRotation;                                  // 0x0970(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                WalkSwayOffset;                                    // 0x097C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               WalkSwayRotation;                                  // 0x0988(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         WeaponSupportRatio;                                // 0x0994(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_998[0x8];                                      // 0x0998(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ItemIdlePoseOffset;                                // 0x09A0(0x0030)(Edit, BlueprintVisible, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ItemSprintRatio;                                   // 0x09D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsWeaponBlocked;                                  // 0x09D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsCarryingBrick;                                  // 0x09D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInVehicle;                                      // 0x09D6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9D7[0x1];                                      // 0x09D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          VehicleIdleSequence;                               // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimInstance*                          VehicleAnimInstance;                               // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9E8[0x18];                                     // 0x09E8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         HandsIKAlpha;                                      // 0x0A00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LeftHandIKOffset;                                  // 0x0A04(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RightHandIKOffset;                                 // 0x0A10(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               HandsRotationOffset;                               // 0x0A1C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      ItemIdleSequence;                                  // 0x0A28(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      ItemSprintSequence;                                // 0x0A30(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A38[0x8];                                      // 0x0A38(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBrickCharacterAnimInstanceProxy;
-
-// ScriptStruct BrickRigs.BrickPropertySettings
-// 0x0050 (0x0050 - 0x0000)
-struct FBrickPropertySettings final
-{
-public:
-	TMap<class FName, class FString>              Settings;                                          // 0x0000(0x0050)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBrickPropertySettings;
+DUMPER7_ASSERTS_FTooltipContent;
 
 // ScriptStruct BrickRigs.BrickUIIconSlot
 // 0x0008 (0x0008 - 0x0000)
@@ -1774,35 +1513,133 @@ public:
 };
 DUMPER7_ASSERTS_FDisplayInfo;
 
-// ScriptStruct BrickRigs.PagedListEntry
-// 0x0000 (0x0008 - 0x0008)
-struct FPagedListEntry : public FBrickStructPropertyInterface
-{
-};
-DUMPER7_ASSERTS_FPagedListEntry;
-
-// ScriptStruct BrickRigs.BrickOnlineSessionInfo
-// 0x0160 (0x0168 - 0x0008)
-struct FBrickOnlineSessionInfo final : public FPagedListEntry
+// ScriptStruct BrickRigs.DragRaceTime
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FDragRaceTime final
 {
 public:
-	class FString                                 SessionName;                                       // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SessionDescription;                                // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelInfo*                             Level;                                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGameModeInfo*                          GameMode;                                          // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurrentPlayers;                                    // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxPlayers;                                        // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Ping;                                              // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AverageFrameRate;                                  // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDedicated;                                      // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPasswordProtected;                              // 0x0049(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsCompatibleBuild;                                // 0x004A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasMods;                                          // 0x004B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasSameMods;                                      // 0x004C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowDifferentMods;                               // 0x004D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4E[0x11A];                                     // 0x004E(0x011A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBrickOnlineSessionInfo;
+DUMPER7_ASSERTS_FDragRaceTime;
+
+// ScriptStruct BrickRigs.BrickPropertySettings
+// 0x0050 (0x0050 - 0x0000)
+struct FBrickPropertySettings final
+{
+public:
+	TMap<class FName, class FString>              Settings;                                          // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBrickPropertySettings;
+
+// ScriptStruct BrickRigs.HUDIconProperties
+// 0x0038 (0x0038 - 0x0000)
+struct FHUDIconProperties final
+{
+public:
+	TSoftClassPtr<class UClass>                   IconWidgetClass;                                   // 0x0000(0x0030)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         VisibilityFlags;                                   // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHUDVisibility                                MaxHUDVisibility;                                  // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxDrawDist;                                       // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FHUDIconProperties;
+
+// ScriptStruct BrickRigs.ChatMessagePlayerInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FChatMessagePlayerInfo final
+{
+public:
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerName;                                        // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChatMessagePlayerInfo;
+
+// ScriptStruct BrickRigs.KickedPlayer
+// 0x0058 (0x0060 - 0x0008)
+struct FKickedPlayer final : public FPagedListEntry
+{
+public:
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerName;                                        // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              KickTime;                                          // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              KickDuration;                                      // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 KickReason;                                        // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKickedPlayer;
+
+// ScriptStruct BrickRigs.CameraFadeParams
+// 0x001C (0x001C - 0x0000)
+struct FCameraFadeParams final
+{
+public:
+	float                                         FadeInTime;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeOutTime;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFadeHUD;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           FadeColor;                                         // 0x000C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCameraFadeParams;
+
+// ScriptStruct BrickRigs.HUDIconContext
+// 0x0008 (0x0008 - 0x0000)
+struct FHUDIconContext final
+{
+public:
+	EHUDIconDomain                                Domain;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHUDVisibility                                HUDVisibility;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowInteraction;                                  // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DrawDistanceScale;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FHUDIconContext;
+
+// ScriptStruct BrickRigs.AmmoInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FAmmoInfo final
+{
+public:
+	struct FGameplayTag                           Caliber;                                           // 0x0000(0x000C)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAmmoType                                     Type;                                              // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAmmoInfo;
+
+// ScriptStruct BrickRigs.ItemAnimation
+// 0x00E0 (0x00E0 - 0x0000)
+struct FItemAnimation
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CharacterMontage;                                  // 0x0028(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           ItemMontage;                                       // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             FoleySoundPtr;                                     // 0x0038(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAnimSequenceBase>       CharacterSequence;                                 // 0x0040(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAnimSequenceBase>       ItemSequence;                                      // 0x0070(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundBase>              FoleySound;                                        // 0x00A0(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Length;                                            // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayRate;                                          // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendInTime;                                       // 0x00D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendOutTime;                                      // 0x00DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FItemAnimation;
+
+// ScriptStruct BrickRigs.HealAnimation
+// 0x0000 (0x00E0 - 0x00E0)
+struct FHealAnimation final : public FItemAnimation
+{
+};
+DUMPER7_ASSERTS_FHealAnimation;
+
+// ScriptStruct BrickRigs.InputChannelChangedParams
+// 0x0008 (0x0008 - 0x0000)
+struct FInputChannelChangedParams final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsRepairing;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FInputChannelChangedParams;
 
 // ScriptStruct BrickRigs.UGCTags
 // 0x0003 (0x0003 - 0x0000)
@@ -1894,83 +1731,231 @@ public:
 };
 DUMPER7_ASSERTS_FMatchSettings;
 
-// ScriptStruct BrickRigs.BrickEditorObjectPtr
-// 0x000C (0x000C - 0x0000)
-struct alignas(0x04) FBrickEditorObjectPtr final
+// ScriptStruct BrickRigs.BrickComboBoxItemParams
+// 0x0160 (0x0160 - 0x0000)
+struct FBrickComboBoxItemParams final
 {
 public:
-	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsListItem;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDisplayInfo                           DisplayInfo;                                       // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0030(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_60[0xB0];                                      // 0x0060(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         IconSizeX;                                         // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         IconSizeY;                                         // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowEmptyIcon;                                    // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0119(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11A[0x6];                                      // 0x011A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTooltipContent                        TooltipContent;                                    // 0x0120(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBrickEditorObjectPtr;
+DUMPER7_ASSERTS_FBrickComboBoxItemParams;
 
-// ScriptStruct BrickRigs.SeatBrickEditorParams
-// 0x0018 (0x0040 - 0x0028)
-struct FSeatBrickEditorParams final : public FBrickEditorParams
+// ScriptStruct BrickRigs.DragRaceLane
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FDragRaceLane final
 {
 public:
-	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSeatBrickEditorParams;
+DUMPER7_ASSERTS_FDragRaceLane;
 
-// ScriptStruct BrickRigs.WalkSwayParams
-// 0x0080 (0x0080 - 0x0000)
-struct FWalkSwayParams final
+// ScriptStruct BrickRigs.TrainTrack
+// 0x0048 (0x0048 - 0x0000)
+struct FTrainTrack final
 {
 public:
-	struct FVector                                OffsetDelay;                                       // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OffsetAmplitude;                                   // 0x000C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationDelay;                                     // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationAmplitude;                                 // 0x0024(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ForwardOffset;                                     // 0x0030(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                StrafeOffset;                                      // 0x003C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               ForwardRotation;                                   // 0x0048(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               StrafeRotation;                                    // 0x0054(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         OffsetInterpSpeed;                                 // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationInterpSpeed;                               // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AimOffsetScale;                                    // 0x0068(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               AimRotationScale;                                  // 0x0074(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInterpCurveVector                     PositionCurve;                                     // 0x0000(0x0018)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 RollCurve;                                         // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FInterpCurveFloat                      TimeCurve;                                         // 0x0028(0x0018)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Length;                                            // 0x0040(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWalkSwayParams;
+DUMPER7_ASSERTS_FTrainTrack;
 
-// ScriptStruct BrickRigs.ItemAnimation
-// 0x00C8 (0x00C8 - 0x0000)
-struct FItemAnimation
+// ScriptStruct BrickRigs.BrickEditorObjectEditorParams
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x04) FBrickEditorObjectEditorParams
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CharacterMontage;                                  // 0x0028(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimMontage*                           ItemMontage;                                       // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             FoleySoundPtr;                                     // 0x0038(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAnimSequenceBase>       CharacterSequence;                                 // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAnimSequenceBase>       ItemSequence;                                      // 0x0068(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              FoleySound;                                        // 0x0090(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Length;                                            // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayRate;                                          // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendInTime;                                       // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendOutTime;                                      // 0x00C4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemAnimation;
+DUMPER7_ASSERTS_FBrickEditorObjectEditorParams;
 
-// ScriptStruct BrickRigs.ExtinguishAnimation
-// 0x0010 (0x00D8 - 0x00C8)
-struct FExtinguishAnimation final : public FItemAnimation
+// ScriptStruct BrickRigs.BrickEditorParams
+// 0x0018 (0x0030 - 0x0018)
+struct alignas(0x08) FBrickEditorParams : public FBrickEditorObjectEditorParams
 {
 public:
-	float                                         StartExtinguishTime;                               // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             StopExtinguishSound;                               // 0x00D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FExtinguishAnimation;
+DUMPER7_ASSERTS_FBrickEditorParams;
 
-// ScriptStruct BrickRigs.ChatMessagePlayerInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FChatMessagePlayerInfo final
+// ScriptStruct BrickRigs.ActuatorBrickEditorParams
+// 0x0010 (0x0040 - 0x0030)
+struct FActuatorBrickEditorParams final : public FBrickEditorParams
 {
 public:
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlayerName;                                        // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChatMessagePlayerInfo;
+DUMPER7_ASSERTS_FActuatorBrickEditorParams;
+
+// ScriptStruct BrickRigs.RepActuatorState
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x04) FRepActuatorState final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRepActuatorState;
+
+// ScriptStruct BrickRigs.ActuatorState
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x04) FActuatorState final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FActuatorState;
+
+// ScriptStruct BrickRigs.AnimNode_ItemBlend
+// 0x0160 (0x0170 - 0x0010)
+struct alignas(0x10) FAnimNode_ItemBlend final : public FAnimNode_Base
+{
+public:
+	uint8                                         Pad_10[0x70];                                      // 0x0010(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPoseLink                              BasePose;                                          // 0x0080(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPoseLink                              ItemPose;                                          // 0x0098(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         LeftHandBone;                                      // 0x00B0(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         LeftElbowBone;                                     // 0x00C4(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RightHandBone;                                     // 0x00D8(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RightElbowBone;                                    // 0x00EC(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         HeadBone;                                          // 0x0100(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         ItemBone;                                          // 0x0114(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         LeftClavicleBone;                                  // 0x0128(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RightClavicleBone;                                 // 0x013C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         AimCurveExponent;                                  // 0x0150(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AimTransitionLocationOffset;                       // 0x0154(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               AimTransitionRotationOffset;                       // 0x0160(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_ItemBlend;
+
+// ScriptStruct BrickRigs.AnimNode_ViewRotation
+// 0x0090 (0x00A0 - 0x0010)
+struct alignas(0x10) FAnimNode_ViewRotation final : public FAnimNode_Base
+{
+public:
+	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPoseLink                              InPose;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               ViewRotation;                                      // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ArmsAlpha;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseRootPitchAdjustement;                          // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RootPitchAdjustmentRate;                           // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RootBone;                                          // 0x0050(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         HeadBone;                                          // 0x0064(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FBoneReference>                 NeckBoneChain;                                     // 0x0078(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBoneReference>                 ArmBones;                                          // 0x0088(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_ViewRotation;
+
+// ScriptStruct BrickRigs.AxleBrickEditorParams
+// 0x0010 (0x0040 - 0x0030)
+struct FAxleBrickEditorParams final : public FBrickEditorParams
+{
+public:
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAxleBrickEditorParams;
+
+// ScriptStruct BrickRigs.BrickCarryInfo
+// 0x0030 (0x0030 - 0x0000)
+struct alignas(0x04) FBrickCarryInfo final
+{
+public:
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBrickCarryInfo;
+
+// ScriptStruct BrickRigs.CharacterAnimInstanceProxy
+// 0x00D0 (0x08E0 - 0x0810)
+struct FCharacterAnimInstanceProxy : public FAnimInstanceProxy
+{
+public:
+	uint8                                         Pad_810[0x64];                                     // 0x0810(0x0064)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ViewRotation;                                      // 0x0874(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsViewTarget;                                     // 0x0880(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsConscious;                                      // 0x0881(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_882[0x2];                                      // 0x0882(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MovementDirection;                                 // 0x0884(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x0888(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSpeed;                                          // 0x088C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WalkSpeedRatio;                                    // 0x0890(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CrouchSpeedRatio;                                  // 0x0894(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SprintRatio;                                       // 0x0898(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BodyRotationOffset;                                // 0x089C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsMoving;                                         // 0x08A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSprinting;                                      // 0x08A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCrouched;                                       // 0x08A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsBodyRotating;                                   // 0x08A3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsMovingOrRotating;                               // 0x08A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsWalking;                                        // 0x08A5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsFalling;                                        // 0x08A6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSwimming;                                       // 0x08A7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8A8[0x8];                                      // 0x08A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RootTransform;                                     // 0x08B0(0x0030)(Edit, BlueprintVisible, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCharacterAnimInstanceProxy;
+
+// ScriptStruct BrickRigs.ItemAimParams
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x10) FItemAimParams final
+{
+public:
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         EyeDistance;                                       // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinEyeDistance;                                    // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Magnification;                                     // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FItemAimParams;
+
+// ScriptStruct BrickRigs.BrickCharacterAnimInstanceProxy
+// 0x0200 (0x0AE0 - 0x08E0)
+struct FBrickCharacterAnimInstanceProxy final : public FCharacterAnimInstanceProxy
+{
+public:
+	uint8                                         Pad_8E0[0xD8];                                     // 0x08E0(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AimRatio;                                          // 0x09B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CameraDepthOffset;                                 // 0x09BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ArmsViewRotationAlpha;                             // 0x09C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemBlendRatio;                                    // 0x09C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9C8[0x8];                                      // 0x09C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FItemAimParams                         ItemAimParams;                                     // 0x09D0(0x0040)(Edit, BlueprintVisible, Transient, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               ItemSwayRotation;                                  // 0x0A10(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                WalkSwayOffset;                                    // 0x0A1C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               WalkSwayRotation;                                  // 0x0A28(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         WeaponSupportRatio;                                // 0x0A34(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A38[0x8];                                      // 0x0A38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ItemIdlePoseOffset;                                // 0x0A40(0x0030)(Edit, BlueprintVisible, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ItemSprintRatio;                                   // 0x0A70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsWeaponBlocked;                                  // 0x0A74(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCarryingBrick;                                  // 0x0A75(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInVehicle;                                      // 0x0A76(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A77[0x1];                                      // 0x0A77(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          VehicleIdleSequence;                               // 0x0A78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimInstance*                          VehicleAnimInstance;                               // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A88[0x18];                                     // 0x0A88(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HandsIKAlpha;                                      // 0x0AA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LeftHandIKOffset;                                  // 0x0AA4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RightHandIKOffset;                                 // 0x0AB0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               HandsRotationOffset;                               // 0x0ABC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      ItemIdleSequence;                                  // 0x0AC8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      ItemSprintSequence;                                // 0x0AD0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AD8[0x8];                                      // 0x0AD8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBrickCharacterAnimInstanceProxy;
 
 // ScriptStruct BrickRigs.BrickChatMessage
 // 0x00A8 (0x00A8 - 0x0000)
@@ -1989,236 +1974,8 @@ public:
 };
 DUMPER7_ASSERTS_FBrickChatMessage;
 
-// ScriptStruct BrickRigs.DistanceConstraint
-// 0x00B0 (0x00B0 - 0x0000)
-struct alignas(0x10) FDistanceConstraint final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinDistance;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDistance;                                       // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringStiffness;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringDampening;                                   // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BreakingForce;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InvMassScale0;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InvMassScale1;                                     // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x8C];                                      // 0x0024(0x008C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDistanceConstraint;
-
-// ScriptStruct BrickRigs.ClientDamageInfo
-// 0x000C (0x000C - 0x0000)
-struct FClientDamageInfo final
-{
-public:
-	ETeamAttitude                                 TeamAttitude;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Damage;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsHeadshot;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsKillshot;                                       // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FClientDamageInfo;
-
-// ScriptStruct BrickRigs.BrickComboBoxItemParams
-// 0x0140 (0x0140 - 0x0000)
-struct FBrickComboBoxItemParams final
-{
-public:
-	bool                                          bIsListItem;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDisplayInfo                           DisplayInfo;                                       // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x98];                                      // 0x0058(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         IconSizeX;                                         // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         IconSizeY;                                         // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowEmptyIcon;                                    // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x00F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTooltipContent                        TooltipContent;                                    // 0x0100(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBrickComboBoxItemParams;
-
-// ScriptStruct BrickRigs.TrainTrackSplineMeshInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FTrainTrackSplineMeshInfo final
-{
-public:
-	class UStaticMesh*                            StaticMesh;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RailOffset;                                        // 0x0008(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTrainTrackSplineMeshInfo;
-
-// ScriptStruct BrickRigs.RepBrickConnectionDamageItem
-// 0x0034 (0x0040 - 0x000C)
-struct alignas(0x08) FRepBrickConnectionDamageItem final : public FFastArraySerializerItem
-{
-public:
-	uint8                                         Pad_C[0x34];                                       // 0x000C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRepBrickConnectionDamageItem;
-
-// ScriptStruct BrickRigs.RepActuatorState
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x04) FRepActuatorState final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRepActuatorState;
-
-// ScriptStruct BrickRigs.VehicleOutputChannel
-// 0x0020 (0x0028 - 0x0008)
-struct FVehicleOutputChannel : public FBrickStructPropertyInterface
-{
-public:
-	float                                         CurrentValue;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C[0x1C];                                       // 0x000C(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FVehicleOutputChannel;
-
-// ScriptStruct BrickRigs.SensorOutputChannel
-// 0x0010 (0x0038 - 0x0028)
-struct FSensorOutputChannel final : public FVehicleOutputChannel
-{
-public:
-	float                                         MinIn;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxIn;                                             // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinOut;                                            // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxOut;                                            // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSensorOutputChannel;
-
-// ScriptStruct BrickRigs.ActuatorState
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x04) FActuatorState final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FActuatorState;
-
-// ScriptStruct BrickRigs.ViewTargetSharedParams
-// 0x0010 (0x0010 - 0x0000)
-struct FViewTargetSharedParams
-{
-public:
-	float                                         InputRate;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Step;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Exponent;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterpSpeed;                                       // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FViewTargetSharedParams;
-
-// ScriptStruct BrickRigs.ViewTargetCameraSpeedParams
-// 0x0008 (0x0018 - 0x0010)
-struct FViewTargetCameraSpeedParams final : public FViewTargetSharedParams
-{
-public:
-	struct FFloatInterval                         SpeedRange;                                        // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FViewTargetCameraSpeedParams;
-
-// ScriptStruct BrickRigs.AnimNode_ItemBlend
-// 0x0130 (0x0140 - 0x0010)
-struct alignas(0x10) FAnimNode_ItemBlend final : public FAnimNode_Base
-{
-public:
-	uint8                                         Pad_10[0x70];                                      // 0x0010(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPoseLink                              BasePose;                                          // 0x0080(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPoseLink                              ItemPose;                                          // 0x0090(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         LeftHandBone;                                      // 0x00A0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         LeftElbowBone;                                     // 0x00B0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RightHandBone;                                     // 0x00C0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RightElbowBone;                                    // 0x00D0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         HeadBone;                                          // 0x00E0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         ItemBone;                                          // 0x00F0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         LeftClavicleBone;                                  // 0x0100(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RightClavicleBone;                                 // 0x0110(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         AimCurveExponent;                                  // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AimTransitionLocationOffset;                       // 0x0124(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               AimTransitionRotationOffset;                       // 0x0130(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_ItemBlend;
-
-// ScriptStruct BrickRigs.AnimNode_ViewRotation
-// 0x0080 (0x0090 - 0x0010)
-struct alignas(0x10) FAnimNode_ViewRotation final : public FAnimNode_Base
-{
-public:
-	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPoseLink                              InPose;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               ViewRotation;                                      // 0x0030(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ArmsAlpha;                                         // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseRootPitchAdjustement;                          // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RootPitchAdjustmentRate;                           // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RootBone;                                          // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         HeadBone;                                          // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FBoneReference>                 NeckBoneChain;                                     // 0x0068(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FBoneReference>                 ArmBones;                                          // 0x0078(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_ViewRotation;
-
-// ScriptStruct BrickRigs.CameraFadeParams
-// 0x001C (0x001C - 0x0000)
-struct FCameraFadeParams final
-{
-public:
-	float                                         FadeInTime;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeOutTime;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFadeHUD;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           FadeColor;                                         // 0x000C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCameraFadeParams;
-
-// ScriptStruct BrickRigs.BrickCarryInfo
-// 0x0030 (0x0030 - 0x0000)
-struct alignas(0x04) FBrickCarryInfo final
-{
-public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBrickCarryInfo;
-
-// ScriptStruct BrickRigs.InventorySlotID
-// 0x0004 (0x0004 - 0x0000)
-struct FInventorySlotID final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FInventorySlotID;
-
-// ScriptStruct BrickRigs.MoveInventoryItemParams
-// 0x0024 (0x0024 - 0x0000)
-struct FMoveInventoryItemParams final
-{
-public:
-	TWeakObjectPtr<class UInventoryComponent>     FromInventory;                                     // 0x0000(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInventorySlotID                       FromSlotID;                                        // 0x0008(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UInventoryComponent>     ToInventory;                                       // 0x000C(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInventorySlotID                       ToSlotID;                                          // 0x0014(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AInventoryItem>          PickedUpItem;                                      // 0x001C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMoveInventoryItemParams;
-
-// ScriptStruct BrickRigs.BrickConnectionParams
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x02) FBrickConnectionParams final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBrickConnectionParams;
-
 // ScriptStruct BrickRigs.ConnectorField
-// 0x0030 (0x0030 - 0x0000)
+// 0x0034 (0x0034 - 0x0000)
 struct FConnectorField final
 {
 public:
@@ -2234,19 +1991,52 @@ public:
 	EConnectorShape                               Shape;                                             // 0x0025(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ShapeRelativeSize;                                 // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFemale;                                           // 0x0030(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FConnectorField;
 
+// ScriptStruct BrickRigs.LegacyBrickEditorObjectClass
+// 0x0010 (0x0010 - 0x0000)
+struct FLegacyBrickEditorObjectClass final
+{
+public:
+	class FString                                 Suffix;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLegacyBrickEditorObjectClass;
+
+// ScriptStruct BrickRigs.LegacyBrickEditorObjectClassCategory
+// 0x0028 (0x0028 - 0x0000)
+struct FLegacyBrickEditorObjectClassCategory final
+{
+public:
+	class FString                                 Prefix;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickEditorObjectStaticInfo> ReplacementClass;                                // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FLegacyBrickEditorObjectClass>  LegacyClasses;                                     // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLegacyBrickEditorObjectClassCategory;
+
+// ScriptStruct BrickRigs.LegacyBrickMaterialReplacement
+// 0x0020 (0x0020 - 0x0000)
+struct FLegacyBrickMaterialReplacement final
+{
+public:
+	class UBrickMaterial*                         BrickMaterial;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickPattern>              Pattern;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLegacyBrickMaterialReplacement;
+
 // ScriptStruct BrickRigs.BrickEditorObjectFilterParams
-// 0x0070 (0x0070 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct FBrickEditorObjectFilterParams final
 {
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   DisplayName;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FSoftClassPath                         ThumbnailOverrideClass;                            // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  FilterTags;                                        // 0x0040(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        BrickSizes;                                        // 0x0060(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                         ThumbnailOverrideClass;                            // 0x0028(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FilterTags;                                        // 0x0048(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        BrickSizes;                                        // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FBrickEditorObjectFilterParams;
 
@@ -2259,6 +2049,52 @@ public:
 };
 DUMPER7_ASSERTS_FBrickEditorObjectID;
 
+// ScriptStruct BrickRigs.BrickEditorObjectPtr
+// 0x000C (0x000C - 0x0000)
+struct alignas(0x04) FBrickEditorObjectPtr final
+{
+public:
+	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBrickEditorObjectPtr;
+
+// ScriptStruct BrickRigs.BrickOnlineSessionInfo
+// 0x0160 (0x0168 - 0x0008)
+struct FBrickOnlineSessionInfo final : public FPagedListEntry
+{
+public:
+	class FString                                 SessionName;                                       // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SessionDescription;                                // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelInfo*                             Level;                                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameModeInfo*                          GameMode;                                          // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrentPlayers;                                    // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxPlayers;                                        // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Ping;                                              // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AverageFrameRate;                                  // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDedicated;                                      // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPasswordProtected;                              // 0x0049(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCompatibleBuild;                                // 0x004A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasMods;                                          // 0x004B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasSameMods;                                      // 0x004C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowDifferentMods;                               // 0x004D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4E[0x11A];                                     // 0x004E(0x011A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBrickOnlineSessionInfo;
+
+// ScriptStruct BrickRigs.ProjectileParams
+// 0x0018 (0x0018 - 0x0000)
+struct FProjectileParams final
+{
+public:
+	float                                         InitialSpeed;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDamage;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinDamage;                                         // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DropoffStart;                                      // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DropoffEnd;                                        // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxRange;                                          // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FProjectileParams;
+
 // ScriptStruct BrickRigs.BrickPropertyReflectionFilter
 // 0x0020 (0x0020 - 0x0000)
 struct FBrickPropertyReflectionFilter final
@@ -2267,6 +2103,17 @@ public:
 	struct FGameplayTagContainer                  Tags;                                              // 0x0000(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FBrickPropertyReflectionFilter;
+
+// ScriptStruct BrickRigs.TrainTrackSplineMeshInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FTrainTrackSplineMeshInfo final
+{
+public:
+	class UStaticMesh*                            StaticMesh;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RailOffset;                                        // 0x0008(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTrainTrackSplineMeshInfo;
 
 // ScriptStruct BrickRigs.TrainSpawnInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -2288,23 +2135,83 @@ public:
 };
 DUMPER7_ASSERTS_FCharacterDamageInfo;
 
-// ScriptStruct BrickRigs.ItemAnimInstanceProxy
-// 0x0020 (0x0790 - 0x0770)
-struct FItemAnimInstanceProxy : public FAnimInstanceProxy
+// ScriptStruct BrickRigs.WalkSwayParams
+// 0x0080 (0x0080 - 0x0000)
+struct FWalkSwayParams final
 {
 public:
-	uint8                                         Pad_770[0x20];                                     // 0x0770(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                OffsetDelay;                                       // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OffsetAmplitude;                                   // 0x000C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationDelay;                                     // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationAmplitude;                                 // 0x0024(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ForwardOffset;                                     // 0x0030(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                StrafeOffset;                                      // 0x003C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               ForwardRotation;                                   // 0x0048(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               StrafeRotation;                                    // 0x0054(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         OffsetInterpSpeed;                                 // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationInterpSpeed;                               // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AimOffsetScale;                                    // 0x0068(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               AimRotationScale;                                  // 0x0074(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemAnimInstanceProxy;
+DUMPER7_ASSERTS_FWalkSwayParams;
 
-// ScriptStruct BrickRigs.DestructibleInstanceDamageItem
-// 0x0010 (0x001C - 0x000C)
-struct FDestructibleInstanceDamageItem final : public FFastArraySerializerItem
+// ScriptStruct BrickRigs.BoneDamageGroup
+// 0x0018 (0x0018 - 0x0000)
+struct FBoneDamageGroup final
 {
 public:
-	uint8                                         Pad_C[0x10];                                       // 0x000C(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           BoneNames;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         DamageScale;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeChildBones;                                // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDestructibleInstanceDamageItem;
+DUMPER7_ASSERTS_FBoneDamageGroup;
+
+// ScriptStruct BrickRigs.BoneFlinchInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FBoneFlinchInfo final
+{
+public:
+	class FName                                   BoneName;                                          // 0x0000(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxFlinchAngle;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBoneFlinchInfo;
+
+// ScriptStruct BrickRigs.ClientDamageInfo
+// 0x000C (0x000C - 0x0000)
+struct FClientDamageInfo final
+{
+public:
+	ETeamAttitude                                 TeamAttitude;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Damage;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsHeadshot;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsKillshot;                                       // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FClientDamageInfo;
+
+// ScriptStruct BrickRigs.DestructibleInstance
+// 0x0070 (0x0070 - 0x0000)
+struct FDestructibleInstance final
+{
+public:
+	struct FTransform                             InstanceTransform;                                 // 0x0000(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x40];                                      // 0x0030(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDestructibleInstance;
+
+// ScriptStruct BrickRigs.DestructibleInstanceArray
+// 0x0038 (0x0038 - 0x0000)
+struct FDestructibleInstanceArray final
+{
+public:
+	class UDestructibleInstanceTemplate*          Template;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             MaterialOverrides;                                 // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FDestructibleInstance>          Instances;                                         // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDestructibleInstanceArray;
 
 // ScriptStruct BrickRigs.DestructibleInstanceDamageArray
 // 0x0018 (0x0120 - 0x0108)
@@ -2316,23 +2223,22 @@ public:
 };
 DUMPER7_ASSERTS_FDestructibleInstanceDamageArray;
 
-// ScriptStruct BrickRigs.DragRaceLane
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FDragRaceLane final
+// ScriptStruct BrickRigs.DistanceConstraint
+// 0x00C0 (0x00C0 - 0x0000)
+struct alignas(0x10) FDistanceConstraint final
 {
 public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinDistance;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistance;                                       // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringStiffness;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringDampening;                                   // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BreakingForce;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InvMassScale0;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InvMassScale1;                                     // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x9C];                                      // 0x0024(0x009C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDragRaceLane;
-
-// ScriptStruct BrickRigs.DragRaceTime
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FDragRaceTime final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDragRaceTime;
+DUMPER7_ASSERTS_FDistanceConstraint;
 
 // ScriptStruct BrickRigs.ElevatorState
 // 0x000C (0x000C - 0x0000)
@@ -2346,14 +2252,58 @@ public:
 };
 DUMPER7_ASSERTS_FElevatorState;
 
+// ScriptStruct BrickRigs.ItemAnimInstanceProxy
+// 0x0020 (0x0830 - 0x0810)
+struct FItemAnimInstanceProxy : public FAnimInstanceProxy
+{
+public:
+	uint8                                         Pad_810[0x20];                                     // 0x0810(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FItemAnimInstanceProxy;
+
 // ScriptStruct BrickRigs.FirearmAnimInstanceProxy
-// 0x0080 (0x0810 - 0x0790)
+// 0x0090 (0x08C0 - 0x0830)
 struct FFirearmAnimInstanceProxy final : public FItemAnimInstanceProxy
 {
 public:
-	uint8                                         Pad_790[0x80];                                     // 0x0790(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_830[0x90];                                     // 0x0830(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFirearmAnimInstanceProxy;
+
+// ScriptStruct BrickRigs.MuzzleEffect
+// 0x0060 (0x0060 - 0x0000)
+struct FMuzzleEffect final
+{
+public:
+	TSoftObjectPtr<class UParticleSystem>         Emitter;                                           // 0x0000(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundBase>              Sound;                                             // 0x0030(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMuzzleEffect;
+
+// ScriptStruct BrickRigs.FirearmProperties
+// 0x00A8 (0x00A8 - 0x0000)
+struct FFirearmProperties final
+{
+public:
+	int32                                         AmmoCapacity;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Caliber;                                           // 0x0004(0x000C)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAmmoType                                     DefaultAmmoType;                                   // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x1];                                       // 0x0011(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint16                                        SupportedAmmoTypes;                                // 0x0012(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class ABrickProjectile>           ProjectileClass;                                   // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FProjectileParams                      ProjectileParams;                                  // 0x0020(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         NumProjectilesPerShot;                             // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SpreadRadius;                                      // 0x003C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoltCycleTime;                                     // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bHasSemiMode : 1;                                  // 0x0044(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bHasAutoMode : 1;                                  // 0x0044(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BurstRounds;                                       // 0x0045(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMuzzleEffect                          MuzzleEffect;                                      // 0x0048(0x0060)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFirearmProperties;
 
 // ScriptStruct BrickRigs.FirearmState
 // 0x0006 (0x0006 - 0x0000)
@@ -2365,44 +2315,44 @@ public:
 DUMPER7_ASSERTS_FFirearmState;
 
 // ScriptStruct BrickRigs.FireExtinguisherProperties
-// 0x0068 (0x0068 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct FFireExtinguisherProperties final
 {
 public:
-	TSoftObjectPtr<class UParticleSystem>         Emitter;                                           // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              Sound;                                             // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             ExtinguishSound;                                   // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtinguishRadius;                                  // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtinguishDistance;                                // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtinguishProbability;                             // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UParticleSystem>         Emitter;                                           // 0x0000(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundBase>              Sound;                                             // 0x0030(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             ExtinguishSound;                                   // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtinguishRadius;                                  // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtinguishDistance;                                // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtinguishProbability;                             // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFireExtinguisherProperties;
 
 // ScriptStruct BrickRigs.ScalableBrickBaseEditorParams
-// 0x0008 (0x0030 - 0x0028)
-struct FScalableBrickBaseEditorParams : public FBrickEditorParams
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FScalableBrickBaseEditorParams;
-
-// ScriptStruct BrickRigs.ScalableBrickEditorParams
 // 0x0008 (0x0038 - 0x0030)
-struct FScalableBrickEditorParams : public FScalableBrickBaseEditorParams
+struct FScalableBrickBaseEditorParams : public FBrickEditorParams
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FScalableBrickEditorParams;
+DUMPER7_ASSERTS_FScalableBrickBaseEditorParams;
 
-// ScriptStruct BrickRigs.FlapBrickEditorParams
+// ScriptStruct BrickRigs.ScalableBrickEditorParams
 // 0x0008 (0x0040 - 0x0038)
-struct FFlapBrickEditorParams final : public FScalableBrickEditorParams
+struct FScalableBrickEditorParams : public FScalableBrickBaseEditorParams
 {
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FScalableBrickEditorParams;
+
+// ScriptStruct BrickRigs.FlapBrickEditorParams
+// 0x0008 (0x0048 - 0x0040)
+struct FFlapBrickEditorParams final : public FScalableBrickEditorParams
+{
+public:
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFlapBrickEditorParams;
 
@@ -2427,16 +2377,16 @@ public:
 DUMPER7_ASSERTS_FFuelTankParams;
 
 // ScriptStruct BrickRigs.GrenadeAnimInstanceProxy
-// 0x0050 (0x07E0 - 0x0790)
+// 0x0060 (0x0890 - 0x0830)
 struct FGrenadeAnimInstanceProxy final : public FItemAnimInstanceProxy
 {
 public:
-	uint8                                         Pad_790[0x50];                                     // 0x0790(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_830[0x60];                                     // 0x0830(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGrenadeAnimInstanceProxy;
 
 // ScriptStruct BrickRigs.DefaultInputMapping
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FDefaultInputMapping final
 {
 public:
@@ -2445,9 +2395,9 @@ public:
 	uint8                                         bAlt : 1;                                          // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bCmd : 1;                                          // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   Key;                                               // 0x0008(0x0018)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKey                                   Key;                                               // 0x0008(0x0020)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDefaultInputMapping;
 
@@ -2475,6 +2425,15 @@ public:
 	TArray<struct FDefaultInputMapping>           DefaultMappings;                                   // 0x00D0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FInputTableRow;
+
+// ScriptStruct BrickRigs.InventorySlotID
+// 0x0004 (0x0004 - 0x0000)
+struct FInventorySlotID final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FInventorySlotID;
 
 // ScriptStruct BrickRigs.InventoryItemRef
 // 0x0010 (0x0010 - 0x0000)
@@ -2509,29 +2468,44 @@ public:
 };
 DUMPER7_ASSERTS_FInventory;
 
+// ScriptStruct BrickRigs.MoveInventoryItemParams
+// 0x0024 (0x0024 - 0x0000)
+struct FMoveInventoryItemParams final
+{
+public:
+	TWeakObjectPtr<class UInventoryComponent>     FromInventory;                                     // 0x0000(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInventorySlotID                       FromSlotID;                                        // 0x0008(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UInventoryComponent>     ToInventory;                                       // 0x000C(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInventorySlotID                       ToSlotID;                                          // 0x0014(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Amount;                                            // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AInventoryItem>          PickedUpItem;                                      // 0x001C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMoveInventoryItemParams;
+
 // ScriptStruct BrickRigs.InventorySpecialSlot
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct FInventorySpecialSlot final
 {
 public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 	struct FGameplayTagContainer                  ItemTags;                                          // 0x0018(0x0020)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	class FName                                   SocketName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   SocketName;                                        // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FInventorySpecialSlot;
 
 // ScriptStruct BrickRigs.InventoryProperties
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct FInventoryProperties final
 {
 public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0018)(Edit, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              ItemAddedSound;                                    // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumWildcardSlots;                                  // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FInventorySpecialSlot>          SpecialSlots;                                      // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         MaxAmountPerSlot;                                  // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class USoundBase>              ItemAddedSound;                                    // 0x0018(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumWildcardSlots;                                  // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FInventorySpecialSlot>          SpecialSlots;                                      // 0x0050(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         MaxAmountPerSlot;                                  // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FInventoryProperties;
 
@@ -2556,72 +2530,76 @@ public:
 };
 DUMPER7_ASSERTS_FInventoryLoadout;
 
+// ScriptStruct BrickRigs.ExtinguishAnimation
+// 0x0010 (0x00F0 - 0x00E0)
+struct FExtinguishAnimation final : public FItemAnimation
+{
+public:
+	float                                         StartExtinguishTime;                               // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             StopExtinguishSound;                               // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FExtinguishAnimation;
+
 // ScriptStruct BrickRigs.SprayAnimation
-// 0x0008 (0x00D0 - 0x00C8)
+// 0x0008 (0x00E8 - 0x00E0)
 struct FSprayAnimation final : public FItemAnimation
 {
 public:
-	float                                         SprayTime;                                         // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SprayTime;                                         // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSprayAnimation;
 
 // ScriptStruct BrickRigs.ThrowAnimation
-// 0x0008 (0x00D0 - 0x00C8)
+// 0x0008 (0x00E8 - 0x00E0)
 struct FThrowAnimation final : public FItemAnimation
 {
 public:
-	float                                         ThrowTime;                                         // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         ThrowTime;                                         // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FThrowAnimation;
 
-// ScriptStruct BrickRigs.HealAnimation
-// 0x0000 (0x00C8 - 0x00C8)
-struct FHealAnimation final : public FItemAnimation
-{
-};
-DUMPER7_ASSERTS_FHealAnimation;
-
 // ScriptStruct BrickRigs.ReloadAnimation
-// 0x0008 (0x00D0 - 0x00C8)
+// 0x0008 (0x00E8 - 0x00E0)
 struct FReloadAnimation final : public FItemAnimation
 {
 public:
-	float                                         GrabMagTime;                                       // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InsertedTime;                                      // 0x00CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GrabMagTime;                                       // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InsertedTime;                                      // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FReloadAnimation;
 
 // ScriptStruct BrickRigs.CockAnimation
-// 0x0008 (0x00D0 - 0x00C8)
+// 0x0008 (0x00E8 - 0x00E0)
 struct FCockAnimation final : public FItemAnimation
 {
 public:
-	float                                         PulledTime;                                        // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReleasedTime;                                      // 0x00CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PulledTime;                                        // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReleasedTime;                                      // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCockAnimation;
 
 // ScriptStruct BrickRigs.FireAnimation
-// 0x0030 (0x00F8 - 0x00C8)
+// 0x0038 (0x0118 - 0x00E0)
 struct FFireAnimation final : public FItemAnimation
 {
 public:
-	class UAnimMontage*                           FireEmptyMontage;                                  // 0x00C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAnimSequenceBase>       FireEmptySequence;                                 // 0x00D0(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           FireEmptyMontage;                                  // 0x00E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAnimSequenceBase>       FireEmptySequence;                                 // 0x00E8(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFireAnimation;
 
 // ScriptStruct BrickRigs.UnequipAnimation
-// 0x0000 (0x00C8 - 0x00C8)
+// 0x0000 (0x00E0 - 0x00E0)
 struct FUnequipAnimation final : public FItemAnimation
 {
 };
 DUMPER7_ASSERTS_FUnequipAnimation;
 
 // ScriptStruct BrickRigs.EquipAnimation
-// 0x0000 (0x00C8 - 0x00C8)
+// 0x0000 (0x00E0 - 0x00E0)
 struct FEquipAnimation final : public FItemAnimation
 {
 };
@@ -2632,8 +2610,8 @@ DUMPER7_ASSERTS_FEquipAnimation;
 struct FItemRefPoseOverride final
 {
 public:
-	class FName                                   BoneName;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BoneName;                                          // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RelativeTransform;                                 // 0x0010(0x0030)(Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FItemRefPoseOverride;
@@ -2667,19 +2645,6 @@ public:
 };
 DUMPER7_ASSERTS_FKickedPlayerList;
 
-// ScriptStruct BrickRigs.KickedPlayer
-// 0x0058 (0x0060 - 0x0008)
-struct FKickedPlayer final : public FPagedListEntry
-{
-public:
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlayerName;                                        // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              KickTime;                                          // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              KickDuration;                                      // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 KickReason;                                        // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKickedPlayer;
-
 // ScriptStruct BrickRigs.BuildingMaterialOverride
 // 0x0010 (0x0010 - 0x0000)
 struct FBuildingMaterialOverride final
@@ -2700,11 +2665,11 @@ public:
 DUMPER7_ASSERTS_FBuildingMesh;
 
 // ScriptStruct BrickRigs.LightBrickEditorParams
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0050 - 0x0040)
 struct FLightBrickEditorParams final : public FScalableBrickEditorParams
 {
 public:
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLightBrickEditorParams;
 
@@ -2864,12 +2829,21 @@ public:
 };
 DUMPER7_ASSERTS_FScalableBrickConnectorSpacing;
 
+// ScriptStruct BrickRigs.SeatBrickEditorParams
+// 0x0018 (0x0048 - 0x0030)
+struct FSeatBrickEditorParams final : public FBrickEditorParams
+{
+public:
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSeatBrickEditorParams;
+
 // ScriptStruct BrickRigs.SensorBrickEditorParams
-// 0x0020 (0x0058 - 0x0038)
+// 0x0020 (0x0060 - 0x0040)
 struct FSensorBrickEditorParams final : public FScalableBrickEditorParams
 {
 public:
-	uint8                                         Pad_38[0x20];                                      // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSensorBrickEditorParams;
 
@@ -2911,17 +2885,6 @@ public:
 };
 DUMPER7_ASSERTS_FTrainSegment;
 
-// ScriptStruct BrickRigs.TrainTrack
-// 0x0040 (0x0040 - 0x0000)
-struct FTrainTrack final
-{
-public:
-	struct FInterpCurveVector                     PositionCurve;                                     // 0x0000(0x0018)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 RollCurve;                                         // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FInterpCurveFloat                      TimeCurve;                                         // 0x0028(0x0018)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTrainTrack;
-
 // ScriptStruct BrickRigs.WidgetPathWrapper
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FWidgetPathWrapper final
@@ -2930,6 +2893,15 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FWidgetPathWrapper;
+
+// ScriptStruct BrickRigs.RepBrickDamageItem
+// 0x0034 (0x0040 - 0x000C)
+struct alignas(0x08) FRepBrickDamageItem final : public FFastArraySerializerItem
+{
+public:
+	uint8                                         Pad_C[0x34];                                       // 0x000C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRepBrickDamageItem;
 
 // ScriptStruct BrickRigs.RepBrickDamage
 // 0x0018 (0x0120 - 0x0108)
@@ -2949,6 +2921,15 @@ public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBrickConnectionDamageBitfield;
+
+// ScriptStruct BrickRigs.RepBrickConnectionDamageItem
+// 0x0034 (0x0040 - 0x000C)
+struct alignas(0x08) FRepBrickConnectionDamageItem final : public FFastArraySerializerItem
+{
+public:
+	uint8                                         Pad_C[0x34];                                       // 0x000C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRepBrickConnectionDamageItem;
 
 // ScriptStruct BrickRigs.RepBrickConnectionDamage
 // 0x0018 (0x0120 - 0x0108)
@@ -2978,6 +2959,28 @@ public:
 };
 DUMPER7_ASSERTS_FVehicleInput;
 
+// ScriptStruct BrickRigs.VehicleOutputChannel
+// 0x0020 (0x0028 - 0x0008)
+struct FVehicleOutputChannel : public FBrickStructPropertyInterface
+{
+public:
+	float                                         CurrentValue;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_C[0x1C];                                       // 0x000C(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FVehicleOutputChannel;
+
+// ScriptStruct BrickRigs.SensorOutputChannel
+// 0x0010 (0x0038 - 0x0028)
+struct FSensorOutputChannel final : public FVehicleOutputChannel
+{
+public:
+	float                                         MinIn;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxIn;                                             // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinOut;                                            // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxOut;                                            // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSensorOutputChannel;
+
 // ScriptStruct BrickRigs.VehicleInputChannel
 // 0x0020 (0x0028 - 0x0008)
 struct FVehicleInputChannel final : public FBrickStructPropertyInterface
@@ -2991,6 +2994,18 @@ public:
 };
 DUMPER7_ASSERTS_FVehicleInputChannel;
 
+// ScriptStruct BrickRigs.ViewTargetSharedParams
+// 0x0010 (0x0010 - 0x0000)
+struct FViewTargetSharedParams
+{
+public:
+	float                                         InputRate;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Step;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Exponent;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterpSpeed;                                       // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FViewTargetSharedParams;
+
 // ScriptStruct BrickRigs.ViewTargetZoomParams
 // 0x0008 (0x0018 - 0x0010)
 struct FViewTargetZoomParams final : public FViewTargetSharedParams
@@ -3000,32 +3015,50 @@ public:
 };
 DUMPER7_ASSERTS_FViewTargetZoomParams;
 
+// ScriptStruct BrickRigs.ViewTargetCameraSpeedParams
+// 0x0008 (0x0018 - 0x0010)
+struct FViewTargetCameraSpeedParams final : public FViewTargetSharedParams
+{
+public:
+	struct FFloatInterval                         SpeedRange;                                        // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FViewTargetCameraSpeedParams;
+
 // ScriptStruct BrickRigs.WeatherConditionParams
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct FWeatherConditionParams final
 {
 public:
-	TSoftObjectPtr<class USoundBase>              AmbientSound;                                      // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Temperature;                                       // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindSpeed;                                         // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindSpeedVariance;                                 // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindDirectionVariance;                             // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindPeriod;                                        // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudDensity;                                      // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudHeight;                                       // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxFogOpacity;                                     // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPrecipitationType                            PrecipitationType;                                 // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PrecipitationIntensity;                            // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SnowCoverage;                                      // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RainCoverage;                                      // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightningFrequency;                                // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinLightningDelay;                                 // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundBase>              AmbientSound;                                      // 0x0000(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Temperature;                                       // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindSpeed;                                         // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindSpeedVariance;                                 // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindDirectionVariance;                             // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindPeriod;                                        // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudDensity;                                      // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudHeight;                                       // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxFogOpacity;                                     // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPrecipitationType                            PrecipitationType;                                 // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PrecipitationIntensity;                            // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SnowCoverage;                                      // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RainCoverage;                                      // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightningFrequency;                                // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinLightningDelay;                                 // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FWeatherConditionParams;
 
+// ScriptStruct BrickRigs.WinchAttachTarget
+// 0x001C (0x001C - 0x0000)
+struct alignas(0x04) FWinchAttachTarget final
+{
+public:
+	uint8                                         Pad_0[0x1C];                                       // 0x0000(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FWinchAttachTarget;
+
 // ScriptStruct BrickRigs.ZombieAnimInstanceProxy
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x08E0 - 0x08E0)
 struct FZombieAnimInstanceProxy final : public FCharacterAnimInstanceProxy
 {
 };

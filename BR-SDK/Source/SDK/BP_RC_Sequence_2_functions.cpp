@@ -36,4 +36,92 @@ struct FVector ABP_RC_Sequence_2_C::GetHandTargetLocation() const
 }
 
 
+// Function BP_RC_Sequence_2.SKEL_BP_RC_Sequence_2_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_RC_Sequence_2_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_2_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RC_Sequence_2.SKEL_BP_RC_Sequence_2_C.ReceiveActorBeginOverlap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_RC_Sequence_2_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_2_C", "ReceiveActorBeginOverlap");
+
+	Params::SKEL_BP_RC_Sequence_2_C_ReceiveActorBeginOverlap Parms{};
+
+	Parms.OtherActor = OtherActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RC_Sequence_2.SKEL_BP_RC_Sequence_2_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_RC_Sequence_2_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_2_C", "ReceiveTick");
+
+	Params::SKEL_BP_RC_Sequence_2_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RC_Sequence_2.SKEL_BP_RC_Sequence_2_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_RC_Sequence_2_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_2_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RC_Sequence_2.SKEL_BP_RC_Sequence_2_C.GetHandTargetLocation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FVector ASKEL_BP_RC_Sequence_2_C::GetHandTargetLocation() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_RC_Sequence_2_C", "GetHandTargetLocation");
+
+	Params::SKEL_BP_RC_Sequence_2_C_GetHandTargetLocation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

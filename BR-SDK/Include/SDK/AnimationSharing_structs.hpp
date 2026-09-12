@@ -25,33 +25,31 @@ public:
 DUMPER7_ASSERTS_FTickAnimationSharingFunction;
 
 // ScriptStruct AnimationSharing.AnimationSharingScalability
-// 0x0010 (0x0010 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct FAnimationSharingScalability final
 {
 public:
-	struct FPerPlatformBool                       UseBlendTransitions;                               // 0x0000(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPerPlatformFloat                      BlendSignificanceValue;                            // 0x0004(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformInt                        MaximumNumberConcurrentBlends;                     // 0x0008(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformFloat                      TickSignificanceValue;                             // 0x000C(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformBool                       UseBlendTransitions;                               // 0x0000(0x0058)(Edit, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      BlendSignificanceValue;                            // 0x0058(0x0058)(Edit, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        MaximumNumberConcurrentBlends;                     // 0x00B0(0x0058)(Edit, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      TickSignificanceValue;                             // 0x0108(0x0058)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAnimationSharingScalability;
 
 // ScriptStruct AnimationSharing.AnimationSetup
-// 0x0018 (0x0018 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct FAnimationSetup final
 {
 public:
 	class UAnimSequence*                          AnimSequence;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UAnimSharingStateInstance>  AnimBlueprint;                                     // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPerPlatformInt                        NumRandomizedInstances;                            // 0x0010(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformBool                       Enabled;                                           // 0x0014(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPerPlatformInt                        NumRandomizedInstances;                            // 0x0010(0x0058)(Edit, NativeAccessSpecifierPublic)
+	struct FPerPlatformBool                       Enabled;                                           // 0x0068(0x0058)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAnimationSetup;
 
 // ScriptStruct AnimationSharing.AnimationStateEntry
-// 0x0030 (0x0030 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct FAnimationStateEntry final
 {
 public:
@@ -65,11 +63,11 @@ public:
 	bool                                          bReturnToPreviousState;                            // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetNextState;                                     // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         NextState;                                         // 0x0022(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPerPlatformInt                        MaximumNumberOfConcurrentInstances;                // 0x0024(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         WiggleTimePercentage;                              // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRequiresCurves;                                   // 0x002C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPerPlatformInt                        MaximumNumberOfConcurrentInstances;                // 0x0028(0x0058)(Edit, NativeAccessSpecifierPublic)
+	float                                         WiggleTimePercentage;                              // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequiresCurves;                                   // 0x0084(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimationStateEntry;
 

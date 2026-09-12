@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Camera_1sx1sx1s.BP_Camera_1sx1sx1s_C
-// 0x0000 (0x0770 - 0x0770)
+// 0x0000 (0x07B0 - 0x07B0)
 class UBP_Camera_1sx1sx1s_C final : public UCameraBrickStaticInfo
 {
 public:
@@ -34,5 +35,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_Camera_1sx1sx1s_C;
+
+// BlueprintGeneratedClass BP_Camera_1sx1sx1s.SKEL_BP_Camera_1sx1sx1s_C
+// 0x0010 (0x07C0 - 0x07B0)
+class USKEL_BP_Camera_1sx1sx1s_C final : public UCameraBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Camera_1sx1sx1s_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Camera_1sx1sx1s_C")
+	}
+	static class USKEL_BP_Camera_1sx1sx1s_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Camera_1sx1sx1s_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Camera_1sx1sx1s_C;
 
 SDK_NAMESPACE_END

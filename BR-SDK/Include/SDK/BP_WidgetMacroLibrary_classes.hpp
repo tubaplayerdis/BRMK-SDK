@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_WidgetMacroLibrary.BP_WidgetMacroLibrary_C
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0228 - 0x0228)
 class UBP_WidgetMacroLibrary_C final : public UWidget
 {
 public:
@@ -34,5 +34,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_WidgetMacroLibrary_C;
+
+// BlueprintGeneratedClass BP_WidgetMacroLibrary.SKEL_BP_WidgetMacroLibrary_C
+// 0x0000 (0x0228 - 0x0228)
+class USKEL_BP_WidgetMacroLibrary_C final : public UWidget
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_WidgetMacroLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_WidgetMacroLibrary_C")
+	}
+	static class USKEL_BP_WidgetMacroLibrary_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_WidgetMacroLibrary_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_WidgetMacroLibrary_C;
 
 SDK_NAMESPACE_END

@@ -13,25 +13,6 @@
 
 SDK_NAMESPACE_START
 
-// Enum InputCore.ETouchIndex
-// NumValues: 0x000D
-enum class ETouchIndex : uint8
-{
-	Touch1                                   = 0,
-	Touch2                                   = 1,
-	Touch3                                   = 2,
-	Touch4                                   = 3,
-	Touch5                                   = 4,
-	Touch6                                   = 5,
-	Touch7                                   = 6,
-	Touch8                                   = 7,
-	Touch9                                   = 8,
-	Touch10                                  = 9,
-	CursorPointerIndex                       = 10,
-	MAX_TOUCHES                              = 11,
-	ETouchIndex_MAX                          = 12,
-};
-
 // Enum InputCore.ETouchType
 // NumValues: 0x0008
 enum class ETouchType : uint8
@@ -54,6 +35,25 @@ enum class EConsoleForGamepadLabels : uint8
 	XBoxOne                                  = 1,
 	PS4                                      = 2,
 	EConsoleForGamepadLabels_MAX             = 3,
+};
+
+// Enum InputCore.ETouchIndex
+// NumValues: 0x000D
+enum class ETouchIndex : uint8
+{
+	Touch1                                   = 0,
+	Touch2                                   = 1,
+	Touch3                                   = 2,
+	Touch4                                   = 3,
+	Touch5                                   = 4,
+	Touch6                                   = 5,
+	Touch7                                   = 6,
+	Touch8                                   = 7,
+	Touch9                                   = 8,
+	Touch10                                  = 9,
+	CursorPointerIndex                       = 10,
+	MAX_TOUCHES                              = 11,
+	ETouchIndex_MAX                          = 12,
 };
 
 // Enum InputCore.EControllerHand
@@ -82,12 +82,12 @@ enum class EControllerHand : uint8
 };
 
 // ScriptStruct InputCore.Key
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FKey final
 {
 public:
-	class FName                                   KeyName;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   KeyName;                                           // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C[0x14];                                       // 0x000C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKey;
 

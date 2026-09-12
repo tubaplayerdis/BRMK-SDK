@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_BrickSliderReadOnly_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickSliderReadOnly_C", "PreConstruct");
-
-	Params::WBP_BrickSliderReadOnly_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C.ExecuteUbergraph_WBP_BrickSliderReadOnly
 // (Final, UbergraphFunction)
 // Parameters:
@@ -51,6 +31,46 @@ void UWBP_BrickSliderReadOnly_C::ExecuteUbergraph_WBP_BrickSliderReadOnly(int32 
 	Params::WBP_BrickSliderReadOnly_C_ExecuteUbergraph_WBP_BrickSliderReadOnly Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickSliderReadOnly.WBP_BrickSliderReadOnly_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_BrickSliderReadOnly_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BrickSliderReadOnly_C", "PreConstruct");
+
+	Params::WBP_BrickSliderReadOnly_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BrickSliderReadOnly.SKEL_WBP_BrickSliderReadOnly_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BrickSliderReadOnly_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickSliderReadOnly_C", "PreConstruct");
+
+	Params::SKEL_WBP_BrickSliderReadOnly_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

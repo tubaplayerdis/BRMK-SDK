@@ -11,22 +11,22 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HealthBar.WBP_HealthBar_C
-// 0x0020 (0x0298 - 0x0278)
+// 0x0028 (0x0438 - 0x0410)
 class UWBP_HealthBar_C final : public UHealthBarWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         HealthBarBox;                                      // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            HealthImage;                                       // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickSliderReadOnly_C*             HealthSlider;                                      // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HealthBarBox;                                      // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            HealthImage;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSliderReadOnly_C*             HealthSlider;                                      // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_HealthBar(int32 EntryPoint);
@@ -49,5 +49,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_HealthBar_C;
+
+// WidgetBlueprintGeneratedClass WBP_HealthBar.SKEL_WBP_HealthBar_C
+// 0x0028 (0x0438 - 0x0410)
+class USKEL_WBP_HealthBar_C final : public UHealthBarWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HealthBarBox;                                      // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            HealthImage;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSliderReadOnly_C*             HealthSlider;                                      // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateHealth(float NewHealth);
+	void UpdateCanBeDamaged(bool bNewCanBeDamaged);
+	void UpdateHealingState(ECharacterHealingState NewState);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_HealthBar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_HealthBar_C")
+	}
+	static class USKEL_WBP_HealthBar_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_HealthBar_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_HealthBar_C;
 
 SDK_NAMESPACE_END

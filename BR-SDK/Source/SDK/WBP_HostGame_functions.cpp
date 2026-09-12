@@ -72,4 +72,40 @@ void UWBP_HostGame_C::UpdatePlayButton(bool bCanPlay, bool bIsOnline)
 }
 
 
+// Function WBP_HostGame.SKEL_WBP_HostGame_C.UpdatePlayButton
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bCanPlay                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsOnline                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_HostGame_C::UpdatePlayButton(bool bCanPlay, bool bIsOnline)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HostGame_C", "UpdatePlayButton");
+
+	Params::SKEL_WBP_HostGame_C_UpdatePlayButton Parms{};
+
+	Parms.bCanPlay = bCanPlay;
+	Parms.bIsOnline = bIsOnline;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HostGame.SKEL_WBP_HostGame_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_HostGame_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_HostGame_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

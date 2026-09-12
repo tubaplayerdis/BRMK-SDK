@@ -37,5 +37,15 @@ public:
 };
 DUMPER7_ASSERTS_WBP_InputKeySpacer_C_UpdateStyleState;
 
+// Function WBP_InputKeySpacer.SKEL_WBP_InputKeySpacer_C.UpdateStyleState
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_InputKeySpacer_C_UpdateStyleState final
+{
+public:
+	EBrickUIColorStyle                            NewStyle;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIStyleState                            NewState;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputKeySpacer_C_UpdateStyleState;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

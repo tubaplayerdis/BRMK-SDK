@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "BrickRigs_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -56,20 +56,50 @@ public:
 DUMPER7_ASSERTS_WBP_PlacableObject_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
 
 // Function WBP_PlacableObject.WBP_PlacableObject_C.OnMouseButtonUp
-// 0x02F0 (0x02F0 - 0x0000)
+// 0x0318 (0x0318 - 0x0000)
 struct WBP_PlacableObject_C_OnMouseButtonUp final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00A8(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FKey                                   CallFunc_PointerEvent_GetEffectingButton_ReturnValue; // 0x0160(0x0018)(HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0178(0x00B8)()
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0238(0x00B8)()
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(Parm, OutParm, ReturnParm)
+	struct FKey                                   CallFunc_PointerEvent_GetEffectingButton_ReturnValue; // 0x0170(0x0020)(HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0190(0x00C0)()
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0258(0x00C0)()
 };
 DUMPER7_ASSERTS_WBP_PlacableObject_C_OnMouseButtonUp;
+
+// Function WBP_PlacableObject.SKEL_WBP_PlacableObject_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_PlacableObject_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PlacableObject_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_PlacableObject.SKEL_WBP_PlacableObject_C.UpdateIsFilterWidget
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_PlacableObject_C_UpdateIsFilterWidget final
+{
+public:
+	bool                                          bNewIsFilter;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PlacableObject_C_UpdateIsFilterWidget;
+
+// Function WBP_PlacableObject.SKEL_WBP_PlacableObject_C.OnMouseButtonUp
+// 0x0170 (0x0170 - 0x0000)
+struct SKEL_WBP_PlacableObject_C_OnMouseButtonUp final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PlacableObject_C_OnMouseButtonUp;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

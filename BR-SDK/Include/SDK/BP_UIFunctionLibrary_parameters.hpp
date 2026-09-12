@@ -65,5 +65,30 @@ public:
 };
 DUMPER7_ASSERTS_BP_UIFunctionLibrary_C_UpdateHUDWidgetOpacity;
 
+// Function BP_UIFunctionLibrary.SKEL_BP_UIFunctionLibrary_C.Get Ammo Type Display Info
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_BP_UIFunctionLibrary_C_Get_Ammo_Type_Display_Info final
+{
+public:
+	EAmmoType                                     AmmoType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         IconSlot;                                          // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_UIFunctionLibrary_C_Get_Ammo_Type_Display_Info;
+
+// Function BP_UIFunctionLibrary.SKEL_BP_UIFunctionLibrary_C.UpdateHUDWidgetOpacity
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_BP_UIFunctionLibrary_C_UpdateHUDWidgetOpacity final
+{
+public:
+	class UWidget*                                Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsFocused;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_UIFunctionLibrary_C_UpdateHUDWidgetOpacity;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

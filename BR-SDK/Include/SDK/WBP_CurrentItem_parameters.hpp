@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -140,6 +140,63 @@ public:
 	bool                                          bHasFirearm;                                       // 0x0001(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_CurrentItem_C_UpdateFireMode;
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateFireMode
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_CurrentItem_C_UpdateFireMode final
+{
+public:
+	EFireMode                                     NewMode;                                           // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasFirearm;                                       // 0x0001(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CurrentItem_C_UpdateFireMode;
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateAmmoType
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_CurrentItem_C_UpdateAmmoType final
+{
+public:
+	EAmmoType                                     NewType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CurrentItem_C_UpdateAmmoType;
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateAmmo
+// 0x000C (0x000C - 0x0000)
+struct SKEL_WBP_CurrentItem_C_UpdateAmmo final
+{
+public:
+	int32                                         Current;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Capacity;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Ammo;                                              // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CurrentItem_C_UpdateAmmo;
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.FadeOut
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_CurrentItem_C_FadeOut final
+{
+public:
+	bool                                          bImmediate;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CurrentItem_C_FadeOut;
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.UpdateItemName
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_CurrentItem_C_UpdateItemName final
+{
+public:
+	class FText                                   NewName;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CurrentItem_C_UpdateItemName;
+
+// Function WBP_CurrentItem.SKEL_WBP_CurrentItem_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_CurrentItem_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_CurrentItem_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

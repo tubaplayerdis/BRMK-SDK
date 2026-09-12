@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_SpinnerBrick.SKEL_BP_SpinnerBrick_C
+// 0x0010 (0x01B0 - 0x01A0)
+class USKEL_BP_SpinnerBrick_C final : public USpinnerBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_SpinnerBrick_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_SpinnerBrick_C")
+	}
+	static class USKEL_BP_SpinnerBrick_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_SpinnerBrick_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_SpinnerBrick_C;
+
 // BlueprintGeneratedClass BP_SpinnerBrick.BP_SpinnerBrick_C
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01A0 - 0x01A0)
 class UBP_SpinnerBrick_C final : public USpinnerBrickStaticInfo
 {
 public:

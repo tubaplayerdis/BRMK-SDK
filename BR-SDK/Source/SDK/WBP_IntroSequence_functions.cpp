@@ -189,4 +189,157 @@ void UWBP_IntroSequence_C::NextSequence()
 }
 
 
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_IntroSequence_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "Tick");
+
+	Params::SKEL_WBP_IntroSequence_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_IntroSequence_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.InitSequence
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_IntroSequence_C::InitSequence()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "InitSequence");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.UpdateFade
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_IntroSequence_C::UpdateFade()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "UpdateFade");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FKeyEvent&                 InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm, NativeAccessSpecifierPublic)
+// struct FEventReply                      ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FEventReply USKEL_WBP_IntroSequence_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "OnKeyDown");
+
+	Params::SKEL_WBP_IntroSequence_C_OnKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FEventReply                      ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FEventReply USKEL_WBP_IntroSequence_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "OnMouseButtonDown");
+
+	Params::SKEL_WBP_IntroSequence_C_OnMouseButtonDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.OnMouseButtonDoubleClick
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 InMyGeometry                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPointerEvent&             InMouseEvent                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FEventReply                      ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FEventReply USKEL_WBP_IntroSequence_C::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "OnMouseButtonDoubleClick");
+
+	Params::SKEL_WBP_IntroSequence_C_OnMouseButtonDoubleClick Parms{};
+
+	Parms.InMyGeometry = std::move(InMyGeometry);
+	Parms.InMouseEvent = std::move(InMouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_IntroSequence.SKEL_WBP_IntroSequence_C.NextSequence
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_IntroSequence_C::NextSequence()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_IntroSequence_C", "NextSequence");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

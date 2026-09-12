@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -46,6 +46,19 @@ public:
 	EBrickUITextStyle                             NewTextStyle;                                      // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PagedListHeaderField_C_UpdateItem;
+
+// Function WBP_PagedListHeaderField.SKEL_WBP_PagedListHeaderField_C.UpdateItem
+// 0x0028 (0x0028 - 0x0000)
+struct SKEL_WBP_PagedListHeaderField_C_UpdateItem final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   NewText;                                           // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	EBrickUIColorStyle                            NewColorStyle;                                     // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUITextStyle                             NewTextStyle;                                      // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PagedListHeaderField_C_UpdateItem;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

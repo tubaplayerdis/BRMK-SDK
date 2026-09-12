@@ -10,13 +10,37 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Petrol_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_IncendiaryGrenade_Explosive.SKEL_BP_IncendiaryGrenade_Explosive_C
+// 0x0010 (0x00B0 - 0x00A0)
+class USKEL_BP_IncendiaryGrenade_Explosive_C final : public USKEL_BP_Petrol_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_IncendiaryGrenade_Explosive_C; // 0x00A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_IncendiaryGrenade_Explosive_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_IncendiaryGrenade_Explosive_C")
+	}
+	static class USKEL_BP_IncendiaryGrenade_Explosive_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_IncendiaryGrenade_Explosive_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_IncendiaryGrenade_Explosive_C;
+
 // BlueprintGeneratedClass BP_IncendiaryGrenade_Explosive.BP_IncendiaryGrenade_Explosive_C
-// 0x0000 (0x0088 - 0x0088)
+// 0x0000 (0x0090 - 0x0090)
 class UBP_IncendiaryGrenade_Explosive_C final : public UBP_Petrol_C
 {
 public:

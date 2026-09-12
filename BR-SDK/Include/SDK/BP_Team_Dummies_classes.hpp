@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BP_Team_Default_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Team_Dummies.BP_Team_Dummies_C
-// 0x0000 (0x00C8 - 0x00C8)
+// 0x0000 (0x00D8 - 0x00D8)
 class UBP_Team_Dummies_C final : public UBP_Team_Default_C
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_Team_Dummies_C;
+
+// BlueprintGeneratedClass BP_Team_Dummies.SKEL_BP_Team_Dummies_C
+// 0x0010 (0x00F8 - 0x00E8)
+class USKEL_BP_Team_Dummies_C final : public USKEL_BP_Team_Default_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Team_Dummies_C;             // 0x00E8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Team_Dummies_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Team_Dummies_C")
+	}
+	static class USKEL_BP_Team_Dummies_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_Team_Dummies_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_Team_Dummies_C;
 
 SDK_NAMESPACE_END

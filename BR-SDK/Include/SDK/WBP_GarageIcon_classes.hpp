@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GarageIcon.WBP_GarageIcon_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x0420 - 0x0420)
 class UWBP_GarageIcon_C final : public UHUDIconWidget
 {
 public:
@@ -37,5 +38,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_GarageIcon_C;
+
+// WidgetBlueprintGeneratedClass WBP_GarageIcon.SKEL_WBP_GarageIcon_C
+// 0x0010 (0x0430 - 0x0420)
+class USKEL_WBP_GarageIcon_C final : public UHUDIconWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	class FText GetIconDisplayName() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_GarageIcon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_GarageIcon_C")
+	}
+	static class USKEL_WBP_GarageIcon_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_GarageIcon_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_GarageIcon_C;
 
 SDK_NAMESPACE_END

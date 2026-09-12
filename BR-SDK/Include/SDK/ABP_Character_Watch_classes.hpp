@@ -12,26 +12,25 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Character_Watch.ABP_Character_Watch_C
-// 0x0180 (0x0440 - 0x02C0)
+// 0x01A0 (0x04A0 - 0x0300)
 class UABP_Character_Watch_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02C8(0x0030)()
 	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x0300(0x0090)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0390(0x0080)()
-	struct FRotator                               ViewRotation;                                      // 0x0410(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               TargetRotation;                                    // 0x041C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               CurrentRotation;                                   // 0x0428(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0310(0x0040)()
+	struct FAnimNode_ViewRotation                 AnimGraphNode_ViewRotation;                        // 0x0350(0x00A0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x03F0(0x0088)()
+	struct FRotator                               ViewRotation;                                      // 0x0478(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               TargetRotation;                                    // 0x0484(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               CurrentRotation;                                   // 0x0490(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_ABP_Character_Watch(int32 EntryPoint);
@@ -55,5 +54,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Character_Watch_C;
+
+// AnimBlueprintGeneratedClass ABP_Character_Watch.SKEL_ABP_Character_Watch_C
+// 0x0040 (0x0340 - 0x0300)
+class USKEL_ABP_Character_Watch_C final : public UAnimInstance
+{
+public:
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRotator                               ViewRotation;                                      // 0x0310(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               TargetRotation;                                    // 0x031C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               CurrentRotation;                                   // 0x0328(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void BlueprintBeginPlay();
+	void UpdateTargetRotation();
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Character_Watch_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Character_Watch_C")
+	}
+	static class USKEL_ABP_Character_Watch_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Character_Watch_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Character_Watch_C;
 
 SDK_NAMESPACE_END

@@ -10,13 +10,43 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_FireStation.SKEL_BP_FireStation_C
+// 0x0010 (0x03C0 - 0x03B0)
+class ASKEL_BP_FireStation_C final : public ABrickBuilding
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor_ReceiveActorBeginOverlap);
+	void ReceiveBeginPlay();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_FireStation_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_FireStation_C")
+	}
+	static class ASKEL_BP_FireStation_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_FireStation_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_FireStation_C;
+
 // BlueprintGeneratedClass BP_FireStation.BP_FireStation_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x03B0 - 0x03B0)
 class ABP_FireStation_C final : public ABrickBuilding
 {
 public:

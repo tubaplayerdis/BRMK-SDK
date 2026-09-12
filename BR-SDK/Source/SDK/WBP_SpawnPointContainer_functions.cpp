@@ -56,4 +56,24 @@ void UWBP_SpawnPointContainer_C::AddIconWidget(class UHUDIconWidget* Widget)
 }
 
 
+// Function WBP_SpawnPointContainer.SKEL_WBP_SpawnPointContainer_C.AddIconWidget
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UHUDIconWidget*                   Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_SpawnPointContainer_C::AddIconWidget(class UHUDIconWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_SpawnPointContainer_C", "AddIconWidget");
+
+	Params::SKEL_WBP_SpawnPointContainer_C_AddIconWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

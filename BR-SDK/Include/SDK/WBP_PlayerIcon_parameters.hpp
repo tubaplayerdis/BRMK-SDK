@@ -16,6 +16,18 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_PlayerIcon.SKEL_WBP_PlayerIcon_C.UpdatePlayerIcon
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_PlayerIcon_C_UpdatePlayerIcon final
+{
+public:
+	bool                                          bNewIsLocalPlayer;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewIsTeamLeader;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECharacterStateOfHealth                       NewStateOfHealth;                                  // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewCanBeDamaged;                                  // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PlayerIcon_C_UpdatePlayerIcon;
+
 // Function WBP_PlayerIcon.WBP_PlayerIcon_C.ExecuteUbergraph_WBP_PlayerIcon
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_PlayerIcon_C_ExecuteUbergraph_WBP_PlayerIcon final

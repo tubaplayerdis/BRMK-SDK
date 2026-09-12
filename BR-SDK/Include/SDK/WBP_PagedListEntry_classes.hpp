@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PagedListEntry.WBP_PagedListEntry_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x0420 - 0x0420)
 class UWBP_PagedListEntry_C final : public UPagedListEntryWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_PagedListEntry_C;
+
+// WidgetBlueprintGeneratedClass WBP_PagedListEntry.SKEL_WBP_PagedListEntry_C
+// 0x0010 (0x0430 - 0x0420)
+class USKEL_WBP_PagedListEntry_C final : public UPagedListEntryWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_PagedListEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_PagedListEntry_C")
+	}
+	static class USKEL_WBP_PagedListEntry_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_PagedListEntry_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_PagedListEntry_C;
 
 SDK_NAMESPACE_END

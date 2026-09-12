@@ -19,97 +19,101 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Menu.WBP_Menu_C.ExecuteUbergraph_WBP_Menu
-// 0x0318 (0x0318 - 0x0000)
+// 0x0378 (0x0378 - 0x0000)
 struct WBP_Menu_C_ExecuteUbergraph_WBP_Menu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBrickPropertyReflectionFilter         K2Node_MakeStruct_BrickPropertyReflectionFilter;   // 0x0008(0x0020)()
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0038(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EPopupResult Result)>          K2Node_CreateDelegate_OutputDelegate_3;            // 0x0060(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EPopupResult Result)>          K2Node_CreateDelegate_OutputDelegate_1;            // 0x0048(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x005C(0x0014)(ZeroConstructor, NoDestructor)
 	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_1;               // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0078(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x0088(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_2;               // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateContinueButton_ReturnValue;         // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x00A8(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_3;               // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_4;               // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_7;            // 0x00C8(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_8;            // 0x00D8(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0078(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_2;               // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0098(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x00AC(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x00C0(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_3;               // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_4;               // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_5;               // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_6;               // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_9;            // 0x00FC(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_7;               // 0x0110(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_10;           // 0x0118(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_11;           // 0x0128(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_12;           // 0x0138(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x0148(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_14;           // 0x0158(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_8;               // 0x0168(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_9;               // 0x0170(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_10;              // 0x0178(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_11;              // 0x0180(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_12;              // 0x0188(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameLogoEnum                                 Temp_byte_Variable;                                // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameLogoEnum                                 Temp_byte_Variable_1;                              // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_192[0x2];                                      // 0x0192(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_15;           // 0x0194(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_13;              // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_NewContext;                           // 0x01B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuPageWidget*                        K2Node_Event_Widget_1;                             // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EGameLogoEnum                                 K2Node_Select_Default;                             // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C3[0x1];                                      // 0x01C3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_16;           // 0x01C4(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_14;              // 0x01D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EPopupResult Result)>          K2Node_CreateDelegate_OutputDelegate_17;           // 0x01E0(0x0010)(ZeroConstructor, NoDestructor)
-	EPopupResult                                  K2Node_CustomEvent_Result_1;                       // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance;          // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_QuitGame_ReturnValue;                     // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_212[0x6];                                      // 0x0212(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance_1;        // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EPopupResult                                  K2Node_CustomEvent_Result;                         // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance_2;        // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance_3;        // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void(EPopupResult Result)>          K2Node_CreateDelegate_OutputDelegate_7;            // 0x00F0(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_8;            // 0x0104(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_9;            // 0x0118(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_6;               // 0x0130(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateContinueButton_ReturnValue;         // 0x0138(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_10;           // 0x0140(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_7;               // 0x0158(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_11;           // 0x0164(0x0014)(ZeroConstructor, NoDestructor)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_8;               // 0x0178(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_12;           // 0x0180(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_9;               // 0x0198(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x01A0(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_14;           // 0x01B4(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_15;           // 0x01C8(0x0014)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_16;           // 0x01DC(0x0014)(ZeroConstructor, NoDestructor)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_10;              // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_11;              // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_12;              // 0x0200(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_13;              // 0x0208(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameLogoEnum                                 Temp_byte_Variable;                                // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameLogoEnum                                 Temp_byte_Variable_1;                              // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_212[0x2];                                      // 0x0212(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_17;           // 0x0214(0x0014)(ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue_14;              // 0x0230(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_NewContext;                           // 0x0238(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPageWidget*                        K2Node_Event_Widget_1;                             // 0x0248(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EGameLogoEnum                                 K2Node_Select_Default;                             // 0x0252(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPopupResult                                  K2Node_CustomEvent_Result_1;                       // 0x0253(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPageWidget*                        K2Node_Event_Widget;                               // 0x0268(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0270(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetProjectVersion_ReturnValue;            // 0x0278(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0288(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02A0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02F0(0x0018)()
-	bool                                          CallFunc_OpenMessagePopup_ReturnValue;             // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_OpenMessagePopup_ReturnValue_1;           // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_30A[0x6];                                      // 0x030A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickUserSettings*                     CallFunc_GetUserSettings_ReturnValue;              // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance;          // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_QuitGame_ReturnValue;                     // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_272[0x6];                                      // 0x0272(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance_1;        // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EPopupResult                                  K2Node_CustomEvent_Result;                         // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28A[0x6];                                      // 0x028A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance_2;        // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBrickGameInstance*                     K2Node_DynamicCast_AsBrick_Game_Instance_3;        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPageWidget*                        K2Node_Event_Widget;                               // 0x02C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x02D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetProjectVersion_ReturnValue;            // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x02E8(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0300(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0340(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0350(0x0018)()
+	bool                                          CallFunc_OpenMessagePopup_ReturnValue;             // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_OpenMessagePopup_ReturnValue_1;           // 0x0369(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_36A[0x6];                                      // 0x036A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickUserSettings*                     CallFunc_GetUserSettings_ReturnValue;              // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Menu_C_ExecuteUbergraph_WBP_Menu;
 
@@ -150,33 +154,80 @@ public:
 DUMPER7_ASSERTS_WBP_Menu_C_AddMenuPage;
 
 // Function WBP_Menu.WBP_Menu_C.OnMenuContextChanged
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct WBP_Menu_C_OnMenuContextChanged final
 {
 public:
-	class FName                                   NewContext;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   NewContext;                                        // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Menu_C_OnMenuContextChanged;
 
 // Function WBP_Menu.WBP_Menu_C.CreateBackButton
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WBP_Menu_C_CreateBackButton final
 {
 public:
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateBackButton_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateBackButton_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Menu_C_CreateBackButton;
 
 // Function WBP_Menu.WBP_Menu_C.CreateAdminMenuButton
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WBP_Menu_C_CreateAdminMenuButton final
 {
 public:
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor)
-	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0014)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonWidget*                      CallFunc_CreateButton_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Menu_C_CreateAdminMenuButton;
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnMenuContextChanged
+// 0x000C (0x000C - 0x0000)
+struct SKEL_WBP_Menu_C_OnMenuContextChanged final
+{
+public:
+	class FName                                   NewContext;                                        // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Menu_C_OnMenuContextChanged;
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.AddMenuPage
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Menu_C_AddMenuPage final
+{
+public:
+	class UMenuPageWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Menu_C_AddMenuPage;
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClosedQuitGamePopup
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_Menu_C_OnClosedQuitGamePopup final
+{
+public:
+	EPopupResult                                  Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Menu_C_OnClosedQuitGamePopup;
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.OnClosedMainMenuPopup
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_Menu_C_OnClosedMainMenuPopup final
+{
+public:
+	EPopupResult                                  Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Menu_C_OnClosedMainMenuPopup;
+
+// Function WBP_Menu.SKEL_WBP_Menu_C.RemoveMenuPage
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Menu_C_RemoveMenuPage final
+{
+public:
+	class UMenuPageWidget*                        Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Menu_C_RemoveMenuPage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

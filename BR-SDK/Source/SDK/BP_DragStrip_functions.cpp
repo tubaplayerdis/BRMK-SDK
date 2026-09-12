@@ -19,7 +19,7 @@ SDK_NAMESPACE_START
 // Function BP_DragStrip.BP_DragStrip_C.CreateTreeMID
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMaterialInstanceDynamic*         ReturnValue_CreateTreeMID                              (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstanceDynamic*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 class UMaterialInstanceDynamic* ABP_DragStrip_C::CreateTreeMID()
 {
@@ -32,14 +32,14 @@ class UMaterialInstanceDynamic* ABP_DragStrip_C::CreateTreeMID()
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue_CreateTreeMID;
+	return Parms.ReturnValue;
 }
 
 
 // Function BP_DragStrip.BP_DragStrip_C.GetInteractionLocation
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                          ReturnValue_GetInteractionLocation                     (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 struct FVector ABP_DragStrip_C::GetInteractionLocation() const
 {
@@ -52,7 +52,61 @@ struct FVector ABP_DragStrip_C::GetInteractionLocation() const
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue_GetInteractionLocation;
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_DragStrip.SKEL_BP_DragStrip_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_DragStrip_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_DragStrip_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DragStrip.SKEL_BP_DragStrip_C.CreateTreeMID
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInstanceDynamic* ASKEL_BP_DragStrip_C::CreateTreeMID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_DragStrip_C", "CreateTreeMID");
+
+	Params::SKEL_BP_DragStrip_C_CreateTreeMID Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_DragStrip.SKEL_BP_DragStrip_C.GetInteractionLocation
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// struct FVector                          ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector ASKEL_BP_DragStrip_C::GetInteractionLocation() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_DragStrip_C", "GetInteractionLocation");
+
+	Params::SKEL_BP_DragStrip_C_GetInteractionLocation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

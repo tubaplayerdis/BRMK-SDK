@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Character_RC_Parent.ABP_Character_RC_Parent_C
-// 0x0010 (0x0780 - 0x0770)
+// 0x0010 (0x08E0 - 0x08D0)
 class UABP_Character_RC_Parent_C final : public UABP_Character_RC_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_ABP_Character_RC_Parent_C;          // 0x0770(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_ABP_Character_RC_Parent_C;          // 0x08D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_ABP_Character_RC_Parent(int32 EntryPoint);
@@ -42,5 +42,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Character_RC_Parent_C;
+
+// AnimBlueprintGeneratedClass ABP_Character_RC_Parent.SKEL_ABP_Character_RC_Parent_C
+// 0x0010 (0x0340 - 0x0330)
+class USKEL_ABP_Character_RC_Parent_C final : public USKEL_ABP_Character_RC_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_ABP_Character_RC_Parent_C;     // 0x0330(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Character_RC_Parent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Character_RC_Parent_C")
+	}
+	static class USKEL_ABP_Character_RC_Parent_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Character_RC_Parent_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Character_RC_Parent_C;
 
 SDK_NAMESPACE_END

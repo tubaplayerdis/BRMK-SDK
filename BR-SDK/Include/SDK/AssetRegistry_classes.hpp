@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class AssetRegistry.AssetRegistryImpl
-// 0x0828 (0x0850 - 0x0028)
+// 0x0898 (0x08C8 - 0x0030)
 class UAssetRegistryImpl final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x828];                                     // 0x0028(0x0828)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x898];                                     // 0x0030(0x0898)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -39,7 +39,7 @@ public:
 DUMPER7_ASSERTS_UAssetRegistryImpl;
 
 // Class AssetRegistry.AssetRegistryHelpers
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UAssetRegistryHelpers final : public UObject
 {
 public:

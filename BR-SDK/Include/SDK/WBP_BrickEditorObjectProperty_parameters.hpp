@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -89,6 +89,36 @@ public:
 	bool                                          bDefaultObjects;                                   // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_BrickEditorObjectProperty_C_UpdateSelectedObjects;
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.UpdateSelectedObjects
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_BrickEditorObjectProperty_C_UpdateSelectedObjects final
+{
+public:
+	class FText                                   FirstObjectName;                                   // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         NumSelectedObjects;                                // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDefaultObjects;                                   // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditorObjectProperty_C_UpdateSelectedObjects;
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_BrickEditorObjectProperty_C_BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditorObjectProperty_C_BndEvt__WBP_BrickEditorObjectProperty_SelectButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_BrickEditorObjectProperty.SKEL_WBP_BrickEditorObjectProperty_C.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickEditorObjectProperty_C_UpdateIsReadOnly final
+{
+public:
+	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickEditorObjectProperty_C_UpdateIsReadOnly;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

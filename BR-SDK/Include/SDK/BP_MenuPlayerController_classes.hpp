@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuPlayerController.BP_MenuPlayerController_C
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x0720 - 0x0720)
 class ABP_MenuPlayerController_C final : public AMenuPlayerController
 {
 public:
@@ -34,5 +35,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_MenuPlayerController_C;
+
+// BlueprintGeneratedClass BP_MenuPlayerController.SKEL_BP_MenuPlayerController_C
+// 0x0010 (0x0730 - 0x0720)
+class ASKEL_BP_MenuPlayerController_C final : public AMenuPlayerController
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0720(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_MenuPlayerController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_MenuPlayerController_C")
+	}
+	static class ASKEL_BP_MenuPlayerController_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_MenuPlayerController_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_MenuPlayerController_C;
 
 SDK_NAMESPACE_END

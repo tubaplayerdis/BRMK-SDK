@@ -98,4 +98,66 @@ void UBTT_ZombieAttack_C::ReceiveExecute(class AActor* OwnerActor)
 }
 
 
+// Function BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C.ReceiveExecute
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_BTT_ZombieAttack_C::ReceiveExecute(class AActor* OwnerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BTT_ZombieAttack_C", "ReceiveExecute");
+
+	Params::SKEL_BTT_ZombieAttack_C_ReceiveExecute Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C.ReceiveTick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_BTT_ZombieAttack_C::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BTT_ZombieAttack_C", "ReceiveTick");
+
+	Params::SKEL_BTT_ZombieAttack_C_ReceiveTick Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTT_ZombieAttack.SKEL_BTT_ZombieAttack_C.ReceiveAbort
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_BTT_ZombieAttack_C::ReceiveAbort(class AActor* OwnerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BTT_ZombieAttack_C", "ReceiveAbort");
+
+	Params::SKEL_BTT_ZombieAttack_C_ReceiveAbort Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

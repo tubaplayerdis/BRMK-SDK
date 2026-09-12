@@ -11,22 +11,22 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_JoinSessionPopup.WBP_JoinSessionPopup_C
-// 0x0020 (0x02F8 - 0x02D8)
+// 0x0028 (0x0498 - 0x0470)
 class UWBP_JoinSessionPopup_C final : public UJoinSessionPopupWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickSliderReadOnly_C*             Slider;                                            // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      ConfirmButton;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      CancelButton;                                      // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickSliderReadOnly_C*             Slider;                                            // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ConfirmButton;                                     // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CancelButton;                                      // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_JoinSessionPopup(int32 EntryPoint);
@@ -49,5 +49,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_JoinSessionPopup_C;
+
+// WidgetBlueprintGeneratedClass WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C
+// 0x0028 (0x0498 - 0x0470)
+class USKEL_WBP_JoinSessionPopup_C final : public UJoinSessionPopupWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0470(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickSliderReadOnly_C*             Slider;                                            // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      ConfirmButton;                                     // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CancelButton;                                      // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
+	void UpdateJoinState(EJoinSessionState InJoinState, bool bInPasswordRequired, bool bInHasPassword);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_JoinSessionPopup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_JoinSessionPopup_C")
+	}
+	static class USKEL_WBP_JoinSessionPopup_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_JoinSessionPopup_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_JoinSessionPopup_C;
 
 SDK_NAMESPACE_END

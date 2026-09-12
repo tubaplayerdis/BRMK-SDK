@@ -56,4 +56,24 @@ void UWBP_ContextMenu_C::UpdateTitleText(const class FText& InText)
 }
 
 
+// Function WBP_ContextMenu.SKEL_WBP_ContextMenu_C.UpdateTitleText
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ContextMenu_C::UpdateTitleText(const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ContextMenu_C", "UpdateTitleText");
+
+	Params::SKEL_WBP_ContextMenu_C_UpdateTitleText Parms{};
+
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -18,13 +18,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_DashboardIcon.WBP_DashboardIcon_C
-// 0x0018 (0x0288 - 0x0270)
+// 0x0020 (0x0428 - 0x0408)
 class UWBP_DashboardIcon_C final : public UDashboardIconWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            IconImage;                                         // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            IconImage;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_DashboardIcon(int32 EntryPoint);
@@ -45,5 +45,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_DashboardIcon_C;
+
+// WidgetBlueprintGeneratedClass WBP_DashboardIcon.SKEL_WBP_DashboardIcon_C
+// 0x0020 (0x0428 - 0x0408)
+class USKEL_WBP_DashboardIcon_C final : public UDashboardIconWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            IconImage;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateIconImage(bool bInVisible, EBrickUIColorStyle InColorStyle, int32 InIconIndex);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_DashboardIcon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_DashboardIcon_C")
+	}
+	static class USKEL_WBP_DashboardIcon_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_DashboardIcon_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_DashboardIcon_C;
 
 SDK_NAMESPACE_END

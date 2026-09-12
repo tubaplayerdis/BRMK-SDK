@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CheatMenu.WBP_CheatMenu_C
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0000 (0x0438 - 0x0438)
 class UWBP_CheatMenu_C final : public UCheatMenuWidget
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_CheatMenu_C;
+
+// WidgetBlueprintGeneratedClass WBP_CheatMenu.SKEL_WBP_CheatMenu_C
+// 0x0010 (0x0448 - 0x0438)
+class USKEL_WBP_CheatMenu_C final : public UCheatMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_CheatMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_CheatMenu_C")
+	}
+	static class USKEL_WBP_CheatMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_CheatMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_CheatMenu_C;
 
 SDK_NAMESPACE_END

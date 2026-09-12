@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "FluUGC_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "FluUGC_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_UGCBrowser.WBP_UGCBrowser_C
-// 0x0048 (0x03B0 - 0x0368)
+// 0x0050 (0x0550 - 0x0500)
 class UWBP_UGCBrowser_C final : public UUGCBrowserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	EPlayerSpawnResult                            Can_Spawn_Result;                                  // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x3];                                      // 0x0371(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Num_Bricks;                                        // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVehicleSpawnProperties                SpawnProps;                                        // 0x0378(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          Can_Spawn;                                         // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Spawn_Failure_Text;                                // 0x0398(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0500(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	EPlayerSpawnResult                            Can_Spawn_Result;                                  // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_511[0x3];                                      // 0x0511(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Num_Bricks;                                        // 0x0514(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVehicleSpawnProperties                SpawnProps;                                        // 0x0518(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          Can_Spawn;                                         // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_531[0x7];                                      // 0x0531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Spawn_Failure_Text;                                // 0x0538(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_WBP_UGCBrowser(int32 EntryPoint);
@@ -86,5 +86,73 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_UGCBrowser_C;
+
+// WidgetBlueprintGeneratedClass WBP_UGCBrowser.SKEL_WBP_UGCBrowser_C
+// 0x0050 (0x0550 - 0x0500)
+class USKEL_WBP_UGCBrowser_C final : public UUGCBrowserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0500(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	EPlayerSpawnResult                            Can_Spawn_Result;                                  // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_511[0x3];                                      // 0x0511(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Num_Bricks;                                        // 0x0514(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVehicleSpawnProperties                SpawnProps;                                        // 0x0518(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          Can_Spawn;                                         // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_531[0x7];                                      // 0x0531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Spawn_Failure_Text;                                // 0x0538(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+
+public:
+	void CreateClearItemsButton(bool bIsArrayProperty);
+	void CreateDeleteButton();
+	void CreateDuplicateButton();
+	void CreateEditButton();
+	void CreateFavoriteButton(bool bIsFavorited);
+	void CreateNewItemButton();
+	void CreateSpawnButton(bool bCanReplaceCurrent, bool bCanSpawn, const class FText& SpawnFailureText);
+	void CreateSubscribeButton(bool bIsSubscribed);
+	void CreateViewInBrowserButton();
+	void CreateVoteButtons(const EFluUGCItemVote Vote);
+	void VoteUp();
+	void CreateCancelButton();
+	void OnClickedCancel();
+	void OnClickedSubscribe();
+	void OnClickedUnsubscribe();
+	void OnClickedFavorite();
+	void OnClickedUnfavorite();
+	void CreateImportButton();
+	void OnClickedSpawnNew();
+	void OnClickedReplaceCurrent();
+	void CreateRecoverAutoSaveButton();
+	void CreateUploadNewButton();
+	void CreateUpdateExistingButton();
+	void OnClickedUploadNew();
+	void OnClickedUpdateExisting();
+	void CreateSaveNewButton();
+	void CreateSaveOverwriteButton();
+	void OnClickedSaveNew();
+	void OnClickedSaveOverwrite();
+	void CreateOpenInExplorerButton();
+	void CreateSpawnInvincibilityButton(const class FText& CurrentInvincibilityText);
+	void CreateAddOrRemoveItemButton(bool bIsArrayProperty, bool bIsSelected);
+	void AddItem();
+	void RemoveItem();
+	void VoteDown();
+	bool GetSpawnButtonTooltipContent(struct FTooltipContent* OutContent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_UGCBrowser_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_UGCBrowser_C")
+	}
+	static class USKEL_WBP_UGCBrowser_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_UGCBrowser_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_UGCBrowser_C;
 
 SDK_NAMESPACE_END

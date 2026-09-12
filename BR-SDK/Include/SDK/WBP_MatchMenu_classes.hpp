@@ -18,14 +18,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MatchMenu.WBP_MatchMenu_C
-// 0x0020 (0x0298 - 0x0278)
+// 0x0028 (0x0438 - 0x0410)
 class UWBP_MatchMenu_C final : public UMatchMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_AdminLogin_C*                      WBP_AdminLogin;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      RestartButton;                                     // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPopupHandle                           ExitPopupHandle;                                   // 0x0290(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_AdminLogin_C*                      WBP_AdminLogin;                                    // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      RestartButton;                                     // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPopupHandle                           ExitPopupHandle;                                   // 0x0430(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WBP_MatchMenu(int32 EntryPoint);
@@ -50,5 +50,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_MatchMenu_C;
+
+// WidgetBlueprintGeneratedClass WBP_MatchMenu.SKEL_WBP_MatchMenu_C
+// 0x0028 (0x0438 - 0x0410)
+class USKEL_WBP_MatchMenu_C final : public UMatchMenuWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_AdminLogin_C*                      WBP_AdminLogin;                                    // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      RestartButton;                                     // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPopupHandle                           ExitPopupHandle;                                   // 0x0430(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+
+public:
+	void Construct();
+	void OnClickedRestart();
+	void OnConfirmRestartPopupClosed(EPopupResult Result);
+	void UpdateCanApplyMatchSettings(bool bCanApply);
+	void UpdateRestartMatchButton(bool bCanRestart, bool bSameLevelAndMode);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_MatchMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_MatchMenu_C")
+	}
+	static class USKEL_WBP_MatchMenu_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_MatchMenu_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_MatchMenu_C;
 
 SDK_NAMESPACE_END

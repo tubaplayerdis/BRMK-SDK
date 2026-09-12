@@ -11,29 +11,142 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "AssetTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function AssetTags.AssetTagsSubsystem.AddAssetDatasToCollection
+// 0x0028 (0x0028 - 0x0000)
+struct AssetTagsSubsystem_AddAssetDatasToCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAssetData>                     AssetDatas;                                        // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_AddAssetDatasToCollection;
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetDataToCollection
+// 0x0090 (0x0090 - 0x0000)
+struct AssetTagsSubsystem_AddAssetDataToCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAssetData                             AssetData;                                         // 0x0010(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_AddAssetDataToCollection;
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetPtrsToCollection
+// 0x0028 (0x0028 - 0x0000)
+struct AssetTagsSubsystem_AddAssetPtrsToCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        AssetPtrs;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_AddAssetPtrsToCollection;
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetPtrToCollection
+// 0x0020 (0x0020 - 0x0000)
+struct AssetTagsSubsystem_AddAssetPtrToCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UObject*                          AssetPtr;                                          // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_AddAssetPtrToCollection;
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetsToCollection
+// 0x0028 (0x0028 - 0x0000)
+struct AssetTagsSubsystem_AddAssetsToCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           AssetPathNames;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_AddAssetsToCollection;
+
+// Function AssetTags.AssetTagsSubsystem.AddAssetToCollection
+// 0x001C (0x001C - 0x0000)
+struct AssetTagsSubsystem_AddAssetToCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AssetPathName;                                     // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_AddAssetToCollection;
+
 // Function AssetTags.AssetTagsSubsystem.CollectionExists
-// 0x000C (0x000C - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct AssetTagsSubsystem_CollectionExists final
 {
 public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AssetTagsSubsystem_CollectionExists;
 
+// Function AssetTags.AssetTagsSubsystem.CreateCollection
+// 0x0010 (0x0010 - 0x0000)
+struct AssetTagsSubsystem_CreateCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollectionScriptingShareType                 ShareType;                                         // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_CreateCollection;
+
+// Function AssetTags.AssetTagsSubsystem.DestroyCollection
+// 0x0010 (0x0010 - 0x0000)
+struct AssetTagsSubsystem_DestroyCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_DestroyCollection;
+
+// Function AssetTags.AssetTagsSubsystem.EmptyCollection
+// 0x0010 (0x0010 - 0x0000)
+struct AssetTagsSubsystem_EmptyCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_EmptyCollection;
+
 // Function AssetTags.AssetTagsSubsystem.GetAssetsInCollection
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AssetTagsSubsystem_GetAssetsInCollection final
 {
 public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAssetData>                     ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAssetData>                     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AssetTagsSubsystem_GetAssetsInCollection;
 
@@ -47,22 +160,23 @@ public:
 DUMPER7_ASSERTS_AssetTagsSubsystem_GetCollections;
 
 // Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAsset
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AssetTagsSubsystem_GetCollectionsContainingAsset final
 {
 public:
-	class FName                                   AssetPathName;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	class FName                                   AssetPathName;                                     // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AssetTagsSubsystem_GetCollectionsContainingAsset;
 
 // Function AssetTags.AssetTagsSubsystem.GetCollectionsContainingAssetData
-// 0x0070 (0x0070 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct AssetTagsSubsystem_GetCollectionsContainingAssetData final
 {
 public:
-	struct FAssetData                             AssetData;                                         // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FAssetData                             AssetData;                                         // 0x0000(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           ReturnValue;                                       // 0x0078(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AssetTagsSubsystem_GetCollectionsContainingAssetData;
 
@@ -75,6 +189,107 @@ public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AssetTagsSubsystem_GetCollectionsContainingAssetPtr;
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetDataFromCollection
+// 0x0090 (0x0090 - 0x0000)
+struct AssetTagsSubsystem_RemoveAssetDataFromCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAssetData                             AssetData;                                         // 0x0010(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RemoveAssetDataFromCollection;
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetDatasFromCollection
+// 0x0028 (0x0028 - 0x0000)
+struct AssetTagsSubsystem_RemoveAssetDatasFromCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAssetData>                     AssetDatas;                                        // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RemoveAssetDatasFromCollection;
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetFromCollection
+// 0x001C (0x001C - 0x0000)
+struct AssetTagsSubsystem_RemoveAssetFromCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AssetPathName;                                     // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RemoveAssetFromCollection;
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetPtrFromCollection
+// 0x0020 (0x0020 - 0x0000)
+struct AssetTagsSubsystem_RemoveAssetPtrFromCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UObject*                          AssetPtr;                                          // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RemoveAssetPtrFromCollection;
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetPtrsFromCollection
+// 0x0028 (0x0028 - 0x0000)
+struct AssetTagsSubsystem_RemoveAssetPtrsFromCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        AssetPtrs;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RemoveAssetPtrsFromCollection;
+
+// Function AssetTags.AssetTagsSubsystem.RemoveAssetsFromCollection
+// 0x0028 (0x0028 - 0x0000)
+struct AssetTagsSubsystem_RemoveAssetsFromCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           AssetPathNames;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RemoveAssetsFromCollection;
+
+// Function AssetTags.AssetTagsSubsystem.RenameCollection
+// 0x001C (0x001C - 0x0000)
+struct AssetTagsSubsystem_RenameCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NewName;                                           // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_RenameCollection;
+
+// Function AssetTags.AssetTagsSubsystem.ReparentCollection
+// 0x001C (0x001C - 0x0000)
+struct AssetTagsSubsystem_ReparentCollection final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NewParentName;                                     // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AssetTagsSubsystem_ReparentCollection;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

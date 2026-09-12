@@ -18,12 +18,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputActionList.WBP_InputActionList_C
-// 0x0010 (0x0368 - 0x0358)
+// 0x0018 (0x0518 - 0x0500)
 class UWBP_InputActionList_C final : public UInputActionListWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0500(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InputActionList(int32 EntryPoint);
@@ -46,5 +46,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputActionList_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputActionList.SKEL_WBP_InputActionList_C
+// 0x0018 (0x0518 - 0x0500)
+class USKEL_WBP_InputActionList_C final : public UInputActionListWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0500(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void PreConstruct(bool IsDesignTime);
+	void UpdateInputActionListMode(EInputActionListMode NewMode);
+	void FadeIn();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputActionList_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputActionList_C")
+	}
+	static class USKEL_WBP_InputActionList_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputActionList_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputActionList_C;
 
 SDK_NAMESPACE_END

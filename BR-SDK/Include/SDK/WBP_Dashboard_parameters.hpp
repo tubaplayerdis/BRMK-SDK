@@ -80,5 +80,35 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Dashboard_C_AddSliderWidget;
 
+// Function WBP_Dashboard.SKEL_WBP_Dashboard_C.AddSliderWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Dashboard_C_AddSliderWidget final
+{
+public:
+	class UDashboardSliderWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Dashboard_C_AddSliderWidget;
+
+// Function WBP_Dashboard.SKEL_WBP_Dashboard_C.AddIconWidget
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_Dashboard_C_AddIconWidget final
+{
+public:
+	class UDashboardIconWidget*                   Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Dashboard_C_AddIconWidget;
+
+// Function WBP_Dashboard.SKEL_WBP_Dashboard_C.UpdateSliderWidgetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_WBP_Dashboard_C_UpdateSliderWidgetSlot final
+{
+public:
+	class UDashboardSliderWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumSliders;                                        // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Dashboard_C_UpdateSliderWidgetSlot;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

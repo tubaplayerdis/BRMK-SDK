@@ -70,4 +70,58 @@ void UBP_UIFunctionLibrary_C::UpdateHUDWidgetOpacity(class UWidget* Widget, bool
 }
 
 
+// Function BP_UIFunctionLibrary.SKEL_BP_UIFunctionLibrary_C.Get Ammo Type Display Info
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EAmmoType                               AmmoType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  IconSlot                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIColorStyle*                     ColorStyle                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_BP_UIFunctionLibrary_C::Get_Ammo_Type_Display_Info(EAmmoType AmmoType, class UObject* __WorldContext, int32* IconSlot, EBrickUIColorStyle* ColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_UIFunctionLibrary_C", "Get Ammo Type Display Info");
+
+	Params::SKEL_BP_UIFunctionLibrary_C_Get_Ammo_Type_Display_Info Parms{};
+
+	Parms.AmmoType = AmmoType;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (IconSlot != nullptr)
+		*IconSlot = Parms.IconSlot;
+
+	if (ColorStyle != nullptr)
+		*ColorStyle = Parms.ColorStyle;
+}
+
+
+// Function BP_UIFunctionLibrary.SKEL_BP_UIFunctionLibrary_C.UpdateHUDWidgetOpacity
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsFocused                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_BP_UIFunctionLibrary_C::UpdateHUDWidgetOpacity(class UWidget* Widget, bool bIsFocused, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SKEL_BP_UIFunctionLibrary_C", "UpdateHUDWidgetOpacity");
+
+	Params::SKEL_BP_UIFunctionLibrary_C_UpdateHUDWidgetOpacity Parms{};
+
+	Parms.Widget = Widget;
+	Parms.bIsFocused = bIsFocused;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

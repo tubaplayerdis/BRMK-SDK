@@ -50,4 +50,18 @@ void UWBP_BrickComboBoxItem_C::SetNoItemBrush()
 }
 
 
+// Function WBP_BrickComboBoxItem.SKEL_WBP_BrickComboBoxItem_C.SetNoItemBrush
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_BrickComboBoxItem_C::SetNoItemBrush()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBoxItem_C", "SetNoItemBrush");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

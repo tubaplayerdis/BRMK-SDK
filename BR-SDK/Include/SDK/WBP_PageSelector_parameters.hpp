@@ -61,5 +61,35 @@ public:
 };
 DUMPER7_ASSERTS_WBP_PageSelector_C_BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature;
 
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_PageSelector_C_BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PageSelector_C_BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_PageSelector_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PageSelector_C_BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature;
+
+// Function WBP_PageSelector.SKEL_WBP_PageSelector_C.UpdateButtons
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_PageSelector_C_UpdateButtons final
+{
+public:
+	bool                                          bCanGoBack;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanGoForward;                                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_PageSelector_C_UpdateButtons;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

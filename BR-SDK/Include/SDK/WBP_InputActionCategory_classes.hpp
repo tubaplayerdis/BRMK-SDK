@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
-#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputActionCategory.WBP_InputActionCategory_C
-// 0x0018 (0x0298 - 0x0280)
+// 0x0020 (0x0438 - 0x0418)
 class UWBP_InputActionCategory_C final : public UInputActionCategoryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InputActionCategory(int32 EntryPoint);
@@ -52,5 +52,39 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputActionCategory_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputActionCategory.SKEL_WBP_InputActionCategory_C
+// 0x0020 (0x0438 - 0x0418)
+class USKEL_WBP_InputActionCategory_C final : public UInputActionCategoryWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature();
+	void InitializeCategory(const class FText& InCategoryName);
+	void UpdateIsSelected(bool bNewSelected);
+	void UpdateInputActionListMode(EInputActionListMode NewMode);
+
+	class UWidget* GetWidgetToFocus() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputActionCategory_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputActionCategory_C")
+	}
+	static class USKEL_WBP_InputActionCategory_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputActionCategory_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputActionCategory_C;
 
 SDK_NAMESPACE_END

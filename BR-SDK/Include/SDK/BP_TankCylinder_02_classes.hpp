@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_TankCylinder_02.BP_TankCylinder_02_C
-// 0x0000 (0x01E0 - 0x01E0)
+// 0x0000 (0x01F0 - 0x01F0)
 class UBP_TankCylinder_02_C final : public UTankBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_TankCylinder_02_C;
+
+// BlueprintGeneratedClass BP_TankCylinder_02.SKEL_BP_TankCylinder_02_C
+// 0x0010 (0x0200 - 0x01F0)
+class USKEL_BP_TankCylinder_02_C final : public UTankBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x01F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_TankCylinder_02_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_TankCylinder_02_C")
+	}
+	static class USKEL_BP_TankCylinder_02_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_TankCylinder_02_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_TankCylinder_02_C;
 
 SDK_NAMESPACE_END

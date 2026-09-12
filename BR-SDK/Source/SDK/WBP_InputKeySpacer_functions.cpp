@@ -58,4 +58,26 @@ void UWBP_InputKeySpacer_C::UpdateStyleState(EBrickUIColorStyle NewStyle, EBrick
 }
 
 
+// Function WBP_InputKeySpacer.SKEL_WBP_InputKeySpacer_C.UpdateStyleState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      NewStyle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIStyleState                      NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_InputKeySpacer_C::UpdateStyleState(EBrickUIColorStyle NewStyle, EBrickUIStyleState NewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_InputKeySpacer_C", "UpdateStyleState");
+
+	Params::SKEL_WBP_InputKeySpacer_C_UpdateStyleState Parms{};
+
+	Parms.NewStyle = NewStyle;
+	Parms.NewState = NewState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_SpawnScreen.WBP_SpawnScreen_C
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x0410 - 0x0410)
 class UWBP_SpawnScreen_C final : public USpawnScreenWidget
 {
 public:
@@ -37,5 +38,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_SpawnScreen_C;
+
+// WidgetBlueprintGeneratedClass WBP_SpawnScreen.SKEL_WBP_SpawnScreen_C
+// 0x0010 (0x0420 - 0x0410)
+class USKEL_WBP_SpawnScreen_C final : public USpawnScreenWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	bool AddGameOverlayWidget(class UGameOverlayWidget* Widget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_SpawnScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_SpawnScreen_C")
+	}
+	static class USKEL_WBP_SpawnScreen_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_SpawnScreen_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_SpawnScreen_C;
 
 SDK_NAMESPACE_END

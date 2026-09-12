@@ -10,13 +10,43 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Camper.SKEL_BP_Camper_C
+// 0x0010 (0x0350 - 0x0340)
+class ASKEL_BP_Camper_C final : public AStaticMeshProp
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor_ReceiveActorBeginOverlap);
+	void ReceiveBeginPlay();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Camper_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Camper_C")
+	}
+	static class ASKEL_BP_Camper_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Camper_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Camper_C;
+
 // BlueprintGeneratedClass BP_Camper.BP_Camper_C
-// 0x0000 (0x0240 - 0x0240)
+// 0x0000 (0x0340 - 0x0340)
 class ABP_Camper_C final : public AStaticMeshProp
 {
 public:

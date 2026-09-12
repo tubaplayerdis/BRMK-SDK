@@ -140,4 +140,108 @@ class FText UWBP_BindKeyPopup_C::ConflictsArrayToText(class FText& InText, TArra
 }
 
 
+// Function WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_BindKeyPopup_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BindKeyPopup_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C.UpdateConflictedMappings
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsConflicted                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FText>&              ConflictedMappingNames                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BindKeyPopup_C::UpdateConflictedMappings(bool bIsConflicted, const TArray<class FText>& ConflictedMappingNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BindKeyPopup_C", "UpdateConflictedMappings");
+
+	Params::SKEL_WBP_BindKeyPopup_C_UpdateConflictedMappings Parms{};
+
+	Parms.bIsConflicted = bIsConflicted;
+	Parms.ConflictedMappingNames = std::move(ConflictedMappingNames);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BindKeyPopup_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BindKeyPopup_C", "PreConstruct");
+
+	Params::SKEL_WBP_BindKeyPopup_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C.UpdateIsBindingKey
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewIsBinding                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BindKeyPopup_C::UpdateIsBindingKey(bool bNewIsBinding)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BindKeyPopup_C", "UpdateIsBindingKey");
+
+	Params::SKEL_WBP_BindKeyPopup_C_UpdateIsBindingKey Parms{};
+
+	Parms.bNewIsBinding = bNewIsBinding;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C.ConflictsArrayToText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class FText&                            InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FText>&                    InConflictNames                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText USKEL_WBP_BindKeyPopup_C::ConflictsArrayToText(class FText& InText, TArray<class FText>& InConflictNames) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BindKeyPopup_C", "ConflictsArrayToText");
+
+	Params::SKEL_WBP_BindKeyPopup_C_ConflictsArrayToText Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.InConflictNames = std::move(InConflictNames);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InText = std::move(Parms.InText);
+	InConflictNames = std::move(Parms.InConflictNames);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

@@ -11,16 +11,17 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FuelTank.BP_FuelTank_C
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x0380 - 0x0380)
 class ABP_FuelTank_C final : public AFuelTank
 {
 public:
-	bool ShouldSpawnLeakOnHit(const struct FHitResult& Hit_ShouldSpawnLeakOnHit);
+	bool ShouldSpawnLeakOnHit(const struct FHitResult& Hit);
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_FuelTank_C;
+
+// BlueprintGeneratedClass BP_FuelTank.SKEL_BP_FuelTank_C
+// 0x0010 (0x0390 - 0x0380)
+class ASKEL_BP_FuelTank_C final : public AFuelTank
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0380(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	bool ShouldSpawnLeakOnHit(const struct FHitResult& Hit);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_FuelTank_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_FuelTank_C")
+	}
+	static class ASKEL_BP_FuelTank_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_FuelTank_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_FuelTank_C;
 
 SDK_NAMESPACE_END

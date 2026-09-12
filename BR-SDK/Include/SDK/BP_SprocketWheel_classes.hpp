@@ -11,12 +11,13 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_SprocketWheel.BP_SprocketWheel_C
-// 0x0000 (0x01E8 - 0x01E8)
+// 0x0000 (0x0200 - 0x0200)
 class UBP_SprocketWheel_C final : public USprocketWheelBrickStaticInfo
 {
 public:
@@ -34,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_SprocketWheel_C;
+
+// BlueprintGeneratedClass BP_SprocketWheel.SKEL_BP_SprocketWheel_C
+// 0x0010 (0x0210 - 0x0200)
+class USKEL_BP_SprocketWheel_C final : public USprocketWheelBrickStaticInfo
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0200(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_SprocketWheel_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_SprocketWheel_C")
+	}
+	static class USKEL_BP_SprocketWheel_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_SprocketWheel_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_SprocketWheel_C;
 
 SDK_NAMESPACE_END

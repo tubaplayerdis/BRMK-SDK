@@ -10,13 +10,42 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "BP_Paint_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Paint_Navy.SKEL_BP_Paint_Navy_C
+// 0x0010 (0x03A8 - 0x0398)
+class ASKEL_BP_Paint_Navy_C final : public ASKEL_BP_Paint_C
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_Paint_Navy_C;               // 0x0398(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void ReceiveBeginPlay();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Paint_Navy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Paint_Navy_C")
+	}
+	static class ASKEL_BP_Paint_Navy_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Paint_Navy_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Paint_Navy_C;
+
 // BlueprintGeneratedClass BP_Paint_Navy.BP_Paint_Navy_C
-// 0x0000 (0x02B0 - 0x02B0)
+// 0x0000 (0x0388 - 0x0388)
 class ABP_Paint_Navy_C final : public ABP_Paint_C
 {
 public:

@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Blender.BP_Blender_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_Blender_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Blender_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Blender.BP_Blender_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Blender_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Blender_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Blender.BP_Blender_C.ExecuteUbergraph_BP_Blender
 // (Final, UbergraphFunction)
 // Parameters:
@@ -61,6 +33,62 @@ void ABP_Blender_C::ExecuteUbergraph_BP_Blender(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Blender.BP_Blender_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Blender_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Blender_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Blender.BP_Blender_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_Blender_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Blender_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Blender.SKEL_BP_Blender_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_Blender_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Blender_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Blender.SKEL_BP_Blender_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_Blender_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Blender_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

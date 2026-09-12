@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_SackTruck.BP_SackTruck_C
-// 0x0008 (0x0228 - 0x0220)
+// 0x0008 (0x0300 - 0x02F8)
 class ABP_SackTruck_C final : public AActor
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +38,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_SackTruck_C;
+
+// BlueprintGeneratedClass BP_SackTruck.SKEL_BP_SackTruck_C
+// 0x0018 (0x0310 - 0x02F8)
+class ASKEL_BP_SackTruck_C final : public AActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_SackTruck_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_SackTruck_C")
+	}
+	static class ASKEL_BP_SackTruck_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_SackTruck_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_SackTruck_C;
 
 SDK_NAMESPACE_END

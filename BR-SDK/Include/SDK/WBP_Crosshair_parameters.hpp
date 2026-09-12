@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -81,6 +81,34 @@ public:
 	struct FClientDamageInfo                      DamageInfo;                                        // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_Crosshair_C_PlayHitAnimation;
+
+// Function WBP_Crosshair.SKEL_WBP_Crosshair_C.PlayHitAnimation
+// 0x000C (0x000C - 0x0000)
+struct SKEL_WBP_Crosshair_C_PlayHitAnimation final
+{
+public:
+	struct FClientDamageInfo                      DamageInfo;                                        // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Crosshair_C_PlayHitAnimation;
+
+// Function WBP_Crosshair.SKEL_WBP_Crosshair_C.UpdateIsAttachingWinch
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_Crosshair_C_UpdateIsAttachingWinch final
+{
+public:
+	bool                                          bNewAttaching;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Crosshair_C_UpdateIsAttachingWinch;
+
+// Function WBP_Crosshair.SKEL_WBP_Crosshair_C.UpdateWinchAttachment
+// 0x0002 (0x0002 - 0x0000)
+struct SKEL_WBP_Crosshair_C_UpdateWinchAttachment final
+{
+public:
+	bool                                          bBlockingHit;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWithinRange;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Crosshair_C_UpdateWinchAttachment;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

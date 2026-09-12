@@ -39,4 +39,27 @@ bool UWBP_SpawnScreen_C::AddGameOverlayWidget(class UGameOverlayWidget* Widget)
 }
 
 
+// Function WBP_SpawnScreen.SKEL_WBP_SpawnScreen_C.AddGameOverlayWidget
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class UGameOverlayWidget*               Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USKEL_WBP_SpawnScreen_C::AddGameOverlayWidget(class UGameOverlayWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_SpawnScreen_C", "AddGameOverlayWidget");
+
+	Params::SKEL_WBP_SpawnScreen_C_AddGameOverlayWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

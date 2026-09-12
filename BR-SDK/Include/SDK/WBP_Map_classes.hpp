@@ -11,18 +11,19 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Map.WBP_Map_C
-// 0x0018 (0x0498 - 0x0480)
+// 0x0018 (0x0638 - 0x0620)
 class UWBP_Map_C final : public UMapWidget
 {
 public:
-	class UBrickImage*                            BackgroundImage;                                   // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            BrickImage_85;                                     // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            BrickImage_140;                                    // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BackgroundImage;                                   // 0x0620(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_85;                                     // 0x0628(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_140;                                    // 0x0630(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void AddGameOverlayWidget(class UGameOverlayWidget* Widget);
@@ -44,5 +45,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_Map_C;
+
+// WidgetBlueprintGeneratedClass WBP_Map.SKEL_WBP_Map_C
+// 0x0028 (0x0648 - 0x0620)
+class USKEL_WBP_Map_C final : public UMapWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0620(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            BackgroundImage;                                   // 0x0630(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_85;                                     // 0x0638(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_140;                                    // 0x0640(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddGameOverlayWidget(class UGameOverlayWidget* Widget);
+
+	class UMaterialInstanceDynamic* CreateMapMID() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_Map_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_Map_C")
+	}
+	static class USKEL_WBP_Map_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_Map_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_Map_C;
 
 SDK_NAMESPACE_END

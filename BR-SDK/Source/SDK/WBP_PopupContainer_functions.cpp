@@ -158,4 +158,126 @@ class UMenuButtonWidget* UWBP_PopupContainer_C::CreateCancelButton()
 }
 
 
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.AddPopupWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPopupWidget*                     Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PopupContainer_C::AddPopupWidget(class UPopupWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PopupContainer_C", "AddPopupWidget");
+
+	Params::SKEL_WBP_PopupContainer_C_AddPopupWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.UpdateTitleText
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      NewTitle                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PopupContainer_C::UpdateTitleText(const class FText& NewTitle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PopupContainer_C", "UpdateTitleText");
+
+	Params::SKEL_WBP_PopupContainer_C_UpdateTitleText Parms{};
+
+	Parms.NewTitle = std::move(NewTitle);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.UpdateContentSlot
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bShowContent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EPopupSizeRule                          SizeRule                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PopupContainer_C::UpdateContentSlot(bool bShowContent, EPopupSizeRule SizeRule)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PopupContainer_C", "UpdateContentSlot");
+
+	Params::SKEL_WBP_PopupContainer_C_UpdateContentSlot Parms{};
+
+	Parms.bShowContent = bShowContent;
+	Parms.SizeRule = SizeRule;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.UpdateColorStyle
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PopupContainer_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PopupContainer_C", "UpdateColorStyle");
+
+	Params::SKEL_WBP_PopupContainer_C_UpdateColorStyle Parms{};
+
+	Parms.InColorStyle = InColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.CreateConfirmButton
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonWidget*                ReturnValue                                            (BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMenuButtonWidget* USKEL_WBP_PopupContainer_C::CreateConfirmButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PopupContainer_C", "CreateConfirmButton");
+
+	Params::SKEL_WBP_PopupContainer_C_CreateConfirmButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_PopupContainer.SKEL_WBP_PopupContainer_C.CreateCancelButton
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMenuButtonWidget*                ReturnValue                                            (BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMenuButtonWidget* USKEL_WBP_PopupContainer_C::CreateCancelButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PopupContainer_C", "CreateCancelButton");
+
+	Params::SKEL_WBP_PopupContainer_C_CreateCancelButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 SDK_NAMESPACE_END

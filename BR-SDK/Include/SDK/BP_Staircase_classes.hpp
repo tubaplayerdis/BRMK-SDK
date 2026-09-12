@@ -10,18 +10,50 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_Staircase.SKEL_BP_Staircase_C
+// 0x0020 (0x0318 - 0x02F8)
+class ASKEL_BP_Staircase_C final : public AActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHierarchicalInstancedStaticMeshComponent* HierarchicalInstancedStaticMesh;                // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumInstances;                                      // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_Staircase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_Staircase_C")
+	}
+	static class ASKEL_BP_Staircase_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_Staircase_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_Staircase_C;
+
 // BlueprintGeneratedClass BP_Staircase.BP_Staircase_C
-// 0x0010 (0x0230 - 0x0220)
+// 0x0010 (0x0308 - 0x02F8)
 class ABP_Staircase_C final : public AActor
 {
 public:
-	class UHierarchicalInstancedStaticMeshComponent* HierarchicalInstancedStaticMesh;                // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumInstances;                                      // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UHierarchicalInstancedStaticMeshComponent* HierarchicalInstancedStaticMesh;                // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumInstances;                                      // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();

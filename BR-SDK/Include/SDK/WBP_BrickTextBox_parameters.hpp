@@ -10,40 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
 // 0x0002 (0x0002 - 0x0000)
-struct WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+struct SKEL_WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
 {
 public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+DUMPER7_ASSERTS_SKEL_WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdateIsPassword
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.UpdateIsPassword
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_BrickTextBox_C_UpdateIsPassword final
+struct SKEL_WBP_BrickTextBox_C_UpdateIsPassword final
 {
 public:
-	bool                                          bNewIsPassword_UpdateIsPassword;                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bNewIsPassword;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_BrickTextBox_C_UpdateIsPassword;
+DUMPER7_ASSERTS_SKEL_WBP_BrickTextBox_C_UpdateIsPassword;
 
-// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdatePasswordVisible
+// Function WBP_BrickTextBox.SKEL_WBP_BrickTextBox_C.UpdatePasswordVisible
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_BrickTextBox_C_UpdatePasswordVisible final
+struct SKEL_WBP_BrickTextBox_C_UpdatePasswordVisible final
 {
 public:
-	bool                                          bNewVisible_UpdatePasswordVisible;                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_BrickTextBox_C_UpdatePasswordVisible;
+DUMPER7_ASSERTS_SKEL_WBP_BrickTextBox_C_UpdatePasswordVisible;
 
 // Function WBP_BrickTextBox.WBP_BrickTextBox_C.ExecuteUbergraph_WBP_BrickTextBox
 // 0x001C (0x001C - 0x0000)
@@ -65,6 +65,34 @@ public:
 	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot;                 // 0x0014(0x0008)(NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_BrickTextBox_C_ExecuteUbergraph_WBP_BrickTextBox;
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdatePasswordVisible
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BrickTextBox_C_UpdatePasswordVisible final
+{
+public:
+	bool                                          bNewVisible;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickTextBox_C_UpdatePasswordVisible;
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.UpdateIsPassword
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BrickTextBox_C_UpdateIsPassword final
+{
+public:
+	bool                                          bNewIsPassword;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickTextBox_C_UpdateIsPassword;
+
+// Function WBP_BrickTextBox.WBP_BrickTextBox_C.BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
+// 0x0002 (0x0002 - 0x0000)
+struct WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+{
+public:
+	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BrickTextBox_C_BndEvt__ShowPasswordButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

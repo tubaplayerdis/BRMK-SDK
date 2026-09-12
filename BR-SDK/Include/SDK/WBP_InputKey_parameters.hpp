@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "BrickRigs_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -50,6 +50,16 @@ public:
 	bool                                          bIsGamepadKey;                                     // 0x0028(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_InputKey_C_UpdateKey;
+
+// Function WBP_InputKey.SKEL_WBP_InputKey_C.UpdateKey
+// 0x0030 (0x0030 - 0x0000)
+struct SKEL_WBP_InputKey_C_UpdateKey final
+{
+public:
+	struct FKeyDisplayTableRow                    DisplayInfo;                                       // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsGamepadKey;                                     // 0x0028(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputKey_C_UpdateKey;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

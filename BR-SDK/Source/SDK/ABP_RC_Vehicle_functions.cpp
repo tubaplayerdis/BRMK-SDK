@@ -77,4 +77,45 @@ void UABP_RC_Vehicle_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 }
 
 
+// Function ABP_RC_Vehicle.SKEL_ABP_RC_Vehicle_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_ABP_RC_Vehicle_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_RC_Vehicle_C", "BlueprintUpdateAnimation");
+
+	Params::SKEL_ABP_RC_Vehicle_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_RC_Vehicle.SKEL_ABP_RC_Vehicle_C.AnimGraph
+// (HasOutParams)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void USKEL_ABP_RC_Vehicle_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_RC_Vehicle_C", "AnimGraph");
+
+	Params::SKEL_ABP_RC_Vehicle_C_AnimGraph Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
+
 SDK_NAMESPACE_END

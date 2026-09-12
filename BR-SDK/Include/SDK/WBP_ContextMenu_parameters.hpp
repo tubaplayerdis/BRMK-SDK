@@ -41,5 +41,14 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ContextMenu_C_UpdateTitleText;
 
+// Function WBP_ContextMenu.SKEL_WBP_ContextMenu_C.UpdateTitleText
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_ContextMenu_C_UpdateTitleText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_ContextMenu_C_UpdateTitleText;
+
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END
