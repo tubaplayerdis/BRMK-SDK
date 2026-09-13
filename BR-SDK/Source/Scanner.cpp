@@ -77,7 +77,7 @@ uintptr_t SDK::Offsets::OGWorld()
     if (O_GWorld != 0) return O_GWorld;
 
     O_GWorld = GetSymbolAddress(EDITOR_GWORLD_MODULE, EDITOR_GWORLD_SYB);
-    if (O_ProcessEvent == 0) std::cerr << "GWorld Offset NOT FOUND" << std::endl;
+    if (O_GWorld == 0) std::cerr << "GWorld Offset NOT FOUND" << std::endl;
     return O_GWorld;
 }
 

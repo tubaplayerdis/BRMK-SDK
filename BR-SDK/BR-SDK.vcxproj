@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>BRMK_SDK_Release</TargetName>
+    <TargetName>BRMK-SDK_Release</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>BRMK_SDK_Debug</TargetName>
+    <TargetName>BRMK-SDK_Debug</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -118,6 +118,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include;$(ProjectDir)include/SDK</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -138,6 +139,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include;$(ProjectDir)include/SDK</AdditionalIncludeDirectories>
       <AdditionalOptions></AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -2657,7 +2659,6 @@
     <ClCompile Include="Source\SDK\TutorialTPP_AnimBlueprint_functions.cpp" />
     <ClCompile Include="Source\SDK\Tutorial_BP_Class_functions.cpp" />
     <ClCompile Include="Source\SDK\Tutorial_BP_Interface_functions.cpp" />
-    <ClCompile Include="Source\SDK\UCustomBrick_functions.cpp" />
     <ClCompile Include="Source\SDK\UMGEditor_functions.cpp" />
     <ClCompile Include="Source\SDK\UMG_functions.cpp" />
     <ClCompile Include="Source\SDK\UnderWaterPostProcessMesh_functions.cpp" />

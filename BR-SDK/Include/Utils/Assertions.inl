@@ -17,12 +17,12 @@ static_assert(offsetof(FUObjectItem, Object) == 0x000000, "Member 'FUObjectItem:
 
 #define DUMPER7_ASSERTS_TUObjectArray \
 static_assert(alignof(TUObjectArray) == 0x000008, "Wrong alignment on TUObjectArray"); \
-static_assert(sizeof(TUObjectArray) == 0x000030, "Wrong size on TUObjectArray"); \
-static_assert(offsetof(TUObjectArray, Objects) == 0x000010, "Member 'TUObjectArray::Objects' has a wrong offset!"); \
-static_assert(offsetof(TUObjectArray, MaxElements) == 0x000020, "Member 'TUObjectArray::MaxElements' has a wrong offset!"); \
-static_assert(offsetof(TUObjectArray, NumElements) == 0x000024, "Member 'TUObjectArray::NumElements' has a wrong offset!"); \
-static_assert(offsetof(TUObjectArray, MaxChunks) == 0x000028, "Member 'TUObjectArray::MaxChunks' has a wrong offset!"); \
-static_assert(offsetof(TUObjectArray, NumChunks) == 0x00002C, "Member 'TUObjectArray::NumChunks' has a wrong offset!"); \
+static_assert(sizeof(TUObjectArray) == 0x000020, "Wrong size on TUObjectArray"); \
+static_assert(offsetof(TUObjectArray, Objects) == 0x000000, "Member 'TUObjectArray::Objects' has a wrong offset!"); \
+static_assert(offsetof(TUObjectArray, MaxElements) == 0x000010, "Member 'TUObjectArray::MaxElements' has a wrong offset!"); \
+static_assert(offsetof(TUObjectArray, NumElements) == 0x000014, "Member 'TUObjectArray::NumElements' has a wrong offset!"); \
+static_assert(offsetof(TUObjectArray, MaxChunks) == 0x000018, "Member 'TUObjectArray::MaxChunks' has a wrong offset!"); \
+static_assert(offsetof(TUObjectArray, NumChunks) == 0x00001C, "Member 'TUObjectArray::NumChunks' has a wrong offset!"); \
 
 #define DUMPER7_ASSERTS_FName \
 static_assert(alignof(FName) == 0x000004, "Wrong alignment on FName"); \

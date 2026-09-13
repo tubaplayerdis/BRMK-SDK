@@ -243,7 +243,6 @@ public:
 
 	static constexpr int32                        ElementsPerChunk = 0x10000;                        // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUObjectItem**                         Objects;                                           // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxElements;                                       // 0x0020(0x0004)(NOT AUTO-GENERATED PROPERTY)

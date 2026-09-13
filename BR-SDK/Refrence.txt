@@ -8,3 +8,5 @@ FFieldPath has the Path member at 0x20 and the padding does not exist.
 The DLSS blueprint library assertions are missing? who knows.
 
 UStruct::IsSubclassOf will have to be re-implemented
+
+TUObjectArray had extra padding at beginning?
