@@ -28,7 +28,7 @@ public:
 	bool                                          VSyncOffRequired;                                  // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          HardwareSchedulingRequired;                        // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_BreakStreamlineFeatureRequirements;
+;
 
 // Function StreamlineBlueprint.StreamlineLibrary.GetStreamlineFeatureInformation
 // 0x0038 (0x0038 - 0x0000)
@@ -39,7 +39,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStreamlineFeatureRequirements         ReturnValue;                                       // 0x0004(0x0034)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_GetStreamlineFeatureInformation;
+;
 
 // Function StreamlineBlueprint.StreamlineLibrary.IsStreamlineFeatureSupported
 // 0x0002 (0x0002 - 0x0000)
@@ -49,7 +49,7 @@ public:
 	EUStreamlineFeature                           Feature;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_IsStreamlineFeatureSupported;
+;
 
 // Function StreamlineBlueprint.StreamlineLibrary.QueryStreamlineFeatureSupport
 // 0x0002 (0x0002 - 0x0000)
@@ -59,7 +59,7 @@ public:
 	EUStreamlineFeature                           Feature;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUStreamlineFeatureSupport                    ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_QueryStreamlineFeatureSupport;
+;
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.GetDefaultDLSSGMode
 // 0x0001 (0x0001 - 0x0000)
@@ -68,7 +68,7 @@ struct StreamlineLibraryDLSSG_GetDefaultDLSSGMode final
 public:
 	EUStreamlineDLSSGMode                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_GetDefaultDLSSGMode;
+;
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.GetDLSSGFrameTiming
 // 0x0008 (0x0008 - 0x0000)
@@ -78,7 +78,7 @@ public:
 	float                                         FrameRateInHertz;                                  // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FramesPresented;                                   // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_GetDLSSGFrameTiming;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.GetDLSSGMode
 // 0x0001 (0x0001 - 0x0000)
@@ -87,7 +87,7 @@ struct StreamlineLibraryDLSSG_GetDLSSGMode final
 public:
 	EUStreamlineDLSSGMode                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_GetDLSSGMode;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.GetSupportedDLSSGModes
 // 0x0010 (0x0010 - 0x0000)
@@ -96,7 +96,7 @@ struct StreamlineLibraryDLSSG_GetSupportedDLSSGModes final
 public:
 	TArray<EUStreamlineDLSSGMode>                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_GetSupportedDLSSGModes;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.IsDLSSGModeSupported
 // 0x0002 (0x0002 - 0x0000)
@@ -106,7 +106,7 @@ public:
 	EUStreamlineDLSSGMode                         DLSSGMode;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_IsDLSSGModeSupported;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.IsDLSSGSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -115,7 +115,7 @@ struct StreamlineLibraryDLSSG_IsDLSSGSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_IsDLSSGSupported;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.QueryDLSSGSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -124,7 +124,7 @@ struct StreamlineLibraryDLSSG_QueryDLSSGSupport final
 public:
 	EUStreamlineFeatureSupport                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_QueryDLSSGSupport;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryDLSSG.SetDLSSGMode
 // 0x0001 (0x0001 - 0x0000)
@@ -133,7 +133,7 @@ struct StreamlineLibraryDLSSG_SetDLSSGMode final
 public:
 	EUStreamlineDLSSGMode                         DLSSGMode;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryDLSSG_SetDLSSGMode;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.GetDefaultReflexMode
 // 0x0001 (0x0001 - 0x0000)
@@ -142,7 +142,7 @@ struct StreamlineLibraryReflex_GetDefaultReflexMode final
 public:
 	EUStreamlineReflexMode                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_GetDefaultReflexMode;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.GetGameLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -151,7 +151,7 @@ struct StreamlineLibraryReflex_GetGameLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_GetGameLatencyInMs;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.GetGameToRenderLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -160,7 +160,7 @@ struct StreamlineLibraryReflex_GetGameToRenderLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_GetGameToRenderLatencyInMs;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.GetReflexMode
 // 0x0001 (0x0001 - 0x0000)
@@ -169,7 +169,7 @@ struct StreamlineLibraryReflex_GetReflexMode final
 public:
 	EUStreamlineReflexMode                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_GetReflexMode;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.GetRenderLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -178,7 +178,7 @@ struct StreamlineLibraryReflex_GetRenderLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_GetRenderLatencyInMs;
+
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.IsReflexSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -187,7 +187,6 @@ struct StreamlineLibraryReflex_IsReflexSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_IsReflexSupported;
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.QueryReflexSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -196,7 +195,6 @@ struct StreamlineLibraryReflex_QueryReflexSupport final
 public:
 	EUStreamlineFeatureSupport                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_QueryReflexSupport;
 
 // Function StreamlineBlueprint.StreamlineLibraryReflex.SetReflexMode
 // 0x0001 (0x0001 - 0x0000)
@@ -205,7 +203,6 @@ struct StreamlineLibraryReflex_SetReflexMode final
 public:
 	EUStreamlineReflexMode                        Mode;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibraryReflex_SetReflexMode;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

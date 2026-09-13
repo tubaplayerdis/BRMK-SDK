@@ -80,7 +80,7 @@ static_assert(offsetof(FFieldPath, ResolvedField) == 0x000000, "Member 'FFieldPa
 static_assert(offsetof(FFieldPath, InitialFieldClass) == 0x000008, "Member 'FFieldPath::InitialFieldClass' has a wrong offset!"); \
 static_assert(offsetof(FFieldPath, FieldPathSerialNumber) == 0x000010, "Member 'FFieldPath::FieldPathSerialNumber' has a wrong offset!"); \
 static_assert(offsetof(FFieldPath, ResolvedOwner) == 0x000014, "Member 'FFieldPath::ResolvedOwner' has a wrong offset!"); \
-static_assert(offsetof(FFieldPath, Path) == 0x00001C, "Member 'FFieldPath::Path' has a wrong offset!"); \
+static_assert(offsetof(FFieldPath, Path) == 0x000020, "Member 'FFieldPath::Path' has a wrong offset!"); \
 
 #define DUMPER7_ASSERTS_FScriptDelegate \
 static_assert(alignof(FScriptDelegate) == 0x000004, "Wrong alignment on FScriptDelegate"); \
@@ -664,7 +664,6 @@ static_assert(offsetof(UField, Next) == 0x000030, "Member 'UField::Next' has a w
 #define DUMPER7_ASSERTS_UStruct \
 static_assert(alignof(UStruct) == 0x000008, "Wrong alignment on UStruct"); \
 static_assert(sizeof(UStruct) == 0x0000C0, "Wrong size on UStruct"); \
-static_assert(offsetof(UStruct, BaseChain) == 0x-00009, "Member 'UStruct::BaseChain' has a wrong offset!"); \
 static_assert(offsetof(UStruct, SuperStruct) == 0x000038, "Member 'UStruct::SuperStruct' has a wrong offset!"); \
 static_assert(offsetof(UStruct, Children) == 0x000040, "Member 'UStruct::Children' has a wrong offset!"); \
 static_assert(offsetof(UStruct, ChildProperties) == 0x000048, "Member 'UStruct::ChildProperties' has a wrong offset!"); \

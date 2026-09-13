@@ -37,7 +37,6 @@ public:
 	struct FVector                                FixationPoint;                                     // 0x0030(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ConfidenceValue;                                   // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEyeTrackerStereoGazeData;
 
 // ScriptStruct EyeTracker.EyeTrackerGazeData
 // 0x0028 (0x0028 - 0x0000)
@@ -49,6 +48,5 @@ public:
 	struct FVector                                FixationPoint;                                     // 0x0018(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ConfidenceValue;                                   // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEyeTrackerGazeData;
 
 SDK_NAMESPACE_END

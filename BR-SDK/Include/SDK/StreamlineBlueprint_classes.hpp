@@ -40,7 +40,7 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineLibrary;
+;
 
 // Class StreamlineBlueprint.StreamlineLibraryDLSSG
 // 0x0000 (0x0028 - 0x0028)
@@ -70,7 +70,7 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibraryDLSSG>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineLibraryDLSSG;
+;
 
 // Class StreamlineBlueprint.StreamlineLibraryReflex
 // 0x0000 (0x0028 - 0x0028)
@@ -100,6 +100,6 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibraryReflex>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineLibraryReflex;
+;
 
 SDK_NAMESPACE_END

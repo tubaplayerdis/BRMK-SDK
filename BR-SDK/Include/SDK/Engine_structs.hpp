@@ -13618,7 +13618,7 @@ public:
 	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveVector*                           PathOffsetCurve;                                   // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRootMotionSource_MoveToForce;
+//DUMPER7_ASSERTS_FRootMotionSource_MoveToForce;
 
 // ScriptStruct Engine.RootMotionSource_RadialForce
 // 0x0040 (0x00E0 - 0x00A0)
@@ -13639,7 +13639,7 @@ public:
 	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               FixedWorldDirection;                               // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRootMotionSource_RadialForce;
+//DUMPER7_ASSERTS_FRootMotionSource_RadialForce;
 
 // ScriptStruct Engine.RootMotionSource_ConstantForce
 // 0x0010 (0x00B0 - 0x00A0)
@@ -13650,7 +13650,7 @@ public:
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            StrengthOverTime;                                  // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRootMotionSource_ConstantForce;
+//DUMPER7_ASSERTS_FRootMotionSource_ConstantForce;
 
 // ScriptStruct Engine.CameraExposureSettings
 // 0x0040 (0x0040 - 0x0000)

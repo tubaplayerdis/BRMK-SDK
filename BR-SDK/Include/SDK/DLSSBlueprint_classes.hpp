@@ -57,6 +57,5 @@ public:
 		return GetDefaultObjImpl<UDLSSLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UDLSSLibrary;
 
 SDK_NAMESPACE_END

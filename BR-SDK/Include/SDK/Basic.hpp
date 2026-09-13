@@ -693,8 +693,9 @@ public:
 	class FFieldClass*                            InitialFieldClass;                                 // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         FieldPathSerialNumber;                             // 0x0010(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	TWeakObjectPtr<class UStruct>                 ResolvedOwner;                                     // 0x0014(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 	TArray<FName>                                 Path;                                              // 0x001C(0x0010)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	//uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFieldPath;
 

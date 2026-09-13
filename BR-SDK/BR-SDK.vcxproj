@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>$(ProjectName)_Release</TargetName>
+    <TargetName>BRMK_SDK_Release</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>$(ProjectName)_Debug</TargetName>
+    <TargetName>BRMK_SDK_Debug</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -1601,6 +1601,9 @@
     <ClCompile Include="Source\SDK\WBP_VehicleIcon_functions.cpp" />
     <ClCompile Include="Source\SDK\WBP_VideoSettings_functions.cpp" />
     <ClCompile Include="Source\SDK\WBP_WindowManager_functions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Refrence.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -157,8 +157,8 @@ DUMPER7_ASSERTS_UField;
 class UStruct : public UField
 {
 public:
-	struct FStructBaseChain                       BaseChain;                                         // 0x-009(0x0010)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_7[0x31];                                       // 0x0007(0x0031)(Fixing Size After Last Property [ Dumper-7 ])
+	//struct FStructBaseChain                       BaseChain;                                         // 0x-009(0x0010)(NOT AUTO-GENERATED PROPERTY)
+	//uint8                                         Pad_7[0x31];                                       // 0x0007(0x0031)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStruct*                                SuperStruct;                                       // 0x0038(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UField*                                 Children;                                          // 0x0040(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FField*                                 ChildProperties;                                   // 0x0048(0x0008)(NOT AUTO-GENERATED PROPERTY)

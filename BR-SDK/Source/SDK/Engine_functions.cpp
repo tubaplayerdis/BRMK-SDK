@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
 #include "Engine_parameters.hpp"
 
@@ -13384,7 +13385,6 @@ class UWorld* UWorld::GetWorld()
 
 	return nullptr;
 }
-}
 
 
 // Function Engine.World.HandleTimelineScrubbed
@@ -13416,7 +13416,7 @@ class AWorldSettings* UWorld::K2_GetWorldSettings()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("World", "K2_GetWorldSettings");
+		Func = this->Class->GetFunction("World", "K2_GetWorldSettings");
 
 	Params::World_K2_GetWorldSettings Parms{};
 
