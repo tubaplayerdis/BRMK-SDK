@@ -11,6 +11,7 @@
 #include <vector>
 #include <sstream>
 #include <memory>
+#include <iostream>
 #pragma comment(lib, "Psapi.lib")
 
 namespace
@@ -61,7 +62,14 @@ namespace
 	{
 		std::uint64_t patternLen = strlen(mask);
 
-		for (std::uint64_t i = 0; i < size - patternLen; i++) {
+		// Failsafe: invalid pattern or module too small to contain it
+		if (patternLen == 0 || size < patternLen) {
+			return 0;
+		}
+
+		const std::uint64_t searchRange = size - patternLen;
+
+		for (std::uint64_t i = 0; i <= searchRange; i++) {
 			bool found = true;
 
 			for (std::uint64_t j = 0; j < patternLen; j++) {
@@ -78,53 +86,25 @@ namespace
 		return 0;
 	}
 
-	static unsigned long long FindPatternInModules(const char* pattern, const char* mask, const wchar_t* moduleNameFilter = nullptr)
+	static bool GetSectionByName(const char* name, unsigned long long& base, std::uint64_t& size, const char* moduleName = nullptr)
 	{
-		HMODULE hMods[1024];
-		DWORD cbNeeded;
-		HANDLE hProcess = GetCurrentProcess();
+		HMODULE hModule = GetModuleHandleA(moduleName);
+		if (!hModule) return false;
 
-		if (!EnumProcessModules(hProcess, hMods, sizeof(hMods), &cbNeeded))
-			return 0;
-
-		DWORD moduleCount = cbNeeded / sizeof(HMODULE);
-
-		for (DWORD i = 0; i < moduleCount; i++) {
-			wchar_t modName[MAX_PATH];
-			if (!GetModuleBaseNameW(hProcess, hMods[i], modName, MAX_PATH))
-				continue;
-
-			if (moduleNameFilter && _wcsicmp(modName, moduleNameFilter) != 0)
-				continue;
-
-			MODULEINFO modInfo{};
-			if (!GetModuleInformation(hProcess, hMods[i], &modInfo, sizeof(modInfo)))
-				continue;
-
-			unsigned long long base = reinterpret_cast<unsigned long long>(modInfo.lpBaseOfDll);
-			std::uint64_t size = modInfo.SizeOfImage;
-
-			unsigned long long found = FindPatternS(pattern, mask, base, size);
-			if (found)
-				return found;
-		}
-
-		return 0;
-	}
-
-	static bool GetTextSection(unsigned long long& textBase, std::uint64_t& textSize)
-	{
-		uintptr_t moduleBase = (unsigned long long)GetModuleHandle(NULL);
+		uintptr_t moduleBase = (uintptr_t)hModule;
 		auto dos = (PIMAGE_DOS_HEADER)moduleBase;
+		if (dos->e_magic != IMAGE_DOS_SIGNATURE) return false;
+
 		auto nt = (PIMAGE_NT_HEADERS)(moduleBase + dos->e_lfanew);
+		if (nt->Signature != IMAGE_NT_SIGNATURE) return false;
 
 		auto section = IMAGE_FIRST_SECTION(nt);
 		for (unsigned i = 0; i < nt->FileHeader.NumberOfSections; ++i, ++section)
 		{
-			if (strncmp((char*)section->Name, ".text", 5) == 0)
+			if (strncmp((char*)section->Name, name, IMAGE_SIZEOF_SHORT_NAME) == 0)
 			{
-				textBase = moduleBase + section->VirtualAddress;
-				textSize = section->Misc.VirtualSize;
+				base = moduleBase + section->VirtualAddress;
+				size = section->Misc.VirtualSize;
 				return true;
 			}
 		}
@@ -168,57 +148,15 @@ namespace
 		return { pattern.data(), mask.c_str() };
 	}
 
-
-
-	/// Resolve a signature to an address. Uses the format: "48 89 7C 24 ?? 41 56 48 83 EC ?? 48 8B FA 4C 8B F1 E8 ?? ?? ?? ??"
-	/// @param signature signature to resolve
-	/// @return address of the function representing the signature. 0 if not found.
-	unsigned long long ResolveSignature(const std::string& signature)
+	std::uintptr_t ResolveCallTarget(std::uintptr_t callInstructionAddress)
 	{
-		if (!Cache)
-		{
-			Cache = std::make_unique<std::map<std::string, unsigned long long>>();
-		}
+		// callInstructionAddress points at the 0xE8 byte itself
+		std::int32_t displacement;
+		std::memcpy(&displacement, reinterpret_cast<void*>(callInstructionAddress + 1), sizeof(displacement));
 
-		try
-		{
-			return Cache->at(std::string(signature));
-		}
-		catch (...)
-		{
-			//Only Scan Current Module
-			std::uintptr_t base = 0;
-			std::uint64_t size = 0;
-			if (!GetTextSection(base, size)) return 1;
-
-			// Convert signature to pattern/mask format
-			auto [pattern, mask] = ConvertSignature(signature);
-			// Use your working functions
-
-			unsigned long long addr = FindPatternF(pattern, mask, base, size);
-			if (addr == 0) {
-				addr = FindPatternS(pattern, mask, base, size);
-			}
-
-			if (addr == 0) {
-				addr = FindPatternInModules(pattern, mask, nullptr);
-			}
-
-			if (addr != 0)
-			{
-				Cache->insert(std::make_pair(std::string(signature), addr));
-			}
-
-			if (addr == 0)
-			{
-				std::cerr << "SIGNATURE NOT FOUND: " << std::string(signature) << std::endl;
-			}
-
-			return addr;
-		}
-
+		std::uintptr_t nextInstruction = callInstructionAddress + 5; // E8 + 4 bytes
+		return nextInstruction + displacement;
 	}
-
 
 	unsigned long long FindPatternF(const char* pattern, const char* mask)
 	{
@@ -246,32 +184,133 @@ namespace
 	}
 }
 
-Signature::Signature(const char* signature) noexcept
+Signature::Signature(const char* signature) noexcept : Sig(signature)
 {
-	Sig = std::string(signature);
-	ResolveSignature(signature);
+	InternalResolveSignature(Sig, TEXT);
 }
 
-Signature::Signature(std::uintptr_t address) noexcept
+Signature::Signature(const char* signature, const char* module, bool call_target) noexcept : Sig(signature)
 {
 	if (!Cache)
 	{
 		Cache = std::make_unique<std::map<std::string, unsigned long long>>();
 	}
 
-	Sig = std::to_string(address);
+	InternalResolveSignature(Sig, TEXT, module, call_target);
+}
+
+Signature::Signature(std::uintptr_t address) noexcept : Sig(std::to_string(address))
+{
+	if (!Cache)
+	{
+		Cache = std::make_unique<std::map<std::string, unsigned long long>>();
+	}
 
 	Cache->insert(std::make_pair(Sig, address));
 }
 
 std::uintptr_t Signature::GetPtr() const
 {
-	return ResolveSignature(Sig);
+	return InternalResolveSignature(Sig, TEXT);
 }
 
 std::string Signature::GetSig() const
 {
 	return Sig;
+}
+
+
+/// Resolve a signature to an address. Uses the format: "48 89 7C 24 ?? 41 56 48 83 EC ?? 48 8B FA 4C 8B F1 E8 ?? ?? ?? ??"
+/// @param signature signature to resolve
+/// @return address of the function representing the signature. 0 if not found.
+uintptr_t Signature::InternalResolveSignature(const std::string& signature, SearchContext context, const char* Module, bool call_target) noexcept
+{
+	if (!Cache)
+	{
+		Cache = std::make_unique<std::map<std::string, unsigned long long>>();
+	}
+
+	if (Cache->contains(std::string(signature)))
+	{
+		return Cache->at(std::string(signature));
+	}
+
+	unsigned long long addr = 0;
+	auto [pattern, mask] = ConvertSignature(signature);
+
+	auto SearchSection = [](const char* section, const char* pattern, const char* mask, const char* module = nullptr) -> unsigned long long
+	{
+		std::uintptr_t base = 0; std::uint64_t size = 0;
+		if (!GetSectionByName(section,base, size, module)) return 0;
+
+		unsigned long long addr = FindPatternF(pattern, mask, base, size);
+		if (addr == 0) {
+			addr = FindPatternS(pattern, mask, base, size);
+		}
+
+		return addr;
+	};
+
+	if (Module == nullptr) //normal game. BRMK should always specify module
+	{
+		if (!addr && context & TEXT)
+		{
+			addr = SearchSection(".text", pattern, mask);
+		}
+
+		if (!addr && context & DATA)
+		{
+			addr = SearchSection(".data", pattern, mask);
+		}
+
+		if (!addr && context & RDATA)
+		{
+			addr = SearchSection(".rdata", pattern, mask);
+		}
+
+		if (!addr && context & BSS)
+		{
+			addr = SearchSection(".bss", pattern, mask);
+		}
+	} else
+	{
+		if (!addr && context & TEXT)
+		{
+			addr = SearchSection(".text", pattern, mask, Module);
+		}
+
+		if (!addr && context & DATA)
+		{
+			addr = SearchSection(".data", pattern, mask, Module);
+		}
+
+		if (!addr && context & RDATA)
+		{
+			addr = SearchSection(".rdata", pattern, mask, Module);
+		}
+
+		if (!addr && context & BSS)
+		{
+			addr = SearchSection(".bss", pattern, mask, Module);
+		}
+	}
+
+	if (call_target && addr)
+	{
+		addr = ResolveCallTarget(addr);
+	}
+
+	if (addr != 0)
+	{
+		Cache->insert(std::make_pair(std::string(signature), addr));
+	}
+
+	if (addr == 0)
+	{
+		std::cerr << "SIGNATURE NOT FOUND: " << std::string(signature) << std::endl;
+	}
+
+	return addr;
 }
 
 //Signature UBRICK_GETFUELLEVEL("40 53 48 83 EC ?? 48 8B 01 48 8B D9 FF 90 ?? ?? ?? ?? 48 8B C8 48 85 C0 75 ??");
