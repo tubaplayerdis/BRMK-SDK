@@ -21,7 +21,7 @@ namespace
 	static unsigned long long FindPatternF(const char* pattern, const char* mask, unsigned long long base, std::uint64_t size)
 	{
 		const std::uint64_t patternLen = strlen(mask);
-		if (patternLen == 0) {
+		if (patternLen == 0 || size < patternLen) {
 			return 0;
 		}
 
@@ -251,48 +251,24 @@ uintptr_t Signature::InternalResolveSignature(const std::string& signature, Sear
 		return addr;
 	};
 
-	if (Module == nullptr) //normal game. BRMK should always specify module
+	if (!addr && context & TEXT)
 	{
-		if (!addr && context & TEXT)
-		{
-			addr = SearchSection(".text", pattern, mask);
-		}
+		addr = SearchSection(".text", pattern, mask, Module);
+	}
 
-		if (!addr && context & DATA)
-		{
-			addr = SearchSection(".data", pattern, mask);
-		}
-
-		if (!addr && context & RDATA)
-		{
-			addr = SearchSection(".rdata", pattern, mask);
-		}
-
-		if (!addr && context & BSS)
-		{
-			addr = SearchSection(".bss", pattern, mask);
-		}
-	} else
+	if (!addr && context & DATA)
 	{
-		if (!addr && context & TEXT)
-		{
-			addr = SearchSection(".text", pattern, mask, Module);
-		}
+		addr = SearchSection(".data", pattern, mask, Module);
+	}
 
-		if (!addr && context & DATA)
-		{
-			addr = SearchSection(".data", pattern, mask, Module);
-		}
+	if (!addr && context & RDATA)
+	{
+		addr = SearchSection(".rdata", pattern, mask, Module);
+	}
 
-		if (!addr && context & RDATA)
-		{
-			addr = SearchSection(".rdata", pattern, mask, Module);
-		}
-
-		if (!addr && context & BSS)
-		{
-			addr = SearchSection(".bss", pattern, mask, Module);
-		}
+	if (!addr && context & BSS)
+	{
+		addr = SearchSection(".bss", pattern, mask, Module);
 	}
 
 	if (call_target && addr)
