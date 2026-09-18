@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WaterEditor_classes.hpp"
 #include "Engine_structs.hpp"
+#include "WaterEditor_classes.hpp"
 
 
 SDK_NAMESPACE_START

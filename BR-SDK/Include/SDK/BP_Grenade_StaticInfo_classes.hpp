@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Grenade_StaticInfo.SKEL_BP_Grenade_StaticInfo_C
-// 0x0010 (0x04E0 - 0x04D0)
+// 0x0010 (0x04F0 - 0x04E0)
 class USKEL_BP_Grenade_StaticInfo_C : public UGrenadeStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_Grenade_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_Grenade_StaticInfo.BP_Grenade_StaticInfo_C
-// 0x0000 (0x04D0 - 0x04D0)
+// 0x0000 (0x04E0 - 0x04E0)
 class UBP_Grenade_StaticInfo_C : public UGrenadeStaticInfo
 {
 public:

@@ -16,46 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function SplineMeshChild.SKEL_SplineMeshChild_C.ReceiveActorBeginOverlap
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_SplineMeshChild_C_ReceiveActorBeginOverlap final
-{
-public:
-	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_ReceiveActorBeginOverlap;
-
-// Function SplineMeshChild.SKEL_SplineMeshChild_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_SplineMeshChild_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_ReceiveTick;
-
-// Function SplineMeshChild.SKEL_SplineMeshChild_C.Update Values
-// 0x0028 (0x0028 - 0x0000)
-struct SKEL_SplineMeshChild_C_Update_Values final
-{
-public:
-	class USplineComponent*                       Spline;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     Mat;                                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            Mesh_0;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Scale_0;                                           // 0x0018(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Segment_Length_0;                                  // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_Update_Values;
-
-// Function SplineMeshChild.SKEL_SplineMeshChild_C.Setup Spline Mesh Components
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_SplineMeshChild_C_Setup_Spline_Mesh_Components final
-{
-public:
-	float                                         AdjustedLength;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_Setup_Spline_Mesh_Components;
-
 // Function SplineMeshChild.SplineMeshChild_C.Update Values
 // 0x0028 (0x0028 - 0x0000)
 struct SplineMeshChild_C_Update_Values final
@@ -125,6 +85,46 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_SplineMeshChild_C_Setup_Spline_Mesh_Components;
+
+// Function SplineMeshChild.SKEL_SplineMeshChild_C.ReceiveActorBeginOverlap
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_SplineMeshChild_C_ReceiveActorBeginOverlap final
+{
+public:
+	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_ReceiveActorBeginOverlap;
+
+// Function SplineMeshChild.SKEL_SplineMeshChild_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_SplineMeshChild_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_ReceiveTick;
+
+// Function SplineMeshChild.SKEL_SplineMeshChild_C.Update Values
+// 0x0028 (0x0028 - 0x0000)
+struct SKEL_SplineMeshChild_C_Update_Values final
+{
+public:
+	class USplineComponent*                       Spline;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Mat;                                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            Mesh_0;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Scale_0;                                           // 0x0018(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Segment_Length_0;                                  // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_Update_Values;
+
+// Function SplineMeshChild.SKEL_SplineMeshChild_C.Setup Spline Mesh Components
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_SplineMeshChild_C_Setup_Spline_Mesh_Components final
+{
+public:
+	float                                         AdjustedLength;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_SplineMeshChild_C_Setup_Spline_Mesh_Components;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

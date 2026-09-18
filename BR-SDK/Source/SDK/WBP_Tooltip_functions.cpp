@@ -36,6 +36,26 @@ void UWBP_Tooltip_C::ExecuteUbergraph_WBP_Tooltip(int32 EntryPoint)
 }
 
 
+// Function WBP_Tooltip.WBP_Tooltip_C.UpdateTooltipAlignment
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Alignment                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Tooltip_C::UpdateTooltipAlignment(const struct FVector2D& Alignment)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Tooltip_C", "UpdateTooltipAlignment");
+
+	Params::WBP_Tooltip_C_UpdateTooltipAlignment Parms{};
+
+	Parms.Alignment = std::move(Alignment);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Tooltip.WBP_Tooltip_C.UpdateTooltipContent
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -99,6 +119,26 @@ void USKEL_WBP_Tooltip_C::UpdateTooltipContent(const struct FTooltipContent& InC
 	Params::SKEL_WBP_Tooltip_C_UpdateTooltipContent Parms{};
 
 	Parms.InContent = std::move(InContent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Tooltip.SKEL_WBP_Tooltip_C.UpdateTooltipAlignment
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Alignment                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Tooltip_C::UpdateTooltipAlignment(const struct FVector2D& Alignment)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Tooltip_C", "UpdateTooltipAlignment");
+
+	Params::SKEL_WBP_Tooltip_C_UpdateTooltipAlignment Parms{};
+
+	Parms.Alignment = std::move(Alignment);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

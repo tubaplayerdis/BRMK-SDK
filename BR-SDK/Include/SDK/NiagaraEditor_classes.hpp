@@ -11,20 +11,143 @@
 #include "Basic.hpp"
 
 #include "DeveloperSettings_classes.hpp"
+#include "UnrealEd_classes.hpp"
+#include "NiagaraEditor_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "UnrealEd_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "MovieScene_classes.hpp"
 #include "Niagara_structs.hpp"
 #include "Niagara_classes.hpp"
-#include "NiagaraEditor_structs.hpp"
 #include "NiagaraShader_structs.hpp"
 #include "Sequencer_classes.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class NiagaraEditor.ActorFactoryNiagara
+// 0x0000 (0x0078 - 0x0078)
+class UActorFactoryNiagara final : public UActorFactory
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorFactoryNiagara")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorFactoryNiagara")
+	}
+	static class UActorFactoryNiagara* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorFactoryNiagara>();
+	}
+};
+DUMPER7_ASSERTS_UActorFactoryNiagara;
+
+// Class NiagaraEditor.NiagaraParameterCollectionInstanceFactoryNew
+// 0x0008 (0x0090 - 0x0088)
+class UNiagaraParameterCollectionInstanceFactoryNew final : public UFactory
+{
+public:
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraParameterCollectionInstanceFactoryNew")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraParameterCollectionInstanceFactoryNew")
+	}
+	static class UNiagaraParameterCollectionInstanceFactoryNew* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraParameterCollectionInstanceFactoryNew>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraParameterCollectionInstanceFactoryNew;
+
+// Class NiagaraEditor.EdGraphSchema_Niagara
+// 0x0000 (0x0030 - 0x0030)
+class UEdGraphSchema_Niagara final : public UEdGraphSchema
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EdGraphSchema_Niagara")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EdGraphSchema_Niagara")
+	}
+	static class UEdGraphSchema_Niagara* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEdGraphSchema_Niagara>();
+	}
+};
+DUMPER7_ASSERTS_UEdGraphSchema_Niagara;
+
+// Class NiagaraEditor.NiagaraScriptFactoryNew
+// 0x0000 (0x0088 - 0x0088)
+class UNiagaraScriptFactoryNew : public UFactory
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraScriptFactoryNew")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraScriptFactoryNew")
+	}
+	static class UNiagaraScriptFactoryNew* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraScriptFactoryNew>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraScriptFactoryNew;
+
+// Class NiagaraEditor.NiagaraDynamicInputScriptFactory
+// 0x0000 (0x0088 - 0x0088)
+class UNiagaraDynamicInputScriptFactory final : public UNiagaraScriptFactoryNew
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraDynamicInputScriptFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraDynamicInputScriptFactory")
+	}
+	static class UNiagaraDynamicInputScriptFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraDynamicInputScriptFactory>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraDynamicInputScriptFactory;
+
+// Class NiagaraEditor.EdGraphSchema_NiagaraSystemOverview
+// 0x0000 (0x0030 - 0x0030)
+class UEdGraphSchema_NiagaraSystemOverview final : public UEdGraphSchema
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EdGraphSchema_NiagaraSystemOverview")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EdGraphSchema_NiagaraSystemOverview")
+	}
+	static class UEdGraphSchema_NiagaraSystemOverview* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEdGraphSchema_NiagaraSystemOverview>();
+	}
+};
+DUMPER7_ASSERTS_UEdGraphSchema_NiagaraSystemOverview;
 
 // Class NiagaraEditor.NiagaraStackEntry
 // 0x01B0 (0x01E0 - 0x0030)
@@ -54,114 +177,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraStackEntry;
-
-// Class NiagaraEditor.NiagaraStackItem
-// 0x0040 (0x0220 - 0x01E0)
-class UNiagaraStackItem : public UNiagaraStackEntry
-{
-public:
-	uint8                                         Pad_1E0[0x38];                                     // 0x01E0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraStackItemFooter*                ItemFooter;                                        // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackItem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackItem")
-	}
-	static class UNiagaraStackItem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackItem>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackItem;
-
-// Class NiagaraEditor.NiagaraStackSimulationStagePropertiesItem
-// 0x0018 (0x0238 - 0x0220)
-class UNiagaraStackSimulationStagePropertiesItem final : public UNiagaraStackItem
-{
-public:
-	uint8                                         Pad_220[0x10];                                     // 0x0220(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraStackObject*                    SimulationStageObject;                             // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackSimulationStagePropertiesItem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackSimulationStagePropertiesItem")
-	}
-	static class UNiagaraStackSimulationStagePropertiesItem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackSimulationStagePropertiesItem>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackSimulationStagePropertiesItem;
-
-// Class NiagaraEditor.ActorFactoryNiagara
-// 0x0000 (0x0078 - 0x0078)
-class UActorFactoryNiagara final : public UActorFactory
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActorFactoryNiagara")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorFactoryNiagara")
-	}
-	static class UActorFactoryNiagara* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActorFactoryNiagara>();
-	}
-};
-DUMPER7_ASSERTS_UActorFactoryNiagara;
-
-// Class NiagaraEditor.EdGraphSchema_Niagara
-// 0x0000 (0x0030 - 0x0030)
-class UEdGraphSchema_Niagara final : public UEdGraphSchema
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EdGraphSchema_Niagara")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EdGraphSchema_Niagara")
-	}
-	static class UEdGraphSchema_Niagara* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEdGraphSchema_Niagara>();
-	}
-};
-DUMPER7_ASSERTS_UEdGraphSchema_Niagara;
-
-// Class NiagaraEditor.EdGraphSchema_NiagaraSystemOverview
-// 0x0000 (0x0030 - 0x0030)
-class UEdGraphSchema_NiagaraSystemOverview final : public UEdGraphSchema
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EdGraphSchema_NiagaraSystemOverview")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EdGraphSchema_NiagaraSystemOverview")
-	}
-	static class UEdGraphSchema_NiagaraSystemOverview* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEdGraphSchema_NiagaraSystemOverview>();
-	}
-};
-DUMPER7_ASSERTS_UEdGraphSchema_NiagaraSystemOverview;
 
 // Class NiagaraEditor.MovieSceneNiagaraEmitterSectionBase
 // 0x0028 (0x0150 - 0x0128)
@@ -337,6 +352,29 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraClipboardContent;
 
+// Class NiagaraEditor.NiagaraScriptSource
+// 0x0008 (0x0070 - 0x0068)
+class UNiagaraScriptSource final : public UNiagaraScriptSourceBase
+{
+public:
+	class UNiagaraGraph*                          NodeGraph;                                         // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraScriptSource")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraScriptSource")
+	}
+	static class UNiagaraScriptSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraScriptSource>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraScriptSource;
+
 // Class NiagaraEditor.NiagaraClipboardEditorScriptingUtilities
 // 0x0000 (0x0030 - 0x0030)
 class UNiagaraClipboardEditorScriptingUtilities final : public UObject
@@ -375,39 +413,29 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraClipboardEditorScriptingUtilities;
 
-// Class NiagaraEditor.NiagaraStackRoot
-// 0x0060 (0x0240 - 0x01E0)
-class UNiagaraStackRoot final : public UNiagaraStackEntry
+// Class NiagaraEditor.NiagaraStackItem
+// 0x0040 (0x0220 - 0x01E0)
+class UNiagaraStackItem : public UNiagaraStackEntry
 {
 public:
-	class UNiagaraStackSystemSettingsGroup*       SystemSettingsGroup;                               // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackScriptItemGroup*           SystemSpawnGroup;                                  // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackScriptItemGroup*           SystemUpdateGroup;                                 // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackEmitterSettingsGroup*      EmitterSettingsGroup;                              // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackScriptItemGroup*           EmitterSpawnGroup;                                 // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackScriptItemGroup*           EmitterUpdateGroup;                                // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackScriptItemGroup*           ParticleSpawnGroup;                                // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackScriptItemGroup*           ParticleUpdateGroup;                               // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackEventHandlerGroup*         AddEventHandlerGroup;                              // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackSimulationStagesGroup*     AddSimulationStageGroup;                           // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraStackRenderItemGroup*           RenderGroup;                                       // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0[0x38];                                     // 0x01E0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraStackItemFooter*                ItemFooter;                                        // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("NiagaraStackRoot")
+		STATIC_CLASS_IMPL("NiagaraStackItem")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"NiagaraStackRoot")
+		STATIC_NAME_IMPL(L"NiagaraStackItem")
 	}
-	static class UNiagaraStackRoot* GetDefaultObj()
+	static class UNiagaraStackItem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNiagaraStackRoot>();
+		return GetDefaultObjImpl<UNiagaraStackItem>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraStackRoot;
+DUMPER7_ASSERTS_UNiagaraStackItem;
 
 // Class NiagaraEditor.NiagaraConvertInPlaceEmitterAndSystemState
 // 0x0000 (0x0030 - 0x0030)
@@ -474,6 +502,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraEditorParametersAdapter;
+
+// Class NiagaraEditor.NiagaraSequencerTrackFilter
+// 0x0000 (0x0030 - 0x0030)
+class UNiagaraSequencerTrackFilter final : public USequencerTrackFilterExtension
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraSequencerTrackFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraSequencerTrackFilter")
+	}
+	static class UNiagaraSequencerTrackFilter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSequencerTrackFilter>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraSequencerTrackFilter;
 
 // Class NiagaraEditor.NiagaraReservedParametersManager
 // 0x0050 (0x0080 - 0x0030)
@@ -565,42 +613,6 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraEffectTypeFactoryNew;
 
-// Class NiagaraEditor.NiagaraPythonScriptModuleInput
-// 0x0008 (0x0038 - 0x0030)
-class UNiagaraPythonScriptModuleInput final : public UObject
-{
-public:
-	class UNiagaraClipboardFunctionInput*         Input;                                             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	bool AsBool() const;
-	struct FLinearColor AsColor() const;
-	class FString AsEnum() const;
-	float AsFloat() const;
-	int32 AsInt() const;
-	struct FQuat AsQuat() const;
-	struct FVector2D AsVec2() const;
-	struct FVector AsVec3() const;
-	struct FVector4 AsVec4() const;
-	bool IsLocalValue() const;
-	bool IsSet() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraPythonScriptModuleInput")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraPythonScriptModuleInput")
-	}
-	static class UNiagaraPythonScriptModuleInput* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraPythonScriptModuleInput>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraPythonScriptModuleInput;
-
 // Class NiagaraEditor.NiagaraEmitterEditorData
 // 0x0010 (0x0058 - 0x0048)
 class UNiagaraEmitterEditorData final : public UNiagaraEditorDataBase
@@ -648,6 +660,53 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraEmitterFactoryNew;
+
+// Class NiagaraEditor.NiagaraStackItemGroup
+// 0x0060 (0x0240 - 0x01E0)
+class UNiagaraStackItemGroup : public UNiagaraStackEntry
+{
+public:
+	class UNiagaraStackItemGroupFooter*           GroupFooter;                                       // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E8[0x58];                                     // 0x01E8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackItemGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackItemGroup")
+	}
+	static class UNiagaraStackItemGroup* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackItemGroup>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackItemGroup;
+
+// Class NiagaraEditor.NiagaraStackEventHandlerGroup
+// 0x0020 (0x0260 - 0x0240)
+class UNiagaraStackEventHandlerGroup final : public UNiagaraStackItemGroup
+{
+public:
+	uint8                                         Pad_240[0x20];                                     // 0x0240(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackEventHandlerGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackEventHandlerGroup")
+	}
+	static class UNiagaraStackEventHandlerGroup* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackEventHandlerGroup>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackEventHandlerGroup;
 
 // Class NiagaraEditor.NiagaraGraph
 // 0x01E8 (0x0298 - 0x00B0)
@@ -814,32 +873,6 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraNodeFunctionCall;
 
-// Class NiagaraEditor.NiagaraSystemEditorFolder
-// 0x0030 (0x0060 - 0x0030)
-class UNiagaraSystemEditorFolder final : public UObject
-{
-public:
-	class FName                                   FolderName;                                        // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UNiagaraSystemEditorFolder*>     ChildFolders;                                      // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FGuid>                          ChildEmitterHandleIds;                             // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraSystemEditorFolder")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraSystemEditorFolder")
-	}
-	static class UNiagaraSystemEditorFolder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSystemEditorFolder>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraSystemEditorFolder;
-
 // Class NiagaraEditor.NiagaraNodeAssignment
 // 0x00B0 (0x04E0 - 0x0430)
 class UNiagaraNodeAssignment final : public UNiagaraNodeFunctionCall
@@ -948,6 +981,69 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraNodeDataSetBase;
 
+// Class NiagaraEditor.NiagaraOutliner
+// 0x0098 (0x00C8 - 0x0030)
+class UNiagaraOutliner final : public UObject
+{
+public:
+	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraOutlinerCaptureSettings        CaptureSettings;                                   // 0x0050(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FNiagaraOutlinerViewSettings           ViewSettings;                                      // 0x005C(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNiagaraOutlinerData                   Data;                                              // 0x0078(0x0050)(Edit, Transient, EditConst, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraOutliner")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraOutliner")
+	}
+	static class UNiagaraOutliner* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraOutliner>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraOutliner;
+
+// Class NiagaraEditor.NiagaraPythonScriptModuleInput
+// 0x0008 (0x0038 - 0x0030)
+class UNiagaraPythonScriptModuleInput final : public UObject
+{
+public:
+	class UNiagaraClipboardFunctionInput*         Input;                                             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	bool AsBool() const;
+	struct FLinearColor AsColor() const;
+	class FString AsEnum() const;
+	float AsFloat() const;
+	int32 AsInt() const;
+	struct FQuat AsQuat() const;
+	struct FVector2D AsVec2() const;
+	struct FVector AsVec3() const;
+	struct FVector4 AsVec4() const;
+	bool IsLocalValue() const;
+	bool IsSet() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraPythonScriptModuleInput")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraPythonScriptModuleInput")
+	}
+	static class UNiagaraPythonScriptModuleInput* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraPythonScriptModuleInput>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraPythonScriptModuleInput;
+
 // Class NiagaraEditor.NiagaraNodeEmitter
 // 0x0058 (0x0158 - 0x0100)
 class UNiagaraNodeEmitter final : public UNiagaraNodeWithDynamicPins
@@ -1055,6 +1151,33 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraNodeOp;
 
+// Class NiagaraEditor.NiagaraParameterDefinitions
+// 0x0028 (0x0080 - 0x0058)
+class UNiagaraParameterDefinitions final : public UNiagaraParameterDefinitionsBase
+{
+public:
+	bool                                          bPromoteToTopInAddMenus;                           // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MenuSortOrder;                                     // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UNiagaraScriptVariable*>         ScriptVariables;                                   // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FParameterDefinitionsBindingNameSubscription> ExternalParameterDefinitionsSubscriptions; // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraParameterDefinitions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraParameterDefinitions")
+	}
+	static class UNiagaraParameterDefinitions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraParameterDefinitions>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraParameterDefinitions;
+
 // Class NiagaraEditor.NiagaraNodeOutput
 // 0x0028 (0x0128 - 0x0100)
 class UNiagaraNodeOutput final : public UNiagaraNode
@@ -1107,31 +1230,6 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraNodeOutputTag;
 
-// Class NiagaraEditor.NiagaraStackViewModel
-// 0x0118 (0x0148 - 0x0030)
-class UNiagaraStackViewModel final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraStackEntry*                     RootEntry;                                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_68[0xE0];                                      // 0x0068(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackViewModel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackViewModel")
-	}
-	static class UNiagaraStackViewModel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackViewModel>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackViewModel;
-
 // Class NiagaraEditor.NiagaraNodeParameterMapBase
 // 0x0018 (0x0118 - 0x0100)
 class UNiagaraNodeParameterMapBase : public UNiagaraNodeWithDynamicPins
@@ -1174,6 +1272,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraNodeParameterMapSet;
+
+// Class NiagaraEditor.NiagaraModuleScriptFactory
+// 0x0000 (0x0088 - 0x0088)
+class UNiagaraModuleScriptFactory final : public UNiagaraScriptFactoryNew
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraModuleScriptFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraModuleScriptFactory")
+	}
+	static class UNiagaraModuleScriptFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraModuleScriptFactory>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraModuleScriptFactory;
 
 // Class NiagaraEditor.NiagaraNodeParameterMapFor
 // 0x0000 (0x0118 - 0x0118)
@@ -1238,6 +1356,26 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraNodeReadDataSet;
 
+// Class NiagaraEditor.NiagaraParameterDefinitionsFactory
+// 0x0000 (0x0088 - 0x0088)
+class UNiagaraParameterDefinitionsFactory final : public UFactory
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraParameterDefinitionsFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraParameterDefinitionsFactory")
+	}
+	static class UNiagaraParameterDefinitionsFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraParameterDefinitionsFactory>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraParameterDefinitionsFactory;
+
 // Class NiagaraEditor.NiagaraNodeReroute
 // 0x0008 (0x0108 - 0x0100)
 class UNiagaraNodeReroute final : public UNiagaraNode
@@ -1260,6 +1398,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraNodeReroute;
+
+// Class NiagaraEditor.NiagaraScripStatsViewModelSettings
+// 0x0010 (0x0040 - 0x0030)
+class UNiagaraScripStatsViewModelSettings final : public UObject
+{
+public:
+	TArray<int32>                                 EnabledPlatforms;                                  // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraScripStatsViewModelSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraScripStatsViewModelSettings")
+	}
+	static class UNiagaraScripStatsViewModelSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraScripStatsViewModelSettings>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraScripStatsViewModelSettings;
 
 // Class NiagaraEditor.NiagaraNodeUsageSelector
 // 0x0028 (0x0128 - 0x0100)
@@ -1383,33 +1544,6 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraNodeWriteDataSet;
 
-// Class NiagaraEditor.NiagaraOutliner
-// 0x0098 (0x00C8 - 0x0030)
-class UNiagaraOutliner final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraOutlinerCaptureSettings        CaptureSettings;                                   // 0x0050(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FNiagaraOutlinerViewSettings           ViewSettings;                                      // 0x005C(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNiagaraOutlinerData                   Data;                                              // 0x0078(0x0050)(Edit, Transient, EditConst, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraOutliner")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraOutliner")
-	}
-	static class UNiagaraOutliner* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraOutliner>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraOutliner;
-
 // Class NiagaraEditor.NiagaraOverviewNode
 // 0x0020 (0x00E8 - 0x00C8)
 class UNiagaraOverviewNode final : public UEdGraphNode
@@ -1455,76 +1589,6 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraParameterCollectionFactoryNew;
 
-// Class NiagaraEditor.NiagaraParameterCollectionInstanceFactoryNew
-// 0x0008 (0x0090 - 0x0088)
-class UNiagaraParameterCollectionInstanceFactoryNew final : public UFactory
-{
-public:
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraParameterCollectionInstanceFactoryNew")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraParameterCollectionInstanceFactoryNew")
-	}
-	static class UNiagaraParameterCollectionInstanceFactoryNew* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraParameterCollectionInstanceFactoryNew>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraParameterCollectionInstanceFactoryNew;
-
-// Class NiagaraEditor.NiagaraParameterDefinitions
-// 0x0028 (0x0080 - 0x0058)
-class UNiagaraParameterDefinitions final : public UNiagaraParameterDefinitionsBase
-{
-public:
-	bool                                          bPromoteToTopInAddMenus;                           // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MenuSortOrder;                                     // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UNiagaraScriptVariable*>         ScriptVariables;                                   // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FParameterDefinitionsBindingNameSubscription> ExternalParameterDefinitionsSubscriptions; // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraParameterDefinitions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraParameterDefinitions")
-	}
-	static class UNiagaraParameterDefinitions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraParameterDefinitions>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraParameterDefinitions;
-
-// Class NiagaraEditor.NiagaraParameterDefinitionsFactory
-// 0x0000 (0x0088 - 0x0088)
-class UNiagaraParameterDefinitionsFactory final : public UFactory
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraParameterDefinitionsFactory")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraParameterDefinitionsFactory")
-	}
-	static class UNiagaraParameterDefinitionsFactory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraParameterDefinitionsFactory>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraParameterDefinitionsFactory;
-
 // Class NiagaraEditor.NiagaraScratchPadViewModel
 // 0x00F0 (0x0120 - 0x0030)
 class UNiagaraScratchPadViewModel final : public UObject
@@ -1548,93 +1612,6 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraScratchPadViewModel;
 
-// Class NiagaraEditor.NiagaraScriptFactoryNew
-// 0x0000 (0x0088 - 0x0088)
-class UNiagaraScriptFactoryNew : public UFactory
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraScriptFactoryNew")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraScriptFactoryNew")
-	}
-	static class UNiagaraScriptFactoryNew* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraScriptFactoryNew>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraScriptFactoryNew;
-
-// Class NiagaraEditor.NiagaraModuleScriptFactory
-// 0x0000 (0x0088 - 0x0088)
-class UNiagaraModuleScriptFactory final : public UNiagaraScriptFactoryNew
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraModuleScriptFactory")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraModuleScriptFactory")
-	}
-	static class UNiagaraModuleScriptFactory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraModuleScriptFactory>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraModuleScriptFactory;
-
-// Class NiagaraEditor.NiagaraStackItemGroup
-// 0x0060 (0x0240 - 0x01E0)
-class UNiagaraStackItemGroup : public UNiagaraStackEntry
-{
-public:
-	class UNiagaraStackItemGroupFooter*           GroupFooter;                                       // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E8[0x58];                                     // 0x01E8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackItemGroup")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackItemGroup")
-	}
-	static class UNiagaraStackItemGroup* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackItemGroup>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackItemGroup;
-
-// Class NiagaraEditor.NiagaraStackSimulationStagesGroup
-// 0x0020 (0x0260 - 0x0240)
-class UNiagaraStackSimulationStagesGroup final : public UNiagaraStackItemGroup
-{
-public:
-	uint8                                         Pad_240[0x20];                                     // 0x0240(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackSimulationStagesGroup")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackSimulationStagesGroup")
-	}
-	static class UNiagaraStackSimulationStagesGroup* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackSimulationStagesGroup>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackSimulationStagesGroup;
-
 // Class NiagaraEditor.NiagaraFunctionScriptFactory
 // 0x0000 (0x0088 - 0x0088)
 class UNiagaraFunctionScriptFactory final : public UNiagaraScriptFactoryNew
@@ -1654,72 +1631,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraFunctionScriptFactory;
-
-// Class NiagaraEditor.NiagaraDynamicInputScriptFactory
-// 0x0000 (0x0088 - 0x0088)
-class UNiagaraDynamicInputScriptFactory final : public UNiagaraScriptFactoryNew
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraDynamicInputScriptFactory")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraDynamicInputScriptFactory")
-	}
-	static class UNiagaraDynamicInputScriptFactory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraDynamicInputScriptFactory>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraDynamicInputScriptFactory;
-
-// Class NiagaraEditor.NiagaraScriptSource
-// 0x0008 (0x0070 - 0x0068)
-class UNiagaraScriptSource final : public UNiagaraScriptSourceBase
-{
-public:
-	class UNiagaraGraph*                          NodeGraph;                                         // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraScriptSource")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraScriptSource")
-	}
-	static class UNiagaraScriptSource* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraScriptSource>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraScriptSource;
-
-// Class NiagaraEditor.NiagaraScripStatsViewModelSettings
-// 0x0010 (0x0040 - 0x0030)
-class UNiagaraScripStatsViewModelSettings final : public UObject
-{
-public:
-	TArray<int32>                                 EnabledPlatforms;                                  // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraScripStatsViewModelSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraScripStatsViewModelSettings")
-	}
-	static class UNiagaraScripStatsViewModelSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraScripStatsViewModelSettings>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraScripStatsViewModelSettings;
 
 // Class NiagaraEditor.NiagaraScriptVariable
 // 0x0190 (0x01C0 - 0x0030)
@@ -1779,26 +1690,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraSequence;
-
-// Class NiagaraEditor.NiagaraSequencerTrackFilter
-// 0x0000 (0x0030 - 0x0030)
-class UNiagaraSequencerTrackFilter final : public USequencerTrackFilterExtension
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraSequencerTrackFilter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraSequencerTrackFilter")
-	}
-	static class UNiagaraSequencerTrackFilter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraSequencerTrackFilter>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraSequencerTrackFilter;
 
 // Class NiagaraEditor.NiagaraStackEditorData
 // 0x01B0 (0x01F8 - 0x0048)
@@ -1961,52 +1852,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraStackErrorItemDismiss;
-
-// Class NiagaraEditor.NiagaraStackEventHandlerGroup
-// 0x0020 (0x0260 - 0x0240)
-class UNiagaraStackEventHandlerGroup final : public UNiagaraStackItemGroup
-{
-public:
-	uint8                                         Pad_240[0x20];                                     // 0x0240(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackEventHandlerGroup")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackEventHandlerGroup")
-	}
-	static class UNiagaraStackEventHandlerGroup* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackEventHandlerGroup>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackEventHandlerGroup;
-
-// Class NiagaraEditor.NiagaraStackModuleItemOutputCollection
-// 0x0008 (0x01E8 - 0x01E0)
-class UNiagaraStackModuleItemOutputCollection final : public UNiagaraStackEntry
-{
-public:
-	uint8                                         Pad_1E0[0x8];                                      // 0x01E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NiagaraStackModuleItemOutputCollection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NiagaraStackModuleItemOutputCollection")
-	}
-	static class UNiagaraStackModuleItemOutputCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNiagaraStackModuleItemOutputCollection>();
-	}
-};
-DUMPER7_ASSERTS_UNiagaraStackModuleItemOutputCollection;
 
 // Class NiagaraEditor.NiagaraStackEventHandlerPropertiesItem
 // 0x0028 (0x0248 - 0x0220)
@@ -2310,6 +2155,29 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraStackModuleItemOutput;
 
+// Class NiagaraEditor.NiagaraStackModuleItemOutputCollection
+// 0x0008 (0x01E8 - 0x01E0)
+class UNiagaraStackModuleItemOutputCollection final : public UNiagaraStackEntry
+{
+public:
+	uint8                                         Pad_1E0[0x8];                                      // 0x01E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackModuleItemOutputCollection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackModuleItemOutputCollection")
+	}
+	static class UNiagaraStackModuleItemOutputCollection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackModuleItemOutputCollection>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackModuleItemOutputCollection;
+
 // Class NiagaraEditor.NiagaraStackObject
 // 0x0060 (0x0258 - 0x01F8)
 class UNiagaraStackObject final : public UNiagaraStackItemContent
@@ -2427,6 +2295,40 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraStackRenderItemGroup;
 
+// Class NiagaraEditor.NiagaraStackRoot
+// 0x0060 (0x0240 - 0x01E0)
+class UNiagaraStackRoot final : public UNiagaraStackEntry
+{
+public:
+	class UNiagaraStackSystemSettingsGroup*       SystemSettingsGroup;                               // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackScriptItemGroup*           SystemSpawnGroup;                                  // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackScriptItemGroup*           SystemUpdateGroup;                                 // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackEmitterSettingsGroup*      EmitterSettingsGroup;                              // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackScriptItemGroup*           EmitterSpawnGroup;                                 // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackScriptItemGroup*           EmitterUpdateGroup;                                // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackScriptItemGroup*           ParticleSpawnGroup;                                // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackScriptItemGroup*           ParticleUpdateGroup;                               // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackEventHandlerGroup*         AddEventHandlerGroup;                              // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackSimulationStagesGroup*     AddSimulationStageGroup;                           // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraStackRenderItemGroup*           RenderGroup;                                       // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackRoot")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackRoot")
+	}
+	static class UNiagaraStackRoot* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackRoot>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackRoot;
+
 // Class NiagaraEditor.NiagaraStackSelection
 // 0x0010 (0x01F0 - 0x01E0)
 class UNiagaraStackSelection final : public UNiagaraStackEntry
@@ -2449,6 +2351,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraStackSelection;
+
+// Class NiagaraEditor.NiagaraStackSimulationStagePropertiesItem
+// 0x0018 (0x0238 - 0x0220)
+class UNiagaraStackSimulationStagePropertiesItem final : public UNiagaraStackItem
+{
+public:
+	uint8                                         Pad_220[0x10];                                     // 0x0220(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraStackObject*                    SimulationStageObject;                             // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackSimulationStagePropertiesItem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackSimulationStagePropertiesItem")
+	}
+	static class UNiagaraStackSimulationStagePropertiesItem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackSimulationStagePropertiesItem>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackSimulationStagePropertiesItem;
 
 // Class NiagaraEditor.NiagaraStackSimulationStageGroup
 // 0x0028 (0x02B0 - 0x0288)
@@ -2473,6 +2399,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraStackSimulationStageGroup;
+
+// Class NiagaraEditor.NiagaraStackSimulationStagesGroup
+// 0x0020 (0x0260 - 0x0240)
+class UNiagaraStackSimulationStagesGroup final : public UNiagaraStackItemGroup
+{
+public:
+	uint8                                         Pad_240[0x20];                                     // 0x0240(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackSimulationStagesGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackSimulationStagesGroup")
+	}
+	static class UNiagaraStackSimulationStagesGroup* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackSimulationStagesGroup>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackSimulationStagesGroup;
 
 // Class NiagaraEditor.NiagaraStackSystemPropertiesItem
 // 0x0018 (0x0238 - 0x0220)
@@ -2544,6 +2493,31 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraStackParameterStoreItem;
 
+// Class NiagaraEditor.NiagaraStackViewModel
+// 0x0118 (0x0148 - 0x0030)
+class UNiagaraStackViewModel final : public UObject
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraStackEntry*                     RootEntry;                                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0xE0];                                      // 0x0068(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraStackViewModel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraStackViewModel")
+	}
+	static class UNiagaraStackViewModel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraStackViewModel>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraStackViewModel;
+
 // Class NiagaraEditor.NiagaraSystemAuditCommandlet
 // 0x0260 (0x02E8 - 0x0088)
 class UNiagaraSystemAuditCommandlet final : public UCommandlet
@@ -2566,6 +2540,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNiagaraSystemAuditCommandlet;
+
+// Class NiagaraEditor.NiagaraSystemEditorFolder
+// 0x0030 (0x0060 - 0x0030)
+class UNiagaraSystemEditorFolder final : public UObject
+{
+public:
+	class FName                                   FolderName;                                        // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UNiagaraSystemEditorFolder*>     ChildFolders;                                      // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FGuid>                          ChildEmitterHandleIds;                             // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraSystemEditorFolder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraSystemEditorFolder")
+	}
+	static class UNiagaraSystemEditorFolder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraSystemEditorFolder>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraSystemEditorFolder;
 
 // Class NiagaraEditor.NiagaraSystemEditorData
 // 0x0078 (0x00C0 - 0x0048)

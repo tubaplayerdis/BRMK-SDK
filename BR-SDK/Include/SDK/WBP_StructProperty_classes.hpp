@@ -17,12 +17,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_StructProperty.SKEL_WBP_StructProperty_C
-// 0x0018 (0x0440 - 0x0428)
+// 0x0020 (0x0448 - 0x0428)
 class USKEL_WBP_StructProperty_C final : public UStructPropertyWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_120;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget);
@@ -45,12 +46,13 @@ public:
 DUMPER7_ASSERTS_USKEL_WBP_StructProperty_C;
 
 // WidgetBlueprintGeneratedClass WBP_StructProperty.WBP_StructProperty_C
-// 0x0018 (0x0440 - 0x0428)
+// 0x0020 (0x0448 - 0x0428)
 class UWBP_StructProperty_C final : public UStructPropertyWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_120;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot);

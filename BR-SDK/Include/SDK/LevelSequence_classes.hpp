@@ -24,7 +24,7 @@ SDK_NAMESPACE_START
 
 // Class LevelSequence.AnimSequenceLevelSequenceLink
 // 0x0030 (0x0060 - 0x0030)
-class UAnimSequenceLevelSequenceLink final : public UAssetUserData
+class UAnimSequenceLevelSequenceLink : public UAssetUserData
 {
 public:
 	struct FGuid                                  SkelTrackGuid;                                     // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -48,7 +48,7 @@ DUMPER7_ASSERTS_UAnimSequenceLevelSequenceLink;
 
 // Class LevelSequence.DefaultLevelSequenceInstanceData
 // 0x0040 (0x0070 - 0x0030)
-class UDefaultLevelSequenceInstanceData final : public UObject
+class UDefaultLevelSequenceInstanceData : public UObject
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -102,7 +102,7 @@ DUMPER7_ASSERTS_ILevelSequenceMetaData;
 
 // Class LevelSequence.LevelSequence
 // 0x0180 (0x01E8 - 0x0068)
-class ULevelSequence final : public UMovieSceneSequence
+class ULevelSequence : public UMovieSceneSequence
 {
 public:
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -160,7 +160,7 @@ DUMPER7_ASSERTS_ULevelSequenceBurnInInitSettings;
 
 // Class LevelSequence.LevelSequenceBurnInOptions
 // 0x0030 (0x0060 - 0x0030)
-class ULevelSequenceBurnInOptions final : public UObject
+class ULevelSequenceBurnInOptions : public UObject
 {
 public:
 	bool                                          bUseBurnIn;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -189,7 +189,7 @@ DUMPER7_ASSERTS_ULevelSequenceBurnInOptions;
 
 // Class LevelSequence.LevelSequenceActor
 // 0x0090 (0x0388 - 0x02F8)
-class ALevelSequenceActor final : public AActor
+class ALevelSequenceActor : public AActor
 {
 public:
 	uint8                                         Pad_2F8[0x18];                                     // 0x02F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
@@ -248,7 +248,7 @@ DUMPER7_ASSERTS_ALevelSequenceActor;
 
 // Class LevelSequence.LevelSequenceAnimSequenceLink
 // 0x0010 (0x0040 - 0x0030)
-class ULevelSequenceAnimSequenceLink final : public UAssetUserData
+class ULevelSequenceAnimSequenceLink : public UAssetUserData
 {
 public:
 	TArray<struct FLevelSequenceAnimSequenceLinkItem> AnimSequenceLinks;                             // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
@@ -300,7 +300,7 @@ DUMPER7_ASSERTS_ULevelSequenceBurnIn;
 
 // Class LevelSequence.LevelSequenceDirector
 // 0x0010 (0x0040 - 0x0030)
-class ULevelSequenceDirector final : public UObject
+class ULevelSequenceDirector : public UObject
 {
 public:
 	class ULevelSequencePlayer*                   Player;                                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -333,7 +333,7 @@ DUMPER7_ASSERTS_ULevelSequenceDirector;
 
 // Class LevelSequence.LegacyLevelSequenceDirectorBlueprint
 // 0x0000 (0x04D8 - 0x04D8)
-class ULegacyLevelSequenceDirectorBlueprint final : public UBlueprint
+class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint
 {
 public:
 	static class UClass* StaticClass()
@@ -353,7 +353,7 @@ DUMPER7_ASSERTS_ULegacyLevelSequenceDirectorBlueprint;
 
 // Class LevelSequence.LevelSequencePlayer
 // 0x0128 (0x0628 - 0x0500)
-class ULevelSequencePlayer final : public UMovieSceneSequencePlayer
+class ULevelSequencePlayer : public UMovieSceneSequencePlayer
 {
 public:
 	TMulticastInlineDelegate<void(class UCameraComponent* CameraComponent)> OnCameraCut;             // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -382,7 +382,7 @@ DUMPER7_ASSERTS_ULevelSequencePlayer;
 
 // Class LevelSequence.LevelSequenceProjectSettings
 // 0x0030 (0x0090 - 0x0060)
-class ULevelSequenceProjectSettings final : public UDeveloperSettings
+class ULevelSequenceProjectSettings : public UDeveloperSettings
 {
 public:
 	bool                                          bDefaultLockEngineToDisplayRate;                   // 0x0060(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -410,7 +410,7 @@ DUMPER7_ASSERTS_ULevelSequenceProjectSettings;
 
 // Class LevelSequence.LevelSequenceMediaController
 // 0x0028 (0x0320 - 0x02F8)
-class ALevelSequenceMediaController final : public AActor
+class ALevelSequenceMediaController : public AActor
 {
 public:
 	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])

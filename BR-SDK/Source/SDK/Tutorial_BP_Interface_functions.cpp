@@ -15,20 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// Function Tutorial_BP_Interface.SKEL_Tutorial_BP_Interface_C.TutorialSampleFunction
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ISKEL_Tutorial_BP_Interface_C::TutorialSampleFunction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SKEL_Tutorial_BP_Interface_C", "TutorialSampleFunction");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
 // Function Tutorial_BP_Interface.Tutorial_BP_Interface_C.TutorialSampleFunction
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -38,6 +24,20 @@ void ITutorial_BP_Interface_C::TutorialSampleFunction()
 
 	if (Func == nullptr)
 		Func = AsUObject()->Class->GetFunction("Tutorial_BP_Interface_C", "TutorialSampleFunction");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tutorial_BP_Interface.SKEL_Tutorial_BP_Interface_C.TutorialSampleFunction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ISKEL_Tutorial_BP_Interface_C::TutorialSampleFunction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SKEL_Tutorial_BP_Interface_C", "TutorialSampleFunction");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

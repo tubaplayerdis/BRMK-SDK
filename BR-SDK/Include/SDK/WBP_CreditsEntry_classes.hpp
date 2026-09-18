@@ -17,19 +17,17 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CreditsEntry.WBP_CreditsEntry_C
-// 0x0038 (0x0430 - 0x03F8)
+// 0x0028 (0x0420 - 0x03F8)
 class UWBP_CreditsEntry_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBrickRichTextBlock*                    BodyTextBlock;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickExpandableArea*                   ExpandableArea;                                    // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        HeaderTextBlock;                                   // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 LicenseFilename;                                   // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class FString                                 LicenseFilename;                                   // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_CreditsEntry(int32 EntryPoint);
-	void BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature(class UExpandableArea* Area, bool bIsExpanded);
+	void Destruct();
 	void Construct();
 
 public:
@@ -49,19 +47,17 @@ public:
 DUMPER7_ASSERTS_UWBP_CreditsEntry_C;
 
 // WidgetBlueprintGeneratedClass WBP_CreditsEntry.SKEL_WBP_CreditsEntry_C
-// 0x0038 (0x0430 - 0x03F8)
+// 0x0028 (0x0420 - 0x03F8)
 class USKEL_WBP_CreditsEntry_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 	class UBrickRichTextBlock*                    BodyTextBlock;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickExpandableArea*                   ExpandableArea;                                    // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        HeaderTextBlock;                                   // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 LicenseFilename;                                   // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class FString                                 LicenseFilename;                                   // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void Construct();
-	void BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature(class UExpandableArea* Area, bool bIsExpanded);
+	void Destruct();
 
 public:
 	static class UClass* StaticClass()

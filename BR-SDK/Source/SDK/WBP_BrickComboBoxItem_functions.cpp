@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_BrickComboBoxItem.WBP_BrickComboBoxItem_C.ExecuteUbergraph_WBP_BrickComboBoxItem
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_BrickComboBoxItem.SKEL_WBP_BrickComboBoxItem_C.SetNoItemBrush
+// (Event, Protected, BlueprintEvent)
 
-void UWBP_BrickComboBoxItem_C::ExecuteUbergraph_WBP_BrickComboBoxItem(int32 EntryPoint)
+void USKEL_WBP_BrickComboBoxItem_C::SetNoItemBrush()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickComboBoxItem_C", "ExecuteUbergraph_WBP_BrickComboBoxItem");
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBoxItem_C", "SetNoItemBrush");
 
-	Params::WBP_BrickComboBoxItem_C_ExecuteUbergraph_WBP_BrickComboBoxItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -50,17 +44,23 @@ void UWBP_BrickComboBoxItem_C::SetNoItemBrush()
 }
 
 
-// Function WBP_BrickComboBoxItem.SKEL_WBP_BrickComboBoxItem_C.SetNoItemBrush
-// (Event, Protected, BlueprintEvent)
+// Function WBP_BrickComboBoxItem.WBP_BrickComboBoxItem_C.ExecuteUbergraph_WBP_BrickComboBoxItem
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USKEL_WBP_BrickComboBoxItem_C::SetNoItemBrush()
+void UWBP_BrickComboBoxItem_C::ExecuteUbergraph_WBP_BrickComboBoxItem(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BrickComboBoxItem_C", "SetNoItemBrush");
+		Func = Class->GetFunction("WBP_BrickComboBoxItem_C", "ExecuteUbergraph_WBP_BrickComboBoxItem");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_BrickComboBoxItem_C_ExecuteUbergraph_WBP_BrickComboBoxItem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

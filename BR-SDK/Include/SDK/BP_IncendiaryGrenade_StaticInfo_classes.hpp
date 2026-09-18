@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_IncendiaryGrenade_StaticInfo.SKEL_BP_IncendiaryGrenade_StaticInfo_C
-// 0x0010 (0x04F0 - 0x04E0)
+// 0x0010 (0x0500 - 0x04F0)
 class USKEL_BP_IncendiaryGrenade_StaticInfo_C final : public USKEL_BP_Grenade_StaticInfo_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_IncendiaryGrenade_StaticInfo_C; // 0x04E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_IncendiaryGrenade_StaticInfo_C; // 0x04F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_IncendiaryGrenade_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_IncendiaryGrenade_StaticInfo.BP_IncendiaryGrenade_StaticInfo_C
-// 0x0000 (0x04D0 - 0x04D0)
+// 0x0000 (0x04E0 - 0x04E0)
 class UBP_IncendiaryGrenade_StaticInfo_C final : public UBP_Grenade_StaticInfo_C
 {
 public:

@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_GenericCommercial_02.BP_GenericCommercial_02_C
-// 0x0000 (0x03B0 - 0x03B0)
-class ABP_GenericCommercial_02_C final : public ABrickBuilding
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("BP_GenericCommercial_02_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BP_GenericCommercial_02_C")
-	}
-	static class ABP_GenericCommercial_02_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABP_GenericCommercial_02_C>();
-	}
-};
-DUMPER7_ASSERTS_ABP_GenericCommercial_02_C;
-
 // BlueprintGeneratedClass BP_GenericCommercial_02.SKEL_BP_GenericCommercial_02_C
 // 0x0010 (0x03C0 - 0x03B0)
 class ASKEL_BP_GenericCommercial_02_C final : public ABrickBuilding
@@ -64,5 +44,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_BP_GenericCommercial_02_C;
+
+// BlueprintGeneratedClass BP_GenericCommercial_02.BP_GenericCommercial_02_C
+// 0x0000 (0x03B0 - 0x03B0)
+class ABP_GenericCommercial_02_C final : public ABrickBuilding
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("BP_GenericCommercial_02_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GenericCommercial_02_C")
+	}
+	static class ABP_GenericCommercial_02_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABP_GenericCommercial_02_C>();
+	}
+};
+DUMPER7_ASSERTS_ABP_GenericCommercial_02_C;
 
 SDK_NAMESPACE_END

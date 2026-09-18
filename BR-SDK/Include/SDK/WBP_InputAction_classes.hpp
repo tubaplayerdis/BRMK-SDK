@@ -14,27 +14,20 @@
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputAction.WBP_InputAction_C
-// 0x0020 (0x0518 - 0x04F8)
+// 0x0010 (0x0518 - 0x0508)
 class UWBP_InputAction_C final : public UInputActionWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     EditButton;                                        // 0x0508(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            EditImage;                                         // 0x0510(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0508(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_InputAction(int32 EntryPoint);
-	void UpdateInputActionListMode(EInputActionListMode NewMode);
-	void UpdateCanActionBeRebound(bool bInCanBeRebound);
-	void BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
-	void BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateActionWidget(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle ColorStyle, const bool bInIsEnabled, const bool bInIsActive, const bool bInIsClickable);
 
 	class UWidget* GetWidgetToFocus() const;
 
@@ -55,20 +48,14 @@ public:
 DUMPER7_ASSERTS_UWBP_InputAction_C;
 
 // WidgetBlueprintGeneratedClass WBP_InputAction.SKEL_WBP_InputAction_C
-// 0x0020 (0x0518 - 0x04F8)
+// 0x0010 (0x0518 - 0x0508)
 class USKEL_WBP_InputAction_C final : public UInputActionWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     EditButton;                                        // 0x0508(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            EditImage;                                         // 0x0510(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0508(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature();
-	void UpdateCanActionBeRebound(bool bInCanBeRebound);
-	void UpdateInputActionListMode(EInputActionListMode NewMode);
+	void UpdateActionWidget(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle ColorStyle, const bool bInIsEnabled, const bool bInIsActive, const bool bInIsClickable);
 
 	class UWidget* GetWidgetToFocus() const;
 

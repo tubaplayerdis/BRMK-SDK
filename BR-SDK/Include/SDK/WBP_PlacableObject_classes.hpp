@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
@@ -27,7 +26,6 @@ public:
 public:
 	void ExecuteUbergraph_WBP_PlacableObject(int32 EntryPoint);
 	void UpdateIsFilterWidget(bool bNewIsFilter);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
@@ -54,7 +52,6 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void UpdateIsFilterWidget(bool bNewIsFilter);
 	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 

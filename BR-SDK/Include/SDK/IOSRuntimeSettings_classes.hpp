@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "IOSRuntimeSettings_structs.hpp"
 #include "AudioPlatformConfiguration_structs.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START

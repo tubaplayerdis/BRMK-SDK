@@ -10,31 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "IntroTutorials_classes.hpp"
 #include "Engine_structs.hpp"
+#include "IntroTutorials_classes.hpp"
 
 
 SDK_NAMESPACE_START
-
-// BlueprintGeneratedClass LevelEditorOverview.LevelEditorOverview_C
-// 0x0000 (0x0160 - 0x0160)
-class ULevelEditorOverview_C final : public UEditorTutorial
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("LevelEditorOverview_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelEditorOverview_C")
-	}
-	static class ULevelEditorOverview_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULevelEditorOverview_C>();
-	}
-};
-DUMPER7_ASSERTS_ULevelEditorOverview_C;
 
 // BlueprintGeneratedClass LevelEditorOverview.SKEL_LevelEditorOverview_C
 // 0x0010 (0x0170 - 0x0160)
@@ -58,5 +38,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_LevelEditorOverview_C;
+
+// BlueprintGeneratedClass LevelEditorOverview.LevelEditorOverview_C
+// 0x0000 (0x0160 - 0x0160)
+class ULevelEditorOverview_C final : public UEditorTutorial
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("LevelEditorOverview_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelEditorOverview_C")
+	}
+	static class ULevelEditorOverview_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULevelEditorOverview_C>();
+	}
+};
+DUMPER7_ASSERTS_ULevelEditorOverview_C;
 
 SDK_NAMESPACE_END

@@ -18,7 +18,7 @@ SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Petrol.BP_Petrol_C
 // 0x0000 (0x0090 - 0x0090)
-class UBP_Petrol_C : public UExplosiveMaterial
+class UBP_Petrol_C final : public UExplosiveMaterial
 {
 public:
 	static class UClass* StaticClass()
@@ -38,7 +38,7 @@ DUMPER7_ASSERTS_UBP_Petrol_C;
 
 // BlueprintGeneratedClass BP_Petrol.SKEL_BP_Petrol_C
 // 0x0010 (0x00A0 - 0x0090)
-class USKEL_BP_Petrol_C : public UExplosiveMaterial
+class USKEL_BP_Petrol_C final : public UExplosiveMaterial
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0090(0x0010)(ZeroConstructor, Transient, DuplicateTransient)

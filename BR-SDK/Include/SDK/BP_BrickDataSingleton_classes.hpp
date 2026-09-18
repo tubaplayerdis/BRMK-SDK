@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 #include "Engine_structs.hpp"
 
@@ -17,9 +18,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BrickDataSingleton.BP_BrickDataSingleton_C
-// 0x0000 (0x1590 - 0x1590)
+// 0x0000 (0x1750 - 0x1750)
 class UBP_BrickDataSingleton_C final : public UBrickDataSingleton
 {
+public:
+	bool GetAmmoTypeDisplayInfo(const EAmmoType AmmoType, struct FDisplayInfo* OutDisplayInfo, EBrickUIColorStyle* OutColorStyle) const;
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -37,11 +41,14 @@ public:
 DUMPER7_ASSERTS_UBP_BrickDataSingleton_C;
 
 // BlueprintGeneratedClass BP_BrickDataSingleton.SKEL_BP_BrickDataSingleton_C
-// 0x0010 (0x15A0 - 0x1590)
+// 0x0010 (0x1760 - 0x1750)
 class USKEL_BP_BrickDataSingleton_C final : public UBrickDataSingleton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1590(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1750(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	bool GetAmmoTypeDisplayInfo(const EAmmoType AmmoType, struct FDisplayInfo* OutDisplayInfo, EBrickUIColorStyle* OutColorStyle) const;
 
 public:
 	static class UClass* StaticClass()

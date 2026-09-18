@@ -16,57 +16,101 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_BoolProperty.WBP_BoolProperty_C.ExecuteUbergraph_WBP_BoolProperty
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USKEL_WBP_BoolProperty_C::PreConstruct(bool IsDesignTime)
+void UWBP_BoolProperty_C::ExecuteUbergraph_WBP_BoolProperty(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BoolProperty_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_BoolProperty_C", "ExecuteUbergraph_WBP_BoolProperty");
 
-	Params::SKEL_WBP_BoolProperty_C_PreConstruct Parms{};
+	Params::WBP_BoolProperty_C_ExecuteUbergraph_WBP_BoolProperty Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_BoolProperty.WBP_BoolProperty_C.BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bNewChecked                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void USKEL_WBP_BoolProperty_C::Construct()
+void UWBP_BoolProperty_C::BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature(bool bNewChecked)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BoolProperty_C", "Construct");
+		Func = Class->GetFunction("WBP_BoolProperty_C", "BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_BoolProperty_C_BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature Parms{};
+
+	Parms.bNewChecked = bNewChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_BoolProperty.WBP_BoolProperty_C.UpdateValue
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bNewValue                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void USKEL_WBP_BoolProperty_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_BoolProperty_C::UpdateValue(const bool bNewValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BoolProperty_C", "Tick");
+		Func = Class->GetFunction("WBP_BoolProperty_C", "UpdateValue");
 
-	Params::SKEL_WBP_BoolProperty_C_Tick Parms{};
+	Params::WBP_BoolProperty_C_UpdateValue Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.bNewValue = bNewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.UpdateValue
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const bool                              bNewValue                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_BoolProperty_C::UpdateValue(const bool bNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BoolProperty_C", "UpdateValue");
+
+	Params::SKEL_WBP_BoolProperty_C_UpdateValue Parms{};
+
+	Parms.bNewValue = bNewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bNewChecked                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USKEL_WBP_BoolProperty_C::BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature(bool bNewChecked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_BoolProperty_C", "BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature");
+
+	Params::SKEL_WBP_BoolProperty_C_BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature Parms{};
+
+	Parms.bNewChecked = bNewChecked;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

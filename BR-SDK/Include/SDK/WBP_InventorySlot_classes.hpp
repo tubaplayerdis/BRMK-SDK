@@ -17,36 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_InventorySlot.WBP_InventorySlot_C
-// 0x0018 (0x04C0 - 0x04A8)
-class UWBP_InventorySlot_C final : public UInventorySlotWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickVerticalBox*                      MainVerticalBox;                                   // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_InventorySlot(int32 EntryPoint);
-	void UpdateSlotApperance(bool bInIsDragWidget, bool bInIsSpecialSlot, bool bInIsValidSlot, bool bInCanDrag, bool bInIsDragging, bool bInCanDrop, bool bInDropReplace, bool bInIsDragOver);
-	void AddSubInventoryWidget(class UInventoryContainerWidget* Widget);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_InventorySlot_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_InventorySlot_C")
-	}
-	static class UWBP_InventorySlot_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_InventorySlot_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_InventorySlot_C;
-
 // WidgetBlueprintGeneratedClass WBP_InventorySlot.SKEL_WBP_InventorySlot_C
 // 0x0018 (0x04C0 - 0x04A8)
 class USKEL_WBP_InventorySlot_C final : public UInventorySlotWidget
@@ -56,7 +26,6 @@ public:
 	class UBrickVerticalBox*                      MainVerticalBox;                                   // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void AddSubInventoryWidget(class UInventoryContainerWidget* Widget);
 	void UpdateSlotApperance(bool bInIsDragWidget, bool bInIsSpecialSlot, bool bInIsValidSlot, bool bInCanDrag, bool bInIsDragging, bool bInCanDrop, bool bInDropReplace, bool bInIsDragOver);
 
@@ -75,5 +44,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_InventorySlot_C;
+
+// WidgetBlueprintGeneratedClass WBP_InventorySlot.WBP_InventorySlot_C
+// 0x0018 (0x04C0 - 0x04A8)
+class UWBP_InventorySlot_C final : public UInventorySlotWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      MainVerticalBox;                                   // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_WBP_InventorySlot(int32 EntryPoint);
+	void UpdateSlotApperance(bool bInIsDragWidget, bool bInIsSpecialSlot, bool bInIsValidSlot, bool bInCanDrag, bool bInIsDragging, bool bInCanDrop, bool bInDropReplace, bool bInIsDragOver);
+	void AddSubInventoryWidget(class UInventoryContainerWidget* Widget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_InventorySlot_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_InventorySlot_C")
+	}
+	static class UWBP_InventorySlot_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_InventorySlot_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_InventorySlot_C;
 
 SDK_NAMESPACE_END

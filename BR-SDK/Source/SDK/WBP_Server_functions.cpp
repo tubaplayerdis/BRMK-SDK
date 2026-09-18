@@ -56,37 +56,16 @@ void UWBP_Server_C::UpdateServer(const struct FBrickOnlineSessionInfo& SessionIn
 }
 
 
-// Function WBP_Server.WBP_Server_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Server_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Server_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_Server_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Server.WBP_Server_C.GetModIconSlot
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                                    bHasMods                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bHasSameMods                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bAllowDifferentMods                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>*       Icon                                                   (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-int32 UWBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllowDifferentMods) const
+void UWBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllowDifferentMods, TSoftObjectPtr<class UTexture2D>* Icon, bool* bEnabled) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -101,29 +80,11 @@ int32 UWBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllo
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
-}
+	if (Icon != nullptr)
+		*Icon = Parms.Icon;
 
-
-// Function WBP_Server.SKEL_WBP_Server_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_Server_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_Server_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_Server_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
+	if (bEnabled != nullptr)
+		*bEnabled = Parms.bEnabled;
 }
 
 
@@ -153,9 +114,10 @@ void USKEL_WBP_Server_C::UpdateServer(const struct FBrickOnlineSessionInfo& Sess
 // bool                                    bHasMods                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bHasSameMods                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bAllowDifferentMods                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>*       Icon                                                   (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-int32 USKEL_WBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllowDifferentMods) const
+void USKEL_WBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool bAllowDifferentMods, TSoftObjectPtr<class UTexture2D>* Icon, bool* bEnabled) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -170,7 +132,11 @@ int32 USKEL_WBP_Server_C::GetModIconSlot(bool bHasMods, bool bHasSameMods, bool 
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (Icon != nullptr)
+		*Icon = Parms.Icon;
+
+	if (bEnabled != nullptr)
+		*bEnabled = Parms.bEnabled;
 }
 
 

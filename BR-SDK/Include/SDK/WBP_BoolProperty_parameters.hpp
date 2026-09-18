@@ -10,30 +10,56 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_BoolProperty_C_PreConstruct final
+// Function WBP_BoolProperty.WBP_BoolProperty_C.ExecuteUbergraph_WBP_BoolProperty
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_BoolProperty_C_ExecuteUbergraph_WBP_BoolProperty final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bNewChecked;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bNewValue;                            // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_SKEL_WBP_BoolProperty_C_PreConstruct;
+DUMPER7_ASSERTS_WBP_BoolProperty_C_ExecuteUbergraph_WBP_BoolProperty;
 
-// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct SKEL_WBP_BoolProperty_C_Tick final
+// Function WBP_BoolProperty.WBP_BoolProperty_C.BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BoolProperty_C_BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewChecked;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_SKEL_WBP_BoolProperty_C_Tick;
+DUMPER7_ASSERTS_WBP_BoolProperty_C_BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature;
+
+// Function WBP_BoolProperty.WBP_BoolProperty_C.UpdateValue
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BoolProperty_C_UpdateValue final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BoolProperty_C_UpdateValue;
+
+// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.UpdateValue
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BoolProperty_C_UpdateValue final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BoolProperty_C_UpdateValue;
+
+// Function WBP_BoolProperty.SKEL_WBP_BoolProperty_C.BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BoolProperty_C_BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature final
+{
+public:
+	bool                                          bNewChecked;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BoolProperty_C_BndEvt__WBP_BoolProperty_CheckBox_K2Node_ComponentBoundEvent_0_OnIsCheckedChanged__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

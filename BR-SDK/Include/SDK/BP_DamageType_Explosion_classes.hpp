@@ -15,26 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_DamageType_Explosion.SKEL_BP_DamageType_Explosion_C
-// 0x0000 (0x0050 - 0x0050)
-class USKEL_BP_DamageType_Explosion_C : public UDamageType_Explosion
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_BP_DamageType_Explosion_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_BP_DamageType_Explosion_C")
-	}
-	static class USKEL_BP_DamageType_Explosion_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_BP_DamageType_Explosion_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_BP_DamageType_Explosion_C;
-
 // BlueprintGeneratedClass BP_DamageType_Explosion.BP_DamageType_Explosion_C
 // 0x0000 (0x0050 - 0x0050)
 class UBP_DamageType_Explosion_C : public UDamageType_Explosion
@@ -54,5 +34,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_DamageType_Explosion_C;
+
+// BlueprintGeneratedClass BP_DamageType_Explosion.SKEL_BP_DamageType_Explosion_C
+// 0x0000 (0x0050 - 0x0050)
+class USKEL_BP_DamageType_Explosion_C : public UDamageType_Explosion
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_DamageType_Explosion_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_DamageType_Explosion_C")
+	}
+	static class USKEL_BP_DamageType_Explosion_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_DamageType_Explosion_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_DamageType_Explosion_C;
 
 SDK_NAMESPACE_END

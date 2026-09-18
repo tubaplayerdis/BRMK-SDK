@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ErodeWeightmap_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ErosionMode_structs.hpp"
-#include "ProcMeshData_structs.hpp"
-#include "LandmassEditor_classes.hpp"
-#include "SectionSizeOptions_structs.hpp"
-#include "ShapeDrawingMode_structs.hpp"
 #include "RenderTargetChannels_structs.hpp"
+#include "ErosionMode_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SectionSizeOptions_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ProcMeshData_structs.hpp"
+#include "ShapeDrawingMode_structs.hpp"
+#include "LandmassEditor_classes.hpp"
 #include "BrushTypes_structs.hpp"
 
 

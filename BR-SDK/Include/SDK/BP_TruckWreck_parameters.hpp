@@ -14,23 +14,23 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_TruckWreck.SKEL_BP_TruckWreck_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_BP_TruckWreck_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_BP_TruckWreck_C_ReceiveTick;
-
 // Function BP_TruckWreck.SKEL_BP_TruckWreck_C.ReceiveActorBeginOverlap
 // 0x0008 (0x0008 - 0x0000)
 struct SKEL_BP_TruckWreck_C_ReceiveActorBeginOverlap final
 {
 public:
-	class AActor*                                 OtherActor_ReceiveActorBeginOverlap;               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_BP_TruckWreck_C_ReceiveActorBeginOverlap;
+
+// Function BP_TruckWreck.SKEL_BP_TruckWreck_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_TruckWreck_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_TruckWreck_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

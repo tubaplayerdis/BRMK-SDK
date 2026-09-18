@@ -17,7 +17,7 @@ SDK_NAMESPACE_START
 
 // Class LandmassEditor.LandmassActor
 // 0x0010 (0x0308 - 0x02F8)
-class ALandmassActor : public AActor
+class ALandmassActor: public AActor
 {
 public:
 	bool                                          EditorTickIsEnabled;                               // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

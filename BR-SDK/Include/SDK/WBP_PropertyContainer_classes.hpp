@@ -14,43 +14,10 @@
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_PropertyContainer.WBP_PropertyContainer_C
-// 0x0020 (0x0498 - 0x0478)
-class UWBP_PropertyContainer_C final : public UPropertyContainerWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_PropertyContainer(int32 EntryPoint);
-	void PostAddPropertyButtons();
-	void OnMenuButtonClicked();
-	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
-	void UpdateOrientation(EOrientation InOrientation);
-	void AddPropertyWidget(class UPropertyWidget* Widget, EOrientation InOrientation);
-	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_PropertyContainer_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_PropertyContainer_C")
-	}
-	static class UWBP_PropertyContainer_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_PropertyContainer_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_PropertyContainer_C;
 
 // WidgetBlueprintGeneratedClass WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C
 // 0x0020 (0x0498 - 0x0478)
@@ -58,16 +25,16 @@ class USKEL_WBP_PropertyContainer_C final : public UPropertyContainerWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickVerticalBox*                      VerticalBox;                                       // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void AddPropertyWidget(class UPropertyWidget* Widget, EOrientation InOrientation);
-	void UpdateOrientation(EOrientation InOrientation);
-	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
-	void OnMenuButtonClicked();
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry_OnMouseButtonUp, const struct FPointerEvent& MouseEvent_OnMouseButtonUp);
+	void UpdateOrientation(EOrientation InOrientation_UpdateOrientation);
 	void PostAddPropertyButtons();
-	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnMenuButtonClicked();
+	void UpdateColorStyle(EBrickUIColorStyle InColorStyle_UpdateColorStyle);
+	void AddPropertyWidget(class UPropertyWidget* Widget_AddPropertyWidget, EOrientation InOrientation_AddPropertyWidget);
 
 public:
 	static class UClass* StaticClass()
@@ -84,5 +51,39 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_PropertyContainer_C;
+
+// WidgetBlueprintGeneratedClass WBP_PropertyContainer.WBP_PropertyContainer_C
+// 0x0020 (0x0498 - 0x0478)
+class UWBP_PropertyContainer_C final : public UPropertyContainerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickVerticalBox*                      VerticalBox;                                       // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry_OnMouseButtonUp, const struct FPointerEvent& MouseEvent_OnMouseButtonUp);
+	void AddPropertyWidget(class UPropertyWidget* Widget_AddPropertyWidget, EOrientation InOrientation_AddPropertyWidget);
+	void UpdateColorStyle(EBrickUIColorStyle InColorStyle_UpdateColorStyle);
+	void OnMenuButtonClicked();
+	void PostAddPropertyButtons();
+	void UpdateOrientation(EOrientation InOrientation_UpdateOrientation);
+	void ExecuteUbergraph_WBP_PropertyContainer(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_PropertyContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_PropertyContainer_C")
+	}
+	static class UWBP_PropertyContainer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_PropertyContainer_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_PropertyContainer_C;
 
 SDK_NAMESPACE_END

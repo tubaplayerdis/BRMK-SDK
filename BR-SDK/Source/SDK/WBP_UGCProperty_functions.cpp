@@ -16,62 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// (Public)
-
-void USKEL_WBP_UGCProperty_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UGCProperty_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.UpdateItemsText
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   NumSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UGCProperty_C::UpdateItemsText(int32 NumSelected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UGCProperty_C", "UpdateItemsText");
-
-	Params::SKEL_WBP_UGCProperty_C_UpdateItemsText Parms{};
-
-	Parms.NumSelected = NumSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UGCProperty_C::BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UGCProperty_C", "BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_UGCProperty_C_BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_UGCProperty.WBP_UGCProperty_C.ExecuteUbergraph_WBP_UGCProperty
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -87,28 +31,6 @@ void UWBP_UGCProperty_C::ExecuteUbergraph_WBP_UGCProperty(int32 EntryPoint)
 	Params::WBP_UGCProperty_C_ExecuteUbergraph_WBP_UGCProperty Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UGCProperty.WBP_UGCProperty_C.BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UGCProperty_C::BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UGCProperty_C", "BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_UGCProperty_C_BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -145,6 +67,40 @@ void UWBP_UGCProperty_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__
 		Func = Class->GetFunction("WBP_UGCProperty_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (Public)
+
+void USKEL_WBP_UGCProperty_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UGCProperty_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UGCProperty.SKEL_WBP_UGCProperty_C.UpdateItemsText
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   NumSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UGCProperty_C::UpdateItemsText(int32 NumSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UGCProperty_C", "UpdateItemsText");
+
+	Params::SKEL_WBP_UGCProperty_C_UpdateItemsText Parms{};
+
+	Parms.NumSelected = NumSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

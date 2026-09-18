@@ -36,25 +36,17 @@ void UWBP_CreditsEntry_C::ExecuteUbergraph_WBP_CreditsEntry(int32 EntryPoint)
 }
 
 
-// Function WBP_CreditsEntry.WBP_CreditsEntry_C.BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UExpandableArea*                  Area                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function WBP_CreditsEntry.WBP_CreditsEntry_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_CreditsEntry_C::BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature(class UExpandableArea* Area, bool bIsExpanded)
+void UWBP_CreditsEntry_C::Destruct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CreditsEntry_C", "BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature");
+		Func = Class->GetFunction("WBP_CreditsEntry_C", "Destruct");
 
-	Params::WBP_CreditsEntry_C_BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature Parms{};
-
-	Parms.Area = Area;
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -86,25 +78,17 @@ void USKEL_WBP_CreditsEntry_C::Construct()
 }
 
 
-// Function WBP_CreditsEntry.SKEL_WBP_CreditsEntry_C.BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature
-// (Public)
-// Parameters:
-// class UExpandableArea*                  Area                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function WBP_CreditsEntry.SKEL_WBP_CreditsEntry_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void USKEL_WBP_CreditsEntry_C::BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature(class UExpandableArea* Area, bool bIsExpanded)
+void USKEL_WBP_CreditsEntry_C::Destruct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_CreditsEntry_C", "BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_CreditsEntry_C", "Destruct");
 
-	Params::SKEL_WBP_CreditsEntry_C_BndEvt__WBP_CreditsEntry_ExpandableArea_K2Node_ComponentBoundEvent_0_OnExpandableAreaExpansionChanged__DelegateSignature Parms{};
-
-	Parms.Area = Area;
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

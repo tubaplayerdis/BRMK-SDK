@@ -16,90 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.AddSliderWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UBrickSliderWidget*               Slider                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_NumericProperty_C::AddSliderWidget(class UBrickSliderWidget* Slider)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "AddSliderWidget");
-
-	Params::SKEL_WBP_NumericProperty_C_AddSliderWidget Parms{};
-
-	Parms.Slider = Slider;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.OnBrickUnitsButtonClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void USKEL_WBP_NumericProperty_C::OnBrickUnitsButtonClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "OnBrickUnitsButtonClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.UpdateNumericProperty
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const ENumericValueType                 ValueType                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             NumAxes                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_NumericProperty_C::UpdateNumericProperty(const ENumericValueType ValueType, const int32 NumAxes)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "UpdateNumericProperty");
-
-	Params::SKEL_WBP_NumericProperty_C_UpdateNumericProperty Parms{};
-
-	Parms.ValueType = ValueType;
-	Parms.NumAxes = NumAxes;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.OnLockButtonClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void USKEL_WBP_NumericProperty_C::OnLockButtonClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "OnLockButtonClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USKEL_WBP_NumericProperty_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_NumericProperty.WBP_NumericProperty_C.ExecuteUbergraph_WBP_NumericProperty
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -201,6 +117,90 @@ void UWBP_NumericProperty_C::AddSliderWidget(class UBrickSliderWidget* Slider)
 	Parms.Slider = Slider;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.AddSliderWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UBrickSliderWidget*               Slider                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_NumericProperty_C::AddSliderWidget(class UBrickSliderWidget* Slider)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "AddSliderWidget");
+
+	Params::SKEL_WBP_NumericProperty_C_AddSliderWidget Parms{};
+
+	Parms.Slider = Slider;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.OnBrickUnitsButtonClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_NumericProperty_C::OnBrickUnitsButtonClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "OnBrickUnitsButtonClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.UpdateNumericProperty
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const ENumericValueType                 ValueType                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             NumAxes                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_NumericProperty_C::UpdateNumericProperty(const ENumericValueType ValueType, const int32 NumAxes)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "UpdateNumericProperty");
+
+	Params::SKEL_WBP_NumericProperty_C_UpdateNumericProperty Parms{};
+
+	Parms.ValueType = ValueType;
+	Parms.NumAxes = NumAxes;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.OnLockButtonClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_NumericProperty_C::OnLockButtonClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "OnLockButtonClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_NumericProperty.SKEL_WBP_NumericProperty_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_NumericProperty_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_NumericProperty_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,12 +16,32 @@
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass BP_BrickSpectatorPawn.BP_BrickSpectatorPawn_C
+// 0x0000 (0x0600 - 0x0600)
+class ABP_BrickSpectatorPawn_C final : public ABrickSpectatorPawn
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("BP_BrickSpectatorPawn_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BrickSpectatorPawn_C")
+	}
+	static class ABP_BrickSpectatorPawn_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABP_BrickSpectatorPawn_C>();
+	}
+};
+DUMPER7_ASSERTS_ABP_BrickSpectatorPawn_C;
+
 // BlueprintGeneratedClass BP_BrickSpectatorPawn.SKEL_BP_BrickSpectatorPawn_C
-// 0x0010 (0x0620 - 0x0610)
+// 0x0010 (0x0610 - 0x0600)
 class ASKEL_BP_BrickSpectatorPawn_C final : public ABrickSpectatorPawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0610(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0600(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ReceiveBeginPlay();
@@ -44,25 +64,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_BP_BrickSpectatorPawn_C;
-
-// BlueprintGeneratedClass BP_BrickSpectatorPawn.BP_BrickSpectatorPawn_C
-// 0x0000 (0x0610 - 0x0610)
-class ABP_BrickSpectatorPawn_C final : public ABrickSpectatorPawn
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("BP_BrickSpectatorPawn_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BP_BrickSpectatorPawn_C")
-	}
-	static class ABP_BrickSpectatorPawn_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABP_BrickSpectatorPawn_C>();
-	}
-};
-DUMPER7_ASSERTS_ABP_BrickSpectatorPawn_C;
 
 SDK_NAMESPACE_END

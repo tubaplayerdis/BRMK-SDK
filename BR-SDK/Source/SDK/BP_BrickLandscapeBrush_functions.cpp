@@ -16,54 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.RenderWeightmap
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FName&                      InLayerName                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASKEL_BP_BrickLandscapeBrush_C::RenderWeightmap(const class FName& InLayerName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_BrickLandscapeBrush_C", "RenderWeightmap");
-
-	Params::SKEL_BP_BrickLandscapeBrush_C_RenderWeightmap Parms{};
-
-	Parms.InLayerName = InLayerName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.RenderHeightmap
-// (Event, Public, BlueprintEvent)
-
-void ASKEL_BP_BrickLandscapeBrush_C::RenderHeightmap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_BrickLandscapeBrush_C", "RenderHeightmap");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.UserConstructionScript
-// (Event, Public, BlueprintEvent)
-
-void ASKEL_BP_BrickLandscapeBrush_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_BrickLandscapeBrush_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_BrickLandscapeBrush.BP_BrickLandscapeBrush_C.ExecuteUbergraph_BP_BrickLandscapeBrush
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -115,6 +67,54 @@ void ABP_BrickLandscapeBrush_C::RenderWeightmap(const class FName& InLayerName)
 	Parms.InLayerName = InLayerName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.RenderWeightmap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FName&                      InLayerName                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_BrickLandscapeBrush_C::RenderWeightmap(const class FName& InLayerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_BrickLandscapeBrush_C", "RenderWeightmap");
+
+	Params::SKEL_BP_BrickLandscapeBrush_C_RenderWeightmap Parms{};
+
+	Parms.InLayerName = InLayerName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.RenderHeightmap
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_BrickLandscapeBrush_C::RenderHeightmap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_BrickLandscapeBrush_C", "RenderHeightmap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_BrickLandscapeBrush_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_BrickLandscapeBrush_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

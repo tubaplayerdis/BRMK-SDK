@@ -11,46 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_PageSelector.WBP_PageSelector_C
-// 0x0030 (0x0448 - 0x0418)
-class UWBP_PageSelector_C final : public UPageSelectorWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     NextButton;                                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            NextImage;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_BrickButton_C*                     PrevButton;                                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            PrevImage;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_PageSelector(int32 EntryPoint);
-	void UpdateButtons(bool bCanGoBack, bool bCanGoForward);
-	void BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__NextButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_PageSelector_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_PageSelector_C")
-	}
-	static class UWBP_PageSelector_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_PageSelector_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_PageSelector_C;
 
 // WidgetBlueprintGeneratedClass WBP_PageSelector.SKEL_WBP_PageSelector_C
 // 0x0030 (0x0448 - 0x0418)
@@ -64,11 +28,9 @@ public:
 	class UBrickImage*                            PrevImage;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void UpdateButtons(bool bCanGoBack_UpdateButtons, bool bCanGoForward_UpdateButtons);
 	void BndEvt__NextButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void BndEvt__PrevButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__NextButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void UpdateButtons(bool bCanGoBack, bool bCanGoForward);
+	void BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()
@@ -85,5 +47,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_PageSelector_C;
+
+// WidgetBlueprintGeneratedClass WBP_PageSelector.WBP_PageSelector_C
+// 0x0030 (0x0448 - 0x0418)
+class UWBP_PageSelector_C final : public UPageSelectorWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     NextButton;                                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            NextImage;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     PrevButton;                                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            PrevImage;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__PrevButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void BndEvt__NextButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void UpdateButtons(bool bCanGoBack_UpdateButtons, bool bCanGoForward_UpdateButtons);
+	void ExecuteUbergraph_WBP_PageSelector(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_PageSelector_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_PageSelector_C")
+	}
+	static class UWBP_PageSelector_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_PageSelector_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_PageSelector_C;
 
 SDK_NAMESPACE_END

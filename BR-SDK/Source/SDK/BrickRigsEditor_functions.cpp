@@ -16,6 +16,31 @@
 
 SDK_NAMESPACE_START
 
+// Function BrickRigsEditor.BrEditorStatics.FixMacroLibrary
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UBlueprint*                       Blueprint                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBrEditorStatics::FixMacroLibrary(class UBlueprint* Blueprint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BrEditorStatics", "FixMacroLibrary");
+
+	Params::BrEditorStatics_FixMacroLibrary Parms{};
+
+	Parms.Blueprint = Blueprint;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function BrickRigsEditor.BrickLandscapeBrush.CreateMID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

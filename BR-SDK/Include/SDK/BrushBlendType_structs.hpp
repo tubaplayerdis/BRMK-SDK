@@ -15,7 +15,7 @@ SDK_NAMESPACE_START
 
 // UserDefinedEnum BrushBlendType.BrushBlendType
 // NumValues: 0x0005
-enum class BrushBlendType::EBrushBlendType : uint8
+enum class EBrushBlendType : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,

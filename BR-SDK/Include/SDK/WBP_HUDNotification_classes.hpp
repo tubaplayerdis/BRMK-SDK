@@ -29,7 +29,7 @@ public:
 
 public:
 	void ExecuteUbergraph_WBP_HUDNotification(int32 EntryPoint);
-	void InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle);
+	void InitializeNotification(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle InColorStyle);
 	void UpdateIsThumbnailNotification(bool bNewIsThumbnail);
 	void PlayFadeOutAnim();
 	void PlayFadeInAnim();
@@ -63,7 +63,7 @@ public:
 	void PlayFadeInAnim();
 	void PlayFadeOutAnim();
 	void UpdateIsThumbnailNotification(bool bNewIsThumbnail);
-	void InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle);
+	void InitializeNotification(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle InColorStyle);
 
 public:
 	static class UClass* StaticClass()

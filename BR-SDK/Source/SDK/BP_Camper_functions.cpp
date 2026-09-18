@@ -16,60 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Camper.SKEL_BP_Camper_C.UserConstructionScript
-// (Event, Public, BlueprintEvent)
-
-void ASKEL_BP_Camper_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_Camper_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Camper.SKEL_BP_Camper_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASKEL_BP_Camper_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_Camper_C", "ReceiveTick");
-
-	Params::SKEL_BP_Camper_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Camper.SKEL_BP_Camper_C.ReceiveActorBeginOverlap
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AActor*                           OtherActor_ReceiveActorBeginOverlap                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASKEL_BP_Camper_C::ReceiveActorBeginOverlap(class AActor* OtherActor_ReceiveActorBeginOverlap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_Camper_C", "ReceiveActorBeginOverlap");
-
-	Params::SKEL_BP_Camper_C_ReceiveActorBeginOverlap Parms{};
-
-	Parms.OtherActor_ReceiveActorBeginOverlap = OtherActor_ReceiveActorBeginOverlap;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Camper.SKEL_BP_Camper_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -79,6 +25,60 @@ void ASKEL_BP_Camper_C::ReceiveBeginPlay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SKEL_BP_Camper_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Camper.SKEL_BP_Camper_C.ReceiveActorBeginOverlap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_Camper_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Camper_C", "ReceiveActorBeginOverlap");
+
+	Params::SKEL_BP_Camper_C_ReceiveActorBeginOverlap Parms{};
+
+	Parms.OtherActor = OtherActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Camper.SKEL_BP_Camper_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_Camper_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Camper_C", "ReceiveTick");
+
+	Params::SKEL_BP_Camper_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Camper.SKEL_BP_Camper_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_Camper_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Camper_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

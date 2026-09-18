@@ -10,15 +10,85 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "BrushTypes_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BPWaterBodyWeightmapSettings_structs.hpp"
 #include "BrushFalloffMode_structs.hpp"
+#include "BPWaterBodyWeightmapSettings_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.ReceiveActorBeginOverlap
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_ReceiveActorBeginOverlap final
+{
+public:
+	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_ReceiveActorBeginOverlap;
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Initialize
+// 0x0040 (0x0040 - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_Initialize final
+{
+public:
+	struct FTransform                             InLandscapeTransform;                              // 0x0000(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FIntPoint                              InLandscapeSize;                                   // 0x0030(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              InLandscapeRenderTargetSize;                       // 0x0038(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Initialize;
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_ReceiveTick;
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Render
+// 0x0028 (0x0028 - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_Render final
+{
+public:
+	bool                                          InIsHeightmap;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 InCombinedResult;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InWeightmapLayerName;                              // 0x0010(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Render;
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Brush Setup
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_Brush_Setup final
+{
+public:
+	float                                         Assigned_Spline_Length;                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Brush_Setup;
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.DrawCanvasShape
+// 0x0030 (0x0030 - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_DrawCanvasShape final
+{
+public:
+	struct FTransform                             LandscapeTransform;                                // 0x0000(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_DrawCanvasShape;
+
+// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Center Actors On Spline Points
+// 0x000C (0x000C - 0x0000)
+struct SKEL_CustomBrush_Landmass_C_Center_Actors_On_Spline_Points final
+{
+public:
+	struct FVector                                AccumAvg;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Center_Actors_On_Spline_Points;
 
 // Function CustomBrush_Landmass.CustomBrush_Landmass_C.ExecuteUbergraph_CustomBrush_Landmass
 // 0x0130 (0x0130 - 0x0000)
@@ -205,7 +275,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	BrushFalloffMode::EBrushFalloffMode           Temp_byte_Variable_1;                              // 0x026D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrushFalloffMode					          Temp_byte_Variable_1;                              // 0x026D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_26E[0x2];                                      // 0x026E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -246,7 +316,7 @@ public:
 	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPWaterBodyWeightmapSettings          CallFunc_Map_Find_Value;                           // 0x0340(0x0028)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	BrushFalloffMode::EBrushFalloffMode           Temp_byte_Variable_2;                              // 0x0369(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrushFalloffMode					          Temp_byte_Variable_2;                              // 0x0369(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_36A[0x2];                                      // 0x036A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_5;           // 0x036C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -541,76 +611,6 @@ public:
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_CustomBrush_Landmass_C_Center_Actors_On_Spline_Points;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.ReceiveActorBeginOverlap
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_ReceiveActorBeginOverlap final
-{
-public:
-	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_ReceiveActorBeginOverlap;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Initialize
-// 0x0040 (0x0040 - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_Initialize final
-{
-public:
-	struct FTransform                             InLandscapeTransform;                              // 0x0000(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FIntPoint                              InLandscapeSize;                                   // 0x0030(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntPoint                              InLandscapeRenderTargetSize;                       // 0x0038(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Initialize;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_ReceiveTick;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Render
-// 0x0028 (0x0028 - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_Render final
-{
-public:
-	bool                                          InIsHeightmap;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 InCombinedResult;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InWeightmapLayerName;                              // 0x0010(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Render;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Brush Setup
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_Brush_Setup final
-{
-public:
-	float                                         Assigned_Spline_Length;                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Brush_Setup;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.DrawCanvasShape
-// 0x0030 (0x0030 - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_DrawCanvasShape final
-{
-public:
-	struct FTransform                             LandscapeTransform;                                // 0x0000(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_DrawCanvasShape;
-
-// Function CustomBrush_Landmass.SKEL_CustomBrush_Landmass_C.Center Actors On Spline Points
-// 0x000C (0x000C - 0x0000)
-struct SKEL_CustomBrush_Landmass_C_Center_Actors_On_Spline_Points final
-{
-public:
-	struct FVector                                AccumAvg;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_CustomBrush_Landmass_C_Center_Actors_On_Spline_Points;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

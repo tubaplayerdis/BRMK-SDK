@@ -11,25 +11,28 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_classes.hpp"
 #include "BrickRigs_structs.hpp"
-#include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_DashboardSlider.WBP_DashboardSlider_C
-// 0x0020 (0x0428 - 0x0408)
-class UWBP_DashboardSlider_C final : public UDashboardSliderWidget
+// 0x0020 (0x0418 - 0x03F8)
+class UWBP_DashboardSlider_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           IconBorder;                                        // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            IconImage;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            IconImage;                                         // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     Slider;                                            // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_DashboardSlider(int32 EntryPoint);
-	void UpdateColorStyle(EBrickUIColorStyle NewStyle);
-	void UpdateIcon(int32 IconIndex);
+	void SetCustomTextFormat(const class FText& InFormat);
+	void UpdateSlider(float Value);
+	void InitializeSlider(float MinValue, float MaxValue, ENumericValueType ValueType);
+	void SetColorStyle(EBrickUIColorStyle NewStyle);
+	void SetIconTexture(const TSoftObjectPtr<class UTexture2D>& IconTexture);
 
 public:
 	static class UClass* StaticClass()
@@ -48,17 +51,20 @@ public:
 DUMPER7_ASSERTS_UWBP_DashboardSlider_C;
 
 // WidgetBlueprintGeneratedClass WBP_DashboardSlider.SKEL_WBP_DashboardSlider_C
-// 0x0020 (0x0428 - 0x0408)
-class USKEL_WBP_DashboardSlider_C final : public UDashboardSliderWidget
+// 0x0020 (0x0418 - 0x03F8)
+class USKEL_WBP_DashboardSlider_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           IconBorder;                                        // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            IconImage;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            IconImage;                                         // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickSlider_C*                     Slider;                                            // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateIcon(int32 IconIndex);
-	void UpdateColorStyle(EBrickUIColorStyle NewStyle);
+	void SetIconTexture(const TSoftObjectPtr<class UTexture2D>& IconTexture);
+	void SetColorStyle(EBrickUIColorStyle NewStyle);
+	void InitializeSlider(float MinValue, float MaxValue, ENumericValueType ValueType);
+	void UpdateSlider(float Value);
+	void SetCustomTextFormat(const class FText& InFormat);
 
 public:
 	static class UClass* StaticClass()

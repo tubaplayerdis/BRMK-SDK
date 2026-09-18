@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START

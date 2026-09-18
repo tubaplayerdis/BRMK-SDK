@@ -14,14 +14,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function AITesting_MoveGoal.AITesting_MoveGoal_C.ExecuteUbergraph_AITesting_MoveGoal
-// 0x0004 (0x0004 - 0x0000)
-struct AITesting_MoveGoal_C_ExecuteUbergraph_AITesting_MoveGoal final
+// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.SetCollisionEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_AITesting_MoveGoal_C_SetCollisionEnabled final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldBeEnabled;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_AITesting_MoveGoal_C_ExecuteUbergraph_AITesting_MoveGoal;
+DUMPER7_ASSERTS_SKEL_AITesting_MoveGoal_C_SetCollisionEnabled;
 
 // Function AITesting_MoveGoal.AITesting_MoveGoal_C.SetCollisionEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -32,14 +32,14 @@ public:
 };
 DUMPER7_ASSERTS_AITesting_MoveGoal_C_SetCollisionEnabled;
 
-// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.SetCollisionEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_AITesting_MoveGoal_C_SetCollisionEnabled final
+// Function AITesting_MoveGoal.AITesting_MoveGoal_C.ExecuteUbergraph_AITesting_MoveGoal
+// 0x0004 (0x0004 - 0x0000)
+struct AITesting_MoveGoal_C_ExecuteUbergraph_AITesting_MoveGoal final
 {
 public:
-	bool                                          bShouldBeEnabled;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_SKEL_AITesting_MoveGoal_C_SetCollisionEnabled;
+DUMPER7_ASSERTS_AITesting_MoveGoal_C_ExecuteUbergraph_AITesting_MoveGoal;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

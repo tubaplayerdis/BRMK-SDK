@@ -10,40 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// BlueprintGeneratedClass BP_TruckWreck.SKEL_BP_TruckWreck_C
-// 0x0010 (0x0350 - 0x0340)
-class ASKEL_BP_TruckWreck_C final : public AStaticMeshProp
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveActorBeginOverlap(class AActor* OtherActor_ReceiveActorBeginOverlap);
-	void ReceiveBeginPlay();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_BP_TruckWreck_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_BP_TruckWreck_C")
-	}
-	static class ASKEL_BP_TruckWreck_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASKEL_BP_TruckWreck_C>();
-	}
-};
-DUMPER7_ASSERTS_ASKEL_BP_TruckWreck_C;
 
 // BlueprintGeneratedClass BP_TruckWreck.BP_TruckWreck_C
 // 0x0000 (0x0340 - 0x0340)
@@ -64,5 +35,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_TruckWreck_C;
+
+// BlueprintGeneratedClass BP_TruckWreck.SKEL_BP_TruckWreck_C
+// 0x0010 (0x0350 - 0x0340)
+class ASKEL_BP_TruckWreck_C final : public AStaticMeshProp
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_TruckWreck_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_TruckWreck_C")
+	}
+	static class ASKEL_BP_TruckWreck_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_TruckWreck_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_TruckWreck_C;
 
 SDK_NAMESPACE_END

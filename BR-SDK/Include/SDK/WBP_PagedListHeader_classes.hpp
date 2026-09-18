@@ -17,52 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_PagedListHeader.WBP_PagedListHeader_C
-// 0x0068 (0x04C0 - 0x0458)
-class UWBP_PagedListHeader_C final : public UPagedListHeaderWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     ClearButton;                                       // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            ClearImage;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PagedListHeaderField_C*            DimensionsWidget;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PagedListHeaderField_C*            MassWidget;                                        // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PagedListHeaderField_C*            NameWidget;                                        // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PagedListHeaderField_C*            ObjectsWidget;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PagedListHeaderField_C*            PriceWidget;                                       // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickHorizontalBox*                    PropsBox;                                          // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIsInEditor;                                       // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnClickedClear;                                    // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-
-public:
-	void ExecuteUbergraph_WBP_PagedListHeader(int32 EntryPoint);
-	void BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void UpdateClearButton(bool bInIsEnabled);
-	void BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void PreConstruct(bool IsDesignTime);
-	void UpdateMass(float InMass, float InMaxMass);
-	void UpdatePrice(float InPrice, float InMoney);
-	void UpdateDimensions(const struct FVector& InDimensions, const struct FVector& InMaxDimensions);
-	void UpdateNumObjects(int32 InNumObjects, int32 InMaxNumObjects, int32 InNumHiddenObjects, int32 InNumObjectsWithAerodynamics);
-	void UpdateEntry(const class FText& InTitleText, bool bInHasEntry, bool bInHasUnsavedChanges);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_PagedListHeader_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_PagedListHeader_C")
-	}
-	static class UWBP_PagedListHeader_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_PagedListHeader_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_PagedListHeader_C;
-
 // WidgetBlueprintGeneratedClass WBP_PagedListHeader.SKEL_WBP_PagedListHeader_C
 // 0x0068 (0x04C0 - 0x0458)
 class USKEL_WBP_PagedListHeader_C final : public UPagedListHeaderWidget
@@ -82,15 +36,14 @@ public:
 	TMulticastInlineDelegate<void()>              OnClickedClear;                                    // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateEntry(const class FText& InTitleText, bool bInHasEntry, bool bInHasUnsavedChanges);
-	void UpdateNumObjects(int32 InNumObjects, int32 InMaxNumObjects, int32 InNumHiddenObjects, int32 InNumObjectsWithAerodynamics);
-	void UpdateDimensions(const struct FVector& InDimensions, const struct FVector& InMaxDimensions);
-	void UpdatePrice(float InPrice, float InMoney);
-	void UpdateMass(float InMass, float InMaxMass);
-	void PreConstruct(bool IsDesignTime);
-	void BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void UpdateClearButton(bool bInIsEnabled);
 	void BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void UpdateClearButton(bool bInIsEnabled);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void UpdateMass(float InMass_UpdateMass, float InMaxMass_UpdateMass);
+	void UpdatePrice(float InPrice_UpdatePrice, float InMoney_UpdatePrice);
+	void UpdateDimensions(const struct FVector& InDimensions_UpdateDimensions, const struct FVector& InMaxDimensions_UpdateDimensions);
+	void UpdateNumObjects(int32 InNumObjects_UpdateNumObjects, int32 InMaxNumObjects_UpdateNumObjects, int32 InNumHiddenObjects_UpdateNumObjects, int32 InNumObjectsWithAerodynamics_UpdateNumObjects);
+	void UpdateEntry(const class FText& InTitleText_UpdateEntry, bool bInHasEntry_UpdateEntry, bool bInHasUnsavedChanges_UpdateEntry);
 
 public:
 	static class UClass* StaticClass()
@@ -107,5 +60,50 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_PagedListHeader_C;
+
+// WidgetBlueprintGeneratedClass WBP_PagedListHeader.WBP_PagedListHeader_C
+// 0x0068 (0x04C0 - 0x0458)
+class UWBP_PagedListHeader_C final : public UPagedListHeaderWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     ClearButton;                                       // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            ClearImage;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PagedListHeaderField_C*            DimensionsWidget;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PagedListHeaderField_C*            MassWidget;                                        // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PagedListHeaderField_C*            NameWidget;                                        // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PagedListHeaderField_C*            ObjectsWidget;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_PagedListHeaderField_C*            PriceWidget;                                       // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    PropsBox;                                          // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIsInEditor;                                       // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnClickedClear;                                    // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+
+public:
+	void UpdateEntry(const class FText& InTitleText_UpdateEntry, bool bInHasEntry_UpdateEntry, bool bInHasUnsavedChanges_UpdateEntry);
+	void UpdateNumObjects(int32 InNumObjects_UpdateNumObjects, int32 InMaxNumObjects_UpdateNumObjects, int32 InNumHiddenObjects_UpdateNumObjects, int32 InNumObjectsWithAerodynamics_UpdateNumObjects);
+	void UpdateDimensions(const struct FVector& InDimensions_UpdateDimensions, const struct FVector& InMaxDimensions_UpdateDimensions);
+	void UpdatePrice(float InPrice_UpdatePrice, float InMoney_UpdatePrice);
+	void UpdateMass(float InMass_UpdateMass, float InMaxMass_UpdateMass);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void UpdateClearButton(bool bInIsEnabled);
+	void BndEvt__WBP_PagedListHeader_ClearButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void ExecuteUbergraph_WBP_PagedListHeader(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_PagedListHeader_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_PagedListHeader_C")
+	}
+	static class UWBP_PagedListHeader_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_PagedListHeader_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_PagedListHeader_C;
 
 SDK_NAMESPACE_END

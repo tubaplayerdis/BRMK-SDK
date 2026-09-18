@@ -16,6 +16,68 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateScore
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   NewScore                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewMaxScore                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TeamScore_C::UpdateScore(int32 NewScore, int32 NewMaxScore)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TeamScore_C", "UpdateScore");
+
+	Params::SKEL_WBP_TeamScore_C_UpdateScore Parms{};
+
+	Parms.NewScore = NewScore;
+	Parms.NewMaxScore = NewMaxScore;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateTeamAttitude
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// ETeamAttitude                           NewTeamAttitude                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TeamScore_C::UpdateTeamAttitude(ETeamAttitude NewTeamAttitude)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TeamScore_C", "UpdateTeamAttitude");
+
+	Params::SKEL_WBP_TeamScore_C_UpdateTeamAttitude Parms{};
+
+	Parms.NewTeamAttitude = NewTeamAttitude;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateTeamIcon
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UTexture2D*                       NewIcon                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_TeamScore_C::UpdateTeamIcon(class UTexture2D* NewIcon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_TeamScore_C", "UpdateTeamIcon");
+
+	Params::SKEL_WBP_TeamScore_C_UpdateTeamIcon Parms{};
+
+	Parms.NewIcon = NewIcon;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_TeamScore.WBP_TeamScore_C.ExecuteUbergraph_WBP_TeamScore
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -93,68 +155,6 @@ void UWBP_TeamScore_C::UpdateScore(int32 NewScore, int32 NewMaxScore)
 
 	Parms.NewScore = NewScore;
 	Parms.NewMaxScore = NewMaxScore;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateScore
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   NewScore                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   NewMaxScore                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_TeamScore_C::UpdateScore(int32 NewScore, int32 NewMaxScore)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TeamScore_C", "UpdateScore");
-
-	Params::SKEL_WBP_TeamScore_C_UpdateScore Parms{};
-
-	Parms.NewScore = NewScore;
-	Parms.NewMaxScore = NewMaxScore;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateTeamAttitude
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// ETeamAttitude                           NewTeamAttitude                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_TeamScore_C::UpdateTeamAttitude(ETeamAttitude NewTeamAttitude)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TeamScore_C", "UpdateTeamAttitude");
-
-	Params::SKEL_WBP_TeamScore_C_UpdateTeamAttitude Parms{};
-
-	Parms.NewTeamAttitude = NewTeamAttitude;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TeamScore.SKEL_WBP_TeamScore_C.UpdateTeamIcon
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UTexture2D*                       NewIcon                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_TeamScore_C::UpdateTeamIcon(class UTexture2D* NewIcon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TeamScore_C", "UpdateTeamIcon");
-
-	Params::SKEL_WBP_TeamScore_C_UpdateTeamIcon Parms{};
-
-	Parms.NewIcon = NewIcon;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

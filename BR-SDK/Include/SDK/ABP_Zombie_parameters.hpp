@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function ABP_Zombie.SKEL_ABP_Zombie_C.AnimGraph
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_ABP_Zombie_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_SKEL_ABP_Zombie_C_AnimGraph;
+
 // Function ABP_Zombie.ABP_Zombie_C.ExecuteUbergraph_ABP_Zombie
 // 0x0004 (0x0004 - 0x0000)
 struct ABP_Zombie_C_ExecuteUbergraph_ABP_Zombie final
@@ -33,15 +42,6 @@ public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_ABP_Zombie_C_AnimGraph;
-
-// Function ABP_Zombie.SKEL_ABP_Zombie_C.AnimGraph
-// 0x0018 (0x0018 - 0x0000)
-struct SKEL_ABP_Zombie_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0018)(Parm, OutParm, NoDestructor)
-};
-DUMPER7_ASSERTS_SKEL_ABP_Zombie_C_AnimGraph;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

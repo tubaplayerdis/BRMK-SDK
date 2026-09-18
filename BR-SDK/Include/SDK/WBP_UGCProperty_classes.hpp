@@ -11,41 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_UGCProperty.SKEL_WBP_UGCProperty_C
-// 0x0020 (0x0470 - 0x0450)
-class USKEL_WBP_UGCProperty_C final : public UUGCPropertyWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        ItemsTextBlock;                                    // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void UpdateItemsText(int32 NumSelected);
-	void BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_UGCProperty_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_UGCProperty_C")
-	}
-	static class USKEL_WBP_UGCProperty_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_UGCProperty_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_UGCProperty_C;
 
 // WidgetBlueprintGeneratedClass WBP_UGCProperty.WBP_UGCProperty_C
 // 0x0020 (0x0470 - 0x0450)
@@ -58,7 +27,6 @@ public:
 
 public:
 	void ExecuteUbergraph_WBP_UGCProperty(int32 EntryPoint);
-	void BndEvt__WBP_UGCProperty_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void UpdateItemsText(int32 NumSelected);
 	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
 
@@ -77,5 +45,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_UGCProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_UGCProperty.SKEL_WBP_UGCProperty_C
+// 0x0020 (0x0470 - 0x0450)
+class USKEL_WBP_UGCProperty_C final : public UUGCPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        ItemsTextBlock;                                    // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void UpdateItemsText(int32 NumSelected);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_UGCProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_UGCProperty_C")
+	}
+	static class USKEL_WBP_UGCProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_UGCProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_UGCProperty_C;
 
 SDK_NAMESPACE_END

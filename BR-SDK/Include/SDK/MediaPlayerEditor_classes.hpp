@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "MediaPlayerEditor_structs.hpp"
 #include "UnrealEd_classes.hpp"
 #include "ToolMenus_classes.hpp"
+#include "MediaPlayerEditor_structs.hpp"
 
 
 SDK_NAMESPACE_START

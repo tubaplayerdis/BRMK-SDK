@@ -17,35 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_InputMappings.SKEL_WBP_InputMappings_C
-// 0x0018 (0x0448 - 0x0430)
-class USKEL_WBP_InputMappings_C final : public UInputSettingsPageWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FPopupHandle                           ResetPopupHandle;                                  // 0x0440(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-
-public:
-	void Construct();
-	void OnClickedRevertInput();
-	void OnRevertInputPopupClosed(EPopupResult Result);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputMappings_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_InputMappings_C")
-	}
-	static class USKEL_WBP_InputMappings_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_InputMappings_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_InputMappings_C;
-
 // WidgetBlueprintGeneratedClass WBP_InputMappings.WBP_InputMappings_C
 // 0x0018 (0x0448 - 0x0430)
 class UWBP_InputMappings_C final : public UInputSettingsPageWidget
@@ -75,5 +46,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_InputMappings_C;
+
+// WidgetBlueprintGeneratedClass WBP_InputMappings.SKEL_WBP_InputMappings_C
+// 0x0018 (0x0448 - 0x0430)
+class USKEL_WBP_InputMappings_C final : public UInputSettingsPageWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPopupHandle                           ResetPopupHandle;                                  // 0x0440(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+
+public:
+	void Construct();
+	void OnClickedRevertInput();
+	void OnRevertInputPopupClosed(EPopupResult Result);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_InputMappings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_InputMappings_C")
+	}
+	static class USKEL_WBP_InputMappings_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_InputMappings_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_InputMappings_C;
 
 SDK_NAMESPACE_END

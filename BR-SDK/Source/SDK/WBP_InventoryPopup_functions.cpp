@@ -36,28 +36,6 @@ void UWBP_InventoryPopup_C::ExecuteUbergraph_WBP_InventoryPopup(int32 EntryPoint
 }
 
 
-// Function WBP_InventoryPopup.WBP_InventoryPopup_C.BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_InventoryPopup_C::BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InventoryPopup_C", "BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_InventoryPopup_C_BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_InventoryPopup.WBP_InventoryPopup_C.UpdateDropArea
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -101,28 +79,6 @@ void USKEL_WBP_InventoryPopup_C::UpdateDropArea(bool bInIsDragging, bool bInCanD
 	Parms.bInIsDragging = bInIsDragging;
 	Parms.bInCanDrop = bInCanDrop;
 	Parms.bInIsDragOver = bInIsDragOver;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InventoryPopup.SKEL_WBP_InventoryPopup_C.BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_InventoryPopup_C::BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InventoryPopup_C", "BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_InventoryPopup_C_BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

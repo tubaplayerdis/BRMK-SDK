@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameLogoEnum_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameLogoEnum_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
@@ -19,21 +19,26 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Menu.WBP_Menu_C
-// 0x0038 (0x04D0 - 0x0498)
+// 0x0050 (0x04F0 - 0x04A0)
 class UWBP_Menu_C final : public UMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_GameLogo_C*                        Logo;                                              // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           MenuPageBorder;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PropertiesPanel_C*                 TopPropertiesPanel;                                // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FPopupHandle                           PopupHandle;                                       // 0x04C8(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_PropertiesPanel_C*                 LanguagePropertiesPanel;                           // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_GameLogo_C*                        Logo;                                              // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        MainPanel;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           MenuPageBorder;                                    // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           VersionBorder;                                     // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPopupHandle                           PopupHandle;                                       // 0x04E0(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	uint8                                         Pad_4E4[0x4];                                      // 0x04E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_MenuNews_C*                        NewsWidget;                                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_Menu(int32 EntryPoint);
-	void Construct();
+	void Destruct();
 	void OnInitialized();
+	void Construct();
 	void RemoveMenuPage(class UMenuPageWidget* Widget);
 	void OnClickedQuickGame();
 	void OnClosedMainMenuPopup(EPopupResult Result);
@@ -56,6 +61,8 @@ public:
 	void OnMenuContextChanged(const class FName& NewContext);
 	void CreateBackButton();
 	void CreateAdminMenuButton();
+	void RemoveNewsWidget();
+	void AddNewsWidget();
 
 public:
 	static class UClass* StaticClass()
@@ -74,16 +81,20 @@ public:
 DUMPER7_ASSERTS_UWBP_Menu_C;
 
 // WidgetBlueprintGeneratedClass WBP_Menu.SKEL_WBP_Menu_C
-// 0x0038 (0x04D0 - 0x0498)
+// 0x0050 (0x04F0 - 0x04A0)
 class USKEL_WBP_Menu_C final : public UMenuWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_GameLogo_C*                        Logo;                                              // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           MenuPageBorder;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_PropertiesPanel_C*                 TopPropertiesPanel;                                // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FPopupHandle                           PopupHandle;                                       // 0x04C8(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_PropertiesPanel_C*                 LanguagePropertiesPanel;                           // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_GameLogo_C*                        Logo;                                              // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickGridPanel*                        MainPanel;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           MenuPageBorder;                                    // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           VersionBorder;                                     // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        VersionTextBlock;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPopupHandle                           PopupHandle;                                       // 0x04E0(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	uint8                                         Pad_4E4[0x4];                                      // 0x04E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_MenuNews_C*                        NewsWidget;                                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnMenuContextChanged(const class FName& NewContext);
@@ -106,10 +117,13 @@ public:
 	void OnClosedMainMenuPopup(EPopupResult Result);
 	void OnClickedQuickGame();
 	void RemoveMenuPage(class UMenuPageWidget* Widget);
-	void OnInitialized();
 	void Construct();
+	void OnInitialized();
+	void Destruct();
 	void CreateBackButton();
 	void CreateAdminMenuButton();
+	void RemoveNewsWidget();
+	void AddNewsWidget();
 
 public:
 	static class UClass* StaticClass()

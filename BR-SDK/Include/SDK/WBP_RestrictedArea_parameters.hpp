@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.UpdateTimerRemaining
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining final
-{
-public:
-	float                                         TimeRemaining;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining;
-
 // Function WBP_RestrictedArea.WBP_RestrictedArea_C.ExecuteUbergraph_WBP_RestrictedArea
 // 0x00F8 (0x00F8 - 0x0000)
 struct WBP_RestrictedArea_C_ExecuteUbergraph_WBP_RestrictedArea final
@@ -53,6 +44,15 @@ public:
 	float                                         TimeRemaining;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_RestrictedArea_C_UpdateTimerRemaining;
+
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.UpdateTimerRemaining
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining final
+{
+public:
+	float                                         TimeRemaining;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

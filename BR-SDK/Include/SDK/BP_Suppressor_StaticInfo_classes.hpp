@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Suppressor_StaticInfo.SKEL_BP_Suppressor_StaticInfo_C
-// 0x0010 (0x0440 - 0x0430)
+// 0x0010 (0x0450 - 0x0440)
 class USKEL_BP_Suppressor_StaticInfo_C final : public UBarrelStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_Suppressor_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_Suppressor_StaticInfo.BP_Suppressor_StaticInfo_C
-// 0x0000 (0x0430 - 0x0430)
+// 0x0000 (0x0440 - 0x0440)
 class UBP_Suppressor_StaticInfo_C final : public UBarrelStaticInfo
 {
 public:

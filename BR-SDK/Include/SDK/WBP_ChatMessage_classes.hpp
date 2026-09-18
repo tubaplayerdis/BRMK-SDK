@@ -13,58 +13,32 @@
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_ChatMessage.SKEL_WBP_ChatMessage_C
-// 0x0028 (0x04D0 - 0x04A8)
-class USKEL_WBP_ChatMessage_C final : public UChatMessageWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            Icon;                                              // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void UpdateColorStyle(EBrickUIColorStyle NewColorStyle);
-	void UpdateMessageText(const class FText& NewText);
-	void BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_ChatMessage_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_ChatMessage_C")
-	}
-	static class USKEL_WBP_ChatMessage_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_ChatMessage_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_ChatMessage_C;
-
 // WidgetBlueprintGeneratedClass WBP_ChatMessage.WBP_ChatMessage_C
-// 0x0028 (0x04D0 - 0x04A8)
+// 0x0038 (0x04E0 - 0x04A8)
 class UWBP_ChatMessage_C final : public UChatMessageWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            Icon;                                              // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ReceiveAnim;                                       // 0x04B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            IconImage;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIsChatFocused;                                    // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WBP_ChatMessage(int32 EntryPoint);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateChatFocused(const bool bInIsChatFocused);
+	void SetFocusedState(bool bNewFocused);
+	void InitializeChatMessage(const class FText& NewText, const EBrickUIColorStyle NewColorStyle, const bool bInIsChatFocused, const bool bWasJustReceived);
 	void BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
-	void BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void UpdateMessageText(const class FText& NewText);
-	void UpdateColorStyle(EBrickUIColorStyle NewColorStyle);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
 	static class UClass* StaticClass()
@@ -81,5 +55,42 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ChatMessage_C;
+
+// WidgetBlueprintGeneratedClass WBP_ChatMessage.SKEL_WBP_ChatMessage_C
+// 0x0038 (0x04E0 - 0x04A8)
+class USKEL_WBP_ChatMessage_C final : public UChatMessageWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       ReceiveAnim;                                       // 0x04B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     Button;                                            // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            IconImage;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIsChatFocused;                                    // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void BndEvt__WBP_ChatMessage_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void InitializeChatMessage(const class FText& NewText, const EBrickUIColorStyle NewColorStyle, const bool bInIsChatFocused, const bool bWasJustReceived);
+	void SetFocusedState(bool bNewFocused);
+	void UpdateChatFocused(const bool bInIsChatFocused);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ChatMessage_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ChatMessage_C")
+	}
+	static class USKEL_WBP_ChatMessage_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ChatMessage_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ChatMessage_C;
 
 SDK_NAMESPACE_END

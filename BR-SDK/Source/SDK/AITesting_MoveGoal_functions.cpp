@@ -16,35 +16,49 @@
 
 SDK_NAMESPACE_START
 
-// Function AITesting_MoveGoal.AITesting_MoveGoal_C.ExecuteUbergraph_AITesting_MoveGoal
-// (Final, UbergraphFunction)
+// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.SetCollisionEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldBeEnabled                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AAITesting_MoveGoal_C::ExecuteUbergraph_AITesting_MoveGoal(int32 EntryPoint)
+void ASKEL_AITesting_MoveGoal_C::SetCollisionEnabled(bool bShouldBeEnabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AITesting_MoveGoal_C", "ExecuteUbergraph_AITesting_MoveGoal");
+		Func = Class->GetFunction("SKEL_AITesting_MoveGoal_C", "SetCollisionEnabled");
 
-	Params::AITesting_MoveGoal_C_ExecuteUbergraph_AITesting_MoveGoal Parms{};
+	Params::SKEL_AITesting_MoveGoal_C_SetCollisionEnabled Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bShouldBeEnabled = bShouldBeEnabled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AITesting_MoveGoal.AITesting_MoveGoal_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
 
-void AAITesting_MoveGoal_C::ReceiveBeginPlay()
+void ASKEL_AITesting_MoveGoal_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AITesting_MoveGoal_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("SKEL_AITesting_MoveGoal_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_AITesting_MoveGoal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_AITesting_MoveGoal_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,49 +84,35 @@ void AAITesting_MoveGoal_C::SetCollisionEnabled(bool bShouldBeEnabled)
 }
 
 
-// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.ReceiveBeginPlay
+// Function AITesting_MoveGoal.AITesting_MoveGoal_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
-void ASKEL_AITesting_MoveGoal_C::ReceiveBeginPlay()
+void AAITesting_MoveGoal_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_AITesting_MoveGoal_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("AITesting_MoveGoal_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.UserConstructionScript
-// (Event, Public, BlueprintEvent)
-
-void ASKEL_AITesting_MoveGoal_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_AITesting_MoveGoal_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C.SetCollisionEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AITesting_MoveGoal.AITesting_MoveGoal_C.ExecuteUbergraph_AITesting_MoveGoal
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bShouldBeEnabled                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ASKEL_AITesting_MoveGoal_C::SetCollisionEnabled(bool bShouldBeEnabled)
+void AAITesting_MoveGoal_C::ExecuteUbergraph_AITesting_MoveGoal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_AITesting_MoveGoal_C", "SetCollisionEnabled");
+		Func = Class->GetFunction("AITesting_MoveGoal_C", "ExecuteUbergraph_AITesting_MoveGoal");
 
-	Params::SKEL_AITesting_MoveGoal_C_SetCollisionEnabled Parms{};
+	Params::AITesting_MoveGoal_C_ExecuteUbergraph_AITesting_MoveGoal Parms{};
 
-	Parms.bShouldBeEnabled = bShouldBeEnabled;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

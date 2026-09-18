@@ -16,47 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C
-// 0x0040 (0x03F0 - 0x03B0)
-class ASKEL_BP_BrickLandscapeBrush_C final : public ABrickLandscapeBrush
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         EdgeFalloffDistance;                               // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EdgeHeight;                                        // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NoiseScale;                                        // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EdgeFalloffBias;                                   // 0x03CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NoiseSpreadDistance;                               // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsDesert;                                         // 0x03D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bIsGridMap;                                        // 0x03D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D6[0x2];                                      // 0x03D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GridHeight;                                        // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GravelNoiseScale;                                  // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RockSlopeStart;                                    // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RockSlopeContrast;                                 // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RandomLeavesScale;                                 // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void RenderWeightmap(const class FName& InLayerName);
-	void RenderHeightmap();
-	void UserConstructionScript();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_BP_BrickLandscapeBrush_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_BP_BrickLandscapeBrush_C")
-	}
-	static class ASKEL_BP_BrickLandscapeBrush_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASKEL_BP_BrickLandscapeBrush_C>();
-	}
-};
-DUMPER7_ASSERTS_ASKEL_BP_BrickLandscapeBrush_C;
-
 // BlueprintGeneratedClass BP_BrickLandscapeBrush.BP_BrickLandscapeBrush_C
 // 0x0040 (0x03F0 - 0x03B0)
 class ABP_BrickLandscapeBrush_C final : public ABrickLandscapeBrush
@@ -97,5 +56,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_BrickLandscapeBrush_C;
+
+// BlueprintGeneratedClass BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C
+// 0x0040 (0x03F0 - 0x03B0)
+class ASKEL_BP_BrickLandscapeBrush_C final : public ABrickLandscapeBrush
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         EdgeFalloffDistance;                               // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EdgeHeight;                                        // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseScale;                                        // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EdgeFalloffBias;                                   // 0x03CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseSpreadDistance;                               // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsDesert;                                         // 0x03D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIsGridMap;                                        // 0x03D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D6[0x2];                                      // 0x03D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GridHeight;                                        // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GravelNoiseScale;                                  // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RockSlopeStart;                                    // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RockSlopeContrast;                                 // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RandomLeavesScale;                                 // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void RenderWeightmap(const class FName& InLayerName);
+	void RenderHeightmap();
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_BrickLandscapeBrush_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_BrickLandscapeBrush_C")
+	}
+	static class ASKEL_BP_BrickLandscapeBrush_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_BrickLandscapeBrush_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_BrickLandscapeBrush_C;
 
 SDK_NAMESPACE_END

@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_UIStyle_Blue.SKEL_BP_UIStyle_Blue_C
-// 0x0010 (0x8210 - 0x8200)
+// 0x0010 (0x6430 - 0x6420)
 class USKEL_BP_UIStyle_Blue_C final : public USKEL_BP_UIStyle_Default_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_UIStyle_Blue_C;             // 0x8200(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_UIStyle_Blue_C;             // 0x6420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void BuildStyle();
@@ -43,11 +43,11 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_UIStyle_Blue_C;
 
 // BlueprintGeneratedClass BP_UIStyle_Blue.BP_UIStyle_Blue_C
-// 0x0010 (0x8210 - 0x8200)
+// 0x0010 (0x6430 - 0x6420)
 class UBP_UIStyle_Blue_C final : public UBP_UIStyle_Default_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UIStyle_Blue_C;                  // 0x8200(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UIStyle_Blue_C;                  // 0x6420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void BuildStyle();

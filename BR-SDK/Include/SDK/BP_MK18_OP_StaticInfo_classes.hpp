@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MK18_OP_StaticInfo.BP_MK18_OP_StaticInfo_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x08D0 - 0x08D0)
 class UBP_MK18_OP_StaticInfo_C final : public UBP_MK18_StaticInfo_C
 {
 public:
@@ -37,11 +37,11 @@ public:
 DUMPER7_ASSERTS_UBP_MK18_OP_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_MK18_OP_StaticInfo.SKEL_BP_MK18_OP_StaticInfo_C
-// 0x0010 (0x08E0 - 0x08D0)
+// 0x0010 (0x08F0 - 0x08E0)
 class USKEL_BP_MK18_OP_StaticInfo_C final : public USKEL_BP_MK18_StaticInfo_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_MK18_OP_StaticInfo_C;       // 0x08D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_SKEL_BP_MK18_OP_StaticInfo_C;       // 0x08E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()

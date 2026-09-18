@@ -16,29 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_CrosshairArrow.WBP_CrosshairArrow_C
-// 0x0008 (0x0400 - 0x03F8)
-class UWBP_CrosshairArrow_C final : public UUserWidget
-{
-public:
-	class UBrickImage*                            BrickImage_36;                                     // 0x03F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_CrosshairArrow_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_CrosshairArrow_C")
-	}
-	static class UWBP_CrosshairArrow_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_CrosshairArrow_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_CrosshairArrow_C;
-
 // WidgetBlueprintGeneratedClass WBP_CrosshairArrow.SKEL_WBP_CrosshairArrow_C
 // 0x0018 (0x0410 - 0x03F8)
 class USKEL_WBP_CrosshairArrow_C final : public UUserWidget
@@ -67,5 +44,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_CrosshairArrow_C;
+
+// WidgetBlueprintGeneratedClass WBP_CrosshairArrow.WBP_CrosshairArrow_C
+// 0x0008 (0x0400 - 0x03F8)
+class UWBP_CrosshairArrow_C final : public UUserWidget
+{
+public:
+	class UBrickImage*                            BrickImage_36;                                     // 0x03F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_CrosshairArrow_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_CrosshairArrow_C")
+	}
+	static class UWBP_CrosshairArrow_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_CrosshairArrow_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_CrosshairArrow_C;
 
 SDK_NAMESPACE_END

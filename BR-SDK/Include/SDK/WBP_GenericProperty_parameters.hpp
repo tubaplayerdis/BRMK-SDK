@@ -18,6 +18,78 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature final
+{
+public:
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature;
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_GenericProperty_C_UpdateIsReadOnly final
+{
+public:
+	bool                                          bNewReadOnly_UpdateIsReadOnly;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GenericProperty_C_UpdateIsReadOnly;
+
+// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateText
+// 0x0030 (0x0030 - 0x0000)
+struct SKEL_WBP_GenericProperty_C_UpdateText final
+{
+public:
+	class FText                                   Text_UpdateText;                                   // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	ETextJustify                                  Justification_UpdateText;                          // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxLength_UpdateText;                              // 0x001C(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultiline_UpdateText;                        // 0x0020(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPassword_UpdateText;                            // 0x0021(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValidateText_UpdateText;                          // 0x0022(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowRichText_UpdateText;                         // 0x0023(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TextFormat_UpdateText;                             // 0x0024(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GenericProperty_C_UpdateText;
+
+// Function WBP_GenericProperty.WBP_GenericProperty_C.UpdateText
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_GenericProperty_C_UpdateText final
+{
+public:
+	class FText                                   Text_UpdateText;                                   // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextJustify                                  Justification_UpdateText;                          // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxLength_UpdateText;                              // 0x001C(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAllowMultiline_UpdateText;                        // 0x0020(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIsPassword_UpdateText;                            // 0x0021(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bValidateText_UpdateText;                          // 0x0022(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bAllowRichText_UpdateText;                         // 0x0023(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FName                                   TextFormat_UpdateText;                             // 0x0024(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GenericProperty_C_UpdateText;
+
+// Function WBP_GenericProperty.WBP_GenericProperty_C.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_GenericProperty_C_UpdateIsReadOnly final
+{
+public:
+	bool                                          bNewReadOnly_UpdateIsReadOnly;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_GenericProperty_C_UpdateIsReadOnly;
+
+// Function WBP_GenericProperty.WBP_GenericProperty_C.BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature final
+{
+public:
+	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature;
+
 // Function WBP_GenericProperty.WBP_GenericProperty_C.ExecuteUbergraph_WBP_GenericProperty
 // 0x00A8 (0x00A8 - 0x0000)
 struct WBP_GenericProperty_C_ExecuteUbergraph_WBP_GenericProperty final
@@ -58,78 +130,6 @@ public:
 	bool                                          CallFunc_IsReadOnly_ReturnValue_1;                 // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_GenericProperty_C_ExecuteUbergraph_WBP_GenericProperty;
-
-// Function WBP_GenericProperty.WBP_GenericProperty_C.BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature final
-{
-public:
-	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature;
-
-// Function WBP_GenericProperty.WBP_GenericProperty_C.UpdateIsReadOnly
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_GenericProperty_C_UpdateIsReadOnly final
-{
-public:
-	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GenericProperty_C_UpdateIsReadOnly;
-
-// Function WBP_GenericProperty.WBP_GenericProperty_C.UpdateText
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_GenericProperty_C_UpdateText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextJustify                                  Justification;                                     // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxLength;                                         // 0x001C(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAllowMultiline;                                   // 0x0020(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bIsPassword;                                       // 0x0021(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bValidateText;                                     // 0x0022(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bAllowRichText;                                    // 0x0023(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class FName                                   TextFormat;                                        // 0x0024(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_GenericProperty_C_UpdateText;
-
-// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateText
-// 0x0030 (0x0030 - 0x0000)
-struct SKEL_WBP_GenericProperty_C_UpdateText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	ETextJustify                                  Justification;                                     // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxLength;                                         // 0x001C(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultiline;                                   // 0x0020(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPassword;                                       // 0x0021(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bValidateText;                                     // 0x0022(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowRichText;                                    // 0x0023(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TextFormat;                                        // 0x0024(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GenericProperty_C_UpdateText;
-
-// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.UpdateIsReadOnly
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_GenericProperty_C_UpdateIsReadOnly final
-{
-public:
-	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GenericProperty_C_UpdateIsReadOnly;
-
-// Function WBP_GenericProperty.SKEL_WBP_GenericProperty_C.BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct SKEL_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature final
-{
-public:
-	class FText                                   NewText;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EValueChangedEventType                        EventType;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GenericProperty_C_BndEvt__WBP_GenericProperty_TextBox_K2Node_ComponentBoundEvent_0_OnTextBoxChanged__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

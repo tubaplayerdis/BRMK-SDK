@@ -16,30 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_Scoreboard.WBP_Scoreboard_C
-// 0x0010 (0x0498 - 0x0488)
-class UWBP_Scoreboard_C final : public UScoreboardWidget
-{
-public:
-	class UMenuButtonWidget*                      PlayerProfileButton;                               // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      KickButton;                                        // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_Scoreboard_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_Scoreboard_C")
-	}
-	static class UWBP_Scoreboard_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_Scoreboard_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_Scoreboard_C;
-
 // WidgetBlueprintGeneratedClass WBP_Scoreboard.SKEL_WBP_Scoreboard_C
 // 0x0020 (0x04A8 - 0x0488)
 class USKEL_WBP_Scoreboard_C final : public UScoreboardWidget
@@ -64,5 +40,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_Scoreboard_C;
+
+// WidgetBlueprintGeneratedClass WBP_Scoreboard.WBP_Scoreboard_C
+// 0x0010 (0x0498 - 0x0488)
+class UWBP_Scoreboard_C final : public UScoreboardWidget
+{
+public:
+	class UMenuButtonWidget*                      PlayerProfileButton;                               // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      KickButton;                                        // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_Scoreboard_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_Scoreboard_C")
+	}
+	static class UWBP_Scoreboard_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_Scoreboard_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_Scoreboard_C;
 
 SDK_NAMESPACE_END

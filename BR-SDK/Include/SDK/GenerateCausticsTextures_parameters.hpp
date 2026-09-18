@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "RTMipGenerationSettings_structs.hpp"
+#include "Water_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CausticsWaveSpectrumSettings_structs.hpp"
-#include "Water_structs.hpp"
+#include "RTMipGenerationSettings_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CausticGeneratorOutputModes_structs.hpp"
 #include "CausticPreviewModes_structs.hpp"

@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BrickRigsEditor.BrEditorStatics.FixMacroLibrary
+// 0x0008 (0x0008 - 0x0000)
+struct BrEditorStatics_FixMacroLibrary final
+{
+public:
+	class UBlueprint*                             Blueprint;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BrEditorStatics_FixMacroLibrary;
+
 // Function BrickRigsEditor.BrickLandscapeBrush.CreateMID
 // 0x0010 (0x0010 - 0x0000)
 struct BrickLandscapeBrush_CreateMID final

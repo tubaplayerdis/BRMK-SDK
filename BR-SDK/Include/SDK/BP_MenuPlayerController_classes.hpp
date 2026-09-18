@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuPlayerController.BP_MenuPlayerController_C
-// 0x0000 (0x0720 - 0x0720)
+// 0x0000 (0x0750 - 0x0750)
 class ABP_MenuPlayerController_C final : public AMenuPlayerController
 {
 public:
@@ -37,11 +37,11 @@ public:
 DUMPER7_ASSERTS_ABP_MenuPlayerController_C;
 
 // BlueprintGeneratedClass BP_MenuPlayerController.SKEL_BP_MenuPlayerController_C
-// 0x0010 (0x0730 - 0x0720)
+// 0x0010 (0x0760 - 0x0750)
 class ASKEL_BP_MenuPlayerController_C final : public AMenuPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0720(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0750(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void UserConstructionScript();

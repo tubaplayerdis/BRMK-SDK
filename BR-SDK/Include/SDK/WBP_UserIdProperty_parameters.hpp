@@ -16,107 +16,91 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.ExecuteUbergraph_WBP_UserIdProperty
-// 0x0080 (0x0080 - 0x0000)
-struct WBP_UserIdProperty_C_ExecuteUbergraph_WBP_UserIdProperty final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            Temp_byte_Variable;                                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            Temp_byte_Variable_1;                              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Event_InUsername;                           // 0x0028(0x0018)(ConstParm)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            K2Node_ComponentBoundEvent_InColorStyle;           // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState;    // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0048(0x0018)()
-	class FText                                   K2Node_Event_InUserId;                             // 0x0060(0x0018)(ConstParm)
-	bool                                          K2Node_Event_bIsValid;                             // 0x0078(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            K2Node_Select_Default_1;                           // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bNewReadOnly;                         // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_UserIdProperty_C_ExecuteUbergraph_WBP_UserIdProperty;
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateIsReadOnly
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateIsReadOnly
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_UserIdProperty_C_UpdateIsReadOnly final
+struct SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly final
 {
 public:
-	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bNewReadOnly_UpdateIsReadOnly;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateIsReadOnly;
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUserId
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_UserIdProperty_C_UpdateUserId final
-{
-public:
-	class FText                                   InUserId;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          bIsValid;                                          // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateUserId;
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUsername
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_UserIdProperty_C_UpdateUsername final
-{
-public:
-	class FText                                   InUsername;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateUsername;
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUsername
-// 0x0018 (0x0018 - 0x0000)
-struct SKEL_WBP_UserIdProperty_C_UpdateUsername final
-{
-public:
-	class FText                                   InUsername;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateUsername;
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct SKEL_WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
+DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly;
 
 // Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUserId
 // 0x0020 (0x0020 - 0x0000)
 struct SKEL_WBP_UserIdProperty_C_UpdateUserId final
 {
 public:
-	class FText                                   InUserId;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bIsValid;                                          // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   InUserId_UpdateUserId;                             // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValid_UpdateUserId;                             // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateUserId;
 
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateIsReadOnly
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly final
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUsername
+// 0x0018 (0x0018 - 0x0000)
+struct SKEL_WBP_UserIdProperty_C_UpdateUsername final
 {
 public:
-	bool                                          bNewReadOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   InUsername_UpdateUsername;                         // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly;
+DUMPER7_ASSERTS_SKEL_WBP_UserIdProperty_C_UpdateUsername;
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUsername
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_UserIdProperty_C_UpdateUsername final
+{
+public:
+	class FText                                   InUsername_UpdateUsername;                         // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateUsername;
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUserId
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_UserIdProperty_C_UpdateUserId final
+{
+public:
+	class FText                                   InUserId_UpdateUserId;                             // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          bIsValid_UpdateUserId;                             // 0x0018(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateUserId;
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateIsReadOnly
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_UserIdProperty_C_UpdateIsReadOnly final
+{
+public:
+	bool                                          bNewReadOnly_UpdateIsReadOnly;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_UserIdProperty_C_UpdateIsReadOnly;
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.ExecuteUbergraph_WBP_UserIdProperty
+// 0x00B8 (0x00B8 - 0x0000)
+struct WBP_UserIdProperty_C_ExecuteUbergraph_WBP_UserIdProperty final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0014)(ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EBrickUIColorStyle                            Temp_byte_Variable;                                // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            Temp_byte_Variable_1;                              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Event_InUsername;                           // 0x0040(0x0018)(ConstParm)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Event_InUserId;                             // 0x0060(0x0018)(ConstParm)
+	bool                                          K2Node_Event_bIsValid;                             // 0x0078(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0080(0x0018)()
+	EBrickUIColorStyle                            K2Node_Select_Default_1;                           // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bNewReadOnly;                         // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPropertyContainerWidget*               CallFunc_GetPropertyContainerWidget_ReturnValue;   // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonPanelWidget*                 CallFunc_GetMenuButtonPanelWidget_ReturnValue;     // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      CallFunc_CreateLinkButton_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_UserIdProperty_C_ExecuteUbergraph_WBP_UserIdProperty;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

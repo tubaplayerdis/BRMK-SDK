@@ -16,6 +16,58 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_UGCItem.SKEL_WBP_UGCItem_C.UpdateItemWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bInIsSelected_UpdateItemWidget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsLegacyFile_UpdateItemWidget                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInHasAutoSave_UpdateItemWidget                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsDedicatedAutoSave_UpdateItemWidget                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UGCItem_C::UpdateItemWidget(bool bInIsSelected_UpdateItemWidget, bool bInIsLegacyFile_UpdateItemWidget, bool bInHasAutoSave_UpdateItemWidget, bool bInIsDedicatedAutoSave_UpdateItemWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UGCItem_C", "UpdateItemWidget");
+
+	Params::SKEL_WBP_UGCItem_C_UpdateItemWidget Parms{};
+
+	Parms.bInIsSelected_UpdateItemWidget = bInIsSelected_UpdateItemWidget;
+	Parms.bInIsLegacyFile_UpdateItemWidget = bInIsLegacyFile_UpdateItemWidget;
+	Parms.bInHasAutoSave_UpdateItemWidget = bInHasAutoSave_UpdateItemWidget;
+	Parms.bInIsDedicatedAutoSave_UpdateItemWidget = bInIsDedicatedAutoSave_UpdateItemWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UGCItem.WBP_UGCItem_C.UpdateItemWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bInIsSelected_UpdateItemWidget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bInIsLegacyFile_UpdateItemWidget                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bInHasAutoSave_UpdateItemWidget                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bInIsDedicatedAutoSave_UpdateItemWidget                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_UGCItem_C::UpdateItemWidget(bool bInIsSelected_UpdateItemWidget, bool bInIsLegacyFile_UpdateItemWidget, bool bInHasAutoSave_UpdateItemWidget, bool bInIsDedicatedAutoSave_UpdateItemWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UGCItem_C", "UpdateItemWidget");
+
+	Params::WBP_UGCItem_C_UpdateItemWidget Parms{};
+
+	Parms.bInIsSelected_UpdateItemWidget = bInIsSelected_UpdateItemWidget;
+	Parms.bInIsLegacyFile_UpdateItemWidget = bInIsLegacyFile_UpdateItemWidget;
+	Parms.bInHasAutoSave_UpdateItemWidget = bInHasAutoSave_UpdateItemWidget;
+	Parms.bInIsDedicatedAutoSave_UpdateItemWidget = bInIsDedicatedAutoSave_UpdateItemWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_UGCItem.WBP_UGCItem_C.ExecuteUbergraph_WBP_UGCItem
 // (Final, UbergraphFunction)
 // Parameters:
@@ -31,102 +83,6 @@ void UWBP_UGCItem_C::ExecuteUbergraph_WBP_UGCItem(int32 EntryPoint)
 	Params::WBP_UGCItem_C_ExecuteUbergraph_WBP_UGCItem Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UGCItem.WBP_UGCItem_C.UpdateItemWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bInIsSelected                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bInIsLegacyFile                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bInHasAutoSave                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bInIsDedicatedAutoSave                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_UGCItem_C::UpdateItemWidget(bool bInIsSelected, bool bInIsLegacyFile, bool bInHasAutoSave, bool bInIsDedicatedAutoSave)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UGCItem_C", "UpdateItemWidget");
-
-	Params::WBP_UGCItem_C_UpdateItemWidget Parms{};
-
-	Parms.bInIsSelected = bInIsSelected;
-	Parms.bInIsLegacyFile = bInIsLegacyFile;
-	Parms.bInHasAutoSave = bInHasAutoSave;
-	Parms.bInIsDedicatedAutoSave = bInIsDedicatedAutoSave;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UGCItem.WBP_UGCItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UGCItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UGCItem_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_UGCItem_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UGCItem.SKEL_WBP_UGCItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UGCItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UGCItem_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_UGCItem_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UGCItem.SKEL_WBP_UGCItem_C.UpdateItemWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bInIsSelected                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bInIsLegacyFile                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bInHasAutoSave                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bInIsDedicatedAutoSave                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UGCItem_C::UpdateItemWidget(bool bInIsSelected, bool bInIsLegacyFile, bool bInHasAutoSave, bool bInIsDedicatedAutoSave)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UGCItem_C", "UpdateItemWidget");
-
-	Params::SKEL_WBP_UGCItem_C_UpdateItemWidget Parms{};
-
-	Parms.bInIsSelected = bInIsSelected;
-	Parms.bInIsLegacyFile = bInIsLegacyFile;
-	Parms.bInHasAutoSave = bInHasAutoSave;
-	Parms.bInIsDedicatedAutoSave = bInIsDedicatedAutoSave;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

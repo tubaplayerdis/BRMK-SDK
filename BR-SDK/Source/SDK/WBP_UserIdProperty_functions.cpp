@@ -16,6 +16,130 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateIsReadOnly
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewReadOnly_UpdateIsReadOnly                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UserIdProperty_C::UpdateIsReadOnly(bool bNewReadOnly_UpdateIsReadOnly)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "UpdateIsReadOnly");
+
+	Params::SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly Parms{};
+
+	Parms.bNewReadOnly_UpdateIsReadOnly = bNewReadOnly_UpdateIsReadOnly;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUserId
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      InUserId_UpdateUserId                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const bool                              bIsValid_UpdateUserId                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UserIdProperty_C::UpdateUserId(const class FText& InUserId_UpdateUserId, const bool bIsValid_UpdateUserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "UpdateUserId");
+
+	Params::SKEL_WBP_UserIdProperty_C_UpdateUserId Parms{};
+
+	Parms.InUserId_UpdateUserId = std::move(InUserId_UpdateUserId);
+	Parms.bIsValid_UpdateUserId = bIsValid_UpdateUserId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUsername
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class FText&                      InUsername_UpdateUsername                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_UserIdProperty_C::UpdateUsername(const class FText& InUsername_UpdateUsername)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "UpdateUsername");
+
+	Params::SKEL_WBP_UserIdProperty_C_UpdateUsername Parms{};
+
+	Parms.InUsername_UpdateUsername = std::move(InUsername_UpdateUsername);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUsername
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      InUsername_UpdateUsername                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_UserIdProperty_C::UpdateUsername(const class FText& InUsername_UpdateUsername)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UserIdProperty_C", "UpdateUsername");
+
+	Params::WBP_UserIdProperty_C_UpdateUsername Parms{};
+
+	Parms.InUsername_UpdateUsername = std::move(InUsername_UpdateUsername);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUserId
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      InUserId_UpdateUserId                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const bool                              bIsValid_UpdateUserId                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_UserIdProperty_C::UpdateUserId(const class FText& InUserId_UpdateUserId, const bool bIsValid_UpdateUserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UserIdProperty_C", "UpdateUserId");
+
+	Params::WBP_UserIdProperty_C_UpdateUserId Parms{};
+
+	Parms.InUserId_UpdateUserId = std::move(InUserId_UpdateUserId);
+	Parms.bIsValid_UpdateUserId = bIsValid_UpdateUserId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateIsReadOnly
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewReadOnly_UpdateIsReadOnly                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_UserIdProperty_C::UpdateIsReadOnly(bool bNewReadOnly_UpdateIsReadOnly)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UserIdProperty_C", "UpdateIsReadOnly");
+
+	Params::WBP_UserIdProperty_C_UpdateIsReadOnly Parms{};
+
+	Parms.bNewReadOnly_UpdateIsReadOnly = bNewReadOnly_UpdateIsReadOnly;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_UserIdProperty.WBP_UserIdProperty_C.ExecuteUbergraph_WBP_UserIdProperty
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -31,202 +155,6 @@ void UWBP_UserIdProperty_C::ExecuteUbergraph_WBP_UserIdProperty(int32 EntryPoint
 	Params::WBP_UserIdProperty_C_ExecuteUbergraph_WBP_UserIdProperty Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateIsReadOnly
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewReadOnly                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_UserIdProperty_C::UpdateIsReadOnly(bool bNewReadOnly)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UserIdProperty_C", "UpdateIsReadOnly");
-
-	Params::WBP_UserIdProperty_C_UpdateIsReadOnly Parms{};
-
-	Parms.bNewReadOnly = bNewReadOnly;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUserId
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      InUserId                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const bool                              bIsValid                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_UserIdProperty_C::UpdateUserId(const class FText& InUserId, const bool bIsValid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UserIdProperty_C", "UpdateUserId");
-
-	Params::WBP_UserIdProperty_C_UpdateUserId Parms{};
-
-	Parms.InUserId = std::move(InUserId);
-	Parms.bIsValid = bIsValid;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UserIdProperty_C::BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UserIdProperty_C", "BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_UserIdProperty_C::BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UserIdProperty_C", "BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UserIdProperty.WBP_UserIdProperty_C.UpdateUsername
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      InUsername                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_UserIdProperty_C::UpdateUsername(const class FText& InUsername)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UserIdProperty_C", "UpdateUsername");
-
-	Params::WBP_UserIdProperty_C_UpdateUsername Parms{};
-
-	Parms.InUsername = std::move(InUsername);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUsername
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const class FText&                      InUsername                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UserIdProperty_C::UpdateUsername(const class FText& InUsername)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "UpdateUsername");
-
-	Params::SKEL_WBP_UserIdProperty_C_UpdateUsername Parms{};
-
-	Parms.InUsername = std::move(InUsername);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// (Public)
-
-void USKEL_WBP_UserIdProperty_C::BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UserIdProperty_C::BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_UserIdProperty_C_BndEvt__ShowProfileButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateUserId
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const class FText&                      InUserId                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const bool                              bIsValid                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UserIdProperty_C::UpdateUserId(const class FText& InUserId, const bool bIsValid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "UpdateUserId");
-
-	Params::SKEL_WBP_UserIdProperty_C_UpdateUserId Parms{};
-
-	Parms.InUserId = std::move(InUserId);
-	Parms.bIsValid = bIsValid;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UserIdProperty.SKEL_WBP_UserIdProperty_C.UpdateIsReadOnly
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewReadOnly                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_UserIdProperty_C::UpdateIsReadOnly(bool bNewReadOnly)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_UserIdProperty_C", "UpdateIsReadOnly");
-
-	Params::SKEL_WBP_UserIdProperty_C_UpdateIsReadOnly Parms{};
-
-	Parms.bNewReadOnly = bNewReadOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

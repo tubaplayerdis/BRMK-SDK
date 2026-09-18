@@ -16,6 +16,24 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_PagedList.WBP_PagedList_C.UpdateIsLoading
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PagedList_C_UpdateIsLoading final
+{
+public:
+	bool                                          bNewLoading;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_PagedList_C_UpdateIsLoading;
+
+// Function WBP_PagedList.WBP_PagedList_C.UpdateIsEntrySelected
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PagedList_C_UpdateIsEntrySelected final
+{
+public:
+	bool                                          bIsEntrySelected;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_PagedList_C_UpdateIsEntrySelected;
+
 // Function WBP_PagedList.WBP_PagedList_C.ExecuteUbergraph_WBP_PagedList
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_PagedList_C_ExecuteUbergraph_WBP_PagedList final
@@ -35,41 +53,23 @@ public:
 };
 DUMPER7_ASSERTS_WBP_PagedList_C_ExecuteUbergraph_WBP_PagedList;
 
-// Function WBP_PagedList.WBP_PagedList_C.UpdateIsEntrySelected
+// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsEntrySelected
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_PagedList_C_UpdateIsEntrySelected final
+struct SKEL_WBP_PagedList_C_UpdateIsEntrySelected final
 {
 public:
-	bool                                          bIsEntrySelected;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIsEntrySelected_UpdateIsEntrySelected;            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WBP_PagedList_C_UpdateIsEntrySelected;
-
-// Function WBP_PagedList.WBP_PagedList_C.UpdateIsLoading
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_PagedList_C_UpdateIsLoading final
-{
-public:
-	bool                                          bNewLoading;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_PagedList_C_UpdateIsLoading;
+DUMPER7_ASSERTS_SKEL_WBP_PagedList_C_UpdateIsEntrySelected;
 
 // Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsLoading
 // 0x0001 (0x0001 - 0x0000)
 struct SKEL_WBP_PagedList_C_UpdateIsLoading final
 {
 public:
-	bool                                          bNewLoading;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewLoading_UpdateIsLoading;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_PagedList_C_UpdateIsLoading;
-
-// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsEntrySelected
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_PagedList_C_UpdateIsEntrySelected final
-{
-public:
-	bool                                          bIsEntrySelected;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_PagedList_C_UpdateIsEntrySelected;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

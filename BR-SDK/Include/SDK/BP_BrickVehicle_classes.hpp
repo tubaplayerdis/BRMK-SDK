@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BrickVehicle.SKEL_BP_BrickVehicle_C
-// 0x0010 (0x0BB0 - 0x0BA0)
+// 0x0010 (0x0BC0 - 0x0BB0)
 class ASKEL_BP_BrickVehicle_C final : public ABrickVehicle
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ReceiveBeginPlay();
@@ -46,7 +46,7 @@ public:
 DUMPER7_ASSERTS_ASKEL_BP_BrickVehicle_C;
 
 // BlueprintGeneratedClass BP_BrickVehicle.BP_BrickVehicle_C
-// 0x0000 (0x0BA0 - 0x0BA0)
+// 0x0000 (0x0BB0 - 0x0BB0)
 class ABP_BrickVehicle_C final : public ABrickVehicle
 {
 public:

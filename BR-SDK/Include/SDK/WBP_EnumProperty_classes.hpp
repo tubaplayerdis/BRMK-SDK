@@ -10,31 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_EnumProperty.WBP_EnumProperty_C
-// 0x0000 (0x0430 - 0x0430)
-class UWBP_EnumProperty_C final : public UEnumPropertyWidget
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_EnumProperty_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_EnumProperty_C")
-	}
-	static class UWBP_EnumProperty_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_EnumProperty_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_EnumProperty_C;
 
 // WidgetBlueprintGeneratedClass WBP_EnumProperty.SKEL_WBP_EnumProperty_C
 // 0x0010 (0x0440 - 0x0430)
@@ -58,5 +38,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_EnumProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_EnumProperty.WBP_EnumProperty_C
+// 0x0000 (0x0430 - 0x0430)
+class UWBP_EnumProperty_C final : public UEnumPropertyWidget
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_EnumProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_EnumProperty_C")
+	}
+	static class UWBP_EnumProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_EnumProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_EnumProperty_C;
 
 SDK_NAMESPACE_END

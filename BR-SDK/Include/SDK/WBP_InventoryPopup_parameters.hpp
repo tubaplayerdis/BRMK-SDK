@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -18,7 +17,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_InventoryPopup.WBP_InventoryPopup_C.ExecuteUbergraph_WBP_InventoryPopup
-// 0x0014 (0x0014 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WBP_InventoryPopup_C_ExecuteUbergraph_WBP_InventoryPopup final
 {
 public:
@@ -32,23 +31,11 @@ public:
 	bool                                          K2Node_Event_bInIsDragging;                        // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_bInCanDrop;                           // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_bInIsDragOver;                        // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            K2Node_ComponentBoundEvent_InColorStyle;           // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState;    // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_InventoryPopup_C_ExecuteUbergraph_WBP_InventoryPopup;
-
-// Function WBP_InventoryPopup.WBP_InventoryPopup_C.BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_InventoryPopup_C_BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_InventoryPopup_C_BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
 
 // Function WBP_InventoryPopup.WBP_InventoryPopup_C.UpdateDropArea
 // 0x0003 (0x0003 - 0x0000)
@@ -71,16 +58,6 @@ public:
 	bool                                          bInIsDragOver;                                     // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_InventoryPopup_C_UpdateDropArea;
-
-// Function WBP_InventoryPopup.SKEL_WBP_InventoryPopup_C.BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct SKEL_WBP_InventoryPopup_C_BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_InventoryPopup_C_BndEvt__DropButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

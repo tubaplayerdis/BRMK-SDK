@@ -17,59 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass WaveFoamRenderer.SKEL_WaveFoamRenderer_C
-// 0x00B0 (0x03B8 - 0x0308)
-class ASKEL_WaveFoamRenderer_C final : public ALandmassActor
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 Foam_RT_A;                                         // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 Foam_RT_B;                                         // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DrawWave_MID;                                      // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         idx;                                               // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               FoamDiffuse_MID;                                   // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Fade;                                              // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Time_Bias;                                         // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Freeze;                                            // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               FoamToneMapMID;                                    // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Res;                                               // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 Wave_RT;                                           // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AWaterBody*                             Waterbody;                                         // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGerstnerWave                          wave;                                              // 0x0380(0x0030)(Edit, BlueprintVisible, NoDestructor)
-	bool                                          Ticking;                                           // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3B1[0x3];                                      // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Simulation_World_Size;                             // 0x03B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void Allocate_RTs();
-	void Create_MID();
-	void Start_Tick();
-	void Stop_Tick();
-	void CustomTick(float DeltaSeconds);
-	void Initialize();
-	void UserConstructionScript();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WaveFoamRenderer_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WaveFoamRenderer_C")
-	}
-	static class ASKEL_WaveFoamRenderer_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASKEL_WaveFoamRenderer_C>();
-	}
-};
-DUMPER7_ASSERTS_ASKEL_WaveFoamRenderer_C;
-
 // BlueprintGeneratedClass WaveFoamRenderer.WaveFoamRenderer_C
 // 0x00B0 (0x03B8 - 0x0308)
 class AWaveFoamRenderer_C final : public ALandmassActor
@@ -123,5 +70,58 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AWaveFoamRenderer_C;
+
+// BlueprintGeneratedClass WaveFoamRenderer.SKEL_WaveFoamRenderer_C
+// 0x00B0 (0x03B8 - 0x0308)
+class ASKEL_WaveFoamRenderer_C final : public ALandmassActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 Foam_RT_A;                                         // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 Foam_RT_B;                                         // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DrawWave_MID;                                      // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         idx;                                               // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               FoamDiffuse_MID;                                   // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Fade;                                              // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Time_Bias;                                         // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Freeze;                                            // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               FoamToneMapMID;                                    // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Res;                                               // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 Wave_RT;                                           // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AWaterBody*                             Waterbody;                                         // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGerstnerWave                          wave;                                              // 0x0380(0x0030)(Edit, BlueprintVisible, NoDestructor)
+	bool                                          Ticking;                                           // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3B1[0x3];                                      // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Simulation_World_Size;                             // 0x03B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void Allocate_RTs();
+	void Create_MID();
+	void Start_Tick();
+	void Stop_Tick();
+	void CustomTick(float DeltaSeconds);
+	void Initialize();
+	void UserConstructionScript();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WaveFoamRenderer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WaveFoamRenderer_C")
+	}
+	static class ASKEL_WaveFoamRenderer_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_WaveFoamRenderer_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_WaveFoamRenderer_C;
 
 SDK_NAMESPACE_END

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "BrickRigs_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -19,76 +18,47 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_InputAction.WBP_InputAction_C.ExecuteUbergraph_WBP_InputAction
-// 0x0020 (0x0020 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct WBP_InputAction_C_ExecuteUbergraph_WBP_InputAction final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EHorizontalAlignment                          Temp_byte_Variable_2;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHorizontalAlignment                          Temp_byte_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            Temp_byte_Variable_4;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            Temp_byte_Variable_5;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_7;                              // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_ComponentBoundEvent_InColorStyle_1;         // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState_1;  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_ComponentBoundEvent_InColorStyle;           // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            K2Node_ComponentBoundEvent_InContentStyleState;    // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bInCanBeRebound;                      // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EInputActionListMode                          K2Node_Event_NewMode;                              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EHorizontalAlignment                          K2Node_Select_Default;                             // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            K2Node_Select_Default_2;                           // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EBrickUIColorStyle                            Temp_byte_Variable;                                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EHorizontalAlignment                          Temp_byte_Variable_1;                              // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          Temp_byte_Variable_2;                              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          K2Node_Select_Default;                             // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDisplayInfo                           K2Node_Event_InDisplayInfo;                        // 0x0028(0x0048)(ConstParm)
+	EBrickUIColorStyle                            K2Node_Event_ColorStyle;                           // 0x0070(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bInIsEnabled;                         // 0x0071(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bInIsActive;                          // 0x0072(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bInIsClickable;                       // 0x0073(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	EBrickUIColorStyle                            K2Node_Select_Default_1;                           // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0076(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_77[0x1];                                       // 0x0077(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x0078(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo;                     // 0x0090(0x0048)()
 };
 DUMPER7_ASSERTS_WBP_InputAction_C_ExecuteUbergraph_WBP_InputAction;
 
-// Function WBP_InputAction.WBP_InputAction_C.UpdateInputActionListMode
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_InputAction_C_UpdateInputActionListMode final
+// Function WBP_InputAction.WBP_InputAction_C.UpdateActionWidget
+// 0x0050 (0x0050 - 0x0000)
+struct WBP_InputAction_C_UpdateActionWidget final
 {
 public:
-	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDisplayInfo                           InDisplayInfo;                                     // 0x0000(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x0048(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInIsEnabled;                                      // 0x0049(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bInIsActive;                                       // 0x004A(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bInIsClickable;                                    // 0x004B(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_WBP_InputAction_C_UpdateInputActionListMode;
-
-// Function WBP_InputAction.WBP_InputAction_C.UpdateCanActionBeRebound
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_InputAction_C_UpdateCanActionBeRebound final
-{
-public:
-	bool                                          bInCanBeRebound;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_InputAction_C_UpdateCanActionBeRebound;
-
-// Function WBP_InputAction.WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
-
-// Function WBP_InputAction.WBP_InputAction_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
+DUMPER7_ASSERTS_WBP_InputAction_C_UpdateActionWidget;
 
 // Function WBP_InputAction.WBP_InputAction_C.GetWidgetToFocus
 // 0x0008 (0x0008 - 0x0000)
@@ -99,43 +69,18 @@ public:
 };
 DUMPER7_ASSERTS_WBP_InputAction_C_GetWidgetToFocus;
 
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct SKEL_WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature final
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateActionWidget
+// 0x0050 (0x0050 - 0x0000)
+struct SKEL_WBP_InputAction_C_UpdateActionWidget final
 {
 public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDisplayInfo                           InDisplayInfo;                                     // 0x0000(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x0048(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsEnabled;                                      // 0x0049(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsActive;                                       // 0x004A(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsClickable;                                    // 0x004B(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature;
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// 0x0002 (0x0002 - 0x0000)
-struct SKEL_WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature final
-{
-public:
-	EBrickUIColorStyle                            InColorStyle;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            InContentStyleState;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature;
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateCanActionBeRebound
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_InputAction_C_UpdateCanActionBeRebound final
-{
-public:
-	bool                                          bInCanBeRebound;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_UpdateCanActionBeRebound;
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateInputActionListMode
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_InputAction_C_UpdateInputActionListMode final
-{
-public:
-	EInputActionListMode                          NewMode;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_UpdateInputActionListMode;
+DUMPER7_ASSERTS_SKEL_WBP_InputAction_C_UpdateActionWidget;
 
 // Function WBP_InputAction.SKEL_WBP_InputAction_C.GetWidgetToFocus
 // 0x0008 (0x0008 - 0x0000)

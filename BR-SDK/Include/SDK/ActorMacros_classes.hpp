@@ -15,26 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass ActorMacros.ActorMacros_C
-// 0x0000 (0x02F8 - 0x02F8)
-class AActorMacros_C final : public AActor
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("ActorMacros_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorMacros_C")
-	}
-	static class AActorMacros_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AActorMacros_C>();
-	}
-};
-DUMPER7_ASSERTS_AActorMacros_C;
-
 // BlueprintGeneratedClass ActorMacros.SKEL_ActorMacros_C
 // 0x0000 (0x02F8 - 0x02F8)
 class ASKEL_ActorMacros_C final : public AActor
@@ -54,5 +34,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_ActorMacros_C;
+
+// BlueprintGeneratedClass ActorMacros.ActorMacros_C
+// 0x0000 (0x02F8 - 0x02F8)
+class AActorMacros_C final : public AActor
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("ActorMacros_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorMacros_C")
+	}
+	static class AActorMacros_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AActorMacros_C>();
+	}
+};
+DUMPER7_ASSERTS_AActorMacros_C;
 
 SDK_NAMESPACE_END

@@ -11,59 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 #include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_BrickComboBox.WBP_BrickComboBox_C
-// 0x0020 (0x04B0 - 0x0490)
-class UWBP_BrickComboBox_C final : public UBrickComboBoxWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            ArrowImage;                                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UGridPanel*                             ButtonPanel;                                       // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_BrickComboBox(int32 EntryPoint);
-	void UpdateUseItemList(bool bInUseItemList);
-	void AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_BrickComboBox_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_BrickComboBox_C")
-	}
-	static class UWBP_BrickComboBox_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_BrickComboBox_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_BrickComboBox_C;
-
 // WidgetBlueprintGeneratedClass WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C
-// 0x0020 (0x04B0 - 0x0490)
+// 0x0020 (0x04C8 - 0x04A8)
 class USKEL_WBP_BrickComboBox_C final : public UBrickComboBoxWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            ArrowImage;                                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UGridPanel*                             ButtonPanel;                                       // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            ArrowImage;                                        // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UGridPanel*                             ButtonPanel;                                       // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void UpdateUseItemList(bool bInUseItemList_UpdateUseItemList);
+	void AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget_AddSelectedItemWidget);
 	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget);
-	void UpdateUseItemList(bool bInUseItemList);
 
 public:
 	static class UClass* StaticClass()
@@ -80,5 +46,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_BrickComboBox_C;
+
+// WidgetBlueprintGeneratedClass WBP_BrickComboBox.WBP_BrickComboBox_C
+// 0x0020 (0x04C8 - 0x04A8)
+class UWBP_BrickComboBox_C final : public UBrickComboBoxWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            ArrowImage;                                        // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UGridPanel*                             ButtonPanel;                                       // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
+	void AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget_AddSelectedItemWidget);
+	void UpdateUseItemList(bool bInUseItemList_UpdateUseItemList);
+	void ExecuteUbergraph_WBP_BrickComboBox(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_BrickComboBox_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_BrickComboBox_C")
+	}
+	static class UWBP_BrickComboBox_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_BrickComboBox_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_BrickComboBox_C;
 
 SDK_NAMESPACE_END

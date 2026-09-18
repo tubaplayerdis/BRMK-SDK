@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.CustomTick
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_WaveFoamRenderer_C_CustomTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WaveFoamRenderer_C_CustomTick;
-
 // Function WaveFoamRenderer.WaveFoamRenderer_C.ExecuteUbergraph_WaveFoamRenderer
 // 0x00C8 (0x00C8 - 0x0000)
 struct WaveFoamRenderer_C_ExecuteUbergraph_WaveFoamRenderer final
@@ -114,6 +105,15 @@ public:
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WaveFoamRenderer_C_UserConstructionScript;
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.CustomTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_WaveFoamRenderer_C_CustomTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WaveFoamRenderer_C_CustomTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

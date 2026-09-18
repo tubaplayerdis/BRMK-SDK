@@ -48,7 +48,7 @@ DUMPER7_ASSERTS_UEditorUtilityObject;
 
 // Class Blutility.ActorActionUtility
 // 0x0008 (0x0038 - 0x0030)
-class UActorActionUtility final : public UEditorUtilityObject
+class UActorActionUtility : public UEditorUtilityObject
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -74,7 +74,7 @@ DUMPER7_ASSERTS_UActorActionUtility;
 
 // Class Blutility.AssetActionUtility
 // 0x0008 (0x0038 - 0x0030)
-class UAssetActionUtility final : public UEditorUtilityObject
+class UAssetActionUtility : public UEditorUtilityObject
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -173,7 +173,7 @@ DUMPER7_ASSERTS_UEditorUtilityActorComponent;
 
 // Class Blutility.EditorUtilityBlueprint
 // 0x0000 (0x04D8 - 0x04D8)
-class UEditorUtilityBlueprint final : public UBlueprint
+class UEditorUtilityBlueprint : public UBlueprint
 {
 public:
 	static class UClass* StaticClass()
@@ -193,7 +193,7 @@ DUMPER7_ASSERTS_UEditorUtilityBlueprint;
 
 // Class Blutility.EditorUtilityBlueprintFactory
 // 0x0018 (0x00A0 - 0x0088)
-class UEditorUtilityBlueprintFactory final : public UFactory
+class UEditorUtilityBlueprintFactory : public UFactory
 {
 public:
 	TSubclassOf<class UObject>                    ParentClass;                                       // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -217,7 +217,7 @@ DUMPER7_ASSERTS_UEditorUtilityBlueprintFactory;
 
 // Class Blutility.EditorUtilityCamera
 // 0x0000 (0x08C0 - 0x08C0)
-class AEditorUtilityCamera final : public ACameraActor
+class AEditorUtilityCamera : public ACameraActor
 {
 public:
 	static class UClass* StaticClass()
@@ -257,7 +257,7 @@ DUMPER7_ASSERTS_UEditorUtilityBlueprintAsyncActionBase;
 
 // Class Blutility.AsyncEditorDelay
 // 0x0020 (0x0058 - 0x0038)
-class UAsyncEditorDelay final : public UEditorUtilityBlueprintAsyncActionBase
+class UAsyncEditorDelay : public UEditorUtilityBlueprintAsyncActionBase
 {
 public:
 	TMulticastInlineDelegate<void()>              Complete;                                          // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -284,7 +284,7 @@ DUMPER7_ASSERTS_UAsyncEditorDelay;
 
 // Class Blutility.AsyncEditorWaitForGameWorld
 // 0x0018 (0x0050 - 0x0038)
-class UAsyncEditorWaitForGameWorld final : public UEditorUtilityBlueprintAsyncActionBase
+class UAsyncEditorWaitForGameWorld : public UEditorUtilityBlueprintAsyncActionBase
 {
 public:
 	TMulticastInlineDelegate<void(class UWorld* World)> Complete;                                    // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -311,7 +311,7 @@ DUMPER7_ASSERTS_UAsyncEditorWaitForGameWorld;
 
 // Class Blutility.AsyncEditorOpenMapAndFocusActor
 // 0x0040 (0x0078 - 0x0038)
-class UAsyncEditorOpenMapAndFocusActor final : public UEditorUtilityBlueprintAsyncActionBase
+class UAsyncEditorOpenMapAndFocusActor : public UEditorUtilityBlueprintAsyncActionBase
 {
 public:
 	TMulticastInlineDelegate<void()>              Complete;                                          // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -338,7 +338,7 @@ DUMPER7_ASSERTS_UAsyncEditorOpenMapAndFocusActor;
 
 // Class Blutility.EditorUtilityLibrary
 // 0x0000 (0x0030 - 0x0030)
-class UEditorUtilityLibrary final : public UBlueprintFunctionLibrary
+class UEditorUtilityLibrary : public UBlueprintFunctionLibrary
 {
 public:
 	static TArray<struct FAssetData> GetSelectedAssetData();
@@ -368,7 +368,7 @@ DUMPER7_ASSERTS_UEditorUtilityLibrary;
 
 // Class Blutility.EditorUtilitySubsystem
 // 0x0158 (0x0190 - 0x0038)
-class alignas(0x10) UEditorUtilitySubsystem final : public UEditorSubsystem
+class alignas(0x10) UEditorUtilitySubsystem : public UEditorSubsystem
 {
 public:
 	TArray<struct FSoftObjectPath>                LoadedUIs;                                         // 0x0038(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
@@ -413,7 +413,7 @@ DUMPER7_ASSERTS_UEditorUtilitySubsystem;
 
 // Class Blutility.EditorUtilityTask
 // 0x0018 (0x0048 - 0x0030)
-class UEditorUtilityTask final : public UObject
+class UEditorUtilityTask : public UObject
 {
 public:
 	class UEditorUtilitySubsystem*                MyTaskManager;                                     // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -444,7 +444,7 @@ DUMPER7_ASSERTS_UEditorUtilityTask;
 
 // Class Blutility.EditorUtilityToolMenuEntry
 // 0x0000 (0x00E0 - 0x00E0)
-class UEditorUtilityToolMenuEntry final : public UToolMenuEntryScript
+class UEditorUtilityToolMenuEntry : public UToolMenuEntryScript
 {
 public:
 	static class UClass* StaticClass()
@@ -464,7 +464,7 @@ DUMPER7_ASSERTS_UEditorUtilityToolMenuEntry;
 
 // Class Blutility.EditorUtilityToolMenuSection
 // 0x0000 (0x0030 - 0x0030)
-class UEditorUtilityToolMenuSection final : public UToolMenuSectionDynamic
+class UEditorUtilityToolMenuSection : public UToolMenuSectionDynamic
 {
 public:
 	static class UClass* StaticClass()
@@ -484,7 +484,7 @@ DUMPER7_ASSERTS_UEditorUtilityToolMenuSection;
 
 // Class Blutility.EditorUtilityWidget
 // 0x0018 (0x0410 - 0x03F8)
-class UEditorUtilityWidget final : public UUserWidget
+class UEditorUtilityWidget : public UUserWidget
 {
 public:
 	class FString                                 HelpText;                                          // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, AssetRegistrySearchable, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -513,7 +513,7 @@ DUMPER7_ASSERTS_UEditorUtilityWidget;
 
 // Class Blutility.EditorUtilityWidgetBlueprint
 // 0x0028 (0x0568 - 0x0540)
-class UEditorUtilityWidgetBlueprint final : public UWidgetBlueprint
+class UEditorUtilityWidgetBlueprint : public UWidgetBlueprint
 {
 public:
 	uint8                                         Pad_540[0x20];                                     // 0x0540(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
@@ -537,7 +537,7 @@ DUMPER7_ASSERTS_UEditorUtilityWidgetBlueprint;
 
 // Class Blutility.EditorUtilityWidgetBlueprintFactory
 // 0x0018 (0x00A0 - 0x0088)
-class UEditorUtilityWidgetBlueprintFactory final : public UFactory
+class UEditorUtilityWidgetBlueprintFactory : public UFactory
 {
 public:
 	EBlueprintType                                BlueprintType;                                     // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -563,7 +563,7 @@ DUMPER7_ASSERTS_UEditorUtilityWidgetBlueprintFactory;
 
 // Class Blutility.GlobalEditorUtilityBase
 // 0x0038 (0x0068 - 0x0030)
-class UGlobalEditorUtilityBase final : public UObject
+class UGlobalEditorUtilityBase : public UObject
 {
 public:
 	class FString                                 HelpText;                                          // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)

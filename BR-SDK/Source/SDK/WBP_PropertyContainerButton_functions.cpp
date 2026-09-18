@@ -16,6 +16,46 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_PropertyContainerButton.SKEL_WBP_PropertyContainerButton_C.UpdateColorStyle
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EBrickUIColorStyle                InColorStyle_UpdateColorStyle                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertyContainerButton_C::UpdateColorStyle(const EBrickUIColorStyle InColorStyle_UpdateColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertyContainerButton_C", "UpdateColorStyle");
+
+	Params::SKEL_WBP_PropertyContainerButton_C_UpdateColorStyle Parms{};
+
+	Parms.InColorStyle_UpdateColorStyle = InColorStyle_UpdateColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyContainerButton.WBP_PropertyContainerButton_C.UpdateColorStyle
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EBrickUIColorStyle                InColorStyle_UpdateColorStyle                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyContainerButton_C::UpdateColorStyle(const EBrickUIColorStyle InColorStyle_UpdateColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainerButton_C", "UpdateColorStyle");
+
+	Params::WBP_PropertyContainerButton_C_UpdateColorStyle Parms{};
+
+	Parms.InColorStyle_UpdateColorStyle = InColorStyle_UpdateColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PropertyContainerButton.WBP_PropertyContainerButton_C.ExecuteUbergraph_WBP_PropertyContainerButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -31,50 +71,6 @@ void UWBP_PropertyContainerButton_C::ExecuteUbergraph_WBP_PropertyContainerButto
 	Params::WBP_PropertyContainerButton_C_ExecuteUbergraph_WBP_PropertyContainerButton Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainerButton.WBP_PropertyContainerButton_C.BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertyContainerButton_C::BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainerButton_C", "BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_PropertyContainerButton_C_BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainerButton.SKEL_WBP_PropertyContainerButton_C.BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PropertyContainerButton_C::BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyContainerButton_C", "BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_PropertyContainerButton_C_BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

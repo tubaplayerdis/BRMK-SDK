@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "AndroidRuntimeSettings_structs.hpp"
 #include "AudioPlatformConfiguration_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START

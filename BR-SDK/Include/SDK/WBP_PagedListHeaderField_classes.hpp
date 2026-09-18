@@ -18,35 +18,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_PagedListHeaderField.WBP_PagedListHeaderField_C
-// 0x0020 (0x0418 - 0x03F8)
-class UWBP_PagedListHeaderField_C final : public UUserWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_PagedListHeaderField(int32 EntryPoint);
-	void UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_PagedListHeaderField_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_PagedListHeaderField_C")
-	}
-	static class UWBP_PagedListHeaderField_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_PagedListHeaderField_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_PagedListHeaderField_C;
-
 // WidgetBlueprintGeneratedClass WBP_PagedListHeaderField.SKEL_WBP_PagedListHeaderField_C
 // 0x0020 (0x0418 - 0x03F8)
 class USKEL_WBP_PagedListHeaderField_C final : public UUserWidget
@@ -57,7 +28,7 @@ public:
 	class UBrickTextBlock*                        TextBlock;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle);
+	void UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle, EBrickUIBrushStyle NewBrushStyle);
 
 public:
 	static class UClass* StaticClass()
@@ -74,5 +45,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_PagedListHeaderField_C;
+
+// WidgetBlueprintGeneratedClass WBP_PagedListHeaderField.WBP_PagedListHeaderField_C
+// 0x0020 (0x0418 - 0x03F8)
+class UWBP_PagedListHeaderField_C final : public UUserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle, EBrickUIBrushStyle NewBrushStyle);
+	void ExecuteUbergraph_WBP_PagedListHeaderField(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_PagedListHeaderField_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_PagedListHeaderField_C")
+	}
+	static class UWBP_PagedListHeaderField_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_PagedListHeaderField_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_PagedListHeaderField_C;
 
 SDK_NAMESPACE_END

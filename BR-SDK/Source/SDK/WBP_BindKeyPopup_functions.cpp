@@ -56,26 +56,6 @@ void UWBP_BindKeyPopup_C::UpdateIsBindingKey(bool bNewIsBinding)
 }
 
 
-// Function WBP_BindKeyPopup.WBP_BindKeyPopup_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_BindKeyPopup_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BindKeyPopup_C", "PreConstruct");
-
-	Params::WBP_BindKeyPopup_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_BindKeyPopup.WBP_BindKeyPopup_C.UpdateConflictedMappings
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -171,26 +151,6 @@ void USKEL_WBP_BindKeyPopup_C::UpdateConflictedMappings(bool bIsConflicted, cons
 
 	Parms.bIsConflicted = bIsConflicted;
 	Parms.ConflictedMappingNames = std::move(ConflictedMappingNames);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_BindKeyPopup.SKEL_WBP_BindKeyPopup_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_BindKeyPopup_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BindKeyPopup_C", "PreConstruct");
-
-	Params::SKEL_WBP_BindKeyPopup_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

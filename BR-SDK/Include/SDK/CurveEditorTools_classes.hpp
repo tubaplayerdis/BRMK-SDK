@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CurveEditor_classes.hpp"
 #include "CurveEditorTools_structs.hpp"
+#include "CurveEditor_classes.hpp"
 #include "CoreUObject_classes.hpp"
 
 

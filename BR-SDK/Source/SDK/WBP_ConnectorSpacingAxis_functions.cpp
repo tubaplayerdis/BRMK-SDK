@@ -16,64 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ConnectorSpacingAxis_C::BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingAxis_C", "BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_ConnectorSpacingAxis_C_BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// (Public)
-
-void USKEL_WBP_ConnectorSpacingAxis_C::BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingAxis_C", "BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.UpdateSpacingAxis
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFluAxisSigned                          InSpacingAxis                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EConnectorSpacing                       InSpacing                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USKEL_WBP_ConnectorSpacingAxis_C::UpdateSpacingAxis(EFluAxisSigned InSpacingAxis, EConnectorSpacing InSpacing)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingAxis_C", "UpdateSpacingAxis");
-
-	Params::SKEL_WBP_ConnectorSpacingAxis_C_UpdateSpacingAxis Parms{};
-
-	Parms.InSpacingAxis = InSpacingAxis;
-	Parms.InSpacing = InSpacing;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ConnectorSpacingAxis.WBP_ConnectorSpacingAxis_C.ExecuteUbergraph_WBP_ConnectorSpacingAxis
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -130,23 +72,37 @@ void UWBP_ConnectorSpacingAxis_C::BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node
 }
 
 
-// Function WBP_ConnectorSpacingAxis.WBP_ConnectorSpacingAxis_C.BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+// (Public)
 
-void UWBP_ConnectorSpacingAxis_C::BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+void USKEL_WBP_ConnectorSpacingAxis_C::BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConnectorSpacingAxis_C", "BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingAxis_C", "BndEvt__WBP_ConnectorSpacingAxis_Button_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
 
-	Params::WBP_ConnectorSpacingAxis_C_BndEvt__WBP_ConnectorSpacingAxis_WBP_BrickButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
+
+// Function WBP_ConnectorSpacingAxis.SKEL_WBP_ConnectorSpacingAxis_C.UpdateSpacingAxis
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFluAxisSigned                          InSpacingAxis                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EConnectorSpacing                       InSpacing                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_ConnectorSpacingAxis_C::UpdateSpacingAxis(EFluAxisSigned InSpacingAxis, EConnectorSpacing InSpacing)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ConnectorSpacingAxis_C", "UpdateSpacingAxis");
+
+	Params::SKEL_WBP_ConnectorSpacingAxis_C_UpdateSpacingAxis Parms{};
+
+	Parms.InSpacingAxis = InSpacingAxis;
+	Parms.InSpacing = InSpacing;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

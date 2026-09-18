@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_PhysicalMaterialTester.SKEL_BP_PhysicalMaterialTester_C.UserConstructionScript
-// (Event, Public, BlueprintEvent)
-
-void ASKEL_BP_PhysicalMaterialTester_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_PhysicalMaterialTester_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PhysicalMaterialTester.SKEL_BP_PhysicalMaterialTester_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ASKEL_BP_PhysicalMaterialTester_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_PhysicalMaterialTester_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_PhysicalMaterialTester.BP_PhysicalMaterialTester_C.UserConstructionScript
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -89,6 +61,34 @@ void ABP_PhysicalMaterialTester_C::ExecuteUbergraph_BP_PhysicalMaterialTester(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PhysicalMaterialTester.SKEL_BP_PhysicalMaterialTester_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_BP_PhysicalMaterialTester_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_PhysicalMaterialTester_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PhysicalMaterialTester.SKEL_BP_PhysicalMaterialTester_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASKEL_BP_PhysicalMaterialTester_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_PhysicalMaterialTester_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

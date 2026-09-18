@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -19,20 +18,31 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputHelp.WBP_InputHelp_C
-// 0x0020 (0x0430 - 0x0410)
+// 0x0048 (0x0460 - 0x0418)
 class UWBP_InputHelp_C final : public UInputHelpWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      ActionsBox;                                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     BackButton;                                        // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWBP_InputHelpCategory_C*>       CategoryWidgets;                                   // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UInputActionWidget*>             ActionWidgets;                                     // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void ExecuteUbergraph_WBP_InputHelp(int32 EntryPoint);
+	void DoNothing();
+	void Destruct();
+	void BndEvt__WBP_InputHelp_BackButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
 	void PreConstruct(bool IsDesignTime);
-	void BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
 	void UpdateIsAlwaysOpen(bool bNewAlwaysOpen);
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
+	void GetFocusedChild(bool* bHasFocusedChild, class FName* ActionName, bool* bSecondaryAction, class UInputCategory** InputCategory);
+	void AddCategoriesAndActions(const TArray<class UInputCategory*>& Categories, const TArray<struct FInputActionInfo>& Actions);
+
+	class UWidget* GetWidgetToFocus() const;
 
 public:
 	static class UClass* StaticClass()
@@ -51,19 +61,30 @@ public:
 DUMPER7_ASSERTS_UWBP_InputHelp_C;
 
 // WidgetBlueprintGeneratedClass WBP_InputHelp.SKEL_WBP_InputHelp_C
-// 0x0020 (0x0430 - 0x0410)
+// 0x0048 (0x0460 - 0x0418)
 class USKEL_WBP_InputHelp_C final : public UInputHelpWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWBP_BrickButton_C*                     Button;                                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      ActionsBox;                                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_BrickButton_C*                     BackButton;                                        // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ControlHint_C*                     ControlHint;                                       // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWBP_InputHelpCategory_C*>       CategoryWidgets;                                   // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UInputActionWidget*>             ActionWidgets;                                     // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void UpdateIsAlwaysOpen(bool bNewAlwaysOpen);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
-	void BndEvt__WBP_InputHelp_Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void PreConstruct(bool IsDesignTime);
+	void BndEvt__WBP_InputHelp_BackButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature();
+	void Destruct();
+	void DoNothing();
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
+	void GetFocusedChild(bool* bHasFocusedChild, class FName* ActionName, bool* bSecondaryAction, class UInputCategory** InputCategory);
+	void AddCategoriesAndActions(const TArray<class UInputCategory*>& Categories, const TArray<struct FInputActionInfo>& Actions);
+
+	class UWidget* GetWidgetToFocus() const;
 
 public:
 	static class UClass* StaticClass()

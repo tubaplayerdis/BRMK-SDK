@@ -11,41 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 #include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_UGCItem.WBP_UGCItem_C
-// 0x0018 (0x0540 - 0x0528)
-class UWBP_UGCItem_C final : public UUGCItemWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0528(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickImage*                            AutoSaveIcon;                                      // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_WBP_UGCItem(int32 EntryPoint);
-	void UpdateItemWidget(bool bInIsSelected, bool bInIsLegacyFile, bool bInHasAutoSave, bool bInIsDedicatedAutoSave);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_UGCItem_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_UGCItem_C")
-	}
-	static class UWBP_UGCItem_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_UGCItem_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_UGCItem_C;
 
 // WidgetBlueprintGeneratedClass WBP_UGCItem.SKEL_WBP_UGCItem_C
 // 0x0018 (0x0540 - 0x0528)
@@ -56,8 +26,7 @@ public:
 	class UBrickImage*                            AutoSaveIcon;                                      // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void UpdateItemWidget(bool bInIsSelected, bool bInIsLegacyFile, bool bInHasAutoSave, bool bInIsDedicatedAutoSave);
+	void UpdateItemWidget(bool bInIsSelected_UpdateItemWidget, bool bInIsLegacyFile_UpdateItemWidget, bool bInHasAutoSave_UpdateItemWidget, bool bInIsDedicatedAutoSave_UpdateItemWidget);
 
 public:
 	static class UClass* StaticClass()
@@ -74,5 +43,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_UGCItem_C;
+
+// WidgetBlueprintGeneratedClass WBP_UGCItem.WBP_UGCItem_C
+// 0x0018 (0x0540 - 0x0528)
+class UWBP_UGCItem_C final : public UUGCItemWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0528(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            AutoSaveIcon;                                      // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void UpdateItemWidget(bool bInIsSelected_UpdateItemWidget, bool bInIsLegacyFile_UpdateItemWidget, bool bInHasAutoSave_UpdateItemWidget, bool bInIsDedicatedAutoSave_UpdateItemWidget);
+	void ExecuteUbergraph_WBP_UGCItem(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_UGCItem_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_UGCItem_C")
+	}
+	static class UWBP_UGCItem_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_UGCItem_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_UGCItem_C;
 
 SDK_NAMESPACE_END

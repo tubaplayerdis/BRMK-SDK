@@ -15,38 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass Tutorial_BP_Interface.SKEL_Tutorial_BP_Interface_C
-// 0x0000 (0x0000 - 0x0000)
-class ISKEL_Tutorial_BP_Interface_C final
-{
-public:
-	void TutorialSampleFunction();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_Tutorial_BP_Interface_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_Tutorial_BP_Interface_C")
-	}
-	static class ISKEL_Tutorial_BP_Interface_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ISKEL_Tutorial_BP_Interface_C>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_ISKEL_Tutorial_BP_Interface_C;
-
 // BlueprintGeneratedClass Tutorial_BP_Interface.Tutorial_BP_Interface_C
 // 0x0000 (0x0000 - 0x0000)
 class ITutorial_BP_Interface_C final
@@ -78,5 +46,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ITutorial_BP_Interface_C;
+
+// BlueprintGeneratedClass Tutorial_BP_Interface.SKEL_Tutorial_BP_Interface_C
+// 0x0000 (0x0000 - 0x0000)
+class ISKEL_Tutorial_BP_Interface_C final
+{
+public:
+	void TutorialSampleFunction();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_Tutorial_BP_Interface_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_Tutorial_BP_Interface_C")
+	}
+	static class ISKEL_Tutorial_BP_Interface_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ISKEL_Tutorial_BP_Interface_C>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_ISKEL_Tutorial_BP_Interface_C;
 
 SDK_NAMESPACE_END

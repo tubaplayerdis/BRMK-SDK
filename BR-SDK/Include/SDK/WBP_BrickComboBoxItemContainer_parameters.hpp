@@ -14,6 +14,42 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.UpdateIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected final
+{
+public:
+	bool                                          bNewSelected_UpdateIsSelected;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected;
+
+// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.AddItemWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_BrickComboBoxItemContainer_C_AddItemWidget final
+{
+public:
+	class UBrickComboBoxItemWidget*               Widget_AddItemWidget;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_BrickComboBoxItemContainer_C_AddItemWidget;
+
+// Function WBP_BrickComboBoxItemContainer.WBP_BrickComboBoxItemContainer_C.AddItemWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_BrickComboBoxItemContainer_C_AddItemWidget final
+{
+public:
+	class UBrickComboBoxItemWidget*               Widget_AddItemWidget;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BrickComboBoxItemContainer_C_AddItemWidget;
+
+// Function WBP_BrickComboBoxItemContainer.WBP_BrickComboBoxItemContainer_C.UpdateIsSelected
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BrickComboBoxItemContainer_C_UpdateIsSelected final
+{
+public:
+	bool                                          bNewSelected_UpdateIsSelected;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected;
+
 // Function WBP_BrickComboBoxItemContainer.WBP_BrickComboBoxItemContainer_C.ExecuteUbergraph_WBP_BrickComboBoxItemContainer
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_BrickComboBoxItemContainer_C_ExecuteUbergraph_WBP_BrickComboBoxItemContainer final
@@ -25,42 +61,6 @@ public:
 	bool                                          K2Node_Event_bNewSelected;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_BrickComboBoxItemContainer_C_ExecuteUbergraph_WBP_BrickComboBoxItemContainer;
-
-// Function WBP_BrickComboBoxItemContainer.WBP_BrickComboBoxItemContainer_C.UpdateIsSelected
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BrickComboBoxItemContainer_C_UpdateIsSelected final
-{
-public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected;
-
-// Function WBP_BrickComboBoxItemContainer.WBP_BrickComboBoxItemContainer_C.AddItemWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_BrickComboBoxItemContainer_C_AddItemWidget final
-{
-public:
-	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BrickComboBoxItemContainer_C_AddItemWidget;
-
-// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.AddItemWidget
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_WBP_BrickComboBoxItemContainer_C_AddItemWidget final
-{
-public:
-	class UBrickComboBoxItemWidget*               Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_BrickComboBoxItemContainer_C_AddItemWidget;
-
-// Function WBP_BrickComboBoxItemContainer.SKEL_WBP_BrickComboBoxItemContainer_C.UpdateIsSelected
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected final
-{
-public:
-	bool                                          bNewSelected;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_BrickComboBoxItemContainer_C_UpdateIsSelected;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

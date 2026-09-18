@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_AmmoBox_StaticInfo.BP_AmmoBox_StaticInfo_C
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x0400 - 0x0400)
 class UBP_AmmoBox_StaticInfo_C : public UAmmoBoxStaticInfo
 {
 public:
@@ -37,11 +37,11 @@ public:
 DUMPER7_ASSERTS_UBP_AmmoBox_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_AmmoBox_StaticInfo.SKEL_BP_AmmoBox_StaticInfo_C
-// 0x0010 (0x0400 - 0x03F0)
+// 0x0010 (0x0410 - 0x0400)
 class USKEL_BP_AmmoBox_StaticInfo_C : public UAmmoBoxStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0400(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()

@@ -16,56 +16,12 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.UpdateCategory
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FText&                      DisplayName                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PropertyCategory_C::UpdateCategory(const class FText& DisplayName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyCategory_C", "UpdateCategory");
-
-	Params::SKEL_WBP_PropertyCategory_C_UpdateCategory Parms{};
-
-	Parms.DisplayName = std::move(DisplayName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.UpdatePropertyContainerWidgetSlot
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UPropertyContainerWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   NumPerRow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PropertyCategory_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyCategory_C", "UpdatePropertyContainerWidgetSlot");
-
-	Params::SKEL_WBP_PropertyCategory_C_UpdatePropertyContainerWidgetSlot Parms{};
-
-	Parms.Widget = Widget;
-	Parms.Index_0 = Index_0;
-	Parms.NumPerRow = NumPerRow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.AddPropertyContainerWidget
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UPropertyContainerWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPropertyContainerWidget*         Widget_AddPropertyContainerWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_PropertyCategory_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget)
+void USKEL_WBP_PropertyCategory_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget)
 {
 	static class UFunction* Func = nullptr;
 
@@ -74,7 +30,115 @@ void USKEL_WBP_PropertyCategory_C::AddPropertyContainerWidget(class UPropertyCon
 
 	Params::SKEL_WBP_PropertyCategory_C_AddPropertyContainerWidget Parms{};
 
-	Parms.Widget = Widget;
+	Parms.Widget_AddPropertyContainerWidget = Widget_AddPropertyContainerWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.UpdatePropertyContainerWidgetSlot
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_UpdatePropertyContainerWidgetSlot               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_UpdatePropertyContainerWidgetSlot                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NumPerRow_UpdatePropertyContainerWidgetSlot            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertyCategory_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertyCategory_C", "UpdatePropertyContainerWidgetSlot");
+
+	Params::SKEL_WBP_PropertyCategory_C_UpdatePropertyContainerWidgetSlot Parms{};
+
+	Parms.Widget_UpdatePropertyContainerWidgetSlot = Widget_UpdatePropertyContainerWidgetSlot;
+	Parms.Index_UpdatePropertyContainerWidgetSlot = Index_UpdatePropertyContainerWidgetSlot;
+	Parms.NumPerRow_UpdatePropertyContainerWidgetSlot = NumPerRow_UpdatePropertyContainerWidgetSlot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyCategory.SKEL_WBP_PropertyCategory_C.UpdateCategory
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FText&                      DisplayName_UpdateCategory                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertyCategory_C::UpdateCategory(const class FText& DisplayName_UpdateCategory)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertyCategory_C", "UpdateCategory");
+
+	Params::SKEL_WBP_PropertyCategory_C_UpdateCategory Parms{};
+
+	Parms.DisplayName_UpdateCategory = std::move(DisplayName_UpdateCategory);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyCategory.WBP_PropertyCategory_C.UpdateCategory
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      DisplayName_UpdateCategory                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_PropertyCategory_C::UpdateCategory(const class FText& DisplayName_UpdateCategory)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyCategory_C", "UpdateCategory");
+
+	Params::WBP_PropertyCategory_C_UpdateCategory Parms{};
+
+	Parms.DisplayName_UpdateCategory = std::move(DisplayName_UpdateCategory);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyCategory.WBP_PropertyCategory_C.UpdatePropertyContainerWidgetSlot
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_UpdatePropertyContainerWidgetSlot               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_UpdatePropertyContainerWidgetSlot                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   NumPerRow_UpdatePropertyContainerWidgetSlot            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyCategory_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget_UpdatePropertyContainerWidgetSlot, int32 Index_UpdatePropertyContainerWidgetSlot, int32 NumPerRow_UpdatePropertyContainerWidgetSlot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyCategory_C", "UpdatePropertyContainerWidgetSlot");
+
+	Params::WBP_PropertyCategory_C_UpdatePropertyContainerWidgetSlot Parms{};
+
+	Parms.Widget_UpdatePropertyContainerWidgetSlot = Widget_UpdatePropertyContainerWidgetSlot;
+	Parms.Index_UpdatePropertyContainerWidgetSlot = Index_UpdatePropertyContainerWidgetSlot;
+	Parms.NumPerRow_UpdatePropertyContainerWidgetSlot = NumPerRow_UpdatePropertyContainerWidgetSlot;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyCategory.WBP_PropertyCategory_C.AddPropertyContainerWidget
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UPropertyContainerWidget*         Widget_AddPropertyContainerWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyCategory_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget_AddPropertyContainerWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyCategory_C", "AddPropertyContainerWidget");
+
+	Params::WBP_PropertyCategory_C_AddPropertyContainerWidget Parms{};
+
+	Parms.Widget_AddPropertyContainerWidget = Widget_AddPropertyContainerWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -95,70 +159,6 @@ void UWBP_PropertyCategory_C::ExecuteUbergraph_WBP_PropertyCategory(int32 EntryP
 	Params::WBP_PropertyCategory_C_ExecuteUbergraph_WBP_PropertyCategory Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyCategory.WBP_PropertyCategory_C.AddPropertyContainerWidget
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UPropertyContainerWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertyCategory_C::AddPropertyContainerWidget(class UPropertyContainerWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyCategory_C", "AddPropertyContainerWidget");
-
-	Params::WBP_PropertyCategory_C_AddPropertyContainerWidget Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyCategory.WBP_PropertyCategory_C.UpdatePropertyContainerWidgetSlot
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UPropertyContainerWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   NumPerRow                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertyCategory_C::UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyCategory_C", "UpdatePropertyContainerWidgetSlot");
-
-	Params::WBP_PropertyCategory_C_UpdatePropertyContainerWidgetSlot Parms{};
-
-	Parms.Widget = Widget;
-	Parms.Index_0 = Index_0;
-	Parms.NumPerRow = NumPerRow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyCategory.WBP_PropertyCategory_C.UpdateCategory
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      DisplayName                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_PropertyCategory_C::UpdateCategory(const class FText& DisplayName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyCategory_C", "UpdateCategory");
-
-	Params::WBP_PropertyCategory_C_UpdateCategory Parms{};
-
-	Parms.DisplayName = std::move(DisplayName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

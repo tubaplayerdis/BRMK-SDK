@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "BrickRigs_structs.hpp"
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
@@ -21,251 +22,304 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.ExecuteUbergraph_WBP_GameOverlay
-// 0x0D88 (0x0D88 - 0x0000)
+// 0x1000 (0x1000 - 0x0000)
 struct WBP_GameOverlay_C_ExecuteUbergraph_WBP_GameOverlay final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0008(0x0018)()
-	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0040)(HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable;                                // 0x0068(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0080(0x0018)()
-	EFreeCamMode                                  Temp_byte_Variable;                                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_2;                              // 0x00A0(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x00B8(0x0018)()
-	class FText                                   Temp_text_Variable_4;                              // 0x00D0(0x0018)()
-	class FText                                   Temp_text_Variable_5;                              // 0x00E8(0x0018)()
-	class FText                                   Temp_text_Variable_6;                              // 0x0100(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            Temp_byte_Variable_1;                              // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_7;                              // 0x0120(0x0018)()
-	bool                                          Temp_bool_Variable_3;                              // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_8;                              // 0x0140(0x0018)()
-	class FText                                   Temp_text_Variable_9;                              // 0x0158(0x0018)()
-	bool                                          Temp_bool_Variable_4;                              // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            Temp_byte_Variable_2;                              // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            Temp_byte_Variable_3;                              // 0x0186(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0187(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class FText                                   Temp_text_Variable_10;                             // 0x0188(0x0018)()
-	class FText                                   Temp_text_Variable_11;                             // 0x01A0(0x0018)()
-	bool                                          Temp_bool_Variable_8;                              // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_9;                              // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_10;                             // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_11;                             // 0x01BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EBrickUIColorStyle                            Temp_byte_Variable_4;                              // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            Temp_byte_Variable_5;                              // 0x01BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_12;                             // 0x01BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1BF[0x1];                                      // 0x01BF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_12;                             // 0x01C0(0x0018)()
-	bool                                          Temp_bool_Variable_13;                             // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector2D_X;                          // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y;                          // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_1;                        // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x01EC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakVector2D_X_2;                        // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_2;                        // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_3;                        // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_3;                        // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                K2Node_MakeStruct_Margin_1;                        // 0x020C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_21;                            // 0x0220(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Index;                                // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_20;                            // 0x0230(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_SlomoSpeed;                           // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bInvertSpeed;                         // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bSlomoEnabled;                        // 0x023D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bIsPaused;                            // 0x023E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_23F[0x1];                                      // 0x023F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_19;                            // 0x0240(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_NewAmount;                            // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_AmountAdded;                          // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0258(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0270(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_NumberToText_ReturnValue;                 // 0x02B0(0x0018)()
-	class FText                                   CallFunc_NumberToText_ReturnValue_1;               // 0x02C8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x02E0(0x0040)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0320(0x0040)(HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0368(0x0010)(ReferenceParm)
-	int32                                         CallFunc_SelectInt_ReturnValue_1;                  // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37C[0x4];                                      // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0380(0x0018)()
-	int32                                         CallFunc_SelectInt_ReturnValue_2;                  // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_FloatToText_ReturnValue;             // 0x03A0(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot;                 // 0x03B8(0x0008)(NoDestructor)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x03C0(0x0040)(HasGetValueTypeHash)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_1;               // 0x0400(0x0008)(NoDestructor)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0408(0x0010)(ReferenceParm)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_18;                            // 0x0418(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsInFreeCam;                         // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFreeCamMode                                  K2Node_Event_InFreeCamMode;                        // 0x0421(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsFixedCam;                          // 0x0422(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_423[0x5];                                      // 0x0423(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0428(0x0018)()
-	class FText                                   K2Node_Select_Default_1;                           // 0x0440(0x0018)()
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0460(0x0018)()
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0480(0x0040)(HasGetValueTypeHash)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_2;               // 0x04C0(0x0008)(NoDestructor)
-	class FText                                   K2Node_Select_Default_3;                           // 0x04C8(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x04E0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x04F8(0x0040)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0538(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0578(0x0010)(ReferenceParm)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_17;                            // 0x0588(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0590(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_3;               // 0x05A8(0x0008)(NoDestructor)
-	class FText                                   K2Node_Select_Default_4;                           // 0x05B0(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_2;            // 0x05C8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x05E0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0620(0x0010)(ReferenceParm)
-	class UMatchTimerWidget*                      K2Node_Event_Widget_16;                            // 0x0630(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0638(0x0018)()
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_15;                            // 0x0650(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_CameraDisplayName;                    // 0x0658(0x0018)(ConstParm)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_4;               // 0x0670(0x0008)(NoDestructor)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_14;                            // 0x0678(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_VehicleDisplayName_1;                 // 0x0680(0x0018)(ConstParm)
-	float                                         K2Node_Event_Progress_1;                           // 0x0698(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_NumberToText_ReturnValue_2;               // 0x06A0(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_5;               // 0x06B8(0x0008)(NoDestructor)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x06C0(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_3;            // 0x0700(0x0018)()
-	class UInputHelpWidget*                       K2Node_Event_Widget_13;                            // 0x0718(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0720(0x0040)(HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue;             // 0x0760(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0768(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0778(0x0018)()
-	class UChatWidget*                            K2Node_Event_Widget_12;                            // 0x0790(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAnchors                               K2Node_MakeStruct_Anchors;                         // 0x0798(0x0010)(NoDestructor)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_1;           // 0x07A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAnchors                               K2Node_MakeStruct_Anchors_1;                       // 0x07B0(0x0010)(NoDestructor)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_11;                            // 0x07C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bSuccess;                             // 0x07C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bIsAutoSave;                          // 0x07C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7CA[0x6];                                      // 0x07CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_10;                            // 0x07D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_NewSpeedRatio;                        // 0x07D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_NewMaxSpeed;                          // 0x07DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_NumberToText_ReturnValue_3;               // 0x07E0(0x0018)()
-	class FText                                   K2Node_Select_Default_5;                           // 0x07F8(0x0018)()
-	int32                                         K2Node_Select_Default_6;                           // 0x0810(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_Select_Default_7;                           // 0x0814(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_Select_Default_8;                           // 0x0815(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_816[0x2];                                      // 0x0816(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_9;                           // 0x0818(0x0018)()
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_9;                             // 0x0830(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_NewZoomRatio;                         // 0x0838(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default_10;                          // 0x083C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_NumberToText_ReturnValue_4;               // 0x0840(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_6;               // 0x0858(0x0008)(NoDestructor)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_7;               // 0x0860(0x0008)(NoDestructor)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_8;               // 0x0868(0x0008)(NoDestructor)
-	class UMatchStateWidget*                      K2Node_Event_Widget_8;                             // 0x0870(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTeamScoreWidget*                       K2Node_Event_Widget_7;                             // 0x0878(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamAttitude                                 K2Node_Event_TeamAttitude;                         // 0x0880(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0881(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_882[0x6];                                      // 0x0882(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0888(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_6;                             // 0x0890(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHUDVisibility                                K2Node_Event_NewVisibility;                        // 0x0898(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              CallFunc_GetCachedGeometry_ReturnValue;            // 0x0008(0x0038)(ConstParm, IsPlainOldData, NoDestructor)
+	class FText                                   Temp_text_Variable;                                // 0x0040(0x0018)()
+	struct FVector2D                              CallFunc_GetLocalSize_ReturnValue;                 // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X;                          // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y;                          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable_1;                              // 0x0068(0x0018)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EBrickUIColorStyle                            Temp_byte_Variable;                                // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            Temp_byte_Variable_1;                              // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0083(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_3;                              // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EBrickUIColorStyle                            Temp_byte_Variable_2;                              // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            Temp_byte_Variable_3;                              // 0x0086(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0087(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable;                          // 0x0088(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable_1;                        // 0x00C0(0x0030)(HasGetValueTypeHash)
+	TSoftObjectPtr<class UTexture2D>              Temp_softobject_Variable_2;                        // 0x00F0(0x0030)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Temp_struct_Variable;                              // 0x0124(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Temp_struct_Variable_1;                            // 0x012C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Temp_struct_Variable_2;                            // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_1;                        // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_2;                        // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_2;                        // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBrickUIColorStyle                            Temp_byte_Variable_4;                              // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0154(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakVector2D_X_3;                        // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_3;                        // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_2;                              // 0x0170(0x0018)()
+	EBrickUIColorStyle                            Temp_byte_Variable_5;                              // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_18A[0x2];                                      // 0x018A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector2D_X_4;                        // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_4;                        // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_5;                        // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_5;                        // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnchors                               K2Node_MakeStruct_Anchors;                         // 0x019C(0x0010)(NoDestructor)
+	struct FMargin                                K2Node_MakeStruct_Margin_1;                        // 0x01AC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakVector2D_X_6;                        // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_6;                        // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_7;                        // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_7;                        // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin_2;                        // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakVector2D_X_8;                        // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_8;                        // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_9;                        // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_9;                        // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin_3;                        // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_18;                            // 0x0200(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Index;                                // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_17;                            // 0x0210(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_NewAmount;                            // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_AmountAdded;                          // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_16;                            // 0x0220(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_NumberToText_ReturnValue;                 // 0x0230(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0248(0x0040)(HasGetValueTypeHash)
+	EBrickUIColorStyle                            K2Node_Select_Default;                             // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_NumberToText_ReturnValue_1;               // 0x0290(0x0018)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x02A8(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x02C0(0x0040)(HasGetValueTypeHash)
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo;                     // 0x0300(0x0048)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0348(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0358(0x0018)()
+	class UMatchTimerWidget*                      K2Node_Event_Widget_15;                            // 0x0370(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_1;                   // 0x0378(0x0048)()
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_14;                            // 0x03C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_VehicleDisplayName_1;                 // 0x03C8(0x0018)(ConstParm)
+	float                                         K2Node_Event_Progress_1;                           // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_NumberToText_ReturnValue_2;               // 0x03E8(0x0018)()
+	EBrickUIColorStyle                            Temp_byte_Variable_6;                              // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0408(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0448(0x0018)()
+	class UInputHelpWidget*                       K2Node_Event_Widget_13;                            // 0x0460(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              K2Node_Event_InPosition;                           // 0x0468(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0470(0x0040)(HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_AbsoluteToLocal_ReturnValue;              // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x04B8(0x0010)(ReferenceParm)
+	float                                         CallFunc_BreakVector2D_X_10;                       // 0x04C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_10;                       // 0x04CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x04D0(0x0018)()
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_2;                   // 0x04F0(0x0048)()
+	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x0538(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x053C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsZero2D_ReturnValue;                     // 0x0544(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_545[0x3];                                      // 0x0545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue;                    // 0x0548(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_551[0x3];                                      // 0x0551(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              K2Node_Select_Default_1;                           // 0x0554(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnchors                               K2Node_MakeStruct_Anchors_1;                       // 0x055C(0x0010)(NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x056C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_56D[0x3];                                      // 0x056D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              K2Node_Select_Default_2;                           // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue;             // 0x0578(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_11;                       // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_11;                       // 0x0584(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin_4;                        // 0x0588(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue_1;                  // 0x0598(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UChatWidget*                            K2Node_Event_Widget_12;                            // 0x05A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5A9[0x7];                                      // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue_2;                  // 0x05B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x05B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue_1;      // 0x05B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5BA[0x6];                                      // 0x05BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_1;           // 0x05C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnchors                               K2Node_MakeStruct_Anchors_2;                       // 0x05C8(0x0010)(NoDestructor)
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_11;                            // 0x05D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bSuccess;                             // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bIsAutoSave;                          // 0x05E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5E2[0x6];                                      // 0x05E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_10;                            // 0x05E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_NewSpeedRatio;                        // 0x05F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_NewMaxSpeed;                          // 0x05F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_NumberToText_ReturnValue_3;               // 0x05F8(0x0018)()
+	class FText                                   K2Node_Select_Default_3;                           // 0x0610(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_3;                   // 0x0628(0x0048)()
+	EBrickUIColorStyle                            K2Node_Select_Default_4;                           // 0x0670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_671[0x7];                                      // 0x0671(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              K2Node_Select_Default_5;                           // 0x0678(0x0030)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_6;                           // 0x06A8(0x0018)()
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_9;                             // 0x06C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_NewZoomRatio;                         // 0x06C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6CC[0x4];                                      // 0x06CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              K2Node_Select_Default_7;                           // 0x06D0(0x0030)(HasGetValueTypeHash)
+	class FText                                   CallFunc_NumberToText_ReturnValue_4;               // 0x0700(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_4;                   // 0x0718(0x0048)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_5;                   // 0x0760(0x0048)()
+	class UMatchStateWidget*                      K2Node_Event_Widget_8;                             // 0x07A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTeamScoreWidget*                       K2Node_Event_Widget_7;                             // 0x07B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamAttitude                                 K2Node_Event_TeamAttitude;                         // 0x07B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x07B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7BA[0x6];                                      // 0x07BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x07C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_6;                             // 0x07C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHUDVisibility                                K2Node_Event_NewVisibility_1;                      // 0x07D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D1[0x7];                                      // 0x07D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_5;                             // 0x07D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECameraMode                                   K2Node_Event_NewMode;                              // 0x07E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E1[0x7];                                      // 0x07E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetHUDVisibilityDisplayText_ReturnValue;  // 0x07E8(0x0018)()
+	class FText                                   CallFunc_GetCameraModeDisplayText_ReturnValue;     // 0x0800(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0818(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0858(0x0040)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_10;                             // 0x0898(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_899[0x7];                                      // 0x0899(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_5;                             // 0x08A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECameraMode                                   K2Node_Event_NewMode;                              // 0x08A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A9[0x7];                                      // 0x08A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetHUDVisibilityDisplayText_ReturnValue;  // 0x08B0(0x0018)()
-	class FText                                   CallFunc_GetCameraModeDisplayText_ReturnValue;     // 0x08C8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x08E0(0x0040)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0920(0x0040)(HasGetValueTypeHash)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_9;               // 0x0960(0x0008)(NoDestructor)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_4;            // 0x0968(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_5;            // 0x0980(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_6;            // 0x0998(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x09B0(0x0040)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_14;           // 0x09F0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0A30(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0A40(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0A50(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0A68(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_10;              // 0x0A80(0x0008)(NoDestructor)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_4;                             // 0x0A88(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bNewEnabled;                          // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A91[0x3];                                      // 0x0A91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_11;              // 0x0A94(0x0008)(NoDestructor)
-	EBrickUIColorStyle                            Temp_byte_Variable_6;                              // 0x0A9C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9D[0x3];                                      // 0x0A9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_7;            // 0x0AA0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_15;           // 0x0AB8(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_8;            // 0x0AF8(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_9;            // 0x0B10(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_12;              // 0x0B28(0x0008)(NoDestructor)
-	class FText                                   K2Node_Select_Default_11;                          // 0x0B30(0x0018)()
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_3;                             // 0x0B48(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_Message;                              // 0x0B50(0x0018)(ConstParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_16;           // 0x0B68(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_7;                          // 0x0BA8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_2;            // 0x08A0(0x0018)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_3;            // 0x08B8(0x0018)()
+	EBrickUIColorStyle                            K2Node_Select_Default_8;                           // 0x08D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D1[0x7];                                      // 0x08D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x08D8(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0918(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_4;            // 0x0928(0x0018)()
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0940(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0958(0x0040)(HasGetValueTypeHash)
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_6;                   // 0x0998(0x0048)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x09E0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x09F0(0x0018)()
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_4;                             // 0x0A08(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_Message;                              // 0x0A10(0x0018)(ConstParm)
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_7;                   // 0x0A28(0x0048)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_8;                   // 0x0A70(0x0048)()
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_3;                             // 0x0AB8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Remaining;                            // 0x0AC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0AC4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0AC8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0AD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD4[0x4];                                      // 0x0AD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_NumberToText_ReturnValue_5;               // 0x0AD8(0x0018)()
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0AF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AF1[0x7];                                      // 0x0AF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0AF8(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0B38(0x0010)(ReferenceParm)
+	EBrickUIColorStyle                            K2Node_Select_Default_9;                           // 0x0B48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B49[0x7];                                      // 0x0B49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0B50(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_9;                   // 0x0B68(0x0048)()
+	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue_1;      // 0x0BB0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UHUDNotificationWidget*                 K2Node_Event_Widget_2;                             // 0x0BB8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_Remaining;                            // 0x0BC0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC4[0x4];                                      // 0x0BC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_7;                     // 0x0BC8(0x0018)()
-	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0BE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0BE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0BE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BE9[0x7];                                      // 0x0BE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_NumberToText_ReturnValue_5;               // 0x0BF0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_17;           // 0x0C08(0x0040)(HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_Select_Default_12;                          // 0x0C48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C49[0x7];                                      // 0x0C49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_8;                          // 0x0C50(0x0010)(ReferenceParm)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_13;              // 0x0C60(0x0008)(NoDestructor)
-	class FText                                   CallFunc_Format_ReturnValue_8;                     // 0x0C68(0x0018)()
-	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0C80(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue_1;      // 0x0C88(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            Temp_byte_Variable_7;                              // 0x0C90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C91[0x7];                                      // 0x0C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHorizontalBox*                         K2Node_Select_Default_13;                          // 0x0C98(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0CA0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBrickUIColorStyle                            K2Node_Select_Default_14;                          // 0x0CA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA9[0x7];                                      // 0x0CA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDNotificationWidget*                 K2Node_Event_Widget_1;                             // 0x0CB0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_SeatDisplayName;                      // 0x0CB8(0x0018)(ConstParm)
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_14;              // 0x0CD0(0x0008)(NoDestructor)
-	class UHUDNotificationWidget*                 K2Node_Event_Widget;                               // 0x0CD8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_VehicleDisplayName;                   // 0x0CE0(0x0018)(ConstParm)
-	float                                         K2Node_Event_Progress;                             // 0x0CF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CFC[0x4];                                      // 0x0CFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_NumberToText_ReturnValue_6;               // 0x0D00(0x0018)()
-	struct FBrickUIIconSlot                       K2Node_MakeStruct_BrickUIIconSlot_15;              // 0x0D18(0x0008)(NoDestructor)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_18;           // 0x0D20(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_9;                          // 0x0D60(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_9;                     // 0x0D70(0x0018)()
+	class FText                                   K2Node_Event_SeatDisplayName;                      // 0x0BC0(0x0018)(ConstParm)
+	class UHorizontalBox*                         K2Node_Select_Default_10;                          // 0x0BD8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0BE0(0x0040)(HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0C20(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UHUDNotificationWidget*                 K2Node_Event_Widget_1;                             // 0x0C28(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_VehicleDisplayName;                   // 0x0C30(0x0018)(ConstParm)
+	float                                         K2Node_Event_Progress;                             // 0x0C48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4C[0x4];                                      // 0x0C4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_5;            // 0x0C50(0x0018)()
+	class FText                                   CallFunc_NumberToText_ReturnValue_6;               // 0x0C68(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0C80(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x0CC0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0D00(0x0010)(ReferenceParm)
+	class UBrickUserSettings*                     CallFunc_GetUserSettings_ReturnValue;              // 0x0D10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0D18(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_10;                  // 0x0D30(0x0048)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0D78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EHUDVisibility                                K2Node_Event_NewVisibility;                        // 0x0D79(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0D7A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D7B[0x5];                                      // 0x0D7B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue_3;                  // 0x0D80(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue_2;      // 0x0D88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D89[0x7];                                      // 0x0D89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_2;           // 0x0D90(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue_4;                  // 0x0D98(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_InputTips_C*                       CallFunc_GetWidget_ReturnValue;                    // 0x0DA0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0DA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0DA9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DAA[0x6];                                      // 0x0DAA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            K2Node_Event_InWidget_1;                           // 0x0DB0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnchors                               K2Node_MakeStruct_Anchors_3;                       // 0x0DB8(0x0010)(NoDestructor)
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue_5;                  // 0x0DC8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_3;           // 0x0DD0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue_3;      // 0x0DD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DD9[0x7];                                      // 0x0DD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            K2Node_Event_InWidget;                             // 0x0DE0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPanelWidget*                           CallFunc_GetParent_ReturnValue_6;                  // 0x0DE8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_4;           // 0x0DF0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue_4;      // 0x0DF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DF9[0x3];                                      // 0x0DF9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnchors                               K2Node_MakeStruct_Anchors_4;                       // 0x0DFC(0x0010)(NoDestructor)
+	uint8                                         Pad_E0C[0x4];                                      // 0x0E0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_6;            // 0x0E10(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0E28(0x0040)(HasGetValueTypeHash)
+	class UHUDNotificationWidget*                 K2Node_Event_Widget;                               // 0x0E68(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_CameraDisplayName;                    // 0x0E70(0x0018)(ConstParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0E88(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x0E98(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0ED8(0x0018)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_7;            // 0x0EF0(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_11;                  // 0x0F08(0x0048)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_14;           // 0x0F50(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_7;                          // 0x0F90(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_7;                     // 0x0FA0(0x0018)()
+	struct FDisplayInfo                           K2Node_MakeStruct_DisplayInfo_12;                  // 0x0FB8(0x0048)()
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_ExecuteUbergraph_WBP_GameOverlay;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleCameraNotification
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_GameOverlay_C_UpdateVehicleCameraNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CameraDisplayName;                                 // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddEditorDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_AddEditorDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddEditorDashboardWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.AddCameraDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_GameOverlay_C_AddCameraDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_AddCameraDashboardWidget;
+
+// Function WBP_GameOverlay.WBP_GameOverlay_C.OnHUDVisibilityChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_GameOverlay_C_OnHUDVisibilityChanged final
+{
+public:
+	EHUDVisibility                                NewVisibility;                                     // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GameOverlay_C_OnHUDVisibilityChanged;
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleConstructionNotification
 // 0x0028 (0x0028 - 0x0000)
@@ -307,16 +361,6 @@ public:
 	class FText                                   Message;                                           // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateRestartFailedNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateProjectileCameraNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateProjectileCameraNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bNewEnabled;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateProjectileCameraNotification;
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateCameraModeNotification
 // 0x0010 (0x0010 - 0x0000)
@@ -399,11 +443,12 @@ public:
 DUMPER7_ASSERTS_WBP_GameOverlay_C_AddChatWidget;
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.AddInputHelpWidget
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WBP_GameOverlay_C_AddInputHelpWidget final
 {
 public:
 	class UInputHelpWidget*                       Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              InPosition;                                        // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_AddInputHelpWidget;
 
@@ -417,16 +462,6 @@ public:
 	float                                         Progress;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleDownloadNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateVehicleCameraNotification
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_GameOverlay_C_UpdateVehicleCameraNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CameraDisplayName;                                 // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.AddMatchTimerWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -446,18 +481,6 @@ public:
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateThumbnailNotification;
 
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateFreeCamNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateFreeCamNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInFreeCam;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFreeCamMode                                  InFreeCamMode;                                     // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsFixedCam;                                       // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateFreeCamNotification;
-
 // Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateMoneyNotification
 // 0x0010 (0x0010 - 0x0000)
 struct WBP_GameOverlay_C_UpdateMoneyNotification final
@@ -468,19 +491,6 @@ public:
 	float                                         AmountAdded;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateMoneyNotification;
-
-// Function WBP_GameOverlay.WBP_GameOverlay_C.UpdateSlomoNotification
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_GameOverlay_C_UpdateSlomoNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SlomoSpeed;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bInvertSpeed;                                      // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bSlomoEnabled;                                     // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bIsPaused;                                         // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_GameOverlay_C_UpdateSlomoNotification;
 
 // Function WBP_GameOverlay.WBP_GameOverlay_C.AddHUDNotification
 // 0x0010 (0x0010 - 0x0000)
@@ -502,19 +512,6 @@ public:
 };
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddHUDNotification;
 
-// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateSlomoNotification
-// 0x0010 (0x0010 - 0x0000)
-struct SKEL_WBP_GameOverlay_C_UpdateSlomoNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SlomoSpeed;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvertSpeed;                                      // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSlomoEnabled;                                     // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPaused;                                         // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateSlomoNotification;
-
 // Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateMoneyNotification
 // 0x0010 (0x0010 - 0x0000)
 struct SKEL_WBP_GameOverlay_C_UpdateMoneyNotification final
@@ -525,18 +522,6 @@ public:
 	float                                         AmountAdded;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateMoneyNotification;
-
-// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateFreeCamNotification
-// 0x0010 (0x0010 - 0x0000)
-struct SKEL_WBP_GameOverlay_C_UpdateFreeCamNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInFreeCam;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFreeCamMode                                  InFreeCamMode;                                     // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsFixedCam;                                       // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateFreeCamNotification;
 
 // Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateThumbnailNotification
 // 0x0008 (0x0008 - 0x0000)
@@ -556,16 +541,6 @@ public:
 };
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddMatchTimerWidget;
 
-// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleCameraNotification
-// 0x0020 (0x0020 - 0x0000)
-struct SKEL_WBP_GameOverlay_C_UpdateVehicleCameraNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   CameraDisplayName;                                 // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
-
 // Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleDownloadNotification
 // 0x0028 (0x0028 - 0x0000)
 struct SKEL_WBP_GameOverlay_C_UpdateVehicleDownloadNotification final
@@ -578,11 +553,12 @@ public:
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleDownloadNotification;
 
 // Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddInputHelpWidget
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct SKEL_WBP_GameOverlay_C_AddInputHelpWidget final
 {
 public:
 	class UInputHelpWidget*                       Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              InPosition;                                        // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddInputHelpWidget;
 
@@ -666,16 +642,6 @@ public:
 };
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateCameraModeNotification;
 
-// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateProjectileCameraNotification
-// 0x0010 (0x0010 - 0x0000)
-struct SKEL_WBP_GameOverlay_C_UpdateProjectileCameraNotification final
-{
-public:
-	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNewEnabled;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateProjectileCameraNotification;
-
 // Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateRestartFailedNotification
 // 0x0020 (0x0020 - 0x0000)
 struct SKEL_WBP_GameOverlay_C_UpdateRestartFailedNotification final
@@ -716,6 +682,43 @@ public:
 	float                                         Progress;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleConstructionNotification;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.OnHUDVisibilityChanged
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_OnHUDVisibilityChanged final
+{
+public:
+	EHUDVisibility                                NewVisibility;                                     // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_OnHUDVisibilityChanged;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddCameraDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddCameraDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddCameraDashboardWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.AddEditorDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_AddEditorDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_AddEditorDashboardWidget;
+
+// Function WBP_GameOverlay.SKEL_WBP_GameOverlay_C.UpdateVehicleCameraNotification
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_WBP_GameOverlay_C_UpdateVehicleCameraNotification final
+{
+public:
+	class UHUDNotificationWidget*                 Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   CameraDisplayName;                                 // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_GameOverlay_C_UpdateVehicleCameraNotification;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

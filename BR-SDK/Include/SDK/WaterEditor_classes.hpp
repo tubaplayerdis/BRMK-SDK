@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "WaterEditor_structs.hpp"
 #include "LandscapeEditorUtilities_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
@@ -20,6 +19,7 @@
 #include "CoreUObject_classes.hpp"
 #include "DetailCustomizations_classes.hpp"
 #include "UnrealEd_classes.hpp"
+#include "WaterEditor_structs.hpp"
 #include "ComponentVisualizers_classes.hpp"
 
 

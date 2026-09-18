@@ -17,6 +17,26 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_JoinSessionPopup_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_JoinSessionPopup_C_PreConstruct;
+
+// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.UpdateJoinState
+// 0x0003 (0x0003 - 0x0000)
+struct SKEL_WBP_JoinSessionPopup_C_UpdateJoinState final
+{
+public:
+	EJoinSessionState                             InJoinState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInPasswordRequired;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInHasPassword;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_JoinSessionPopup_C_UpdateJoinState;
+
 // Function WBP_JoinSessionPopup.WBP_JoinSessionPopup_C.ExecuteUbergraph_WBP_JoinSessionPopup
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_JoinSessionPopup_C_ExecuteUbergraph_WBP_JoinSessionPopup final
@@ -77,26 +97,6 @@ public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WBP_JoinSessionPopup_C_PreConstruct;
-
-// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_JoinSessionPopup_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_JoinSessionPopup_C_PreConstruct;
-
-// Function WBP_JoinSessionPopup.SKEL_WBP_JoinSessionPopup_C.UpdateJoinState
-// 0x0003 (0x0003 - 0x0000)
-struct SKEL_WBP_JoinSessionPopup_C_UpdateJoinState final
-{
-public:
-	EJoinSessionState                             InJoinState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInPasswordRequired;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInHasPassword;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_JoinSessionPopup_C_UpdateJoinState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

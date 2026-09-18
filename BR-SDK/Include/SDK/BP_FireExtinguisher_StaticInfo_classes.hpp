@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FireExtinguisher_StaticInfo.SKEL_BP_FireExtinguisher_StaticInfo_C
-// 0x0010 (0x0540 - 0x0530)
+// 0x0010 (0x0550 - 0x0540)
 class USKEL_BP_FireExtinguisher_StaticInfo_C final : public UFireExtinguisherStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0530(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0540(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_FireExtinguisher_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_FireExtinguisher_StaticInfo.BP_FireExtinguisher_StaticInfo_C
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0540 - 0x0540)
 class UBP_FireExtinguisher_StaticInfo_C final : public UFireExtinguisherStaticInfo
 {
 public:

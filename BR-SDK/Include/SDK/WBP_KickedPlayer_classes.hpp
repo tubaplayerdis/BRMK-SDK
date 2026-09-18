@@ -10,24 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_KickedPlayer.WBP_KickedPlayer_C
-// 0x0010 (0x04B8 - 0x04A8)
+// 0x0000 (0x04A8 - 0x04A8)
 class UWBP_KickedPlayer_C final : public UKickedPlayerWidget
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_WBP_KickedPlayer(int32 EntryPoint);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -50,9 +42,6 @@ class USKEL_WBP_KickedPlayer_C final : public UKickedPlayerWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 
 public:
 	static class UClass* StaticClass()

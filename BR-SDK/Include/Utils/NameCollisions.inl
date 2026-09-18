@@ -8,36 +8,3 @@
 
 // FORWARD DECLARATIONS
 
-
-namespace BrushFalloffMode { enum class EBrushFalloffMode : uint8; }
-
-namespace ENiagaraCoordinateSpace { enum class ENiagaraCoordinateSpace : uint8; }
-
-namespace ENiagaraOrientationAxis { enum class ENiagaraOrientationAxis : uint8; }
-
-namespace BrushBlendType { enum class EBrushBlendType : uint8; }
-
-
-namespace Niagara
-{
-	enum class ENiagaraOrientationAxis : uint8;
-	enum class ENiagaraCoordinateSpace : uint8;
-}
-
-namespace BP_LuaBrick_0
-{
-	class UBP_LuaBrick_C;
-	class USKEL_BP_LuaBrick_C;
-}
-
-namespace BP_LuaBrick
-{
-	class USKEL_BP_LuaBrick_C;
-	class UBP_LuaBrick_C;
-}
-
-namespace Landmass
-{
-	enum class EBrushBlendType : uint8;
-	enum class EBrushFalloffMode : uint8;
-}

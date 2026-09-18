@@ -16,54 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.PlayFadeInAnim
-// (Event, Protected, BlueprintEvent)
-
-void USKEL_WBP_RestrictedArea_C::PlayFadeInAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "PlayFadeInAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.PlayFadeOutAnim
-// (Event, Protected, BlueprintEvent)
-
-void USKEL_WBP_RestrictedArea_C::PlayFadeOutAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "PlayFadeOutAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.UpdateTimerRemaining
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// float                                   TimeRemaining                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_RestrictedArea_C::UpdateTimerRemaining(float TimeRemaining)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "UpdateTimerRemaining");
-
-	Params::SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining Parms{};
-
-	Parms.TimeRemaining = TimeRemaining;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_RestrictedArea.WBP_RestrictedArea_C.ExecuteUbergraph_WBP_RestrictedArea
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -129,6 +81,54 @@ void UWBP_RestrictedArea_C::PlayFadeInAnim()
 		Func = Class->GetFunction("WBP_RestrictedArea_C", "PlayFadeInAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.PlayFadeInAnim
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_RestrictedArea_C::PlayFadeInAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "PlayFadeInAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.PlayFadeOutAnim
+// (Event, Protected, BlueprintEvent)
+
+void USKEL_WBP_RestrictedArea_C::PlayFadeOutAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "PlayFadeOutAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C.UpdateTimerRemaining
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   TimeRemaining                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_RestrictedArea_C::UpdateTimerRemaining(float TimeRemaining)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_RestrictedArea_C", "UpdateTimerRemaining");
+
+	Params::SKEL_WBP_RestrictedArea_C_UpdateTimerRemaining Parms{};
+
+	Parms.TimeRemaining = TimeRemaining;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

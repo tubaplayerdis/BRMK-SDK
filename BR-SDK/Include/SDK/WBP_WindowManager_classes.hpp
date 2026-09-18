@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_WindowManager.WBP_WindowManager_C
-// 0x0010 (0x0590 - 0x0580)
+// 0x0010 (0x05C8 - 0x05B8)
 class UWBP_WindowManager_C final : public UWindowManagerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_WindowManager(int32 EntryPoint);
@@ -44,11 +44,11 @@ public:
 DUMPER7_ASSERTS_UWBP_WindowManager_C;
 
 // WidgetBlueprintGeneratedClass WBP_WindowManager.SKEL_WBP_WindowManager_C
-// 0x0010 (0x0590 - 0x0580)
+// 0x0010 (0x05C8 - 0x05B8)
 class USKEL_WBP_WindowManager_C final : public UWindowManagerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void AddActiveWidget(class UMainWidgetBase* Widget);

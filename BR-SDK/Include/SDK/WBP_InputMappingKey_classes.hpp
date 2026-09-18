@@ -13,20 +13,22 @@
 #include "Engine_structs.hpp"
 #include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_InputMappingKey.WBP_InputMappingKey_C
-// 0x0010 (0x0468 - 0x0458)
+// 0x0018 (0x0470 - 0x0458)
 class UWBP_InputMappingKey_C final : public UInputMappingKeyWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            HoldKeyImage;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_InputMappingKey(int32 EntryPoint);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateIsHoldAction(bool bNewHold);
 	void UpdateConflictedState(bool bNewConflicted);
 
 public:
@@ -46,15 +48,16 @@ public:
 DUMPER7_ASSERTS_UWBP_InputMappingKey_C;
 
 // WidgetBlueprintGeneratedClass WBP_InputMappingKey.SKEL_WBP_InputMappingKey_C
-// 0x0010 (0x0468 - 0x0458)
+// 0x0018 (0x0470 - 0x0458)
 class USKEL_WBP_InputMappingKey_C final : public UInputMappingKeyWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            HoldKeyImage;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void UpdateConflictedState(bool bNewConflicted);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateIsHoldAction(bool bNewHold);
 
 public:
 	static class UClass* StaticClass()

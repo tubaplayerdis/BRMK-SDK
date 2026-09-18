@@ -17,9 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_SubInventoryContainer.WBP_SubInventoryContainer_C
-// 0x0000 (0x0408 - 0x0408)
+// 0x0008 (0x0410 - 0x0408)
 class UWBP_SubInventoryContainer_C final : public UInventoryContainerWidget
 {
+public:
+	class UBrickImage*                            BrickImage_210;                                    // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -37,11 +40,12 @@ public:
 DUMPER7_ASSERTS_UWBP_SubInventoryContainer_C;
 
 // WidgetBlueprintGeneratedClass WBP_SubInventoryContainer.SKEL_WBP_SubInventoryContainer_C
-// 0x0010 (0x0418 - 0x0408)
+// 0x0018 (0x0420 - 0x0408)
 class USKEL_WBP_SubInventoryContainer_C final : public UInventoryContainerWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            BrickImage_210;                                    // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

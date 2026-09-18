@@ -12,28 +12,32 @@
 
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_BrickSlider.WBP_BrickSlider_C
-// 0x0030 (0x04D0 - 0x04A0)
-class UWBP_BrickSlider_C : public UBrickSliderWidget
+// 0x0038 (0x04F0 - 0x04B8)
+class UWBP_BrickSlider_C final : public UBrickSliderWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               Overlay_0;                                         // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                Spacer_225;                                        // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InputKey_C*                        CtrlHintWidget;                                    // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_InputKey_C*                        ShiftHintWidget;                                   // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           InnerBorder;                                       // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                Spacer_225;                                        // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InputKey_C*                        CtrlHintWidget;                                    // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_InputKey_C*                        ShiftHintWidget;                                   // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_BrickSlider(int32 EntryPoint);
+	void UpdateButtonStyle(const EBrickUIColorStyle NewColorStyle, const EBrickUIBrushState NewBrushState);
+	void UpdateSliderPosition(float NewValue);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateIsReadOnly(const bool bNewReadOnly);
 	void Destruct();
 	void UpdateIsDragging(const bool bIsDragging);
-	void PreConstruct(bool IsDesignTime);
-	void UpdateSliderPosition(float NewValue);
 	void CreateModifierHintWidget(class UInputKeyWidget*& Widget, const struct FKey& Key, const struct FVector2D& Pivot, EHorizontalAlignment HorizontalAlignment, EVerticalAlignment VerticalAlignment);
 	void PoolModifierHintWidget(class UInputKeyWidget*& Widget);
 	void PoolAllModifierHintWidgets();
@@ -55,21 +59,24 @@ public:
 DUMPER7_ASSERTS_UWBP_BrickSlider_C;
 
 // WidgetBlueprintGeneratedClass WBP_BrickSlider.SKEL_WBP_BrickSlider_C
-// 0x0030 (0x04D0 - 0x04A0)
-class USKEL_WBP_BrickSlider_C : public UBrickSliderWidget
+// 0x0038 (0x04F0 - 0x04B8)
+class USKEL_WBP_BrickSlider_C final : public UBrickSliderWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               Overlay_0;                                         // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                Spacer_225;                                        // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_InputKey_C*                        CtrlHintWidget;                                    // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_InputKey_C*                        ShiftHintWidget;                                   // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           InnerBorder;                                       // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                Spacer_225;                                        // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_InputKey_C*                        CtrlHintWidget;                                    // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_InputKey_C*                        ShiftHintWidget;                                   // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateSliderPosition(float NewValue);
-	void PreConstruct(bool IsDesignTime);
 	void UpdateIsDragging(const bool bIsDragging);
 	void Destruct();
+	void UpdateIsReadOnly(const bool bNewReadOnly);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateButtonStyle(const EBrickUIColorStyle NewColorStyle, const EBrickUIBrushState NewBrushState);
 	void CreateModifierHintWidget(class UInputKeyWidget*& Widget, const struct FKey& Key, const struct FVector2D& Pivot, EHorizontalAlignment HorizontalAlignment, EVerticalAlignment VerticalAlignment);
 	void PoolModifierHintWidget(class UInputKeyWidget*& Widget);
 	void PoolAllModifierHintWidgets();

@@ -16,6 +16,62 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_PagedListHeaderField.SKEL_WBP_PagedListHeaderField_C.UpdateItem
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// EBrickUIColorStyle                      NewColorStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUITextStyle                       NewTextStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIBrushStyle                      NewBrushStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_PagedListHeaderField_C::UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle, EBrickUIBrushStyle NewBrushStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedListHeaderField_C", "UpdateItem");
+
+	Params::SKEL_WBP_PagedListHeaderField_C_UpdateItem Parms{};
+
+	Parms.bNewVisible = bNewVisible;
+	Parms.NewText = std::move(NewText);
+	Parms.NewColorStyle = NewColorStyle;
+	Parms.NewTextStyle = NewTextStyle;
+	Parms.NewBrushStyle = NewBrushStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedListHeaderField.WBP_PagedListHeaderField_C.UpdateItem
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// EBrickUIColorStyle                      NewColorStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUITextStyle                       NewTextStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EBrickUIBrushStyle                      NewBrushStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PagedListHeaderField_C::UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle, EBrickUIBrushStyle NewBrushStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PagedListHeaderField_C", "UpdateItem");
+
+	Params::WBP_PagedListHeaderField_C_UpdateItem Parms{};
+
+	Parms.bNewVisible = bNewVisible;
+	Parms.NewText = std::move(NewText);
+	Parms.NewColorStyle = NewColorStyle;
+	Parms.NewTextStyle = NewTextStyle;
+	Parms.NewBrushStyle = NewBrushStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PagedListHeaderField.WBP_PagedListHeaderField_C.ExecuteUbergraph_WBP_PagedListHeaderField
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -31,58 +87,6 @@ void UWBP_PagedListHeaderField_C::ExecuteUbergraph_WBP_PagedListHeaderField(int3
 	Params::WBP_PagedListHeaderField_C_ExecuteUbergraph_WBP_PagedListHeaderField Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PagedListHeaderField.WBP_PagedListHeaderField_C.UpdateItem
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// const class FText&                      NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-// EBrickUIColorStyle                      NewColorStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUITextStyle                       NewTextStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PagedListHeaderField_C::UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PagedListHeaderField_C", "UpdateItem");
-
-	Params::WBP_PagedListHeaderField_C_UpdateItem Parms{};
-
-	Parms.bNewVisible = bNewVisible;
-	Parms.NewText = std::move(NewText);
-	Parms.NewColorStyle = NewColorStyle;
-	Parms.NewTextStyle = NewTextStyle;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PagedListHeaderField.SKEL_WBP_PagedListHeaderField_C.UpdateItem
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bNewVisible                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// const class FText&                      NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-// EBrickUIColorStyle                      NewColorStyle                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUITextStyle                       NewTextStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USKEL_WBP_PagedListHeaderField_C::UpdateItem(bool bNewVisible, const class FText& NewText, EBrickUIColorStyle NewColorStyle, EBrickUITextStyle NewTextStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PagedListHeaderField_C", "UpdateItem");
-
-	Params::SKEL_WBP_PagedListHeaderField_C_UpdateItem Parms{};
-
-	Parms.bNewVisible = bNewVisible;
-	Parms.NewText = std::move(NewText);
-	Parms.NewColorStyle = NewColorStyle;
-	Parms.NewTextStyle = NewTextStyle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

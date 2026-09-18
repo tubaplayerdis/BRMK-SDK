@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "ErosionInterface_structs.hpp"
 #include "ErodeWeightmap_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "RenderTargetChannels_structs.hpp"
 #include "ErosionMode_structs.hpp"
+#include "RenderTargetChannels_structs.hpp"
 
 
 SDK_NAMESPACE_START

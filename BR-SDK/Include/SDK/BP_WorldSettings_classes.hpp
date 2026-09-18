@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_WorldSettings.BP_WorldSettings_C
-// 0x0010 (0x07A0 - 0x0790)
+// 0x0010 (0x0790 - 0x0780)
 class ABP_WorldSettings_C final : public ABrickWorldSettings
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0790(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0780(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -40,12 +40,12 @@ public:
 DUMPER7_ASSERTS_ABP_WorldSettings_C;
 
 // BlueprintGeneratedClass BP_WorldSettings.SKEL_BP_WorldSettings_C
-// 0x0020 (0x07B0 - 0x0790)
+// 0x0020 (0x07A0 - 0x0780)
 class ASKEL_BP_WorldSettings_C final : public ABrickWorldSettings
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x07A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0780(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0790(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();

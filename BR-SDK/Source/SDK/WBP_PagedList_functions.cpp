@@ -16,37 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PagedList.WBP_PagedList_C.ExecuteUbergraph_WBP_PagedList
-// (Final, UbergraphFunction)
+// Function WBP_PagedList.WBP_PagedList_C.UpdateIsLoading
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bNewLoading                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_PagedList_C::ExecuteUbergraph_WBP_PagedList(int32 EntryPoint)
+void UWBP_PagedList_C::UpdateIsLoading(bool bNewLoading)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PagedList_C", "ExecuteUbergraph_WBP_PagedList");
+		Func = Class->GetFunction("WBP_PagedList_C", "UpdateIsLoading");
 
-	Params::WBP_PagedList_C_ExecuteUbergraph_WBP_PagedList Parms{};
+	Params::WBP_PagedList_C_UpdateIsLoading Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bNewLoading = bNewLoading;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PagedList.WBP_PagedList_C.BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_PagedList_C::BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PagedList_C", "BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -70,61 +56,35 @@ void UWBP_PagedList_C::UpdateIsEntrySelected(bool bIsEntrySelected)
 }
 
 
-// Function WBP_PagedList.WBP_PagedList_C.UpdateIsLoading
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewLoading                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function WBP_PagedList.WBP_PagedList_C.BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_PagedList_C::UpdateIsLoading(bool bNewLoading)
+void UWBP_PagedList_C::BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PagedList_C", "UpdateIsLoading");
+		Func = Class->GetFunction("WBP_PagedList_C", "BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature");
 
-	Params::WBP_PagedList_C_UpdateIsLoading Parms{};
-
-	Parms.bNewLoading = bNewLoading;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsLoading
-// (Event, Protected, BlueprintEvent)
+// Function WBP_PagedList.WBP_PagedList_C.ExecuteUbergraph_WBP_PagedList
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bNewLoading                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USKEL_WBP_PagedList_C::UpdateIsLoading(bool bNewLoading)
+void UWBP_PagedList_C::ExecuteUbergraph_WBP_PagedList(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "UpdateIsLoading");
+		Func = Class->GetFunction("WBP_PagedList_C", "ExecuteUbergraph_WBP_PagedList");
 
-	Params::SKEL_WBP_PagedList_C_UpdateIsLoading Parms{};
+	Params::WBP_PagedList_C_ExecuteUbergraph_WBP_PagedList Parms{};
 
-	Parms.bNewLoading = bNewLoading;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsEntrySelected
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsEntrySelected                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PagedList_C::UpdateIsEntrySelected(bool bIsEntrySelected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "UpdateIsEntrySelected");
-
-	Params::SKEL_WBP_PagedList_C_UpdateIsEntrySelected Parms{};
-
-	Parms.bIsEntrySelected = bIsEntrySelected;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -141,6 +101,46 @@ void USKEL_WBP_PagedList_C::BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2No
 		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "BndEvt__WBP_PagedList_SelectedEntryHeaderWidget_K2Node_ComponentBoundEvent_2_OnClickedClear__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsEntrySelected
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsEntrySelected_UpdateIsEntrySelected                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedList_C::UpdateIsEntrySelected(bool bIsEntrySelected_UpdateIsEntrySelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "UpdateIsEntrySelected");
+
+	Params::SKEL_WBP_PagedList_C_UpdateIsEntrySelected Parms{};
+
+	Parms.bIsEntrySelected_UpdateIsEntrySelected = bIsEntrySelected_UpdateIsEntrySelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PagedList.SKEL_WBP_PagedList_C.UpdateIsLoading
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewLoading_UpdateIsLoading                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PagedList_C::UpdateIsLoading(bool bNewLoading_UpdateIsLoading)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PagedList_C", "UpdateIsLoading");
+
+	Params::SKEL_WBP_PagedList_C_UpdateIsLoading Parms{};
+
+	Parms.bNewLoading_UpdateIsLoading = bNewLoading_UpdateIsLoading;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

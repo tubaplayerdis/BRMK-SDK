@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.RenderWeightmap
-// 0x000C (0x000C - 0x0000)
-struct SKEL_BP_BrickLandscapeBrush_C_RenderWeightmap final
-{
-public:
-	class FName                                   InLayerName;                                       // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_BP_BrickLandscapeBrush_C_RenderWeightmap;
-
 // Function BP_BrickLandscapeBrush.BP_BrickLandscapeBrush_C.ExecuteUbergraph_BP_BrickLandscapeBrush
 // 0x0078 (0x0078 - 0x0000)
 struct BP_BrickLandscapeBrush_C_ExecuteUbergraph_BP_BrickLandscapeBrush final
@@ -57,6 +48,15 @@ public:
 	class FName                                   InLayerName;                                       // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_BrickLandscapeBrush_C_RenderWeightmap;
+
+// Function BP_BrickLandscapeBrush.SKEL_BP_BrickLandscapeBrush_C.RenderWeightmap
+// 0x000C (0x000C - 0x0000)
+struct SKEL_BP_BrickLandscapeBrush_C_RenderWeightmap final
+{
+public:
+	class FName                                   InLayerName;                                       // 0x0000(0x000C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_BrickLandscapeBrush_C_RenderWeightmap;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

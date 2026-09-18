@@ -10,16 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MenuButtonPanel.WBP_MenuButtonPanel_C
-// 0x0000 (0x0428 - 0x0428)
+// 0x0018 (0x0440 - 0x0428)
 class UWBP_MenuButtonPanel_C final : public UMenuButtonPanelWidget
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bFillWidth;                                        // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+public:
+	void ExecuteUbergraph_WBP_MenuButtonPanel(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -37,11 +45,15 @@ public:
 DUMPER7_ASSERTS_UWBP_MenuButtonPanel_C;
 
 // WidgetBlueprintGeneratedClass WBP_MenuButtonPanel.SKEL_WBP_MenuButtonPanel_C
-// 0x0010 (0x0438 - 0x0428)
+// 0x0018 (0x0440 - 0x0428)
 class USKEL_WBP_MenuButtonPanel_C final : public UMenuButtonPanelWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bFillWidth;                                        // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+public:
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

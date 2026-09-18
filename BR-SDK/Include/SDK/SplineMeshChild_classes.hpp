@@ -17,6 +17,43 @@
 
 SDK_NAMESPACE_START
 
+// BlueprintGeneratedClass SplineMeshChild.SplineMeshChild_C
+// 0x0058 (0x0350 - 0x02F8)
+class ASplineMeshChild_C final : public AActor
+{
+public:
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class USplineMeshComponent*>           Components;                                        // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	float                                         Total_Spine_Length;                                // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Idx;                                               // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USplineComponent*                       SplineRef;                                         // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UMaterialInterface*                     Material;                                          // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UStaticMesh*                            Mesh;                                              // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVector                                Scale;                                             // 0x0330(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                         Segment_Length;                                    // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class FString                                 Info;                                              // 0x0340(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
+
+public:
+	void UserConstructionScript();
+	void Update_Values(class USplineComponent* Spline, class UMaterialInterface* Mat, class UStaticMesh* Mesh_0, const struct FVector& Scale_0, float Segment_Length_0);
+	void Setup_Spline_Mesh_Components();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SplineMeshChild_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SplineMeshChild_C")
+	}
+	static class ASplineMeshChild_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASplineMeshChild_C>();
+	}
+};
+DUMPER7_ASSERTS_ASplineMeshChild_C;
+
 // BlueprintGeneratedClass SplineMeshChild.SKEL_SplineMeshChild_C
 // 0x0068 (0x0360 - 0x02F8)
 class ASKEL_SplineMeshChild_C final : public AActor
@@ -57,42 +94,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_SplineMeshChild_C;
-
-// BlueprintGeneratedClass SplineMeshChild.SplineMeshChild_C
-// 0x0058 (0x0350 - 0x02F8)
-class ASplineMeshChild_C final : public AActor
-{
-public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class USplineMeshComponent*>           Components;                                        // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	float                                         Total_Spine_Length;                                // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Idx;                                               // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USplineComponent*                       SplineRef;                                         // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UMaterialInterface*                     Material;                                          // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UStaticMesh*                            Mesh;                                              // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FVector                                Scale;                                             // 0x0330(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         Segment_Length;                                    // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class FString                                 Info;                                              // 0x0340(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash)
-
-public:
-	void UserConstructionScript();
-	void Update_Values(class USplineComponent* Spline, class UMaterialInterface* Mat, class UStaticMesh* Mesh_0, const struct FVector& Scale_0, float Segment_Length_0);
-	void Setup_Spline_Mesh_Components();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SplineMeshChild_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SplineMeshChild_C")
-	}
-	static class ASplineMeshChild_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASplineMeshChild_C>();
-	}
-};
-DUMPER7_ASSERTS_ASplineMeshChild_C;
 
 SDK_NAMESPACE_END

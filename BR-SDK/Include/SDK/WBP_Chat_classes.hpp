@@ -27,8 +27,8 @@ public:
 
 public:
 	void ExecuteUbergraph_WBP_Chat(int32 EntryPoint);
+	void UpdateScrollBoxVisibility(bool bNewVisible);
 	void UpdateIsTyping(bool bNewTyping);
-	void UpdateIsFocused(bool bNewFocused);
 
 public:
 	static class UClass* StaticClass()
@@ -55,8 +55,8 @@ public:
 	class UBrickBorder*                           WarningBorder;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateIsFocused(bool bNewFocused);
 	void UpdateIsTyping(bool bNewTyping);
+	void UpdateScrollBoxVisibility(bool bNewVisible);
 
 public:
 	static class UClass* StaticClass()

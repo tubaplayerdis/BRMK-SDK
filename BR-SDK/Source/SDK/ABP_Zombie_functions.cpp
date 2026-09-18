@@ -16,6 +16,27 @@
 
 SDK_NAMESPACE_START
 
+// Function ABP_Zombie.SKEL_ABP_Zombie_C.AnimGraph
+// (HasOutParams)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void USKEL_ABP_Zombie_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_ABP_Zombie_C", "AnimGraph");
+
+	Params::SKEL_ABP_Zombie_C_AnimGraph Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
+
 // Function ABP_Zombie.ABP_Zombie_C.ExecuteUbergraph_ABP_Zombie
 // (Final, UbergraphFunction)
 // Parameters:
@@ -49,27 +70,6 @@ void UABP_Zombie_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		Func = Class->GetFunction("ABP_Zombie_C", "AnimGraph");
 
 	Params::ABP_Zombie_C_AnimGraph Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimGraph_0 != nullptr)
-		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
-}
-
-
-// Function ABP_Zombie.SKEL_ABP_Zombie_C.AnimGraph
-// (HasOutParams)
-// Parameters:
-// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
-
-void USKEL_ABP_Zombie_C::AnimGraph(struct FPoseLink* AnimGraph_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_ABP_Zombie_C", "AnimGraph");
-
-	Params::SKEL_ABP_Zombie_C_AnimGraph Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

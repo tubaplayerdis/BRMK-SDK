@@ -10,16 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Inventory.WBP_Inventory_C
-// 0x0000 (0x0430 - 0x0430)
+// 0x0018 (0x0438 - 0x0420)
 class UWBP_Inventory_C final : public UInventoryWidget
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      BrickVerticalBox_27;                               // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_WBP_Inventory(int32 EntryPoint);
+	void AddCategoryWidget(class UInventoryCategoryWidget* InWidget, const int32 Index_0);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -37,11 +45,15 @@ public:
 DUMPER7_ASSERTS_UWBP_Inventory_C;
 
 // WidgetBlueprintGeneratedClass WBP_Inventory.SKEL_WBP_Inventory_C
-// 0x0010 (0x0440 - 0x0430)
+// 0x0018 (0x0438 - 0x0420)
 class USKEL_WBP_Inventory_C final : public UInventoryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickVerticalBox*                      BrickVerticalBox_27;                               // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void AddCategoryWidget(class UInventoryCategoryWidget* InWidget, const int32 Index_0);
 
 public:
 	static class UClass* StaticClass()

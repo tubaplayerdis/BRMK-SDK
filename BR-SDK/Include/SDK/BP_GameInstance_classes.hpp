@@ -10,11 +10,31 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
+
+// BlueprintGeneratedClass BP_GameInstance.BP_GameInstance_C
+// 0x0000 (0x0620 - 0x0620)
+class UBP_GameInstance_C final : public UBrickGameInstance
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("BP_GameInstance_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GameInstance_C")
+	}
+	static class UBP_GameInstance_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBP_GameInstance_C>();
+	}
+};
+DUMPER7_ASSERTS_UBP_GameInstance_C;
 
 // BlueprintGeneratedClass BP_GameInstance.SKEL_BP_GameInstance_C
 // 0x0010 (0x0630 - 0x0620)
@@ -38,25 +58,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_BP_GameInstance_C;
-
-// BlueprintGeneratedClass BP_GameInstance.BP_GameInstance_C
-// 0x0000 (0x0620 - 0x0620)
-class UBP_GameInstance_C final : public UBrickGameInstance
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("BP_GameInstance_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BP_GameInstance_C")
-	}
-	static class UBP_GameInstance_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBP_GameInstance_C>();
-	}
-};
-DUMPER7_ASSERTS_UBP_GameInstance_C;
 
 SDK_NAMESPACE_END

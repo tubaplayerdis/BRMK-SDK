@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "UnrealEd_classes.hpp"
-#include "LandscapeEditor_structs.hpp"
 #include "Landscape_structs.hpp"
+#include "LandscapeEditor_structs.hpp"
 #include "Engine_classes.hpp"
 
 

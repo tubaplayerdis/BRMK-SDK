@@ -40,9 +40,10 @@ void UWBP_InputKey_C::ExecuteUbergraph_WBP_InputKey(int32 EntryPoint)
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
 // const struct FKeyDisplayTableRow&       DisplayInfo                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const bool                              bIsValidKey                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const bool                              bIsGamepadKey                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsGamepadKey)
+void UWBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsValidKey, const bool bIsGamepadKey)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,6 +53,7 @@ void UWBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, c
 	Params::WBP_InputKey_C_UpdateKey Parms{};
 
 	Parms.DisplayInfo = std::move(DisplayInfo);
+	Parms.bIsValidKey = bIsValidKey;
 	Parms.bIsGamepadKey = bIsGamepadKey;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -62,9 +64,10 @@ void UWBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, c
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // const struct FKeyDisplayTableRow&       DisplayInfo                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const bool                              bIsValidKey                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bIsGamepadKey                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsGamepadKey)
+void USKEL_WBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsValidKey, const bool bIsGamepadKey)
 {
 	static class UFunction* Func = nullptr;
 
@@ -74,6 +77,7 @@ void USKEL_WBP_InputKey_C::UpdateKey(const struct FKeyDisplayTableRow& DisplayIn
 	Params::SKEL_WBP_InputKey_C_UpdateKey Parms{};
 
 	Parms.DisplayInfo = std::move(DisplayInfo);
+	Parms.bIsValidKey = bIsValidKey;
 	Parms.bIsGamepadKey = bIsGamepadKey;
 
 	UObject::ProcessEvent(Func, &Parms);

@@ -18,17 +18,23 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ControlHint.WBP_ControlHint_C
-// 0x0010 (0x0508 - 0x04F8)
+// 0x0020 (0x0550 - 0x0530)
 class UWBP_ControlHint_C final : public UControlHintWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0530(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            HoldImage;                                         // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    InputChordBox;                                     // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_ControlHint(int32 EntryPoint);
 	void UpdateTextVisibility(bool bNewVisible);
+	void UpdatePressedKeyPadding(const float PaddingRatio);
+	void UpdateHoldProgress(float InHoldProgress);
+	void SetIconOpacity(float InOpacity);
 	void UpdateInputChordVisibility(bool bNewVisible);
 	void SetIconSize(float NewSize);
+	void UpdateIsHoldAction(bool bIsHoldAction);
 
 public:
 	static class UClass* StaticClass()
@@ -47,16 +53,22 @@ public:
 DUMPER7_ASSERTS_UWBP_ControlHint_C;
 
 // WidgetBlueprintGeneratedClass WBP_ControlHint.SKEL_WBP_ControlHint_C
-// 0x0010 (0x0508 - 0x04F8)
+// 0x0020 (0x0550 - 0x0530)
 class USKEL_WBP_ControlHint_C final : public UControlHintWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0530(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickImage*                            HoldImage;                                         // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickHorizontalBox*                    InputChordBox;                                     // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void UpdateInputChordVisibility(bool bNewVisible);
+	void SetIconOpacity(float InOpacity);
+	void UpdateHoldProgress(float InHoldProgress);
+	void UpdatePressedKeyPadding(const float PaddingRatio);
 	void UpdateTextVisibility(bool bNewVisible);
 	void SetIconSize(float NewSize);
+	void UpdateIsHoldAction(bool bIsHoldAction);
 
 public:
 	static class UClass* StaticClass()

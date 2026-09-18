@@ -36,23 +36,21 @@ void UWBP_InputMappingKey_C::ExecuteUbergraph_WBP_InputMappingKey(int32 EntryPoi
 }
 
 
-// Function WBP_InputMappingKey.WBP_InputMappingKey_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_InputMappingKey.WBP_InputMappingKey_C.UpdateIsHoldAction
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bNewHold                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_InputMappingKey_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+void UWBP_InputMappingKey_C::UpdateIsHoldAction(bool bNewHold)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputMappingKey_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+		Func = Class->GetFunction("WBP_InputMappingKey_C", "UpdateIsHoldAction");
 
-	Params::WBP_InputMappingKey_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+	Params::WBP_InputMappingKey_C_UpdateIsHoldAction Parms{};
 
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
+	Parms.bNewHold = bNewHold;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -98,23 +96,21 @@ void USKEL_WBP_InputMappingKey_C::UpdateConflictedState(bool bNewConflicted)
 }
 
 
-// Function WBP_InputMappingKey.SKEL_WBP_InputMappingKey_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
+// Function WBP_InputMappingKey.SKEL_WBP_InputMappingKey_C.UpdateIsHoldAction
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNewHold                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_InputMappingKey_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+void USKEL_WBP_InputMappingKey_C::UpdateIsHoldAction(bool bNewHold)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InputMappingKey_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_InputMappingKey_C", "UpdateIsHoldAction");
 
-	Params::SKEL_WBP_InputMappingKey_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+	Params::SKEL_WBP_InputMappingKey_C_UpdateIsHoldAction Parms{};
 
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
+	Parms.bNewHold = bNewHold;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

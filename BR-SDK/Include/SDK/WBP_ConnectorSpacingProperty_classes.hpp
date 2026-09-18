@@ -18,41 +18,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_ConnectorSpacingProperty.SKEL_WBP_ConnectorSpacingProperty_C
-// 0x0030 (0x0448 - 0x0418)
-class USKEL_WBP_ConnectorSpacingProperty_C final : public UConnectorSpacingPropertyWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWBP_ConnectorSpacingAxis_C*>    AxisWidgets;                                       // 0x0430(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FScalableBrickConnectorSpacing         ConnectorSpacing;                                  // 0x0440(0x0002)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_442[0x2];                                      // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumAxesUsed;                                       // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void OnAxisClicked(EFluAxisSigned Axis);
-	void Destruct();
-	void UpdateConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing, const uint8 AxisFlags);
-
-	class FName GetFocusedSubProperty(const struct FWidgetPathWrapper& WidgetPath) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_ConnectorSpacingProperty_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_ConnectorSpacingProperty_C")
-	}
-	static class USKEL_WBP_ConnectorSpacingProperty_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_ConnectorSpacingProperty_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_ConnectorSpacingProperty_C;
-
 // WidgetBlueprintGeneratedClass WBP_ConnectorSpacingProperty.WBP_ConnectorSpacingProperty_C
 // 0x0030 (0x0448 - 0x0418)
 class UWBP_ConnectorSpacingProperty_C final : public UConnectorSpacingPropertyWidget
@@ -88,5 +53,40 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_ConnectorSpacingProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_ConnectorSpacingProperty.SKEL_WBP_ConnectorSpacingProperty_C
+// 0x0030 (0x0448 - 0x0418)
+class USKEL_WBP_ConnectorSpacingProperty_C final : public UConnectorSpacingPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWBP_ConnectorSpacingAxis_C*>    AxisWidgets;                                       // 0x0430(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FScalableBrickConnectorSpacing         ConnectorSpacing;                                  // 0x0440(0x0002)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	uint8                                         Pad_442[0x2];                                      // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumAxesUsed;                                       // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void OnAxisClicked(EFluAxisSigned Axis);
+	void Destruct();
+	void UpdateConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing, const uint8 AxisFlags);
+
+	class FName GetFocusedSubProperty(const struct FWidgetPathWrapper& WidgetPath) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_ConnectorSpacingProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_ConnectorSpacingProperty_C")
+	}
+	static class USKEL_WBP_ConnectorSpacingProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_ConnectorSpacingProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_ConnectorSpacingProperty_C;
 
 SDK_NAMESPACE_END

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function WBP_InputAction.WBP_InputAction_C.ExecuteUbergraph_WBP_InputAction
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -36,106 +36,36 @@ void UWBP_InputAction_C::ExecuteUbergraph_WBP_InputAction(int32 EntryPoint)
 }
 
 
-// Function WBP_InputAction.WBP_InputAction_C.UpdateInputActionListMode
-// (Event, Protected, BlueprintEvent)
+// Function WBP_InputAction.WBP_InputAction_C.UpdateActionWidget
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// EInputActionListMode                    NewMode                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FDisplayInfo&              InDisplayInfo                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const EBrickUIColorStyle                ColorStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const bool                              bInIsEnabled                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const bool                              bInIsActive                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const bool                              bInIsClickable                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_InputAction_C::UpdateInputActionListMode(EInputActionListMode NewMode)
+void UWBP_InputAction_C::UpdateActionWidget(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle ColorStyle, const bool bInIsEnabled, const bool bInIsActive, const bool bInIsClickable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputAction_C", "UpdateInputActionListMode");
+		Func = Class->GetFunction("WBP_InputAction_C", "UpdateActionWidget");
 
-	Params::WBP_InputAction_C_UpdateInputActionListMode Parms{};
+	Params::WBP_InputAction_C_UpdateActionWidget Parms{};
 
-	Parms.NewMode = NewMode;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InputAction.WBP_InputAction_C.UpdateCanActionBeRebound
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bInCanBeRebound                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_InputAction_C::UpdateCanActionBeRebound(bool bInCanBeRebound)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputAction_C", "UpdateCanActionBeRebound");
-
-	Params::WBP_InputAction_C_UpdateCanActionBeRebound Parms{};
-
-	Parms.bInCanBeRebound = bInCanBeRebound;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InputAction.WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_InputAction_C::BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputAction_C", "BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_InputAction.WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_InputAction_C::BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputAction_C", "BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InputAction.WBP_InputAction_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_InputAction_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_InputAction_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
+	Parms.InDisplayInfo = std::move(InDisplayInfo);
+	Parms.ColorStyle = ColorStyle;
+	Parms.bInIsEnabled = bInIsEnabled;
+	Parms.bInIsActive = bInIsActive;
+	Parms.bInIsClickable = bInIsClickable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function WBP_InputAction.WBP_InputAction_C.GetWidgetToFocus
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -154,106 +84,36 @@ class UWidget* UWBP_InputAction_C::GetWidgetToFocus() const
 }
 
 
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_InputAction_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InputAction_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_InputAction_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_InputAction_C::BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InputAction_C", "BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_InputAction_C_BndEvt__EditButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
-// (Public)
-
-void USKEL_WBP_InputAction_C::BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InputAction_C", "BndEvt__EditButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateCanActionBeRebound
+// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateActionWidget
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bInCanBeRebound                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FDisplayInfo&              InDisplayInfo                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const EBrickUIColorStyle                ColorStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bInIsEnabled                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bInIsActive                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bInIsClickable                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_InputAction_C::UpdateCanActionBeRebound(bool bInCanBeRebound)
+void USKEL_WBP_InputAction_C::UpdateActionWidget(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle ColorStyle, const bool bInIsEnabled, const bool bInIsActive, const bool bInIsClickable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InputAction_C", "UpdateCanActionBeRebound");
+		Func = Class->GetFunction("SKEL_WBP_InputAction_C", "UpdateActionWidget");
 
-	Params::SKEL_WBP_InputAction_C_UpdateCanActionBeRebound Parms{};
+	Params::SKEL_WBP_InputAction_C_UpdateActionWidget Parms{};
 
-	Parms.bInCanBeRebound = bInCanBeRebound;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_InputAction.SKEL_WBP_InputAction_C.UpdateInputActionListMode
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EInputActionListMode                    NewMode                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_InputAction_C::UpdateInputActionListMode(EInputActionListMode NewMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_InputAction_C", "UpdateInputActionListMode");
-
-	Params::SKEL_WBP_InputAction_C_UpdateInputActionListMode Parms{};
-
-	Parms.NewMode = NewMode;
+	Parms.InDisplayInfo = std::move(InDisplayInfo);
+	Parms.ColorStyle = ColorStyle;
+	Parms.bInIsEnabled = bInIsEnabled;
+	Parms.bInIsActive = bInIsActive;
+	Parms.bInIsClickable = bInIsClickable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function WBP_InputAction.SKEL_WBP_InputAction_C.GetWidgetToFocus
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

@@ -17,6 +17,68 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Initialize ShallowWaterSim
+// 0x0020 (0x0020 - 0x0000)
+struct SKEL_ShallowWaterSimComponent_C_Initialize_ShallowWaterSim final
+{
+public:
+	int32                                         Res_0;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFluidTerrainModes                            Terrain_Mode;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Forces;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               Terrain_Texture;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Default_Water_Depth;                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Initialize_ShallowWaterSim;
+
+// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Set Sim MID Params
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_ShallowWaterSimComponent_C_Set_Sim_MID_Params final
+{
+public:
+	class UTexture*                               Forces;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               Terrain;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Set_Sim_MID_Params;
+
+// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Simulation Step
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_ShallowWaterSimComponent_C_Simulation_Step final
+{
+public:
+	class UTextureRenderTarget2D*                 Height_RT;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Simulation_Step;
+
+// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Clear RTs
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_ShallowWaterSimComponent_C_Clear_RTs final
+{
+public:
+	float                                         Default_Water_Depth;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Clear_RTs;
+
+// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.PingPong-Height
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_ShallowWaterSimComponent_C_PingPong_Height final
+{
+public:
+	class UTextureRenderTarget2D*                 Read_RT;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 Write_RT;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_PingPong_Height;
+
+// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.PingPong-Velocity
+// 0x0010 (0x0010 - 0x0000)
+struct SKEL_ShallowWaterSimComponent_C_PingPong_Velocity final
+{
+public:
+	class UTextureRenderTarget2D*                 Read_RT;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 Write_RT;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_PingPong_Velocity;
+
 // Function ShallowWaterSimComponent.ShallowWaterSimComponent_C.ExecuteUbergraph_ShallowWaterSimComponent
 // 0x0028 (0x0028 - 0x0000)
 struct ShallowWaterSimComponent_C_ExecuteUbergraph_ShallowWaterSimComponent final
@@ -268,68 +330,6 @@ public:
 	class UTextureRenderTarget2D*                 K2Node_Select_Default_1;                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ShallowWaterSimComponent_C_PingPong_Velocity;
-
-// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Initialize ShallowWaterSim
-// 0x0020 (0x0020 - 0x0000)
-struct SKEL_ShallowWaterSimComponent_C_Initialize_ShallowWaterSim final
-{
-public:
-	int32                                         Res_0;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFluidTerrainModes                            Terrain_Mode;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Forces;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture*                               Terrain_Texture;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Default_Water_Depth;                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Initialize_ShallowWaterSim;
-
-// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Set Sim MID Params
-// 0x0010 (0x0010 - 0x0000)
-struct SKEL_ShallowWaterSimComponent_C_Set_Sim_MID_Params final
-{
-public:
-	class UTexture*                               Forces;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture*                               Terrain;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Set_Sim_MID_Params;
-
-// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Simulation Step
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_ShallowWaterSimComponent_C_Simulation_Step final
-{
-public:
-	class UTextureRenderTarget2D*                 Height_RT;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Simulation_Step;
-
-// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.Clear RTs
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_ShallowWaterSimComponent_C_Clear_RTs final
-{
-public:
-	float                                         Default_Water_Depth;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_Clear_RTs;
-
-// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.PingPong-Height
-// 0x0010 (0x0010 - 0x0000)
-struct SKEL_ShallowWaterSimComponent_C_PingPong_Height final
-{
-public:
-	class UTextureRenderTarget2D*                 Read_RT;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 Write_RT;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_PingPong_Height;
-
-// Function ShallowWaterSimComponent.SKEL_ShallowWaterSimComponent_C.PingPong-Velocity
-// 0x0010 (0x0010 - 0x0000)
-struct SKEL_ShallowWaterSimComponent_C_PingPong_Velocity final
-{
-public:
-	class UTextureRenderTarget2D*                 Read_RT;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 Write_RT;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_ShallowWaterSimComponent_C_PingPong_Velocity;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -36,28 +36,6 @@ void UWBP_ScoreboardTeam_C::ExecuteUbergraph_WBP_ScoreboardTeam(int32 EntryPoint
 }
 
 
-// Function WBP_ScoreboardTeam.WBP_ScoreboardTeam_C.BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ScoreboardTeam_C::BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ScoreboardTeam_C", "BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_ScoreboardTeam_C_BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ScoreboardTeam.WBP_ScoreboardTeam_C.UpdateCanJoinTeam
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -205,28 +183,6 @@ void USKEL_WBP_ScoreboardTeam_C::UpdateCanJoinTeam(bool bCanJoin)
 	Params::SKEL_WBP_ScoreboardTeam_C_UpdateCanJoinTeam Parms{};
 
 	Parms.bCanJoin = bCanJoin;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ScoreboardTeam.SKEL_WBP_ScoreboardTeam_C.BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ScoreboardTeam_C::BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ScoreboardTeam_C", "BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_ScoreboardTeam_C_BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

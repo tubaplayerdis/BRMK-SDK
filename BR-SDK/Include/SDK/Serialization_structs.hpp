@@ -15,39 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// ScriptStruct Serialization.StructSerializerBuiltinTestStruct
-// 0x00A0 (0x00A0 - 0x0000)
-struct FStructSerializerBuiltinTestStruct final
-{
-public:
-	struct FGuid                                  Guid;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Name;                                              // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 String;                                            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Text;                                              // 0x0030(0x0018)(NativeAccessSpecifierPublic)
-	struct FVector                                Vector;                                            // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0xC];                                       // 0x0054(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               Vector4;                                           // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotator;                                           // 0x0070(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Quat;                                              // 0x0080(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FColor                                 Color;                                             // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_94[0xC];                                       // 0x0094(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FStructSerializerBuiltinTestStruct;
-
-// ScriptStruct Serialization.StructSerializerSetTestStruct
-// 0x0140 (0x0140 - 0x0000)
-struct FStructSerializerSetTestStruct final
-{
-public:
-	TSet<class FString>                           StrSet;                                            // 0x0000(0x0050)(NativeAccessSpecifierPublic)
-	TSet<int32>                                   IntSet;                                            // 0x0050(0x0050)(NativeAccessSpecifierPublic)
-	TSet<class FName>                             NameSet;                                           // 0x00A0(0x0050)(NativeAccessSpecifierPublic)
-	TSet<struct FStructSerializerBuiltinTestStruct> StructSet;                                       // 0x00F0(0x0050)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FStructSerializerSetTestStruct;
-
 // ScriptStruct Serialization.StructSerializerNumericTestStruct
 // 0x0030 (0x0030 - 0x0000)
 struct FStructSerializerNumericTestStruct final
@@ -103,6 +70,27 @@ public:
 };
 DUMPER7_ASSERTS_FStructSerializerObjectTestStruct;
 
+// ScriptStruct Serialization.StructSerializerBuiltinTestStruct
+// 0x00A0 (0x00A0 - 0x0000)
+struct FStructSerializerBuiltinTestStruct final
+{
+public:
+	struct FGuid                                  Guid;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name;                                              // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 String;                                            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0030(0x0018)(NativeAccessSpecifierPublic)
+	struct FVector                                Vector;                                            // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0xC];                                       // 0x0054(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               Vector4;                                           // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotator;                                           // 0x0070(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Quat;                                              // 0x0080(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FColor                                 Color;                                             // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_94[0xC];                                       // 0x0094(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FStructSerializerBuiltinTestStruct;
+
 // ScriptStruct Serialization.StructSerializerArrayTestStruct
 // 0x0060 (0x0060 - 0x0000)
 struct FStructSerializerArrayTestStruct final
@@ -130,6 +118,18 @@ public:
 	TMap<class FString, struct FStructSerializerBuiltinTestStruct> StrToStruct;                      // 0x00F0(0x0050)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FStructSerializerMapTestStruct;
+
+// ScriptStruct Serialization.StructSerializerSetTestStruct
+// 0x0140 (0x0140 - 0x0000)
+struct FStructSerializerSetTestStruct final
+{
+public:
+	TSet<class FString>                           StrSet;                                            // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	TSet<int32>                                   IntSet;                                            // 0x0050(0x0050)(NativeAccessSpecifierPublic)
+	TSet<class FName>                             NameSet;                                           // 0x00A0(0x0050)(NativeAccessSpecifierPublic)
+	TSet<struct FStructSerializerBuiltinTestStruct> StructSet;                                       // 0x00F0(0x0050)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStructSerializerSetTestStruct;
 
 // ScriptStruct Serialization.StructSerializerTestStruct
 // 0x0480 (0x0480 - 0x0000)

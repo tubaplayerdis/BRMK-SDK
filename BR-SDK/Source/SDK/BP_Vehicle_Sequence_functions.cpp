@@ -36,6 +36,26 @@ void ABP_Vehicle_Sequence_C::ExecuteUbergraph_BP_Vehicle_Sequence(int32 EntryPoi
 }
 
 
+// Function BP_Vehicle_Sequence.BP_Vehicle_Sequence_C.CreateMenuButtons
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           ButtonPanel                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Vehicle_Sequence_C::CreateMenuButtons(class UMenuButtonPanelWidget* ButtonPanel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Vehicle_Sequence_C", "CreateMenuButtons");
+
+	Params::BP_Vehicle_Sequence_C_CreateMenuButtons Parms{};
+
+	Parms.ButtonPanel = ButtonPanel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Vehicle_Sequence.BP_Vehicle_Sequence_C.RepairVehicle
 // (BlueprintCallable, BlueprintEvent)
 
@@ -98,23 +118,37 @@ void ABP_Vehicle_Sequence_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_Vehicle_Sequence.BP_Vehicle_Sequence_C.InpActEvt_Fire_K2Node_InputActionEvent_0
+// Function BP_Vehicle_Sequence.BP_Vehicle_Sequence_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_Vehicle_Sequence_C::InpActEvt_Fire_K2Node_InputActionEvent_0(const struct FKey& Key)
+void ABP_Vehicle_Sequence_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Vehicle_Sequence_C", "InpActEvt_Fire_K2Node_InputActionEvent_0");
+		Func = Class->GetFunction("BP_Vehicle_Sequence_C", "InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0");
 
-	Params::BP_Vehicle_Sequence_C_InpActEvt_Fire_K2Node_InputActionEvent_0 Parms{};
+	Params::BP_Vehicle_Sequence_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_0 Parms{};
 
 	Parms.Key = std::move(Key);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Vehicle_Sequence.BP_Vehicle_Sequence_C.SetupInputActions
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Vehicle_Sequence_C::SetupInputActions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Vehicle_Sequence_C", "SetupInputActions");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -200,6 +234,26 @@ void ASKEL_BP_Vehicle_Sequence_C::RepairVehicle()
 }
 
 
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.CreateMenuButtons
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMenuButtonPanelWidget*           ButtonPanel                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_BP_Vehicle_Sequence_C::CreateMenuButtons(class UMenuButtonPanelWidget* ButtonPanel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "CreateMenuButtons");
+
+	Params::SKEL_BP_Vehicle_Sequence_C_CreateMenuButtons Parms{};
+
+	Parms.ButtonPanel = ButtonPanel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.UserConstructionScript
 // (Event, Public, BlueprintEvent)
 
@@ -209,6 +263,20 @@ void ASKEL_BP_Vehicle_Sequence_C::UserConstructionScript()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Vehicle_Sequence.SKEL_BP_Vehicle_Sequence_C.SetupInputActions
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ASKEL_BP_Vehicle_Sequence_C::SetupInputActions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_Vehicle_Sequence_C", "SetupInputActions");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

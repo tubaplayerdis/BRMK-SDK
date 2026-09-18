@@ -10,31 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_classes.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_PagedListEntry.WBP_PagedListEntry_C
-// 0x0000 (0x0420 - 0x0420)
-class UWBP_PagedListEntry_C final : public UPagedListEntryWidget
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_PagedListEntry_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_PagedListEntry_C")
-	}
-	static class UWBP_PagedListEntry_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_PagedListEntry_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_PagedListEntry_C;
 
 // WidgetBlueprintGeneratedClass WBP_PagedListEntry.SKEL_WBP_PagedListEntry_C
 // 0x0010 (0x0430 - 0x0420)
@@ -58,5 +38,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_PagedListEntry_C;
+
+// WidgetBlueprintGeneratedClass WBP_PagedListEntry.WBP_PagedListEntry_C
+// 0x0000 (0x0420 - 0x0420)
+class UWBP_PagedListEntry_C final : public UPagedListEntryWidget
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_PagedListEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_PagedListEntry_C")
+	}
+	static class UWBP_PagedListEntry_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_PagedListEntry_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_PagedListEntry_C;
 
 SDK_NAMESPACE_END

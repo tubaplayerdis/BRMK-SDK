@@ -16,39 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C
-// 0x0038 (0x0448 - 0x0410)
-class USKEL_WBP_RestrictedArea_C final : public URestrictedAreaWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0420(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBrickImage*                            BrickImage_258;                                    // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            BrickImage_425;                                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickBorder*                           RestrictedAreaBorder;                              // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickTextBlock*                        RestrictedAreaTextBlock;                           // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void PlayFadeInAnim();
-	void PlayFadeOutAnim();
-	void UpdateTimerRemaining(float TimeRemaining);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_RestrictedArea_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_RestrictedArea_C")
-	}
-	static class USKEL_WBP_RestrictedArea_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_RestrictedArea_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_RestrictedArea_C;
-
 // WidgetBlueprintGeneratedClass WBP_RestrictedArea.WBP_RestrictedArea_C
 // 0x0038 (0x0448 - 0x0410)
 class UWBP_RestrictedArea_C final : public URestrictedAreaWidget
@@ -82,5 +49,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_RestrictedArea_C;
+
+// WidgetBlueprintGeneratedClass WBP_RestrictedArea.SKEL_WBP_RestrictedArea_C
+// 0x0038 (0x0448 - 0x0410)
+class USKEL_WBP_RestrictedArea_C final : public URestrictedAreaWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeAnimation;                                     // 0x0420(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_258;                                    // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_425;                                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickBorder*                           RestrictedAreaBorder;                              // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickTextBlock*                        RestrictedAreaTextBlock;                           // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void PlayFadeInAnim();
+	void PlayFadeOutAnim();
+	void UpdateTimerRemaining(float TimeRemaining);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_RestrictedArea_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_RestrictedArea_C")
+	}
+	static class USKEL_WBP_RestrictedArea_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_RestrictedArea_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_RestrictedArea_C;
 
 SDK_NAMESPACE_END

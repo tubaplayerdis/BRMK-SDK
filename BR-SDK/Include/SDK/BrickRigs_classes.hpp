@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "BrickRigs_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "FluMoveSync_classes.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "BrickRigs_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
 #include "SlateCore_structs.hpp"
@@ -75,80 +75,28 @@ public:
 };
 DUMPER7_ASSERTS_UPopupWidget;
 
-// Class BrickRigs.UGCBrowserWidget
-// 0x00D0 (0x0500 - 0x0430)
-class UUGCBrowserWidget : public UPopupWidget
+// Class BrickRigs.UGCMetaDataPopupWidget
+// 0x0008 (0x0438 - 0x0430)
+class UUGCMetaDataPopupWidget : public UPopupWidget
 {
 public:
-	uint8                                         Pad_430[0x90];                                     // 0x0430(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	EUGCQueryType                                 LastSelectedUGCQueryType;                          // 0x04C0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EUGCSortMethod                                LastSelectedUGCSortMethod;                         // 0x04C1(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4C2[0x16];                                     // 0x04C2(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPagedListWidget*                       PagedList;                                         // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EUGCQueryType                                 UGCQueryType;                                      // 0x04E0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EUGCSortMethod                                UGCSortMethod;                                     // 0x04E1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4E2[0x6];                                      // 0x04E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 UGCSearchText;                                     // 0x04E8(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShowLegacyItems;                                  // 0x04F8(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FUGCTags                               UGCTags;                                           // 0x04F9(0x0003)(Transient, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	EPlayerVehicleSpawnInvincibility              VehicleSpawnInvincibility;                         // 0x04FC(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4FD[0x3];                                      // 0x04FD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddOrRemoveSelectedItem(bool bAdd);
-	void ClearItems();
-	void CreateAddOrRemoveItemButton(bool bIsArrayProperty, bool bIsSelected);
-	void CreateCancelButton();
-	void CreateClearItemsButton(bool bIsArrayProperty);
-	void CreateDeleteButton();
-	void CreateDuplicateButton();
-	void CreateEditButton();
-	void CreateImportButton();
-	void CreateNewItem();
-	void CreateNewItemButton();
-	void CreateOpenInExplorerButton();
-	void CreateRecoverAutoSaveButton();
-	void CreateSaveNewButton();
-	void CreateSaveOverwriteButton();
-	void CreateSpawnButton(bool bCanReplaceCurrent, bool bCanSpawn, const class FText& SpawnFailureText);
-	void CreateSpawnInvincibilityButton(const class FText& CurrentInvincibilityText);
-	void CreateSubscribeButton(bool bIsSubscribed);
-	void CreateUpdateExistingButton();
-	void CreateUploadNewButton();
-	void CreateViewInBrowserButton();
-	void CreateVoteButtons(const EFluUGCItemVote Vote);
-	void CycleVehicleSpawnInvincibility();
-	void DeleteSelectedItem();
-	void DuplicateSelectedItem();
-	void EditSelectedItem();
-	void FavoriteSelectedItem(bool bFavorite);
-	void ImportSelectedItem();
-	void OnListEntrySelected(class UPagedListEntryWidget* Widget, bool bDoubleClick);
-	void OnLoadListPage(int32 NewPage);
-	void OpenSelectedItemInExplorer();
-	void RecoverSelectedAutoSave();
-	void SaveItem(bool bOverwriteSelected);
-	void SetSelectedItemVote(const EFluUGCItemVote Vote);
-	void SpawnSelectedItem(bool bReplaceCurrent);
-	void SubscribeSelectedItem(bool bSubscribe);
-	void UploadItem(bool bUpdateSelected);
-	void ViewSelectedItemInBrowser();
+	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UGCBrowserWidget")
+		STATIC_CLASS_IMPL("UGCMetaDataPopupWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UGCBrowserWidget")
+		STATIC_NAME_IMPL(L"UGCMetaDataPopupWidget")
 	}
-	static class UUGCBrowserWidget* GetDefaultObj()
+	static class UUGCMetaDataPopupWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUGCBrowserWidget>();
+		return GetDefaultObjImpl<UUGCMetaDataPopupWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUGCBrowserWidget;
+DUMPER7_ASSERTS_UUGCMetaDataPopupWidget;
 
 // Class BrickRigs.BrickConnection
 // 0x0038 (0x0068 - 0x0030)
@@ -207,28 +155,28 @@ public:
 };
 DUMPER7_ASSERTS_UPhysicsConstraintConnection;
 
-// Class BrickRigs.ActuatorConnection
-// 0x0010 (0x00E0 - 0x00D0)
-class UActuatorConnection final : public UPhysicsConstraintConnection
+// Class BrickRigs.WheelConnection
+// 0x0020 (0x00F0 - 0x00D0)
+class UWheelConnection : public UPhysicsConstraintConnection
 {
 public:
-	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D0[0x20];                                      // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActuatorConnection")
+		STATIC_CLASS_IMPL("WheelConnection")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActuatorConnection")
+		STATIC_NAME_IMPL(L"WheelConnection")
 	}
-	static class UActuatorConnection* GetDefaultObj()
+	static class UWheelConnection* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActuatorConnection>();
+		return GetDefaultObjImpl<UWheelConnection>();
 	}
 };
-DUMPER7_ASSERTS_UActuatorConnection;
+DUMPER7_ASSERTS_UWheelConnection;
 
 // Class BrickRigs.BrickEditorObjectStaticInfo
 // 0x0070 (0x00A0 - 0x0030)
@@ -321,60 +269,28 @@ public:
 };
 DUMPER7_ASSERTS_UBrickStaticInfo;
 
-// Class BrickRigs.BrickComboBoxWidget
-// 0x0098 (0x0490 - 0x03F8)
-class UBrickComboBoxWidget : public UUserWidget
+// Class BrickRigs.BrickComboBoxCategoryWidget
+// 0x0000 (0x03F8 - 0x03F8)
+class UBrickComboBoxCategoryWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickComboBoxItemWidget*               SelectedItemWidget;                                // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UBrickComboBoxItemContainerWidget*> ItemContainerWidgets;                           // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class UBrickComboBoxMenuWidget*               MenuWidget;                                        // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickButtonWidget*                     Button;                                            // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickGridPanel*                        ItemsPanel;                                        // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UBrickComboBoxItemWidget>   ItemWidgetClass;                                   // 0x0448(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UBrickComboBoxItemContainerWidget> ItemContainerWidgetClass;                   // 0x0450(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UBrickComboBoxMenuWidget>   MenuWidgetClass;                                   // 0x0458(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxListItems;                                      // 0x0460(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxItemsPerRow;                                    // 0x0464(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(int32 Item, struct FBrickComboBoxItemParams* OutParams)> OnInitializeItemDelegate; // 0x0468(0x0014)(Edit, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int32 Item, EValueChangedEventType EventType)> OnItemSelectedDelegate; // 0x0480(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	void AddItemContainerWidget(class UBrickComboBoxItemContainerWidget* Widget, int32 Index_0);
-	void AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget);
-	void InitItems(int32 InNumItems, int32 InSelectedItem);
-	void InitItemsComplex(const TArray<int32>& InItems, int32 InSelectedItem);
-	void OnComboBoxMenuItemSelected(int32 Item, EValueChangedEventType EventType);
-	void SetComboBoxExpanded(bool bNewExpanded);
-	void SetMaxItemsPerRow(int32 InMaxItemsPerRow);
-	void SetMaxListItems(int32 InMaxListItems);
-	void SetSelectedItem(int32 InItem);
-	void ToggleComboBoxExpanded();
-	void UpdateIsExpanded(bool bInIsExpanded);
-	void UpdateUseItemList(bool bInUseItemList);
-
-	int32 GetNumItems() const;
-	int32 GetSelectedItem() const;
-	class UWidget* GetWidgetToFocus() const;
-	bool IsComboBoxExpanded() const;
+	void InitializeCategory(const class FText& InCategoryName);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickComboBoxWidget")
+		STATIC_CLASS_IMPL("BrickComboBoxCategoryWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickComboBoxWidget")
+		STATIC_NAME_IMPL(L"BrickComboBoxCategoryWidget")
 	}
-	static class UBrickComboBoxWidget* GetDefaultObj()
+	static class UBrickComboBoxCategoryWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickComboBoxWidget>();
+		return GetDefaultObjImpl<UBrickComboBoxCategoryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UBrickComboBoxWidget;
+DUMPER7_ASSERTS_UBrickComboBoxCategoryWidget;
 
 // Class BrickRigs.ActuatorBrickBaseStaticInfo
 // 0x0010 (0x01B0 - 0x01A0)
@@ -435,7 +351,7 @@ DUMPER7_ASSERTS_UActuatorBrickStaticInfo;
 
 // Class BrickRigs.BrickCheatManager
 // 0x00F8 (0x0188 - 0x0090)
-class UBrickCheatManager final : public UCheatManager
+class UBrickCheatManager : public UCheatManager
 {
 public:
 	uint8                                         Pad_90[0x9];                                       // 0x0090(0x0009)(Fixing Size After Last Property [ Dumper-7 ])
@@ -485,12 +401,19 @@ public:
 	struct FRotator GetBrickEditorObjectSpawnRotation() const;
 	struct FTransform GetBrickEditorObjectSpawnTransform() const;
 	class FText GetBrickEditorObjectTypeDisplayName() const;
+	class FText GetBrickEditorObjectUniqueDisplayName() const;
 	const class UBrickEditorStaticInfo* GetBrickEditorStaticInfo() const;
 	class UBrickEditorInterfaceComponent* GetEditorInterface() const;
 	const struct FBrickEditorObjectID GetEditorObjectID() const;
+	struct FVector GetRelativeLocation() const;
+	struct FRotator GetRelativeRotation() const;
+	struct FVector GetRelativeScale3D() const;
 	class UPrimitiveComponent* GetRootComponent() const;
 	const class UBrickEditorObjectStaticInfo* GetStaticInfo() const;
 	class UClass* GetStaticInfoClass() const;
+	struct FVector GetWorldLocation() const;
+	struct FQuat GetWorldQuat() const;
+	struct FRotator GetWorldRotation() const;
 	struct FTransform GetWorldTransform() const;
 	bool IsBrickEditorObjectBeingInitialized() const;
 	bool IsBrickEditorObjectBeingUninitialized() const;
@@ -515,48 +438,25 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorObject;
 
-// Class BrickRigs.WheelConnection
-// 0x0020 (0x00F0 - 0x00D0)
-class UWheelConnection final : public UPhysicsConstraintConnection
-{
-public:
-	uint8                                         Pad_D0[0x20];                                      // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WheelConnection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WheelConnection")
-	}
-	static class UWheelConnection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWheelConnection>();
-	}
-};
-DUMPER7_ASSERTS_UWheelConnection;
-
-// Class BrickRigs.BrickRichTextBlock
-// 0x0000 (0x0848 - 0x0848)
-class UBrickRichTextBlock final : public URichTextBlock
+// Class BrickRigs.BrickRetainerBox
+// 0x0000 (0x0278 - 0x0278)
+class UBrickRetainerBox : public URetainerBox
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickRichTextBlock")
+		STATIC_CLASS_IMPL("BrickRetainerBox")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickRichTextBlock")
+		STATIC_NAME_IMPL(L"BrickRetainerBox")
 	}
-	static class UBrickRichTextBlock* GetDefaultObj()
+	static class UBrickRetainerBox* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickRichTextBlock>();
+		return GetDefaultObjImpl<UBrickRetainerBox>();
 	}
 };
-DUMPER7_ASSERTS_UBrickRichTextBlock;
+DUMPER7_ASSERTS_UBrickRetainerBox;
 
 // Class BrickRigs.Brick
 // 0x0060 (0x00F0 - 0x0090)
@@ -633,8 +533,8 @@ public:
 DUMPER7_ASSERTS_UBrick;
 
 // Class BrickRigs.ActuatorBrick
-// 0x00F0 (0x01E0 - 0x00F0)
-class UActuatorBrick final : public UBrick
+// 0x00E8 (0x01D8 - 0x00F0)
+class UActuatorBrick : public UBrick
 {
 public:
 	uint8                                         Pad_F0[0x14];                                      // 0x00F0(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
@@ -644,11 +544,11 @@ public:
 	uint8                                         Pad_190[0x15];                                     // 0x0190(0x0015)(Fixing Size After Last Property [ Dumper-7 ])
 	EActuatorMode                                 ActuatorMode;                                      // 0x01A5(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_1A6[0x2];                                      // 0x01A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x01A8(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	float                                         SpeedFactor;                                       // 0x01D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxLimit;                                          // 0x01D4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MinLimit;                                          // 0x01D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x01A8(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	float                                         SpeedFactor;                                       // 0x01C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxLimit;                                          // 0x01CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MinLimit;                                          // 0x01D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Interact_Actuate(class ABrickPlayerController* OtherPC, float Val);
@@ -670,35 +570,62 @@ public:
 };
 DUMPER7_ASSERTS_UActuatorBrick;
 
-// Class BrickRigs.BrickThumbnailSubsystem
-// 0x0050 (0x0098 - 0x0048)
-class UBrickThumbnailSubsystem final : public UTickableWorldSubsystem
+// Class BrickRigs.BrickTextBoxWidget
+// 0x0048 (0x0440 - 0x03F8)
+class UBrickTextBoxWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 ThumbnailRenderTarget;                             // 0x0058(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMaterialInstanceDynamic*               TextureRenderMID;                                  // 0x0060(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMaterialInstanceDynamic*               InventoryItemMID;                                  // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneCaptureComponent2D*               CaptureComponent;                                  // 0x0080(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UStaticMeshComponent*                   CaptureStaticMeshComponent;                        // 0x0088(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UBrickEditorInterfaceComponent*         EditorInterfaceComponent;                          // 0x0090(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickMultiLineTextBox*                 MultiLineTextBox;                                  // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickButtonWidget*                     ShowPasswordButton;                                // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(const class FText& NewText, EValueChangedEventType EventType)> OnTextChangedDelegate; // 0x0428(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	int32                                         MaxTextLength;                                     // 0x0438(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultiLine;                                   // 0x043C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPassword;                                       // 0x043D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsNumeric;                                        // 0x043E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHideBackground;                                   // 0x043F(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void OnTextChanged(const class FText& NewText);
+	void SetAllowMultiLine(bool bInAllowMultiLine);
+	void SetBrushStyle(EBrickUIBrushStyle InBrushStyle);
+	void SetColorStyle(EBrickUIColorStyle InColorStyle);
+	void SetCustomFocus(bool bNewUseCustomFocus, bool bNewFocused);
+	void SetHideBackground(const bool bNewHideBackground);
+	void SetHintText(const class FText& InText);
+	void SetIsPassword(bool bNewIsPassword);
+	void SetIsReadOnly(bool bNewReadOnly);
+	void SetJustification(ETextJustify NewJustification);
+	void SetMaxTextLength(int32 InMaxLength);
+	void SetPaddingStyle(EBrickUIPaddingStyle InPaddingStyle);
+	void SetPasswordVisible(bool bNewVisible);
+	void SetText(const class FText& InText, bool bValidateText);
+	void SetTextStyle(EBrickUITextStyle InTextStyle);
+	void StartTyping(bool bSelectAllText);
+	void TogglePasswordVisible();
+	void UpdateIsPassword(bool bNewIsPassword);
+	void UpdatePasswordVisible(bool bNewVisible);
+
+	class FText GetText() const;
+	bool IsPasswordVisible() const;
+	bool IsReadOnly() const;
+	bool IsTyping() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickThumbnailSubsystem")
+		STATIC_CLASS_IMPL("BrickTextBoxWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickThumbnailSubsystem")
+		STATIC_NAME_IMPL(L"BrickTextBoxWidget")
 	}
-	static class UBrickThumbnailSubsystem* GetDefaultObj()
+	static class UBrickTextBoxWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickThumbnailSubsystem>();
+		return GetDefaultObjImpl<UBrickTextBoxWidget>();
 	}
 };
-DUMPER7_ASSERTS_UBrickThumbnailSubsystem;
+DUMPER7_ASSERTS_UBrickTextBoxWidget;
 
 // Class BrickRigs.AdminLoginWidget
 // 0x0038 (0x0430 - 0x03F8)
@@ -761,44 +688,33 @@ public:
 };
 DUMPER7_ASSERTS_UMenuPageWidget;
 
-// Class BrickRigs.BrickSpectatorPawn
-// 0x0290 (0x0610 - 0x0380)
-class alignas(0x10) ABrickSpectatorPawn : public ASpectatorPawn
+// Class BrickRigs.BrickSpacer
+// 0x0010 (0x0398 - 0x0388)
+class UBrickSpacer : public UImage
 {
 public:
-	uint8                                         Pad_380[0x1A0];                                    // 0x0380(0x01A0)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 FollowTarget;                                      // 0x0520(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_528[0x60];                                     // 0x0528(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               MID;                                               // 0x0588(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_590[0x8];                                      // 0x0590(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   PlacementBoundsMeshComponent;                      // 0x0598(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UStaticMesh*                            PlacementBoundsMesh;                               // 0x05A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector                                PlacementBoundsDefaultSize;                        // 0x05A8(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector                                MinPlacementBoundsSize;                            // 0x05B4(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlacementBoundsSizeInterpSpeed;                    // 0x05C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlacementBoundsScreenFitInflation;                 // 0x05C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlacementSweepRadius;                              // 0x05C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PawnRotationSpeed;                                 // 0x05CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FViewTargetCameraSpeedParams           CameraSpeedParams;                                 // 0x05D0(0x0018)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x05E8(0x0018)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	float                                         ShiftInterpSpeed;                                  // 0x0600(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_604[0xC];                                      // 0x0604(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x0390(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetColorStyle(EBrickUIColorStyle NewStyle);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickSpectatorPawn")
+		STATIC_CLASS_IMPL("BrickSpacer")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickSpectatorPawn")
+		STATIC_NAME_IMPL(L"BrickSpacer")
 	}
-	static class ABrickSpectatorPawn* GetDefaultObj()
+	static class UBrickSpacer* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ABrickSpectatorPawn>();
+		return GetDefaultObjImpl<UBrickSpacer>();
 	}
 };
-DUMPER7_ASSERTS_ABrickSpectatorPawn;
+DUMPER7_ASSERTS_UBrickSpacer;
 
 // Class BrickRigs.AdminMenuWidget
 // 0x0048 (0x0450 - 0x0408)
@@ -893,22 +809,128 @@ public:
 };
 DUMPER7_ASSERTS_AInventoryItem;
 
-// Class BrickRigs.BrickPropertyInterface
+// Class BrickRigs.BrickVehicle
+// 0x0858 (0x0BB0 - 0x0358)
+class alignas(0x10) ABrickVehicle : public APawn
+{
+public:
+	uint8                                         Pad_358[0x108];                                    // 0x0358(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUGCFileInfo                           VehicleFileInfo;                                   // 0x0460(0x00E8)(Net, Transient, NativeAccessSpecifierPrivate)
+	struct FPawnRestartTransform                  RestartTransform;                                  // 0x0548(0x001C)(Net, Transient, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_564[0x4];                                      // 0x0564(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRepVehicleMovement                    RepVehicleMovement;                                // 0x0568(0x0120)(Net, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         bRepairAtRestartTransform : 1;                     // 0x0688(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Net, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_689[0x2F];                                     // 0x0689(0x002F)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABrickPlayerState*                      SpawningPlayerState;                               // 0x06B8(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AActor*                                 OriginalSpawnPoint;                                // 0x06C0(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UBrickConnection*>               BrickConnections;                                  // 0x06C8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<class UBrickConnection*>               DynamicBrickConnections;                           // 0x06D8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<class UBrickConnection*>               ExternalBrickConnections;                          // 0x06E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<class UBrickConnection*>               BrickConnectionsToBreak;                           // 0x06F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	struct FRepBrickConnectionDamage              RepBrickConnectionDamage;                          // 0x0708(0x0120)(Net, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_828[0x10];                                     // 0x0828(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRepBrickDamage                        RepBrickDamage;                                    // 0x0838(0x0120)(Net, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_958[0x4];                                      // 0x0958(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint16                                        RepFuelLevelRatio;                                 // 0x095C(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_95E[0x6];                                      // 0x095E(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	EVehiclePinMode                               PinMode;                                           // 0x0964(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_965[0x3];                                      // 0x0965(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGenericTeamId>                 PassengerTeamIds;                                  // 0x0968(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_978[0x10];                                     // 0x0978(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrick*                                 RootBrick;                                         // 0x0988(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USeatBrick*                             DriverSeat;                                        // 0x0990(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_998[0x148];                                    // 0x0998(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickVehicleComponent*                 VehicleComponent;                                  // 0x0AE0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAudioComponent*                        HandlingAudioComponent;                            // 0x0AE8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UHUDIconComponent*                      HUDIconComponent;                                  // 0x0AF0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UFirearmComponent*>              FirearmComponents;                                 // 0x0AF8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	class UInventoryComponent*                    InventoryComponent;                                // 0x0B08(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBoxComponent*                          SpawnCollisionBox;                                 // 0x0B10(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B18[0x90];                                     // 0x0B18(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UBrickVehicleStaticInfo>    StaticInfoClass;                                   // 0x0BA8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void BindOnVehicleConstructed(const TDelegate<void()>& InDelegate);
+	void ConstructVehicle(const struct FUGCFileInfo& InFileInfo, class AActor* InSpawnPoint, class ABrickPlayerController* InSpawningPC, bool bAvoidCollision);
+	void DebugVehicleClusters();
+	void EjectAllCharacters();
+	void ExplodeVehicle();
+	void Interact_EnterVehicle(class ABrickPlayerController* OtherPC);
+	void Interact_ScrapVehicleFromInteraction(class ABrickPlayerController* OtherPC);
+	void Interact_ScrapVehicleFromMap(class ABrickPlayerController* OtherPC);
+	void OnRep_PassengerTeamIds();
+	void OnRep_PinMode();
+	void OnRep_RepFuelLevelRatio();
+	void OnRep_RestartTransform();
+	void PlayHandlingSound(class USoundBase* Sound);
+	void RepairVehicle(const struct FVector& InLocation, const struct FRotator& InRotation, class AActor* InSpawnPoint, const bool bAvoidCollision, const bool bRepair);
+	void ScrapVehicle();
+	void ServerApplySeatCollisionDamage(const struct FBrickEditorObjectID& SeatID, float DamageAmount, const struct FRestartTransformVersion& ComparisonIndex);
+	void ServerExplodeTankBricks(const TArray<struct FBrickEditorObjectID>& Tanks, const struct FRestartTransformVersion& ComparisonIndex);
+	void ServerOnBrokeDestructibleInstances(class UDestructibleInstancesComponent* Comp, const TArray<uint16>& Instances, const struct FRestartTransformVersion& ComparisonIndex);
+	void SetFuelLevel(float NewLevel);
+	void SetPinMode(EVehiclePinMode NewMode);
+	void SetRelativeFuelLevel(const float NewLevel);
+
+	int32 GetAmmo() const;
+	int32 GetAmmoCapacity() const;
+	const TArray<class UBrick*> GetBricks() const;
+	const TArray<struct FBrickEditorObjectID> GetCameras() const;
+	class ABrickCharacter* GetDriverCharacter() const;
+	class USeatBrick* GetDriverSeat() const;
+	float GetFuelCapacity() const;
+	float GetFuelLevel() const;
+	const TArray<struct FBrickEditorObjectID> GetGuns() const;
+	class UInventoryComponent* GetInventoryComponent() const;
+	int32 GetNumPassengers() const;
+	void GetPassengers(TArray<class ABrickCharacter*>* OutPassengers) const;
+	EVehiclePinMode GetPinMode() const;
+	class UBrick* GetRootBrick() const;
+	const TArray<struct FBrickEditorObjectID> GetSeats() const;
+	class ABrickPlayerState* GetSpawningPlayerState() const;
+	const class UBrickVehicleStaticInfo* GetStaticInfo() const;
+	class UBrickVehicleComponent* GetVehicleComponent() const;
+	class FText GetVehicleDisplayName() const;
+	const struct FUGCFileInfo GetVehicleFileInfo() const;
+	class USeatBrick* GetViewedSeat() const;
+	class UCameraBrick* GetViewTargetCamera() const;
+	bool HasVisibleSeat() const;
+	bool IsInteracting() const;
+	bool IsVehicleBeingConstructed() const;
+	bool IsVehicleConstructed() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickVehicle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickVehicle")
+	}
+	static class ABrickVehicle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickVehicle>();
+	}
+};
+DUMPER7_ASSERTS_ABrickVehicle;
+
+// Class BrickRigs.ProjectileSeekingInterface
 // 0x0000 (0x0000 - 0x0000)
-class IBrickPropertyInterface final
+class IProjectileSeekingInterface final
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickPropertyInterface")
+		STATIC_CLASS_IMPL("ProjectileSeekingInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickPropertyInterface")
+		STATIC_NAME_IMPL(L"ProjectileSeekingInterface")
 	}
-	static class IBrickPropertyInterface* GetDefaultObj()
+	static class IProjectileSeekingInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IBrickPropertyInterface>();
+		return GetDefaultObjImpl<IProjectileSeekingInterface>();
 	}
 
 	class UObject* AsUObject()
@@ -920,7 +942,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IBrickPropertyInterface;
+DUMPER7_ASSERTS_IProjectileSeekingInterface;
 
 // Class BrickRigs.AmmoBox
 // 0x0008 (0x0350 - 0x0348)
@@ -946,7 +968,7 @@ public:
 DUMPER7_ASSERTS_AAmmoBox;
 
 // Class BrickRigs.ItemStaticInfo
-// 0x0390 (0x03C0 - 0x0030)
+// 0x03A0 (0x03D0 - 0x0030)
 class UItemStaticInfo : public UObject
 {
 public:
@@ -960,24 +982,24 @@ public:
 	TSubclassOf<class UAnimInstance>              AnimInstanceClass;                                 // 0x00B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x00B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DisplayName;                                       // 0x00C0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          bCanBeEquipped;                                    // 0x00D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SortOrder;                                         // 0x00E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  ItemTags;                                          // 0x00E8(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  SlotTags;                                          // 0x0108(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         Price;                                             // 0x0128(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FItemAimParams                         AimParams;                                         // 0x0130(0x0040)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                CharacterSocketRelativeLoc;                        // 0x0170(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               CharacterSocketRelativeRot;                        // 0x017C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class USoundBase*                             CollisionSound;                                    // 0x0188(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      IdleSequence;                                      // 0x0190(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      SprintSequence;                                    // 0x0198(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEquipAnimation                        EquipAnimation;                                    // 0x01A0(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FUnequipAnimation                      UnequipAnimation;                                  // 0x0280(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FTransform                             IdlePoseOffsetFP;                                  // 0x0360(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             IdlePoseOffsetTP;                                  // 0x0390(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FText                                   CategoryDisplayName;                               // 0x00D8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          bCanBeEquipped;                                    // 0x00F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SortOrder;                                         // 0x00F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  ItemTags;                                          // 0x00F8(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  SlotTags;                                          // 0x0118(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         Price;                                             // 0x0138(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FItemAimParams                         AimParams;                                         // 0x0140(0x0040)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                CharacterSocketRelativeLoc;                        // 0x0180(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               CharacterSocketRelativeRot;                        // 0x018C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class USoundBase*                             CollisionSound;                                    // 0x0198(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      IdleSequence;                                      // 0x01A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      SprintSequence;                                    // 0x01A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FEquipAnimation                        EquipAnimation;                                    // 0x01B0(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FUnequipAnimation                      UnequipAnimation;                                  // 0x0290(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FTransform                             IdlePoseOffsetFP;                                  // 0x0370(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransform                             IdlePoseOffsetTP;                                  // 0x03A0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -995,47 +1017,57 @@ public:
 };
 DUMPER7_ASSERTS_UItemStaticInfo;
 
-// Class BrickRigs.BrickTextBlock
-// 0x0010 (0x0468 - 0x0458)
-class UBrickTextBlock final : public UTextBlock
+// Class BrickRigs.BrickTeam
+// 0x00A8 (0x00D8 - 0x0030)
+class UBrickTeam : public UObject
 {
 public:
-	uint8                                         Pad_458[0x8];                                      // 0x0458(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	EBrickUIColorStyle                            ColorStyle;                                        // 0x0460(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickUIStyleState                            StyleState;                                        // 0x0461(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickUITextStyle                             TextStyle;                                         // 0x0462(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_463[0x5];                                      // 0x0463(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x6];                                       // 0x0030(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint16                                        Score;                                             // 0x0036(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        MaxScore;                                          // 0x0038(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayName;                                       // 0x0040(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UTexture2D>              BadgeTexture;                                      // 0x0058(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TeamColor;                                         // 0x0088(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInventoryLoadout                      DefaultLoadout;                                    // 0x0098(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x30];                                      // 0x00A8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
-	void SetStyleState(EBrickUIStyleState NewState);
-	void SetTextStyle(EBrickUITextStyle NewStyle);
+	void OnRep_MaxScore();
+	void OnRep_Score();
+	void SetMaxScore(int32 NewMaxScore);
+	void SetScore(int32 NewScore);
+
+	int32 GetMaxScore() const;
+	int32 GetScore() const;
+	class FText GetTeamDisplayName() const;
+	const struct FGenericTeamId GetTeamId() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickTextBlock")
+		STATIC_CLASS_IMPL("BrickTeam")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickTextBlock")
+		STATIC_NAME_IMPL(L"BrickTeam")
 	}
-	static class UBrickTextBlock* GetDefaultObj()
+	static class UBrickTeam* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickTextBlock>();
+		return GetDefaultObjImpl<UBrickTeam>();
 	}
 };
-DUMPER7_ASSERTS_UBrickTextBlock;
+DUMPER7_ASSERTS_UBrickTeam;
 
 // Class BrickRigs.AmmoBoxStaticInfo
-// 0x0030 (0x03F0 - 0x03C0)
+// 0x0030 (0x0400 - 0x03D0)
 class UAmmoBoxStaticInfo : public UItemStaticInfo
 {
 public:
-	int32                                         AmmoCapacity;                                      // 0x03C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CompatibleCalibers;                                // 0x03C8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3E8[0x8];                                      // 0x03E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         AmmoCapacity;                                      // 0x03D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CompatibleCalibers;                                // 0x03D8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1073,56 +1105,31 @@ public:
 };
 DUMPER7_ASSERTS_UAntennaBrickStaticInfo;
 
-// Class BrickRigs.BrickWorldSettings
-// 0x01C0 (0x0790 - 0x05D0)
-class ABrickWorldSettings : public AWorldSettings
+// Class BrickRigs.BrickViewportClient
+// 0x0030 (0x03C0 - 0x0390)
+class UBrickViewportClient : public UGameViewportClient
 {
 public:
-	class AWorldSetupActor*                       WorldSetupActor;                                   // 0x05C8(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class APhysicsVolume*                         DefaultWaterPhysicsVolume;                         // 0x05D0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5D8[0x10];                                     // 0x05D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ATrain*>                         SpawnedTrains;                                     // 0x05E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5F8[0x30];                                     // 0x05F8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ACapturePoint*>                  CapturePoints;                                     // 0x0628(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	class UProjectileManagerComponent*            ProjectileManager;                                 // 0x0638(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class ADefaultPhysicsVolume>      DefaultWaterPhysicsVolumeClass;                    // 0x0640(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   WaterBounds;                                       // 0x0648(0x001C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         SeaLevel;                                          // 0x0664(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetWaterBoundsFromWorldBounds;                    // 0x0668(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetSeaLevelFromWorldBounds;                       // 0x0669(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetMBPFromWorldBounds;                            // 0x066A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetKillZFromWorldBounds;                          // 0x066B(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_66C[0x4];                                      // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWorldSetupParams                      EditorWorldSetupParams;                            // 0x0670(0x0030)(Edit, EditorOnly, NativeAccessSpecifierPublic)
-	struct FWeatherConditionParams                EditorWeatherOverride;                             // 0x06A0(0x0068)(Edit, EditorOnly, NativeAccessSpecifierPublic)
-	TArray<struct FTrainTrack>                    TrainTracks;                                       // 0x0708(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FTrainSpawnInfo>                TrainSpawnInfos;                                   // 0x0718(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bBuildTrainTracks;                                 // 0x0728(0x0001)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTrainTrackSplineMeshInfo>      TrainTrackSplineMeshes;                            // 0x0730(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, EditorOnly, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_740[0x50];                                     // 0x0740(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_390[0x30];                                     // 0x0390(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class ABrickWorldSettings* Get(const class UObject* WorldContextObject);
-
-	void AddHeatSeekingTarget(class AActor* Target);
-	void RemoveHeatSeekingTarget(class AActor* Target);
+	static class UBrickViewportClient* Get(const class UObject* WorldContextObject);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickWorldSettings")
+		STATIC_CLASS_IMPL("BrickViewportClient")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickWorldSettings")
+		STATIC_NAME_IMPL(L"BrickViewportClient")
 	}
-	static class ABrickWorldSettings* GetDefaultObj()
+	static class UBrickViewportClient* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ABrickWorldSettings>();
+		return GetDefaultObjImpl<UBrickViewportClient>();
 	}
 };
-DUMPER7_ASSERTS_ABrickWorldSettings;
+DUMPER7_ASSERTS_UBrickViewportClient;
 
 // Class BrickRigs.ArchBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
@@ -1167,104 +1174,64 @@ public:
 };
 DUMPER7_ASSERTS_AAttachment;
 
-// Class BrickRigs.BrickUserSettings
-// 0x0358 (0x0388 - 0x0030)
-class UBrickUserSettings final : public UObject
+// Class BrickRigs.BrickUIStyle
+// 0x63E0 (0x6410 - 0x0030)
+class UBrickUIStyle : public UObject
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         HoldKeyTime;                                       // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         MouseTapTime;                                      // 0x003C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 ConfigVersion;                                     // 0x0040(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EHostServerType                               HostServerType;                                    // 0x0050(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ServerPassword;                                    // 0x0058(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FMatchSettings                         MatchSettings;                                     // 0x0068(0x00C8)(Config, NativeAccessSpecifierPrivate)
-	class FString                                 AdminPassword;                                     // 0x0130(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowAdminLogin;                                  // 0x0140(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowDifferentMods;                               // 0x0141(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyMatchSettings;                               // 0x0142(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFadeMatchSettings;                                // 0x0143(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHUDVisibility                                HUDVisibility;                                     // 0x0144(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EMeasurementSystem                            MeasurementSystem;                                 // 0x0145(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EChatContext                                  ChatContext;                                       // 0x0146(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_147[0x1];                                      // 0x0147(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UBrickUIStyle>              UIStyle;                                           // 0x0148(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FBrickPropertySettings> BrickPropertySettings;                          // 0x0150(0x0050)(Config, NativeAccessSpecifierPrivate)
-	float                                         MasterVolume;                                      // 0x01A0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         MusicVolume;                                       // 0x01A4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         FieldOfView;                                       // 0x01A8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ECameraMode                                   CameraMode;                                        // 0x01AC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ETransmissionMode                             TransmissionMode;                                  // 0x01AD(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAutoCounterSteering;                              // 0x01AE(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1AF[0x1];                                      // 0x01AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MouseSensitivity;                                  // 0x01B0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         GamepadSensitivity;                                // 0x01B4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bInvertViewPitch;                                  // 0x01B8(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bToggleAim;                                        // 0x01B9(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bToggleSprint;                                     // 0x01BA(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bToggleCrouch;                                     // 0x01BB(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputCategory*                         InputCategory;                                     // 0x01C0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 InputMappingSearchText;                            // 0x01C8(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EColorVisionDeficiency                        VisionDeficiencyType;                              // 0x01D8(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         VisionCorrectionSeverity;                          // 0x01DC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EAxis                                         EditorMirrorAxis;                                  // 0x01E0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EBrickEditorViewMode                          EditorViewMode;                                    // 0x01E1(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWorldSetupParams                      EditorWorldSetupParams;                            // 0x01E8(0x0030)(Config, NativeAccessSpecifierPrivate)
-	float                                         EditorUIScale;                                     // 0x0218(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorMouseMoveSensitivity;                        // 0x021C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorGridSnappingDistance;                        // 0x0220(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorGridSnappingAngle;                           // 0x0224(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorBrickSnappingDistance;                       // 0x0228(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorBrickSnappingAngle;                          // 0x022C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bEditorSnappingEnabled;                            // 0x0230(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bEditorGizmoWorldSpace;                            // 0x0231(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EBrickUnitsDisplayMode                        BrickUnitsDisplayMode;                             // 0x0232(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EColorDisplayMode                             ColorDisplayMode;                                  // 0x0233(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorZoomRatio;                                   // 0x0234(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         EditorCameraSpeedRatio;                            // 0x0238(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         FreeCamSpeedRatio;                                 // 0x023C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         FreeCamShiftSpeedRatio;                            // 0x0240(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ProjectileCamZoomRatio;                            // 0x0244(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FFluUGCItemIdWrapper                   MenuVehicleCollection;                             // 0x0248(0x0010)(Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFluUGCItemIdWrapper                   FeaturedVehicleCollection;                         // 0x0258(0x0010)(Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_268[0x18];                                     // 0x0268(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EHUDVisibility NewVisibility)> OnHUDVisibilityChangedDelegate;     // 0x0280(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(EMeasurementSystem NewVisibility)> OnMeasurementSystemChangedDelegate; // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A0[0xD8];                                     // 0x02A0(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const EColorDisplayMode NewDisplayMode)> OnColorDisplayModeChanged; // 0x0378(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class FText                                   StyleDisplayName;                                  // 0x0038(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            ThrobberBrush;                                     // 0x0050(0x00A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         ThrobberRotationSpeed;                             // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHyperlinkStyle                        HyperlinkStyle;                                    // 0x00F8(0x05E0)(Edit, BlueprintVisible, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
+	struct FBrickUIBrushStyle                     BrushStyles[0x9];                                  // 0x06D8(0x0460)(Edit, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ColorStyles[0x7];                                  // 0x2E38(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTextBlockStyle                        TextStyles[0x13];                                  // 0x2EA8(0x02C8)(Edit, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
+	float                                         SpacingStyles[0x3];                                // 0x6380(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                PaddingStyles[0x8];                                // 0x638C(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_640C[0x4];                                     // 0x640C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UBrickUserSettings* GetUserSettings();
+	static class FText FormatRichTextStyle(EBrickUITextStyle Style, const class FText& InText);
+	static EBrickUIColorStyle GetTeamAttitudeColorStyle(ETeamAttitude TeamAttitude);
+	static EBrickUITextStyle GetTeamAttitudeTextStyle(ETeamAttitude TeamAttitude);
+	static void GetUIStyle(TDelegate<void(const class UBrickUIStyle* Style)> Delegate);
+	static EBrickUIColorStyle InvertTeamAttitudeColorStyle(EBrickUIColorStyle ColorStyle);
+	static EBrickUIColorStyle SwitchForegroundColorStyle(const EBrickUIColorStyle ColorStyle);
+	static void UnbindUIStyle(class UObject* Object);
 
-	void CycleBrickUnitsDisplayMode();
-	void SetBrickUnitsDisplayMode(const EBrickUnitsDisplayMode& NewMode);
-	void SetColorDisplayMode(const EColorDisplayMode NewMode);
+	void BuildStyle();
+	void SetBrush(EBrickUIBrushStyle BrushStyle, EBrickUIBrushState BrushState, const struct FSlateBrush& InBrush);
+	void SetColor(EBrickUIColorStyle ColorStyle, const struct FLinearColor& InColor);
+	void SetPaddingStyle(EBrickUIPaddingStyle PaddingStyle, const struct FMargin& InPadding);
+	void SetSpacingStyle(EBrickUISpacingStyle SpacingStyle, float InSpacing);
+	void SetTextStyle(EBrickUITextStyle TextStyle, const struct FTextBlockStyle& InTextStyle);
 
-	EBrickUnitsDisplayMode GetBrickUnitsDisplayMode() const;
-	EColorDisplayMode GetColorDisplayMode() const;
+	const struct FSlateBrush GetBrush(EBrickUIBrushStyle BrushStyle, EBrickUIBrushState BrushState, const struct FSlateBrush& Fallback) const;
+	const struct FLinearColor GetColor(EBrickUIColorStyle ColorStyle, const struct FLinearColor& Fallback) const;
+	struct FMargin GetPadding(EBrickUIPaddingStyle PaddingStyle, const struct FMargin& Fallback) const;
+	float GetSpacing(EBrickUISpacingStyle SpacingStyle, float Fallback) const;
+	const struct FTextBlockStyle GetTextStyle(EBrickUITextStyle TextStyle, const struct FTextBlockStyle& Fallback) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickUserSettings")
+		STATIC_CLASS_IMPL("BrickUIStyle")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickUserSettings")
+		STATIC_NAME_IMPL(L"BrickUIStyle")
 	}
-	static class UBrickUserSettings* GetDefaultObj()
+	static class UBrickUIStyle* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickUserSettings>();
+		return GetDefaultObjImpl<UBrickUIStyle>();
 	}
 };
-DUMPER7_ASSERTS_UBrickUserSettings;
+DUMPER7_ASSERTS_UBrickUIStyle;
 
 // Class BrickRigs.AttachmentStaticInfo
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x03D0 - 0x03D0)
 class UAttachmentStaticInfo : public UItemStaticInfo
 {
 public:
@@ -1285,7 +1252,7 @@ DUMPER7_ASSERTS_UAttachmentStaticInfo;
 
 // Class BrickRigs.AxleBrickStaticInfo
 // 0x0008 (0x01A8 - 0x01A0)
-class UAxleBrickStaticInfo : public UBrickStaticInfo
+class UAxleBrickStaticInfo: public UBrickStaticInfo
 {
 public:
 	float                                         SuspensionStiffness;                               // 0x01A0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1307,64 +1274,74 @@ public:
 };
 DUMPER7_ASSERTS_UAxleBrickStaticInfo;
 
-// Class BrickRigs.BrickStatics
-// 0x0000 (0x0030 - 0x0030)
-class UBrickStatics final : public UBlueprintFunctionLibrary
+// Class BrickRigs.BrickEditorStaticMeshComponent
+// 0x0010 (0x0630 - 0x0620)
+class UBrickEditorStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	static class FString ColorToHex(const struct FLinearColor& Color, const bool bIncludeAlpha);
-	static struct FUniqueNetIdRepl CreateUniqueNetId(const class FName& OSSName, const class FString& Str);
-	static bool ExtinguishActor(const struct FHitResult& Hit);
-	static struct FUniqueNetIdRepl GetPlayerUniqueNetId(const class APlayerController* PC);
-	static class FString GetProjectVersion();
-	static EConnectorSpacing GetScalableBrickConnectorSpacingAxis(const struct FScalableBrickConnectorSpacing& ConnectorSpacing, const EFluAxisSigned Axis);
-	static struct FLinearColor HexToColor(const class FString& Hex);
-	static bool IsModdedAsset(const class UObject* Asset);
-	static bool SetActorOnFire(const struct FHitResult& Hit, class APawn* Instigator, class AActor* DamageCauser);
-	static void SetScalableBrickConnectorSpacingAxis(struct FScalableBrickConnectorSpacing& ConnectorSpacing, const EFluAxisSigned Axis, const EConnectorSpacing NewSpacing);
-	static bool ShowPlayerProfileUI(const class APlayerController* OwnPC, const struct FUniqueNetIdRepl& PlayerId);
-	static void SpawnExplosion(class UObject* WorldContextObject, TSubclassOf<class UExplosiveMaterial> ExplosiveMaterial, float Volume, const struct FVector& Location, const struct FRotator& Rotation, class APawn* Instigator, class AActor* DamageCauser, const TArray<class UPrimitiveComponent*>& ComponentsToIgnore);
-	static bool SpreadFire(class UObject* WorldContextObject, const struct FTransform& Transform, const struct FVector& BoundsMin, const struct FVector& BoundsMax, float SpreadDistance, float SpreadProbability);
-	static class FString UniqueNetIdToString(const struct FUniqueNetIdRepl& UniqueNetId);
+	uint8                                         Pad_618[0x18];                                     // 0x0618(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickStatics")
+		STATIC_CLASS_IMPL("BrickEditorStaticMeshComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickStatics")
+		STATIC_NAME_IMPL(L"BrickEditorStaticMeshComponent")
 	}
-	static class UBrickStatics* GetDefaultObj()
+	static class UBrickEditorStaticMeshComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickStatics>();
+		return GetDefaultObjImpl<UBrickEditorStaticMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBrickStatics;
+DUMPER7_ASSERTS_UBrickEditorStaticMeshComponent;
+
+// Class BrickRigs.BrickStaticMeshComponent
+// 0x0020 (0x0650 - 0x0630)
+class UBrickStaticMeshComponent : public UBrickEditorStaticMeshComponent
+{
+public:
+	uint8                                         Pad_630[0x20];                                     // 0x0630(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickStaticMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickStaticMeshComponent")
+	}
+	static class UBrickStaticMeshComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickStaticMeshComponent>();
+	}
+};
+DUMPER7_ASSERTS_UBrickStaticMeshComponent;
 
 // Class BrickRigs.AxleBrick
-// 0x0090 (0x0180 - 0x00F0)
-class UAxleBrick final : public UBrick
+// 0x0080 (0x0170 - 0x00F0)
+class UAxleBrick : public UBrick
 {
 public:
 	TArray<class UWheelConnection*>               WheelConnections;                                  // 0x00F0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_100[0x10];                                     // 0x0100(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   BrakeInputChannel;                                 // 0x0110(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FVehicleInputChannel                   SteeringInputChannel;                              // 0x0138(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         SuspensionLength;                                  // 0x0160(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SuspensionStiffness;                               // 0x0164(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SuspensionDamping;                                 // 0x0168(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDriven;                                           // 0x016C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvertDrive;                                      // 0x016D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasBrake;                                         // 0x016E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasHandBrake;                                     // 0x016F(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BrakeStrength;                                     // 0x0170(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SteeringAngle;                                     // 0x0174(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SteeringSpeed;                                     // 0x0178(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanDisableSteering;                               // 0x017C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanInvertSteering;                                // 0x017D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17E[0x2];                                      // 0x017E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   BrakeInputChannel;                                 // 0x0110(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FVehicleInputChannel                   SteeringInputChannel;                              // 0x0130(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         SuspensionLength;                                  // 0x0150(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuspensionStiffness;                               // 0x0154(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuspensionDamping;                                 // 0x0158(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDriven;                                           // 0x015C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvertDrive;                                      // 0x015D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasBrake;                                         // 0x015E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasHandBrake;                                     // 0x015F(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BrakeStrength;                                     // 0x0160(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteeringAngle;                                     // 0x0164(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteeringSpeed;                                     // 0x0168(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanDisableSteering;                               // 0x016C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanInvertSteering;                                // 0x016D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16E[0x2];                                      // 0x016E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1382,35 +1359,31 @@ public:
 };
 DUMPER7_ASSERTS_UAxleBrick;
 
-// Class BrickRigs.SightStaticInfo
-// 0x0080 (0x0440 - 0x03C0)
-class USightStaticInfo : public UAttachmentStaticInfo
+// Class BrickRigs.SirenType
+// 0x0038 (0x0068 - 0x0030)
+class USirenType : public UObject
 {
 public:
-	TSoftObjectPtr<class UMaterialInterface>      ReticleMaterial;                                   // 0x03C0(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LenseRadius;                                       // 0x03F0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UMaterialInterface>      OcclusionMaterial;                                 // 0x03F8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RailFlangeLength;                                  // 0x0428(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RearOverhang;                                      // 0x042C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FrontOverhang;                                     // 0x0430(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_434[0xC];                                      // 0x0434(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayName;                                       // 0x0038(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class USoundBase*                             HornSound;                                         // 0x0050(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class USoundBase*>                     SirenSounds;                                       // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SightStaticInfo")
+		STATIC_CLASS_IMPL("SirenType")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SightStaticInfo")
+		STATIC_NAME_IMPL(L"SirenType")
 	}
-	static class USightStaticInfo* GetDefaultObj()
+	static class USirenType* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USightStaticInfo>();
+		return GetDefaultObjImpl<USirenType>();
 	}
 };
-DUMPER7_ASSERTS_USightStaticInfo;
+DUMPER7_ASSERTS_USirenType;
 
 // Class BrickRigs.BarrelAttachment
 // 0x0000 (0x0348 - 0x0348)
@@ -1432,33 +1405,58 @@ public:
 };
 DUMPER7_ASSERTS_ABarrelAttachment;
 
-// Class BrickRigs.BrickVerticalBox
-// 0x0010 (0x0268 - 0x0258)
-class UBrickVerticalBox final : public UVerticalBox
+// Class BrickRigs.BrickVehicleStaticInfo
+// 0x00F8 (0x0128 - 0x0030)
+class UBrickVehicleStaticInfo : public UObject
 {
 public:
-	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	EBrickUISpacingStyle                          SlotSpacingStyle;                                  // 0x0260(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetSlotSpacingStyle(EBrickUISpacingStyle NewStyle);
+	float                                         MaxConstructionLoopFrameTime;                      // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxConstructionTime;                               // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxCollisionEffectSpawnDist;                       // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinCollisionEffectSpeed;                           // 0x003C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinSlidingEffectSpeed;                             // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinCollisionSoundDelay;                            // 0x0044(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         SlidingSpeedRange;                                 // 0x0048(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             CollisionSound;                                    // 0x0050(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UParticleSystem*                        FireEmitter;                                       // 0x0058(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             FireSound;                                         // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickPattern>              BrickBurntPattern;                                 // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInt32Interval                         NumBurnIntervalsRange;                             // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         BurnTimeRange;                                     // 0x0078(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ExtinguishCooldownRange;                           // 0x0080(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FireSpreadProbability;                             // 0x0088(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FireSpreadDistance;                                // 0x008C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundAttenuation*                      HandlingSoundAttenuation;                          // 0x0090(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             SwitchSound;                                       // 0x0098(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x00A0(0x0018)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         MinZoomVehicleBoundsRadius;                        // 0x00B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultZoomRatio;                                  // 0x00BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               DefaultViewRotation;                               // 0x00C0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ViewRotationInterpSpeed;                           // 0x00CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         VelocityCameraInputSpeedRange;                     // 0x00D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CameraLocationInterpSpeed;                         // 0x00D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CameraVelocityInterpSpeed;                         // 0x00DC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHUDIconProperties                     HUDIconProperties;                                 // 0x00E0(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         IconOffsetZ;                                       // 0x0118(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxFriendlyIconDrawDist;                           // 0x011C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHostileIconDrawDist;                            // 0x0120(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickVerticalBox")
+		STATIC_CLASS_IMPL("BrickVehicleStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickVerticalBox")
+		STATIC_NAME_IMPL(L"BrickVehicleStaticInfo")
 	}
-	static class UBrickVerticalBox* GetDefaultObj()
+	static class UBrickVehicleStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBrickVerticalBox>();
+		return GetDefaultObjImpl<UBrickVehicleStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UBrickVerticalBox;
+DUMPER7_ASSERTS_UBrickVehicleStaticInfo;
 
 // Class BrickRigs.BarrelBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
@@ -1480,67 +1478,74 @@ public:
 };
 DUMPER7_ASSERTS_UBarrelBrickStaticInfo;
 
-// Class BrickRigs.PagedListEntryWidget
-// 0x0028 (0x0420 - 0x03F8)
-class UPagedListEntryWidget : public UUserWidget
+// Class BrickRigs.PropertyWidget
+// 0x0020 (0x0418 - 0x03F8)
+class UPropertyWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickButtonWidget*                     Button;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_410[0x10];                                     // 0x0410(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F8[0x1A];                                     // 0x03F8(0x001A)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bSupportsReadOnly;                                 // 0x0412(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportsWritable;                                 // 0x0413(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFillWidth;                                        // 0x0414(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_415[0x3];                                      // 0x0415(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeEntry();
-	void OnClickedEntry();
-	void OnDoubleClickedEntry();
-	void UpdateButtonSelected(bool bNewSelected);
+	void UpdateIsReadOnly(bool bNewReadOnly);
+
+	class FName GetFocusedSubProperty(const struct FWidgetPathWrapper& WidgetPath) const;
+	class UPropertyContainerWidget* GetPropertyContainerWidget() const;
+	bool IsReadOnly() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PagedListEntryWidget")
+		STATIC_CLASS_IMPL("PropertyWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PagedListEntryWidget")
+		STATIC_NAME_IMPL(L"PropertyWidget")
 	}
-	static class UPagedListEntryWidget* GetDefaultObj()
+	static class UPropertyWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPagedListEntryWidget>();
+		return GetDefaultObjImpl<UPropertyWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPagedListEntryWidget;
+DUMPER7_ASSERTS_UPropertyWidget;
 
-// Class BrickRigs.UGCItemWidget
-// 0x0108 (0x0528 - 0x0420)
-class UUGCItemWidget : public UPagedListEntryWidget
+// Class BrickRigs.UGCTagsPropertyWidget
+// 0x0018 (0x0430 - 0x0418)
+class UUGCTagsPropertyWidget : public UPropertyWidget
 {
 public:
-	struct FUGCFileInfo                           Entry;                                             // 0x0420(0x00E8)(Transient, NativeAccessSpecifierPrivate)
-	class UBrickImage*                            Image;                                             // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ThumbnailRoundedEdgeRadius;                        // 0x0518(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector2D                              ThumbnailShadowOffset;                             // 0x051C(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_524[0x4];                                      // 0x0524(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UBrickComboBoxWidget*                   TypeComboBox;                                      // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickComboBoxWidget*                   EraComboBox;                                       // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickComboBoxWidget*                   DepartmentComboBox;                                // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void UpdateItemWidget(bool bInIsSelected, bool bInIsLegacyFile, bool bInHasAutoSave, bool bInIsDedicatedAutoSave);
+	void ClearTags();
+	void InitializeDepartmentItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
+	void InitializeEraItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
+	void InitializeTypeItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
+	void OnDepartmentItemSelected(int32 Item, EValueChangedEventType EventType);
+	void OnEraItemSelected(int32 Item, EValueChangedEventType EventType);
+	void OnTypeItemSelected(int32 Item, EValueChangedEventType EventType);
+	void UpdateUGCTagsProperty(const bool bIsFilterTags, const bool bAnyTagsSelected);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UGCItemWidget")
+		STATIC_CLASS_IMPL("UGCTagsPropertyWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UGCItemWidget")
+		STATIC_NAME_IMPL(L"UGCTagsPropertyWidget")
 	}
-	static class UUGCItemWidget* GetDefaultObj()
+	static class UUGCTagsPropertyWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUGCItemWidget>();
+		return GetDefaultObjImpl<UUGCTagsPropertyWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUGCItemWidget;
+DUMPER7_ASSERTS_UUGCTagsPropertyWidget;
 
 // Class BrickRigs.BrickGameMode
 // 0x0140 (0x0530 - 0x03F0)
@@ -1658,7 +1663,7 @@ DUMPER7_ASSERTS_ABrickGameMode;
 
 // Class BrickRigs.BattleGameMode
 // 0x0000 (0x0530 - 0x0530)
-class ABattleGameMode : public ABrickGameMode
+class ABattleGameMode: public ABrickGameMode
 {
 public:
 	static class UClass* StaticClass()
@@ -1678,7 +1683,7 @@ DUMPER7_ASSERTS_ABattleGameMode;
 
 // Class BrickRigs.BarrelBrick
 // 0x0000 (0x00F0 - 0x00F0)
-class UBarrelBrick final : public UBrick
+class UBarrelBrick : public UBrick
 {
 public:
 	static class UClass* StaticClass()
@@ -1696,83 +1701,41 @@ public:
 };
 DUMPER7_ASSERTS_UBarrelBrick;
 
-// Class BrickRigs.HUDIconWidget
-// 0x0028 (0x0420 - 0x03F8)
-class UHUDIconWidget : public UUserWidget
+// Class BrickRigs.SpawnArea
+// 0x0048 (0x0340 - 0x02F8)
+class ASpawnArea : public AActor
 {
 public:
-	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickImage*                            IconImage;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector2D                              IconSize;                                          // 0x0418(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void InitializeIcon();
-	void PostInitializeIcon();
-	void SetIconColorStyle(EBrickUIColorStyle NewColorStyle);
-	void SetIconSlot(const struct FBrickUIIconSlot& NewSlot);
-	void UninitializeIcon();
-	void UpdateIconRotation(float NewRotation);
-	void UpdateIconStyle(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InStyleState);
-	void UpdateNameText();
-
-	class FText GetIconDisplayName() const;
-	bool GetIconWorldRotation(float* OutRotation) const;
+	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDIconComponent*                      HUDIconComponent;                                  // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FHUDIconProperties                     HUDIconProperties;                                 // 0x0308(0x0038)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HUDIconWidget")
+		STATIC_CLASS_IMPL("SpawnArea")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HUDIconWidget")
+		STATIC_NAME_IMPL(L"SpawnArea")
 	}
-	static class UHUDIconWidget* GetDefaultObj()
+	static class ASpawnArea* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHUDIconWidget>();
+		return GetDefaultObjImpl<ASpawnArea>();
 	}
 };
-DUMPER7_ASSERTS_UHUDIconWidget;
-
-// Class BrickRigs.CapturePointIconWidget
-// 0x0040 (0x0460 - 0x0420)
-class UCapturePointIconWidget : public UHUDIconWidget
-{
-public:
-	class ABaseCharacter*                         PlayerCharacter;                                   // 0x0420(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ACapturePoint*                          CapturePoint;                                      // 0x0428(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               MID;                                               // 0x0440(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_448[0x8];                                      // 0x0448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickImage*                            CaptureProgressImage;                              // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        CharTextBlock;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CapturePointIconWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CapturePointIconWidget")
-	}
-	static class UCapturePointIconWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCapturePointIconWidget>();
-	}
-};
-DUMPER7_ASSERTS_UCapturePointIconWidget;
+DUMPER7_ASSERTS_ASpawnArea;
 
 // Class BrickRigs.BarrelStaticInfo
-// 0x0070 (0x0430 - 0x03C0)
+// 0x0070 (0x0440 - 0x03D0)
 class UBarrelStaticInfo : public UAttachmentStaticInfo
 {
 public:
-	struct FMuzzleEffect                          MuzzleEffect;                                      // 0x03C0(0x0060)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         InitialSpeedScale;                                 // 0x0420(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RangeScale;                                        // 0x0424(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamageScale;                                       // 0x0428(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMuzzleEffect                          MuzzleEffect;                                      // 0x03D0(0x0060)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         InitialSpeedScale;                                 // 0x0430(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RangeScale;                                        // 0x0434(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamageScale;                                       // 0x0438(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1847,7 +1810,14 @@ public:
 	void ServerMoveInventoryItems(const struct FMoveInventoryItemParams& Params_0, const struct FPlayerViewPoint& ViewPoint);
 	void ServerPerformMeleeAction();
 
+	class UInputComponent* GetCharacterInputComponent() const;
+	ECharacterHealingState GetHealingState() const;
+	float GetHealth() const;
+	ECharacterStateOfHealth GetStateOfHealth() const;
+	bool IsAlive() const;
 	bool IsConscious() const;
+	bool IsDead() const;
+	bool IsUnconscious() const;
 
 public:
 	static class UClass* StaticClass()
@@ -1865,39 +1835,33 @@ public:
 };
 DUMPER7_ASSERTS_ABaseCharacter;
 
-// Class BrickRigs.CameraBrickStaticInfo
-// 0x0610 (0x07B0 - 0x01A0)
-class UCameraBrickStaticInfo : public UBrickStaticInfo
+// Class BrickRigs.BrickWrapBox
+// 0x0010 (0x0278 - 0x0268)
+class UBrickWrapBox : public UWrapBox
 {
 public:
-	struct FVector                                LenseOffset;                                       // 0x01A0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x01AC(0x0018)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bViewRotationInWorldSpace;                         // 0x01C4(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRotateViewWhenInteracting;                        // 0x01C5(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6[0xA];                                      // 0x01C6(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   PostProcessSettings;                               // 0x01D0(0x0590)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     NotConnectedPostProcessMaterial;                   // 0x0760(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   HUDWidgetClass;                                    // 0x0768(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTargetRange;                                    // 0x0798(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ViewPitchRange;                                    // 0x079C(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ViewYawRange;                                      // 0x07A4(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7AC[0x4];                                      // 0x07AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EBrickUISpacingStyle                          SlotPaddingStyle;                                  // 0x0270(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSlotPaddingStyle(const EBrickUISpacingStyle NewStyle);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CameraBrickStaticInfo")
+		STATIC_CLASS_IMPL("BrickWrapBox")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CameraBrickStaticInfo")
+		STATIC_NAME_IMPL(L"BrickWrapBox")
 	}
-	static class UCameraBrickStaticInfo* GetDefaultObj()
+	static class UBrickWrapBox* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCameraBrickStaticInfo>();
+		return GetDefaultObjImpl<UBrickWrapBox>();
 	}
 };
-DUMPER7_ASSERTS_UCameraBrickStaticInfo;
+DUMPER7_ASSERTS_UBrickWrapBox;
 
 // Class BrickRigs.BaseCharacterMovementComponent
 // 0x0010 (0x0B10 - 0x0B00)
@@ -1905,7 +1869,7 @@ class UBaseCharacterMovementComponent : public UCharacterMovementComponent
 {
 public:
 	uint8                                         Pad_B00[0xC];                                      // 0x0B00(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxSprintSpeed;                                    // 0x0B0C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSprintSpeed;                                    // 0x0B0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1923,71 +1887,78 @@ public:
 };
 DUMPER7_ASSERTS_UBaseCharacterMovementComponent;
 
-// Class BrickRigs.PropertyWidget
-// 0x0020 (0x0418 - 0x03F8)
-class UPropertyWidget : public UUserWidget
+// Class BrickRigs.CharacterAction
+// 0x0060 (0x0090 - 0x0030)
+class UCharacterAction : public UObject
 {
 public:
-	uint8                                         Pad_3F8[0x1A];                                     // 0x03F8(0x001A)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bSupportsReadOnly;                                 // 0x0412(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportsWritable;                                 // 0x0413(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateIsReadOnly(bool bNewReadOnly);
-
-	class FName GetFocusedSubProperty(const struct FWidgetPathWrapper& WidgetPath) const;
-	class UPropertyContainerWidget* GetPropertyContainerWidget() const;
-	bool IsReadOnly() const;
+	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           ItemMontage;                                       // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ActionLength;                                      // 0x0070(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlayRate;                                          // 0x0074(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECharacterActionLayer                         ActionLayer;                                       // 0x0078(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CharacterMontage;                                  // 0x0080(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USoundBase*                             FoleySound;                                        // 0x0088(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PropertyWidget")
+		STATIC_CLASS_IMPL("CharacterAction")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PropertyWidget")
+		STATIC_NAME_IMPL(L"CharacterAction")
 	}
-	static class UPropertyWidget* GetDefaultObj()
+	static class UCharacterAction* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPropertyWidget>();
+		return GetDefaultObjImpl<UCharacterAction>();
 	}
 };
-DUMPER7_ASSERTS_UPropertyWidget;
+DUMPER7_ASSERTS_UCharacterAction;
 
-// Class BrickRigs.UGCTagsPropertyWidget
-// 0x0018 (0x0430 - 0x0418)
-class UUGCTagsPropertyWidget : public UPropertyWidget
+// Class BrickRigs.ItemAction
+// 0x0010 (0x00A0 - 0x0090)
+class UItemAction : public UCharacterAction
 {
 public:
-	class UBrickComboBoxWidget*                   TypeComboBox;                                      // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickComboBoxWidget*                   EraComboBox;                                       // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickComboBoxWidget*                   DepartmentComboBox;                                // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void InitializeDepartmentItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
-	void InitializeEraItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
-	void InitializeTypeItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
-	void OnDepartmentItemSelected(int32 Item, EValueChangedEventType EventType);
-	void OnEraItemSelected(int32 Item, EValueChangedEventType EventType);
-	void OnTypeItemSelected(int32 Item, EValueChangedEventType EventType);
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UGCTagsPropertyWidget")
+		STATIC_CLASS_IMPL("ItemAction")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UGCTagsPropertyWidget")
+		STATIC_NAME_IMPL(L"ItemAction")
 	}
-	static class UUGCTagsPropertyWidget* GetDefaultObj()
+	static class UItemAction* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUGCTagsPropertyWidget>();
+		return GetDefaultObjImpl<UItemAction>();
 	}
 };
-DUMPER7_ASSERTS_UUGCTagsPropertyWidget;
+DUMPER7_ASSERTS_UItemAction;
+
+// Class BrickRigs.UnequipAction
+// 0x0000 (0x00A0 - 0x00A0)
+class UUnequipAction : public UItemAction
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnequipAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnequipAction")
+	}
+	static class UUnequipAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnequipAction>();
+	}
+};
+DUMPER7_ASSERTS_UUnequipAction;
 
 // Class BrickRigs.PopupParams
 // 0x0048 (0x0078 - 0x0030)
@@ -2022,33 +1993,28 @@ public:
 DUMPER7_ASSERTS_UPopupParams;
 
 // Class BrickRigs.BaseInputComponent
-// 0x0038 (0x0180 - 0x0148)
+// 0x00B8 (0x0200 - 0x0148)
 class UBaseInputComponent : public UInputComponent
 {
 public:
 	class ABasePlayerController*                  BasePlayerController;                              // 0x0148(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class ABrickPlayerController*                 PlayerController;                                  // 0x0150(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_158[0x24];                                     // 0x0158(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bShowInInputHelp : 1;                              // 0x017C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bForceConsumeInput : 1;                            // 0x017C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_17D[0x3];                                      // 0x017D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_158[0xA0];                                     // 0x0158(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bShowInInputHelp : 1;                              // 0x01F8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bForceConsumeInput : 1;                            // 0x01F8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void LookRight(float Val);
-	void LookUp(float Val);
-	void MouseMoveRight(float Val);
-	void MouseMoveUp(float Val);
-	void OnPressedCycleHUDVisibility();
-	void OnPressedPivotCamera();
-	void OnPressedSpeedDownStep();
-	void OnPressedSpeedUpStep();
-	void OnPressedZoomInStep();
-	void OnPressedZoomOutStep();
-	void OnReleasedPivotCamera();
-	void SpeedUp(float Val);
-	void ZoomIn(float Val);
-
-	class FText GetCycleHUDVisibilityValueText() const;
+	struct FBrActionResult Action_SpeedDownStep(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SpeedUpStep(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ZoomInStep(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ZoomOutStep(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_LookRight(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_LookUp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MouseMoveRight(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MouseMoveUp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_SpeedUp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_ZoomIn(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -2066,44 +2032,64 @@ public:
 };
 DUMPER7_ASSERTS_UBaseInputComponent;
 
-// Class BrickRigs.BrickVehicleDownloadReplicator
-// 0x0030 (0x0328 - 0x02F8)
-class ABrickVehicleDownloadReplicator final : public AActor
+// Class BrickRigs.BrickEditorInterfaceComponent
+// 0x0080 (0x02B0 - 0x0230)
+class UBrickEditorInterfaceComponent : public USceneComponent
 {
 public:
-	class ABrickVehicle*                          Vehicle;                                           // 0x02F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABrickPlayerController*                 SpawningPC;                                        // 0x0300(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FText                                   VehicleDisplayName;                                // 0x0308(0x0018)(Net, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         DownloadProgress;                                  // 0x0320(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UBrickEditorObject*>             BrickEditorObjects;                                // 0x0228(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_238[0x78];                                     // 0x0238(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnRep_DownloadProgress();
+	struct FVector FocusCameraOnBrickEditorObjects(const TArray<class UBrickEditorObject*>& Objects, const struct FTransform& CameraTransform, const struct FVector2D& FOV, const float Margin) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickVehicleDownloadReplicator")
+		STATIC_CLASS_IMPL("BrickEditorInterfaceComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickVehicleDownloadReplicator")
+		STATIC_NAME_IMPL(L"BrickEditorInterfaceComponent")
 	}
-	static class ABrickVehicleDownloadReplicator* GetDefaultObj()
+	static class UBrickEditorInterfaceComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ABrickVehicleDownloadReplicator>();
+		return GetDefaultObjImpl<UBrickEditorInterfaceComponent>();
 	}
 };
-DUMPER7_ASSERTS_ABrickVehicleDownloadReplicator;
+DUMPER7_ASSERTS_UBrickEditorInterfaceComponent;
+
+// Class BrickRigs.BrickVehicleComponent
+// 0x00B0 (0x0360 - 0x02B0)
+class UBrickVehicleComponent : public UBrickEditorInterfaceComponent
+{
+public:
+	uint8                                         Pad_2B0[0xB0];                                     // 0x02B0(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickVehicleComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickVehicleComponent")
+	}
+	static class UBrickVehicleComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickVehicleComponent>();
+	}
+};
+DUMPER7_ASSERTS_UBrickVehicleComponent;
 
 // Class BrickRigs.BasePlayerController
-// 0x0088 (0x06E8 - 0x0660)
+// 0x00B8 (0x0718 - 0x0660)
 class ABasePlayerController : public APlayerController
 {
 public:
-	uint8                                         Pad_660[0x50];                                     // 0x0660(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UPlayerControllerStaticInfo> StaticInfoClass;                                  // 0x06B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoClear, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6B8[0x30];                                     // 0x06B8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_660[0x68];                                     // 0x0660(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UPlayerControllerStaticInfo> StaticInfoClass;                                  // 0x06C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoClear, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6D0[0x48];                                     // 0x06D0(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientOnKickedPlayerListChanged();
@@ -2141,7 +2127,7 @@ DUMPER7_ASSERTS_ABasePlayerController;
 
 // Class BrickRigs.BillboardImage
 // 0x0038 (0x0080 - 0x0048)
-class UBillboardImage final : public UPrimaryDataAsset
+class UBillboardImage : public UPrimaryDataAsset
 {
 public:
 	TSoftObjectPtr<class UTexture2D>              Texture;                                           // 0x0048(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2164,45 +2150,25 @@ public:
 };
 DUMPER7_ASSERTS_UBillboardImage;
 
-// Class BrickRigs.ScalableBrickBaseStaticInfo
+// Class BrickRigs.SteeringWheelBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
-class UScalableBrickBaseStaticInfo : public UBrickStaticInfo
+class USteeringWheelBrickStaticInfo : public UBrickStaticInfo
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ScalableBrickBaseStaticInfo")
+		STATIC_CLASS_IMPL("SteeringWheelBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ScalableBrickBaseStaticInfo")
+		STATIC_NAME_IMPL(L"SteeringWheelBrickStaticInfo")
 	}
-	static class UScalableBrickBaseStaticInfo* GetDefaultObj()
+	static class USteeringWheelBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UScalableBrickBaseStaticInfo>();
+		return GetDefaultObjImpl<USteeringWheelBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UScalableBrickBaseStaticInfo;
-
-// Class BrickRigs.SpinnerBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class USpinnerBrickStaticInfo : public UScalableBrickBaseStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SpinnerBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SpinnerBrickStaticInfo")
-	}
-	static class USpinnerBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USpinnerBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_USpinnerBrickStaticInfo;
+DUMPER7_ASSERTS_USteeringWheelBrickStaticInfo;
 
 // Class BrickRigs.StaticMeshProp
 // 0x0048 (0x0340 - 0x02F8)
@@ -2261,11 +2227,11 @@ public:
 DUMPER7_ASSERTS_ABillboard;
 
 // Class BrickRigs.BindKeyPopupParams
-// 0x0148 (0x01C0 - 0x0078)
-class UBindKeyPopupParams final : public UPopupParams
+// 0x0178 (0x01F0 - 0x0078)
+class UBindKeyPopupParams : public UPopupParams
 {
 public:
-	uint8                                         Pad_78[0x148];                                     // 0x0078(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0x178];                                     // 0x0078(0x0178)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2315,170 +2281,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBindKeyPopupWidget;
-
-// Class BrickRigs.CharacterAction
-// 0x0060 (0x0090 - 0x0030)
-class UCharacterAction : public UObject
-{
-public:
-	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           ItemMontage;                                       // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ActionLength;                                      // 0x0070(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlayRate;                                          // 0x0074(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECharacterActionLayer                         ActionLayer;                                       // 0x0078(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CharacterMontage;                                  // 0x0080(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundBase*                             FoleySound;                                        // 0x0088(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CharacterAction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CharacterAction")
-	}
-	static class UCharacterAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCharacterAction>();
-	}
-};
-DUMPER7_ASSERTS_UCharacterAction;
-
-// Class BrickRigs.ItemAction
-// 0x0010 (0x00A0 - 0x0090)
-class UItemAction : public UCharacterAction
-{
-public:
-	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ItemAction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ItemAction")
-	}
-	static class UItemAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UItemAction>();
-	}
-};
-DUMPER7_ASSERTS_UItemAction;
-
-// Class BrickRigs.UnequipAction
-// 0x0000 (0x00A0 - 0x00A0)
-class UUnequipAction final : public UItemAction
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnequipAction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnequipAction")
-	}
-	static class UUnequipAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnequipAction>();
-	}
-};
-DUMPER7_ASSERTS_UUnequipAction;
-
-// Class BrickRigs.BladeHolderBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UBladeHolderBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BladeHolderBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BladeHolderBrickStaticInfo")
-	}
-	static class UBladeHolderBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBladeHolderBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UBladeHolderBrickStaticInfo;
-
-// Class BrickRigs.TailBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UTailBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TailBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TailBrickStaticInfo")
-	}
-	static class UTailBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTailBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UTailBrickStaticInfo;
-
-// Class BrickRigs.BoolPropertyWidget
-// 0x0008 (0x0420 - 0x0418)
-class UBoolPropertyWidget : public UPropertyWidget
-{
-public:
-	class UBrickComboBoxWidget*                   ComboBox;                                          // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void InitializeItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
-	void OnItemSelected(int32 Item, EValueChangedEventType EventType);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BoolPropertyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BoolPropertyWidget")
-	}
-	static class UBoolPropertyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBoolPropertyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UBoolPropertyWidget;
-
-// Class BrickRigs.BrickAIController
-// 0x0008 (0x0410 - 0x0408)
-class ABrickAIController : public AAIController
-{
-public:
-	float                                         ControlRotationInterpSpeed;                        // 0x0408(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickAIController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickAIController")
-	}
-	static class ABrickAIController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABrickAIController>();
-	}
-};
-DUMPER7_ASSERTS_ABrickAIController;
 
 // Class BrickRigs.BrickEditor
 // 0x02C0 (0x05B8 - 0x02F8)
@@ -2542,9 +2344,170 @@ public:
 };
 DUMPER7_ASSERTS_AVehicleEditor;
 
+// Class BrickRigs.BladeHolderBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UBladeHolderBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BladeHolderBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BladeHolderBrickStaticInfo")
+	}
+	static class UBladeHolderBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBladeHolderBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UBladeHolderBrickStaticInfo;
+
+// Class BrickRigs.HUDIconComponent
+// 0x0090 (0x0150 - 0x00C0)
+class UHUDIconComponent : public UActorComponent
+{
+public:
+	struct FHUDIconProperties                     HUDIconProperties;                                 // 0x00C0(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F8[0x20];                                      // 0x00F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bTestLineOfSight;                                  // 0x0118(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x37];                                     // 0x0119(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static struct FInteractionOption MakeAxisInteractionOption(const class FText& DisplayText, bool bIsEnabled, TDelegate<void(class ABrickPlayerController* InPC, float Val)> OnInteractionAxis);
+	static struct FInteractionOption MakeInteractionOption(const class FText& DisplayText, bool bIsEnabled, TDelegate<void(class ABrickPlayerController* InPC)> OnInteraction);
+
+	void Interact_PlaceMarker(class ABrickPlayerController* PC);
+	void Interact_Spawn(class ABrickPlayerController* PC);
+	void SetGetInteractionOptionsDelegate(TDelegate<void(class ABrickPlayerController* PC, struct FInteractionOptions* OutOptions)> Delegate);
+	void SetGetMaxDrawDistDelegate(TDelegate<void(class ABrickPlayerController* PC)> Delegate);
+	void SetIconLocation(const struct FVector& NewLocation);
+	void SetIconLocationDelegate(TDelegate<void()> Delegate);
+	void SetShouldIconBeVisibleDelegate(TDelegate<void(class ABrickPlayerController* PC, const struct FHUDIconContext& Context)> Delegate);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HUDIconComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HUDIconComponent")
+	}
+	static class UHUDIconComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHUDIconComponent>();
+	}
+};
+DUMPER7_ASSERTS_UHUDIconComponent;
+
+// Class BrickRigs.TargetMarkerIconComponent
+// 0x0028 (0x0178 - 0x0150)
+class UTargetMarkerIconComponent : public UHUDIconComponent
+{
+public:
+	uint8                                         Pad_150[0x28];                                     // 0x0150(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetMarkerIconComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetMarkerIconComponent")
+	}
+	static class UTargetMarkerIconComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetMarkerIconComponent>();
+	}
+};
+DUMPER7_ASSERTS_UTargetMarkerIconComponent;
+
+// Class BrickRigs.BoolPropertyWidget
+// 0x0000 (0x0418 - 0x0418)
+class UBoolPropertyWidget : public UPropertyWidget
+{
+public:
+	void SetValue(const bool bNewValue);
+	void UpdateValue(const bool bNewValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BoolPropertyWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BoolPropertyWidget")
+	}
+	static class UBoolPropertyWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBoolPropertyWidget>();
+	}
+};
+DUMPER7_ASSERTS_UBoolPropertyWidget;
+
+// Class BrickRigs.BrickAIController
+// 0x0008 (0x0410 - 0x0408)
+class ABrickAIController : public AAIController
+{
+public:
+	float                                         ControlRotationInterpSpeed;                        // 0x0408(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickAIController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickAIController")
+	}
+	static class ABrickAIController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickAIController>();
+	}
+};
+DUMPER7_ASSERTS_ABrickAIController;
+
+// Class BrickRigs.ViewTargetInterface
+// 0x0000 (0x0000 - 0x0000)
+class IViewTargetInterface final
+{
+public:
+	class FText GetViewTargetDisplayName() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ViewTargetInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ViewTargetInterface")
+	}
+	static class IViewTargetInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IViewTargetInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IViewTargetInterface;
+
 // Class BrickRigs.BrickAssetManager
 // 0x01E0 (0x0700 - 0x0520)
-class UBrickAssetManager final : public UAssetManager
+class UBrickAssetManager : public UAssetManager
 {
 public:
 	uint8                                         Pad_520[0x8];                                      // 0x0520(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -2591,21 +2554,21 @@ DUMPER7_ASSERTS_UBrickAssetManager;
 
 // Class BrickRigs.BrickBorder
 // 0x0010 (0x03E8 - 0x03D8)
-class UBrickBorder final : public UBorder
+class UBrickBorder : public UBorder
 {
 public:
 	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	EBrickUIBrushStyle                            BrushStyle;                                        // 0x03E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickUIColorStyle                            ColorStyle;                                        // 0x03E1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickUIStyleState                            StyleState;                                        // 0x03E2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickUIBrushState                            BrushState;                                        // 0x03E1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x03E2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EBrickUIPaddingStyle                          PaddingStyle;                                      // 0x03E3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void SetBrushState(EBrickUIBrushState NewState);
 	void SetBrushStyle(EBrickUIBrushStyle NewStyle);
 	void SetColorStyle(EBrickUIColorStyle NewStyle);
 	void SetPaddingStyle(EBrickUIPaddingStyle NewStyle);
-	void SetStyleState(EBrickUIStyleState NewState);
 
 public:
 	static class UClass* StaticClass()
@@ -2623,57 +2586,48 @@ public:
 };
 DUMPER7_ASSERTS_UBrickBorder;
 
-// Class BrickRigs.HUDIconPanelWidget
-// 0x0098 (0x0490 - 0x03F8)
-class UHUDIconPanelWidget : public UUserWidget
+// Class BrickRigs.ScalableBrickBaseStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UScalableBrickBaseStaticInfo : public UBrickStaticInfo
 {
 public:
-	uint8                                         Pad_3F8[0x68];                                     // 0x03F8(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UHUDIconContainerWidget>    IconContainerWidgetClass;                          // 0x0460(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UInteractionWidget>         InteractionWidgetClass;                            // 0x0468(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHUDIconDomain                                IconDomain;                                        // 0x0470(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_471[0x1F];                                     // 0x0471(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScalableBrickBaseStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScalableBrickBaseStaticInfo")
+	}
+	static class UScalableBrickBaseStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScalableBrickBaseStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UScalableBrickBaseStaticInfo;
+
+// Class BrickRigs.SpinnerBrickStaticInfo
+// 0x0050 (0x01F0 - 0x01A0)
+class USpinnerBrickStaticInfo : public UScalableBrickBaseStaticInfo
+{
+public:
+	TMap<ESpinnerBrickShape, struct FDisplayInfo> SpinnerShapeDisplayInfos;                          // 0x01A0(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HUDIconPanelWidget")
+		STATIC_CLASS_IMPL("SpinnerBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HUDIconPanelWidget")
+		STATIC_NAME_IMPL(L"SpinnerBrickStaticInfo")
 	}
-	static class UHUDIconPanelWidget* GetDefaultObj()
+	static class USpinnerBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHUDIconPanelWidget>();
+		return GetDefaultObjImpl<USpinnerBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UHUDIconPanelWidget;
-
-// Class BrickRigs.SpawnPointPanelWidget
-// 0x0010 (0x04A0 - 0x0490)
-class USpawnPointPanelWidget : public UHUDIconPanelWidget
-{
-public:
-	class UBrickGridPanel*                        GridPanel;                                         // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumSpawnPointsPerRow;                              // 0x0498(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SpawnPointPanelWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SpawnPointPanelWidget")
-	}
-	static class USpawnPointPanelWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USpawnPointPanelWidget>();
-	}
-};
-DUMPER7_ASSERTS_USpawnPointPanelWidget;
+DUMPER7_ASSERTS_USpinnerBrickStaticInfo;
 
 // Class BrickRigs.BrickBuildingDebris
 // 0x0050 (0x0348 - 0x02F8)
@@ -2750,62 +2704,54 @@ public:
 };
 DUMPER7_ASSERTS_ABrickBuilding;
 
-// Class BrickRigs.ServerWidget
-// 0x0198 (0x05B8 - 0x0420)
-class UServerWidget : public UPagedListEntryWidget
+// Class BrickRigs.SirenBrick
+// 0x0058 (0x0148 - 0x00F0)
+class USirenBrick : public UBrick
 {
 public:
-	struct FBrickOnlineSessionInfo                Entry;                                             // 0x0420(0x0168)(Transient, NativeAccessSpecifierPrivate)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        MapTextBlock;                                      // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        GameModeTextBlock;                                 // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        PlayerCountTextBlock;                              // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPingIndicatorWidget*                   PingIndicator;                                     // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPingIndicatorWidget*                   FrameRateIndicator;                                // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void UpdateServer(const struct FBrickOnlineSessionInfo& SessionInfo);
+	uint8                                         Pad_F0[0x28];                                      // 0x00F0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class USirenType>                 SirenType;                                         // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         HornPitch;                                         // 0x0120(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0128(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ServerWidget")
+		STATIC_CLASS_IMPL("SirenBrick")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ServerWidget")
+		STATIC_NAME_IMPL(L"SirenBrick")
 	}
-	static class UServerWidget* GetDefaultObj()
+	static class USirenBrick* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UServerWidget>();
+		return GetDefaultObjImpl<USirenBrick>();
 	}
 };
-DUMPER7_ASSERTS_UServerWidget;
+DUMPER7_ASSERTS_USirenBrick;
 
 // Class BrickRigs.ButtonWidgetBase
-// 0x0020 (0x0418 - 0x03F8)
+// 0x0038 (0x0430 - 0x03F8)
 class UButtonWidgetBase : public UUserWidget
 {
 public:
 	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EBrickUIColorStyle                            ColorStyle;                                        // 0x0410(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIBrushStyle                            BrushStyle;                                        // 0x0411(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHiddenWhileUnfocused;                             // 0x0412(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSelected;                                       // 0x0413(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_411[0x3];                                      // 0x0411(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                ContentPadding;                                    // 0x0414(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              ContentPressedNudge;                               // 0x0424(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrickUIPaddingStyle                          ContentPaddingStyle;                               // 0x042C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_42D[0x3];                                      // 0x042D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnUpdateContentStyle(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InStyleState);
-	void SetBrushStyle(EBrickUIBrushStyle NewBrushStyle);
+	void OnClicked();
 	void SetColorStyle(EBrickUIColorStyle NewColorStyle);
+	void SetContentPadding(const struct FMargin& InPadding);
+	void SetContentPaddingStyle(EBrickUIPaddingStyle InStyle);
 	void SetCustomFocus(bool bNewUseCustomFocus, bool bNewFocused);
-	void SetHiddenWhileUnfocused(bool bNewHidden);
-	void SetIsSelected(bool bNewSelected);
-	void UpdateContentStyle();
-
-	EBrickUIStyleState GetButtonStyleState() const;
-	EBrickUIStyleState GetContentStyleState() const;
+	void UpdateButtonStyle(const EBrickUIColorStyle NewColorStyle, const EBrickUIBrushState NewBrushState);
 
 public:
 	static class UClass* StaticClass()
@@ -2824,31 +2770,32 @@ public:
 DUMPER7_ASSERTS_UButtonWidgetBase;
 
 // Class BrickRigs.BrickButtonWidget
-// 0x0098 (0x04B0 - 0x0418)
+// 0x0078 (0x04A8 - 0x0430)
 class UBrickButtonWidget : public UButtonWidgetBase
 {
 public:
-	struct FMargin                                ContentPadding;                                    // 0x0418(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	EBrickUIPaddingStyle                          ContentPaddingStyle;                               // 0x0428(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHorizontalAlignment                          ContentHorizontalAlignment;                        // 0x0429(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVerticalAlignment                            ContentVerticalAlignment;                          // 0x042A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42B[0x5];                                      // 0x042B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNamedSlot*                             ContentSlot;                                       // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnClickedDelegate;                                 // 0x0438(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnPressedDelegate;                                 // 0x0448(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnReleasedDelegate;                                // 0x0458(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnDoubleClickedDelegate;                           // 0x0468(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FGeometry& InGeometry, const struct FPointerEvent& InMouseEvent)> OnDraggedDelegate; // 0x0478(0x0014)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool bNewIsFocused)> OnIsFocusedChangedDelegate;                   // 0x0490(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)> OnUpdateContentStyleDelegate; // 0x04A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	EBrickUIBrushStyle                            BrushStyle;                                        // 0x0430(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHorizontalAlignment                          ContentHorizontalAlignment;                        // 0x0431(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVerticalAlignment                            ContentVerticalAlignment;                          // 0x0432(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHiddenWhileUnfocused;                             // 0x0433(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSelected;                                       // 0x0434(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_435[0x3];                                      // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNamedSlot*                             ContentSlot;                                       // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnClickedDelegate;                                 // 0x0440(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnPressedDelegate;                                 // 0x0450(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnReleasedDelegate;                                // 0x0460(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnDoubleClickedDelegate;                           // 0x0470(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FGeometry& InGeometry, const struct FPointerEvent& InMouseEvent)> OnDraggedDelegate; // 0x0480(0x0014)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bNewIsFocused)> OnIsFocusedChangedDelegate;                   // 0x0498(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	void AddContentWidget(class UWidget* InWidget);
+	void SetBrushStyle(EBrickUIBrushStyle NewBrushStyle);
 	void SetContentHorizontalAlignment(EHorizontalAlignment InAlignment);
-	void SetContentPadding(const struct FMargin& InPadding);
-	void SetContentPaddingStyle(EBrickUIPaddingStyle InStyle);
 	void SetContentVerticalAlignment(EVerticalAlignment InAlignment);
+	void SetHiddenWhileUnfocused(bool bNewHidden);
+	void SetIsSelected(bool bNewSelected);
 
 public:
 	static class UClass* StaticClass()
@@ -2866,28 +2813,28 @@ public:
 };
 DUMPER7_ASSERTS_UBrickButtonWidget;
 
-// Class BrickRigs.TeamBaseIconWidget
-// 0x0008 (0x0428 - 0x0420)
-class UTeamBaseIconWidget : public UHUDIconWidget
+// Class BrickRigs.ThrowExplosiveAction
+// 0x0008 (0x00A8 - 0x00A0)
+class UThrowExplosiveAction : public UItemAction
 {
 public:
-	class ATeamBase*                              TeamBase;                                          // 0x0420(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TeamBaseIconWidget")
+		STATIC_CLASS_IMPL("ThrowExplosiveAction")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TeamBaseIconWidget")
+		STATIC_NAME_IMPL(L"ThrowExplosiveAction")
 	}
-	static class UTeamBaseIconWidget* GetDefaultObj()
+	static class UThrowExplosiveAction* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTeamBaseIconWidget>();
+		return GetDefaultObjImpl<UThrowExplosiveAction>();
 	}
 };
-DUMPER7_ASSERTS_UTeamBaseIconWidget;
+DUMPER7_ASSERTS_UThrowExplosiveAction;
 
 // Class BrickRigs.BrickCameraManager
 // 0x0080 (0x2A90 - 0x2A10)
@@ -3015,32 +2962,30 @@ public:
 };
 DUMPER7_ASSERTS_ABrickCharacter;
 
-// Class BrickRigs.SirenBrick
-// 0x0060 (0x0150 - 0x00F0)
-class USirenBrick final : public UBrick
+// Class BrickRigs.SoundNodeMotor
+// 0x0018 (0x0070 - 0x0058)
+class USoundNodeMotor : public USoundNode
 {
 public:
-	uint8                                         Pad_F0[0x28];                                      // 0x00F0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class USirenType>                 SirenType;                                         // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         HornPitch;                                         // 0x0120(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0128(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TArray<class USoundWave*>                     MotorSounds;                                       // 0x0058(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         FadeInRatio;                                       // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EditorRPMRatio;                                    // 0x006C(0x0004)(Edit, ZeroConstructor, Transient, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SirenBrick")
+		STATIC_CLASS_IMPL("SoundNodeMotor")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SirenBrick")
+		STATIC_NAME_IMPL(L"SoundNodeMotor")
 	}
-	static class USirenBrick* GetDefaultObj()
+	static class USoundNodeMotor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USirenBrick>();
+		return GetDefaultObjImpl<USoundNodeMotor>();
 	}
 };
-DUMPER7_ASSERTS_USirenBrick;
+DUMPER7_ASSERTS_USoundNodeMotor;
 
 // Class BrickRigs.CharacterAnimInstance
 // 0x0000 (0x0300 - 0x0300)
@@ -3085,29 +3030,29 @@ public:
 };
 DUMPER7_ASSERTS_UBrickCharacterAnimInstance;
 
-// Class BrickRigs.SteeringWheelBrickStaticInfo
+// Class BrickRigs.TailBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
-class USteeringWheelBrickStaticInfo : public UBrickStaticInfo
+class UTailBrickStaticInfo : public UBrickStaticInfo
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SteeringWheelBrickStaticInfo")
+		STATIC_CLASS_IMPL("TailBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SteeringWheelBrickStaticInfo")
+		STATIC_NAME_IMPL(L"TailBrickStaticInfo")
 	}
-	static class USteeringWheelBrickStaticInfo* GetDefaultObj()
+	static class UTailBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USteeringWheelBrickStaticInfo>();
+		return GetDefaultObjImpl<UTailBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_USteeringWheelBrickStaticInfo;
+DUMPER7_ASSERTS_UTailBrickStaticInfo;
 
 // Class BrickRigs.BrickCharacterMovementComponent
 // 0x0000 (0x0B10 - 0x0B10)
-class UBrickCharacterMovementComponent final : public UBaseCharacterMovementComponent
+class UBrickCharacterMovementComponent : public UBaseCharacterMovementComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -3125,30 +3070,59 @@ public:
 };
 DUMPER7_ASSERTS_UBrickCharacterMovementComponent;
 
-// Class BrickRigs.SoundNodeMotor
-// 0x0018 (0x0070 - 0x0058)
-class USoundNodeMotor final : public USoundNode
+// Class BrickRigs.PawnInputComponent
+// 0x0000 (0x0200 - 0x0200)
+class UPawnInputComponent : public UBaseInputComponent
 {
 public:
-	TArray<class USoundWave*>                     MotorSounds;                                       // 0x0058(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         FadeInRatio;                                       // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EditorRPMRatio;                                    // 0x006C(0x0004)(Edit, ZeroConstructor, Transient, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PawnInputComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PawnInputComponent")
+	}
+	static class UPawnInputComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPawnInputComponent>();
+	}
+};
+DUMPER7_ASSERTS_UPawnInputComponent;
+
+// Class BrickRigs.SpectatorInputComponent
+// 0x0008 (0x0208 - 0x0200)
+class USpectatorInputComponent : public UPawnInputComponent
+{
+public:
+	class ABrickSpectatorPawn*                    SpectatorPawn;                                     // 0x0200(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	struct FBrActionResult Action_CaptureVehicleThumbnail(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MoveCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PlacePawn(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ShiftSpeed(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SpawnDummy(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MoveForward(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MoveRight(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MoveUp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_RotatePawnCW(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SoundNodeMotor")
+		STATIC_CLASS_IMPL("SpectatorInputComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SoundNodeMotor")
+		STATIC_NAME_IMPL(L"SpectatorInputComponent")
 	}
-	static class USoundNodeMotor* GetDefaultObj()
+	static class USpectatorInputComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USoundNodeMotor>();
+		return GetDefaultObjImpl<USpectatorInputComponent>();
 	}
 };
-DUMPER7_ASSERTS_USoundNodeMotor;
+DUMPER7_ASSERTS_USpectatorInputComponent;
 
 // Class BrickRigs.BrickUserWidget
 // 0x0018 (0x0410 - 0x03F8)
@@ -3192,7 +3166,6 @@ public:
 
 public:
 	void AddItemWidget(class UBrickComboBoxItemWidget* Widget);
-	void OnUpdateButtonContentStyle(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void SelectItem();
 	void UpdateIsSelected(bool bNewSelected);
 
@@ -3227,7 +3200,6 @@ public:
 	void InitializeItem(int32 InItem, const struct FBrickComboBoxItemParams& Params_0);
 	void SetNoItemBrush();
 	void UpdateIconVisibility(bool bNewVisible);
-	void UpdateItemStyle(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InStyleState);
 	void UpdateTextVisibility(bool bNewVisible);
 
 public:
@@ -3274,124 +3246,87 @@ public:
 };
 DUMPER7_ASSERTS_UMenuAnchorWidget;
 
-// Class BrickRigs.PawnInputComponent
-// 0x0068 (0x01E8 - 0x0180)
-class UPawnInputComponent : public UBaseInputComponent
+// Class BrickRigs.WheelBrickStaticInfo
+// 0x0028 (0x01C8 - 0x01A0)
+class UWheelBrickStaticInfo : public UBrickStaticInfo
 {
 public:
-	uint8                                         Pad_180[0x68];                                     // 0x0180(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnHeldCycleCharacters();
-	void OnHeldCycleVehicles();
-	void OnHeldDestroyPawn();
-	void OnHeldFreeCamera();
-	void OnHeldOpenVehicle();
-	void OnHeldRecover();
-	void OnHeldRecoverDummies();
-	void OnHeldRecoverVehicle();
-	void OnHeldScrapAllVehicles();
-	void OnHeldSlomoSpeedDown();
-	void OnHeldSlomoSpeedUp();
-	void OnHeldSlowMotion();
-	void OnHeldToggleInvincible();
-	void OnPressedCycleCharacters();
-	void OnPressedCycleVehicles();
-	void OnPressedDestroyPawn();
-	void OnPressedFreeCamera();
-	void OnPressedInventory();
-	void OnPressedMap();
-	void OnPressedOpenVehicle();
-	void OnPressedProjectileCamera();
-	void OnPressedRecover();
-	void OnPressedRecoverDummies();
-	void OnPressedRecoverVehicle();
-	void OnPressedScrapAllVehicles();
-	void OnPressedSlomoSpeedDown();
-	void OnPressedSlomoSpeedUp();
-	void OnPressedSlowMotion();
-	void OnPressedToggleInvincible();
-	void OnReleasedCycleCharacters();
-	void OnReleasedCycleVehicles();
-	void OnReleasedDestroyPawn();
-	void OnReleasedFreeCamera();
-	void OnReleasedOpenVehicle();
-	void OnReleasedRecover();
-	void OnReleasedRecoverDummies();
-	void OnReleasedRecoverVehicle();
-	void OnReleasedScrapAllVehicles();
-	void OnReleasedSlomoSpeedDown();
-	void OnReleasedSlomoSpeedUp();
-	void OnReleasedSlowMotion();
-	void OnReleasedToggleInvincible();
-	void OnTappedCycleCharacters();
-	void OnTappedCycleVehicles();
-	void OnTappedDestroyPawn();
-	void OnTappedFreeCamera();
-	void OnTappedOpenVehicle();
-	void OnTappedRecover();
-	void OnTappedRecoverDummies();
-	void OnTappedRecoverVehicle();
-	void OnTappedScrapAllVehicles();
-	void OnTappedSlomoSpeedDown();
-	void OnTappedSlomoSpeedUp();
-	void OnTappedSlowMotion();
-	void OnTappedToggleInvincible();
-
-	bool GetDestroyPawnEnabled(bool bInSecondaryAction) const;
-	bool GetInventoryEnabled(bool bInSecondaryAction) const;
+	float                                         WheelRadius;                                       // 0x01A0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         WheelWidthRange;                                   // 0x01A4(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ColliderRadius;                                    // 0x01AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinWheelRadius;                                    // 0x01B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxWheelRadiusScale;                               // 0x01B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinWheelWidth;                                     // 0x01B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxWheelWidthScale;                                // 0x01BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            MassPropertiesProxyMesh;                           // 0x01C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PawnInputComponent")
+		STATIC_CLASS_IMPL("WheelBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PawnInputComponent")
+		STATIC_NAME_IMPL(L"WheelBrickStaticInfo")
 	}
-	static class UPawnInputComponent* GetDefaultObj()
+	static class UWheelBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPawnInputComponent>();
+		return GetDefaultObjImpl<UWheelBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UPawnInputComponent;
+DUMPER7_ASSERTS_UWheelBrickStaticInfo;
 
-// Class BrickRigs.SpectatorInputComponent
-// 0x0008 (0x01F0 - 0x01E8)
-class USpectatorInputComponent final : public UPawnInputComponent
+// Class BrickRigs.TrackWheelBrickStaticInfo
+// 0x0000 (0x01C8 - 0x01C8)
+class UTrackWheelBrickStaticInfo : public UWheelBrickStaticInfo
 {
 public:
-	class ABrickSpectatorPawn*                    SpectatorPawn;                                     // 0x01E8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TrackWheelBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TrackWheelBrickStaticInfo")
+	}
+	static class UTrackWheelBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTrackWheelBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UTrackWheelBrickStaticInfo;
 
+// Class BrickRigs.SprocketWheelBrickStaticInfo
+// 0x0038 (0x0200 - 0x01C8)
+class USprocketWheelBrickStaticInfo : public UTrackWheelBrickStaticInfo
+{
 public:
-	void MoveForward(float Val);
-	void MoveRight(float Val);
-	void MoveUp(float Val);
-	void OnPressedCaptureVehicleThumbnail();
-	void OnPressedPlacePawn();
-	void OnPressedShiftSpeed();
-	void OnPressedSpawnDummy();
-	void OnReleasedPlacePawn();
-	void OnReleasedShiftSpeed();
-	void OnReleasedSpawnDummy();
-	void RotatePawnCW(float Val);
+	class UStaticMesh*                            TrackMesh;                                         // 0x01C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              TrackMeshSize;                                     // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBrickPhysicalMaterial*                 TrackPhysMaterial;                                 // 0x01D8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             TrackBreakSound;                                   // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrackSpacing;                                      // 0x01E8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrackThickness;                                    // 0x01EC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxNumTrackInstances;                              // 0x01F0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxNumIdlerWheels;                                 // 0x01F4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrackBreakParticleRatio;                           // 0x01F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SpectatorInputComponent")
+		STATIC_CLASS_IMPL("SprocketWheelBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SpectatorInputComponent")
+		STATIC_NAME_IMPL(L"SprocketWheelBrickStaticInfo")
 	}
-	static class USpectatorInputComponent* GetDefaultObj()
+	static class USprocketWheelBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USpectatorInputComponent>();
+		return GetDefaultObjImpl<USprocketWheelBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_USpectatorInputComponent;
+DUMPER7_ASSERTS_USprocketWheelBrickStaticInfo;
 
 // Class BrickRigs.BrickComboBoxMenuWidget
 // 0x0010 (0x0410 - 0x0400)
@@ -3417,227 +3352,226 @@ public:
 };
 DUMPER7_ASSERTS_UBrickComboBoxMenuWidget;
 
-// Class BrickRigs.HUDIconComponent
-// 0x0090 (0x0150 - 0x00C0)
-class UHUDIconComponent : public UActorComponent
+// Class BrickRigs.HUDIconWidget
+// 0x0028 (0x0420 - 0x03F8)
+class UHUDIconWidget : public UUserWidget
 {
 public:
-	struct FHUDIconProperties                     HUDIconProperties;                                 // 0x00C0(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8[0x20];                                      // 0x00F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bTestLineOfSight;                                  // 0x0118(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_119[0x37];                                     // 0x0119(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickImage*                            IconImage;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector2D                              IconSize;                                          // 0x0418(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	static struct FInteractionOption MakeAxisInteractionOption(const class FText& DisplayText, bool bIsEnabled, TDelegate<void(class ABrickPlayerController* InPC, float Val)> OnInteractionAxis);
-	static struct FInteractionOption MakeInteractionOption(const class FText& DisplayText, bool bIsEnabled, TDelegate<void(class ABrickPlayerController* InPC)> OnInteraction);
+	void InitializeIcon();
+	void PostInitializeIcon();
+	void SetIconColorStyle(EBrickUIColorStyle NewColorStyle);
+	void SetIconTexture(const TSoftObjectPtr<class UTexture2D> NewIconTexture);
+	void UninitializeIcon();
+	void UpdateIconRotation(float NewRotation);
+	void UpdateIconStyle(EBrickUIColorStyle InColorStyle);
+	void UpdateNameText();
 
-	void Interact_PlaceMarker(class ABrickPlayerController* PC);
-	void Interact_Spawn(class ABrickPlayerController* PC);
-	void SetGetInteractionOptionsDelegate(TDelegate<void(class ABrickPlayerController* PC, struct FInteractionOptions* OutOptions)> Delegate);
-	void SetGetMaxDrawDistDelegate(TDelegate<void(class ABrickPlayerController* PC)> Delegate);
-	void SetIconLocation(const struct FVector& NewLocation);
-	void SetIconLocationDelegate(TDelegate<void()> Delegate);
-	void SetShouldIconBeVisibleDelegate(TDelegate<void(class ABrickPlayerController* PC, const struct FHUDIconContext& Context)> Delegate);
+	class FText GetIconDisplayName() const;
+	bool GetIconWorldRotation(float* OutRotation) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HUDIconComponent")
+		STATIC_CLASS_IMPL("HUDIconWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HUDIconComponent")
+		STATIC_NAME_IMPL(L"HUDIconWidget")
 	}
-	static class UHUDIconComponent* GetDefaultObj()
+	static class UHUDIconWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHUDIconComponent>();
+		return GetDefaultObjImpl<UHUDIconWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDIconComponent;
+DUMPER7_ASSERTS_UHUDIconWidget;
 
-// Class BrickRigs.TargetMarkerIconComponent
-// 0x0028 (0x0178 - 0x0150)
-class UTargetMarkerIconComponent final : public UHUDIconComponent
+// Class BrickRigs.TeamBaseIconWidget
+// 0x0008 (0x0428 - 0x0420)
+class UTeamBaseIconWidget : public UHUDIconWidget
 {
 public:
-	uint8                                         Pad_150[0x28];                                     // 0x0150(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ATeamBase*                              TeamBase;                                          // 0x0420(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TargetMarkerIconComponent")
+		STATIC_CLASS_IMPL("TeamBaseIconWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TargetMarkerIconComponent")
+		STATIC_NAME_IMPL(L"TeamBaseIconWidget")
 	}
-	static class UTargetMarkerIconComponent* GetDefaultObj()
+	static class UTeamBaseIconWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTargetMarkerIconComponent>();
+		return GetDefaultObjImpl<UTeamBaseIconWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTargetMarkerIconComponent;
+DUMPER7_ASSERTS_UTeamBaseIconWidget;
 
-// Class BrickRigs.BrickVehicle
-// 0x0848 (0x0BA0 - 0x0358)
-class alignas(0x10) ABrickVehicle : public APawn
+// Class BrickRigs.BrickComboBoxWidget
+// 0x00B0 (0x04A8 - 0x03F8)
+class UBrickComboBoxWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_358[0x108];                                    // 0x0358(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUGCFileInfo                           VehicleFileInfo;                                   // 0x0460(0x00E8)(Net, Transient, NativeAccessSpecifierPrivate)
-	struct FPawnRestartTransform                  RestartTransform;                                  // 0x0548(0x001C)(Net, Transient, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_564[0x4];                                      // 0x0564(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRepVehicleMovement                    RepVehicleMovement;                                // 0x0568(0x0120)(Net, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         bRepairAtRestartTransform : 1;                     // 0x0688(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Net, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_689[0x2F];                                     // 0x0689(0x002F)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABrickPlayerState*                      SpawningPlayerState;                               // 0x06B8(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AActor*                                 OriginalSpawnPoint;                                // 0x06C0(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UBrickConnection*>               BrickConnections;                                  // 0x06C8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<class UBrickConnection*>               DynamicBrickConnections;                           // 0x06D8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<class UBrickConnection*>               ExternalBrickConnections;                          // 0x06E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<class UBrickConnection*>               BrickConnectionsToBreak;                           // 0x06F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	struct FRepBrickConnectionDamage              RepBrickConnectionDamage;                          // 0x0708(0x0120)(Net, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_828[0x10];                                     // 0x0828(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRepBrickDamage                        RepBrickDamage;                                    // 0x0838(0x0120)(Net, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_958[0x4];                                      // 0x0958(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint16                                        RepFuelLevelRatio;                                 // 0x095C(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_95E[0x6];                                      // 0x095E(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	EVehiclePinMode                               PinMode;                                           // 0x0964(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_965[0x3];                                      // 0x0965(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGenericTeamId>                 PassengerTeamIds;                                  // 0x0968(0x0010)(Net, ZeroConstructor, RepNotify, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_978[0x10];                                     // 0x0978(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrick*                                 RootBrick;                                         // 0x0988(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class USeatBrick*                             DriverSeat;                                        // 0x0990(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_998[0x148];                                    // 0x0998(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickVehicleComponent*                 VehicleComponent;                                  // 0x0AE0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UAudioComponent*                        HandlingAudioComponent;                            // 0x0AE8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UHUDIconComponent*                      HUDIconComponent;                                  // 0x0AF0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UFirearmComponent*>              FirearmComponents;                                 // 0x0AF8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	class UInventoryComponent*                    InventoryComponent;                                // 0x0B08(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UBoxComponent*                          SpawnCollisionBox;                                 // 0x0B10(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B18[0x78];                                     // 0x0B18(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UBrickVehicleStaticInfo>    StaticInfoClass;                                   // 0x0B90(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B98[0x8];                                      // 0x0B98(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickComboBoxItemWidget*               SelectedItemWidget;                                // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UBrickComboBoxItemContainerWidget*> ItemContainerWidgets;                           // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class UBrickComboBoxCategoryWidget*>   CategoryWidgets;                                   // 0x0430(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class UBrickComboBoxMenuWidget*               MenuWidget;                                        // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickButtonWidget*                     Button;                                            // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickGridPanel*                        ItemsPanel;                                        // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UBrickComboBoxItemWidget>   ItemWidgetClass;                                   // 0x0458(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickComboBoxItemContainerWidget> ItemContainerWidgetClass;                   // 0x0460(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickComboBoxMenuWidget>   MenuWidgetClass;                                   // 0x0468(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickComboBoxCategoryWidget> CategoryWidgetClass;                             // 0x0470(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxListItems;                                      // 0x0478(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxItemsPerRow;                                    // 0x047C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 Item, struct FBrickComboBoxItemParams* OutParams)> OnInitializeItemDelegate; // 0x0480(0x0014)(Edit, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 Item, EValueChangedEventType EventType)> OnItemSelectedDelegate; // 0x0498(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
-	void BindOnVehicleConstructed(const TDelegate<void()>& InDelegate);
-	void ConstructVehicle(const struct FUGCFileInfo& InFileInfo, class AActor* InSpawnPoint, class ABrickPlayerController* InSpawningPC, bool bAvoidCollision);
-	void DebugVehicleClusters();
-	void EjectAllCharacters();
-	void ExplodeVehicle();
-	void Interact_EnterVehicle(class ABrickPlayerController* OtherPC);
-	void Interact_ScrapVehicleFromInteraction(class ABrickPlayerController* OtherPC);
-	void Interact_ScrapVehicleFromMap(class ABrickPlayerController* OtherPC);
-	void OnRep_PassengerTeamIds();
-	void OnRep_PinMode();
-	void OnRep_RepFuelLevelRatio();
-	void OnRep_RestartTransform();
-	void PlayHandlingSound(class USoundBase* Sound);
-	void RepairVehicle(const struct FVector& InLocation, const struct FRotator& InRotation, class AActor* InSpawnPoint, const bool bAvoidCollision, const bool bRepair);
-	void ScrapVehicle();
-	void ServerApplySeatCollisionDamage(const struct FBrickEditorObjectID& SeatID, float DamageAmount, const struct FRestartTransformVersion& ComparisonIndex);
-	void ServerExplodeTankBricks(const TArray<struct FBrickEditorObjectID>& Tanks, const struct FRestartTransformVersion& ComparisonIndex);
-	void ServerOnBrokeDestructibleInstances(class UDestructibleInstancesComponent* Comp, const TArray<uint16>& Instances, const struct FRestartTransformVersion& ComparisonIndex);
-	void SetFuelLevel(float NewLevel);
-	void SetPinMode(EVehiclePinMode NewMode);
-	void SetRelativeFuelLevel(const float NewLevel);
+	void AddItemContainerWidget(class UBrickComboBoxItemContainerWidget* Widget, int32 Index_0);
+	void AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget);
+	void InitItems(int32 InNumItems, int32 InSelectedItem);
+	void InitItemsComplex(const TArray<int32>& InItems, int32 InSelectedItem);
+	void OnComboBoxMenuItemSelected(int32 Item, EValueChangedEventType EventType);
+	void SetComboBoxExpanded(bool bNewExpanded);
+	void SetMaxItemsPerRow(int32 InMaxItemsPerRow);
+	void SetMaxListItems(int32 InMaxListItems);
+	void SetSelectedItem(int32 InItem);
+	void ToggleComboBoxExpanded();
+	void UpdateIsExpanded(bool bInIsExpanded);
+	void UpdateUseItemList(bool bInUseItemList);
 
-	int32 GetAmmo() const;
-	int32 GetAmmoCapacity() const;
-	const TArray<class UBrick*> GetBricks() const;
-	const TArray<struct FBrickEditorObjectID> GetCameras() const;
-	class ABrickCharacter* GetDriverCharacter() const;
-	class USeatBrick* GetDriverSeat() const;
-	float GetFuelCapacity() const;
-	float GetFuelLevel() const;
-	const TArray<struct FBrickEditorObjectID> GetGuns() const;
-	class UInventoryComponent* GetInventoryComponent() const;
-	int32 GetNumPassengers() const;
-	void GetPassengers(TArray<class ABrickCharacter*>* OutPassengers) const;
-	EVehiclePinMode GetPinMode() const;
-	class UBrick* GetRootBrick() const;
-	const TArray<struct FBrickEditorObjectID> GetSeats() const;
-	class ABrickPlayerState* GetSpawningPlayerState() const;
-	const class UBrickVehicleStaticInfo* GetStaticInfo() const;
-	class UBrickVehicleComponent* GetVehicleComponent() const;
-	class FText GetVehicleDisplayName() const;
-	const struct FUGCFileInfo GetVehicleFileInfo() const;
-	class USeatBrick* GetViewedSeat() const;
-	class UCameraBrick* GetViewTargetCamera() const;
-	bool HasVisibleSeat() const;
-	bool IsInteracting() const;
-	bool IsVehicleBeingConstructed() const;
-	bool IsVehicleConstructed() const;
+	int32 GetNumItems() const;
+	int32 GetSelectedItem() const;
+	class UWidget* GetWidgetToFocus() const;
+	bool IsComboBoxExpanded() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BrickVehicle")
+		STATIC_CLASS_IMPL("BrickComboBoxWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BrickVehicle")
+		STATIC_NAME_IMPL(L"BrickComboBoxWidget")
 	}
-	static class ABrickVehicle* GetDefaultObj()
+	static class UBrickComboBoxWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ABrickVehicle>();
+		return GetDefaultObjImpl<UBrickComboBoxWidget>();
 	}
 };
-DUMPER7_ASSERTS_ABrickVehicle;
+DUMPER7_ASSERTS_UBrickComboBoxWidget;
 
-// Class BrickRigs.PlayerControllerStaticInfo
-// 0x0330 (0x0360 - 0x0030)
-class UPlayerControllerStaticInfo : public UObject
+// Class BrickRigs.PlayerInputComponent
+// 0x0090 (0x0290 - 0x0200)
+class UPlayerInputComponent : public UBaseInputComponent
 {
 public:
-	struct FCameraFadeParams                      LevelTransitionFade;                               // 0x0030(0x001C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraFadeParams                      StateTransitionFade;                               // 0x004C(0x001C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraFadeParams                      MatchEndFade;                                      // 0x0068(0x001C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         MaxNumChatMessages;                                // 0x0084(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   JoinSessionPopupClass;                             // 0x0088(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   MapPopupClass;                                     // 0x00B8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   ScoreboardPopupClass;                              // 0x00E8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   InventoryPopupClass;                               // 0x0118(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   VehicleBrowserPopupClass;                          // 0x0148(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   UnsavedChangesPopupClass;                          // 0x0178(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   CheatMenuPopupClass;                               // 0x01A8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   KickPlayerPopupClass;                              // 0x01D8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   PlayerHUDWidgetClass;                              // 0x0208(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   SpawnHUDWidgetClass;                               // 0x0238(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   DeathHUDWidgetClass;                               // 0x0268(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   SpectatorHUDWidgetClass;                           // 0x0298(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   EditorHUDWidgetClass;                              // 0x02C8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   MatchEndHUDWidgetClass;                            // 0x02F8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxInteractionAngle;                               // 0x0328(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCharacterInteractionDistance;                   // 0x032C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VehicleHUDIconDrawDistanceScale;                   // 0x0330(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpectatorHUDIconDrawDistanceScale;                 // 0x0334(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundMix*                              DeathSoundMix;                                     // 0x0338(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundMix*                              NoAtmosphereSoundMix;                              // 0x0340(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             HurtSound;                                         // 0x0348(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AVehicleEditor>             VehicleEditorClass;                                // 0x0350(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EditorEntryGarageInflation;                        // 0x0358(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClientVehicleDamageGracePeriod;                    // 0x035C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_200[0x88];                                     // 0x0200(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInteractionComponent*                  FocusedBrickInteractionComponent;                  // 0x0288(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	struct FBrActionResult Action_Chat(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleCharacters(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleHUDVisibility(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleMeasurementSystem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleVehicles(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_DestroyPawn(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_FreeCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_InputHelp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_InteractPri(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_InteractSec(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_InteractTer(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Inventory(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Map(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_OpenVehicle(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ProjectileCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Recover(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_RecoverDummies(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_RecoverVehicle(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Scoreboard(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ScrapAllVehicles(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SlomoSpeedDown(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SlomoSpeedUp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SlowMotion(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ToggleInvincible(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_InteractAxis(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PlayerControllerStaticInfo")
+		STATIC_CLASS_IMPL("PlayerInputComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PlayerControllerStaticInfo")
+		STATIC_NAME_IMPL(L"PlayerInputComponent")
 	}
-	static class UPlayerControllerStaticInfo* GetDefaultObj()
+	static class UPlayerInputComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPlayerControllerStaticInfo>();
+		return GetDefaultObjImpl<UPlayerInputComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPlayerControllerStaticInfo;
+DUMPER7_ASSERTS_UPlayerInputComponent;
+
+// Class BrickRigs.ActuatorConnection
+// 0x0010 (0x00E0 - 0x00D0)
+class UActuatorConnection : public UPhysicsConstraintConnection
+{
+public:
+	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActuatorConnection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActuatorConnection")
+	}
+	static class UActuatorConnection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActuatorConnection>();
+	}
+};
+DUMPER7_ASSERTS_UActuatorConnection;
+
+// Class BrickRigs.MessagePopupParams
+// 0x0020 (0x0098 - 0x0078)
+class UMessagePopupParams : public UPopupParams
+{
+public:
+	class FText                                   TitleText;                                         // 0x0078(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          bCanCancel;                                        // 0x0090(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MessagePopupParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MessagePopupParams")
+	}
+	static class UMessagePopupParams* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMessagePopupParams>();
+	}
+};
+DUMPER7_ASSERTS_UMessagePopupParams;
 
 // Class BrickRigs.CouplingConnection
 // 0x0020 (0x00F0 - 0x00D0)
-class UCouplingConnection final : public UPhysicsConstraintConnection
+class UCouplingConnection : public UPhysicsConstraintConnection
 {
 public:
 	uint8                                         Pad_D0[0x20];                                      // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -3658,90 +3592,9 @@ public:
 };
 DUMPER7_ASSERTS_UCouplingConnection;
 
-// Class BrickRigs.HUDIconCanvasWidget
-// 0x0018 (0x04A8 - 0x0490)
-class UHUDIconCanvasWidget : public UHUDIconPanelWidget
-{
-public:
-	class UInteractionWidget*                     InteractionWidget;                                 // 0x0490(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FFloatInterval                         IconScaleRange;                                    // 0x04A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HUDIconCanvasWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HUDIconCanvasWidget")
-	}
-	static class UHUDIconCanvasWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHUDIconCanvasWidget>();
-	}
-};
-DUMPER7_ASSERTS_UHUDIconCanvasWidget;
-
-// Class BrickRigs.PlayerWidget
-// 0x0228 (0x06D0 - 0x04A8)
-class alignas(0x10) UPlayerWidget : public UHUDIconCanvasWidget
-{
-public:
-	uint8                                         Pad_4A8[0x38];                                     // 0x04A8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         Character;                                         // 0x04E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABrickVehicle*                          Vehicle;                                           // 0x04E8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4F0[0x18];                                     // 0x04F0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurrentItemWidget*                     CurrentItemWidget;                                 // 0x0508(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UHealthBarWidget*                       HealthBarWidget;                                   // 0x0510(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UCrosshairWidget*                       CrosshairWidget;                                   // 0x0518(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UHurtMarkerWidget*>              HurtMarkers;                                       // 0x0520(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	class URestrictedAreaWidget*                  RestrictedAreaWidget;                              // 0x0530(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UDashboardWidget*                       DashboardWidget;                                   // 0x0538(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UCameraBrickWidget*                     CameraBrickWidget;                                 // 0x0540(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_548[0x10C];                                    // 0x0548(0x010C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatInterval                         IconScaleDistanceRange;                            // 0x0654(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_65C[0x4];                                      // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCurrentItemWidget>         CurrentItemWidgetClass;                            // 0x0660(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         CurrentItemFadeOutDelay;                           // 0x0668(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_66C[0x4];                                      // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UHealthBarWidget>           HealthBarWidgetClass;                              // 0x0670(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UCrosshairWidget>           CrosshairWidgetClass;                              // 0x0678(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UHurtMarkerWidget>          HurtMarkerClass;                                   // 0x0680(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         MaxNumHurtMarkers;                                 // 0x0688(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class URestrictedAreaWidget>      RestrictedAreaWidgetClass;                         // 0x0690(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   DashboardWidgetClass;                              // 0x0698(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6C8[0x8];                                      // 0x06C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddCameraBrickWidget(class UCameraBrickWidget* InWidget);
-	void AddCrosshairWidget(class UCrosshairWidget* InWidget);
-	void AddCurrentItemWidget(class UCurrentItemWidget* InWidget);
-	void AddDashboardWidget(class UDashboardWidget* InWidget);
-	void AddHealthBarWidget(class UHealthBarWidget* InWidget);
-	void AddRestrictedAreaWidget(class URestrictedAreaWidget* InWidget);
-	void OnHUDVisibilityChanged(EHUDVisibility NewVisibility);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlayerWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlayerWidget")
-	}
-	static class UPlayerWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayerWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPlayerWidget;
-
 // Class BrickRigs.TurbineConnection
 // 0x0000 (0x00D0 - 0x00D0)
-class UTurbineConnection final : public UPhysicsConstraintConnection
+class UTurbineConnection : public UPhysicsConstraintConnection
 {
 public:
 	static class UClass* StaticClass()
@@ -3759,20 +3612,46 @@ public:
 };
 DUMPER7_ASSERTS_UTurbineConnection;
 
+// Class BrickRigs.TooltipWidget
+// 0x0040 (0x0450 - 0x0410)
+class UTooltipWidget : public UBrickUserWidget
+{
+public:
+	uint8                                         Pad_410[0x40];                                     // 0x0410(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void FadeIn();
+	void UpdateTooltipAlignment(const struct FVector2D& Alignment);
+	void UpdateTooltipContent(const struct FTooltipContent& InContent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TooltipWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TooltipWidget")
+	}
+	static class UTooltipWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTooltipWidget>();
+	}
+};
+DUMPER7_ASSERTS_UTooltipWidget;
+
 // Class BrickRigs.BrickConnectorsISMComponent
 // 0x0010 (0x0700 - 0x06F0)
-class UBrickConnectorsISMComponent final : public UInstancedStaticMeshComponent
+class UBrickConnectorsISMComponent : public UInstancedStaticMeshComponent
 {
 public:
 	class UMaterialInstanceDynamic*               MID;                                               // 0x06F0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	EBrickUIColorStyle                            ColorStyle;                                        // 0x06F8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBrickUIColorStyle                            FocusedColorStyle;                                 // 0x06F9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            StyleState;                                        // 0x06FA(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            FocusedStyleState;                                 // 0x06FB(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6FC[0x4];                                      // 0x06FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6FA[0x6];                                      // 0x06FA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void SetStyle(EBrickUIColorStyle NewColorStyle, EBrickUIColorStyle NewFocusedColorStyle, EBrickUIStyleState NewStyleState, EBrickUIStyleState NewFocusedStyleState);
+	void SetStyle(EBrickUIColorStyle NewColorStyle, EBrickUIColorStyle NewFocusedColorStyle);
 
 public:
 	static class UClass* StaticClass()
@@ -3790,55 +3669,37 @@ public:
 };
 DUMPER7_ASSERTS_UBrickConnectorsISMComponent;
 
-// Class BrickRigs.ThrowExplosiveAction
-// 0x0008 (0x00A8 - 0x00A0)
-class UThrowExplosiveAction final : public UItemAction
-{
-public:
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ThrowExplosiveAction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ThrowExplosiveAction")
-	}
-	static class UThrowExplosiveAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UThrowExplosiveAction>();
-	}
-};
-DUMPER7_ASSERTS_UThrowExplosiveAction;
-
 // Class BrickRigs.BrickDataSingleton
-// 0x1560 (0x1590 - 0x0030)
+// 0x1720 (0x1750 - 0x0030)
 class UBrickDataSingleton : public UObject
 {
 public:
 	TMap<struct FGameplayTag, class FText>        ItemTagDisplayNames;                               // 0x0030(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TMap<float, class FText>                      GrayscaleColorNames;                               // 0x0080(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	TMap<float, class FText>                      HueColorNames;                                     // 0x00D0(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FLinearColor>        LegacyBrickPaints;                                 // 0x0120(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FLegacyBrickMaterialReplacement> LegacyBrickMaterials;                  // 0x0170(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FLegacyBrickEditorObjectClassCategory> LegacyBrickEditorObjectClasses;             // 0x01C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FSurfaceTypeEffects                    SurfaceTypeEffects[0x3F];                          // 0x01D0(0x0038)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	class USoundClass*                            MainSoundClass;                                    // 0x0F98(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundClass*                            WorldSoundClass;                                   // 0x0FA0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundClass*                            MusicSoundClass;                                   // 0x0FA8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UBrickStaticInfo>           MaterialThumbnailRenderBrick;                      // 0x0FB0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   NoItemThumbnailRenderClass;                        // 0x0FB8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     TextureThumbnailRenderMaterial;                    // 0x0FE8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ThumbnailRenderDirection;                          // 0x0FF0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FFC[0x4];                                      // 0x0FFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   ObjectThumbnailPostProcessSettings;                // 0x1000(0x0590)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FDisplayInfo                           FireModeDisplayInfos[0x4];                         // 0x0120(0x0048)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FLinearColor>        LegacyBrickPaints;                                 // 0x0240(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FLegacyBrickMaterialReplacement> LegacyBrickMaterials;                  // 0x0290(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FLegacyBrickEditorObjectClassCategory> LegacyBrickEditorObjectClasses;             // 0x02E0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FSurfaceTypeEffects                    SurfaceTypeEffects[0x3F];                          // 0x02F0(0x0038)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	TMap<EVehicleInputAxis, struct FDisplayInfo>  InputAxisDisplayInfos;                             // 0x10B8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TMap<int32, TSoftObjectPtr<class UTexture2D>> SirenIndexIconTextures;                            // 0x1108(0x0050)(Edit, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+	class USoundClass*                            MainSoundClass;                                    // 0x1158(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundClass*                            WorldSoundClass;                                   // 0x1160(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundClass*                            MusicSoundClass;                                   // 0x1168(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UBrickStaticInfo>           MaterialThumbnailRenderBrick;                      // 0x1170(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   NoItemThumbnailRenderClass;                        // 0x1178(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     TextureThumbnailRenderMaterial;                    // 0x11A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ThumbnailRenderDirection;                          // 0x11B0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11BC[0x4];                                     // 0x11BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   ObjectThumbnailPostProcessSettings;                // 0x11C0(0x0590)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UBrickDataSingleton* Get();
 
+	bool GetAmmoTypeDisplayInfo(const EAmmoType AmmoType, struct FDisplayInfo* OutDisplayInfo, EBrickUIColorStyle* OutColorStyle) const;
 	class FText GetColorDisplayName(const struct FLinearColor& Color, bool bRoundValue) const;
+	struct FDisplayInfo GetFireModeDisplayInfo(const EFireMode FireMode) const;
 
 public:
 	static class UClass* StaticClass()
@@ -3856,9 +3717,29 @@ public:
 };
 DUMPER7_ASSERTS_UBrickDataSingleton;
 
+// Class BrickRigs.PropellerBrick
+// 0x0000 (0x00F0 - 0x00F0)
+class UPropellerBrick : public UBrick
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropellerBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropellerBrick")
+	}
+	static class UPropellerBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropellerBrick>();
+	}
+};
+DUMPER7_ASSERTS_UPropellerBrick;
+
 // Class BrickRigs.BrickDecal
 // 0x0018 (0x0060 - 0x0048)
-class UBrickDecal final : public UPrimaryDataAsset
+class UBrickDecal : public UPrimaryDataAsset
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -3882,35 +3763,9 @@ public:
 };
 DUMPER7_ASSERTS_UBrickDecal;
 
-// Class BrickRigs.ProjectileManagerComponent
-// 0x0150 (0x0210 - 0x00C0)
-class UProjectileManagerComponent final : public UActorComponent
-{
-public:
-	uint8                                         Pad_C0[0x150];                                     // 0x00C0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnParticleComponentFinished(class UParticleSystemComponent* PSC);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ProjectileManagerComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ProjectileManagerComponent")
-	}
-	static class UProjectileManagerComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UProjectileManagerComponent>();
-	}
-};
-DUMPER7_ASSERTS_UProjectileManagerComponent;
-
 // Class BrickRigs.BrickEditableTextBox
 // 0x0950 (0x1640 - 0x0CF0)
-class UBrickEditableTextBox final : public UEditableTextBox
+class UBrickEditableTextBox : public UEditableTextBox
 {
 public:
 	uint8                                         Pad_CF0[0x950];                                    // 0x0CF0(0x0950)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -3931,57 +3786,65 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditableTextBox;
 
-// Class BrickRigs.UGCTaskPopupWidget
-// 0x0030 (0x0460 - 0x0430)
-class UUGCTaskPopupWidget : public UPopupWidget
+// Class BrickRigs.UnsavedChangesPopupWidget
+// 0x0000 (0x0430 - 0x0430)
+class UUnsavedChangesPopupWidget : public UPopupWidget
 {
 public:
-	uint8                                         Pad_430[0x28];                                     // 0x0430(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProgressInterpSpeed;                               // 0x0458(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnsavedChangesPopupWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnsavedChangesPopupWidget")
+	}
+	static class UUnsavedChangesPopupWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnsavedChangesPopupWidget>();
+	}
+};
+DUMPER7_ASSERTS_UUnsavedChangesPopupWidget;
+
+// Class BrickRigs.PropertyContainerWidget
+// 0x0068 (0x0478 - 0x0410)
+class UPropertyContainerWidget : public UBrickUserWidget
+{
+public:
+	uint8                                         Pad_410[0x30];                                     // 0x0410(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPropertyWidget*                        PropertyWidget;                                    // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_448[0x18];                                     // 0x0448(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickImage*                            IconImage;                                         // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMenuButtonPanelWidget*                 ButtonPanelWidget;                                 // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void UpdateIsFinished(bool bNewFinished, bool bNewSuccess);
-	void UpdateProgress(float NewProgress);
+	void AddPropertyWidget(class UPropertyWidget* Widget, EOrientation InOrientation);
+	bool OpenContextMenu();
+	void PostAddPropertyButtons();
+	void PreAddPropertyButtons();
+	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
+	void UpdateIsReadOnly(bool bInReadOnly);
+	void UpdateOrientation(EOrientation InOrientation);
+
+	class UMenuButtonPanelWidget* GetMenuButtonPanelWidget() const;
+	class UWidget* GetWidgetToFocus() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UGCTaskPopupWidget")
+		STATIC_CLASS_IMPL("PropertyContainerWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UGCTaskPopupWidget")
+		STATIC_NAME_IMPL(L"PropertyContainerWidget")
 	}
-	static class UUGCTaskPopupWidget* GetDefaultObj()
+	static class UPropertyContainerWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUGCTaskPopupWidget>();
+		return GetDefaultObjImpl<UPropertyContainerWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUGCTaskPopupWidget;
-
-// Class BrickRigs.BrickEditorStaticMeshComponent
-// 0x0010 (0x0630 - 0x0620)
-class UBrickEditorStaticMeshComponent : public UStaticMeshComponent
-{
-public:
-	uint8                                         Pad_618[0x18];                                     // 0x0618(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickEditorStaticMeshComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickEditorStaticMeshComponent")
-	}
-	static class UBrickEditorStaticMeshComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickEditorStaticMeshComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBrickEditorStaticMeshComponent;
+DUMPER7_ASSERTS_UPropertyContainerWidget;
 
 // Class BrickRigs.BrickEditorArrowComponent
 // 0x0030 (0x0660 - 0x0630)
@@ -4022,35 +3885,9 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorArrowComponent;
 
-// Class BrickRigs.PropertyCategoryWidget
-// 0x0018 (0x0410 - 0x03F8)
-class UPropertyCategoryWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateCategory(const class FText& DisplayName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PropertyCategoryWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PropertyCategoryWidget")
-	}
-	static class UPropertyCategoryWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropertyCategoryWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPropertyCategoryWidget;
-
 // Class BrickRigs.BrickEditorAudioComponent
 // 0x0010 (0x08E0 - 0x08D0)
-class UBrickEditorAudioComponent final : public UAudioComponent
+class UBrickEditorAudioComponent : public UAudioComponent
 {
 public:
 	uint8                                         Pad_8D0[0x10];                                     // 0x08D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4071,9 +3908,85 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorAudioComponent;
 
+// Class BrickRigs.UGCBrowserWidget
+// 0x0120 (0x0550 - 0x0430)
+class UUGCBrowserWidget : public UPopupWidget
+{
+public:
+	uint8                                         Pad_430[0x90];                                     // 0x0430(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
+	EUGCQueryType                                 LastSelectedUGCQueryType;                          // 0x04C0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4C1[0x7];                                      // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EUGCQueryType, EUGCSortMethod>           LastSelectedUGCSortMethods;                        // 0x04C8(0x0050)(Config, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_518[0x10];                                     // 0x0518(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPagedListWidget*                       PagedList;                                         // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EUGCQueryType                                 UGCQueryType;                                      // 0x0530(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EUGCSortMethod                                UGCSortMethod;                                     // 0x0531(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_532[0x6];                                      // 0x0532(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 UGCSearchText;                                     // 0x0538(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowLegacyItems;                                  // 0x0548(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FUGCTags                               UGCTags;                                           // 0x0549(0x0003)(Transient, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	EPlayerVehicleSpawnInvincibility              VehicleSpawnInvincibility;                         // 0x054C(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_54D[0x3];                                      // 0x054D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddOrRemoveSelectedItem(bool bAdd);
+	void ClearItems();
+	void CreateAddOrRemoveItemButton(bool bIsArrayProperty, bool bIsSelected);
+	void CreateCancelButton();
+	void CreateClearItemsButton(bool bIsArrayProperty);
+	void CreateDeleteButton();
+	void CreateDuplicateButton();
+	void CreateEditButton();
+	void CreateImportButton();
+	void CreateNewItem();
+	void CreateNewItemButton();
+	void CreateOpenInExplorerButton();
+	void CreateRecoverAutoSaveButton();
+	void CreateSaveNewButton();
+	void CreateSaveOverwriteButton();
+	void CreateSpawnButton(bool bCanReplaceCurrent, bool bCanSpawn, const class FText& SpawnFailureText);
+	void CreateSpawnInvincibilityButton(const class FText& CurrentInvincibilityText);
+	void CreateSubscribeButton(bool bIsSubscribed);
+	void CreateUpdateExistingButton();
+	void CreateUploadNewButton();
+	void CreateViewInBrowserButton();
+	void CreateVoteButtons(const EFluUGCItemVote Vote);
+	void CycleVehicleSpawnInvincibility();
+	void DeleteSelectedItem();
+	void DuplicateSelectedItem();
+	void EditSelectedItem();
+	void FavoriteSelectedItem(bool bFavorite);
+	void ImportSelectedItem();
+	void OnListEntrySelected(class UPagedListEntryWidget* Widget, bool bDoubleClick);
+	void OnLoadListPage(int32 NewPage);
+	void OpenSelectedItemInExplorer();
+	void RecoverSelectedAutoSave();
+	void SaveItem(bool bOverwriteSelected);
+	void SetSelectedItemVote(const EFluUGCItemVote Vote);
+	void SpawnSelectedItem(bool bReplaceCurrent);
+	void SubscribeSelectedItem(bool bSubscribe);
+	void UploadItem(bool bUpdateSelected);
+	void ViewSelectedItemInBrowser();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UGCBrowserWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UGCBrowserWidget")
+	}
+	static class UUGCBrowserWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUGCBrowserWidget>();
+	}
+};
+DUMPER7_ASSERTS_UUGCBrowserWidget;
+
 // Class BrickRigs.BrickEditorCableComponent
 // 0x0000 (0x0600 - 0x0600)
-class UBrickEditorCableComponent final : public UCableComponent
+class UBrickEditorCableComponent : public UCableComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -4090,26 +4003,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBrickEditorCableComponent;
-
-// Class BrickRigs.TrussBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UTrussBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TrussBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TrussBrickStaticInfo")
-	}
-	static class UTrussBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTrussBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UTrussBrickStaticInfo;
 
 // Class BrickRigs.BrickEditorComponentInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -4139,209 +4032,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_IBrickEditorComponentInterface;
-
-// Class BrickRigs.BrickEditorMode
-// 0x0010 (0x0040 - 0x0030)
-class UBrickEditorMode : public UObject
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABrickEditor*                           BrickEditor;                                       // 0x0038(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickEditorMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickEditorMode")
-	}
-	static class UBrickEditorMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickEditorMode>();
-	}
-};
-DUMPER7_ASSERTS_UBrickEditorMode;
-
-// Class BrickRigs.ScalableBrickStaticInfo
-// 0x0040 (0x01E0 - 0x01A0)
-class UScalableBrickStaticInfo : public UScalableBrickBaseStaticInfo
-{
-public:
-	float                                         ScalableLiftSurfaceRadiiYZ[0x2];                   // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ScalableLiftSurfaceCrossSectionAreasYZ[0x2];       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ScalableLiftSurfaceNormalsYZ[0x2];                 // 0x01B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EScalableBrickShape                           ScalableShape;                                     // 0x01C8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FScalableBrickReplacementMesh>  ReplacementMeshes;                                 // 0x01D0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ScalableBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ScalableBrickStaticInfo")
-	}
-	static class UScalableBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScalableBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UScalableBrickStaticInfo;
-
-// Class BrickRigs.TextBrickStaticInfo
-// 0x0008 (0x01E8 - 0x01E0)
-class UTextBrickStaticInfo : public UScalableBrickStaticInfo
-{
-public:
-	class UBrickFont*                             DefaultFont;                                       // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TextBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TextBrickStaticInfo")
-	}
-	static class UTextBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTextBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UTextBrickStaticInfo;
-
-// Class BrickRigs.BrickEditorDefaultMode
-// 0x0128 (0x0168 - 0x0040)
-class UBrickEditorDefaultMode final : public UBrickEditorMode
-{
-public:
-	uint8                                         Pad_40[0x128];                                     // 0x0040(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickEditorDefaultMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickEditorDefaultMode")
-	}
-	static class UBrickEditorDefaultMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickEditorDefaultMode>();
-	}
-};
-DUMPER7_ASSERTS_UBrickEditorDefaultMode;
-
-// Class BrickRigs.BrickEditorInterfaceComponent
-// 0x0080 (0x02B0 - 0x0230)
-class UBrickEditorInterfaceComponent : public USceneComponent
-{
-public:
-	TArray<class UBrickEditorObject*>             BrickEditorObjects;                                // 0x0228(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_238[0x78];                                     // 0x0238(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FVector FocusCameraOnBrickEditorObjects(const TArray<class UBrickEditorObject*>& Objects, const struct FTransform& CameraTransform, const struct FVector2D& FOV, const float Margin) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickEditorInterfaceComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickEditorInterfaceComponent")
-	}
-	static class UBrickEditorInterfaceComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickEditorInterfaceComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBrickEditorInterfaceComponent;
-
-// Class BrickRigs.VehicleResourceSubsystem
-// 0x0080 (0x00B8 - 0x0038)
-class UVehicleResourceSubsystem final : public UWorldSubsystem
-{
-public:
-	uint8                                         Pad_38[0x80];                                      // 0x0038(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UVehicleResourceSubsystem* Get(const class UObject* WorldContextObject);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VehicleResourceSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VehicleResourceSubsystem")
-	}
-	static class UVehicleResourceSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVehicleResourceSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UVehicleResourceSubsystem;
-
-// Class BrickRigs.BrickEditorISMComponent
-// 0x0010 (0x0700 - 0x06F0)
-class UBrickEditorISMComponent final : public UInstancedStaticMeshComponent
-{
-public:
-	uint8                                         Pad_6F0[0x10];                                     // 0x06F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickEditorISMComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickEditorISMComponent")
-	}
-	static class UBrickEditorISMComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickEditorISMComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBrickEditorISMComponent;
-
-// Class BrickRigs.BrickEditorMirrorAxisWidget
-// 0x0010 (0x0408 - 0x03F8)
-class UBrickEditorMirrorAxisWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnClicked();
-	void UpdateCanBeSelected(bool bNewCanBeSelected);
-	void UpdateIsSelected(bool bNewSelected);
-	void UpdateMirrorAxis(EAxis InAxis);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickEditorMirrorAxisWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickEditorMirrorAxisWidget")
-	}
-	static class UBrickEditorMirrorAxisWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickEditorMirrorAxisWidget>();
-	}
-};
-DUMPER7_ASSERTS_UBrickEditorMirrorAxisWidget;
 
 // Class BrickRigs.ScalableBrickBase
 // 0x0018 (0x0108 - 0x00F0)
@@ -4393,17 +4083,17 @@ public:
 DUMPER7_ASSERTS_UScalableBrick;
 
 // Class BrickRigs.ThrusterBrick
-// 0x0080 (0x0198 - 0x0118)
-class UThrusterBrick final : public UScalableBrick
+// 0x0078 (0x0190 - 0x0118)
+class UThrusterBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x18];                                     // 0x0118(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	int8                                          RepAccumulatedInput;                               // 0x0130(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_131[0x37];                                     // 0x0131(0x0037)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0168(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	float                                         InputScale;                                        // 0x0190(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAccumulated;                                      // 0x0194(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_195[0x3];                                      // 0x0195(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0168(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	float                                         InputScale;                                        // 0x0188(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAccumulated;                                      // 0x018C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_RepAccumulatedInput();
@@ -4424,73 +4114,177 @@ public:
 };
 DUMPER7_ASSERTS_UThrusterBrick;
 
+// Class BrickRigs.BrickEditorMode
+// 0x0010 (0x0040 - 0x0030)
+class UBrickEditorMode : public UObject
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABrickEditor*                           BrickEditor;                                       // 0x0038(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickEditorMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickEditorMode")
+	}
+	static class UBrickEditorMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickEditorMode>();
+	}
+};
+DUMPER7_ASSERTS_UBrickEditorMode;
+
+// Class BrickRigs.BrickEditorDefaultMode
+// 0x0128 (0x0168 - 0x0040)
+class UBrickEditorDefaultMode : public UBrickEditorMode
+{
+public:
+	uint8                                         Pad_40[0x128];                                     // 0x0040(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickEditorDefaultMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickEditorDefaultMode")
+	}
+	static class UBrickEditorDefaultMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickEditorDefaultMode>();
+	}
+};
+DUMPER7_ASSERTS_UBrickEditorDefaultMode;
+
+// Class BrickRigs.WearableStaticInfo
+// 0x0010 (0x03E0 - 0x03D0)
+class UWearableStaticInfo : public UItemStaticInfo
+{
+public:
+	EWearableTag                                  WearableType;                                      // 0x03D0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D1[0xF];                                      // 0x03D1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WearableStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WearableStaticInfo")
+	}
+	static class UWearableStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWearableStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UWearableStaticInfo;
+
+// Class BrickRigs.BrickEditorISMComponent
+// 0x0010 (0x0700 - 0x06F0)
+class UBrickEditorISMComponent : public UInstancedStaticMeshComponent
+{
+public:
+	uint8                                         Pad_6F0[0x10];                                     // 0x06F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickEditorISMComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickEditorISMComponent")
+	}
+	static class UBrickEditorISMComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickEditorISMComponent>();
+	}
+};
+DUMPER7_ASSERTS_UBrickEditorISMComponent;
+
+// Class BrickRigs.TrainWheelBrickStaticInfo
+// 0x0000 (0x01C8 - 0x01C8)
+class UTrainWheelBrickStaticInfo : public UWheelBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TrainWheelBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TrainWheelBrickStaticInfo")
+	}
+	static class UTrainWheelBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTrainWheelBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UTrainWheelBrickStaticInfo;
+
 // Class BrickRigs.BaseEditorInputComponent
-// 0x0010 (0x0190 - 0x0180)
+// 0x0010 (0x0210 - 0x0200)
 class UBaseEditorInputComponent : public UBaseInputComponent
 {
 public:
-	class ABrickEditor*                           BrickEditor;                                       // 0x0180(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ABrickEditor*                           BrickEditor;                                       // 0x0200(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_208[0x8];                                      // 0x0208(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnPressedAddToEditorGroup();
-	void OnPressedAddToSelection();
-	void OnPressedAddToWeldGroup();
-	void OnPressedCaptureThumbnail();
-	void OnPressedCycleViewMode();
-	void OnPressedDeleteSelection();
-	void OnPressedDuplicateSelection();
-	void OnPressedDuplicateSelectionMirrored();
-	void OnPressedEditMetaData();
-	void OnPressedEditorCancel();
-	void OnPressedEditorCommit();
-	void OnPressedExitEditor();
-	void OnPressedExitEditorWithVehicle();
-	void OnPressedFocusSelection();
-	void OnPressedHideSelection();
-	void OnPressedImportItem();
-	void OnPressedInvertSelection();
-	void OnPressedMirrorSelection();
-	void OnPressedMoveAxisX();
-	void OnPressedMoveAxisY();
-	void OnPressedMoveAxisZ();
-	void OnPressedMovePerpendicular();
-	void OnPressedMoveSelection();
-	void OnPressedNewItem();
-	void OnPressedOpenItem();
-	void OnPressedRedo();
-	void OnPressedRemoveFromEditorGroup();
-	void OnPressedRemoveFromWeldGroup();
-	void OnPressedSaveItem();
-	void OnPressedSaveItemAs();
-	void OnPressedSelect();
-	void OnPressedSelectAttached();
-	void OnPressedSelectAttachedRecursive();
-	void OnPressedSelectByBrick();
-	void OnPressedSelectByColor();
-	void OnPressedSelectByEditorGroup();
-	void OnPressedSelectByMaterial();
-	void OnPressedSelectByPattern();
-	void OnPressedSelectByType();
-	void OnPressedSelectByWeldGroup();
-	void OnPressedToggleMirrorMode();
-	void OnPressedToggleSelection();
-	void OnPressedToggleSnapping();
-	void OnPressedToggleTransformSpace();
-	void OnPressedUndo();
-	void OnPressedUnhideAll();
-	void OnPressedUploadItem();
-	void OnPressedUploadItemAs();
-	void OnReleasedAddToSelection();
-	void OnReleasedMovePerpendicular();
-	void OnReleasedSelect();
-
-	class FText GetCycleViewModeValueText() const;
-	bool GetExitEditorWithVehicleEnabled() const;
-	bool GetSaveItemAsEnabled() const;
-	bool GetSaveItemEnabled() const;
-	bool GetUploadItemAsEnabled() const;
-	bool GetUploadItemEnabled() const;
+	struct FBrActionResult Action_AddToEditorGroup(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_AddToSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_AddToWeldGroup(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CaptureThumbnail(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleMirrorMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleViewMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_DeleteSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_DuplicateSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_DuplicateSelectionMirrored(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_EditMetaData(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_EditorCancel(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_EditorCommit(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ExitEditor(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ExitEditorWithVehicle(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_FocusSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_HideSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ImportItem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_InvertSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MirrorSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MoveAxisX(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MoveAxisY(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MoveAxisZ(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MovePerpendicular(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MoveSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_NewItem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_OpenItem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Redo(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_RemoveFromEditorGroup(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_RemoveFromWeldGroup(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SaveItem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SaveItemAs(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Select(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectAttached(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectAttachedRecursive(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByBrick(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByColor(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByEditorGroup(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByMaterial(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByPattern(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByType(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByWeldGroup(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ToggleSelection(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ToggleSnapping(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ToggleTransformSpace(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Undo(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_UnhideAll(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_UploadItem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_UploadItemAs(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -4509,8 +4303,8 @@ public:
 DUMPER7_ASSERTS_UBaseEditorInputComponent;
 
 // Class BrickRigs.EditorContextInputComponent
-// 0x0000 (0x0190 - 0x0190)
-class UEditorContextInputComponent final : public UBaseEditorInputComponent
+// 0x0000 (0x0210 - 0x0210)
+class UEditorContextInputComponent : public UBaseEditorInputComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -4528,32 +4322,38 @@ public:
 };
 DUMPER7_ASSERTS_UEditorContextInputComponent;
 
-// Class BrickRigs.UGCMetaDataPopupWidget
-// 0x0008 (0x0438 - 0x0430)
-class UUGCMetaDataPopupWidget : public UPopupWidget
+// Class BrickRigs.UGCTaskPopupWidget
+// 0x0030 (0x0460 - 0x0430)
+class UUGCTaskPopupWidget : public UPopupWidget
 {
 public:
-	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_430[0x28];                                     // 0x0430(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ProgressInterpSpeed;                               // 0x0458(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateIsFinished(bool bNewFinished, bool bNewSuccess);
+	void UpdateProgress(float NewProgress);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UGCMetaDataPopupWidget")
+		STATIC_CLASS_IMPL("UGCTaskPopupWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UGCMetaDataPopupWidget")
+		STATIC_NAME_IMPL(L"UGCTaskPopupWidget")
 	}
-	static class UUGCMetaDataPopupWidget* GetDefaultObj()
+	static class UUGCTaskPopupWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUGCMetaDataPopupWidget>();
+		return GetDefaultObjImpl<UUGCTaskPopupWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUGCMetaDataPopupWidget;
+DUMPER7_ASSERTS_UUGCTaskPopupWidget;
 
 // Class BrickRigs.BrickEditorModeWidget
 // 0x0010 (0x0408 - 0x03F8)
-class UBrickEditorModeWidget final : public UUserWidget
+class UBrickEditorModeWidget : public UUserWidget
 {
 public:
 	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4576,7 +4376,7 @@ DUMPER7_ASSERTS_UBrickEditorModeWidget;
 
 // Class BrickRigs.BrickEditorMoveMode
 // 0x00D0 (0x0110 - 0x0040)
-class UBrickEditorMoveMode final : public UBrickEditorMode
+class UBrickEditorMoveMode : public UBrickEditorMode
 {
 public:
 	uint8                                         Pad_40[0xA0];                                      // 0x0040(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
@@ -4600,59 +4400,61 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorMoveMode;
 
-// Class BrickRigs.WheelBrickStaticInfo
-// 0x0028 (0x01C8 - 0x01A0)
-class UWheelBrickStaticInfo : public UBrickStaticInfo
+// Class BrickRigs.FuelConsumerBrick
+// 0x0008 (0x00F8 - 0x00F0)
+class UFuelConsumerBrick : public UBrick
 {
 public:
-	float                                         WheelRadius;                                       // 0x01A0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         WheelWidthRange;                                   // 0x01A4(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ColliderRadius;                                    // 0x01AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinWheelRadius;                                    // 0x01B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxWheelRadiusScale;                               // 0x01B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinWheelWidth;                                     // 0x01B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxWheelWidthScale;                                // 0x01BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            MassPropertiesProxyMesh;                           // 0x01C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("WheelBrickStaticInfo")
+		STATIC_CLASS_IMPL("FuelConsumerBrick")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"WheelBrickStaticInfo")
+		STATIC_NAME_IMPL(L"FuelConsumerBrick")
 	}
-	static class UWheelBrickStaticInfo* GetDefaultObj()
+	static class UFuelConsumerBrick* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UWheelBrickStaticInfo>();
+		return GetDefaultObjImpl<UFuelConsumerBrick>();
 	}
 };
-DUMPER7_ASSERTS_UWheelBrickStaticInfo;
+DUMPER7_ASSERTS_UFuelConsumerBrick;
 
-// Class BrickRigs.TrainWheelBrickStaticInfo
-// 0x0000 (0x01C8 - 0x01C8)
-class UTrainWheelBrickStaticInfo : public UWheelBrickStaticInfo
+// Class BrickRigs.TurbineBrick
+// 0x0100 (0x01F8 - 0x00F8)
+class UTurbineBrick : public UFuelConsumerBrick
 {
+public:
+	uint8                                         Pad_F8[0x40];                                      // 0x00F8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   PowerInputChannel;                                 // 0x0138(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   PitchInputChannel;                                 // 0x0158(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   RollInputChannel;                                  // 0x0178(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   YawInputChannel;                                   // 0x0198(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   ThrottleInputChannel;                              // 0x01B8(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   AutoHoverInputChannel;                             // 0x01D8(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TrainWheelBrickStaticInfo")
+		STATIC_CLASS_IMPL("TurbineBrick")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TrainWheelBrickStaticInfo")
+		STATIC_NAME_IMPL(L"TurbineBrick")
 	}
-	static class UTrainWheelBrickStaticInfo* GetDefaultObj()
+	static class UTurbineBrick* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTrainWheelBrickStaticInfo>();
+		return GetDefaultObjImpl<UTurbineBrick>();
 	}
 };
-DUMPER7_ASSERTS_UTrainWheelBrickStaticInfo;
+DUMPER7_ASSERTS_UTurbineBrick;
 
 // Class BrickRigs.BrickEditorNiagaraComponent
 // 0x0010 (0x08F0 - 0x08E0)
-class UBrickEditorNiagaraComponent final : public UNiagaraComponent
+class UBrickEditorNiagaraComponent : public UNiagaraComponent
 {
 public:
 	uint8                                         Pad_8E0[0x10];                                     // 0x08E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4702,31 +4504,57 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorObjectFilter;
 
-// Class BrickRigs.SirenType
-// 0x0038 (0x0068 - 0x0030)
-class USirenType : public UObject
+// Class BrickRigs.HUDIconPanelWidget
+// 0x0098 (0x0490 - 0x03F8)
+class UHUDIconPanelWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   DisplayName;                                       // 0x0038(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class USoundBase*                             HornSound;                                         // 0x0050(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class USoundBase*>                     SirenSounds;                                       // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F8[0x68];                                     // 0x03F8(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UHUDIconContainerWidget>    IconContainerWidgetClass;                          // 0x0460(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UInteractionWidget>         InteractionWidgetClass;                            // 0x0468(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHUDIconDomain                                IconDomain;                                        // 0x0470(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_471[0x1F];                                     // 0x0471(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SirenType")
+		STATIC_CLASS_IMPL("HUDIconPanelWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SirenType")
+		STATIC_NAME_IMPL(L"HUDIconPanelWidget")
 	}
-	static class USirenType* GetDefaultObj()
+	static class UHUDIconPanelWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USirenType>();
+		return GetDefaultObjImpl<UHUDIconPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_USirenType;
+DUMPER7_ASSERTS_UHUDIconPanelWidget;
+
+// Class BrickRigs.SpawnPointPanelWidget
+// 0x0010 (0x04A0 - 0x0490)
+class USpawnPointPanelWidget : public UHUDIconPanelWidget
+{
+public:
+	class UBrickGridPanel*                        GridPanel;                                         // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumSpawnPointsPerRow;                              // 0x0498(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SpawnPointPanelWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpawnPointPanelWidget")
+	}
+	static class USpawnPointPanelWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USpawnPointPanelWidget>();
+	}
+};
+DUMPER7_ASSERTS_USpawnPointPanelWidget;
 
 // Class BrickRigs.BrickEditorObjectPickerMode
 // 0x0020 (0x0060 - 0x0040)
@@ -4753,7 +4581,7 @@ DUMPER7_ASSERTS_UBrickEditorObjectPickerMode;
 
 // Class BrickRigs.BrickEditorObjectPropertyPickerMode
 // 0x0000 (0x0060 - 0x0060)
-class UBrickEditorObjectPropertyPickerMode final : public UBrickEditorObjectPickerMode
+class UBrickEditorObjectPropertyPickerMode : public UBrickEditorObjectPickerMode
 {
 public:
 	static class UClass* StaticClass()
@@ -4771,61 +4599,71 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorObjectPropertyPickerMode;
 
-// Class BrickRigs.FuelConsumerBrick
-// 0x0008 (0x00F8 - 0x00F0)
-class UFuelConsumerBrick : public UBrick
+// Class BrickRigs.PagedListEntryWidget
+// 0x0028 (0x0420 - 0x03F8)
+class UPagedListEntryWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickButtonWidget*                     Button;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_410[0x10];                                     // 0x0410(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitializeEntry();
+	void OnClickedEntry();
+	void OnDoubleClickedEntry();
+	void UpdateButtonSelected(bool bNewSelected);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("FuelConsumerBrick")
+		STATIC_CLASS_IMPL("PagedListEntryWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"FuelConsumerBrick")
+		STATIC_NAME_IMPL(L"PagedListEntryWidget")
 	}
-	static class UFuelConsumerBrick* GetDefaultObj()
+	static class UPagedListEntryWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFuelConsumerBrick>();
+		return GetDefaultObjImpl<UPagedListEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UFuelConsumerBrick;
+DUMPER7_ASSERTS_UPagedListEntryWidget;
 
-// Class BrickRigs.TurbineBrick
-// 0x0130 (0x0228 - 0x00F8)
-class UTurbineBrick final : public UFuelConsumerBrick
+// Class BrickRigs.UGCItemWidget
+// 0x0108 (0x0528 - 0x0420)
+class UUGCItemWidget : public UPagedListEntryWidget
 {
 public:
-	uint8                                         Pad_F8[0x40];                                      // 0x00F8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   PowerInputChannel;                                 // 0x0138(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   PitchInputChannel;                                 // 0x0160(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   RollInputChannel;                                  // 0x0188(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   YawInputChannel;                                   // 0x01B0(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   ThrottleInputChannel;                              // 0x01D8(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   AutoHoverInputChannel;                             // 0x0200(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FUGCFileInfo                           Entry;                                             // 0x0420(0x00E8)(Transient, NativeAccessSpecifierPrivate)
+	class UBrickImage*                            Image;                                             // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ThumbnailRoundedEdgeRadius;                        // 0x0518(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector2D                              ThumbnailShadowOffset;                             // 0x051C(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_524[0x4];                                      // 0x0524(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateItemWidget(bool bInIsSelected, bool bInIsLegacyFile, bool bInHasAutoSave, bool bInIsDedicatedAutoSave);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TurbineBrick")
+		STATIC_CLASS_IMPL("UGCItemWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TurbineBrick")
+		STATIC_NAME_IMPL(L"UGCItemWidget")
 	}
-	static class UTurbineBrick* GetDefaultObj()
+	static class UUGCItemWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTurbineBrick>();
+		return GetDefaultObjImpl<UUGCItemWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTurbineBrick;
+DUMPER7_ASSERTS_UUGCItemWidget;
 
 // Class BrickRigs.BrickEditorPropertyPickerMode
 // 0x0000 (0x0060 - 0x0060)
-class UBrickEditorPropertyPickerMode final : public UBrickEditorObjectPickerMode
+class UBrickEditorPropertyPickerMode : public UBrickEditorObjectPickerMode
 {
 public:
 	static class UClass* StaticClass()
@@ -4869,29 +4707,35 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorObjectPropertyWidget;
 
-// Class BrickRigs.UnsavedChangesPopupWidget
-// 0x0000 (0x0430 - 0x0430)
-class UUnsavedChangesPopupWidget : public UPopupWidget
+// Class BrickRigs.VehicleResourceSubsystem
+// 0x0080 (0x00B8 - 0x0038)
+class UVehicleResourceSubsystem : public UWorldSubsystem
 {
+public:
+	uint8                                         Pad_38[0x80];                                      // 0x0038(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UVehicleResourceSubsystem* Get(const class UObject* WorldContextObject);
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UnsavedChangesPopupWidget")
+		STATIC_CLASS_IMPL("VehicleResourceSubsystem")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UnsavedChangesPopupWidget")
+		STATIC_NAME_IMPL(L"VehicleResourceSubsystem")
 	}
-	static class UUnsavedChangesPopupWidget* GetDefaultObj()
+	static class UVehicleResourceSubsystem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUnsavedChangesPopupWidget>();
+		return GetDefaultObjImpl<UVehicleResourceSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UUnsavedChangesPopupWidget;
+DUMPER7_ASSERTS_UVehicleResourceSubsystem;
 
 // Class BrickRigs.BrickEditorParticleComponent
 // 0x0010 (0x07C0 - 0x07B0)
-class UBrickEditorParticleComponent final : public UParticleSystemComponent
+class UBrickEditorParticleComponent : public UParticleSystemComponent
 {
 public:
 	uint8                                         Pad_7B0[0x10];                                     // 0x07B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4917,7 +4761,7 @@ DUMPER7_ASSERTS_UBrickEditorParticleComponent;
 
 // Class BrickRigs.BrickEditorSkeletalMeshComponent
 // 0x0010 (0x10A0 - 0x1090)
-class UBrickEditorSkeletalMeshComponent final : public USkeletalMeshComponent
+class UBrickEditorSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
 	uint8                                         Pad_1090[0x10];                                    // 0x1090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -4994,7 +4838,7 @@ DUMPER7_ASSERTS_UBrickEditorStaticInfo;
 
 // Class BrickRigs.BrickEditorTextRenderComponent
 // 0x0000 (0x0580 - 0x0580)
-class UBrickEditorTextRenderComponent final : public UTextRenderComponent
+class UBrickEditorTextRenderComponent : public UTextRenderComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -5012,44 +4856,37 @@ public:
 };
 DUMPER7_ASSERTS_UBrickEditorTextRenderComponent;
 
-// Class BrickRigs.WorldBounds
-// 0x0088 (0x0380 - 0x02F8)
-class AWorldBounds : public AActor
+// Class BrickRigs.ZombieGameMode
+// 0x0040 (0x0570 - 0x0530)
+class AZombieGameMode : public ABrickGameMode
 {
 public:
-	class UInstancedStaticMeshComponent*          BoundsMeshComponent;                               // 0x02F8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UStaticMeshComponent*                   WaterMeshComponent;                                // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UStaticMesh*                            StaticMesh;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            WaterMesh;                                         // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     MaterialOverride;                                  // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     WaterMaterialOverride;                             // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsSize;                                        // 0x0328(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              LandscapeSize;                                     // 0x0334(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              HoleSize;                                          // 0x033C(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class AActor>                  BoundsAlignActor;                                  // 0x0348(0x0030)(Edit, EditorOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSnapBounds;                                       // 0x0378(0x0001)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_379[0x3];                                      // 0x0379(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WaterDepth;                                        // 0x037C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_530[0x10];                                     // 0x0530(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AZombie*>                        Zombies;                                           // 0x0540(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	int32                                         NumStartZombies;                                   // 0x0550(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         AddZombiesPerWave;                                 // 0x0554(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FFloatInterval                         ZombieLifeSpanRange;                               // 0x0558(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class APawn>                      ZombieClass;                                       // 0x0560(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class APawn>                      BossZombieClass;                                   // 0x0568(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("WorldBounds")
+		STATIC_CLASS_IMPL("ZombieGameMode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"WorldBounds")
+		STATIC_NAME_IMPL(L"ZombieGameMode")
 	}
-	static class AWorldBounds* GetDefaultObj()
+	static class AZombieGameMode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AWorldBounds>();
+		return GetDefaultObjImpl<AZombieGameMode>();
 	}
 };
-DUMPER7_ASSERTS_AWorldBounds;
+DUMPER7_ASSERTS_AZombieGameMode;
 
 // Class BrickRigs.BrickEditorWidget
-// 0x00D0 (0x04C8 - 0x03F8)
+// 0x00B0 (0x04A8 - 0x03F8)
 class UBrickEditorWidget : public UUserWidget
 {
 public:
@@ -5057,29 +4894,30 @@ public:
 	class UBrickEditorModeWidget*                 CurrentModeWidget;                                 // 0x0418(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UPlacableObjectWidget*>          PlacableWidgets;                                   // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBrickEditorMirrorAxisWidget*>   MirrorAxisWidgets;                                 // 0x0440(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_450[0x8];                                      // 0x0450(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPagedListHeaderWidget*                 ItemHeaderWidget;                                  // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBoxWidget*                    PlacableSearchTextBox;                             // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickGridPanel*                        PlacablesPanel;                                    // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UPlacableObjectWidget>      PlacableWidgetClass;                               // 0x0478(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumPlacablesPerRow;                                // 0x0480(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   UGCTaskPopupClass;                                 // 0x0488(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UBrickEditorModeWidget>     MoveModeWidgetClass;                               // 0x04B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UBrickEditorMirrorAxisWidget> MirrorModeWidgetClass;                           // 0x04C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPagedListHeaderWidget*                 ItemHeaderWidget;                                  // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBoxWidget*                    PlacableSearchTextBox;                             // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickGridPanel*                        PlacablesPanel;                                    // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UPlacableObjectWidget>      PlacableWidgetClass;                               // 0x0460(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumPlacablesPerRow;                                // 0x0468(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   UGCTaskPopupClass;                                 // 0x0470(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UBrickEditorModeWidget>     MoveModeWidgetClass;                               // 0x04A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void AddMirrorModeWidget(class UBrickEditorMirrorAxisWidget* Widget, int32 Index_0);
 	void AddModeWidget(class UBrickEditorModeWidget* Widget);
 	void ClearPlacableFilter();
+	void OnEditorModeChanged();
 	void OnMeasurementSystemChanged(EMeasurementSystem NewSystem);
 	void OnPlacableSearchTextChanged(const class FText& NewText, EValueChangedEventType EventType);
 	void UpdateCanClearPlacableFilter(bool bNewCanClear);
 	void UpdateCanPlaceObjects(bool bNewCanPlace);
 	void UpdateEditorUIScale(float NewScale);
 	void UpdateSelection(const class FText& SelectionName, bool bAnythingSelected);
+
+	class ABrickEditor* GetBrickEditor() const;
+	class UBrickEditorMode* GetCurrentEditorMode() const;
+	class UEditorInputComponent* GetEditorInputComponent() const;
 
 public:
 	static class UClass* StaticClass()
@@ -5099,7 +4937,7 @@ DUMPER7_ASSERTS_UBrickEditorWidget;
 
 // Class BrickRigs.BrickExpandableArea
 // 0x0008 (0x04A8 - 0x04A0)
-class UBrickExpandableArea final : public UExpandableArea
+class UBrickExpandableArea : public UExpandableArea
 {
 public:
 	uint8                                         Pad_4A0[0x8];                                      // 0x04A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -5122,7 +4960,7 @@ DUMPER7_ASSERTS_UBrickExpandableArea;
 
 // Class BrickRigs.BrickFont
 // 0x0048 (0x0090 - 0x0048)
-class UBrickFont final : public UPrimaryDataAsset
+class UBrickFont : public UPrimaryDataAsset
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -5193,45 +5031,55 @@ public:
 };
 DUMPER7_ASSERTS_UBrickGameInstance;
 
-// Class BrickRigs.WearableStaticInfo
-// 0x0010 (0x03D0 - 0x03C0)
-class UWearableStaticInfo : public UItemStaticInfo
+// Class BrickRigs.WinchBrick
+// 0x0090 (0x0180 - 0x00F0)
+class UWinchBrick : public UBrick
 {
 public:
-	EWearableTag                                  WearableType;                                      // 0x03C0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C1[0xF];                                      // 0x03C1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F0[0x4];                                       // 0x00F0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWinchAttachTarget                     AttachTarget;                                      // 0x00F4(0x001C)(Net, Transient, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
+	float                                         RepRopeLength;                                     // 0x0110(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_114[0x44];                                     // 0x0114(0x0044)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0158(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	float                                         WinchSpeed;                                        // 0x0178(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Interact_AttachWinch(class ABrickPlayerController* OtherPC);
+	void Interact_DetachWinch(class ABrickPlayerController* OtherPC);
+	void OnRep_AttachTarget(const struct FWinchAttachTarget& PrevAttachTarget);
+	void OnRep_RepRopeLength();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("WearableStaticInfo")
+		STATIC_CLASS_IMPL("WinchBrick")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"WearableStaticInfo")
+		STATIC_NAME_IMPL(L"WinchBrick")
 	}
-	static class UWearableStaticInfo* GetDefaultObj()
+	static class UWinchBrick* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UWearableStaticInfo>();
+		return GetDefaultObjImpl<UWinchBrick>();
 	}
 };
-DUMPER7_ASSERTS_UWearableStaticInfo;
+DUMPER7_ASSERTS_UWinchBrick;
 
 // Class BrickRigs.BrickGameSession
-// 0x0108 (0x0428 - 0x0320)
-class ABrickGameSession final : public AGameSession
+// 0x0208 (0x0528 - 0x0320)
+class ABrickGameSession : public AGameSession
 {
 public:
 	uint8                                         Pad_320[0x18];                                     // 0x0320(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKickedPlayer>                  KickedPlayers;                                     // 0x0338(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_348[0x10];                                     // 0x0348(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBrickChatMessage>              ChatMessageLog;                                    // 0x0358(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_368[0xAC];                                     // 0x0368(0x00AC)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxAdminLoginAttempts;                             // 0x0414(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FailedAdminLoginKickDuration;                      // 0x0418(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxSessionLoginAttempts;                           // 0x041C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FailedSessionLoginKickDuration;                    // 0x0420(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368[0x1B0];                                    // 0x0368(0x01B0)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxAdminLoginAttempts;                             // 0x0518(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FailedAdminLoginKickDuration;                      // 0x051C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxSessionLoginAttempts;                           // 0x0520(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FailedSessionLoginKickDuration;                    // 0x0524(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class ABrickGameSession* Get(const class UObject* WorldContextObject);
@@ -5253,30 +5101,33 @@ public:
 DUMPER7_ASSERTS_ABrickGameSession;
 
 // Class BrickRigs.BrickGameState
-// 0x0358 (0x06D0 - 0x0378)
+// 0x0640 (0x09B8 - 0x0378)
 class ABrickGameState : public AGameState
 {
 public:
-	uint8                                         Pad_378[0x18];                                     // 0x0378(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchSettings                         MatchSettings;                                     // 0x0390(0x00C8)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
-	struct FMatchSettings                         NextMatchSettings;                                 // 0x0458(0x00C8)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_520[0xC8];                                     // 0x0520(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         MatchRandomSeed;                                   // 0x05E8(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAllowAdminLogin;                                  // 0x05E9(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5EA[0x6];                                      // 0x05EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBrickTeam*>                     Teams;                                             // 0x05F0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	class UBrickTeam*                             DefaultTeam;                                       // 0x0600(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UBrickTeam*                             ZombieTeam;                                        // 0x0608(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UBrickTeam*                             DummyTeam;                                         // 0x0610(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FMatchWinner                           MatchWinner;                                       // 0x0618(0x0001)(Net, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_619[0x1];                                      // 0x0619(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint16                                        CurrentRound;                                      // 0x061A(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_61C[0x4];                                      // 0x061C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         SpawnPointArray;                                   // 0x0620(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_630[0x18];                                     // 0x0630(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULoadoutInventoryComponent*             LoadoutInventoryComponent;                         // 0x0648(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ExitMatchDelay;                                    // 0x0650(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_654[0x7C];                                     // 0x0654(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378[0x20];                                     // 0x0378(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchSettings                         MatchSettings;                                     // 0x0398(0x01B0)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
+	struct FMatchSettings                         NextMatchSettings;                                 // 0x0548(0x01B0)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_6F8[0x1B0];                                    // 0x06F8(0x01B0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWeatherCondition*                      RandomWeather;                                     // 0x08A8(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FUGCFileInfo>                   ResolvedVehicleWhitelist;                          // 0x08B0(0x0010)(Net, ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_8C0[0x10];                                     // 0x08C0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         MatchRandomSeed;                                   // 0x08D0(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAllowAdminLogin;                                  // 0x08D1(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8D2[0x6];                                      // 0x08D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBrickTeam*>                     Teams;                                             // 0x08D8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	class UBrickTeam*                             DefaultTeam;                                       // 0x08E8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBrickTeam*                             ZombieTeam;                                        // 0x08F0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBrickTeam*                             DummyTeam;                                         // 0x08F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FMatchWinner                           MatchWinner;                                       // 0x0900(0x0001)(Net, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_901[0x1];                                      // 0x0901(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint16                                        CurrentRound;                                      // 0x0902(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_904[0x4];                                      // 0x0904(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         SpawnPointArray;                                   // 0x0908(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_918[0x18];                                     // 0x0918(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULoadoutInventoryComponent*             LoadoutInventoryComponent;                         // 0x0930(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ExitMatchDelay;                                    // 0x0938(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_93C[0x7C];                                     // 0x093C(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class ABrickGameState* Get(const class UObject* WorldContextObject);
@@ -5286,6 +5137,7 @@ public:
 	void OnRep_MatchSettings();
 	void OnRep_MatchWinner();
 	void OnRep_NextMatchSettings();
+	void OnRep_RandomWeather(class UWeatherCondition* PrevWeather);
 	void OnSubLevelLoaded();
 	void SetCurrentRound(int32 NewRound);
 	void SetMatchSettings(const struct FMatchSettings& NewSettings);
@@ -5298,6 +5150,7 @@ public:
 	int32 GetCurrentRound() const;
 	class UBrickTeam* GetDefaultTeam() const;
 	class UBrickTeam* GetDummyTeam() const;
+	struct FWorldSetupParams GetEffectiveWorldSetupParams() const;
 	uint8 GetMatchRandomSeed() const;
 	const struct FMatchSettings GetMatchSettings() const;
 	int32 GetMatchTimerRate() const;
@@ -5308,6 +5161,7 @@ public:
 	int32 GetNumFreeSlotsInTeam(const struct FGenericTeamId& TeamId) const;
 	int32 GetNumPlayersInTeam(const struct FGenericTeamId& TeamId) const;
 	int32 GetNumPlayersToStartWarmup() const;
+	const TArray<struct FUGCFileInfo> GetResolvedVehicleWhitelist() const;
 	const TArray<class UBrickTeam*> GetTeams() const;
 	float GetVehiclePrice(const struct FVehicleSpawnProperties& Props) const;
 	class UBrickTeam* GetZombieTeam() const;
@@ -5330,7 +5184,7 @@ DUMPER7_ASSERTS_ABrickGameState;
 
 // Class BrickRigs.BrickGridPanel
 // 0x0018 (0x0298 - 0x0280)
-class UBrickGridPanel final : public UGridPanel
+class UBrickGridPanel : public UGridPanel
 {
 public:
 	uint8                                         Pad_280[0x8];                                      // 0x0280(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -5363,7 +5217,7 @@ DUMPER7_ASSERTS_UBrickGridPanel;
 
 // Class BrickRigs.BrickHorizontalBox
 // 0x0010 (0x0268 - 0x0258)
-class UBrickHorizontalBox final : public UHorizontalBox
+class UBrickHorizontalBox : public UHorizontalBox
 {
 public:
 	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -5390,26 +5244,21 @@ public:
 DUMPER7_ASSERTS_UBrickHorizontalBox;
 
 // Class BrickRigs.BrickImage
-// 0x00E8 (0x0470 - 0x0388)
-class UBrickImage final : public UImage
+// 0x00E0 (0x0468 - 0x0388)
+class UBrickImage : public UImage
 {
 public:
 	uint8                                         Pad_388[0xD9];                                     // 0x0388(0x00D9)(Fixing Size After Last Property [ Dumper-7 ])
 	EBrickUIColorStyle                            ColorStyle;                                        // 0x0461(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIStyleState                            StyleState;                                        // 0x0462(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBrickUIIconAtlas                             IconAtlas;                                         // 0x0463(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBrickUIIconSlot                       IconSlot;                                          // 0x0464(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsThrobber;                                       // 0x046C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsThrobber;                                       // 0x0462(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_463[0x5];                                      // 0x0463(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ClearIconAtlas();
+	void SetBrushFromSoftTextureMatchAspect(const TSoftObjectPtr<class UTexture2D> SoftTexture, const bool bKeepX);
+	void SetBrushFromTextureMatchAspect(class UTexture2D* Texture, const bool bKeepX);
+	void SetBrushFromThumbnail(const struct FBrickThumbnailRequest& Request, bool bMatchSize);
 	void SetColorStyle(EBrickUIColorStyle NewStyle);
-	void SetIconAtlas(EBrickUIIconAtlas NewAtlas);
-	void SetIconAtlasAndSlot(EBrickUIIconAtlas NewAtlas, const struct FBrickUIIconSlot& NewSlot);
-	void SetIconSlot(const struct FBrickUIIconSlot& NewSlot);
 	void SetIsThrobber(bool bNewIsThrobber);
-	void SetStyleState(EBrickUIStyleState NewState);
 
 	bool IsLoadingImage() const;
 
@@ -5431,7 +5280,7 @@ DUMPER7_ASSERTS_UBrickImage;
 
 // Class BrickRigs.BrickLocalPlayer
 // 0x0000 (0x0268 - 0x0268)
-class UBrickLocalPlayer final : public ULocalPlayer
+class UBrickLocalPlayer : public ULocalPlayer
 {
 public:
 	static class UClass* StaticClass()
@@ -5451,7 +5300,7 @@ DUMPER7_ASSERTS_UBrickLocalPlayer;
 
 // Class BrickRigs.BrickMaterial
 // 0x0070 (0x00B8 - 0x0048)
-class UBrickMaterial final : public UPrimaryDataAsset
+class UBrickMaterial : public UPrimaryDataAsset
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -5490,7 +5339,7 @@ DUMPER7_ASSERTS_UBrickMaterial;
 
 // Class BrickRigs.BrickMultiLineTextBox
 // 0x0C18 (0x1BA0 - 0x0F88)
-class UBrickMultiLineTextBox final : public UMultiLineEditableTextBox
+class UBrickMultiLineTextBox : public UMultiLineEditableTextBox
 {
 public:
 	uint8                                         Pad_F88[0xC18];                                    // 0x0F88(0x0C18)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -5511,39 +5360,117 @@ public:
 };
 DUMPER7_ASSERTS_UBrickMultiLineTextBox;
 
-// Class BrickRigs.WindowBrick
-// 0x0000 (0x00F0 - 0x00F0)
-class UWindowBrick final : public UBrick
+// Class BrickRigs.WorldBounds
+// 0x0088 (0x0380 - 0x02F8)
+class AWorldBounds : public AActor
 {
+public:
+	class UInstancedStaticMeshComponent*          BoundsMeshComponent;                               // 0x02F8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMeshComponent*                   WaterMeshComponent;                                // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMesh*                            StaticMesh;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            WaterMesh;                                         // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     MaterialOverride;                                  // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     WaterMaterialOverride;                             // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsSize;                                        // 0x0328(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              LandscapeSize;                                     // 0x0334(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              HoleSize;                                          // 0x033C(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class AActor>                  BoundsAlignActor;                                  // 0x0348(0x0030)(Edit, EditorOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSnapBounds;                                       // 0x0378(0x0001)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_379[0x3];                                      // 0x0379(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WaterDepth;                                        // 0x037C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("WindowBrick")
+		STATIC_CLASS_IMPL("WorldBounds")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"WindowBrick")
+		STATIC_NAME_IMPL(L"WorldBounds")
 	}
-	static class UWindowBrick* GetDefaultObj()
+	static class AWorldBounds* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UWindowBrick>();
+		return GetDefaultObjImpl<AWorldBounds>();
 	}
 };
-DUMPER7_ASSERTS_UWindowBrick;
+DUMPER7_ASSERTS_AWorldBounds;
 
-// Class BrickRigs.BrickObjectPool
-// 0x0010 (0x0048 - 0x0038)
-class UBrickObjectPool final : public UWorldSubsystem
+// Class BrickRigs.PoolableObjectInterface
+// 0x0000 (0x0000 - 0x0000)
+class IPoolableObjectInterface final
 {
 public:
-	TArray<class UUserWidget*>                    WidgetPool;                                        // 0x0038(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	void RecycleObject();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PoolableObjectInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PoolableObjectInterface")
+	}
+	static class IPoolableObjectInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IPoolableObjectInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IPoolableObjectInterface;
+
+// Class BrickRigs.BuildingPart
+// 0x0028 (0x0058 - 0x0030)
+class UBuildingPart : public UObject
+{
+public:
+	uint8                                         Pad_30[0x28];                                      // 0x0030(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Fill(uint8 MeshIdx);
+	void Floor(int32 Floor_0, uint8 MeshIdx);
+	void Grid(int32 Dist, uint8 MeshIdx);
+	void Place(EBuildingSide Side, int32 Floor, int32 Position, uint8 MeshIdx);
+	void Rect(EBuildingSide Side, int32 StartFloor, int32 EndFloor, int32 StartPosition, int32 EndPosition, uint8 MeshIdx);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BuildingPart")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BuildingPart")
+	}
+	static class UBuildingPart* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBuildingPart>();
+	}
+};
+DUMPER7_ASSERTS_UBuildingPart;
+
+// Class BrickRigs.BrickObjectPool
+// 0x0050 (0x0088 - 0x0038)
+class UBrickObjectPool : public UWorldSubsystem
+{
+public:
+	uint8                                         Pad_38[0x50];                                      // 0x0038(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UBrickObjectPool* Get(const class UObject* WorldContextObject);
-	static class UUserWidget* GetWidget(const class UObject* WorldContextObject, const TSubclassOf<class UUserWidget> WidgetClass);
-	static void PoolWidget(class UUserWidget* Widget);
-	static void PoolWidgets(TArray<class UUserWidget*>& Widgets, const int32 NumToKeep);
-	static class UUserWidget* RecycleWidget(const class UObject* WorldContextObject, TArray<class UUserWidget*>& Widgets, const TSubclassOf<class UUserWidget> WidgetClass, const int32 Index_0, bool* bOutRecycled);
+	static class UWidget* GetWidget(const class UObject* WorldContextObject, const TSubclassOf<class UWidget> WidgetClass);
+	static void PoolWidget(class UWidget* Widget);
+	static void PoolWidgets(TArray<class UWidget*>& Widgets, const int32 NumToKeep);
+	static class UWidget* RecycleWidget(const class UObject* WorldContextObject, TArray<class UWidget*>& Widgets, const TSubclassOf<class UWidget> WidgetClass, const int32 Index_0, bool* bOutRecycled);
 
 public:
 	static class UClass* StaticClass()
@@ -5561,25 +5488,25 @@ public:
 };
 DUMPER7_ASSERTS_UBrickObjectPool;
 
-// Class BrickRigs.LedgeBrickStaticInfo
+// Class BrickRigs.WheelHubBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
-class ULedgeBrickStaticInfo : public UBrickStaticInfo
+class UWheelHubBrickStaticInfo : public UBrickStaticInfo
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LedgeBrickStaticInfo")
+		STATIC_CLASS_IMPL("WheelHubBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LedgeBrickStaticInfo")
+		STATIC_NAME_IMPL(L"WheelHubBrickStaticInfo")
 	}
-	static class ULedgeBrickStaticInfo* GetDefaultObj()
+	static class UWheelHubBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULedgeBrickStaticInfo>();
+		return GetDefaultObjImpl<UWheelHubBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_ULedgeBrickStaticInfo;
+DUMPER7_ASSERTS_UWheelHubBrickStaticInfo;
 
 // Class BrickRigs.BrickParticleModule
 // 0x0000 (0x0038 - 0x0038)
@@ -5601,38 +5528,9 @@ public:
 };
 DUMPER7_ASSERTS_UBrickParticleModule;
 
-// Class BrickRigs.ViewTargetInterface
-// 0x0000 (0x0000 - 0x0000)
-class IViewTargetInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ViewTargetInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ViewTargetInterface")
-	}
-	static class IViewTargetInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IViewTargetInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IViewTargetInterface;
-
 // Class BrickRigs.ParticleModuleBrickFire
 // 0x0000 (0x0038 - 0x0038)
-class UParticleModuleBrickFire final : public UBrickParticleModule
+class UParticleModuleBrickFire : public UBrickParticleModule
 {
 public:
 	static class UClass* StaticClass()
@@ -5652,7 +5550,7 @@ DUMPER7_ASSERTS_UParticleModuleBrickFire;
 
 // Class BrickRigs.ParticleModuleBrickSliding
 // 0x0000 (0x0038 - 0x0038)
-class UParticleModuleBrickSliding final : public UBrickParticleModule
+class UParticleModuleBrickSliding : public UBrickParticleModule
 {
 public:
 	static class UClass* StaticClass()
@@ -5670,9 +5568,39 @@ public:
 };
 DUMPER7_ASSERTS_UParticleModuleBrickSliding;
 
+// Class BrickRigs.LightBrick
+// 0x0058 (0x0170 - 0x0118)
+class ULightBrick : public UScalableBrick
+{
+public:
+	uint8                                         Pad_118[0x20];                                     // 0x0118(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Brightness;                                        // 0x0138(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class USirenSequence>             FlashSequence;                                     // 0x0140(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0148(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	ELightBrickDirection                          LightDirection;                                    // 0x0168(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LightConeAngle;                                    // 0x016C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LightBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LightBrick")
+	}
+	static class ULightBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULightBrick>();
+	}
+};
+DUMPER7_ASSERTS_ULightBrick;
+
 // Class BrickRigs.ParticleModulePrecipitation
 // 0x0000 (0x0038 - 0x0038)
-class UParticleModulePrecipitation final : public UBrickParticleModule
+class UParticleModulePrecipitation : public UBrickParticleModule
 {
 public:
 	static class UClass* StaticClass()
@@ -5690,34 +5618,37 @@ public:
 };
 DUMPER7_ASSERTS_UParticleModulePrecipitation;
 
-// Class BrickRigs.LightBrickStaticInfo
-// 0x0008 (0x01E8 - 0x01E0)
-class ULightBrickStaticInfo : public UScalableBrickStaticInfo
+// Class BrickRigs.Windmill
+// 0x0028 (0x0368 - 0x0340)
+class AWindmill : public AStaticMeshProp
 {
 public:
-	float                                         Intensity;                                         // 0x01E0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        LightDirectionFlags;                               // 0x01E4(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E6[0x2];                                      // 0x01E6(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         WindmillRandSeed;                                  // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   RotorMeshComponent;                                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMesh*                            RotorMesh;                                         // 0x0358(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FFloatInterval                         RotationSpeedRange;                                // 0x0360(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LightBrickStaticInfo")
+		STATIC_CLASS_IMPL("Windmill")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LightBrickStaticInfo")
+		STATIC_NAME_IMPL(L"Windmill")
 	}
-	static class ULightBrickStaticInfo* GetDefaultObj()
+	static class AWindmill* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULightBrickStaticInfo>();
+		return GetDefaultObjImpl<AWindmill>();
 	}
 };
-DUMPER7_ASSERTS_ULightBrickStaticInfo;
+DUMPER7_ASSERTS_AWindmill;
 
 // Class BrickRigs.ParticleModuleBuildingCollapse
 // 0x0000 (0x0038 - 0x0038)
-class UParticleModuleBuildingCollapse final : public UBrickParticleModule
+class UParticleModuleBuildingCollapse : public UBrickParticleModule
 {
 public:
 	static class UClass* StaticClass()
@@ -5734,26 +5665,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UParticleModuleBuildingCollapse;
-
-// Class BrickRigs.WheelHubBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UWheelHubBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WheelHubBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WheelHubBrickStaticInfo")
-	}
-	static class UWheelHubBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWheelHubBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UWheelHubBrickStaticInfo;
 
 // Class BrickRigs.BrickPattern
 // 0x0028 (0x0058 - 0x0030)
@@ -5811,38 +5722,32 @@ public:
 };
 DUMPER7_ASSERTS_IBrickPawnInterface;
 
-// Class BrickRigs.ZombieGameMode
-// 0x0040 (0x0570 - 0x0530)
-class AZombieGameMode : public ABrickGameMode
+// Class BrickRigs.MapCrosshairWidget
+// 0x0000 (0x03F8 - 0x03F8)
+class UMapCrosshairWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_530[0x10];                                     // 0x0530(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AZombie*>                        Zombies;                                           // 0x0540(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	int32                                         NumStartZombies;                                   // 0x0550(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         AddZombiesPerWave;                                 // 0x0554(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FFloatInterval                         ZombieLifeSpanRange;                               // 0x0558(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class APawn>                      ZombieClass;                                       // 0x0560(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class APawn>                      BossZombieClass;                                   // 0x0568(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	void SetColorStyle(const EBrickUIColorStyle NewStyle);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ZombieGameMode")
+		STATIC_CLASS_IMPL("MapCrosshairWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ZombieGameMode")
+		STATIC_NAME_IMPL(L"MapCrosshairWidget")
 	}
-	static class AZombieGameMode* GetDefaultObj()
+	static class UMapCrosshairWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AZombieGameMode>();
+		return GetDefaultObjImpl<UMapCrosshairWidget>();
 	}
 };
-DUMPER7_ASSERTS_AZombieGameMode;
+DUMPER7_ASSERTS_UMapCrosshairWidget;
 
 // Class BrickRigs.BrickPhysicalMaterial
 // 0x0010 (0x0098 - 0x0088)
-class UBrickPhysicalMaterial final : public UPhysicalMaterial
+class UBrickPhysicalMaterial : public UPhysicalMaterial
 {
 public:
 	float                                         Strength;                                          // 0x0088(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5865,6 +5770,1655 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBrickPhysicalMaterial;
+
+// Class BrickRigs.WingBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UWingBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WingBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WingBrickStaticInfo")
+	}
+	static class UWingBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWingBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UWingBrickStaticInfo;
+
+// Class BrickRigs.BrickPlayerController
+// 0x04F0 (0x0C08 - 0x0718)
+class ABrickPlayerController : public ABasePlayerController
+{
+public:
+	uint8                                         Pad_718[0x50];                                     // 0x0718(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundMix*                              AtmosphereSoundMix;                                // 0x0768(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_770[0x70];                                     // 0x0770(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABaseCharacter*                         PlayerCharacter;                                   // 0x07E0(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABaseCharacter*                         SpectatedCharacter;                                // 0x07E8(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABaseCharacter*                         ViewedCharacter;                                   // 0x07F0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABrickVehicle*                          PlayerVehicle;                                     // 0x07F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABrickVehicle*                          ViewedVehicle;                                     // 0x0800(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_808[0x8];                                      // 0x0808(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInventoryComponent*                    AccessedInventory;                                 // 0x0810(0x0008)(ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FInventory                             ReplicatedInventory;                               // 0x0818(0x0120)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_938[0x20];                                     // 0x0938(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABrickEditor*                           BrickEditor;                                       // 0x0958(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AActor*                                 EditorEntryPoint;                                  // 0x0960(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_968[0x10];                                     // 0x0968(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FreezeTime;                                        // 0x0978(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EUGCType                                      LastPIEEditorType;                                 // 0x097C(0x0001)(ZeroConstructor, Config, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_97D[0x3];                                      // 0x097D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUGCFileInfo                           LastPIEUGCFile;                                    // 0x0980(0x00E8)(Config, EditorOnly, NativeAccessSpecifierPrivate)
+	class UAudioComponent*                        HurtAudioComponent;                                // 0x0A68(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A70[0xF0];                                     // 0x0A70(0x00F0)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bNewIsInFreeCam)> OnIsInFreeCamChangedDelegate;               // 0x0B60(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EFreeCamMode NewFreeCamMode)> OnFreeCamModeChangedDelegate;        // 0x0B70(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B80[0x60];                                     // 0x0B80(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bNewProjectileCameraEnabled)> OnProjectileCameraEnabledChangedDelegate; // 0x0BE0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BF0[0x18];                                     // 0x0BF0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AccessInventory(class UInventoryComponent* InAccessedInventory);
+	void AdjustSlomoSpeed(int32 Dir);
+	void AdminSay(const class FText& Message);
+	bool CanCheat();
+	EPlayerSpawnResult CanRestartAt(struct FPlayerSpawnRequest* InOutSpawnRequest, bool bForceRestart);
+	void ClientDamagedCharacter(const struct FClientDamageInfo& DamageInfo);
+	void ClientOnFailedToRestart(EPlayerSpawnResult SpawnResult, const struct FVehicleSpawnProperties& Props);
+	void ClientReceiveChatMessage(const struct FBrickChatMessage& ChatMessage);
+	void ClientReceiveChatMessages(const TArray<struct FBrickChatMessage>& ChatMessages);
+	void ClientRevertVehicleDamage(class ABrickVehicle* Vehicle, const struct FRestartTransformVersion& ComparisonIndex);
+	void ClientSentWrongAdminPassword(uint8 AttemptsRemaining);
+	void ClientSetSessionPasswordNonce(const struct FGuid& Nonce);
+	void ClientWasKickedForDuration(const class FString& KickReason, const struct FTimespan& KickDuration);
+	void CloseInventory();
+	void CloseMap();
+	void CloseScoreboard();
+	void CloseVehicleBrowser();
+	bool DestroyAllDummies(const bool bIsTest);
+	void DestroyCharacter(class ABaseCharacter* Char);
+	bool EnterEditor(EUGCType InUGCType, const struct FUGCFileInfo& InFileInfo, bool bImport, class AActor* EntryPoint);
+	bool EnterFreeCam();
+	void EnterVehicleEditor(class AActor* EntryPoint);
+	void ExitEditor(const struct FUGCFileInfo& InFileInfo);
+	void ExitFreeCam();
+	void ExplodeVehicle();
+	void JoinTeam(const struct FGenericTeamId& InTeamId);
+	void KillCharacter();
+	void OnRep_AccessedInventory(class UInventoryComponent* OldInventory);
+	void OnRep_PlayerCharacter(class ABaseCharacter* OldCharacter);
+	void OnRep_ReplicatedInventory();
+	void OnRep_SpectatedCharacter();
+	void OpenChat();
+	void OpenInventory();
+	void OpenMap(bool bToggleOpen);
+	void OpenScoreboard(bool bToggleOpen);
+	void OpenVehicleBrowser(class AActor* EntryPoint);
+	void PossessCharacter(class ABaseCharacter* Char);
+	bool RecoverAllDummies(const bool bIsTest);
+	void RequestAdminAccess(const class FString& PW);
+	void ResetLevel();
+	EPlayerSpawnResult RestartAt(const struct FPlayerSpawnRequest& SpawnRequest);
+	void RestartAtClosestSpawnPoint();
+	void RestartAtLastSpawnPoint();
+	void RestartMatch();
+	void RestartOnSpot(const bool bRepairVehicle);
+	void Say(const class FText& Message);
+	bool ScrapAllVehicles(const bool bIncludeUsed, const bool bIsTest);
+	void ScrapVehicle(class ABrickVehicle* InVehicle, bool bInPerson);
+	void SendChatMessage(EChatContext Context, const class FText& Message);
+	void ServerAccessInventory(class UInventoryComponent* InInventory);
+	void ServerApplyMatchSettings(bool bFade);
+	void ServerAttachWinchBrick(class UWinchBrick* WinchBrick, const struct FWinchAttachTarget& AttachTarget);
+	void ServerCheatMoney(float Amount);
+	void ServerCheatScore(float Amount);
+	void ServerCycleCharacters(bool bForward);
+	void ServerCycleVehicles(bool bReverse);
+	void ServerDestroyAllDummies();
+	void ServerDestroyCharacter(class ABaseCharacter* Char);
+	void ServerEngageCouplingBrick(class UCouplingBrick* CouplingBrick, bool bEngage);
+	void ServerExplodeVehicle();
+	void ServerJoinTeam(const struct FGenericTeamId& InTeamId);
+	void ServerKillCharacter();
+	void ServerOnAnyVehicleConstructed(class ABrickVehicle* InVehicle);
+	void ServerOnMeleeHit(const struct FRepHitInfo& HitInfo);
+	void ServerOnPlayerChangedMatchSettings(const struct FMatchSettings& NewSettings, bool bApply, bool bFade);
+	void ServerOnProjectileHit(const struct FProjectileHitInfo& HitInfo);
+	void ServerOpenGravelSilo(class AGravelSilo* Silo, bool bOpen);
+	void ServerPossessCharacter(class ABaseCharacter* Char);
+	void ServerRecoverAllDummies();
+	void ServerRequestAdminAccess(const class FString& LoginProof, const struct FGuid& ClientNonce);
+	void ServerResetLevel();
+	void ServerRestartAt(const struct FPlayerSpawnRequest& SpawnRequest);
+	void ServerRestartMatch();
+	void ServerScrapAllVehicles(bool bIncludeUsed);
+	void ServerScrapVehicle(class ABrickVehicle* InVehicle, bool bInPerson);
+	void ServerSendChatMessage(EChatContext Context, const class FText& Message);
+	void ServerSetElevatorDirection(class AElevator* Elevator, EElevatorDirection Dir);
+	void ServerSetSwitchBrickValue(class USwitchBrick* SwitchBrick, int8 NewValue);
+	void ServerSetVehiclePinMode(EVehiclePinMode PinMode);
+	void ServerSpawnDummy(const struct FVector& Location, uint16 CompressedYaw);
+	void ServerSpectateNextCharacter(bool bForward);
+	void ServerStartDragRace(class ADragStrip* DragStrip);
+	void ServerToggleInvincible(bool bVehicle);
+	void ServerTriggerDetonatorBrick(class UDetonatorBrick* DetonatorBrick);
+	void ServerUpdateActuator(const struct FRepActuatorState& NewState, const struct FRestartTransformVersion& RestartVersion);
+	void ServerUpdateVehicleMovement(class ABrickVehicle* Vehicle, const TArray<struct FRepBrickMovementState>& MovementSates, const float OwnerTimestamp, const struct FRestartTransformVersion& ComparisonIndex);
+	void ServerUpdateVehicleMovementAndDamage(class ABrickVehicle* Vehicle, const TArray<struct FRepBrickMovementState>& MovementSates, const float OwnerTimestamp, const struct FBrickConnectionDamageBitfield& ConnectionDamage, const struct FRestartTransformVersion& ComparisonIndex);
+	void SetFreeCamMode(EFreeCamMode NewMode);
+	void SetPlayerCharacter(class ABaseCharacter* InCharacter);
+	void SetSlowMotionEnabled(const bool bNewEnabled);
+	void SetSpectatedCharacter(class ABaseCharacter* InCharacter);
+	void SetVehiclePinMode(EVehiclePinMode PinMode);
+	void ShowHUDWidget(const TSoftClassPtr<class UClass>& HUDWidgetClass);
+	void SpawnDummy(const struct FVector& Location, float Yaw);
+	bool SpectateNextCharacter(bool bForward);
+	bool ToggleInvincible(const bool bVehicle, const bool bIsTest);
+	void ToggleSlowMotion();
+
+	bool CanAccessInventory(class UInventoryComponent* InInventory) const;
+	bool CanDestroyAllDummies() const;
+	bool CanDestroyCharacter(class ABaseCharacter* Char) const;
+	bool CanEnterEditor(EUGCType InUGCType, class AActor* EntryPoint) const;
+	bool CanExplodeVehicle() const;
+	bool CanInteract() const;
+	bool CanJoinTeam(const struct FGenericTeamId& InTeamId) const;
+	bool CanLogInAsAdmin() const;
+	bool CanOpenVehicleBrowser(class AActor* EntryPoint) const;
+	bool CanPinVehicle() const;
+	bool CanPossessCharacter(class ABaseCharacter* Char) const;
+	bool CanRecoverAllDummies() const;
+	bool CanRestartOnSpot() const;
+	bool CanRestartVehicle() const;
+	bool CanScrapAllVehicles() const;
+	bool CanScrapVehicle(class ABrickVehicle* InVehicle, bool bInPerson) const;
+	bool CanSpawnAnywhere() const;
+	bool CanSpawnDummy(bool bAtAll) const;
+	EPlayerSpawnResult CanSpawnVehicle(const struct FUGCFileInfo& FileInfo, bool bRemoveCurrent) const;
+	bool CanSpectateCharacter(class ABaseCharacter* InCharacter) const;
+	bool CanTeleportPlayer() const;
+	bool CanToggleInvincible() const;
+	bool CanUseFreeCam() const;
+	bool CanUseProjectileCamera() const;
+	bool CanUseSlowMotion() const;
+	bool CanViewInventory() const;
+	class UHUDIconComponent* FindFocusedHUDIconComponent() const;
+	class UInventoryComponent* GetAccessedInventory() const;
+	class ABrickEditor* GetBrickEditor() const;
+	class AActor* GetEditorEntryPoint() const;
+	EFreeCamMode GetFreeCamMode() const;
+	class ABaseCharacter* GetPlayerCharacter() const;
+	class ABrickVehicle* GetPlayerVehicle() const;
+	float GetRespawnTimerRemaining() const;
+	float GetSlowMotionSpeed(bool* bOutInverted) const;
+	class ABaseCharacter* GetSpectatedCharacter() const;
+	class ABaseCharacter* GetViewedCharacter() const;
+	class ABrickVehicle* GetViewedVehicle() const;
+	bool IsInEditor(EUGCType InUGCType) const;
+	bool IsInFreeCam() const;
+	bool IsInventoryOpen() const;
+	bool IsInvincible(const bool bVehicle) const;
+	bool IsProjectileCameraEnabled() const;
+	bool IsSlowMotionEnabled() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickPlayerController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickPlayerController")
+	}
+	static class ABrickPlayerController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickPlayerController>();
+	}
+};
+DUMPER7_ASSERTS_ABrickPlayerController;
+
+// Class BrickRigs.BrickPlayerInput
+// 0x00C8 (0x0478 - 0x03B0)
+class UBrickPlayerInput : public UPlayerInput
+{
+public:
+	uint8                                         Pad_3B0[0x58];                                     // 0x03B0(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInputComponent*>                LastInputStack;                                    // 0x0408(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_418[0x50];                                     // 0x0418(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EInputMethod NewInputMethod)> OnInputMethodChangedDelegate;        // 0x0468(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	static class UBrickPlayerInput* Get(const class APlayerController* PC);
+
+	bool IsInputActionKeyPressed(const class FName ActionName, const struct FKey& Key) const;
+	bool IsInputActionPressed(const class FName ActionName, const struct FKeyEvent& Event) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickPlayerInput")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickPlayerInput")
+	}
+	static class UBrickPlayerInput* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickPlayerInput>();
+	}
+};
+DUMPER7_ASSERTS_UBrickPlayerInput;
+
+// Class BrickRigs.BrickPlayerStart
+// 0x0040 (0x0338 - 0x02F8)
+class ABrickPlayerStart : public AActor
+{
+public:
+	class UCapsuleComponent*                      CapsuleComponent;                                  // 0x02F8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UArrowComponent*                        ArrowComponent;                                    // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class ASpawnArea>              SpawnArea;                                         // 0x0308(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickPlayerStart")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickPlayerStart")
+	}
+	static class ABrickPlayerStart* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickPlayerStart>();
+	}
+};
+DUMPER7_ASSERTS_ABrickPlayerStart;
+
+// Class BrickRigs.MatchMenuWidget
+// 0x0008 (0x0410 - 0x0408)
+class UMatchMenuWidget : public UMenuPageWidget
+{
+public:
+	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void RestartMatch();
+	void UpdateAdminRole(const EAdminRole NewRole);
+	void UpdateRestartMatchButton(bool bCanRestart, bool bSameLevelAndMode);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MatchMenuWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MatchMenuWidget")
+	}
+	static class UMatchMenuWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMatchMenuWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMatchMenuWidget;
+
+// Class BrickRigs.BrickPlayerState
+// 0x0110 (0x0518 - 0x0408)
+class ABrickPlayerState : public APlayerState
+{
+public:
+	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABaseCharacter*                         InactiveCharacter;                                 // 0x0410(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_418[0x1];                                      // 0x0418(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	EAdminRole                                    AdminRole;                                         // 0x0419(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGenericTeamId                         TeamId;                                            // 0x041A(0x0001)(Net, Transient, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsTeamLeader;                                     // 0x041B(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Money;                                             // 0x041C(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        Kills;                                             // 0x0420(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        Deaths;                                            // 0x0422(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsAlive;                                          // 0x0424(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_425[0xF3];                                     // 0x0425(0x00F3)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnRep_AdminRole();
+	void OnRep_Deaths();
+	void OnRep_IsAlive();
+	void OnRep_IsTeamLeader();
+	void OnRep_Kills();
+	void OnRep_Money(float PrevValue);
+	void OnRep_TeamId();
+	void SetAdminRole(const EAdminRole NewRole);
+	void SetDeaths(int32 NewDeaths);
+	void SetIsAlive(bool bInIsAlive);
+	void SetIsTeamLeader(bool bNewLeader);
+	void SetKills(int32 NewKills);
+	void SetMoney(float NewValue);
+	void SetScore(float NewScore);
+
+	EAdminRole GetAdminRole() const;
+	int32 GetDeaths() const;
+	int32 GetKills() const;
+	float GetMoney() const;
+	class FText GetPlayerNameText() const;
+	int32 GetUncompressedPing() const;
+	bool IsAlive() const;
+	bool IsHost() const;
+	bool IsTeamLeader() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickPlayerState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickPlayerState")
+	}
+	static class ABrickPlayerState* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickPlayerState>();
+	}
+};
+DUMPER7_ASSERTS_ABrickPlayerState;
+
+// Class BrickRigs.Zombie
+// 0x0000 (0x08B0 - 0x08B0)
+class AZombie : public ABaseCharacter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Zombie")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Zombie")
+	}
+	static class AZombie* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AZombie>();
+	}
+};
+DUMPER7_ASSERTS_AZombie;
+
+// Class BrickRigs.ProjectileInputComponent
+// 0x0000 (0x0200 - 0x0200)
+class UProjectileInputComponent : public UBaseInputComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ProjectileInputComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ProjectileInputComponent")
+	}
+	static class UProjectileInputComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UProjectileInputComponent>();
+	}
+};
+DUMPER7_ASSERTS_UProjectileInputComponent;
+
+// Class BrickRigs.BrickProjectile
+// 0x0150 (0x04E0 - 0x0390)
+class ABrickProjectile : public AFluMoveSyncKinematicActor
+{
+public:
+	uint8                                         Pad_390[0x48];                                     // 0x0390(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UFirearmComponent>       FirearmComponent;                                  // 0x03D8(0x0008)(ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3E0[0x1C];                                     // 0x03E0(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
+	EAmmoType                                     AmmoType;                                          // 0x03FC(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3FD[0x1];                                      // 0x03FD(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint16                                        NumMergedProjectiles;                              // 0x03FE(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AActor*                                 SeekingTarget;                                     // 0x0400(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_408[0x28];                                     // 0x0408(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class USphereComponent*                       SphereComponent;                                   // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0438(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickProjectileMovementComponent*      ProjectileMovementComponent;                       // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   CollisionProfileName;                              // 0x0448(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            StaticMesh;                                        // 0x0458(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UParticleSystem*                        TrailParticleSystem;                               // 0x0460(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UParticleSystem*                        DesintegrationParticleSystem;                      // 0x0468(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeshScale;                                         // 0x0470(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PenetrationCoefficient;                            // 0x0474(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HomingAcceleration;                                // 0x0478(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHomingDistance;                                 // 0x047C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHomingAngle;                                    // 0x0480(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHomingLeadDistance;                             // 0x0484(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FlareEffectiveness;                                // 0x0488(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GravityScale;                                      // 0x048C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             FlybySound;                                        // 0x0490(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FlybySoundDelay;                                   // 0x0498(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FlybySoundPitch;                                   // 0x049C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x04A0(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class UDamageType>                DamageType;                                        // 0x04B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UExplosiveMaterial>         ExplosiveMaterial;                                 // 0x04C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UExplosiveMaterial>         IncendiaryMaterial;                                // 0x04C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExplosiveVolume;                                   // 0x04D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HomingExplosiveRatio;                              // 0x04D4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExplosionDamage;                                   // 0x04D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnRep_SeekingTarget(class AActor* OldTarget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickProjectile")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickProjectile")
+	}
+	static class ABrickProjectile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickProjectile>();
+	}
+};
+DUMPER7_ASSERTS_ABrickProjectile;
+
+// Class BrickRigs.BrickProjectileMovementComponent
+// 0x0020 (0x0200 - 0x01E0)
+class UBrickProjectileMovementComponent : public UProjectileMovementComponent
+{
+public:
+	uint8                                         Pad_1E0[0x20];                                     // 0x01E0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickProjectileMovementComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickProjectileMovementComponent")
+	}
+	static class UBrickProjectileMovementComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickProjectileMovementComponent>();
+	}
+};
+DUMPER7_ASSERTS_UBrickProjectileMovementComponent;
+
+// Class BrickRigs.ScalableBrickStaticInfo
+// 0x0040 (0x01E0 - 0x01A0)
+class UScalableBrickStaticInfo : public UScalableBrickBaseStaticInfo
+{
+public:
+	float                                         ScalableLiftSurfaceRadiiYZ[0x2];                   // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ScalableLiftSurfaceCrossSectionAreasYZ[0x2];       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ScalableLiftSurfaceNormalsYZ[0x2];                 // 0x01B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EScalableBrickShape                           ScalableShape;                                     // 0x01C8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FScalableBrickReplacementMesh>  ReplacementMeshes;                                 // 0x01D0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScalableBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScalableBrickStaticInfo")
+	}
+	static class UScalableBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScalableBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UScalableBrickStaticInfo;
+
+// Class BrickRigs.SensorBrickBaseStaticInfo
+// 0x0000 (0x01E0 - 0x01E0)
+class USensorBrickBaseStaticInfo : public UScalableBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SensorBrickBaseStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SensorBrickBaseStaticInfo")
+	}
+	static class USensorBrickBaseStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USensorBrickBaseStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_USensorBrickBaseStaticInfo;
+
+// Class BrickRigs.SwitchBrickStaticInfo
+// 0x0000 (0x01E0 - 0x01E0)
+class USwitchBrickStaticInfo : public USensorBrickBaseStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SwitchBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SwitchBrickStaticInfo")
+	}
+	static class USwitchBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USwitchBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_USwitchBrickStaticInfo;
+
+// Class BrickRigs.BrickPropertyInterface
+// 0x0000 (0x0000 - 0x0000)
+class IBrickPropertyInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickPropertyInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickPropertyInterface")
+	}
+	static class IBrickPropertyInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IBrickPropertyInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IBrickPropertyInterface;
+
+// Class BrickRigs.BrickRichTextBlock
+// 0x0000 (0x0848 - 0x0848)
+class UBrickRichTextBlock : public URichTextBlock
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickRichTextBlock")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickRichTextBlock")
+	}
+	static class UBrickRichTextBlock* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickRichTextBlock>();
+	}
+};
+DUMPER7_ASSERTS_UBrickRichTextBlock;
+
+// Class BrickRigs.BrickScrollBox
+// 0x0010 (0x0AF8 - 0x0AE8)
+class UBrickScrollBox : public UScrollBox
+{
+public:
+	uint8                                         Pad_AE8[0x8];                                      // 0x0AE8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EBrickUISpacingStyle                          SlotSpacingStyle;                                  // 0x0AF0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_AF1[0x7];                                      // 0x0AF1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSlotSpacingStyle(EBrickUISpacingStyle NewStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickScrollBox")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickScrollBox")
+	}
+	static class UBrickScrollBox* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickScrollBox>();
+	}
+};
+DUMPER7_ASSERTS_UBrickScrollBox;
+
+// Class BrickRigs.TankBrick
+// 0x0010 (0x0128 - 0x0118)
+class UTankBrick : public UScalableBrick
+{
+public:
+	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UExplosiveMaterial>         FuelType;                                          // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TankBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TankBrick")
+	}
+	static class UTankBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTankBrick>();
+	}
+};
+DUMPER7_ASSERTS_UTankBrick;
+
+// Class BrickRigs.BrickSliderWidget
+// 0x0088 (0x04B8 - 0x0430)
+class UBrickSliderWidget : public UButtonWidgetBase
+{
+public:
+	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickTextBoxWidget*                    TextBox;                                           // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickBorder*                           FillBorder;                                        // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Value;                                             // 0x0450(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MinValue;                                          // 0x0454(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxValue;                                          // 0x0458(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ValueStep;                                         // 0x045C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickSliderGridSnapMode                      GridSnapMode;                                      // 0x0460(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ENumericValueType                             ValueType;                                         // 0x0461(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_462[0x2];                                      // 0x0462(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxFractionalDigits;                               // 0x0464(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bZeroAsUnlimited;                                  // 0x0468(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_469[0x7];                                      // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CustomTextFormat;                                  // 0x0470(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	bool                                          bIsReadOnly;                                       // 0x0488(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsMarquee;                                        // 0x0489(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_48A[0x6];                                      // 0x048A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(float Value_0, EValueChangedEventType EventType)> OnValueChangedDelegate; // 0x0490(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A0[0x18];                                     // 0x04A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnTextChanged(const class FText& NewText, EValueChangedEventType EventType);
+	void SetCustomTextFormat(const class FText& InFormat);
+	void SetGridSnapMode(const EBrickSliderGridSnapMode NewMode);
+	void SetIsMarquee(bool bInMarquee);
+	void SetIsReadOnly(bool bInReadOnly);
+	void SetMaxFractionalDigits(int32 InMaxDigits);
+	void SetValue(float NewValue);
+	void SetValueRange(float InMinValue, float InMaxValue);
+	void SetValueType(ENumericValueType InType);
+	void SetZeroAsUnlimited(const bool bInZeroAsUnlimited);
+	void UpdateIsDragging(const bool bIsDragging);
+	void UpdateIsReadOnly(const bool bNewReadOnly);
+	void UpdateSliderPosition(float NewValue);
+
+	float GetValue() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickSliderWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickSliderWidget")
+	}
+	static class UBrickSliderWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickSliderWidget>();
+	}
+};
+DUMPER7_ASSERTS_UBrickSliderWidget;
+
+// Class BrickRigs.BrickSpectatorPawn
+// 0x0280 (0x0600 - 0x0380)
+class alignas(0x10) ABrickSpectatorPawn : public ASpectatorPawn
+{
+public:
+	uint8                                         Pad_380[0x1A0];                                    // 0x0380(0x01A0)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 FollowTarget;                                      // 0x0520(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_528[0x60];                                     // 0x0528(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               MID;                                               // 0x0588(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UStaticMeshComponent*                   PlacementBoundsMeshComponent;                      // 0x0590(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UStaticMesh*                            PlacementBoundsMesh;                               // 0x0598(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector                                PlacementBoundsDefaultSize;                        // 0x05A0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector                                MinPlacementBoundsSize;                            // 0x05AC(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlacementBoundsSizeInterpSpeed;                    // 0x05B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlacementBoundsScreenFitInflation;                 // 0x05BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlacementSweepRadius;                              // 0x05C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PawnRotationSpeed;                                 // 0x05C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FViewTargetCameraSpeedParams           CameraSpeedParams;                                 // 0x05C8(0x0018)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x05E0(0x0018)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	float                                         ShiftInterpSpeed;                                  // 0x05F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5FC[0x4];                                      // 0x05FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickSpectatorPawn")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickSpectatorPawn")
+	}
+	static class ABrickSpectatorPawn* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickSpectatorPawn>();
+	}
+};
+DUMPER7_ASSERTS_ABrickSpectatorPawn;
+
+// Class BrickRigs.TargetMarkerIconWidget
+// 0x0008 (0x0428 - 0x0420)
+class UTargetMarkerIconWidget : public UHUDIconWidget
+{
+public:
+	uint8                                         Pad_420[0x8];                                      // 0x0420(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateAmmoType(EAmmoType NewType);
+	void UpdateFireAction(int32 NewActionIndex);
+	void UpdateHasValidTarget(bool bNewHasValidTarget);
+	void UpdateTargetDistance(float NewDist);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetMarkerIconWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetMarkerIconWidget")
+	}
+	static class UTargetMarkerIconWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetMarkerIconWidget>();
+	}
+};
+DUMPER7_ASSERTS_UTargetMarkerIconWidget;
+
+// Class BrickRigs.BrickStatics
+// 0x0000 (0x0030 - 0x0030)
+class UBrickStatics : public UBlueprintFunctionLibrary
+{
+public:
+	static class FString ColorToHex(const struct FLinearColor& Color, const bool bIncludeAlpha);
+	static struct FUniqueNetIdRepl CreateUniqueNetId(const class FName& OSSName, const class FString& Str);
+	static bool ExtinguishActor(const struct FHitResult& Hit);
+	static struct FUniqueNetIdRepl GetPlayerUniqueNetId(const class APlayerController* PC);
+	static class FString GetProjectBranch();
+	static class FString GetProjectVersion();
+	static EConnectorSpacing GetScalableBrickConnectorSpacingAxis(const struct FScalableBrickConnectorSpacing& ConnectorSpacing, const EFluAxisSigned Axis);
+	static struct FLinearColor HexToColor(const class FString& Hex);
+	static bool IsModdedAsset(const class UObject* Asset);
+	static class FName MakeNameWithNumber(const class FName Name_0, const int32 Number);
+	static bool SetActorOnFire(const struct FHitResult& Hit, class APawn* Instigator, class AActor* DamageCauser);
+	static void SetScalableBrickConnectorSpacingAxis(struct FScalableBrickConnectorSpacing& ConnectorSpacing, const EFluAxisSigned Axis, const EConnectorSpacing NewSpacing);
+	static bool ShowPlayerProfileUI(const class APlayerController* OwnPC, const struct FUniqueNetIdRepl& PlayerId);
+	static void SpawnExplosion(class UObject* WorldContextObject, TSubclassOf<class UExplosiveMaterial> ExplosiveMaterial, float Volume, const struct FVector& Location, const struct FRotator& Rotation, class APawn* Instigator, class AActor* DamageCauser, const TArray<class UPrimitiveComponent*>& ComponentsToIgnore);
+	static bool SpreadFire(class UObject* WorldContextObject, const struct FTransform& Transform, const struct FVector& BoundsMin, const struct FVector& BoundsMax, float SpreadDistance, float SpreadProbability);
+	static class FString UniqueNetIdToString(const struct FUniqueNetIdRepl& UniqueNetId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickStatics")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickStatics")
+	}
+	static class UBrickStatics* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickStatics>();
+	}
+};
+DUMPER7_ASSERTS_UBrickStatics;
+
+// Class BrickRigs.BrickTextBlock
+// 0x0010 (0x0468 - 0x0458)
+class UBrickTextBlock : public UTextBlock
+{
+public:
+	uint8                                         Pad_458[0x8];                                      // 0x0458(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x0460(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickUITextStyle                             TextStyle;                                         // 0x0461(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_462[0x6];                                      // 0x0462(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetColorStyle(EBrickUIColorStyle NewStyle);
+	void SetTextStyle(EBrickUITextStyle NewStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickTextBlock")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickTextBlock")
+	}
+	static class UBrickTextBlock* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickTextBlock>();
+	}
+};
+DUMPER7_ASSERTS_UBrickTextBlock;
+
+// Class BrickRigs.TextBrickStaticInfo
+// 0x0008 (0x01E8 - 0x01E0)
+class UTextBrickStaticInfo : public UScalableBrickStaticInfo
+{
+public:
+	class UBrickFont*                             DefaultFont;                                       // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TextBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TextBrickStaticInfo")
+	}
+	static class UTextBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTextBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UTextBrickStaticInfo;
+
+// Class BrickRigs.BrickThumbnailSubsystem
+// 0x0050 (0x0098 - 0x0048)
+class UBrickThumbnailSubsystem : public UTickableWorldSubsystem
+{
+public:
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 ThumbnailRenderTarget;                             // 0x0058(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInstanceDynamic*               TextureRenderMID;                                  // 0x0060(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInstanceDynamic*               InventoryItemMID;                                  // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneCaptureComponent2D*               CaptureComponent;                                  // 0x0080(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UStaticMeshComponent*                   CaptureStaticMeshComponent;                        // 0x0088(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBrickEditorInterfaceComponent*         EditorInterfaceComponent;                          // 0x0090(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickThumbnailSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickThumbnailSubsystem")
+	}
+	static class UBrickThumbnailSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickThumbnailSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UBrickThumbnailSubsystem;
+
+// Class BrickRigs.BrickUserSettings
+// 0x0488 (0x04B8 - 0x0030)
+class UBrickUserSettings : public UObject
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HoldKeyTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              LanguageIconTexture;                               // 0x0040(0x0030)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 ConfigVersion;                                     // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHostServerType                               HostServerType;                                    // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ServerPassword;                                    // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FMatchSettings                         MatchSettings;                                     // 0x0098(0x01B0)(BlueprintVisible, BlueprintReadOnly, Config, Protected, NativeAccessSpecifierProtected)
+	class FString                                 AdminPassword;                                     // 0x0248(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowAdminLogin;                                  // 0x0258(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowDifferentMods;                               // 0x0259(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyMatchSettings;                               // 0x025A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFadeMatchSettings;                                // 0x025B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHUDVisibility                                HUDVisibility;                                     // 0x025C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMeasurementSystem                            MeasurementSystem;                                 // 0x025D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EChatContext                                  ChatContext;                                       // 0x025E(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_25F[0x1];                                      // 0x025F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UBrickUIStyle>              UIStyle;                                           // 0x0260(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FBrickPropertySettings> BrickPropertySettings;                          // 0x0268(0x0050)(Config, Protected, NativeAccessSpecifierProtected)
+	float                                         MasterVolume;                                      // 0x02B8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MusicVolume;                                       // 0x02BC(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         FieldOfView;                                       // 0x02C0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECameraMode                                   CameraMode;                                        // 0x02C4(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ETransmissionMode                             TransmissionMode;                                  // 0x02C5(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAutoCounterSteering;                              // 0x02C6(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C7[0x1];                                      // 0x02C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MouseSensitivity;                                  // 0x02C8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         GamepadSensitivity;                                // 0x02CC(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bInvertViewPitch;                                  // 0x02D0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bToggleAim;                                        // 0x02D1(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bToggleSprint;                                     // 0x02D2(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bToggleCrouch;                                     // 0x02D3(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputCategory*                         InputCategory;                                     // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 InputMappingSearchText;                            // 0x02E0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EColorVisionDeficiency                        VisionDeficiencyType;                              // 0x02F0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         VisionCorrectionSeverity;                          // 0x02F4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EAxis                                         EditorMirrorAxis;                                  // 0x02F8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEditorMirrorAxisEnabled;                          // 0x02F9(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickEditorViewMode                          EditorViewMode;                                    // 0x02FA(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2FB[0x5];                                      // 0x02FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWorldSetupParams                      EditorWorldSetupParams;                            // 0x0300(0x0030)(BlueprintVisible, BlueprintReadOnly, Config, Protected, NativeAccessSpecifierProtected)
+	float                                         EditorUIScale;                                     // 0x0330(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorMouseMoveSensitivity;                        // 0x0334(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorGridSnappingDistance;                        // 0x0338(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorGridSnappingAngle;                           // 0x033C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorBrickSnappingDistance;                       // 0x0340(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorBrickSnappingAngle;                          // 0x0344(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEditorSnappingEnabled;                            // 0x0348(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEditorGizmoWorldSpace;                            // 0x0349(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickUnitsDisplayMode                        BrickUnitsDisplayMode;                             // 0x034A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EColorDisplayMode                             ColorDisplayMode;                                  // 0x034B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorZoomRatio;                                   // 0x034C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EditorCameraSpeedRatio;                            // 0x0350(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         FreeCamSpeedRatio;                                 // 0x0354(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         FreeCamShiftSpeedRatio;                            // 0x0358(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ProjectileCamZoomRatio;                            // 0x035C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FFluUGCItemIdWrapper                   MenuVehicleCollection;                             // 0x0360(0x0010)(Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFluUGCItemIdWrapper                   FeaturedVehicleCollection;                         // 0x0370(0x0010)(Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_380[0x18];                                     // 0x0380(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EHUDVisibility NewVisibility)> OnHUDVisibilityChangedDelegate;     // 0x0398(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EMeasurementSystem NewVisibility)> OnMeasurementSystemChangedDelegate; // 0x03A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B8[0xF0];                                     // 0x03B8(0x00F0)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const EColorDisplayMode NewDisplayMode)> OnColorDisplayModeChanged; // 0x04A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	static class UBrickUserSettings* GetUserSettings();
+
+	void CycleBrickUnitsDisplayMode();
+	void SetBrickUnitsDisplayMode(const EBrickUnitsDisplayMode& NewMode);
+	void SetColorDisplayMode(const EColorDisplayMode NewMode);
+
+	EBrickUnitsDisplayMode GetBrickUnitsDisplayMode() const;
+	EColorDisplayMode GetColorDisplayMode() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickUserSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickUserSettings")
+	}
+	static class UBrickUserSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickUserSettings>();
+	}
+};
+DUMPER7_ASSERTS_UBrickUserSettings;
+
+// Class BrickRigs.BrickVehicleDownloadReplicator
+// 0x0030 (0x0328 - 0x02F8)
+class ABrickVehicleDownloadReplicator : public AActor
+{
+public:
+	class ABrickVehicle*                          Vehicle;                                           // 0x02F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABrickPlayerController*                 SpawningPC;                                        // 0x0300(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FText                                   VehicleDisplayName;                                // 0x0308(0x0018)(Net, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         DownloadProgress;                                  // 0x0320(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnRep_DownloadProgress();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickVehicleDownloadReplicator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickVehicleDownloadReplicator")
+	}
+	static class ABrickVehicleDownloadReplicator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickVehicleDownloadReplicator>();
+	}
+};
+DUMPER7_ASSERTS_ABrickVehicleDownloadReplicator;
+
+// Class BrickRigs.BrickVerticalBox
+// 0x0010 (0x0268 - 0x0258)
+class UBrickVerticalBox : public UVerticalBox
+{
+public:
+	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EBrickUISpacingStyle                          SlotSpacingStyle;                                  // 0x0260(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSlotSpacingStyle(EBrickUISpacingStyle NewStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickVerticalBox")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickVerticalBox")
+	}
+	static class UBrickVerticalBox* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrickVerticalBox>();
+	}
+};
+DUMPER7_ASSERTS_UBrickVerticalBox;
+
+// Class BrickRigs.BrickWorldSettings
+// 0x01B0 (0x0780 - 0x05D0)
+class ABrickWorldSettings : public AWorldSettings
+{
+public:
+	class AWorldSetupActor*                       WorldSetupActor;                                   // 0x05C8(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class APhysicsVolume*                         DefaultWaterPhysicsVolume;                         // 0x05D0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5D8[0x10];                                     // 0x05D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ATrain*>                         SpawnedTrains;                                     // 0x05E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5F8[0x30];                                     // 0x05F8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ACapturePoint*>                  CapturePoints;                                     // 0x0628(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	class UProjectileManagerComponent*            ProjectileManager;                                 // 0x0638(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class ADefaultPhysicsVolume>      DefaultWaterPhysicsVolumeClass;                    // 0x0640(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   WaterBounds;                                       // 0x0648(0x001C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SeaLevel;                                          // 0x0664(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetWaterBoundsFromWorldBounds;                    // 0x0668(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetSeaLevelFromWorldBounds;                       // 0x0669(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetMBPFromWorldBounds;                            // 0x066A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetKillZFromWorldBounds;                          // 0x066B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_66C[0x4];                                      // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWorldSetupParams                      EditorWorldSetupParams;                            // 0x0670(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditorOnly, NativeAccessSpecifierPublic)
+	struct FWeatherConditionParams                EditorWeatherOverride;                             // 0x06A0(0x0068)(Edit, BlueprintVisible, BlueprintReadOnly, EditorOnly, NativeAccessSpecifierPublic)
+	TArray<struct FTrainTrack>                    TrainTracks;                                       // 0x0708(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FTrainSpawnInfo>                TrainSpawnInfos;                                   // 0x0718(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bBuildTrainTracks;                                 // 0x0728(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTrainTrackSplineMeshInfo>      TrainTrackSplineMeshes;                            // 0x0730(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditorOnly, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void()>              OnSlomoChangedDelegate;                            // 0x0740(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_750[0x30];                                     // 0x0750(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class ABrickWorldSettings* Get(const class UObject* WorldContextObject);
+
+	void AddHeatSeekingTarget(class AActor* Target);
+	void RemoveHeatSeekingTarget(class AActor* Target);
+	void SetSlomoEnabled(bool bEnable);
+
+	float GetSlomoSpeed(bool* bOutInverted) const;
+	bool IsPaused() const;
+	bool IsSlomoEnabled() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrickWorldSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrickWorldSettings")
+	}
+	static class ABrickWorldSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABrickWorldSettings>();
+	}
+};
+DUMPER7_ASSERTS_ABrickWorldSettings;
+
+// Class BrickRigs.BrQueryLatestNewsAsyncAction
+// 0x0020 (0x0058 - 0x0038)
+class UBrQueryLatestNewsAsyncAction : public UBlueprintAsyncActionBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FBrLatestNewsDetails& News, const class FString& ErrorMessage, int32 HttpStatusCode)> OnSuccess; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FBrLatestNewsDetails& News, const class FString& ErrorMessage, int32 HttpStatusCode)> OnFailure; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	static class UBrQueryLatestNewsAsyncAction* QueryLatestNews(class UObject* WorldContextObject);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrQueryLatestNewsAsyncAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrQueryLatestNewsAsyncAction")
+	}
+	static class UBrQueryLatestNewsAsyncAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrQueryLatestNewsAsyncAction>();
+	}
+};
+DUMPER7_ASSERTS_UBrQueryLatestNewsAsyncAction;
+
+// Class BrickRigs.BumperBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UBumperBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BumperBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BumperBrickStaticInfo")
+	}
+	static class UBumperBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBumperBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UBumperBrickStaticInfo;
+
+// Class BrickRigs.CameraBrickStaticInfo
+// 0x0610 (0x07B0 - 0x01A0)
+class UCameraBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	struct FVector                                LenseOffset;                                       // 0x01A0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x01AC(0x0018)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bViewRotationInWorldSpace;                         // 0x01C4(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRotateViewWhenInteracting;                        // 0x01C5(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C6[0xA];                                      // 0x01C6(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   PostProcessSettings;                               // 0x01D0(0x0590)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     NotConnectedPostProcessMaterial;                   // 0x0760(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   HUDWidgetClass;                                    // 0x0768(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTargetRange;                                    // 0x0798(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ViewPitchRange;                                    // 0x079C(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ViewYawRange;                                      // 0x07A4(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7AC[0x4];                                      // 0x07AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraBrickStaticInfo")
+	}
+	static class UCameraBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UCameraBrickStaticInfo;
+
+// Class BrickRigs.CameraBrick
+// 0x0080 (0x0170 - 0x00F0)
+class UCameraBrick : public UBrick
+{
+public:
+	uint8                                         Pad_F0[0x60];                                      // 0x00F0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CameraName;                                        // 0x0150(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBrickEditorObjectPtr                  OwningSeat;                                        // 0x0160(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraBrick")
+	}
+	static class UCameraBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraBrick>();
+	}
+};
+DUMPER7_ASSERTS_UCameraBrick;
+
+// Class BrickRigs.WindowBrick
+// 0x0000 (0x00F0 - 0x00F0)
+class UWindowBrick : public UBrick
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WindowBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WindowBrick")
+	}
+	static class UWindowBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWindowBrick>();
+	}
+};
+DUMPER7_ASSERTS_UWindowBrick;
+
+// Class BrickRigs.CameraBrickWidget
+// 0x0018 (0x0410 - 0x03F8)
+class UCameraBrickWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0xC];                                      // 0x03F8(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUpdateTargetRange;                                // 0x0404(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_405[0x3];                                      // 0x0405(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TargetRangeUpdateInterval;                         // 0x0408(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateTargetRange(bool bHitSomething, float Distance);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraBrickWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraBrickWidget")
+	}
+	static class UCameraBrickWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraBrickWidget>();
+	}
+};
+DUMPER7_ASSERTS_UCameraBrickWidget;
+
+// Class BrickRigs.CapturePoint
+// 0x0120 (0x0460 - 0x0340)
+class ACapturePoint : public ASpawnArea
+{
+public:
+	uint8                                         Pad_340[0x14];                                     // 0x0340(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         RepCaptureRatio;                                   // 0x0354(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bHasBeenCaptured;                                  // 0x0355(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGenericTeamId                         CapturingTeam;                                     // 0x0356(0x0001)(Net, Transient, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGenericTeamId                         CapturedBy;                                        // 0x0357(0x0001)(Net, Transient, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class ABaseCharacter*>                 OverlappingCharacters;                             // 0x0358(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	class UMaterialInstanceDynamic*               FlagMID;                                           // 0x0368(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_370[0x8];                                      // 0x0370(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class ABrickBuilding>          BuildingBase;                                      // 0x0378(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UStaticMeshComponent*                   MeshComponent;                                     // 0x03A8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UShapeComponent*                        ShapeComponent;                                    // 0x03B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UStaticMesh*                            StaticMesh;                                        // 0x03B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxDrawDistance;                                   // 0x03C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxFlagHeight;                                     // 0x03C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector                                IconOffset;                                        // 0x03C8(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TimeToCapture;                                     // 0x03D4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         CapturePointId;                                    // 0x03D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECapturePointShape                            CapturePointShape;                                 // 0x03D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3DA[0x2];                                      // 0x03DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ShapeOffset;                                       // 0x03DC(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRotator                               ShapeRotation;                                     // 0x03E8(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FVector                                ShapeScale;                                        // 0x03F4(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_400[0x60];                                     // 0x0400(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnCapturedByChanged();
+	void OnCapturingTeamChanged();
+	void OnRep_CaptureRatio();
+	void OnTriggerBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void OnTriggerEndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	bool SetCapturedBy(const struct FGenericTeamId& TeamId, bool bNewHasBeenCaptured);
+	bool SetCaptureRatio(float NewRatio);
+	bool SetCapturingTeam(const struct FGenericTeamId& TeamId);
+
+	const struct FGenericTeamId GetCapturedBy() const;
+	class FText GetCapturePointShortDisplayName() const;
+	float GetCaptureRatio() const;
+	const struct FGenericTeamId GetCapturingTeam() const;
+	bool HasBeenCaptured() const;
+	bool IsCapturePointOnBuilding(const class ABrickBuilding* InBuilding) const;
+	bool IsCharacterOnCapturePoint(class ABaseCharacter* InCharacter) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CapturePoint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CapturePoint")
+	}
+	static class ACapturePoint* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ACapturePoint>();
+	}
+};
+DUMPER7_ASSERTS_ACapturePoint;
+
+// Class BrickRigs.CapturePointIconWidget
+// 0x0040 (0x0460 - 0x0420)
+class UCapturePointIconWidget : public UHUDIconWidget
+{
+public:
+	class ABaseCharacter*                         PlayerCharacter;                                   // 0x0420(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ACapturePoint*                          CapturePoint;                                      // 0x0428(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               MID;                                               // 0x0440(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_448[0x8];                                      // 0x0448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickImage*                            CaptureProgressImage;                              // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        CharTextBlock;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CapturePointIconWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CapturePointIconWidget")
+	}
+	static class UCapturePointIconWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCapturePointIconWidget>();
+	}
+};
+DUMPER7_ASSERTS_UCapturePointIconWidget;
+
+// Class BrickRigs.InteractionIconWidget
+// 0x0000 (0x0420 - 0x0420)
+class UInteractionIconWidget : public UHUDIconWidget
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InteractionIconWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InteractionIconWidget")
+	}
+	static class UInteractionIconWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInteractionIconWidget>();
+	}
+};
+DUMPER7_ASSERTS_UInteractionIconWidget;
+
+// Class BrickRigs.CarWheelBrickStaticInfo
+// 0x0020 (0x01E8 - 0x01C8)
+class UCarWheelBrickStaticInfo : public UWheelBrickStaticInfo
+{
+public:
+	float                                         RimRadius;                                         // 0x01C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinTireThickness;                                  // 0x01CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinTirePopDamage;                                  // 0x01D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        TirePopEmitter;                                    // 0x01D8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             TirePopSound;                                      // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CarWheelBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CarWheelBrickStaticInfo")
+	}
+	static class UCarWheelBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCarWheelBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UCarWheelBrickStaticInfo;
+
+// Class BrickRigs.ImpactDecalComponent
+// 0x0010 (0x0280 - 0x0270)
+class UImpactDecalComponent : public UDecalComponent
+{
+public:
+	uint8                                         Pad_270[0x10];                                     // 0x0270(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ImpactDecalComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ImpactDecalComponent")
+	}
+	static class UImpactDecalComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UImpactDecalComponent>();
+	}
+};
+DUMPER7_ASSERTS_UImpactDecalComponent;
+
+// Class BrickRigs.WheelBrick
+// 0x0020 (0x0110 - 0x00F0)
+class UWheelBrick : public UBrick
+{
+public:
+	TArray<class UWheelConnection*>               WheelConnections;                                  // 0x00F0(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	bool                                          bInvertTankSteering;                               // 0x0100(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WheelDiameter;                                     // 0x0104(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         WheelWidth;                                        // 0x0108(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WheelBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WheelBrick")
+	}
+	static class UWheelBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWheelBrick>();
+	}
+};
+DUMPER7_ASSERTS_UWheelBrick;
+
+// Class BrickRigs.CarWheelBrick
+// 0x0020 (0x0130 - 0x0110)
+class UCarWheelBrick : public UWheelBrick
+{
+public:
+	uint8                                         Pad_110[0x18];                                     // 0x0110(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TireThickness;                                     // 0x0128(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TirePressureRatio;                                 // 0x012C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void OnRootComponentWake(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CarWheelBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CarWheelBrick")
+	}
+	static class UCarWheelBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCarWheelBrick>();
+	}
+};
+DUMPER7_ASSERTS_UCarWheelBrick;
+
+// Class BrickRigs.InventoryContainerWidget
+// 0x0010 (0x0408 - 0x03F8)
+class UInventoryContainerWidget : public UUserWidget
+{
+public:
+	class UInventoryWidget*                       InventoryWidget;                                   // 0x03F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0400(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void UpdateHasInventory(bool bHasInventory);
+	void UpdateOwnerMoney(float NewMoney);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InventoryContainerWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InventoryContainerWidget")
+	}
+	static class UInventoryContainerWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInventoryContainerWidget>();
+	}
+};
+DUMPER7_ASSERTS_UInventoryContainerWidget;
+
+// Class BrickRigs.CharacterCapsuleComponent
+// 0x0020 (0x0580 - 0x0560)
+class UCharacterCapsuleComponent : public UCapsuleComponent
+{
+public:
+	uint8                                         Pad_560[0x20];                                     // 0x0560(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CharacterCapsuleComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CharacterCapsuleComponent")
+	}
+	static class UCharacterCapsuleComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCharacterCapsuleComponent>();
+	}
+};
+DUMPER7_ASSERTS_UCharacterCapsuleComponent;
+
+// Class BrickRigs.ModHookSubsystem
+// 0x0010 (0x0048 - 0x0038)
+class UModHookSubsystem : public UWorldSubsystem
+{
+public:
+	TArray<class UModHook*>                       ModHooks;                                          // 0x0038(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+
+public:
+	static class UModHook* GetModHookByClass(const class UObject* WorldContextObject, const TSubclassOf<class UModHook> ModHookClass);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ModHookSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ModHookSubsystem")
+	}
+	static class UModHookSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModHookSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UModHookSubsystem;
+
+// Class BrickRigs.PlayerPawnInputComponent
+// 0x0018 (0x0218 - 0x0200)
+class UPlayerPawnInputComponent : public UPawnInputComponent
+{
+public:
+	class ABaseCharacter*                         Character;                                         // 0x0200(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ABrickCharacter*                        BrickCharacter;                                    // 0x0208(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ABrickVehicle*                          Vehicle;                                           // 0x0210(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	struct FBrActionResult Action_Aim(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleExplosives(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleFireMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleSlots(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Fire(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Kill(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PrimarySlot(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Reload(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SecondarySlot(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SpecialSlot(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ThrowItem(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_UnequipItem(const struct FBrActionParams& Params_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayerPawnInputComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayerPawnInputComponent")
+	}
+	static class UPlayerPawnInputComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayerPawnInputComponent>();
+	}
+};
+DUMPER7_ASSERTS_UPlayerPawnInputComponent;
+
+// Class BrickRigs.JoinSessionPopupParams
+// 0x0118 (0x0190 - 0x0078)
+class UJoinSessionPopupParams : public UPopupParams
+{
+public:
+	uint8                                         Pad_78[0x118];                                     // 0x0078(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("JoinSessionPopupParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JoinSessionPopupParams")
+	}
+	static class UJoinSessionPopupParams* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UJoinSessionPopupParams>();
+	}
+};
+DUMPER7_ASSERTS_UJoinSessionPopupParams;
+
+// Class BrickRigs.CharacterInputComponent
+// 0x0000 (0x0218 - 0x0218)
+class UCharacterInputComponent : public UPlayerPawnInputComponent
+{
+public:
+	struct FBrActionResult Action_Crouch(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Jump(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Sprint(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_WalkForward(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_WalkRight(const struct FBrActionParams& Params_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CharacterInputComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CharacterInputComponent")
+	}
+	static class UCharacterInputComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCharacterInputComponent>();
+	}
+};
+DUMPER7_ASSERTS_UCharacterInputComponent;
 
 // Class BrickRigs.InventoryComponent
 // 0x01F0 (0x02B0 - 0x00C0)
@@ -5931,1347 +7485,6 @@ public:
 };
 DUMPER7_ASSERTS_UInventoryComponent;
 
-// Class BrickRigs.LoadoutInventoryComponent
-// 0x0008 (0x02B8 - 0x02B0)
-class ULoadoutInventoryComponent final : public UInventoryComponent
-{
-public:
-	uint8                                         Pad_2B0[0x8];                                      // 0x02B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LoadoutInventoryComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LoadoutInventoryComponent")
-	}
-	static class ULoadoutInventoryComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULoadoutInventoryComponent>();
-	}
-};
-DUMPER7_ASSERTS_ULoadoutInventoryComponent;
-
-// Class BrickRigs.BrickPlayerController
-// 0x0500 (0x0BE8 - 0x06E8)
-class ABrickPlayerController final : public ABasePlayerController
-{
-public:
-	uint8                                         Pad_6E8[0x50];                                     // 0x06E8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundMix*                              AtmosphereSoundMix;                                // 0x0738(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_740[0x70];                                     // 0x0740(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         PlayerCharacter;                                   // 0x07B0(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABaseCharacter*                         SpectatedCharacter;                                // 0x07B8(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABaseCharacter*                         ViewedCharacter;                                   // 0x07C0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABrickVehicle*                          PlayerVehicle;                                     // 0x07C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABrickVehicle*                          ViewedVehicle;                                     // 0x07D0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInventoryComponent*                    AccessedInventory;                                 // 0x07E0(0x0008)(ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FInventory                             ReplicatedInventory;                               // 0x07E8(0x0120)(Net, Transient, RepNotify, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_908[0x18];                                     // 0x0908(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABrickEditor*                           BrickEditor;                                       // 0x0920(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AActor*                                 EditorEntryPoint;                                  // 0x0928(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_930[0x10];                                     // 0x0930(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FreezeTime;                                        // 0x0940(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EUGCType                                      LastPIEEditorType;                                 // 0x0944(0x0001)(ZeroConstructor, Config, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_945[0x3];                                      // 0x0945(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUGCFileInfo                           LastPIEUGCFile;                                    // 0x0948(0x00E8)(Config, EditorOnly, NativeAccessSpecifierPrivate)
-	class UAudioComponent*                        HurtAudioComponent;                                // 0x0A30(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A38[0x1B0];                                    // 0x0A38(0x01B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AccessInventory(class UInventoryComponent* InAccessedInventory);
-	void AdjustSlomoSpeed(int32 Dir);
-	void AdminSay(const class FText& Message);
-	bool CanCheat();
-	EPlayerSpawnResult CanRestartAt(struct FPlayerSpawnRequest* InOutSpawnRequest, bool bForceRestart);
-	void ClientDamagedCharacter(const struct FClientDamageInfo& DamageInfo);
-	void ClientOnFailedToRestart(EPlayerSpawnResult SpawnResult, const struct FVehicleSpawnProperties& Props);
-	void ClientReceiveChatMessage(const struct FBrickChatMessage& ChatMessage);
-	void ClientReceiveChatMessages(const TArray<struct FBrickChatMessage>& ChatMessages);
-	void ClientRevertVehicleDamage(class ABrickVehicle* Vehicle, const struct FRestartTransformVersion& ComparisonIndex);
-	void ClientSentWrongAdminPassword(uint8 AttemptsRemaining);
-	void ClientWasKickedForDuration(const class FString& KickReason, const struct FTimespan& KickDuration);
-	void CloseInventory();
-	void CloseMap();
-	void CloseScoreboard();
-	void CloseVehicleBrowser();
-	void DestroyAllDummies();
-	void DestroyCharacter(class ABaseCharacter* Char);
-	bool EnterEditor(EUGCType InUGCType, const struct FUGCFileInfo& InFileInfo, bool bImport, class AActor* EntryPoint);
-	bool EnterFreeCam();
-	void EnterVehicleEditor(class AActor* EntryPoint);
-	void ExitEditor(const struct FUGCFileInfo& InFileInfo);
-	void ExitFreeCam();
-	void ExplodeVehicle();
-	void JoinTeam(const struct FGenericTeamId& InTeamId);
-	void KillCharacter();
-	void OnRep_AccessedInventory(class UInventoryComponent* OldInventory);
-	void OnRep_PlayerCharacter(class ABaseCharacter* OldCharacter);
-	void OnRep_ReplicatedInventory();
-	void OnRep_SpectatedCharacter();
-	void OpenChat();
-	void OpenInventory();
-	void OpenMap(bool bToggleOpen);
-	void OpenScoreboard(bool bToggleOpen);
-	void OpenVehicleBrowser(class AActor* EntryPoint);
-	void PossessCharacter(class ABaseCharacter* Char);
-	void RecoverAllDummies();
-	void RequestAdminAccess(const class FString& PW);
-	void ResetLevel();
-	EPlayerSpawnResult RestartAt(const struct FPlayerSpawnRequest& SpawnRequest);
-	void RestartAtClosestSpawnPoint();
-	void RestartAtLastSpawnPoint();
-	void RestartMatch();
-	void RestartOnSpot(const bool bRepairVehicle);
-	void Say(const class FText& Message);
-	void ScrapAllVehicles(bool bIncludeUsed);
-	void ScrapVehicle(class ABrickVehicle* InVehicle, bool bInPerson);
-	void SendChatMessage(EChatContext Context, const class FText& Message);
-	void ServerAccessInventory(class UInventoryComponent* InInventory);
-	void ServerApplyMatchSettings(bool bFade);
-	void ServerAttachWinchBrick(class UWinchBrick* WinchBrick, const struct FWinchAttachTarget& AttachTarget);
-	void ServerCheatMoney(float Amount);
-	void ServerCheatScore(float Amount);
-	void ServerCycleCharacters(bool bForward);
-	void ServerCycleVehicles(bool bReverse);
-	void ServerDestroyAllDummies();
-	void ServerDestroyCharacter(class ABaseCharacter* Char);
-	void ServerEngageCouplingBrick(class UCouplingBrick* CouplingBrick, bool bEngage);
-	void ServerExplodeVehicle();
-	void ServerJoinTeam(const struct FGenericTeamId& InTeamId);
-	void ServerKillCharacter();
-	void ServerOnAnyVehicleConstructed(class ABrickVehicle* InVehicle);
-	void ServerOnMeleeHit(const struct FRepHitInfo& HitInfo);
-	void ServerOnPlayerChangedMatchSettings(const struct FMatchSettings& NewSettings, bool bApply, bool bFade);
-	void ServerOnProjectileHit(const struct FProjectileHitInfo& HitInfo);
-	void ServerOpenGravelSilo(class AGravelSilo* Silo, bool bOpen);
-	void ServerPossessCharacter(class ABaseCharacter* Char);
-	void ServerRecoverAllDummies();
-	void ServerRequestAdminAccess(const class FString& PW);
-	void ServerResetLevel();
-	void ServerRestartAt(const struct FPlayerSpawnRequest& SpawnRequest);
-	void ServerRestartMatch();
-	void ServerScrapAllVehicles(bool bIncludeUsed);
-	void ServerScrapVehicle(class ABrickVehicle* InVehicle, bool bInPerson);
-	void ServerSendChatMessage(EChatContext Context, const class FText& Message);
-	void ServerSetElevatorDirection(class AElevator* Elevator, EElevatorDirection Dir);
-	void ServerSetSwitchBrickValue(class USwitchBrick* SwitchBrick, int8 NewValue);
-	void ServerSetVehiclePinMode(EVehiclePinMode PinMode);
-	void ServerSpawnDummy(const struct FVector& Location, uint16 CompressedYaw);
-	void ServerSpectateNextCharacter(bool bForward);
-	void ServerStartDragRace(class ADragStrip* DragStrip);
-	void ServerToggleInvincible(bool bVehicle);
-	void ServerTriggerDetonatorBrick(class UDetonatorBrick* DetonatorBrick);
-	void ServerUpdateActuator(const struct FRepActuatorState& NewState, const struct FRestartTransformVersion& RestartVersion);
-	void ServerUpdateVehicleMovement(class ABrickVehicle* Vehicle, const TArray<struct FRepBrickMovementState>& MovementSates, const float OwnerTimestamp, const struct FRestartTransformVersion& ComparisonIndex);
-	void ServerUpdateVehicleMovementAndDamage(class ABrickVehicle* Vehicle, const TArray<struct FRepBrickMovementState>& MovementSates, const float OwnerTimestamp, const struct FBrickConnectionDamageBitfield& ConnectionDamage, const struct FRestartTransformVersion& ComparisonIndex);
-	void SetFixedCam(bool bNewFixedCam);
-	void SetFreeCamMode(EFreeCamMode NewMode);
-	void SetPlayerCharacter(class ABaseCharacter* InCharacter);
-	void SetSpectatedCharacter(class ABaseCharacter* InCharacter);
-	void SetVehiclePinMode(EVehiclePinMode PinMode);
-	void ShowHUDWidget(const TSoftClassPtr<class UClass>& HUDWidgetClass);
-	void SpawnDummy(const struct FVector& Location, float Yaw);
-	bool SpectateNextCharacter(bool bForward);
-	void ToggleInvincible(bool bVehicle);
-	void ToggleSlowMotion();
-
-	bool CanAccessInventory(class UInventoryComponent* InInventory) const;
-	bool CanDestroyAllDummies() const;
-	bool CanDestroyCharacter(class ABaseCharacter* Char) const;
-	bool CanEnterEditor(EUGCType InUGCType, class AActor* EntryPoint) const;
-	bool CanExplodeVehicle() const;
-	bool CanInteract() const;
-	bool CanJoinTeam(const struct FGenericTeamId& InTeamId) const;
-	bool CanLogInAsAdmin() const;
-	bool CanOpenVehicleBrowser(class AActor* EntryPoint) const;
-	bool CanPinVehicle() const;
-	bool CanPossessCharacter(class ABaseCharacter* Char) const;
-	bool CanRecoverAllDummies() const;
-	bool CanRestartOnSpot() const;
-	bool CanRestartVehicle() const;
-	bool CanScrapAllVehicles() const;
-	bool CanScrapVehicle(class ABrickVehicle* InVehicle, bool bInPerson) const;
-	bool CanSpawnAnywhere() const;
-	bool CanSpawnDummy(bool bAtAll) const;
-	EPlayerSpawnResult CanSpawnVehicle(const struct FUGCFileInfo& FileInfo, bool bRemoveCurrent) const;
-	bool CanSpectateCharacter(class ABaseCharacter* InCharacter) const;
-	bool CanTeleportPlayer() const;
-	bool CanToggleInvincible() const;
-	bool CanUseFreeCam() const;
-	bool CanUseSlowMotion() const;
-	bool CanViewInventory() const;
-	class UHUDIconComponent* FindFocusedHUDIconComponent() const;
-	class UInventoryComponent* GetAccessedInventory() const;
-	class ABrickEditor* GetBrickEditor() const;
-	class AActor* GetEditorEntryPoint() const;
-	EFreeCamMode GetFreeCamMode() const;
-	class ABaseCharacter* GetPlayerCharacter() const;
-	class ABrickVehicle* GetPlayerVehicle() const;
-	float GetRespawnTimerRemaining() const;
-	class ABaseCharacter* GetSpectatedCharacter() const;
-	class ABaseCharacter* GetViewedCharacter() const;
-	class ABrickVehicle* GetViewedVehicle() const;
-	bool IsFreeCamFixed() const;
-	bool IsInEditor(EUGCType InUGCType) const;
-	bool IsInFreeCam() const;
-	bool IsInventoryOpen() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickPlayerController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickPlayerController")
-	}
-	static class ABrickPlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABrickPlayerController>();
-	}
-};
-DUMPER7_ASSERTS_ABrickPlayerController;
-
-// Class BrickRigs.Windmill
-// 0x0028 (0x0368 - 0x0340)
-class AWindmill : public AStaticMeshProp
-{
-public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         WindmillRandSeed;                                  // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   RotorMeshComponent;                                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UStaticMesh*                            RotorMesh;                                         // 0x0358(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FFloatInterval                         RotationSpeedRange;                                // 0x0360(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Windmill")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Windmill")
-	}
-	static class AWindmill* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AWindmill>();
-	}
-};
-DUMPER7_ASSERTS_AWindmill;
-
-// Class BrickRigs.BrickPlayerInput
-// 0x00C8 (0x0478 - 0x03B0)
-class UBrickPlayerInput final : public UPlayerInput
-{
-public:
-	uint8                                         Pad_3B0[0x58];                                     // 0x03B0(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputComponent*>                LastInputStack;                                    // 0x0408(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_418[0x50];                                     // 0x0418(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EInputMethod NewInputMethod)> OnInputMethodChangedDelegate;        // 0x0468(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickPlayerInput")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickPlayerInput")
-	}
-	static class UBrickPlayerInput* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickPlayerInput>();
-	}
-};
-DUMPER7_ASSERTS_UBrickPlayerInput;
-
-// Class BrickRigs.BrickPlayerStart
-// 0x0040 (0x0338 - 0x02F8)
-class ABrickPlayerStart final : public AActor
-{
-public:
-	class UCapsuleComponent*                      CapsuleComponent;                                  // 0x02F8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UArrowComponent*                        ArrowComponent;                                    // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, EditorOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class ASpawnArea>              SpawnArea;                                         // 0x0308(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickPlayerStart")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickPlayerStart")
-	}
-	static class ABrickPlayerStart* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABrickPlayerStart>();
-	}
-};
-DUMPER7_ASSERTS_ABrickPlayerStart;
-
-// Class BrickRigs.BrickPlayerState
-// 0x0110 (0x0518 - 0x0408)
-class ABrickPlayerState : public APlayerState
-{
-public:
-	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         InactiveCharacter;                                 // 0x0410(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_418[0x1];                                      // 0x0418(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	EAdminRole                                    AdminRole;                                         // 0x0419(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGenericTeamId                         TeamId;                                            // 0x041A(0x0001)(Net, Transient, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsTeamLeader;                                     // 0x041B(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         Money;                                             // 0x041C(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint16                                        Kills;                                             // 0x0420(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint16                                        Deaths;                                            // 0x0422(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsAlive;                                          // 0x0424(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_425[0xF3];                                     // 0x0425(0x00F3)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnRep_AdminRole();
-	void OnRep_Deaths();
-	void OnRep_IsAlive();
-	void OnRep_IsTeamLeader();
-	void OnRep_Kills();
-	void OnRep_Money(float PrevValue);
-	void OnRep_TeamId();
-	void SetAdminRole(const EAdminRole NewRole);
-	void SetDeaths(int32 NewDeaths);
-	void SetIsAlive(bool bInIsAlive);
-	void SetIsTeamLeader(bool bNewLeader);
-	void SetKills(int32 NewKills);
-	void SetMoney(float NewValue);
-	void SetScore(float NewScore);
-
-	EAdminRole GetAdminRole() const;
-	int32 GetDeaths() const;
-	int32 GetKills() const;
-	float GetMoney() const;
-	class FText GetPlayerNameText() const;
-	int32 GetUncompressedPing() const;
-	bool IsAlive() const;
-	bool IsHost() const;
-	bool IsTeamLeader() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickPlayerState")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickPlayerState")
-	}
-	static class ABrickPlayerState* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABrickPlayerState>();
-	}
-};
-DUMPER7_ASSERTS_ABrickPlayerState;
-
-// Class BrickRigs.MatchEndWidget
-// 0x0008 (0x0400 - 0x03F8)
-class UMatchEndWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnClickedContinue();
-	void UpdateContinueButton(int32 TimeRemaining, bool bIsHost);
-	void UpdateMatchWinner(class UBrickTeam* WinnerTeam, ETeamAttitude TeamAttitude);
-
-	class UWidget* GetWidgetToFocus() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MatchEndWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MatchEndWidget")
-	}
-	static class UMatchEndWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMatchEndWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMatchEndWidget;
-
-// Class BrickRigs.BrickProjectile
-// 0x0150 (0x04E0 - 0x0390)
-class ABrickProjectile : public AFluMoveSyncKinematicActor
-{
-public:
-	uint8                                         Pad_390[0x48];                                     // 0x0390(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UFirearmComponent>       FirearmComponent;                                  // 0x03D8(0x0008)(ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3E0[0x1C];                                     // 0x03E0(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
-	EAmmoType                                     AmmoType;                                          // 0x03FC(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3FD[0x1];                                      // 0x03FD(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint16                                        NumMergedProjectiles;                              // 0x03FE(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AActor*                                 SeekingTarget;                                     // 0x0400(0x0008)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_408[0x28];                                     // 0x0408(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class USphereComponent*                       SphereComponent;                                   // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0438(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickProjectileMovementComponent*      ProjectileMovementComponent;                       // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   CollisionProfileName;                              // 0x0448(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            StaticMesh;                                        // 0x0458(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UParticleSystem*                        TrailParticleSystem;                               // 0x0460(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UParticleSystem*                        DesintegrationParticleSystem;                      // 0x0468(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeshScale;                                         // 0x0470(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PenetrationCoefficient;                            // 0x0474(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HomingAcceleration;                                // 0x0478(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHomingDistance;                                 // 0x047C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHomingAngle;                                    // 0x0480(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHomingLeadDistance;                             // 0x0484(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FlareEffectiveness;                                // 0x0488(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GravityScale;                                      // 0x048C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             FlybySound;                                        // 0x0490(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FlybySoundDelay;                                   // 0x0498(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FlybySoundPitch;                                   // 0x049C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x04A0(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class UDamageType>                DamageType;                                        // 0x04B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UExplosiveMaterial>         ExplosiveMaterial;                                 // 0x04C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UExplosiveMaterial>         IncendiaryMaterial;                                // 0x04C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExplosiveVolume;                                   // 0x04D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HomingExplosiveRatio;                              // 0x04D4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExplosionDamage;                                   // 0x04D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnRep_SeekingTarget(class AActor* OldTarget);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickProjectile")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickProjectile")
-	}
-	static class ABrickProjectile* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABrickProjectile>();
-	}
-};
-DUMPER7_ASSERTS_ABrickProjectile;
-
-// Class BrickRigs.WingBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UWingBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WingBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WingBrickStaticInfo")
-	}
-	static class UWingBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWingBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UWingBrickStaticInfo;
-
-// Class BrickRigs.BrickProjectileMovementComponent
-// 0x0020 (0x0200 - 0x01E0)
-class UBrickProjectileMovementComponent final : public UProjectileMovementComponent
-{
-public:
-	uint8                                         Pad_1E0[0x20];                                     // 0x01E0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickProjectileMovementComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickProjectileMovementComponent")
-	}
-	static class UBrickProjectileMovementComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickProjectileMovementComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBrickProjectileMovementComponent;
-
-// Class BrickRigs.ProjectileSeekingInterface
-// 0x0000 (0x0000 - 0x0000)
-class IProjectileSeekingInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ProjectileSeekingInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ProjectileSeekingInterface")
-	}
-	static class IProjectileSeekingInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IProjectileSeekingInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IProjectileSeekingInterface;
-
-// Class BrickRigs.ProjectileInputComponent
-// 0x0000 (0x0180 - 0x0180)
-class UProjectileInputComponent final : public UBaseInputComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ProjectileInputComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ProjectileInputComponent")
-	}
-	static class UProjectileInputComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UProjectileInputComponent>();
-	}
-};
-DUMPER7_ASSERTS_UProjectileInputComponent;
-
-// Class BrickRigs.TrackWheelBrickStaticInfo
-// 0x0000 (0x01C8 - 0x01C8)
-class UTrackWheelBrickStaticInfo : public UWheelBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TrackWheelBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TrackWheelBrickStaticInfo")
-	}
-	static class UTrackWheelBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTrackWheelBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UTrackWheelBrickStaticInfo;
-
-// Class BrickRigs.SprocketWheelBrickStaticInfo
-// 0x0038 (0x0200 - 0x01C8)
-class USprocketWheelBrickStaticInfo : public UTrackWheelBrickStaticInfo
-{
-public:
-	class UStaticMesh*                            TrackMesh;                                         // 0x01C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              TrackMeshSize;                                     // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBrickPhysicalMaterial*                 TrackPhysMaterial;                                 // 0x01D8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             TrackBreakSound;                                   // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrackSpacing;                                      // 0x01E8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrackThickness;                                    // 0x01EC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxNumTrackInstances;                              // 0x01F0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxNumIdlerWheels;                                 // 0x01F4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrackBreakParticleRatio;                           // 0x01F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SprocketWheelBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SprocketWheelBrickStaticInfo")
-	}
-	static class USprocketWheelBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USprocketWheelBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_USprocketWheelBrickStaticInfo;
-
-// Class BrickRigs.BrickRetainerBox
-// 0x0000 (0x0278 - 0x0278)
-class UBrickRetainerBox final : public URetainerBox
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickRetainerBox")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickRetainerBox")
-	}
-	static class UBrickRetainerBox* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickRetainerBox>();
-	}
-};
-DUMPER7_ASSERTS_UBrickRetainerBox;
-
-// Class BrickRigs.BrickScrollBox
-// 0x0010 (0x0AF8 - 0x0AE8)
-class UBrickScrollBox final : public UScrollBox
-{
-public:
-	uint8                                         Pad_AE8[0x8];                                      // 0x0AE8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	EBrickUISpacingStyle                          SlotSpacingStyle;                                  // 0x0AF0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_AF1[0x7];                                      // 0x0AF1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetSlotSpacingStyle(EBrickUISpacingStyle NewStyle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickScrollBox")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickScrollBox")
-	}
-	static class UBrickScrollBox* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickScrollBox>();
-	}
-};
-DUMPER7_ASSERTS_UBrickScrollBox;
-
-// Class BrickRigs.BrickSliderWidget
-// 0x0088 (0x04A0 - 0x0418)
-class UBrickSliderWidget : public UButtonWidgetBase
-{
-public:
-	uint8                                         Pad_418[0x10];                                     // 0x0418(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickTextBoxWidget*                    TextBox;                                           // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickBorder*                           FillBorder;                                        // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Value;                                             // 0x0438(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MinValue;                                          // 0x043C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxValue;                                          // 0x0440(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ValueStep;                                         // 0x0444(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickSliderGridSnapMode                      GridSnapMode;                                      // 0x0448(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ENumericValueType                             ValueType;                                         // 0x0449(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_44A[0x2];                                      // 0x044A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxFractionalDigits;                               // 0x044C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bZeroAsUnlimited;                                  // 0x0450(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_451[0x7];                                      // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CustomTextFormat;                                  // 0x0458(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsReadOnly;                                       // 0x0470(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsMarquee;                                        // 0x0471(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_472[0x6];                                      // 0x0472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float Value_0, EValueChangedEventType EventType)> OnValueChangedDelegate; // 0x0478(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_488[0x18];                                     // 0x0488(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnTextChanged(const class FText& NewText, EValueChangedEventType EventType);
-	void SetCustomTextFormat(const class FText& InFormat);
-	void SetGridSnapMode(const EBrickSliderGridSnapMode NewMode);
-	void SetIsMarquee(bool bInMarquee);
-	void SetIsReadOnly(bool bInReadOnly);
-	void SetMaxFractionalDigits(int32 InMaxDigits);
-	void SetValue(float NewValue);
-	void SetValueRange(float InMinValue, float InMaxValue);
-	void SetValueType(ENumericValueType InType);
-	void SetZeroAsUnlimited(const bool bInZeroAsUnlimited);
-	void UpdateIsDragging(const bool bIsDragging);
-	void UpdateSliderPosition(float NewValue);
-
-	float GetValue() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickSliderWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickSliderWidget")
-	}
-	static class UBrickSliderWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickSliderWidget>();
-	}
-};
-DUMPER7_ASSERTS_UBrickSliderWidget;
-
-// Class BrickRigs.SensorBrickBaseStaticInfo
-// 0x0000 (0x01E0 - 0x01E0)
-class USensorBrickBaseStaticInfo : public UScalableBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SensorBrickBaseStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SensorBrickBaseStaticInfo")
-	}
-	static class USensorBrickBaseStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USensorBrickBaseStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_USensorBrickBaseStaticInfo;
-
-// Class BrickRigs.SwitchBrickStaticInfo
-// 0x0000 (0x01E0 - 0x01E0)
-class USwitchBrickStaticInfo : public USensorBrickBaseStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SwitchBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SwitchBrickStaticInfo")
-	}
-	static class USwitchBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USwitchBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_USwitchBrickStaticInfo;
-
-// Class BrickRigs.BrickSpacer
-// 0x0010 (0x0398 - 0x0388)
-class UBrickSpacer final : public UImage
-{
-public:
-	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	EBrickUIColorStyle                            ColorStyle;                                        // 0x0390(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickSpacer")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickSpacer")
-	}
-	static class UBrickSpacer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickSpacer>();
-	}
-};
-DUMPER7_ASSERTS_UBrickSpacer;
-
-// Class BrickRigs.BrickStaticMeshComponent
-// 0x0020 (0x0650 - 0x0630)
-class UBrickStaticMeshComponent final : public UBrickEditorStaticMeshComponent
-{
-public:
-	uint8                                         Pad_630[0x20];                                     // 0x0630(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickStaticMeshComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickStaticMeshComponent")
-	}
-	static class UBrickStaticMeshComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickStaticMeshComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBrickStaticMeshComponent;
-
-// Class BrickRigs.TankBrick
-// 0x0010 (0x0128 - 0x0118)
-class UTankBrick final : public UScalableBrick
-{
-public:
-	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UExplosiveMaterial>         FuelType;                                          // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TankBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TankBrick")
-	}
-	static class UTankBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTankBrick>();
-	}
-};
-DUMPER7_ASSERTS_UTankBrick;
-
-// Class BrickRigs.BrickTeam
-// 0x00A8 (0x00D8 - 0x0030)
-class UBrickTeam : public UObject
-{
-public:
-	uint8                                         Pad_30[0x6];                                       // 0x0030(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	uint16                                        Score;                                             // 0x0036(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint16                                        MaxScore;                                          // 0x0038(0x0002)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   DisplayName;                                       // 0x0040(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UTexture2D>              BadgeTexture;                                      // 0x0058(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TeamColor;                                         // 0x0088(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInventoryLoadout                      DefaultLoadout;                                    // 0x0098(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A8[0x30];                                      // 0x00A8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnRep_MaxScore();
-	void OnRep_Score();
-	void SetMaxScore(int32 NewMaxScore);
-	void SetScore(int32 NewScore);
-
-	int32 GetMaxScore() const;
-	int32 GetScore() const;
-	class FText GetTeamDisplayName() const;
-	const struct FGenericTeamId GetTeamId() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickTeam")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickTeam")
-	}
-	static class UBrickTeam* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickTeam>();
-	}
-};
-DUMPER7_ASSERTS_UBrickTeam;
-
-// Class BrickRigs.BrickTextBoxWidget
-// 0x0048 (0x0440 - 0x03F8)
-class UBrickTextBoxWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickMultiLineTextBox*                 MultiLineTextBox;                                  // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickButtonWidget*                     ShowPasswordButton;                                // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(const class FText& NewText, EValueChangedEventType EventType)> OnTextChangedDelegate; // 0x0428(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	int32                                         MaxTextLength;                                     // 0x0438(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultiLine;                                   // 0x043C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPassword;                                       // 0x043D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsNumeric;                                        // 0x043E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_43F[0x1];                                      // 0x043F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnTextChanged(const class FText& NewText);
-	void SetAllowMultiLine(bool bInAllowMultiLine);
-	void SetBrushStyle(EBrickUIBrushStyle InBrushStyle);
-	void SetColorStyle(EBrickUIColorStyle InColorStyle);
-	void SetCustomFocus(bool bNewUseCustomFocus, bool bNewFocused);
-	void SetHintText(const class FText& InText);
-	void SetIsMarquee(bool bNewMarquee);
-	void SetIsPassword(bool bNewIsPassword);
-	void SetIsReadOnly(bool bNewReadOnly);
-	void SetJustification(ETextJustify NewJustification);
-	void SetMaxTextLength(int32 InMaxLength);
-	void SetPaddingStyle(EBrickUIPaddingStyle InPaddingStyle);
-	void SetPasswordVisible(bool bNewVisible);
-	void SetText(const class FText& InText, bool bValidateText);
-	void SetTextStyle(EBrickUITextStyle InTextStyle);
-	void StartTyping(bool bSelectAllText);
-	void TogglePasswordVisible();
-	void UpdateIsPassword(bool bNewIsPassword);
-	void UpdatePasswordVisible(bool bNewVisible);
-
-	class FText GetText() const;
-	bool IsMarquee() const;
-	bool IsPasswordVisible() const;
-	bool IsReadOnly() const;
-	bool IsTyping() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickTextBoxWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickTextBoxWidget")
-	}
-	static class UBrickTextBoxWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickTextBoxWidget>();
-	}
-};
-DUMPER7_ASSERTS_UBrickTextBoxWidget;
-
-// Class BrickRigs.TargetMarkerIconWidget
-// 0x0008 (0x0428 - 0x0420)
-class UTargetMarkerIconWidget : public UHUDIconWidget
-{
-public:
-	uint8                                         Pad_420[0x8];                                      // 0x0420(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateAmmoType(EAmmoType NewType);
-	void UpdateFireAction(int32 NewActionIndex);
-	void UpdateHasValidTarget(bool bNewHasValidTarget);
-	void UpdateTargetDistance(float NewDist);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetMarkerIconWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetMarkerIconWidget")
-	}
-	static class UTargetMarkerIconWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetMarkerIconWidget>();
-	}
-};
-DUMPER7_ASSERTS_UTargetMarkerIconWidget;
-
-// Class BrickRigs.BrickUIStyle
-// 0x81B8 (0x81E8 - 0x0030)
-class UBrickUIStyle : public UObject
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   StyleDisplayName;                                  // 0x0038(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            ThrobberBrush;                                     // 0x0050(0x00A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         ThrobberRotationSpeed;                             // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBrickUIIconAtlas                      IconAtlas[0x11];                                   // 0x00F8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FHyperlinkStyle                        HyperlinkStyle;                                    // 0x0208(0x05E0)(Edit, BlueprintVisible, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
-	struct FBrickUIBrushStyle                     BrushStyles[0x8];                                  // 0x07E8(0x08C0)(Edit, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
-	struct FBrickUIColorStyle                     ColorStyles[0x8];                                  // 0x4DE8(0x00E0)(Edit, DisableEditOnInstance, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTextBlockStyle                        TextStyles[0x10];                                  // 0x54E8(0x02C8)(Edit, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
-	float                                         SpacingStyles[0x3];                                // 0x8168(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                PaddingStyles[0x7];                                // 0x8174(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81E4[0x4];                                     // 0x81E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class FText FormatRichTextStyle(EBrickUITextStyle Style, const class FText& InText);
-	static EBrickUIColorStyle GetTeamAttitudeColorStyle(ETeamAttitude TeamAttitude);
-	static EBrickUITextStyle GetTeamAttitudeTextStyle(ETeamAttitude TeamAttitude);
-	static void GetUIStyle(TDelegate<void(const class UBrickUIStyle* Style)> Delegate);
-	static EBrickUIColorStyle InvertTeamAttitudeColorStyle(EBrickUIColorStyle ColorStyle);
-	static EBrickUIStyleState SwitchButtonStyleState(EBrickUIStyleState StyleState);
-	static void UnbindUIStyle(class UObject* Object);
-
-	void BuildStyle();
-	void SetBrush(EBrickUIBrushStyle BrushStyle, EBrickUIStyleState StyleState, const struct FSlateBrush& InBrush);
-	void SetColor(EBrickUIColorStyle ColorStyle, EBrickUIStyleState StyleState, const struct FLinearColor& InColor);
-	void SetIconAtlas(EBrickUIIconAtlas InIconAtlas, const struct FBrickUIIconAtlas& InAtlas);
-	void SetPaddingStyle(EBrickUIPaddingStyle PaddingStyle, const struct FMargin& InPadding);
-	void SetSpacingStyle(EBrickUISpacingStyle SpacingStyle, float InSpacing);
-	void SetTextStyle(EBrickUITextStyle TextStyle, const struct FTextBlockStyle& InTextStyle);
-
-	const struct FSlateBrush GetBrush(EBrickUIBrushStyle BrushStyle, EBrickUIStyleState StyleState, const struct FSlateBrush& Fallback) const;
-	const struct FLinearColor GetColor(EBrickUIColorStyle ColorStyle, EBrickUIStyleState StyleState, const struct FLinearColor& Fallback) const;
-	struct FMargin GetPadding(EBrickUIPaddingStyle PaddingStyle, const struct FMargin& Fallback) const;
-	float GetSpacing(EBrickUISpacingStyle SpacingStyle, float Fallback) const;
-	const struct FTextBlockStyle GetTextStyle(EBrickUITextStyle TextStyle, const struct FTextBlockStyle& Fallback) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickUIStyle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickUIStyle")
-	}
-	static class UBrickUIStyle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickUIStyle>();
-	}
-};
-DUMPER7_ASSERTS_UBrickUIStyle;
-
-// Class BrickRigs.BrickVehicleComponent
-// 0x00B0 (0x0360 - 0x02B0)
-class UBrickVehicleComponent final : public UBrickEditorInterfaceComponent
-{
-public:
-	uint8                                         Pad_2B0[0xB0];                                     // 0x02B0(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickVehicleComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickVehicleComponent")
-	}
-	static class UBrickVehicleComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickVehicleComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBrickVehicleComponent;
-
-// Class BrickRigs.BrickVehicleStaticInfo
-// 0x00F8 (0x0128 - 0x0030)
-class UBrickVehicleStaticInfo : public UObject
-{
-public:
-	float                                         MaxConstructionLoopFrameTime;                      // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxConstructionTime;                               // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCollisionEffectSpawnDist;                       // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinCollisionEffectSpeed;                           // 0x003C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinSlidingEffectSpeed;                             // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinCollisionSoundDelay;                            // 0x0044(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         SlidingSpeedRange;                                 // 0x0048(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             CollisionSound;                                    // 0x0050(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UParticleSystem*                        FireEmitter;                                       // 0x0058(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             FireSound;                                         // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UBrickPattern>              BrickBurntPattern;                                 // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInt32Interval                         NumBurnIntervalsRange;                             // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         BurnTimeRange;                                     // 0x0078(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ExtinguishCooldownRange;                           // 0x0080(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FireSpreadProbability;                             // 0x0088(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FireSpreadDistance;                                // 0x008C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundAttenuation*                      HandlingSoundAttenuation;                          // 0x0090(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             SwitchSound;                                       // 0x0098(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FViewTargetZoomParams                  ZoomParams;                                        // 0x00A0(0x0018)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         MinZoomVehicleBoundsRadius;                        // 0x00B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultZoomRatio;                                  // 0x00BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               DefaultViewRotation;                               // 0x00C0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ViewRotationInterpSpeed;                           // 0x00CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         VelocityCameraInputSpeedRange;                     // 0x00D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CameraLocationInterpSpeed;                         // 0x00D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CameraVelocityInterpSpeed;                         // 0x00DC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHUDIconProperties                     HUDIconProperties;                                 // 0x00E0(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         IconOffsetZ;                                       // 0x0118(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxFriendlyIconDrawDist;                           // 0x011C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHostileIconDrawDist;                            // 0x0120(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickVehicleStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickVehicleStaticInfo")
-	}
-	static class UBrickVehicleStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickVehicleStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UBrickVehicleStaticInfo;
-
-// Class BrickRigs.BrickViewportClient
-// 0x0020 (0x03B0 - 0x0390)
-class UBrickViewportClient final : public UGameViewportClient
-{
-public:
-	uint8                                         Pad_390[0x20];                                     // 0x0390(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UBrickViewportClient* Get(const class UObject* WorldContextObject);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BrickViewportClient")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BrickViewportClient")
-	}
-	static class UBrickViewportClient* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBrickViewportClient>();
-	}
-};
-DUMPER7_ASSERTS_UBrickViewportClient;
-
-// Class BrickRigs.BumperBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UBumperBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BumperBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BumperBrickStaticInfo")
-	}
-	static class UBumperBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBumperBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UBumperBrickStaticInfo;
-
-// Class BrickRigs.CameraBrick
-// 0x0080 (0x0170 - 0x00F0)
-class UCameraBrick : public UBrick
-{
-public:
-	uint8                                         Pad_F0[0x60];                                      // 0x00F0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CameraName;                                        // 0x0150(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBrickEditorObjectPtr                  OwningSeat;                                        // 0x0160(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraBrick")
-	}
-	static class UCameraBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraBrick>();
-	}
-};
-DUMPER7_ASSERTS_UCameraBrick;
-
-// Class BrickRigs.CameraBrickWidget
-// 0x0018 (0x0410 - 0x03F8)
-class UCameraBrickWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0xC];                                      // 0x03F8(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUpdateTargetRange;                                // 0x0404(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_405[0x3];                                      // 0x0405(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TargetRangeUpdateInterval;                         // 0x0408(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateTargetRange(bool bHitSomething, float Distance);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraBrickWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraBrickWidget")
-	}
-	static class UCameraBrickWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraBrickWidget>();
-	}
-};
-DUMPER7_ASSERTS_UCameraBrickWidget;
-
-// Class BrickRigs.SpawnArea
-// 0x0048 (0x0340 - 0x02F8)
-class ASpawnArea : public AActor
-{
-public:
-	uint8                                         Pad_2F8[0x8];                                      // 0x02F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDIconComponent*                      HUDIconComponent;                                  // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FHUDIconProperties                     HUDIconProperties;                                 // 0x0308(0x0038)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SpawnArea")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SpawnArea")
-	}
-	static class ASpawnArea* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASpawnArea>();
-	}
-};
-DUMPER7_ASSERTS_ASpawnArea;
-
-// Class BrickRigs.CapturePoint
-// 0x0120 (0x0460 - 0x0340)
-class ACapturePoint : public ASpawnArea
-{
-public:
-	uint8                                         Pad_340[0x14];                                     // 0x0340(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         RepCaptureRatio;                                   // 0x0354(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bHasBeenCaptured;                                  // 0x0355(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGenericTeamId                         CapturingTeam;                                     // 0x0356(0x0001)(Net, Transient, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGenericTeamId                         CapturedBy;                                        // 0x0357(0x0001)(Net, Transient, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class ABaseCharacter*>                 OverlappingCharacters;                             // 0x0358(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	class UMaterialInstanceDynamic*               FlagMID;                                           // 0x0368(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_370[0x8];                                      // 0x0370(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class ABrickBuilding>          BuildingBase;                                      // 0x0378(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UStaticMeshComponent*                   MeshComponent;                                     // 0x03A8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UShapeComponent*                        ShapeComponent;                                    // 0x03B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UStaticMesh*                            StaticMesh;                                        // 0x03B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxDrawDistance;                                   // 0x03C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxFlagHeight;                                     // 0x03C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector                                IconOffset;                                        // 0x03C8(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         TimeToCapture;                                     // 0x03D4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         CapturePointId;                                    // 0x03D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECapturePointShape                            CapturePointShape;                                 // 0x03D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3DA[0x2];                                      // 0x03DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ShapeOffset;                                       // 0x03DC(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FRotator                               ShapeRotation;                                     // 0x03E8(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FVector                                ShapeScale;                                        // 0x03F4(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_400[0x60];                                     // 0x0400(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnCapturedByChanged();
-	void OnCapturingTeamChanged();
-	void OnRep_CaptureRatio();
-	void OnTriggerBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void OnTriggerEndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	bool SetCapturedBy(const struct FGenericTeamId& TeamId, bool bNewHasBeenCaptured);
-	bool SetCaptureRatio(float NewRatio);
-	bool SetCapturingTeam(const struct FGenericTeamId& TeamId);
-
-	const struct FGenericTeamId GetCapturedBy() const;
-	class FText GetCapturePointShortDisplayName() const;
-	float GetCaptureRatio() const;
-	const struct FGenericTeamId GetCapturingTeam() const;
-	bool HasBeenCaptured() const;
-	bool IsCapturePointOnBuilding(const class ABrickBuilding* InBuilding) const;
-	bool IsCharacterOnCapturePoint(class ABaseCharacter* InCharacter) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CapturePoint")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CapturePoint")
-	}
-	static class ACapturePoint* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ACapturePoint>();
-	}
-};
-DUMPER7_ASSERTS_ACapturePoint;
-
-// Class BrickRigs.WinchBrick
-// 0x0098 (0x0188 - 0x00F0)
-class UWinchBrick final : public UBrick
-{
-public:
-	uint8                                         Pad_F0[0x4];                                       // 0x00F0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWinchAttachTarget                     AttachTarget;                                      // 0x00F4(0x001C)(Net, Transient, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
-	float                                         RepRopeLength;                                     // 0x0110(0x0004)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_114[0x44];                                     // 0x0114(0x0044)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0158(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	float                                         WinchSpeed;                                        // 0x0180(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void Interact_AttachWinch(class ABrickPlayerController* OtherPC);
-	void Interact_DetachWinch(class ABrickPlayerController* OtherPC);
-	void OnRep_AttachTarget(const struct FWinchAttachTarget& PrevAttachTarget);
-	void OnRep_RepRopeLength();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WinchBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WinchBrick")
-	}
-	static class UWinchBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWinchBrick>();
-	}
-};
-DUMPER7_ASSERTS_UWinchBrick;
-
-// Class BrickRigs.CarWheelBrickStaticInfo
-// 0x0020 (0x01E8 - 0x01C8)
-class UCarWheelBrickStaticInfo : public UWheelBrickStaticInfo
-{
-public:
-	float                                         RimRadius;                                         // 0x01C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinTireThickness;                                  // 0x01CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinTirePopDamage;                                  // 0x01D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        TirePopEmitter;                                    // 0x01D8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             TirePopSound;                                      // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CarWheelBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CarWheelBrickStaticInfo")
-	}
-	static class UCarWheelBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCarWheelBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UCarWheelBrickStaticInfo;
-
-// Class BrickRigs.WheelBrick
-// 0x0020 (0x0110 - 0x00F0)
-class UWheelBrick : public UBrick
-{
-public:
-	TArray<class UWheelConnection*>               WheelConnections;                                  // 0x00F0(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	bool                                          bInvertTankSteering;                               // 0x0100(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WheelDiameter;                                     // 0x0104(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         WheelWidth;                                        // 0x0108(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WheelBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WheelBrick")
-	}
-	static class UWheelBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWheelBrick>();
-	}
-};
-DUMPER7_ASSERTS_UWheelBrick;
-
 // Class BrickRigs.MenuSettingsPageWidget
 // 0x0028 (0x0430 - 0x0408)
 class UMenuSettingsPageWidget : public UMenuPageWidget
@@ -7322,247 +7535,9 @@ public:
 };
 DUMPER7_ASSERTS_UInputSettingsPageWidget;
 
-// Class BrickRigs.CarWheelBrick
-// 0x0020 (0x0130 - 0x0110)
-class UCarWheelBrick final : public UWheelBrick
-{
-public:
-	uint8                                         Pad_110[0x18];                                     // 0x0110(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TireThickness;                                     // 0x0128(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         TirePressureRatio;                                 // 0x012C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnRootComponentWake(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CarWheelBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CarWheelBrick")
-	}
-	static class UCarWheelBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCarWheelBrick>();
-	}
-};
-DUMPER7_ASSERTS_UCarWheelBrick;
-
-// Class BrickRigs.ImpactDecalComponent
-// 0x0010 (0x0280 - 0x0270)
-class UImpactDecalComponent final : public UDecalComponent
-{
-public:
-	uint8                                         Pad_270[0x10];                                     // 0x0270(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ImpactDecalComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ImpactDecalComponent")
-	}
-	static class UImpactDecalComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UImpactDecalComponent>();
-	}
-};
-DUMPER7_ASSERTS_UImpactDecalComponent;
-
-// Class BrickRigs.CharacterCapsuleComponent
-// 0x0020 (0x0580 - 0x0560)
-class UCharacterCapsuleComponent final : public UCapsuleComponent
-{
-public:
-	uint8                                         Pad_560[0x20];                                     // 0x0560(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CharacterCapsuleComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CharacterCapsuleComponent")
-	}
-	static class UCharacterCapsuleComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCharacterCapsuleComponent>();
-	}
-};
-DUMPER7_ASSERTS_UCharacterCapsuleComponent;
-
-// Class BrickRigs.InteractionWidget
-// 0x0028 (0x0420 - 0x03F8)
-class UInteractionWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInteractionOptionWidget*>       OptionWidgets;                                     // 0x0400(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_410[0x8];                                      // 0x0410(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UInteractionOptionWidget>   OptionWidgetClass;                                 // 0x0418(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void AddOptionWidget(class UInteractionOptionWidget* Widget, int32 OptionIndex);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InteractionWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InteractionWidget")
-	}
-	static class UInteractionWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteractionWidget>();
-	}
-};
-DUMPER7_ASSERTS_UInteractionWidget;
-
-// Class BrickRigs.PlayerPawnInputComponent
-// 0x0038 (0x0220 - 0x01E8)
-class UPlayerPawnInputComponent : public UPawnInputComponent
-{
-public:
-	uint8                                         Pad_1E8[0x20];                                     // 0x01E8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         Character;                                         // 0x0208(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ABrickCharacter*                        BrickCharacter;                                    // 0x0210(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ABrickVehicle*                          Vehicle;                                           // 0x0218(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnHeldCycleExplosives();
-	void OnHeldCycleFireMode();
-	void OnHeldCycleSlots();
-	void OnHeldKill();
-	void OnPressedAim();
-	void OnPressedCycleExplosives();
-	void OnPressedCycleFireMode();
-	void OnPressedCycleSlots();
-	void OnPressedFire();
-	void OnPressedKill();
-	void OnPressedPrimarySlot();
-	void OnPressedReload();
-	void OnPressedSecondarySlot();
-	void OnPressedSpecialSlot();
-	void OnPressedThrowItem();
-	void OnPressedUnequipItem();
-	void OnReleasedAim();
-	void OnReleasedCycleExplosives();
-	void OnReleasedCycleFireMode();
-	void OnReleasedCycleSlots();
-	void OnReleasedFire();
-	void OnReleasedKill();
-	void OnTappedCycleExplosives();
-	void OnTappedCycleFireMode();
-	void OnTappedCycleSlots();
-	void OnTappedKill();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlayerPawnInputComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlayerPawnInputComponent")
-	}
-	static class UPlayerPawnInputComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayerPawnInputComponent>();
-	}
-};
-DUMPER7_ASSERTS_UPlayerPawnInputComponent;
-
-// Class BrickRigs.CharacterInputComponent
-// 0x0000 (0x0220 - 0x0220)
-class UCharacterInputComponent final : public UPlayerPawnInputComponent
-{
-public:
-	void OnPressedCrouch();
-	void OnPressedJump();
-	void OnPressedSprint();
-	void OnReleasedCrouch();
-	void OnReleasedJump();
-	void OnReleasedSprint();
-	void OnToggleCrouch();
-	void WalkForward(float Val);
-	void WalkRight(float Val);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CharacterInputComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CharacterInputComponent")
-	}
-	static class UCharacterInputComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCharacterInputComponent>();
-	}
-};
-DUMPER7_ASSERTS_UCharacterInputComponent;
-
-// Class BrickRigs.ModHook
-// 0x0000 (0x0030 - 0x0030)
-class UModHook : public UObject
-{
-public:
-	void BeginPlay();
-	void EndPlay();
-	void OnCharacterBeginPlay(class ABaseCharacter* Character);
-	void OnPlayerControllerBeginPlay(class ABasePlayerController* PC);
-	void OnSpectatorBeginPlay(class ABrickSpectatorPawn* Pawn);
-	void OnVehicleBeginPlay(class ABrickVehicle* Vehicle);
-	TSoftObjectPtr<class UTexture2D> OverrideBillboardTexture(const TSoftObjectPtr<class UTexture2D>& Texture, class ABillboard* Billboard);
-	struct FInventoryLoadout OverrideCharacterLoadout(const struct FInventoryLoadout& Loadout, class ABaseCharacter* Character);
-	TSubclassOf<class AGameModeBase> OverrideGameModeClass(TSubclassOf<class AGameModeBase> GameModeClass, const class FString& MapName, const class FString& Options, const class FString& Portal);
-	TSubclassOf<class AGameStateBase> OverrideGameStateClass(TSubclassOf<class AGameStateBase> GameStateClass);
-	TArray<TSubclassOf<class AInventoryItem>> OverrideLoadoutContainerItems(const TArray<TSubclassOf<class AInventoryItem>>& ItemClasses);
-	bool OverrideLoadSubLevel(bool bLoadLevel, const class FString& LevelName, class UGameModeInfo* GameMode);
-	bool OverrideMenu(class UMenuWidget* Widget, const class FName& Context);
-	TSoftClassPtr<class UClass> OverrideMenuSequence(const TSoftClassPtr<class UClass>& SequenceClass);
-	struct FWorldSetupParams OverrideMenuWorldSetupParams(const struct FWorldSetupParams& Params_0);
-	TSubclassOf<class APawn> OverridePawnClass(TSubclassOf<class APawn> PawnClass, class AController* Controller);
-	TSubclassOf<class APlayerCameraManager> OverridePlayerCameraManagerClass(TSubclassOf<class APlayerCameraManager> PlayerCameraManagerClass, class ABasePlayerController* PC);
-	TSubclassOf<class APlayerController> OverridePlayerControllerClass(TSubclassOf<class APlayerController> PlayerControllerClass);
-	TSubclassOf<class APlayerController> OverrideReplayPlayerControllerClass(TSubclassOf<class APlayerController> PlayerControllerClass);
-	TSubclassOf<class ASpectatorPawn> OverrideSpectatorClass(TSubclassOf<class ASpectatorPawn> SpectatorClass);
-	TSubclassOf<class ATrain> OverrideTrainClass(TSubclassOf<class ATrain> TrainClass);
-	TSubclassOf<class ABrickVehicle> OverrideVehicleClass(TSubclassOf<class ABrickVehicle> VehicleClass, class ABrickPlayerController* PC, const struct FPlayerSpawnRequest& SpawnRequest);
-	void PostConstructVehicle(class ABrickVehicle* Vehicle);
-	void PostSpawnPawn(class APawn* Pawn);
-	void PostSpawnPlayerController(class APlayerController* PC);
-	void PostSpawnSpectatorPawn(class ASpectatorPawn* Pawn);
-	void PostSpawnVehicle(class ABrickVehicle* Vehicle);
-	void PreConstructVehicle(class ABrickVehicle* Vehicle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ModHook")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ModHook")
-	}
-	static class UModHook* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UModHook>();
-	}
-};
-DUMPER7_ASSERTS_UModHook;
-
 // Class BrickRigs.CharacterInventoryComponent
 // 0x0000 (0x02B0 - 0x02B0)
-class UCharacterInventoryComponent final : public UInventoryComponent
+class UCharacterInventoryComponent : public UInventoryComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -7579,34 +7554,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCharacterInventoryComponent;
-
-// Class BrickRigs.InventoryWidget
-// 0x0038 (0x0430 - 0x03F8)
-class UInventoryWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInventorySlotWidget*>           SlotWidgets;                                       // 0x0408(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_418[0x8];                                      // 0x0418(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickGridPanel*                        SlotsPanel;                                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumSlotsPerRow;                                    // 0x0428(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InventoryWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InventoryWidget")
-	}
-	static class UInventoryWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInventoryWidget>();
-	}
-};
-DUMPER7_ASSERTS_UInventoryWidget;
 
 // Class BrickRigs.CharacterStaticInfo
 // 0x02E8 (0x0318 - 0x0030)
@@ -7714,18 +7661,43 @@ public:
 };
 DUMPER7_ASSERTS_UCharacterStaticInfo;
 
-// Class BrickRigs.ChatMessageInputComponent
-// 0x00A8 (0x0228 - 0x0180)
-class UChatMessageInputComponent final : public UBaseInputComponent
+// Class BrickRigs.KickPlayerPopupParams
+// 0x00A0 (0x0118 - 0x0078)
+class UKickPlayerPopupParams : public UPopupParams
 {
 public:
-	uint8                                         Pad_180[0xA8];                                     // 0x0180(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x00C8(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerName;                                        // 0x00F0(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 KickReason;                                        // 0x0100(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              KickDuration;                                      // 0x0110(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	void OnPressedKickPlayer();
-	void OnPressedViewVehicle();
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KickPlayerPopupParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KickPlayerPopupParams")
+	}
+	static class UKickPlayerPopupParams* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKickPlayerPopupParams>();
+	}
+};
+DUMPER7_ASSERTS_UKickPlayerPopupParams;
 
-	bool GetKickPlayerEnabled() const;
+// Class BrickRigs.ChatMessageInputComponent
+// 0x00A8 (0x02A8 - 0x0200)
+class UChatMessageInputComponent : public UBaseInputComponent
+{
+public:
+	uint8                                         Pad_200[0xA8];                                     // 0x0200(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FBrActionResult Action_KickPlayer(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ViewVehicle(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -7743,36 +7715,6 @@ public:
 };
 DUMPER7_ASSERTS_UChatMessageInputComponent;
 
-// Class BrickRigs.InputMappingKeyWidget
-// 0x0060 (0x0458 - 0x03F8)
-class UInputMappingKeyWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x40];                                     // 0x03F8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickButtonWidget*                     Button;                                            // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UInputChordWidget*                      InputChordWidget;                                  // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_448[0x10];                                     // 0x0448(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnClickedButton();
-	void UpdateConflictedState(bool bNewConflicted);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InputMappingKeyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InputMappingKeyWidget")
-	}
-	static class UInputMappingKeyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputMappingKeyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UInputMappingKeyWidget;
-
 // Class BrickRigs.ChatMessageWidget
 // 0x00B0 (0x04A8 - 0x03F8)
 class UChatMessageWidget : public UUserWidget
@@ -7781,9 +7723,9 @@ public:
 	uint8                                         Pad_3F8[0xB0];                                     // 0x03F8(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void InitializeChatMessage(const class FText& NewText, const EBrickUIColorStyle NewColorStyle, const bool bInIsChatFocused, const bool bWasJustReceived);
 	void OpenContextMenu();
-	void UpdateColorStyle(EBrickUIColorStyle NewColorStyle);
-	void UpdateMessageText(const class FText& NewText);
+	void UpdateChatFocused(const bool bInIsChatFocused);
 
 public:
 	static class UClass* StaticClass()
@@ -7800,6 +7742,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UChatMessageWidget;
+
+// Class BrickRigs.TrackWheelBrick
+// 0x0000 (0x0110 - 0x0110)
+class UTrackWheelBrick : public UWheelBrick
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TrackWheelBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TrackWheelBrick")
+	}
+	static class UTrackWheelBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTrackWheelBrick>();
+	}
+};
+DUMPER7_ASSERTS_UTrackWheelBrick;
 
 // Class BrickRigs.ChatWidget
 // 0x0050 (0x0448 - 0x03F8)
@@ -7818,6 +7780,7 @@ public:
 
 public:
 	class UWidget* GetWidgetToFocus();
+	void OnReceivedChatMessages();
 	void OnTextChanged(const class FText& Text, EValueChangedEventType EventType);
 	void UpdateIsFocused(bool bNewFocused);
 	void UpdateIsTyping(bool bNewTyping);
@@ -7838,34 +7801,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UChatWidget;
-
-// Class BrickRigs.KickedPlayerWidget
-// 0x0088 (0x04A8 - 0x0420)
-class UKickedPlayerWidget : public UPagedListEntryWidget
-{
-public:
-	struct FKickedPlayer                          Entry;                                             // 0x0420(0x0060)(Transient, NativeAccessSpecifierPrivate)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        IdTextBlock;                                       // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        KickTimeTextBlock;                                 // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        KickDurationTextBlock;                             // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        KickTimeRemainingTextBlock;                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KickedPlayerWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KickedPlayerWidget")
-	}
-	static class UKickedPlayerWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKickedPlayerWidget>();
-	}
-};
-DUMPER7_ASSERTS_UKickedPlayerWidget;
 
 // Class BrickRigs.CheatMenuWidget
 // 0x0008 (0x0438 - 0x0430)
@@ -7890,29 +7825,29 @@ public:
 };
 DUMPER7_ASSERTS_UCheatMenuWidget;
 
-// Class BrickRigs.TrackWheelBrick
-// 0x0000 (0x0110 - 0x0110)
-class UTrackWheelBrick : public UWheelBrick
+// Class BrickRigs.RampBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class URampBrickStaticInfo : public UBrickStaticInfo
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TrackWheelBrick")
+		STATIC_CLASS_IMPL("RampBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TrackWheelBrick")
+		STATIC_NAME_IMPL(L"RampBrickStaticInfo")
 	}
-	static class UTrackWheelBrick* GetDefaultObj()
+	static class URampBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTrackWheelBrick>();
+		return GetDefaultObjImpl<URampBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UTrackWheelBrick;
+DUMPER7_ASSERTS_URampBrickStaticInfo;
 
 // Class BrickRigs.CockAction
 // 0x0000 (0x00A0 - 0x00A0)
-class UCockAction final : public UItemAction
+class UCockAction : public UItemAction
 {
 public:
 	static class UClass* StaticClass()
@@ -7929,6 +7864,41 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCockAction;
+
+// Class BrickRigs.InventorySlotWidget
+// 0x00B0 (0x04A8 - 0x03F8)
+class UInventorySlotWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x78];                                     // 0x03F8(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInventoryContainerWidget*              SubInventoryContainerWidget;                       // 0x0470(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_478[0x10];                                     // 0x0478(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickButtonWidget*                     Button;                                            // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        AmountTextBlock;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickImage*                            IconImage;                                         // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void AddSubInventoryWidget(class UInventoryContainerWidget* Widget);
+	void OnButtonClicked();
+	struct FEventReply OnButtonDragged(const struct FGeometry& InGeometry, const struct FPointerEvent& InMouseEvent);
+	void UpdateSlotApperance(bool bInIsDragWidget, bool bInIsSpecialSlot, bool bInIsValidSlot, bool bInCanDrag, bool bInIsDragging, bool bInCanDrop, bool bInDropReplace, bool bInIsDragOver);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InventorySlotWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InventorySlotWidget")
+	}
+	static class UInventorySlotWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInventorySlotWidget>();
+	}
+};
+DUMPER7_ASSERTS_UInventorySlotWidget;
 
 // Class BrickRigs.ColorPaletteWidget
 // 0x0050 (0x0460 - 0x0410)
@@ -7960,30 +7930,6 @@ public:
 };
 DUMPER7_ASSERTS_UColorPaletteWidget;
 
-// Class BrickRigs.PumpBrick
-// 0x0038 (0x0128 - 0x00F0)
-class UPumpBrick final : public UBrick
-{
-public:
-	uint8                                         Pad_F0[0x10];                                      // 0x00F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0100(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PumpBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PumpBrick")
-	}
-	static class UPumpBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPumpBrick>();
-	}
-};
-DUMPER7_ASSERTS_UPumpBrick;
-
 // Class BrickRigs.ColorPropertyWidget
 // 0x0000 (0x0418 - 0x0418)
 class UColorPropertyWidget : public UPropertyWidget
@@ -8009,6 +7955,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UColorPropertyWidget;
+
+// Class BrickRigs.ReloadAction
+// 0x0008 (0x00A8 - 0x00A0)
+class UReloadAction : public UItemAction
+{
+public:
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ReloadAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReloadAction")
+	}
+	static class UReloadAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UReloadAction>();
+	}
+};
+DUMPER7_ASSERTS_UReloadAction;
 
 // Class BrickRigs.ColorWheelWidget
 // 0x00C0 (0x04B8 - 0x03F8)
@@ -8038,41 +8007,6 @@ public:
 };
 DUMPER7_ASSERTS_UColorWheelWidget;
 
-// Class BrickRigs.InventoryPopupWidget
-// 0x0058 (0x0488 - 0x0430)
-class UInventoryPopupWidget : public UPopupWidget
-{
-public:
-	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInventorySlotWidget*                   DragWidget;                                        // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_448[0x10];                                     // 0x0448(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvasPanel*                           DragCanvasPanel;                                   // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UInventoryContainerWidget*              OwnInventoryContainerWidget;                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UInventoryContainerWidget*              OtherInventoryContainerWidget;                     // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickButtonWidget*                     DropButton;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UInventorySlotWidget>       SlotWidgetClass;                                   // 0x0478(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UInventoryContainerWidget>  SubInvetoryContainerWidgetClass;                   // 0x0480(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnDropButtonClicked();
-	void UpdateDropArea(bool bInIsDragging, bool bInCanDrop, bool bInIsDragOver);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InventoryPopupWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InventoryPopupWidget")
-	}
-	static class UInventoryPopupWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInventoryPopupWidget>();
-	}
-};
-DUMPER7_ASSERTS_UInventoryPopupWidget;
-
 // Class BrickRigs.CompressorBrickStaticInfo
 // 0x0008 (0x01A8 - 0x01A0)
 class UCompressorBrickStaticInfo : public UBrickStaticInfo
@@ -8097,9 +8031,43 @@ public:
 };
 DUMPER7_ASSERTS_UCompressorBrickStaticInfo;
 
+// Class BrickRigs.InputHelpWidget
+// 0x0020 (0x0418 - 0x03F8)
+class UInputHelpWidget : public UUserWidget
+{
+public:
+	TArray<class UInputCategory*>                 InputCategoryStack;                                // 0x03F8(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_408[0x10];                                     // 0x0408(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddCategoriesAndActions(const TArray<class UInputCategory*>& Categories, const TArray<struct FInputActionInfo>& Actions);
+	void Close();
+	void GoBack();
+	void OpenCategory(class UInputCategory* NewCategory);
+	void UpdateActions(const bool bForceUpdate);
+
+	class UWidget* GetWidgetToFocus() const;
+	bool ShouldCloseIfActionClicked(const struct FInputActionInfo& ActionInfo) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InputHelpWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InputHelpWidget")
+	}
+	static class UInputHelpWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInputHelpWidget>();
+	}
+};
+DUMPER7_ASSERTS_UInputHelpWidget;
+
 // Class BrickRigs.CompressorBrick
 // 0x0000 (0x00F0 - 0x00F0)
-class UCompressorBrick final : public UBrick
+class UCompressorBrick : public UBrick
 {
 public:
 	static class UClass* StaticClass()
@@ -8116,26 +8084,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCompressorBrick;
-
-// Class BrickRigs.RampBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class URampBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RampBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RampBrickStaticInfo")
-	}
-	static class URampBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URampBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_URampBrickStaticInfo;
 
 // Class BrickRigs.ConeBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
@@ -8156,289 +8104,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UConeBrickStaticInfo;
-
-// Class BrickRigs.ConnectorSpacingPropertyWidget
-// 0x0000 (0x0418 - 0x0418)
-class UConnectorSpacingPropertyWidget : public UPropertyWidget
-{
-public:
-	void SetConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing);
-	void UpdateConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing, const uint8 AxisFlags);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ConnectorSpacingPropertyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ConnectorSpacingPropertyWidget")
-	}
-	static class UConnectorSpacingPropertyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UConnectorSpacingPropertyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UConnectorSpacingPropertyWidget;
-
-// Class BrickRigs.InputCategory
-// 0x0030 (0x0078 - 0x0048)
-class UInputCategory final : public UPrimaryDataAsset
-{
-public:
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDisplayInfo                           DisplayInfo;                                       // 0x0050(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InputCategory")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InputCategory")
-	}
-	static class UInputCategory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputCategory>();
-	}
-};
-DUMPER7_ASSERTS_UInputCategory;
-
-// Class BrickRigs.DeathmatchGameMode
-// 0x0000 (0x0530 - 0x0530)
-class ADeathmatchGameMode : public ABrickGameMode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DeathmatchGameMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DeathmatchGameMode")
-	}
-	static class ADeathmatchGameMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ADeathmatchGameMode>();
-	}
-};
-DUMPER7_ASSERTS_ADeathmatchGameMode;
-
-// Class BrickRigs.ConquestGameMode
-// 0x0010 (0x0540 - 0x0530)
-class AConquestGameMode : public ADeathmatchGameMode
-{
-public:
-	uint8                                         Pad_530[0x8];                                      // 0x0530(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         UpdateCapturePointsInterval;                       // 0x0538(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         HoldCapturePointTeamScore;                         // 0x053C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ConquestGameMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ConquestGameMode")
-	}
-	static class AConquestGameMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AConquestGameMode>();
-	}
-};
-DUMPER7_ASSERTS_AConquestGameMode;
-
-// Class BrickRigs.ReloadAction
-// 0x0008 (0x00A8 - 0x00A0)
-class UReloadAction final : public UItemAction
-{
-public:
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ReloadAction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ReloadAction")
-	}
-	static class UReloadAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UReloadAction>();
-	}
-};
-DUMPER7_ASSERTS_UReloadAction;
-
-// Class BrickRigs.ContactModifyInterface
-// 0x0000 (0x0000 - 0x0000)
-class IContactModifyInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ContactModifyInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ContactModifyInterface")
-	}
-	static class IContactModifyInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IContactModifyInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IContactModifyInterface;
-
-// Class BrickRigs.ContextMenuWidget
-// 0x0038 (0x0438 - 0x0400)
-class UContextMenuWidget : public UMenuAnchorWidget
-{
-public:
-	uint8                                         Pad_400[0x30];                                     // 0x0400(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputActionListWidget*                 ActionListWidget;                                  // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnActionTriggered(const class FName& ActionName, bool bReleased);
-	void UpdateTitleText(const class FText& InText);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ContextMenuWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ContextMenuWidget")
-	}
-	static class UContextMenuWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UContextMenuWidget>();
-	}
-};
-DUMPER7_ASSERTS_UContextMenuWidget;
-
-// Class BrickRigs.KickPlayerPopupWidget
-// 0x0010 (0x0440 - 0x0430)
-class UKickPlayerPopupWidget : public UPopupWidget
-{
-public:
-	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void RevokeKick();
-	void UpdateCanConfirmKick(bool bNewCanConfirm);
-	void UpdateCanRevokeKick(bool bCanRevoke);
-	void UpdateIsLoadingKick(bool bNewLoading);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KickPlayerPopupWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KickPlayerPopupWidget")
-	}
-	static class UKickPlayerPopupWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKickPlayerPopupWidget>();
-	}
-};
-DUMPER7_ASSERTS_UKickPlayerPopupWidget;
-
-// Class BrickRigs.ControlHintWidget
-// 0x0100 (0x04F8 - 0x03F8)
-class UControlHintWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x90];                                     // 0x03F8(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScaleBox*                              InputChordScaleBox;                                // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UInputChordWidget*                      InputChordWidget;                                  // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickImage*                            IconImage;                                         // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   ActionName;                                        // 0x04A8(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EInputActionTriggerType                       TriggerType;                                       // 0x04B4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShowUnboundKey;                                   // 0x04B5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShowInputChord;                                   // 0x04B6(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4B7[0x1];                                      // 0x04B7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDisplayInfo                           CustomDisplayInfo;                                 // 0x04B8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, ExposeOnSpawn, NativeAccessSpecifierProtected)
-	EControlHintDisplayInfoMode                   DisplayInfoMode;                                   // 0x04E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickUIColorStyle                            ColorStyle;                                        // 0x04E1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBrickUIStyleState                            StyleState;                                        // 0x04E2(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4E3[0x1];                                      // 0x04E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TextSpacing;                                       // 0x04E4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         HoldProgressInterpSpeed;                           // 0x04E8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector2D                              PressedKeyPadding;                                 // 0x04EC(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         KeyPaddingInterpSpeed;                             // 0x04F4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnInputMethodChanged(EInputMethod NewInputMethod);
-	void SetAction(class FName InActionName, EInputActionTriggerType InTriggerType);
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
-	void SetDisplayInfo(const struct FDisplayInfo& InDisplayInfo);
-	void SetDisplayInfoMode(EControlHintDisplayInfoMode NewMode);
-	void SetInputChordScale(float InScale);
-	void SetShowInputChord(bool bShow);
-	void SetShowUnboundKey(bool bShow);
-	void SetStyleState(EBrickUIStyleState NewState);
-	void SetTextStyle(EBrickUITextStyle NewStyle);
-	void UpdateDisplayInfo(const struct FDisplayInfo& NewDisplayInfo);
-	void UpdateHoldProgress(float InHoldProgress);
-	void UpdateIconVisibility(bool bNewVisible);
-	void UpdateInputChordStyleState(EBrickUIStyleState InStyleState, bool bInIsHoldAction);
-	void UpdateInputChordVisibility(bool bNewVisible);
-	void UpdateIsHoldAction(bool bIsHoldAction);
-	void UpdateTextVisibility(bool bNewVisible);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ControlHintWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ControlHintWidget")
-	}
-	static class UControlHintWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UControlHintWidget>();
-	}
-};
-DUMPER7_ASSERTS_UControlHintWidget;
-
-// Class BrickRigs.CouplingBrickBaseStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UCouplingBrickBaseStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CouplingBrickBaseStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CouplingBrickBaseStaticInfo")
-	}
-	static class UCouplingBrickBaseStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCouplingBrickBaseStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UCouplingBrickBaseStaticInfo;
 
 // Class BrickRigs.ReuploadPopupWidget
 // 0x0030 (0x0460 - 0x0430)
@@ -8469,6 +8134,291 @@ public:
 };
 DUMPER7_ASSERTS_UReuploadPopupWidget;
 
+// Class BrickRigs.ConnectorSpacingPropertyWidget
+// 0x0000 (0x0418 - 0x0418)
+class UConnectorSpacingPropertyWidget : public UPropertyWidget
+{
+public:
+	void SetConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing);
+	void UpdateConnectorSpacing(const struct FScalableBrickConnectorSpacing& NewSpacing, const uint8 AxisFlags);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ConnectorSpacingPropertyWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConnectorSpacingPropertyWidget")
+	}
+	static class UConnectorSpacingPropertyWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UConnectorSpacingPropertyWidget>();
+	}
+};
+DUMPER7_ASSERTS_UConnectorSpacingPropertyWidget;
+
+// Class BrickRigs.DeathmatchGameMode
+// 0x0000 (0x0530 - 0x0530)
+class ADeathmatchGameMode : public ABrickGameMode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DeathmatchGameMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DeathmatchGameMode")
+	}
+	static class ADeathmatchGameMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADeathmatchGameMode>();
+	}
+};
+DUMPER7_ASSERTS_ADeathmatchGameMode;
+
+// Class BrickRigs.LampProp
+// 0x0030 (0x0370 - 0x0340)
+class ALampProp : public AStaticMeshProp
+{
+public:
+	uint8                                         Pad_340[0x4];                                      // 0x0340(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFloatInterval                         PowerTimeRange;                                    // 0x0344(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULightComponent*                        LightComponent;                                    // 0x0350(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         PowerOnTime;                                       // 0x0358(0x0004)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PowerOffTime;                                      // 0x035C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PowerTimeVariation;                                // 0x0360(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class ULightComponent>            LightComponentClass;                               // 0x0368(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LampProp")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LampProp")
+	}
+	static class ALampProp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ALampProp>();
+	}
+};
+DUMPER7_ASSERTS_ALampProp;
+
+// Class BrickRigs.ConquestGameMode
+// 0x0010 (0x0540 - 0x0530)
+class AConquestGameMode : public ADeathmatchGameMode
+{
+public:
+	uint8                                         Pad_530[0x8];                                      // 0x0530(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         UpdateCapturePointsInterval;                       // 0x0538(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         HoldCapturePointTeamScore;                         // 0x053C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ConquestGameMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConquestGameMode")
+	}
+	static class AConquestGameMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AConquestGameMode>();
+	}
+};
+DUMPER7_ASSERTS_AConquestGameMode;
+
+// Class BrickRigs.ContactModifyInterface
+// 0x0000 (0x0000 - 0x0000)
+class IContactModifyInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ContactModifyInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ContactModifyInterface")
+	}
+	static class IContactModifyInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IContactModifyInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IContactModifyInterface;
+
+// Class BrickRigs.RotorBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class URotorBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RotorBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RotorBrickStaticInfo")
+	}
+	static class URotorBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URotorBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_URotorBrickStaticInfo;
+
+// Class BrickRigs.ContextMenuWidget
+// 0x0028 (0x0428 - 0x0400)
+class UContextMenuWidget : public UMenuAnchorWidget
+{
+public:
+	uint8                                         Pad_400[0x28];                                     // 0x0400(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddActions(const TArray<struct FInputActionInfo>& ActionNames);
+	void UpdateTitleText(const class FText& InText);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ContextMenuWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ContextMenuWidget")
+	}
+	static class UContextMenuWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UContextMenuWidget>();
+	}
+};
+DUMPER7_ASSERTS_UContextMenuWidget;
+
+// Class BrickRigs.ControlHintWidget
+// 0x0138 (0x0530 - 0x03F8)
+class UControlHintWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0xB0];                                     // 0x03F8(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScaleBox*                              InputChordScaleBox;                                // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInputChordWidget*                      InputChordWidget;                                  // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickImage*                            IconImage;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   ActionName;                                        // 0x04C8(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EInputActionTriggerType                       TriggerType;                                       // 0x04D4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowUnboundKey;                                   // 0x04D5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowInputChord;                                   // 0x04D6(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFlipHorizontally;                                 // 0x04D7(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FDisplayInfo                           CustomDisplayInfo;                                 // 0x04D8(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, ExposeOnSpawn, NativeAccessSpecifierProtected)
+	EControlHintDisplayInfoMode                   DisplayInfoMode;                                   // 0x0520(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBrickUIColorStyle                            ColorStyle;                                        // 0x0521(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_522[0x2];                                      // 0x0522(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TextSpacing;                                       // 0x0524(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         HoldProgressInterpSpeed;                           // 0x0528(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         KeyPaddingInterpSpeed;                             // 0x052C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void OnInputMethodChanged(EInputMethod NewInputMethod);
+	void SetAction(class FName InActionName, EInputActionTriggerType InTriggerType);
+	void SetActionInfo(const struct FInputActionInfo& ActionInfo);
+	void SetColorStyle(EBrickUIColorStyle NewStyle);
+	void SetDisplayInfo(const struct FDisplayInfo& InDisplayInfo);
+	void SetDisplayInfoMode(EControlHintDisplayInfoMode NewMode);
+	void SetFlipHorizontally(const bool bFlip);
+	void SetInputChordScale(float InScale);
+	void SetShowInputChord(bool bShow);
+	void SetShowUnboundKey(bool bShow);
+	void SetTextStyle(EBrickUITextStyle NewStyle);
+	void UpdateDisplayInfo(const struct FDisplayInfo& NewDisplayInfo);
+	void UpdateFlipHorizontally(bool bInFlipHorizontally);
+	void UpdateHoldProgress(float InHoldProgress);
+	void UpdateIconVisibility(bool bNewVisible);
+	void UpdateInputChordVisibility(bool bNewVisible);
+	void UpdateIsHoldAction(bool bIsHoldAction);
+	void UpdatePressedKeyPadding(const float PaddingRatio);
+	void UpdateTextVisibility(bool bNewVisible);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ControlHintWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlHintWidget")
+	}
+	static class UControlHintWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UControlHintWidget>();
+	}
+};
+DUMPER7_ASSERTS_UControlHintWidget;
+
+// Class BrickRigs.InteractionWidget
+// 0x0028 (0x0420 - 0x03F8)
+class UInteractionWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInteractionOptionWidget*>       OptionWidgets;                                     // 0x0400(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_410[0x8];                                      // 0x0410(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UInteractionOptionWidget>   OptionWidgetClass;                                 // 0x0418(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void AddOptionWidget(class UInteractionOptionWidget* Widget, int32 OptionIndex);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InteractionWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InteractionWidget")
+	}
+	static class UInteractionWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInteractionWidget>();
+	}
+};
+DUMPER7_ASSERTS_UInteractionWidget;
+
+// Class BrickRigs.CouplingBrickBaseStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UCouplingBrickBaseStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CouplingBrickBaseStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CouplingBrickBaseStaticInfo")
+	}
+	static class UCouplingBrickBaseStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCouplingBrickBaseStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UCouplingBrickBaseStaticInfo;
+
 // Class BrickRigs.CouplingBrickStaticInfo
 // 0x0010 (0x01B0 - 0x01A0)
 class UCouplingBrickStaticInfo : public UCouplingBrickBaseStaticInfo
@@ -8493,15 +8443,46 @@ public:
 };
 DUMPER7_ASSERTS_UCouplingBrickStaticInfo;
 
+// Class BrickRigs.MathBrick
+// 0x00E8 (0x0200 - 0x0118)
+class UMathBrick : public UScalableBrick
+{
+public:
+	struct FVehicleInputChannel                   InputChannelA;                                     // 0x0118(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVehicleInputChannel                   InputChannelB;                                     // 0x0138(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVehicleInputChannel                   InputChannelC;                                     // 0x0158(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVehicleInputChannel                   InputChannelD;                                     // 0x0178(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVehicleInputChannel                   InputChannelE;                                     // 0x0198(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FVehicleOutputChannel                  OutputChannel;                                     // 0x01B8(0x0028)(Edit, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E0[0x1C];                                     // 0x01E0(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
+	EMathBrickOperation                           Operation;                                         // 0x01FC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MathBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MathBrick")
+	}
+	static class UMathBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMathBrick>();
+	}
+};
+DUMPER7_ASSERTS_UMathBrick;
+
 // Class BrickRigs.CouplingBrick
-// 0x0040 (0x0130 - 0x00F0)
-class UCouplingBrick final : public UBrick
+// 0x0038 (0x0128 - 0x00F0)
+class UCouplingBrick : public UBrick
 {
 public:
 	uint8                                         Pad_F0[0x10];                                      // 0x00F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0100(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	ECouplingMode                                 CouplingMode;                                      // 0x0128(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0100(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	ECouplingMode                                 CouplingMode;                                      // 0x0120(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Interact_DisengageCoupling(class ABrickPlayerController* PC);
@@ -8522,26 +8503,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCouplingBrick;
-
-// Class BrickRigs.InteractionIconWidget
-// 0x0000 (0x0420 - 0x0420)
-class UInteractionIconWidget : public UHUDIconWidget
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InteractionIconWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InteractionIconWidget")
-	}
-	static class UInteractionIconWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteractionIconWidget>();
-	}
-};
-DUMPER7_ASSERTS_UInteractionIconWidget;
 
 // Class BrickRigs.CrosshairWidget
 // 0x0068 (0x0460 - 0x03F8)
@@ -8587,56 +8548,36 @@ public:
 };
 DUMPER7_ASSERTS_UCrosshairWidget;
 
-// Class BrickRigs.CurrentItemWidget
-// 0x0008 (0x0400 - 0x03F8)
-class UCurrentItemWidget : public UUserWidget
+// Class BrickRigs.LoadoutContainer
+// 0x0050 (0x0390 - 0x0340)
+class ALoadoutContainer : public AStaticMeshProp
 {
 public:
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDIconComponent*                      HUDIconComponent;                                  // 0x0348(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         AnimationLength;                                   // 0x0350(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_354[0x4];                                      // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHUDIconProperties                     IconProperties;                                    // 0x0358(0x0038)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 
 public:
-	void FadeIn();
-	void FadeOut(bool bImmediate);
-	void UpdateAmmo(int32 Current, int32 Capacity, int32 Ammo);
-	void UpdateAmmoType(EAmmoType NewType);
-	void UpdateFireMode(const EFireMode NewMode, const bool bHasFirearm);
-	void UpdateItemName(const class FText& NewName);
+	void Interact_Inventory(class ABrickPlayerController* PC);
+	void UpdateAnimation(float InAnimRatio);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CurrentItemWidget")
+		STATIC_CLASS_IMPL("LoadoutContainer")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CurrentItemWidget")
+		STATIC_NAME_IMPL(L"LoadoutContainer")
 	}
-	static class UCurrentItemWidget* GetDefaultObj()
+	static class ALoadoutContainer* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCurrentItemWidget>();
+		return GetDefaultObjImpl<ALoadoutContainer>();
 	}
 };
-DUMPER7_ASSERTS_UCurrentItemWidget;
-
-// Class BrickRigs.MathBrickStaticInfo
-// 0x0000 (0x01E0 - 0x01E0)
-class UMathBrickStaticInfo : public UScalableBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MathBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MathBrickStaticInfo")
-	}
-	static class UMathBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMathBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UMathBrickStaticInfo;
+DUMPER7_ASSERTS_ALoadoutContainer;
 
 // Class BrickRigs.CylinderBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
@@ -8658,29 +8599,9 @@ public:
 };
 DUMPER7_ASSERTS_UCylinderBrickStaticInfo;
 
-// Class BrickRigs.Zombie
-// 0x0000 (0x08B0 - 0x08B0)
-class AZombie : public ABaseCharacter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Zombie")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Zombie")
-	}
-	static class AZombie* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AZombie>();
-	}
-};
-DUMPER7_ASSERTS_AZombie;
-
 // Class BrickRigs.DamageType_BuildingCollapse
 // 0x0000 (0x0048 - 0x0048)
-class UDamageType_BuildingCollapse final : public UDamageType
+class UDamageType_BuildingCollapse : public UDamageType
 {
 public:
 	static class UClass* StaticClass()
@@ -8698,65 +8619,37 @@ public:
 };
 DUMPER7_ASSERTS_UDamageType_BuildingCollapse;
 
-// Class BrickRigs.MainWidgetBase
-// 0x0018 (0x0410 - 0x03F8)
-class UMainWidgetBase : public UUserWidget
+// Class BrickRigs.MenuGameMode
+// 0x00A0 (0x0440 - 0x03A0)
+class AMenuGameMode : public AGameModeBase
 {
 public:
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFadingPanelWidget*                     FadingPanel;                                       // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMenuButtonPanelWidget*                 ButtonPanel;                                       // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnFadedOut();
-
-	class UMenuButtonPanelWidget* GetButtonPanel() const;
-	class UWidget* GetWidgetToFocus() const;
-	class UWindowManagerWidget* GetWindowManager() const;
+	uint8                                         Pad_3A0[0x10];                                     // 0x03A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 MenuSequenceClass;                                 // 0x03B0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AMenuSequence*                          MenuSequence;                                      // 0x03B8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3C0[0x38];                                     // 0x03C0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   MenuSequenceOverride;                              // 0x03F8(0x0030)(Edit, EditorOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_428[0x18];                                     // 0x0428(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MainWidgetBase")
+		STATIC_CLASS_IMPL("MenuGameMode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MainWidgetBase")
+		STATIC_NAME_IMPL(L"MenuGameMode")
 	}
-	static class UMainWidgetBase* GetDefaultObj()
+	static class AMenuGameMode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMainWidgetBase>();
+		return GetDefaultObjImpl<AMenuGameMode>();
 	}
 };
-DUMPER7_ASSERTS_UMainWidgetBase;
-
-// Class BrickRigs.LoadingScreenWidget
-// 0x0000 (0x0410 - 0x0410)
-class ULoadingScreenWidget : public UMainWidgetBase
-{
-public:
-	void SetBackgroundColor(const struct FLinearColor& InColor);
-	void SetLoadingText(const class FText& Text);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LoadingScreenWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LoadingScreenWidget")
-	}
-	static class ULoadingScreenWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULoadingScreenWidget>();
-	}
-};
-DUMPER7_ASSERTS_ULoadingScreenWidget;
+DUMPER7_ASSERTS_AMenuGameMode;
 
 // Class BrickRigs.DamageType_Collision
 // 0x0000 (0x0048 - 0x0048)
-class UDamageType_Collision final : public UDamageType
+class UDamageType_Collision : public UDamageType
 {
 public:
 	static class UClass* StaticClass()
@@ -8798,39 +8691,6 @@ public:
 };
 DUMPER7_ASSERTS_UDamageType_Explosion;
 
-// Class BrickRigs.MenuButtonWidget
-// 0x0030 (0x0440 - 0x0410)
-class UMenuButtonWidget : public UBrickUserWidget
-{
-public:
-	class UBrickButtonWidget*                     Button;                                            // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        TextBlock;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickImage*                            IconImage;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_428[0x18];                                     // 0x0428(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnClicked();
-	void SetColorStyle(EBrickUIColorStyle InColorStyle);
-	void SetDisplayIcon(int32 InIconIndex);
-	void SetDisplayText(const class FText& InText);
-	void UpdateDisplayText(const class FText& InText);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MenuButtonWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MenuButtonWidget")
-	}
-	static class UMenuButtonWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMenuButtonWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMenuButtonWidget;
-
 // Class BrickRigs.DamageType_Fire
 // 0x0000 (0x0048 - 0x0048)
 class UDamageType_Fire : public UDamageType
@@ -8853,7 +8713,7 @@ DUMPER7_ASSERTS_UDamageType_Fire;
 
 // Class BrickRigs.DamageType_ForceKill
 // 0x0000 (0x0048 - 0x0048)
-class UDamageType_ForceKill final : public UDamageType
+class UDamageType_ForceKill : public UDamageType
 {
 public:
 	static class UClass* StaticClass()
@@ -8871,9 +8731,84 @@ public:
 };
 DUMPER7_ASSERTS_UDamageType_ForceKill;
 
+// Class BrickRigs.MainWidgetBase
+// 0x0018 (0x0410 - 0x03F8)
+class UMainWidgetBase : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFadingPanelWidget*                     FadingPanel;                                       // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMenuButtonPanelWidget*                 ButtonPanel;                                       // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void OnFadedOut();
+
+	class UMenuButtonPanelWidget* GetButtonPanel() const;
+	class UWidget* GetWidgetToFocus() const;
+	class UWindowManagerWidget* GetWindowManager() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MainWidgetBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MainWidgetBase")
+	}
+	static class UMainWidgetBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMainWidgetBase>();
+	}
+};
+DUMPER7_ASSERTS_UMainWidgetBase;
+
+// Class BrickRigs.MenuWidget
+// 0x0090 (0x04A0 - 0x0410)
+class UMenuWidget : public UMainWidgetBase
+{
+public:
+	uint8                                         Pad_410[0x20];                                     // 0x0410(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuPageWidget*                        CurrentMenuPage;                                   // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMenuButtonPanelWidget*                 MenuSequenceButtonPanel;                           // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   JoinSessionPopupClass;                             // 0x0440(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   NetworkErrorPopupClass;                            // 0x0470(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void AddMenuPage(class UMenuPageWidget* Widget);
+	void CloseMenu();
+	void CreateBackButton();
+	void OnClickedBack();
+	void OnClickedQuickGame();
+	void OnMenuContextChanged(const class FName& NewContext);
+	void OpenMenu(class FName InMenu);
+	void PlayMenuTransition();
+	void RemoveMenuPage(class UMenuPageWidget* Widget);
+	void SetTitleText(const class FText& InText);
+	void ShowMenuPage(TSoftClassPtr<class UClass> WidgetClass, const class FText& TitleText);
+	bool StepBack();
+
+	bool IsMainMenu() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MenuWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MenuWidget")
+	}
+	static class UMenuWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMenuWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMenuWidget;
+
 // Class BrickRigs.DamageType_Melee
 // 0x0000 (0x0048 - 0x0048)
-class UDamageType_Melee final : public UDamageType
+class UDamageType_Melee : public UDamageType
 {
 public:
 	static class UClass* StaticClass()
@@ -8891,109 +8826,30 @@ public:
 };
 DUMPER7_ASSERTS_UDamageType_Melee;
 
-// Class BrickRigs.DashboardIconWidget
-// 0x0010 (0x0408 - 0x03F8)
-class UDashboardIconWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateIconImage(bool bInVisible, EBrickUIColorStyle InColorStyle, int32 InIconIndex);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DashboardIconWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DashboardIconWidget")
-	}
-	static class UDashboardIconWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDashboardIconWidget>();
-	}
-};
-DUMPER7_ASSERTS_UDashboardIconWidget;
-
-// Class BrickRigs.MenuSequence
-// 0x0030 (0x0328 - 0x02F8)
-class AMenuSequence : public AActor
-{
-public:
-	uint8                                         Pad_2F8[0x10];                                     // 0x02F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMenuSequenceProperties                MenuSequenceProperties;                            // 0x0308(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void OnDefaultVehiclesQueried(const TArray<struct FUGCFileInfo>& FileInfos);
-	void QueryDefaultVehicles();
-
-	bool IsMenuSequenceReady() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MenuSequence")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MenuSequence")
-	}
-	static class AMenuSequence* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AMenuSequence>();
-	}
-};
-DUMPER7_ASSERTS_AMenuSequence;
-
-// Class BrickRigs.DashboardSliderWidget
-// 0x0010 (0x0408 - 0x03F8)
-class UDashboardSliderWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickSliderWidget*                     Slider;                                            // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void UpdateColorStyle(EBrickUIColorStyle NewStyle);
-	void UpdateIcon(int32 IconIndex);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DashboardSliderWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DashboardSliderWidget")
-	}
-	static class UDashboardSliderWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDashboardSliderWidget>();
-	}
-};
-DUMPER7_ASSERTS_UDashboardSliderWidget;
-
 // Class BrickRigs.DashboardWidget
-// 0x0058 (0x0450 - 0x03F8)
+// 0x0028 (0x0420 - 0x03F8)
 class UDashboardWidget : public UUserWidget
 {
 public:
-	class ABrickVehicle*                          Vehicle;                                           // 0x03F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_400[0x10];                                     // 0x0400(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UDashboardIconWidget*>           IconWidgets;                                       // 0x0410(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class UDashboardSliderWidget*>         SliderWidgets;                                     // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UDashboardIconWidget>       IconWidgetClass;                                   // 0x0438(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UDashboardSliderWidget>     SliderWidgetClass;                                 // 0x0440(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         LowResourceWarningThreshold;                       // 0x0448(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ABrickVehicle*                          Vehicle;                                           // 0x03F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class USeatBrick>              VehicleSeat;                                       // 0x0400(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class ABaseCharacter>          Character;                                         // 0x0408(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class AInventoryItem>          CurrentItem;                                       // 0x0410(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsInputHelpOpen;                                  // 0x0418(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void AddIconWidget(class UDashboardIconWidget* Widget, int32 Index_0);
-	void AddSliderWidget(class UDashboardSliderWidget* Widget);
-	void UpdateSliderWidgetSlot(class UDashboardSliderWidget* Widget, int32 Index_0, int32 NumSliders);
+	void OnInputHelpOpenChanged(const bool bNewOpen);
+	void PopulateDashboard();
+	void PostUpdateDashboard();
+	void PreUpdateDashboard();
+	void UpdateAmmo();
+	void UpdateDashboard();
+
+	void GetAmmoParams(int32* OutMagazine, int32* OutCapacity, int32* OutInventory) const;
+	class AFirearm* GetFirearm() const;
+	class UFirearmComponent* GetFirearmComponent() const;
+	class UInventoryComponent* GetItemInventory() const;
 
 public:
 	static class UClass* StaticClass()
@@ -9011,36 +8867,32 @@ public:
 };
 DUMPER7_ASSERTS_UDashboardWidget;
 
-// Class BrickRigs.MatchStateWidget
-// 0x0020 (0x0418 - 0x03F8)
-class UMatchStateWidget : public UUserWidget
+// Class BrickRigs.MatchTimerWidget
+// 0x0000 (0x03F8 - 0x03F8)
+class UMatchTimerWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnFadedOut();
-	void UpdateMatchState(const class FText& NewDisplayText, EBrickUIColorStyle NewColorStyle, bool bFadeOut);
+	void UpdateTimer(int32 NewTime);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MatchStateWidget")
+		STATIC_CLASS_IMPL("MatchTimerWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MatchStateWidget")
+		STATIC_NAME_IMPL(L"MatchTimerWidget")
 	}
-	static class UMatchStateWidget* GetDefaultObj()
+	static class UMatchTimerWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMatchStateWidget>();
+		return GetDefaultObjImpl<UMatchTimerWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMatchStateWidget;
+DUMPER7_ASSERTS_UMatchTimerWidget;
 
 // Class BrickRigs.DestructibleInstanceTemplate
 // 0x0038 (0x0070 - 0x0038)
-class UDestructibleInstanceTemplate final : public UDataAsset
+class UDestructibleInstanceTemplate : public UDataAsset
 {
 public:
 	class UStaticMesh*                            Mesh;                                              // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9073,7 +8925,7 @@ DUMPER7_ASSERTS_UDestructibleInstanceTemplate;
 
 // Class BrickRigs.DestructibleInstancesComponent
 // 0x0150 (0x0380 - 0x0230)
-class UDestructibleInstancesComponent final : public USceneComponent
+class UDestructibleInstancesComponent : public USceneComponent
 {
 public:
 	TArray<struct FDestructibleInstanceArray>     InstanceArrays;                                    // 0x0228(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
@@ -9105,74 +8957,37 @@ public:
 };
 DUMPER7_ASSERTS_UDestructibleInstancesComponent;
 
-// Class BrickRigs.FuelConsumerBrickStaticInfo
-// 0x0018 (0x01B8 - 0x01A0)
-class UFuelConsumerBrickStaticInfo : public UBrickStaticInfo
+// Class BrickRigs.MotorBrick
+// 0x00B8 (0x01B0 - 0x00F8)
+class UMotorBrick : public UFuelConsumerBrick
 {
 public:
-	struct FFuelTankParams                        FuelTankParams;                                    // 0x01A0(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         FuelConsumption;                                   // 0x01B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UAxleBrick*>                     ConnectedAxles;                                    // 0x00F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_108[0x50];                                     // 0x0108(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   ThrottleInputChannel;                              // 0x0158(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         GearRatioScale;                                    // 0x0178(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTankDrive;                                        // 0x017C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17D[0x33];                                     // 0x017D(0x0033)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("FuelConsumerBrickStaticInfo")
+		STATIC_CLASS_IMPL("MotorBrick")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"FuelConsumerBrickStaticInfo")
+		STATIC_NAME_IMPL(L"MotorBrick")
 	}
-	static class UFuelConsumerBrickStaticInfo* GetDefaultObj()
+	static class UMotorBrick* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFuelConsumerBrickStaticInfo>();
+		return GetDefaultObjImpl<UMotorBrick>();
 	}
 };
-DUMPER7_ASSERTS_UFuelConsumerBrickStaticInfo;
-
-// Class BrickRigs.MotorBrickStaticInfo
-// 0x0060 (0x0218 - 0x01B8)
-class UMotorBrickStaticInfo : public UFuelConsumerBrickStaticInfo
-{
-public:
-	class USoundCue*                              MotorSoundCue;                                     // 0x01B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             StartupSound;                                      // 0x01C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             BrakeReleaseSound;                                 // 0x01C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundBase*                             BackFireSound;                                     // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartupTime;                                       // 0x01D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Acceleration;                                      // 0x01DC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         RPMRange;                                          // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ClutchRPMRange;                                    // 0x01E8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ShiftUpRPMRange;                                   // 0x01F0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ShiftDownRPMRange;                                 // 0x01F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BackfireRPM;                                       // 0x0200(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShiftDelay;                                        // 0x0204(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinAutoShiftDelay;                                 // 0x0208(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         NumForwardGears;                                   // 0x020C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         NumReverseGears;                                   // 0x020D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20E[0x2];                                      // 0x020E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LastGearSpeed;                                     // 0x0210(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MotorBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MotorBrickStaticInfo")
-	}
-	static class UMotorBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMotorBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UMotorBrickStaticInfo;
+DUMPER7_ASSERTS_UMotorBrick;
 
 // Class BrickRigs.DestructibleISMComponent
 // 0x0020 (0x0710 - 0x06F0)
-class UDestructibleISMComponent final : public UInstancedStaticMeshComponent
+class UDestructibleISMComponent : public UInstancedStaticMeshComponent
 {
 public:
 	uint8                                         Pad_6F0[0x20];                                     // 0x06F0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -9195,7 +9010,7 @@ DUMPER7_ASSERTS_UDestructibleISMComponent;
 
 // Class BrickRigs.DestructibleHierarchicalISMComponent
 // 0x0020 (0x0800 - 0x07E0)
-class UDestructibleHierarchicalISMComponent final : public UHierarchicalInstancedStaticMeshComponent
+class UDestructibleHierarchicalISMComponent : public UHierarchicalInstancedStaticMeshComponent
 {
 public:
 	uint8                                         Pad_7D8[0x28];                                     // 0x07D8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -9216,42 +9031,37 @@ public:
 };
 DUMPER7_ASSERTS_UDestructibleHierarchicalISMComponent;
 
-// Class BrickRigs.LegacyBuilding
-// 0x0050 (0x0400 - 0x03B0)
-class ALegacyBuilding : public ABrickBuilding
+// Class BrickRigs.LevelInfo
+// 0x0098 (0x00E0 - 0x0048)
+class ULevelInfo : public UPrimaryDataAsset
 {
 public:
-	uint8                                         Pad_3B0[0x10];                                     // 0x03B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDestructibleInstancesComponent*        DestructibleInstancesComponent;                    // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FBuildingMesh>                  BuildingMeshes;                                    // 0x03C8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FBuildingMaterialOverride>      MaterialOverrides;                                 // 0x03D8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	int32                                         NumWallsX;                                         // 0x03E8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumWallsY;                                         // 0x03EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumFloors;                                         // 0x03F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3F4[0xC];                                      // 0x03F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UBuildingPart* ConstructBuildingPart(int32 NumX, int32 NumY, int32 Floors, const struct FVector& Location);
-	void ConstructFlatRoof(class UBuildingPart* Part, uint8 Mesh);
-	void ConstructIndustrialRoof(class UBuildingPart* Part, uint8 RoofSlopeMesh, uint8 RoofMesh, uint8 WallMesh);
-	void ConstructRoof(class UBuildingPart* Part, uint8 RoofGableMesh, uint8 RoofMesh, bool bRotate);
-	void SpawnBuildingPart(class UBuildingPart* Part);
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        Level;                                             // 0x0050(0x0020)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x20];                                      // 0x0070(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayName;                                       // 0x0090(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              DisplayIcon;                                       // 0x00A8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SortPriority;                                      // 0x00D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsesWorldComposition;                             // 0x00DC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNoWeather;                                        // 0x00DD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasAITrains;                                      // 0x00DE(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DF[0x1];                                       // 0x00DF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LegacyBuilding")
+		STATIC_CLASS_IMPL("LevelInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LegacyBuilding")
+		STATIC_NAME_IMPL(L"LevelInfo")
 	}
-	static class ALegacyBuilding* GetDefaultObj()
+	static class ULevelInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ALegacyBuilding>();
+		return GetDefaultObjImpl<ULevelInfo>();
 	}
 };
-DUMPER7_ASSERTS_ALegacyBuilding;
+DUMPER7_ASSERTS_ULevelInfo;
 
 // Class BrickRigs.DestructibleISMComponentInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -9284,7 +9094,7 @@ DUMPER7_ASSERTS_IDestructibleISMComponentInterface;
 
 // Class BrickRigs.DamageType_Detonator
 // 0x0000 (0x0048 - 0x0048)
-class UDamageType_Detonator final : public UDamageType_Fire
+class UDamageType_Detonator : public UDamageType_Fire
 {
 public:
 	static class UClass* StaticClass()
@@ -9302,28 +9112,33 @@ public:
 };
 DUMPER7_ASSERTS_UDamageType_Detonator;
 
-// Class BrickRigs.MenuMusic
-// 0x0030 (0x0078 - 0x0048)
-class UMenuMusic final : public UPrimaryDataAsset
+// Class BrickRigs.MenuPlayerController
+// 0x0038 (0x0750 - 0x0718)
+class AMenuPlayerController : public ABasePlayerController
 {
 public:
-	TSoftObjectPtr<class USoundWave>              Sound;                                             // 0x0048(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AMenuSequence*                          MenuSequence;                                      // 0x0718(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector                                CameraLocation;                                    // 0x0720(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRotator                               CameraRotation;                                    // 0x072C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	float                                         CameraFOV;                                         // 0x0738(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FViewTargetTransitionParams            ViewTargetTransitionParams;                        // 0x073C(0x0010)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_74C[0x4];                                      // 0x074C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MenuMusic")
+		STATIC_CLASS_IMPL("MenuPlayerController")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MenuMusic")
+		STATIC_NAME_IMPL(L"MenuPlayerController")
 	}
-	static class UMenuMusic* GetDefaultObj()
+	static class AMenuPlayerController* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMenuMusic>();
+		return GetDefaultObjImpl<AMenuPlayerController>();
 	}
 };
-DUMPER7_ASSERTS_UMenuMusic;
+DUMPER7_ASSERTS_AMenuPlayerController;
 
 // Class BrickRigs.DetonatorBrickStaticInfo
 // 0x0018 (0x01F8 - 0x01E0)
@@ -9378,12 +9193,12 @@ public:
 DUMPER7_ASSERTS_UImageBrickStaticInfo;
 
 // Class BrickRigs.DetonatorBrick
-// 0x0040 (0x0158 - 0x0118)
-class UDetonatorBrick final : public UScalableBrick
+// 0x0038 (0x0150 - 0x0118)
+class UDetonatorBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x18];                                     // 0x0118(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0130(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0130(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 
 public:
 	void Interact_Detonate(class ABrickPlayerController* PC);
@@ -9404,28 +9219,80 @@ public:
 };
 DUMPER7_ASSERTS_UDetonatorBrick;
 
-// Class BrickRigs.MapPopupWidget
-// 0x0008 (0x0438 - 0x0430)
-class UMapPopupWidget : public UPopupWidget
+// Class BrickRigs.HUDIconCanvasWidget
+// 0x0018 (0x04A8 - 0x0490)
+class UHUDIconCanvasWidget : public UHUDIconPanelWidget
 {
 public:
-	class UMapWidget*                             MapWidget;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInteractionWidget*                     InteractionWidget;                                 // 0x0490(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FFloatInterval                         IconScaleRange;                                    // 0x04A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MapPopupWidget")
+		STATIC_CLASS_IMPL("HUDIconCanvasWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MapPopupWidget")
+		STATIC_NAME_IMPL(L"HUDIconCanvasWidget")
 	}
-	static class UMapPopupWidget* GetDefaultObj()
+	static class UHUDIconCanvasWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMapPopupWidget>();
+		return GetDefaultObjImpl<UHUDIconCanvasWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMapPopupWidget;
+DUMPER7_ASSERTS_UHUDIconCanvasWidget;
+
+// Class BrickRigs.MapWidget
+// 0x0178 (0x0620 - 0x04A8)
+class UMapWidget : public UHUDIconCanvasWidget
+{
+public:
+	uint8                                         Pad_4A8[0xC8];                                     // 0x04A8(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDIconComponent*                      CursorIconComponent;                               // 0x0570(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_578[0x10];                                     // 0x0578(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               MapMID;                                            // 0x0588(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_590[0x10];                                     // 0x0590(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMenuButtonPanelWidget*                 ButtonPanel;                                       // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        ScaleTextBlock;                                    // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MinViewportSize;                                   // 0x05B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PanSpeed;                                          // 0x05B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ZoomSpeed;                                         // 0x05B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ZoomStep;                                          // 0x05BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ViewportInterpSpeed;                               // 0x05C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MapResolutionScale;                                // 0x05C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MapRenderInterval;                                 // 0x05C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MapMovedRenderDelay;                               // 0x05CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         GridSize;                                          // 0x05D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FFloatInterval                         ViewportSizeIconScaleRange;                        // 0x05D4(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHUDIconProperties                     CursorIconProperties;                              // 0x05E0(0x0038)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TSubclassOf<class UMapCrosshairWidget>        CrosshairWidgetClass;                              // 0x0618(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void OnMeasurementSystemChanged(EMeasurementSystem NewSystem);
+	void ResetPanAndZoom(bool bInitialize);
+	void UpdateViewportPannedOrZoomed(bool bValue);
+
+	class UMaterialInstanceDynamic* CreateMapMID() const;
+	class UWidget* GetWidgetToFocus() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MapWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MapWidget")
+	}
+	static class UMapWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMapWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMapWidget;
 
 // Class BrickRigs.DisplayBrickStaticInfo
 // 0x0000 (0x01E0 - 0x01E0)
@@ -9448,15 +9315,15 @@ public:
 DUMPER7_ASSERTS_UDisplayBrickStaticInfo;
 
 // Class BrickRigs.DisplayBrick
-// 0x0038 (0x0150 - 0x0118)
-class UDisplayBrick final : public UScalableBrick
+// 0x0030 (0x0148 - 0x0118)
+class UDisplayBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0120(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FColor                                 DisplayColor;                                      // 0x0148(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         NumFractionalDigits;                               // 0x014C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0120(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FColor                                 DisplayColor;                                      // 0x0140(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         NumFractionalDigits;                               // 0x0144(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_145[0x3];                                      // 0x0145(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -9474,48 +9341,36 @@ public:
 };
 DUMPER7_ASSERTS_UDisplayBrick;
 
-// Class BrickRigs.InputActionListWidget
-// 0x0108 (0x0500 - 0x03F8)
-class UInputActionListWidget : public UUserWidget
+// Class BrickRigs.InputCategory
+// 0x0060 (0x00A8 - 0x0048)
+class UInputCategory : public UPrimaryDataAsset
 {
 public:
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputActionCategoryWidget*>     CategoryWidgets;                                   // 0x0400(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class UInputActionWidget*>             ActionWidgets;                                     // 0x0410(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_420[0x70];                                     // 0x0420(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickGridPanel*                        MainGridPanel;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UInputActionCategoryWidget> CategoryWidgetClass;                               // 0x0498(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UInputActionWidget>         ActionWidgetClass;                                 // 0x04A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   BindKeyPopupClass;                                 // 0x04A8(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UInputCategory*>                 InputCategories;                                   // 0x04D8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	EInputActionListMode                          InputActionListMode;                               // 0x04E8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         QuickAccessDisplayTime;                            // 0x04EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(const class FName& ActionName, bool bReleased)> OnActionTriggeredDelegate; // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputCategory*                         ParentCategory;                                    // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDisplayInfo                           DisplayInfo;                                       // 0x0058(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bShowInInputHelp;                                  // 0x00A0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SortPriority;                                      // 0x00A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	void AddActionWidget(class UInputActionWidget* Widget, int32 ActionIndex);
-	void AddCategoryWidget(class UInputActionCategoryWidget* Widget, int32 CategoryIndex);
-	void FadeIn();
-	void UpdateInputActionListMode(EInputActionListMode NewMode);
-
-	class UWidget* GetWidgetToFocus() const;
+	class FText GetDisplayName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InputActionListWidget")
+		STATIC_CLASS_IMPL("InputCategory")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InputActionListWidget")
+		STATIC_NAME_IMPL(L"InputCategory")
 	}
-	static class UInputActionListWidget* GetDefaultObj()
+	static class UInputCategory* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInputActionListWidget>();
+		return GetDefaultObjImpl<UInputCategory>();
 	}
 };
-DUMPER7_ASSERTS_UInputActionListWidget;
+DUMPER7_ASSERTS_UInputCategory;
 
 // Class BrickRigs.DoorBrickStaticInfo
 // 0x0000 (0x01A0 - 0x01A0)
@@ -9585,99 +9440,68 @@ public:
 };
 DUMPER7_ASSERTS_ADragStrip;
 
-// Class BrickRigs.MudguardBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UMudguardBrickStaticInfo : public UBrickStaticInfo
+// Class BrickRigs.NetworkErrorPopupParams
+// 0x0000 (0x0078 - 0x0078)
+class UNetworkErrorPopupParams : public UPopupParams
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MudguardBrickStaticInfo")
+		STATIC_CLASS_IMPL("NetworkErrorPopupParams")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MudguardBrickStaticInfo")
+		STATIC_NAME_IMPL(L"NetworkErrorPopupParams")
 	}
-	static class UMudguardBrickStaticInfo* GetDefaultObj()
+	static class UNetworkErrorPopupParams* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMudguardBrickStaticInfo>();
+		return GetDefaultObjImpl<UNetworkErrorPopupParams>();
 	}
 };
-DUMPER7_ASSERTS_UMudguardBrickStaticInfo;
+DUMPER7_ASSERTS_UNetworkErrorPopupParams;
 
 // Class BrickRigs.VehicleInputComponent
-// 0x00A0 (0x02C0 - 0x0220)
+// 0x0060 (0x0278 - 0x0218)
 class UVehicleInputComponent : public UPlayerPawnInputComponent
 {
 public:
-	uint8                                         Pad_220[0x40];                                     // 0x0220(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	class USeatBrick*                             VehicleSeat;                                       // 0x0260(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_268[0x58];                                     // 0x0268(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class USeatBrick*                             VehicleSeat;                                       // 0x0218(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_220[0x58];                                     // 0x0220(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void Brake(float Val);
-	void OnHeldCycleCamera();
-	void OnHeldCycleFireActionMode();
-	void OnHeldCycleSeats();
-	void OnHeldCycleSiren();
-	void OnHeldPinVehicle();
-	void OnHeldToggleSteering();
-	void OnPressedAction1();
-	void OnPressedAction2();
-	void OnPressedAction3();
-	void OnPressedAction4();
-	void OnPressedAction5();
-	void OnPressedAction6();
-	void OnPressedAction7();
-	void OnPressedAction8();
-	void OnPressedBeacon();
-	void OnPressedCaptureVehicleThumbnail();
-	void OnPressedCycleCamera();
-	void OnPressedCycleCameraMode();
-	void OnPressedCycleFireActionMode();
-	void OnPressedCycleSeats();
-	void OnPressedCycleSiren();
-	void OnPressedExitVehicle();
-	void OnPressedHandBrake();
-	void OnPressedHeadlight();
-	void OnPressedHorn();
-	void OnPressedOperationMode();
-	void OnPressedPinVehicle();
-	void OnPressedShiftDown();
-	void OnPressedShiftUp();
-	void OnPressedToggleSteering();
-	void OnPressedWarningLight();
-	void OnReleasedAction1();
-	void OnReleasedAction2();
-	void OnReleasedAction3();
-	void OnReleasedAction4();
-	void OnReleasedAction5();
-	void OnReleasedAction6();
-	void OnReleasedAction7();
-	void OnReleasedAction8();
-	void OnReleasedCycleCamera();
-	void OnReleasedCycleFireActionMode();
-	void OnReleasedCycleSeats();
-	void OnReleasedCycleSiren();
-	void OnReleasedHandBrake();
-	void OnReleasedHorn();
-	void OnReleasedOperationMode();
-	void OnReleasedPinVehicle();
-	void OnReleasedToggleSteering();
-	void OnTappedCycleCamera();
-	void OnTappedCycleFireActionMode();
-	void OnTappedCycleSeats();
-	void OnTappedCycleSiren();
-	void OnTappedPinVehicle();
-	void OnTappedToggleSteering();
-	void OnToggleOperationMode();
-	void Pitch(float Val);
-	void Steering(float Val);
-	void Throttle(float Val);
-	void ViewPitch(float Val);
-	void ViewYaw(float Val);
-
-	class FText GetCycleCameraModeValueText() const;
+	struct FBrActionResult Action_Action1(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action2(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action3(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action4(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action5(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action6(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action7(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Action8(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Beacon(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CaptureVehicleThumbnail(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleCameraMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleFireActionMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleSeats(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_CycleSiren(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ExitVehicle(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_HandBrake(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Headlight(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_Horn(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_MoveCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_OperationMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PinVehicle(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PivotCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ShiftDown(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ShiftUp(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ToggleSteering(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_WarningLight(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_Brake(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_Pitch(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_Steering(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_Throttle(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_ViewPitch(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_ViewYaw(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -9696,18 +9520,15 @@ public:
 DUMPER7_ASSERTS_UVehicleInputComponent;
 
 // Class BrickRigs.DriverInputComponent
-// 0x0008 (0x02C8 - 0x02C0)
-class UDriverInputComponent final : public UVehicleInputComponent
+// 0x0008 (0x0280 - 0x0278)
+class UDriverInputComponent : public UVehicleInputComponent
 {
 public:
-	uint8                                         Pad_2C0[0x8];                                      // 0x02C0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnPressedCycleTransmissionMode();
-	void OnPressedToggleAutoCounterSteering();
-
-	class FText GetCycleTransmissionModeValueText() const;
-	class FText GetToggleAutoCounterSteeringValueText() const;
+	struct FBrActionResult Action_CycleTransmissionMode(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_ToggleAutoCounterSteering(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -9725,45 +9546,78 @@ public:
 };
 DUMPER7_ASSERTS_UDriverInputComponent;
 
-// Class BrickRigs.InputHelpWidget
-// 0x0018 (0x0410 - 0x03F8)
-class UInputHelpWidget : public UUserWidget
+// Class BrickRigs.InputMappingKeyWidget
+// 0x0060 (0x0458 - 0x03F8)
+class UInputMappingKeyWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputActionListWidget*                 ActionListWidget;                                  // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3F8[0x40];                                     // 0x03F8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickButtonWidget*                     Button;                                            // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInputChordWidget*                      InputChordWidget;                                  // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_448[0x10];                                     // 0x0448(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class UGameOverlayWidget* GetGameOverlay() const;
-	class UWidget* GetWidgetToFocus() const;
+	void OnClickedButton();
+	void UpdateConflictedState(bool bNewConflicted);
+	void UpdateIsHoldAction(bool bNewHold);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InputHelpWidget")
+		STATIC_CLASS_IMPL("InputMappingKeyWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InputHelpWidget")
+		STATIC_NAME_IMPL(L"InputMappingKeyWidget")
 	}
-	static class UInputHelpWidget* GetDefaultObj()
+	static class UInputMappingKeyWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInputHelpWidget>();
+		return GetDefaultObjImpl<UInputMappingKeyWidget>();
 	}
 };
-DUMPER7_ASSERTS_UInputHelpWidget;
+DUMPER7_ASSERTS_UInputMappingKeyWidget;
 
-// Class BrickRigs.EditorInputComponent
-// 0x0010 (0x01A0 - 0x0190)
-class UEditorInputComponent final : public UBaseEditorInputComponent
+// Class BrickRigs.EditorDashboardWidget
+// 0x0018 (0x0410 - 0x03F8)
+class UEditorDashboardWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_190[0x10];                                     // 0x0190(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class ABrickEditor>            BrickEditor;                                       // 0x03F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class UEditorInputComponent>   EditorInputComponent;                              // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class UBrickEditorMode>        CurrentEditorMode;                                 // 0x0408(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void MoveForward(float Val);
-	void MoveRight(float Val);
-	void MoveUp(float Val);
+	void InitializeDashboard();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EditorDashboardWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditorDashboardWidget")
+	}
+	static class UEditorDashboardWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEditorDashboardWidget>();
+	}
+};
+DUMPER7_ASSERTS_UEditorDashboardWidget;
+
+// Class BrickRigs.EditorInputComponent
+// 0x0010 (0x0220 - 0x0210)
+class UEditorInputComponent : public UBaseEditorInputComponent
+{
+public:
+	uint8                                         Pad_210[0x10];                                     // 0x0210(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FBrActionResult Action_MoveCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PivotCamera(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MoveForward(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MoveRight(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Axis_MoveUp(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -9780,6 +9634,42 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UEditorInputComponent;
+
+// Class BrickRigs.MenuButtonPanelWidget
+// 0x0030 (0x0428 - 0x03F8)
+class UMenuButtonPanelWidget : public UUserWidget
+{
+public:
+	TArray<class UMenuButtonWidget*>              Buttons;                                           // 0x03F8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickGridPanel*                        ButtonPanel;                                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UMenuButtonWidget>          ButtonClass;                                       // 0x0418(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumButtonsPerRow;                                  // 0x0420(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ClearButtons(bool bManualRemove);
+	class UMenuButtonWidget* CreateButton(const class FText& DisplayText, TSoftObjectPtr<class UTexture2D> IconTexture, const TDelegate<void()>& Delegate);
+	void RemoveUnusedButtons();
+	void SetNumButtonsPerRow(int32 NewNum);
+
+	class UWidget* GetWidgetToFocus() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MenuButtonPanelWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MenuButtonPanelWidget")
+	}
+	static class UMenuButtonPanelWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMenuButtonPanelWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMenuButtonPanelWidget;
 
 // Class BrickRigs.Elevator
 // 0x0088 (0x0380 - 0x02F8)
@@ -9826,32 +9716,6 @@ public:
 };
 DUMPER7_ASSERTS_AElevator;
 
-// Class BrickRigs.MeleeAction
-// 0x0010 (0x00A0 - 0x0090)
-class UMeleeAction : public UCharacterAction
-{
-public:
-	float                                         ApplyDamageTime;                                   // 0x0090(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamageSweepDistance;                               // 0x0094(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamageSweepRadius;                                 // 0x0098(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeleeDamage;                                       // 0x009C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MeleeAction")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MeleeAction")
-	}
-	static class UMeleeAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeleeAction>();
-	}
-};
-DUMPER7_ASSERTS_UMeleeAction;
-
 // Class BrickRigs.EnumPropertyWidget
 // 0x0018 (0x0430 - 0x0418)
 class UEnumPropertyWidget : public UPropertyWidget
@@ -9880,9 +9744,38 @@ public:
 };
 DUMPER7_ASSERTS_UEnumPropertyWidget;
 
+// Class BrickRigs.PlayersMenuWidget
+// 0x0008 (0x0410 - 0x0408)
+class UPlayersMenuWidget : public UMenuPageWidget
+{
+public:
+	class UScoreboardWidget*                      Scoreboard;                                        // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void KickPlayer();
+	void ShowPlayerProfile();
+	void UpdateCanKickPlayer(bool bCanKick);
+	void UpdateCanShowPlayerProfile(bool bCanShow);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayersMenuWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayersMenuWidget")
+	}
+	static class UPlayersMenuWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayersMenuWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPlayersMenuWidget;
+
 // Class BrickRigs.EquipAction
 // 0x0000 (0x00A0 - 0x00A0)
-class UEquipAction final : public UItemAction
+class UEquipAction : public UItemAction
 {
 public:
 	static class UClass* StaticClass()
@@ -9899,58 +9792,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UEquipAction;
-
-// Class BrickRigs.PawnIconWidget
-// 0x0010 (0x0430 - 0x0420)
-class UPawnIconWidget : public UHUDIconWidget
-{
-public:
-	class APawn*                                  OwningPawn;                                        // 0x0420(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PawnIconWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PawnIconWidget")
-	}
-	static class UPawnIconWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPawnIconWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPawnIconWidget;
-
-// Class BrickRigs.PlayerIconWidget
-// 0x0018 (0x0448 - 0x0430)
-class UPlayerIconWidget : public UPawnIconWidget
-{
-public:
-	class ABaseCharacter*                         Character;                                         // 0x0430(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABrickPlayerState*                      CharacterPlayerState;                              // 0x0438(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_440[0x8];                                      // 0x0440(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdatePlayerIcon(bool bNewIsLocalPlayer, bool bNewIsTeamLeader, ECharacterStateOfHealth NewStateOfHealth, bool bNewCanBeDamaged);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlayerIconWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlayerIconWidget")
-	}
-	static class UPlayerIconWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayerIconWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPlayerIconWidget;
 
 // Class BrickRigs.ExhaustBrickStaticInfo
 // 0x0008 (0x01E8 - 0x01E0)
@@ -9975,20 +9816,49 @@ public:
 };
 DUMPER7_ASSERTS_UExhaustBrickStaticInfo;
 
+// Class BrickRigs.PaintAttachment
+// 0x0040 (0x0388 - 0x0348)
+class APaintAttachment : public AAttachment
+{
+public:
+	class FText                                   PaintDisplayName;                                  // 0x0348(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x0360(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Metallic;                                          // 0x0370(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Roughness;                                         // 0x0374(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Texture;                                           // 0x0378(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Tiling;                                            // 0x0380(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PaintAttachment")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PaintAttachment")
+	}
+	static class APaintAttachment* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<APaintAttachment>();
+	}
+};
+DUMPER7_ASSERTS_APaintAttachment;
+
 // Class BrickRigs.ExhaustBrick
-// 0x0078 (0x0190 - 0x0118)
-class UExhaustBrick final : public UScalableBrick
+// 0x0070 (0x0188 - 0x0118)
+class UExhaustBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMotorBrick*                            ConnectedMotor;                                    // 0x0120(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_128[0x28];                                     // 0x0128(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0150(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
-	float                                         SizeScale;                                         // 0x0178(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         SpawnScale;                                        // 0x017C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FColor                                 SmokeColor;                                        // 0x0180(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UExhaustEffect*                         ExhaustEffect;                                     // 0x0188(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0150(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
+	float                                         SizeScale;                                         // 0x0170(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         SpawnScale;                                        // 0x0174(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FColor                                 SmokeColor;                                        // 0x0178(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UExhaustEffect*                         ExhaustEffect;                                     // 0x0180(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -10006,44 +9876,9 @@ public:
 };
 DUMPER7_ASSERTS_UExhaustBrick;
 
-// Class BrickRigs.PageSelectorWidget
-// 0x0020 (0x0418 - 0x03F8)
-class UPageSelectorWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x4];                                      // 0x03F8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumPages;                                          // 0x03FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickSliderWidget*                     Slider;                                            // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(int32 Page)>    OnPageChangedDelegate;                             // 0x0408(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	void GotoNextPage(bool bForward, bool bSkipToEnd);
-	void InitializePages(int32 InNumPages, int32 InCurrentPage, int32 InNumResults);
-	void OnSliderValueChanged(float NewValue, EValueChangedEventType EventType);
-	void SetCurrentPage(int32 NewPage);
-	void UpdateButtons(bool bCanGoBack, bool bCanGoForward);
-
-	int32 GetCurrentPage() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PageSelectorWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PageSelectorWidget")
-	}
-	static class UPageSelectorWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPageSelectorWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPageSelectorWidget;
-
 // Class BrickRigs.ExhaustEffect
 // 0x0030 (0x0078 - 0x0048)
-class UExhaustEffect final : public UPrimaryDataAsset
+class UExhaustEffect : public UPrimaryDataAsset
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -10066,6 +9901,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UExhaustEffect;
+
+// Class BrickRigs.ProjectileImpactInterface
+// 0x0000 (0x0000 - 0x0000)
+class IProjectileImpactInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ProjectileImpactInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ProjectileImpactInterface")
+	}
+	static class IProjectileImpactInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IProjectileImpactInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IProjectileImpactInterface;
 
 // Class BrickRigs.Explosion
 // 0x0050 (0x0348 - 0x02F8)
@@ -10100,56 +9964,17 @@ public:
 };
 DUMPER7_ASSERTS_AExplosion;
 
-// Class BrickRigs.PopupContainerWidget
-// 0x0030 (0x0440 - 0x0410)
-class UPopupContainerWidget : public UMainWidgetBase
-{
-public:
-	uint8                                         Pad_410[0x18];                                     // 0x0410(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPopupParams*                           PopupParams;                                       // 0x0428(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPopupWidget*                           PopupWidget;                                       // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddPopupWidget(class UPopupWidget* Widget);
-	void CancelPopup();
-	void ConfirmPopup();
-	class UMenuButtonWidget* CreateCancelButton();
-	class UMenuButtonWidget* CreateConfirmButton();
-	void SetButtonPanelVisibility(bool bNewVisible);
-	void SetColorStyle(EBrickUIColorStyle InColorStyle);
-	void UpdateButtonPanelVisibility(bool bNewVisible);
-	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
-	void UpdateContentSlot(bool bShowContent, EPopupSizeRule SizeRule);
-	void UpdateTitleText(const class FText& NewTitle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PopupContainerWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PopupContainerWidget")
-	}
-	static class UPopupContainerWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPopupContainerWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPopupContainerWidget;
-
 // Class BrickRigs.ExplosiveItemStaticInfo
-// 0x0100 (0x04C0 - 0x03C0)
+// 0x0100 (0x04D0 - 0x03D0)
 class UExplosiveItemStaticInfo : public UItemStaticInfo
 {
 public:
-	TSubclassOf<class UExplosiveMaterial>         ExplosiveMaterial;                                 // 0x03C0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExplosiveVolume;                                   // 0x03C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinExplosionDamage;                                // 0x03CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanBeDefused;                                     // 0x03D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FThrowAnimation                        ThrowAnimation;                                    // 0x03D8(0x00E8)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TSubclassOf<class UExplosiveMaterial>         ExplosiveMaterial;                                 // 0x03D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExplosiveVolume;                                   // 0x03D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinExplosionDamage;                                // 0x03DC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanBeDefused;                                     // 0x03E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FThrowAnimation                        ThrowAnimation;                                    // 0x03E8(0x00E8)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -10166,6 +9991,44 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UExplosiveItemStaticInfo;
+
+// Class BrickRigs.ServerBrowserWidget
+// 0x0038 (0x0440 - 0x0408)
+class UServerBrowserWidget : public UMenuPageWidget
+{
+public:
+	uint8                                         Pad_408[0x18];                                     // 0x0408(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPagedListWidget*                       PagedList;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ESearchSessionType                            SearchSessionType;                                 // 0x0428(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EServerSortMethod                             ServerSortMethod;                                  // 0x0429(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bSearchPrivateServers;                             // 0x042A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bSearchServersWithDifferentMods;                   // 0x042B(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ServerSearchText;                                  // 0x0430(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void JoinServer();
+	void OnListEntrySelected(class UPagedListEntryWidget* Widget, bool bDoubleClick);
+	void OnLoadListPage(int32 NewPage);
+	void RefreshServers();
+	void UpdateCanJoin(bool bCanJoin);
+	void UpdateCanRefresh(bool bCanRefresh);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ServerBrowserWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ServerBrowserWidget")
+	}
+	static class UServerBrowserWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UServerBrowserWidget>();
+	}
+};
+DUMPER7_ASSERTS_UServerBrowserWidget;
 
 // Class BrickRigs.ExplosiveItem
 // 0x0008 (0x0350 - 0x0348)
@@ -10235,9 +10098,47 @@ public:
 };
 DUMPER7_ASSERTS_UExplosiveMaterial;
 
+// Class BrickRigs.PropertiesPanelWidget
+// 0x0078 (0x0470 - 0x03F8)
+class UPropertiesPanelWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPropertyCategoryWidget*>        PropertyCategoryWidgets;                           // 0x0410(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TArray<class UPropertyContainerWidget*>       PropertyContainerWidgets;                          // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_430[0x28];                                     // 0x0430(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UPropertyCategoryWidget>    CategoryWidgetClass;                               // 0x0458(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UPropertyContainerWidget>   ContainerWidgetClass;                              // 0x0460(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumPropertiesPerRow;                               // 0x0468(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EOrientation                                  Orientation;                                       // 0x046C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddCategoryWidget(class UPropertyCategoryWidget* Widget, int32 Index_0);
+	void AddProperties(class UObject* ActiveObject, const struct FBrickPropertyReflectionFilter& InFilter);
+	void AddPropertiesForSelection(class UObject* ActiveObject, const TArray<class UObject*>& SelectedObjects, const struct FBrickPropertyReflectionFilter& InFilter);
+	void ClearProperties();
+	void UpdateProperties();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropertiesPanelWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertiesPanelWidget")
+	}
+	static class UPropertiesPanelWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropertiesPanelWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPropertiesPanelWidget;
+
 // Class BrickRigs.ExtinguishAction
 // 0x0000 (0x00A0 - 0x00A0)
-class UExtinguishAction final : public UItemAction
+class UExtinguishAction : public UItemAction
 {
 public:
 	static class UClass* StaticClass()
@@ -10254,30 +10155,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UExtinguishAction;
-
-// Class BrickRigs.PropellerBrickStaticInfo
-// 0x0008 (0x01A8 - 0x01A0)
-class UPropellerBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	float                                         PropellerRadius;                                   // 0x01A0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Thrust;                                            // 0x01A4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PropellerBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PropellerBrickStaticInfo")
-	}
-	static class UPropellerBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropellerBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UPropellerBrickStaticInfo;
 
 // Class BrickRigs.FadingPanelWidget
 // 0x0028 (0x0420 - 0x03F8)
@@ -10317,9 +10194,61 @@ public:
 };
 DUMPER7_ASSERTS_UFadingPanelWidget;
 
+// Class BrickRigs.PawnIconWidget
+// 0x0010 (0x0430 - 0x0420)
+class UPawnIconWidget : public UHUDIconWidget
+{
+public:
+	class APawn*                                  OwningPawn;                                        // 0x0420(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PawnIconWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PawnIconWidget")
+	}
+	static class UPawnIconWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPawnIconWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPawnIconWidget;
+
+// Class BrickRigs.PlayerIconWidget
+// 0x0018 (0x0448 - 0x0430)
+class UPlayerIconWidget : public UPawnIconWidget
+{
+public:
+	class ABaseCharacter*                         Character;                                         // 0x0430(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABrickPlayerState*                      CharacterPlayerState;                              // 0x0438(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_440[0x8];                                      // 0x0440(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdatePlayerIcon(bool bNewIsLocalPlayer, bool bNewIsTeamLeader, ECharacterStateOfHealth NewStateOfHealth, bool bNewCanBeDamaged);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayerIconWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayerIconWidget")
+	}
+	static class UPlayerIconWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayerIconWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPlayerIconWidget;
+
 // Class BrickRigs.FenceElement
 // 0x0040 (0x0078 - 0x0038)
-class UFenceElement final : public UDataAsset
+class UFenceElement : public UDataAsset
 {
 public:
 	class UDestructibleInstanceTemplate*          Template;                                          // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -10348,40 +10277,9 @@ public:
 };
 DUMPER7_ASSERTS_UFenceElement;
 
-// Class BrickRigs.PlacableObjectWidget
-// 0x0038 (0x0448 - 0x0410)
-class UPlacableObjectWidget : public UBrickUserWidget
-{
-public:
-	uint8                                         Pad_410[0x20];                                     // 0x0410(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickButtonWidget*                     Button;                                            // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickImage*                            ThumbnailImage;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnButtonClicked();
-	void OpenContextMenu();
-	void UpdateIsFilterWidget(bool bNewIsFilter);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlacableObjectWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlacableObjectWidget")
-	}
-	static class UPlacableObjectWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlacableObjectWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPlacableObjectWidget;
-
 // Class BrickRigs.FenceManager
 // 0x0008 (0x0300 - 0x02F8)
-class AFenceManager final : public AActor
+class AFenceManager : public AActor
 {
 public:
 	class UDestructibleInstancesComponent*        InstancesComponent;                                // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -10402,9 +10300,42 @@ public:
 };
 DUMPER7_ASSERTS_AFenceManager;
 
+// Class BrickRigs.PropertyListInterface
+// 0x0000 (0x0000 - 0x0000)
+class IPropertyListInterface final
+{
+public:
+	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget);
+	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropertyListInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyListInterface")
+	}
+	static class IPropertyListInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IPropertyListInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IPropertyListInterface;
+
 // Class BrickRigs.Fence
 // 0x0018 (0x0310 - 0x02F8)
-class AFence final : public AActor
+class AFence : public AActor
 {
 public:
 	class USplineComponent*                       SplineComponent;                                   // 0x02F8(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -10427,40 +10358,6 @@ public:
 };
 DUMPER7_ASSERTS_AFence;
 
-// Class BrickRigs.PropertyContainerInputComponent
-// 0x0010 (0x0190 - 0x0180)
-class UPropertyContainerInputComponent final : public UBaseInputComponent
-{
-public:
-	uint8                                         Pad_180[0x10];                                     // 0x0180(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnPressedCopyValue();
-	void OnPressedPasteValue();
-	void OnPressedPickValue();
-	void OnPressedSelectByValue();
-
-	bool GetCopyValueEnabled() const;
-	bool GetPasteValueEnabled() const;
-	bool GetPickValueEnabled() const;
-	bool GetSelectByValueEnabled() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PropertyContainerInputComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PropertyContainerInputComponent")
-	}
-	static class UPropertyContainerInputComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropertyContainerInputComponent>();
-	}
-};
-DUMPER7_ASSERTS_UPropertyContainerInputComponent;
-
 // Class BrickRigs.Firearm
 // 0x0040 (0x0388 - 0x0348)
 class AFirearm : public AInventoryItem
@@ -10473,7 +10370,7 @@ public:
 
 public:
 	void CockIfNeeded();
-	void CycleAmmoType();
+	bool CycleAmmoType(const bool bIsTest);
 	void EjectShell(bool bFromManualReload);
 	void ReloadIfNeeded(bool bCheckFiringAndAiming);
 	void ResetFirearm();
@@ -10484,8 +10381,10 @@ public:
 
 	bool CanCock() const;
 	bool CanReload() const;
+	EAmmoType GetAmmoType() const;
 	class ABarrelAttachment* GetBarrel() const;
 	EChamberState GetChamberState() const;
+	EAmmoType GetDesiredAmmoType() const;
 	EFireMode GetFireMode() const;
 	int32 GetMagazine() const;
 	int32 GetMagazineCapacity() const;
@@ -10513,6 +10412,37 @@ public:
 };
 DUMPER7_ASSERTS_AFirearm;
 
+// Class BrickRigs.PagedListHeaderWidget
+// 0x0060 (0x0458 - 0x03F8)
+class UPagedListHeaderWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x60];                                     // 0x03F8(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnMeasurementSystemChanged(EMeasurementSystem NewSystem);
+	void UpdateDimensions(const struct FVector& InDimensions, const struct FVector& InMaxDimensions);
+	void UpdateEntry(const class FText& InTitleText, bool bInHasEntry, bool bInHasUnsavedChanges);
+	void UpdateMass(float InMass, float InMaxMass);
+	void UpdateNumObjects(int32 InNumObjects, int32 InMaxNumObjects, int32 InNumHiddenObjects, int32 InNumObjectsWithAerodynamics);
+	void UpdatePrice(float InPrice, float InMoney);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PagedListHeaderWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PagedListHeaderWidget")
+	}
+	static class UPagedListHeaderWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPagedListHeaderWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPagedListHeaderWidget;
+
 // Class BrickRigs.ItemAnimInstance
 // 0x0000 (0x0300 - 0x0300)
 class UItemAnimInstance : public UAnimInstance
@@ -10533,42 +10463,9 @@ public:
 };
 DUMPER7_ASSERTS_UItemAnimInstance;
 
-// Class BrickRigs.NumericPropertyWidget
-// 0x0030 (0x0448 - 0x0418)
-class UNumericPropertyWidget : public UPropertyWidget
-{
-public:
-	TArray<class UBrickSliderWidget*>             Sliders;                                           // 0x0418(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_428[0x18];                                     // 0x0428(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UBrickSliderWidget>         SliderClass;                                       // 0x0440(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void AddSliderWidget(class UBrickSliderWidget* Slider);
-	void LockAxes(const bool bLock);
-	void OnSliderValueChanged(const float NewValue, const EValueChangedEventType EventType, const int32 Index_0);
-	void UpdateNumericProperty(const ENumericValueType ValueType, const int32 NumAxes);
-
-	bool AreAxesLocked() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NumericPropertyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NumericPropertyWidget")
-	}
-	static class UNumericPropertyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNumericPropertyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UNumericPropertyWidget;
-
 // Class BrickRigs.FirearmAnimInstance
 // 0x0000 (0x0300 - 0x0300)
-class UFirearmAnimInstance final : public UItemAnimInstance
+class UFirearmAnimInstance : public UItemAnimInstance
 {
 public:
 	static class UClass* StaticClass()
@@ -10586,9 +10483,33 @@ public:
 };
 DUMPER7_ASSERTS_UFirearmAnimInstance;
 
+// Class BrickRigs.TimespanPropertyWidget
+// 0x0000 (0x0418 - 0x0418)
+class UTimespanPropertyWidget : public UPropertyWidget
+{
+public:
+	void SetTimespanPropertyValue(EValueChangedEventType EventType, const struct FTimespan& NewValue);
+	void UpdateTimespanProperty(const bool bInit, const struct FTimespan& Timespan, const struct FTimespan& MinValue, const struct FTimespan& MaxValue, const bool bAllowInfinite);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TimespanPropertyWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TimespanPropertyWidget")
+	}
+	static class UTimespanPropertyWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTimespanPropertyWidget>();
+	}
+};
+DUMPER7_ASSERTS_UTimespanPropertyWidget;
+
 // Class BrickRigs.FirearmComponent
 // 0x0250 (0x0310 - 0x00C0)
-class UFirearmComponent final : public UActorComponent
+class UFirearmComponent : public UActorComponent
 {
 public:
 	uint8                                         Pad_C0[0x28];                                      // 0x00C0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
@@ -10619,38 +10540,9 @@ public:
 };
 DUMPER7_ASSERTS_UFirearmComponent;
 
-// Class BrickRigs.TextBrick
-// 0x0038 (0x0150 - 0x0118)
-class UTextBrick final : public UScalableBrick
-{
-public:
-	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Text;                                              // 0x0128(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickFont*                             Font;                                              // 0x0138(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         FontSize;                                          // 0x0140(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FColor                                 TextColor;                                         // 0x0144(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         OutlineThickness;                                  // 0x0148(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TextBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TextBrick")
-	}
-	static class UTextBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTextBrick>();
-	}
-};
-DUMPER7_ASSERTS_UTextBrick;
-
 // Class BrickRigs.FirearmInventoryComponent
 // 0x0000 (0x02B0 - 0x02B0)
-class UFirearmInventoryComponent final : public UInventoryComponent
+class UFirearmInventoryComponent : public UInventoryComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -10668,47 +10560,71 @@ public:
 };
 DUMPER7_ASSERTS_UFirearmInventoryComponent;
 
+// Class BrickRigs.PropellerBrickStaticInfo
+// 0x0008 (0x01A8 - 0x01A0)
+class UPropellerBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	float                                         PropellerRadius;                                   // 0x01A0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Thrust;                                            // 0x01A4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropellerBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropellerBrickStaticInfo")
+	}
+	static class UPropellerBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropellerBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UPropellerBrickStaticInfo;
+
 // Class BrickRigs.FirearmStaticInfo
-// 0x0500 (0x08C0 - 0x03C0)
+// 0x0500 (0x08D0 - 0x03D0)
 class UFirearmStaticInfo : public UItemStaticInfo
 {
 public:
-	uint8                                         Pad_3C0[0x8];                                      // 0x03C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFirearmProperties                     FirearmProperties;                                 // 0x03C8(0x00A8)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class FName                                   BulletsBoneName;                                   // 0x0470(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanAimWhileCocking;                               // 0x047C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_47D[0x3];                                      // 0x047D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatInterval                         HorizontalRecoilRange;                             // 0x0480(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         VerticalRecoilRange;                               // 0x0488(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RecoilOffsetDeviation;                             // 0x0490(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RecoilRotationDeviation;                           // 0x049C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         RecoilDuration;                                    // 0x04A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCameraShakeBase>           FiringCameraShake;                                 // 0x04B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CameraShakeScale;                                  // 0x04B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bSightRailRearBlocked : 1;                         // 0x04BC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSightRailFrontBlocked : 1;                        // 0x04BC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4BD[0x3];                                      // 0x04BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SightRailLength;                                   // 0x04C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  AttachmentTags;                                    // 0x04C8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              AttachmentAddedSound;                              // 0x04E8(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PaintLayerIndex;                                   // 0x0518(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51C[0x4];                                      // 0x051C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UParticleSystem>         ShellEmitter;                                      // 0x0520(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ShellScale;                                        // 0x0550(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ShellEjectionVelocity;                             // 0x055C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ShellEjectionAngularVelocity;                      // 0x0568(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ManualShellEjectionSpeed;                          // 0x0574(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShellEjectionSpeedDeviation;                       // 0x0578(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_57C[0x4];                                      // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             SwitchFireModeSound;                               // 0x0580(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFireAnimation                         FireAnimation;                                     // 0x0588(0x0118)(Edit, NativeAccessSpecifierPublic)
-	struct FReloadAnimation                       ReloadAnimation;                                   // 0x06A0(0x00E8)(Edit, NativeAccessSpecifierPublic)
-	struct FCockAnimation                         CockAnimation;                                     // 0x0788(0x00E8)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FItemRefPoseOverride>           SightPoseOverrides;                                // 0x0870(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FTransform                             HammerCockedTransform;                             // 0x0880(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FItemRefPoseOverride>           BoltLockedPoseOverrides;                           // 0x08B0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D0[0x8];                                      // 0x03D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFirearmProperties                     FirearmProperties;                                 // 0x03D8(0x00A8)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FName                                   BulletsBoneName;                                   // 0x0480(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanAimWhileCocking;                               // 0x048C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFloatInterval                         HorizontalRecoilRange;                             // 0x0490(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         VerticalRecoilRange;                               // 0x0498(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RecoilOffsetDeviation;                             // 0x04A0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RecoilRotationDeviation;                           // 0x04AC(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         RecoilDuration;                                    // 0x04B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4BC[0x4];                                      // 0x04BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCameraShakeBase>           FiringCameraShake;                                 // 0x04C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CameraShakeScale;                                  // 0x04C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bSightRailRearBlocked : 1;                         // 0x04CC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSightRailFrontBlocked : 1;                        // 0x04CC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_4CD[0x3];                                      // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SightRailLength;                                   // 0x04D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  AttachmentTags;                                    // 0x04D8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundBase>              AttachmentAddedSound;                              // 0x04F8(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaintLayerIndex;                                   // 0x0528(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52C[0x4];                                      // 0x052C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UParticleSystem>         ShellEmitter;                                      // 0x0530(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ShellScale;                                        // 0x0560(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ShellEjectionVelocity;                             // 0x056C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ShellEjectionAngularVelocity;                      // 0x0578(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ManualShellEjectionSpeed;                          // 0x0584(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShellEjectionSpeedDeviation;                       // 0x0588(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58C[0x4];                                      // 0x058C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             SwitchFireModeSound;                               // 0x0590(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFireAnimation                         FireAnimation;                                     // 0x0598(0x0118)(Edit, NativeAccessSpecifierPublic)
+	struct FReloadAnimation                       ReloadAnimation;                                   // 0x06B0(0x00E8)(Edit, NativeAccessSpecifierPublic)
+	struct FCockAnimation                         CockAnimation;                                     // 0x0798(0x00E8)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FItemRefPoseOverride>           SightPoseOverrides;                                // 0x0880(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FTransform                             HammerCockedTransform;                             // 0x0890(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FItemRefPoseOverride>           BoltLockedPoseOverrides;                           // 0x08C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -10726,44 +10642,15 @@ public:
 };
 DUMPER7_ASSERTS_UFirearmStaticInfo;
 
-// Class BrickRigs.ProjectileImpactInterface
-// 0x0000 (0x0000 - 0x0000)
-class IProjectileImpactInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ProjectileImpactInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ProjectileImpactInterface")
-	}
-	static class IProjectileImpactInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IProjectileImpactInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IProjectileImpactInterface;
-
 // Class BrickRigs.FireExtinguisherStaticInfo
-// 0x0170 (0x0530 - 0x03C0)
+// 0x0170 (0x0540 - 0x03D0)
 class UFireExtinguisherStaticInfo : public UItemStaticInfo
 {
 public:
-	struct FFireExtinguisherProperties            ExtinguisherProperties;                            // 0x03C0(0x0078)(Edit, NativeAccessSpecifierPublic)
-	float                                         ExtinguishStartDistance;                           // 0x0438(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FExtinguishAnimation                   ExtinguishAnimation;                               // 0x0440(0x00F0)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FFireExtinguisherProperties            ExtinguisherProperties;                            // 0x03D0(0x0078)(Edit, NativeAccessSpecifierPublic)
+	float                                         ExtinguishStartDistance;                           // 0x0448(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FExtinguishAnimation                   ExtinguishAnimation;                               // 0x0450(0x00F0)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -10780,6 +10667,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFireExtinguisherStaticInfo;
+
+// Class BrickRigs.TrainWheelBrick
+// 0x0000 (0x0110 - 0x0110)
+class UTrainWheelBrick : public UWheelBrick
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TrainWheelBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TrainWheelBrick")
+	}
+	static class UTrainWheelBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTrainWheelBrick>();
+	}
+};
+DUMPER7_ASSERTS_UTrainWheelBrick;
 
 // Class BrickRigs.FireExtinguisher
 // 0x0008 (0x0350 - 0x0348)
@@ -10804,33 +10711,9 @@ public:
 };
 DUMPER7_ASSERTS_AFireExtinguisher;
 
-// Class BrickRigs.TimespanPropertyWidget
-// 0x0000 (0x0418 - 0x0418)
-class UTimespanPropertyWidget : public UPropertyWidget
-{
-public:
-	void SetTimespanPropertyValue(EValueChangedEventType EventType, const struct FTimespan& NewValue);
-	void UpdateTimespanProperty(const struct FTimespan& Timespan, const struct FTimespan& MinValue, const struct FTimespan& MaxValue, bool bAllowInfinite);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TimespanPropertyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TimespanPropertyWidget")
-	}
-	static class UTimespanPropertyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTimespanPropertyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UTimespanPropertyWidget;
-
 // Class BrickRigs.FireExtinguisherComponent
 // 0x00D0 (0x0190 - 0x00C0)
-class UFireExtinguisherComponent final : public UActorComponent
+class UFireExtinguisherComponent : public UActorComponent
 {
 public:
 	uint8                                         Pad_C0[0x98];                                      // 0x00C0(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
@@ -10853,6 +10736,42 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFireExtinguisherComponent;
+
+// Class BrickRigs.PingIndicatorWidget
+// 0x0020 (0x0418 - 0x03F8)
+class UPingIndicatorWidget : public UUserWidget
+{
+public:
+	class ABrickPlayerState*                      PlayerState;                                       // 0x03F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_400[0x8];                                      // 0x0400(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickTextBlock*                        PingTextBlock;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         MinDisplayPing;                                    // 0x0410(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bDisplayFrameRate;                                 // 0x0414(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_415[0x3];                                      // 0x0415(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetColorStyle(EBrickUIColorStyle NewStyle);
+	void SetMinDisplayPing(int32 InPing);
+	void SetPing(int32 InPing);
+	void SetPlayerState(class ABrickPlayerState* InPlayerState);
+	void SetTextStyle(EBrickUITextStyle NewStyle);
+	void UpdatePing(int32 InPing);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PingIndicatorWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PingIndicatorWidget")
+	}
+	static class UPingIndicatorWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPingIndicatorWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPingIndicatorWidget;
 
 // Class BrickRigs.FireInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -10906,15 +10825,38 @@ public:
 };
 DUMPER7_ASSERTS_AFirstAidKit;
 
+// Class BrickRigs.UGCBrowserPopupParams
+// 0x0040 (0x00B8 - 0x0078)
+class UUGCBrowserPopupParams : public UPopupParams
+{
+public:
+	uint8                                         Pad_78[0x40];                                      // 0x0078(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UGCBrowserPopupParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UGCBrowserPopupParams")
+	}
+	static class UUGCBrowserPopupParams* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUGCBrowserPopupParams>();
+	}
+};
+DUMPER7_ASSERTS_UUGCBrowserPopupParams;
+
 // Class BrickRigs.FirstAidKitStaticInfo
-// 0x0010 (0x03D0 - 0x03C0)
+// 0x0010 (0x03E0 - 0x03D0)
 class UFirstAidKitStaticInfo : public UItemStaticInfo
 {
 public:
-	int32                                         NumBandages;                                       // 0x03C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HealthPerBandage;                                  // 0x03C4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HealDelay;                                         // 0x03C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HealTime;                                          // 0x03CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumBandages;                                       // 0x03D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HealthPerBandage;                                  // 0x03D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HealDelay;                                         // 0x03D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HealTime;                                          // 0x03DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -10932,25 +10874,54 @@ public:
 };
 DUMPER7_ASSERTS_UFirstAidKitStaticInfo;
 
-// Class BrickRigs.TrainWheelBrick
-// 0x0000 (0x0110 - 0x0110)
-class UTrainWheelBrick final : public UWheelBrick
+// Class BrickRigs.FuelConsumerBrickStaticInfo
+// 0x0018 (0x01B8 - 0x01A0)
+class UFuelConsumerBrickStaticInfo : public UBrickStaticInfo
 {
+public:
+	struct FFuelTankParams                        FuelTankParams;                                    // 0x01A0(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         FuelConsumption;                                   // 0x01B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("TrainWheelBrick")
+		STATIC_CLASS_IMPL("FuelConsumerBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"TrainWheelBrick")
+		STATIC_NAME_IMPL(L"FuelConsumerBrickStaticInfo")
 	}
-	static class UTrainWheelBrick* GetDefaultObj()
+	static class UFuelConsumerBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UTrainWheelBrick>();
+		return GetDefaultObjImpl<UFuelConsumerBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UTrainWheelBrick;
+DUMPER7_ASSERTS_UFuelConsumerBrickStaticInfo;
+
+// Class BrickRigs.PumpBrick
+// 0x0030 (0x0120 - 0x00F0)
+class UPumpBrick : public UBrick
+{
+public:
+	uint8                                         Pad_F0[0x10];                                      // 0x00F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0100(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PumpBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PumpBrick")
+	}
+	static class UPumpBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPumpBrick>();
+	}
+};
+DUMPER7_ASSERTS_UPumpBrick;
 
 // Class BrickRigs.FlamethrowerBrickStaticInfo
 // 0x0020 (0x01D8 - 0x01B8)
@@ -10980,47 +10951,42 @@ public:
 };
 DUMPER7_ASSERTS_UFlamethrowerBrickStaticInfo;
 
-// Class BrickRigs.PropertyListInterface
-// 0x0000 (0x0000 - 0x0000)
-class IPropertyListInterface final
+// Class BrickRigs.UGCMetaDataPopupParams
+// 0x0108 (0x0180 - 0x0078)
+class UUGCMetaDataPopupParams : public UPopupParams
 {
 public:
-	void AddPropertyContainerWidget(class UPropertyContainerWidget* Widget);
-	void UpdatePropertyContainerWidgetSlot(class UPropertyContainerWidget* Widget, int32 Index_0, int32 NumPerRow);
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUpdateTitle;                                      // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUpdateDescription;                                // 0x0081(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUpdateThumbnail;                                  // 0x0082(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUGCFileInfo                           FileInfo;                                          // 0x0088(0x00E8)(Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_170[0x10];                                     // 0x0170(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PropertyListInterface")
+		STATIC_CLASS_IMPL("UGCMetaDataPopupParams")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PropertyListInterface")
+		STATIC_NAME_IMPL(L"UGCMetaDataPopupParams")
 	}
-	static class IPropertyListInterface* GetDefaultObj()
+	static class UUGCMetaDataPopupParams* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IPropertyListInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<UUGCMetaDataPopupParams>();
 	}
 };
-DUMPER7_ASSERTS_IPropertyListInterface;
+DUMPER7_ASSERTS_UUGCMetaDataPopupParams;
 
 // Class BrickRigs.FlamethrowerBrick
-// 0x0098 (0x0190 - 0x00F8)
-class alignas(0x10) UFlamethrowerBrick final : public UFuelConsumerBrick
+// 0x0088 (0x0180 - 0x00F8)
+class alignas(0x10) UFlamethrowerBrick : public UFuelConsumerBrick
 {
 public:
 	uint8                                         Pad_F8[0x68];                                      // 0x00F8(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0160(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0160(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -11037,29 +11003,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFlamethrowerBrick;
-
-// Class BrickRigs.UGCBrowserPopupParams
-// 0x0040 (0x00B8 - 0x0078)
-class UUGCBrowserPopupParams final : public UPopupParams
-{
-public:
-	uint8                                         Pad_78[0x40];                                      // 0x0078(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UGCBrowserPopupParams")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UGCBrowserPopupParams")
-	}
-	static class UUGCBrowserPopupParams* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUGCBrowserPopupParams>();
-	}
-};
-DUMPER7_ASSERTS_UUGCBrowserPopupParams;
 
 // Class BrickRigs.FlapBrickStaticInfo
 // 0x0008 (0x01E8 - 0x01E0)
@@ -11085,18 +11028,57 @@ public:
 };
 DUMPER7_ASSERTS_UFlapBrickStaticInfo;
 
+// Class BrickRigs.PopupContainerWidget
+// 0x0030 (0x0440 - 0x0410)
+class UPopupContainerWidget : public UMainWidgetBase
+{
+public:
+	uint8                                         Pad_410[0x18];                                     // 0x0410(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPopupParams*                           PopupParams;                                       // 0x0428(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPopupWidget*                           PopupWidget;                                       // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddPopupWidget(class UPopupWidget* Widget);
+	void CancelPopup();
+	void ConfirmPopup();
+	class UMenuButtonWidget* CreateCancelButton();
+	class UMenuButtonWidget* CreateConfirmButton();
+	void SetButtonPanelVisibility(bool bNewVisible);
+	void SetColorStyle(EBrickUIColorStyle InColorStyle);
+	void UpdateButtonPanelVisibility(bool bNewVisible);
+	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
+	void UpdateContentSlot(bool bShowContent, EPopupSizeRule SizeRule);
+	void UpdateTitleText(const class FText& NewTitle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PopupContainerWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PopupContainerWidget")
+	}
+	static class UPopupContainerWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPopupContainerWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPopupContainerWidget;
+
 // Class BrickRigs.FlapBrick
-// 0x0048 (0x0160 - 0x0118)
-class UFlapBrick final : public UScalableBrick
+// 0x0040 (0x0158 - 0x0118)
+class UFlapBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0128(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	float                                         InputScale;                                        // 0x0150(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MinAngle;                                          // 0x0154(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxAngle;                                          // 0x0158(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAccumulateInput;                                  // 0x015C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_15D[0x3];                                      // 0x015D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0128(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	float                                         InputScale;                                        // 0x0148(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MinAngle;                                          // 0x014C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxAngle;                                          // 0x0150(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAccumulateInput;                                  // 0x0154(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_155[0x3];                                      // 0x0155(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -11113,35 +11095,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFlapBrick;
-
-// Class BrickRigs.PlayersMenuWidget
-// 0x0008 (0x0410 - 0x0408)
-class UPlayersMenuWidget : public UMenuPageWidget
-{
-public:
-	class UScoreboardWidget*                      Scoreboard;                                        // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void KickPlayer();
-	void ShowPlayerProfile();
-	void UpdateCanKickPlayer(bool bCanKick);
-	void UpdateCanShowPlayerProfile(bool bCanShow);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlayersMenuWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlayersMenuWidget")
-	}
-	static class UPlayersMenuWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayersMenuWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPlayersMenuWidget;
 
 // Class BrickRigs.GunBrickStaticInfo
 // 0x0150 (0x02F0 - 0x01A0)
@@ -11179,163 +11132,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGunBrickStaticInfo;
-
-// Class BrickRigs.FlareBrickStaticInfo
-// 0x0000 (0x02F0 - 0x02F0)
-class UFlareBrickStaticInfo : public UGunBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FlareBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FlareBrickStaticInfo")
-	}
-	static class UFlareBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFlareBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UFlareBrickStaticInfo;
-
-// Class BrickRigs.RotorBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class URotorBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RotorBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RotorBrickStaticInfo")
-	}
-	static class URotorBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URotorBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_URotorBrickStaticInfo;
-
-// Class BrickRigs.FlashSequenceItemWidget
-// 0x0010 (0x0478 - 0x0468)
-class UFlashSequenceItemWidget : public UBrickComboBoxItemWidget
-{
-public:
-	TSubclassOf<class USirenSequence>             FlashSequenceClass;                                // 0x0468(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_470[0x8];                                      // 0x0470(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateIsLit(bool bNewLit);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FlashSequenceItemWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FlashSequenceItemWidget")
-	}
-	static class UFlashSequenceItemWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFlashSequenceItemWidget>();
-	}
-};
-DUMPER7_ASSERTS_UFlashSequenceItemWidget;
-
-// Class BrickRigs.ObjectPropertyWidget
-// 0x0018 (0x0430 - 0x0418)
-class UObjectPropertyWidget : public UPropertyWidget
-{
-public:
-	uint8                                         Pad_418[0x8];                                      // 0x0418(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickComboBoxWidget*                   BrickComboBox;                                     // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         IconSize;                                          // 0x0428(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void InitializeItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
-	void OnItemSelected(int32 Item, EValueChangedEventType EventType);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ObjectPropertyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ObjectPropertyWidget")
-	}
-	static class UObjectPropertyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UObjectPropertyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UObjectPropertyWidget;
-
-// Class BrickRigs.RCBrick
-// 0x0000 (0x0118 - 0x0118)
-class URCBrick final : public UScalableBrick
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RCBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RCBrick")
-	}
-	static class URCBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URCBrick>();
-	}
-};
-DUMPER7_ASSERTS_URCBrick;
-
-// Class BrickRigs.FlashSequencePropertyWidget
-// 0x0000 (0x0430 - 0x0430)
-class UFlashSequencePropertyWidget : public UObjectPropertyWidget
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FlashSequencePropertyWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FlashSequencePropertyWidget")
-	}
-	static class UFlashSequencePropertyWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFlashSequencePropertyWidget>();
-	}
-};
-DUMPER7_ASSERTS_UFlashSequencePropertyWidget;
-
-// Class BrickRigs.FloatBrickStaticInfo
-// 0x0000 (0x01E0 - 0x01E0)
-class UFloatBrickStaticInfo : public UScalableBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FloatBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FloatBrickStaticInfo")
-	}
-	static class UFloatBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFloatBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UFloatBrickStaticInfo;
 
 // Class BrickRigs.ScoreboardPlayerWidget
 // 0x0090 (0x0488 - 0x03F8)
@@ -11376,9 +11172,190 @@ public:
 };
 DUMPER7_ASSERTS_UScoreboardPlayerWidget;
 
+// Class BrickRigs.FlareBrickStaticInfo
+// 0x0000 (0x02F0 - 0x02F0)
+class UFlareBrickStaticInfo : public UGunBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FlareBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FlareBrickStaticInfo")
+	}
+	static class UFlareBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFlareBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UFlareBrickStaticInfo;
+
+// Class BrickRigs.FlashSequenceItemWidget
+// 0x0010 (0x0478 - 0x0468)
+class UFlashSequenceItemWidget : public UBrickComboBoxItemWidget
+{
+public:
+	TSubclassOf<class USirenSequence>             FlashSequenceClass;                                // 0x0468(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_470[0x8];                                      // 0x0470(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateIsLit(bool bNewLit);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FlashSequenceItemWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FlashSequenceItemWidget")
+	}
+	static class UFlashSequenceItemWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFlashSequenceItemWidget>();
+	}
+};
+DUMPER7_ASSERTS_UFlashSequenceItemWidget;
+
+// Class BrickRigs.RestrictedAreaWidget
+// 0x0018 (0x0410 - 0x03F8)
+class URestrictedAreaWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnFadedOut();
+	void PlayFadeInAnim();
+	void PlayFadeOutAnim();
+	void UpdateTimerRemaining(float TimeRemaining);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RestrictedAreaWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RestrictedAreaWidget")
+	}
+	static class URestrictedAreaWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URestrictedAreaWidget>();
+	}
+};
+DUMPER7_ASSERTS_URestrictedAreaWidget;
+
+// Class BrickRigs.ObjectPropertyWidget
+// 0x0018 (0x0430 - 0x0418)
+class UObjectPropertyWidget : public UPropertyWidget
+{
+public:
+	uint8                                         Pad_418[0x8];                                      // 0x0418(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickComboBoxWidget*                   BrickComboBox;                                     // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         IconSize;                                          // 0x0428(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitializeItem(int32 Item, struct FBrickComboBoxItemParams* OutParams);
+	void OnItemSelected(int32 Item, EValueChangedEventType EventType);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ObjectPropertyWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ObjectPropertyWidget")
+	}
+	static class UObjectPropertyWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObjectPropertyWidget>();
+	}
+};
+DUMPER7_ASSERTS_UObjectPropertyWidget;
+
+// Class BrickRigs.FlashSequencePropertyWidget
+// 0x0000 (0x0430 - 0x0430)
+class UFlashSequencePropertyWidget : public UObjectPropertyWidget
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FlashSequencePropertyWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FlashSequencePropertyWidget")
+	}
+	static class UFlashSequencePropertyWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFlashSequencePropertyWidget>();
+	}
+};
+DUMPER7_ASSERTS_UFlashSequencePropertyWidget;
+
+// Class BrickRigs.SeatBrickStaticInfo
+// 0x0058 (0x01F8 - 0x01A0)
+class USeatBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	struct FFloatInterval                         ViewPitchRange;                                    // 0x01A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ViewPitchRangeItem;                                // 0x01A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ViewYawRange;                                      // 0x01B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ViewYawRangeItem;                                  // 0x01B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CharacterDamageScale;                              // 0x01C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinCharacterDamage;                                // 0x01C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     EditorCharacterMaterial;                           // 0x01C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          CharacterIdleSequence;                             // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CharacterCapsuleHalfHeight;                        // 0x01D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CharacterIdleCameraSocketLocation;                 // 0x01DC(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumInventorySlots;                                 // 0x01E8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             ShiftSound;                                        // 0x01F0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SeatBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SeatBrickStaticInfo")
+	}
+	static class USeatBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USeatBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_USeatBrickStaticInfo;
+
+// Class BrickRigs.FloatBrickStaticInfo
+// 0x0000 (0x01E0 - 0x01E0)
+class UFloatBrickStaticInfo : public UScalableBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FloatBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FloatBrickStaticInfo")
+	}
+	static class UFloatBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFloatBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UFloatBrickStaticInfo;
+
 // Class BrickRigs.FloatBrick
 // 0x0010 (0x0128 - 0x0118)
-class UFloatBrick final : public UScalableBrick
+class UFloatBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -11401,7 +11378,7 @@ DUMPER7_ASSERTS_UFloatBrick;
 
 // Class BrickRigs.FluGameUserSettings
 // 0x0058 (0x0180 - 0x0128)
-class UFluGameUserSettings final : public UGameUserSettings
+class UFluGameUserSettings : public UGameUserSettings
 {
 public:
 	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -11422,9 +11399,8 @@ public:
 	EFluVideoQuality                              TextureQuality;                                    // 0x0142(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EFluVideoQuality                              EffectsQuality;                                    // 0x0143(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EFluVideoQuality                              FoliageQuality;                                    // 0x0144(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EFluVideoQuality                              ShadingQuality;                                    // 0x0145(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EFluVideoQuality                              MotionBlurQuality;                                 // 0x0146(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_147[0x1];                                      // 0x0147(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	EFluVideoQuality                              MotionBlurQuality;                                 // 0x0145(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_146[0x2];                                      // 0x0146(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MotionBlurScale;                                   // 0x0148(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bUseRayTracing;                                    // 0x014C(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bUseDepthOfField;                                  // 0x014D(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -11449,41 +11425,9 @@ public:
 };
 DUMPER7_ASSERTS_UFluGameUserSettings;
 
-// Class BrickRigs.JoinSessionPopupWidget
-// 0x0040 (0x0470 - 0x0430)
-class UJoinSessionPopupWidget : public UPopupWidget
-{
-public:
-	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickTextBoxWidget*                    PasswordTextBox;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FText                                   JoiningSessionText;                                // 0x0440(0x0018)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class FText                                   CancellingJoinText;                                // 0x0458(0x0018)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void CancelJoinSession();
-	void JoinSession();
-	void OnPasswordChanged(const class FText& NewText, EValueChangedEventType EventType);
-	void UpdateJoinState(EJoinSessionState InJoinState, bool bInPasswordRequired, bool bInHasPassword);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("JoinSessionPopupWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"JoinSessionPopupWidget")
-	}
-	static class UJoinSessionPopupWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UJoinSessionPopupWidget>();
-	}
-};
-DUMPER7_ASSERTS_UJoinSessionPopupWidget;
-
 // Class BrickRigs.FluMathStatics
 // 0x0000 (0x0030 - 0x0030)
-class UFluMathStatics final : public UBlueprintFunctionLibrary
+class UFluMathStatics : public UBlueprintFunctionLibrary
 {
 public:
 	static struct FVector AxisSignedToVector(const EFluAxisSigned Axis);
@@ -11522,9 +11466,32 @@ public:
 };
 DUMPER7_ASSERTS_UFluMathStatics;
 
+// Class BrickRigs.SensorBrickBase
+// 0x0038 (0x0150 - 0x0118)
+class USensorBrickBase : public UScalableBrick
+{
+public:
+	struct FSensorOutputChannel                   OutputChannel;                                     // 0x0118(0x0038)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SensorBrickBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SensorBrickBase")
+	}
+	static class USensorBrickBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USensorBrickBase>();
+	}
+};
+DUMPER7_ASSERTS_USensorBrickBase;
+
 // Class BrickRigs.FluRichTextBlockLinkDecorator
 // 0x0000 (0x0030 - 0x0030)
-class UFluRichTextBlockLinkDecorator final : public URichTextBlockDecorator
+class UFluRichTextBlockLinkDecorator : public URichTextBlockDecorator
 {
 public:
 	static class UClass* StaticClass()
@@ -11541,41 +11508,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFluRichTextBlockLinkDecorator;
-
-// Class BrickRigs.SeatBrickStaticInfo
-// 0x0058 (0x01F8 - 0x01A0)
-class USeatBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	struct FFloatInterval                         ViewPitchRange;                                    // 0x01A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ViewPitchRangeItem;                                // 0x01A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ViewYawRange;                                      // 0x01B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatInterval                         ViewYawRangeItem;                                  // 0x01B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CharacterDamageScale;                              // 0x01C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinCharacterDamage;                                // 0x01C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     EditorCharacterMaterial;                           // 0x01C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          CharacterIdleSequence;                             // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CharacterCapsuleHalfHeight;                        // 0x01D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CharacterIdleCameraSocketLocation;                 // 0x01DC(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumInventorySlots;                                 // 0x01E8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             ShiftSound;                                        // 0x01F0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SeatBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SeatBrickStaticInfo")
-	}
-	static class USeatBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USeatBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_USeatBrickStaticInfo;
 
 // Class BrickRigs.FuelTank
 // 0x0040 (0x0380 - 0x0340)
@@ -11613,9 +11545,29 @@ public:
 };
 DUMPER7_ASSERTS_AFuelTank;
 
+// Class BrickRigs.SandboxGameMode
+// 0x0000 (0x0530 - 0x0530)
+class ASandboxGameMode : public ABrickGameMode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SandboxGameMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SandboxGameMode")
+	}
+	static class ASandboxGameMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASandboxGameMode>();
+	}
+};
+DUMPER7_ASSERTS_ASandboxGameMode;
+
 // Class BrickRigs.GameModeInfo
 // 0x0078 (0x00C0 - 0x0048)
-class UGameModeInfo final : public UPrimaryDataAsset
+class UGameModeInfo : public UPrimaryDataAsset
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -11632,7 +11584,7 @@ public:
 	bool                                          bUsesSandboxSettings;                              // 0x00BC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSupportsSingleplayer;                             // 0x00BD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSupportsMultiplayer;                              // 0x00BE(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BF[0x1];                                       // 0x00BF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSupportsAutoBalancing;                            // 0x00BF(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -11650,82 +11602,67 @@ public:
 };
 DUMPER7_ASSERTS_UGameModeInfo;
 
-// Class BrickRigs.RotorBladeBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class URotorBladeBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RotorBladeBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RotorBladeBrickStaticInfo")
-	}
-	static class URotorBladeBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URotorBladeBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_URotorBladeBrickStaticInfo;
-
 // Class BrickRigs.GameOverlayWidget
-// 0x00B8 (0x04B0 - 0x03F8)
+// 0x0100 (0x04F8 - 0x03F8)
 class UGameOverlayWidget : public UUserWidget
 {
 public:
-	class UChatWidget*                            ChatWidget;                                        // 0x03F8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UInputHelpWidget*                       InputHelpWidget;                                   // 0x0400(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMatchTimerWidget*                      MatchTimerWidget;                                  // 0x0408(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMatchStateWidget*                      MatchStateWidget;                                  // 0x0410(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UTeamScoreWidget*>               TeamScoreWidgets;                                  // 0x0418(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class UHUDNotificationWidget*>         HUDNotificationWidgets;                            // 0x0428(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASpectatorPawn*                         SpectatorPawn;                                     // 0x0440(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class ABaseCharacter*                         ViewedCharacter;                                   // 0x0448(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UChatWidget*                            ChatWidget;                                        // 0x0408(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UInputHelpWidget*                       InputHelpWidget;                                   // 0x0410(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMatchTimerWidget*                      MatchTimerWidget;                                  // 0x0418(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMatchStateWidget*                      MatchStateWidget;                                  // 0x0420(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UDashboardWidget*                       CameraDashboardWidget;                             // 0x0428(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UTeamScoreWidget*>               TeamScoreWidgets;                                  // 0x0430(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TArray<class UHUDNotificationWidget*>         HUDNotificationWidgets;                            // 0x0440(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_450[0x8];                                      // 0x0450(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABrickEditor*                           BrickEditor;                                       // 0x0458(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_460[0x10];                                     // 0x0460(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPingIndicatorWidget*                   HighPingIndicator;                                 // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UInputHelpWidget>           InputHelpClass;                                    // 0x0478(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UHUDNotificationWidget>     HUDNotificationClass;                              // 0x0480(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UMatchTimerWidget>          MatchTimerWidgetClass;                             // 0x0488(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UMatchStateWidget>          MatchStateWidgetClass;                             // 0x0490(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UTeamScoreWidget>           TeamScoreWidgetClass;                              // 0x0498(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UChatWidget>                ChatWidgetClass;                                   // 0x04A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         MinimalHUDMaxMatchTimerRemaining;                  // 0x04A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ASpectatorPawn*                         SpectatorPawn;                                     // 0x0458(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ABaseCharacter*                         ViewedCharacter;                                   // 0x0460(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_468[0x8];                                      // 0x0468(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABrickEditor*                           BrickEditor;                                       // 0x0470(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_478[0x10];                                     // 0x0478(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPingIndicatorWidget*                   HighPingIndicator;                                 // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UInputHelpWidget>           InputHelpClass;                                    // 0x0490(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UHUDNotificationWidget>     HUDNotificationClass;                              // 0x0498(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UMatchTimerWidget>          MatchTimerWidgetClass;                             // 0x04A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UMatchStateWidget>          MatchStateWidgetClass;                             // 0x04A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UTeamScoreWidget>           TeamScoreWidgetClass;                              // 0x04B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UChatWidget>                ChatWidgetClass;                                   // 0x04B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   CameraDashboardWidgetClass;                        // 0x04C0(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         MinimalHUDMaxMatchTimerRemaining;                  // 0x04F0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4F4[0x4];                                      // 0x04F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UGameOverlayWidget* Get(const class UObject* WorldContextObject);
 
+	void AddCameraDashboardWidget(class UUserWidget* InWidget);
 	void AddChatWidget(class UChatWidget* Widget);
 	void AddHUDNotification(class UHUDNotificationWidget* Widget, int32 Index_0);
-	void AddInputHelpWidget(class UInputHelpWidget* Widget);
+	void AddInputHelpWidget(class UInputHelpWidget* Widget, const struct FVector2D& InPosition);
 	void AddMatchStateWidget(class UMatchStateWidget* Widget);
 	void AddMatchTimerWidget(class UMatchTimerWidget* Widget);
 	void AddTeamScoreWidget(class UTeamScoreWidget* Widget, ETeamAttitude TeamAttitude);
 	class UHUDNotificationWidget* CreateHUDNotification(const class FName& Context, bool bShouldFadeOut);
 	void OnCameraModeChanged(ECameraMode NewMode);
-	void OnHUDVisibilityChanged(EHUDVisibility NewVisibility);
+	void OnHUDVisibilityChanged(const EHUDVisibility NewVisibility);
+	bool OpenInputHelpCategory(class UInputCategory* InCategory, const struct FVector2D& InPosition);
+	bool SetInputHelpOpen(bool bNewOpen, bool bUpdateFocus, const struct FVector2D& InPosition);
 	bool ToggleInputHelpOpen(bool bUpdateFocus);
 	void UpdateCameraModeNotification(class UHUDNotificationWidget* Widget, ECameraMode NewMode);
 	void UpdateCameraSpeedNotification(class UHUDNotificationWidget* Widget, float NewSpeedRatio, float NewMaxSpeed);
 	void UpdateCameraZoomNotification(class UHUDNotificationWidget* Widget, float NewZoomRatio);
-	void UpdateFreeCamNotification(class UHUDNotificationWidget* Widget, bool bIsInFreeCam, EFreeCamMode InFreeCamMode, bool bIsFixedCam);
 	void UpdateHUDVisibilityNotification(class UHUDNotificationWidget* Widget, EHUDVisibility NewVisibility);
 	void UpdateMoneyNotification(class UHUDNotificationWidget* Widget, float NewAmount, float AmountAdded);
-	void UpdateProjectileCameraNotification(class UHUDNotificationWidget* Widget, bool bNewEnabled);
 	void UpdateRespawnDelayNotification(class UHUDNotificationWidget* Widget, float Remaining);
 	void UpdateRestartFailedNotification(class UHUDNotificationWidget* Widget, const class FText& Message);
 	void UpdateSaveNotification(class UHUDNotificationWidget* Widget, bool bSuccess, bool bIsAutoSave);
-	void UpdateSlomoNotification(class UHUDNotificationWidget* Widget, float SlomoSpeed, bool bInvertSpeed, bool bSlomoEnabled, bool bIsPaused);
 	void UpdateThumbnailNotification(class UHUDNotificationWidget* Widget);
 	void UpdateVehicleCameraNotification(class UHUDNotificationWidget* Widget, const class FText& CameraDisplayName);
 	void UpdateVehicleConstructionNotification(class UHUDNotificationWidget* Widget, const class FText& VehicleDisplayName, float Progress);
 	void UpdateVehicleDownloadNotification(class UHUDNotificationWidget* Widget, const class FText& VehicleDisplayName, float Progress);
 	void UpdateVehicleSeatNotification(class UHUDNotificationWidget* Widget, const class FText& SeatDisplayName);
+
+	bool IsInputHelpOpen() const;
 
 public:
 	static class UClass* StaticClass()
@@ -11742,6 +11679,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGameOverlayWidget;
+
+// Class BrickRigs.SightAttachment
+// 0x0048 (0x0390 - 0x0348)
+class ASightAttachment : public AAttachment
+{
+public:
+	uint8                                         Pad_348[0x20];                                     // 0x0348(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               OcclusionMID;                                      // 0x0368(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInterface*                     ReticleMaterial;                                   // 0x0370(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_378[0x18];                                     // 0x0378(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SightAttachment")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SightAttachment")
+	}
+	static class ASightAttachment* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASightAttachment>();
+	}
+};
+DUMPER7_ASSERTS_ASightAttachment;
 
 // Class BrickRigs.Garage
 // 0x0090 (0x0440 - 0x03B0)
@@ -11780,29 +11743,6 @@ public:
 };
 DUMPER7_ASSERTS_AGarage;
 
-// Class BrickRigs.SensorBrickBase
-// 0x0038 (0x0150 - 0x0118)
-class USensorBrickBase : public UScalableBrick
-{
-public:
-	struct FSensorOutputChannel                   OutputChannel;                                     // 0x0118(0x0038)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SensorBrickBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SensorBrickBase")
-	}
-	static class USensorBrickBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USensorBrickBase>();
-	}
-};
-DUMPER7_ASSERTS_USensorBrickBase;
-
 // Class BrickRigs.GenericPropertyWidget
 // 0x0008 (0x0420 - 0x0418)
 class UGenericPropertyWidget : public UPropertyWidget
@@ -11833,9 +11773,29 @@ public:
 };
 DUMPER7_ASSERTS_UGenericPropertyWidget;
 
+// Class BrickRigs.RCBrick
+// 0x0000 (0x0118 - 0x0118)
+class URCBrick : public UScalableBrick
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RCBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RCBrick")
+	}
+	static class URCBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URCBrick>();
+	}
+};
+DUMPER7_ASSERTS_URCBrick;
+
 // Class BrickRigs.GravelSilo
 // 0x0068 (0x03A8 - 0x0340)
-class AGravelSilo final : public AStaticMeshProp
+class AGravelSilo : public AStaticMeshProp
 {
 public:
 	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -11873,48 +11833,13 @@ public:
 };
 DUMPER7_ASSERTS_AGravelSilo;
 
-// Class BrickRigs.RadioButtonPanel
-// 0x0028 (0x02A8 - 0x0280)
-class URadioButtonPanel final : public UGridPanel
-{
-public:
-	uint8                                         Pad_280[0x10];                                     // 0x0280(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinSelectedButtons;                                // 0x0290(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxSelectedButtons;                                // 0x0294(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class URadioButtonWidget* Button, bool bNewSelected)> OnButtonSelectedDelegate; // 0x0298(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	void GetSelectedWidgets(TArray<class URadioButtonWidget*>* OutWidgets);
-	void SelectButton(class URadioButtonWidget* Button);
-	void UnselectAll();
-	void UnselectButton(class URadioButtonWidget* Button);
-
-	int32 GetNumSelectedWidgets() const;
-	class URadioButtonWidget* GetSelectedWidget() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RadioButtonPanel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RadioButtonPanel")
-	}
-	static class URadioButtonPanel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URadioButtonPanel>();
-	}
-};
-DUMPER7_ASSERTS_URadioButtonPanel;
-
 // Class BrickRigs.GrenadeStaticInfo
-// 0x0010 (0x04D0 - 0x04C0)
+// 0x0010 (0x04E0 - 0x04D0)
 class UGrenadeStaticInfo : public UExplosiveItemStaticInfo
 {
 public:
-	float                                         FuseDelay;                                         // 0x04C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C4[0xC];                                      // 0x04C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         FuseDelay;                                         // 0x04D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D4[0xC];                                      // 0x04D4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -11932,9 +11857,42 @@ public:
 };
 DUMPER7_ASSERTS_UGrenadeStaticInfo;
 
+// Class BrickRigs.NumericPropertyWidget
+// 0x0030 (0x0448 - 0x0418)
+class UNumericPropertyWidget : public UPropertyWidget
+{
+public:
+	TArray<class UBrickSliderWidget*>             Sliders;                                           // 0x0418(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_428[0x18];                                     // 0x0428(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UBrickSliderWidget>         SliderClass;                                       // 0x0440(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void AddSliderWidget(class UBrickSliderWidget* Slider);
+	void LockAxes(const bool bLock);
+	void OnSliderValueChanged(const float NewValue, const EValueChangedEventType EventType, const int32 Index_0);
+	void UpdateNumericProperty(const ENumericValueType ValueType, const int32 NumAxes);
+
+	bool AreAxesLocked() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NumericPropertyWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NumericPropertyWidget")
+	}
+	static class UNumericPropertyWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNumericPropertyWidget>();
+	}
+};
+DUMPER7_ASSERTS_UNumericPropertyWidget;
+
 // Class BrickRigs.GrenadeAnimInstance
 // 0x0000 (0x0300 - 0x0300)
-class UGrenadeAnimInstance final : public UItemAnimInstance
+class UGrenadeAnimInstance : public UItemAnimInstance
 {
 public:
 	static class UClass* StaticClass()
@@ -11952,32 +11910,9 @@ public:
 };
 DUMPER7_ASSERTS_UGrenadeAnimInstance;
 
-// Class BrickRigs.NetworkErrorPopupWidget
-// 0x0008 (0x0438 - 0x0430)
-class UNetworkErrorPopupWidget : public UPopupWidget
-{
-public:
-	class UBrickTextBlock*                        MessageTextBlock;                                  // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NetworkErrorPopupWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NetworkErrorPopupWidget")
-	}
-	static class UNetworkErrorPopupWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetworkErrorPopupWidget>();
-	}
-};
-DUMPER7_ASSERTS_UNetworkErrorPopupWidget;
-
 // Class BrickRigs.Grenade
 // 0x0008 (0x0358 - 0x0350)
-class AGrenade : public AExplosiveItem
+class AGrenade: public AExplosiveItem
 {
 public:
 	uint8                                         Pad_350[0x8];                                      // 0x0350(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -12018,6 +11953,275 @@ public:
 };
 DUMPER7_ASSERTS_UGrilleBrickStaticInfo;
 
+// Class BrickRigs.LauncherBrickStaticInfo
+// 0x0000 (0x02F0 - 0x02F0)
+class ULauncherBrickStaticInfo : public UGunBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LauncherBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LauncherBrickStaticInfo")
+	}
+	static class ULauncherBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULauncherBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_ULauncherBrickStaticInfo;
+
+// Class BrickRigs.PageSelectorWidget
+// 0x0020 (0x0418 - 0x03F8)
+class UPageSelectorWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x4];                                      // 0x03F8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumPages;                                          // 0x03FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickSliderWidget*                     Slider;                                            // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(int32 Page)>    OnPageChangedDelegate;                             // 0x0408(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	void GotoNextPage(bool bForward, bool bSkipToEnd);
+	void InitializePages(int32 InNumPages, int32 InCurrentPage, int32 InNumResults);
+	void OnSliderValueChanged(float NewValue, EValueChangedEventType EventType);
+	void SetCurrentPage(int32 NewPage);
+	void UpdateButtons(bool bCanGoBack, bool bCanGoForward);
+
+	int32 GetCurrentPage() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PageSelectorWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PageSelectorWidget")
+	}
+	static class UPageSelectorWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPageSelectorWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPageSelectorWidget;
+
+// Class BrickRigs.GunBrick
+// 0x00A0 (0x0190 - 0x00F0)
+class alignas(0x10) UGunBrick : public UBrick
+{
+public:
+	uint8                                         Pad_F0[0x18];                                      // 0x00F0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFirearmComponent*                      FirearmComponent;                                  // 0x0108(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_110[0x10];                                     // 0x0110(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        ShellEmitterPtr;                                   // 0x0120(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_128[0x40];                                     // 0x0128(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0168(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	EAmmoType                                     AmmoType;                                          // 0x0188(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GunBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GunBrick")
+	}
+	static class UGunBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGunBrick>();
+	}
+};
+DUMPER7_ASSERTS_UGunBrick;
+
+// Class BrickRigs.HandleBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UHandleBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HandleBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HandleBrickStaticInfo")
+	}
+	static class UHandleBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHandleBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UHandleBrickStaticInfo;
+
+// Class BrickRigs.RotorBladeBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class URotorBladeBrickStaticInfo: public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RotorBladeBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RotorBladeBrickStaticInfo")
+	}
+	static class URotorBladeBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URotorBladeBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_URotorBladeBrickStaticInfo;
+
+// Class BrickRigs.HostGamePageWidget
+// 0x0000 (0x0430 - 0x0430)
+class UHostGamePageWidget : public UMenuSettingsPageWidget
+{
+public:
+	void StartGame();
+	void UpdatePlayButton(bool bCanPlay, bool bIsOnline);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HostGamePageWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HostGamePageWidget")
+	}
+	static class UHostGamePageWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHostGamePageWidget>();
+	}
+};
+DUMPER7_ASSERTS_UHostGamePageWidget;
+
+// Class BrickRigs.HUDContainerWidget
+// 0x0030 (0x0440 - 0x0410)
+class UHUDContainerWidget : public UMainWidgetBase
+{
+public:
+	uint8                                         Pad_410[0x10];                                     // 0x0410(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameOverlayWidget*                     GameOverlayWidget;                                 // 0x0420(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUserWidget*                            ActiveHUDWidget;                                   // 0x0428(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UGameOverlayWidget>         GameOverlayWidgetClass;                            // 0x0438(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void AddGameOverlayWidget(class UGameOverlayWidget* Widget);
+	void AddHUDWidget(class UUserWidget* Widget);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HUDContainerWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HUDContainerWidget")
+	}
+	static class UHUDContainerWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHUDContainerWidget>();
+	}
+};
+DUMPER7_ASSERTS_UHUDContainerWidget;
+
+// Class BrickRigs.SirenBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class USirenBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SirenBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SirenBrickStaticInfo")
+	}
+	static class USirenBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USirenBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_USirenBrickStaticInfo;
+
+// Class BrickRigs.PlacableObjectWidget
+// 0x0038 (0x0448 - 0x0410)
+class UPlacableObjectWidget : public UBrickUserWidget
+{
+public:
+	uint8                                         Pad_410[0x20];                                     // 0x0410(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickButtonWidget*                     Button;                                            // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickImage*                            ThumbnailImage;                                    // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void OnButtonClicked();
+	void OpenContextMenu();
+	void UpdateIsFilterWidget(bool bNewIsFilter);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlacableObjectWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlacableObjectWidget")
+	}
+	static class UPlacableObjectWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlacableObjectWidget>();
+	}
+};
+DUMPER7_ASSERTS_UPlacableObjectWidget;
+
+// Class BrickRigs.HUDIconContainerWidget
+// 0x0070 (0x0468 - 0x03F8)
+class UHUDIconContainerWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHUDIconWidget*                         IconWidget;                                        // 0x0418(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMapCrosshairWidget*>            CrosshairWidgets;                                  // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_430[0x20];                                     // 0x0430(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickButtonWidget*                     SpawnButton;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxNameDrawDist;                                   // 0x0460(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddCrosshairWidgets(const TArray<class UMapCrosshairWidget*>& Widgets);
+	void AddIconWidget(class UHUDIconWidget* Widget);
+	void AddInteractionWidget(class UInteractionWidget* Widget);
+	void OnSpawnButtonClicked();
+	void OnSpawnButtonDoubleClicked();
+	void UpdateContainerStyle(bool bNewSelected, bool bNewCanSpawn, EBrickUIColorStyle NewColorStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HUDIconContainerWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HUDIconContainerWidget")
+	}
+	static class UHUDIconContainerWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHUDIconContainerWidget>();
+	}
+};
+DUMPER7_ASSERTS_UHUDIconContainerWidget;
+
 // Class BrickRigs.ScoreboardTeamWidget
 // 0x0050 (0x0448 - 0x03F8)
 class UScoreboardTeamWidget : public UUserWidget
@@ -12055,384 +12259,6 @@ public:
 };
 DUMPER7_ASSERTS_UScoreboardTeamWidget;
 
-// Class BrickRigs.LauncherBrickStaticInfo
-// 0x0000 (0x02F0 - 0x02F0)
-class ULauncherBrickStaticInfo : public UGunBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LauncherBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LauncherBrickStaticInfo")
-	}
-	static class ULauncherBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULauncherBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_ULauncherBrickStaticInfo;
-
-// Class BrickRigs.GunBrick
-// 0x00B0 (0x01A0 - 0x00F0)
-class alignas(0x10) UGunBrick final : public UBrick
-{
-public:
-	uint8                                         Pad_F0[0x18];                                      // 0x00F0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFirearmComponent*                      FirearmComponent;                                  // 0x0108(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_110[0x10];                                     // 0x0110(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        ShellEmitterPtr;                                   // 0x0120(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_128[0x40];                                     // 0x0128(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0168(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	EAmmoType                                     AmmoType;                                          // 0x0190(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_191[0xF];                                      // 0x0191(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GunBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GunBrick")
-	}
-	static class UGunBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGunBrick>();
-	}
-};
-DUMPER7_ASSERTS_UGunBrick;
-
-// Class BrickRigs.PagedListHeaderWidget
-// 0x0060 (0x0458 - 0x03F8)
-class UPagedListHeaderWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x60];                                     // 0x03F8(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnMeasurementSystemChanged(EMeasurementSystem NewSystem);
-	void UpdateDimensions(const struct FVector& InDimensions, const struct FVector& InMaxDimensions);
-	void UpdateEntry(const class FText& InTitleText, bool bInHasEntry, bool bInHasUnsavedChanges);
-	void UpdateMass(float InMass, float InMaxMass);
-	void UpdateNumObjects(int32 InNumObjects, int32 InMaxNumObjects, int32 InNumHiddenObjects, int32 InNumObjectsWithAerodynamics);
-	void UpdatePrice(float InPrice, float InMoney);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PagedListHeaderWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PagedListHeaderWidget")
-	}
-	static class UPagedListHeaderWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPagedListHeaderWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPagedListHeaderWidget;
-
-// Class BrickRigs.HandleBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class UHandleBrickStaticInfo : public UBrickStaticInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HandleBrickStaticInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HandleBrickStaticInfo")
-	}
-	static class UHandleBrickStaticInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHandleBrickStaticInfo>();
-	}
-};
-DUMPER7_ASSERTS_UHandleBrickStaticInfo;
-
-// Class BrickRigs.HealthBarWidget
-// 0x0018 (0x0410 - 0x03F8)
-class UHealthBarWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x14];                                     // 0x03F8(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         HealthInterpSpeed;                                 // 0x040C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnHUDVisibilityChanged(EHUDVisibility NewVisibility);
-	void UpdateCanBeDamaged(bool bNewCanBeDamaged);
-	void UpdateHealingState(ECharacterHealingState NewState);
-	void UpdateHealth(float NewHealth);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HealthBarWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HealthBarWidget")
-	}
-	static class UHealthBarWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHealthBarWidget>();
-	}
-};
-DUMPER7_ASSERTS_UHealthBarWidget;
-
-// Class BrickRigs.RestrictedAreaWidget
-// 0x0018 (0x0410 - 0x03F8)
-class URestrictedAreaWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnFadedOut();
-	void PlayFadeInAnim();
-	void PlayFadeOutAnim();
-	void UpdateTimerRemaining(float TimeRemaining);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RestrictedAreaWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RestrictedAreaWidget")
-	}
-	static class URestrictedAreaWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URestrictedAreaWidget>();
-	}
-};
-DUMPER7_ASSERTS_URestrictedAreaWidget;
-
-// Class BrickRigs.HostGamePageWidget
-// 0x0000 (0x0430 - 0x0430)
-class UHostGamePageWidget : public UMenuSettingsPageWidget
-{
-public:
-	void StartGame();
-	void UpdatePlayButton(bool bCanPlay, bool bIsOnline);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HostGamePageWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HostGamePageWidget")
-	}
-	static class UHostGamePageWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHostGamePageWidget>();
-	}
-};
-DUMPER7_ASSERTS_UHostGamePageWidget;
-
-// Class BrickRigs.PaintAttachment
-// 0x0040 (0x0388 - 0x0348)
-class APaintAttachment : public AAttachment
-{
-public:
-	class FText                                   PaintDisplayName;                                  // 0x0348(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0360(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Metallic;                                          // 0x0370(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Roughness;                                         // 0x0374(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture;                                           // 0x0378(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Tiling;                                            // 0x0380(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PaintAttachment")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PaintAttachment")
-	}
-	static class APaintAttachment* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<APaintAttachment>();
-	}
-};
-DUMPER7_ASSERTS_APaintAttachment;
-
-// Class BrickRigs.HUDContainerWidget
-// 0x0030 (0x0440 - 0x0410)
-class UHUDContainerWidget : public UMainWidgetBase
-{
-public:
-	uint8                                         Pad_410[0x10];                                     // 0x0410(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameOverlayWidget*                     GameOverlayWidget;                                 // 0x0420(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UUserWidget*                            ActiveHUDWidget;                                   // 0x0428(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UGameOverlayWidget>         GameOverlayWidgetClass;                            // 0x0438(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void AddGameOverlayWidget(class UGameOverlayWidget* Widget);
-	void AddHUDWidget(class UUserWidget* Widget);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HUDContainerWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HUDContainerWidget")
-	}
-	static class UHUDContainerWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHUDContainerWidget>();
-	}
-};
-DUMPER7_ASSERTS_UHUDContainerWidget;
-
-// Class BrickRigs.ServerBrowserWidget
-// 0x0038 (0x0440 - 0x0408)
-class UServerBrowserWidget : public UMenuPageWidget
-{
-public:
-	uint8                                         Pad_408[0x18];                                     // 0x0408(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPagedListWidget*                       PagedList;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ESearchSessionType                            SearchSessionType;                                 // 0x0428(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EServerSortMethod                             ServerSortMethod;                                  // 0x0429(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bSearchPrivateServers;                             // 0x042A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bSearchServersWithDifferentMods;                   // 0x042B(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ServerSearchText;                                  // 0x0430(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void JoinServer();
-	void OnListEntrySelected(class UPagedListEntryWidget* Widget, bool bDoubleClick);
-	void OnLoadListPage(int32 NewPage);
-	void RefreshServers();
-	void UpdateCanJoin(bool bCanJoin);
-	void UpdateCanRefresh(bool bCanRefresh);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ServerBrowserWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ServerBrowserWidget")
-	}
-	static class UServerBrowserWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UServerBrowserWidget>();
-	}
-};
-DUMPER7_ASSERTS_UServerBrowserWidget;
-
-// Class BrickRigs.PingIndicatorWidget
-// 0x0020 (0x0418 - 0x03F8)
-class UPingIndicatorWidget : public UUserWidget
-{
-public:
-	class ABrickPlayerState*                      PlayerState;                                       // 0x03F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_400[0x8];                                      // 0x0400(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickTextBlock*                        PingTextBlock;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         MinDisplayPing;                                    // 0x0410(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bDisplayFrameRate;                                 // 0x0414(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_415[0x3];                                      // 0x0415(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
-	void SetMinDisplayPing(int32 InPing);
-	void SetPing(int32 InPing);
-	void SetPlayerState(class ABrickPlayerState* InPlayerState);
-	void SetStyleState(EBrickUIStyleState NewState);
-	void SetTextStyle(EBrickUITextStyle NewStyle);
-	void UpdatePing(int32 InPing);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PingIndicatorWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PingIndicatorWidget")
-	}
-	static class UPingIndicatorWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPingIndicatorWidget>();
-	}
-};
-DUMPER7_ASSERTS_UPingIndicatorWidget;
-
-// Class BrickRigs.HUDIconContainerWidget
-// 0x0070 (0x0468 - 0x03F8)
-class UHUDIconContainerWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDIconWidget*                         IconWidget;                                        // 0x0418(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UMapCrosshairWidget*>            CrosshairWidgets;                                  // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_430[0x20];                                     // 0x0430(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickButtonWidget*                     SpawnButton;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxNameDrawDist;                                   // 0x0460(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddCrosshairWidgets(const TArray<class UMapCrosshairWidget*>& Widgets);
-	void AddIconWidget(class UHUDIconWidget* Widget);
-	void AddInteractionWidget(class UInteractionWidget* Widget);
-	void OnSpawnButtonClicked();
-	void OnSpawnButtonDoubleClicked();
-	void OnUpdateButtonContentStyle(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-	void UpdateContainerStyle(bool bNewSelected, bool bNewCanSpawn, EBrickUIColorStyle NewColorStyle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HUDIconContainerWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HUDIconContainerWidget")
-	}
-	static class UHUDIconContainerWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHUDIconContainerWidget>();
-	}
-};
-DUMPER7_ASSERTS_UHUDIconContainerWidget;
-
-// Class BrickRigs.SandboxGameMode
-// 0x0000 (0x0530 - 0x0530)
-class ASandboxGameMode : public ABrickGameMode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SandboxGameMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SandboxGameMode")
-	}
-	static class ASandboxGameMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASandboxGameMode>();
-	}
-};
-DUMPER7_ASSERTS_ASandboxGameMode;
-
 // Class BrickRigs.HUDNotificationWidget
 // 0x0040 (0x0438 - 0x03F8)
 class UHUDNotificationWidget : public UUserWidget
@@ -12446,7 +12272,7 @@ public:
 	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle);
+	void InitializeNotification(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle InColorStyle);
 	void OnFadedOut();
 	void PlayFadeInAnim();
 	void PlayFadeOutAnim();
@@ -12548,7 +12374,7 @@ DUMPER7_ASSERTS_UIdlerWheelBrickStaticInfo;
 
 // Class BrickRigs.IdlerWheelBrick
 // 0x0010 (0x0120 - 0x0110)
-class UIdlerWheelBrick final : public UTrackWheelBrick
+class UIdlerWheelBrick : public UTrackWheelBrick
 {
 public:
 	uint8                                         Pad_110[0x10];                                     // 0x0110(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -12571,7 +12397,7 @@ DUMPER7_ASSERTS_UIdlerWheelBrick;
 
 // Class BrickRigs.ImageBrick
 // 0x0020 (0x0138 - 0x0118)
-class UImageBrick final : public UScalableBrick
+class UImageBrick : public UScalableBrick
 {
 public:
 	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
@@ -12595,57 +12421,34 @@ public:
 };
 DUMPER7_ASSERTS_UImageBrick;
 
-// Class BrickRigs.InputActionCategoryWidget
-// 0x0020 (0x0418 - 0x03F8)
-class UInputActionCategoryWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputCategory*                         InputCategory;                                     // 0x0408(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_410[0x8];                                      // 0x0410(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void InitializeCategory(const class FText& InCategoryName);
-	void OpenCategory();
-	void UpdateInputActionListMode(EInputActionListMode NewMode);
-	void UpdateIsSelected(bool bNewSelected);
-
-	class UWidget* GetWidgetToFocus() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InputActionCategoryWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InputActionCategoryWidget")
-	}
-	static class UInputActionCategoryWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputActionCategoryWidget>();
-	}
-};
-DUMPER7_ASSERTS_UInputActionCategoryWidget;
-
 // Class BrickRigs.InputActionWidget
-// 0x00E8 (0x04F8 - 0x0410)
+// 0x00F8 (0x0508 - 0x0410)
 class UInputActionWidget : public UBrickUserWidget
 {
 public:
-	uint8                                         Pad_410[0xD8];                                     // 0x0410(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_410[0x80];                                     // 0x0410(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ActionName;                                        // 0x0490(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsSecondaryAction;                                // 0x049C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFlipHorizontally;                                 // 0x049D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowText;                                         // 0x049E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShowInputChord;                                   // 0x049F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FDisplayInfo                           DisplayInfoOverride;                               // 0x04A0(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 	class UBrickButtonWidget*                     Button;                                            // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UControlHintWidget*                     ControlHintWidget;                                 // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void()>              OnActionClickedDelegate;                           // 0x04F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
-	void OnActionClicked();
 	void OnActionPressed();
 	void OnActionReleased();
-	void RebindAction();
-	void UpdateCanActionBeRebound(bool bInCanBeRebound);
-	void UpdateDisplayInfo(const struct FDisplayInfo& InDisplayInfo);
-	void UpdateInputActionListMode(EInputActionListMode NewMode);
-	void UpdateIsActionEnabled(bool bInCanBeExecuted);
+	void OnShowMouseCursorChanged(const bool bNewShowMouseCursor);
+	void SetAction(const class FName InActionName, const bool bInIsSecondaryAction, class UBaseInputComponent* InInputComponent, const bool bUpdate);
+	void SetActionInfo(const struct FInputActionInfo& InActionInfo, const bool bUpdate);
+	void SetDisplayInfoOverride(const struct FDisplayInfo& InDisplayInfoOverride);
+	void SetFlipHorizontally(const bool bInFlipHorizontally);
+	void SetShowInputChord(const bool bInShowInputChord);
+	void SetShowText(const bool bInShowText);
+	void UpdateAction();
+	void UpdateActionWidget(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle ColorStyle, const bool bInIsEnabled, const bool bInIsActive, const bool bInIsClickable);
 
 	class UWidget* GetWidgetToFocus() const;
 
@@ -12686,8 +12489,7 @@ public:
 	void SetColorStyle(EBrickUIColorStyle NewStyle);
 	void SetInputChord(const struct FInputChord& InInputChord, const EInputActionTriggerType InTriggerType, const bool bShowAsGamepadKey);
 	void SetShowUnboundKey(bool bShow);
-	void SetStyleState(EBrickUIStyleState NewState);
-	void UpdateSpacerColorStyleAndStyleState(class UUserWidget* Widget, EBrickUIColorStyle NewColorStyle, EBrickUIStyleState NewStyleState);
+	void UpdateSpacerColorStyle(class UUserWidget* Widget, EBrickUIColorStyle NewColorStyle);
 
 public:
 	static class UClass* StaticClass()
@@ -12714,12 +12516,11 @@ public:
 	struct FKey                                   Key;                                               // 0x0400(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EInputActionTriggerType                       TriggerType;                                       // 0x0420(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsUsedAsModifier;                                 // 0x0421(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_422[0x2];                                      // 0x0422(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         UnboundRenderOpacity;                              // 0x0424(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_422[0x6];                                      // 0x0422(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetKey(const struct FKey& InKey, const EInputActionTriggerType InTriggerType, const bool bInUsedAsModifier);
-	void UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsGamepadKey);
+	void UpdateKey(const struct FKeyDisplayTableRow& DisplayInfo, const bool bIsValidKey, const bool bIsGamepadKey);
 
 public:
 	static class UClass* StaticClass()
@@ -12772,7 +12573,7 @@ DUMPER7_ASSERTS_UInputMappingPropertyWidget;
 
 // Class BrickRigs.InteractionComponent
 // 0x0008 (0x0158 - 0x0150)
-class UInteractionComponent final : public UHUDIconComponent
+class UInteractionComponent : public UHUDIconComponent
 {
 public:
 	EBrickUIColorStyle                            ColorStyle;                                        // 0x0150(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -12823,659 +12624,667 @@ public:
 };
 DUMPER7_ASSERTS_UInteractionOptionWidget;
 
-// Class BrickRigs.InventoryContainerWidget
-// 0x0010 (0x0408 - 0x03F8)
-class UInventoryContainerWidget : public UUserWidget
+// Class BrickRigs.InventoryCategoryWidget
+// 0x0040 (0x0438 - 0x03F8)
+class UInventoryCategoryWidget : public UUserWidget
 {
 public:
-	class UInventoryWidget*                       InventoryWidget;                                   // 0x03F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0400(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInventorySlotWidget*>           SlotWidgets;                                       // 0x0410(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_420[0x8];                                      // 0x0420(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickGridPanel*                        SlotsPanel;                                        // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumSlotsPerRow;                                    // 0x0430(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void UpdateHasInventory(bool bHasInventory);
-	void UpdateOwnerMoney(float NewMoney);
+	void InitializeCategory();
+
+	const class FText GetDisplayName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InventoryContainerWidget")
+		STATIC_CLASS_IMPL("InventoryCategoryWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InventoryContainerWidget")
+		STATIC_NAME_IMPL(L"InventoryCategoryWidget")
 	}
-	static class UInventoryContainerWidget* GetDefaultObj()
+	static class UInventoryCategoryWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInventoryContainerWidget>();
+		return GetDefaultObjImpl<UInventoryCategoryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryContainerWidget;
+DUMPER7_ASSERTS_UInventoryCategoryWidget;
 
-// Class BrickRigs.InventorySlotWidget
-// 0x00B0 (0x04A8 - 0x03F8)
-class UInventorySlotWidget : public UUserWidget
+// Class BrickRigs.InventoryPopupWidget
+// 0x0058 (0x0488 - 0x0430)
+class UInventoryPopupWidget : public UPopupWidget
 {
 public:
-	uint8                                         Pad_3F8[0x78];                                     // 0x03F8(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInventoryContainerWidget*              SubInventoryContainerWidget;                       // 0x0470(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_478[0x10];                                     // 0x0478(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickButtonWidget*                     Button;                                            // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        AmountTextBlock;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickImage*                            IconImage;                                         // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_430[0x10];                                     // 0x0430(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInventorySlotWidget*                   DragWidget;                                        // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_448[0x10];                                     // 0x0448(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanel*                           DragCanvasPanel;                                   // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInventoryContainerWidget*              OwnInventoryContainerWidget;                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInventoryContainerWidget*              OtherInventoryContainerWidget;                     // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickButtonWidget*                     DropButton;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UInventorySlotWidget>       SlotWidgetClass;                                   // 0x0478(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UInventoryContainerWidget>  SubInvetoryContainerWidgetClass;                   // 0x0480(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void AddSubInventoryWidget(class UInventoryContainerWidget* Widget);
-	void OnButtonClicked();
-	struct FEventReply OnButtonDragged(const struct FGeometry& InGeometry, const struct FPointerEvent& InMouseEvent);
-	void UpdateSlotApperance(bool bInIsDragWidget, bool bInIsSpecialSlot, bool bInIsValidSlot, bool bInCanDrag, bool bInIsDragging, bool bInCanDrop, bool bInDropReplace, bool bInIsDragOver);
+	void OnDropButtonClicked();
+	void UpdateDropArea(bool bInIsDragging, bool bInCanDrop, bool bInIsDragOver);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InventorySlotWidget")
+		STATIC_CLASS_IMPL("InventoryPopupWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InventorySlotWidget")
+		STATIC_NAME_IMPL(L"InventoryPopupWidget")
 	}
-	static class UInventorySlotWidget* GetDefaultObj()
+	static class UInventoryPopupWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInventorySlotWidget>();
+		return GetDefaultObjImpl<UInventoryPopupWidget>();
 	}
 };
-DUMPER7_ASSERTS_UInventorySlotWidget;
+DUMPER7_ASSERTS_UInventoryPopupWidget;
 
-// Class BrickRigs.JoinSessionPopupParams
-// 0x0118 (0x0190 - 0x0078)
-class UJoinSessionPopupParams final : public UPopupParams
+// Class BrickRigs.InventoryWidget
+// 0x0028 (0x0420 - 0x03F8)
+class UInventoryWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_78[0x118];                                     // 0x0078(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInventoryCategoryWidget*>       CategoryWidgets;                                   // 0x0408(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UInventoryCategoryWidget>   CategoryWidgetClass;                               // 0x0418(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void AddCategoryWidget(class UInventoryCategoryWidget* InWidget, const int32 Index_0);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("JoinSessionPopupParams")
+		STATIC_CLASS_IMPL("InventoryWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"JoinSessionPopupParams")
+		STATIC_NAME_IMPL(L"InventoryWidget")
 	}
-	static class UJoinSessionPopupParams* GetDefaultObj()
+	static class UInventoryWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UJoinSessionPopupParams>();
+		return GetDefaultObjImpl<UInventoryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UJoinSessionPopupParams;
+DUMPER7_ASSERTS_UInventoryWidget;
 
-// Class BrickRigs.KickPlayerPopupParams
-// 0x00A0 (0x0118 - 0x0078)
-class UKickPlayerPopupParams final : public UPopupParams
+// Class BrickRigs.JoinSessionPopupWidget
+// 0x0040 (0x0470 - 0x0430)
+class UJoinSessionPopupWidget : public UPopupWidget
 {
 public:
-	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x00C8(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlayerName;                                        // 0x00F0(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 KickReason;                                        // 0x0100(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              KickDuration;                                      // 0x0110(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickTextBoxWidget*                    PasswordTextBox;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FText                                   JoiningSessionText;                                // 0x0440(0x0018)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class FText                                   CancellingJoinText;                                // 0x0458(0x0018)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void CancelJoinSession();
+	void JoinSession();
+	void OnPasswordChanged(const class FText& NewText, EValueChangedEventType EventType);
+	void UpdateJoinState(EJoinSessionState InJoinState, bool bInPasswordRequired, bool bInHasPassword);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KickPlayerPopupParams")
+		STATIC_CLASS_IMPL("JoinSessionPopupWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KickPlayerPopupParams")
+		STATIC_NAME_IMPL(L"JoinSessionPopupWidget")
 	}
-	static class UKickPlayerPopupParams* GetDefaultObj()
+	static class UJoinSessionPopupWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKickPlayerPopupParams>();
+		return GetDefaultObjImpl<UJoinSessionPopupWidget>();
 	}
 };
-DUMPER7_ASSERTS_UKickPlayerPopupParams;
+DUMPER7_ASSERTS_UJoinSessionPopupWidget;
 
-// Class BrickRigs.LampProp
-// 0x0030 (0x0370 - 0x0340)
-class ALampProp : public AStaticMeshProp
+// Class BrickRigs.KickedPlayerWidget
+// 0x0088 (0x04A8 - 0x0420)
+class UKickedPlayerWidget : public UPagedListEntryWidget
 {
 public:
-	uint8                                         Pad_340[0x4];                                      // 0x0340(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatInterval                         PowerTimeRange;                                    // 0x0344(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULightComponent*                        LightComponent;                                    // 0x0350(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         PowerOnTime;                                       // 0x0358(0x0004)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PowerOffTime;                                      // 0x035C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PowerTimeVariation;                                // 0x0360(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, EditorOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class ULightComponent>            LightComponentClass;                               // 0x0368(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FKickedPlayer                          Entry;                                             // 0x0420(0x0060)(Transient, NativeAccessSpecifierPrivate)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        IdTextBlock;                                       // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        KickTimeTextBlock;                                 // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        KickDurationTextBlock;                             // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        KickTimeRemainingTextBlock;                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LampProp")
+		STATIC_CLASS_IMPL("KickedPlayerWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LampProp")
+		STATIC_NAME_IMPL(L"KickedPlayerWidget")
 	}
-	static class ALampProp* GetDefaultObj()
+	static class UKickedPlayerWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ALampProp>();
+		return GetDefaultObjImpl<UKickedPlayerWidget>();
 	}
 };
-DUMPER7_ASSERTS_ALampProp;
+DUMPER7_ASSERTS_UKickedPlayerWidget;
 
-// Class BrickRigs.BuildingPart
-// 0x0028 (0x0058 - 0x0030)
-class UBuildingPart final : public UObject
+// Class BrickRigs.KickPlayerPopupWidget
+// 0x0010 (0x0440 - 0x0430)
+class UKickPlayerPopupWidget : public UPopupWidget
 {
 public:
-	uint8                                         Pad_30[0x28];                                      // 0x0030(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430[0x8];                                      // 0x0430(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void Fill(uint8 MeshIdx);
-	void Floor(int32 Floor_0, uint8 MeshIdx);
-	void Grid(int32 Dist, uint8 MeshIdx);
-	void Place(EBuildingSide Side, int32 Floor, int32 Position, uint8 MeshIdx);
-	void Rect(EBuildingSide Side, int32 StartFloor, int32 EndFloor, int32 StartPosition, int32 EndPosition, uint8 MeshIdx);
+	void RevokeKick();
+	void UpdateCanConfirmKick(bool bNewCanConfirm);
+	void UpdateCanRevokeKick(bool bCanRevoke);
+	void UpdateIsLoadingKick(bool bNewLoading);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BuildingPart")
+		STATIC_CLASS_IMPL("KickPlayerPopupWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BuildingPart")
+		STATIC_NAME_IMPL(L"KickPlayerPopupWidget")
 	}
-	static class UBuildingPart* GetDefaultObj()
+	static class UKickPlayerPopupWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBuildingPart>();
+		return GetDefaultObjImpl<UKickPlayerPopupWidget>();
 	}
 };
-DUMPER7_ASSERTS_UBuildingPart;
+DUMPER7_ASSERTS_UKickPlayerPopupWidget;
 
-// Class BrickRigs.LevelInfo
-// 0x0098 (0x00E0 - 0x0048)
-class ULevelInfo final : public UPrimaryDataAsset
-{
-public:
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        Level;                                             // 0x0050(0x0020)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x20];                                      // 0x0070(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   DisplayName;                                       // 0x0090(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              DisplayIcon;                                       // 0x00A8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SortPriority;                                      // 0x00D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsesWorldComposition;                             // 0x00DC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNoWeather;                                        // 0x00DD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasAITrains;                                      // 0x00DE(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DF[0x1];                                       // 0x00DF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LevelInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelInfo")
-	}
-	static class ULevelInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULevelInfo>();
-	}
-};
-DUMPER7_ASSERTS_ULevelInfo;
-
-// Class BrickRigs.LightBrick
-// 0x0060 (0x0178 - 0x0118)
-class ULightBrick final : public UScalableBrick
-{
-public:
-	uint8                                         Pad_118[0x20];                                     // 0x0118(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Brightness;                                        // 0x0138(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class USirenSequence>             FlashSequence;                                     // 0x0140(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0148(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	ELightBrickDirection                          LightDirection;                                    // 0x0170(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LightConeAngle;                                    // 0x0174(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LightBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LightBrick")
-	}
-	static class ULightBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULightBrick>();
-	}
-};
-DUMPER7_ASSERTS_ULightBrick;
-
-// Class BrickRigs.LoadoutContainer
-// 0x0050 (0x0390 - 0x0340)
-class ALoadoutContainer : public AStaticMeshProp
-{
-public:
-	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDIconComponent*                      HUDIconComponent;                                  // 0x0348(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         AnimationLength;                                   // 0x0350(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_354[0x4];                                      // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHUDIconProperties                     IconProperties;                                    // 0x0358(0x0038)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void Interact_Inventory(class ABrickPlayerController* PC);
-	void UpdateAnimation(float InAnimRatio);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LoadoutContainer")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LoadoutContainer")
-	}
-	static class ALoadoutContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ALoadoutContainer>();
-	}
-};
-DUMPER7_ASSERTS_ALoadoutContainer;
-
-// Class BrickRigs.MapCrosshairWidget
-// 0x0000 (0x03F8 - 0x03F8)
-class UMapCrosshairWidget : public UUserWidget
-{
-public:
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
-	void SetStyleState(EBrickUIStyleState NewState);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MapCrosshairWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MapCrosshairWidget")
-	}
-	static class UMapCrosshairWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMapCrosshairWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMapCrosshairWidget;
-
-// Class BrickRigs.MapWidget
-// 0x0178 (0x0620 - 0x04A8)
-class UMapWidget : public UHUDIconCanvasWidget
-{
-public:
-	uint8                                         Pad_4A8[0xC8];                                     // 0x04A8(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHUDIconComponent*                      CursorIconComponent;                               // 0x0570(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_578[0x10];                                     // 0x0578(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               MapMID;                                            // 0x0588(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_590[0x10];                                     // 0x0590(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuButtonPanelWidget*                 ButtonPanel;                                       // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickTextBlock*                        ScaleTextBlock;                                    // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MinViewportSize;                                   // 0x05B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PanSpeed;                                          // 0x05B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ZoomSpeed;                                         // 0x05B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ZoomStep;                                          // 0x05BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ViewportInterpSpeed;                               // 0x05C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MapResolutionScale;                                // 0x05C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MapRenderInterval;                                 // 0x05C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MapMovedRenderDelay;                               // 0x05CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         GridSize;                                          // 0x05D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FFloatInterval                         ViewportSizeIconScaleRange;                        // 0x05D4(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHUDIconProperties                     CursorIconProperties;                              // 0x05E0(0x0038)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TSubclassOf<class UMapCrosshairWidget>        CrosshairWidgetClass;                              // 0x0618(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnMeasurementSystemChanged(EMeasurementSystem NewSystem);
-	void ResetPanAndZoom(bool bInitialize);
-	void UpdateViewportPannedOrZoomed(bool bValue);
-
-	class UMaterialInstanceDynamic* CreateMapMID() const;
-	class UWidget* GetWidgetToFocus() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MapWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MapWidget")
-	}
-	static class UMapWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMapWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMapWidget;
-
-// Class BrickRigs.MatchMenuWidget
-// 0x0008 (0x0410 - 0x0408)
-class UMatchMenuWidget : public UMenuPageWidget
-{
-public:
-	class UPropertiesPanelWidget*                 PropertiesPanel;                                   // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void RestartMatch();
-	void UpdateAdminRole(const EAdminRole NewRole);
-	void UpdateRestartMatchButton(bool bCanRestart, bool bSameLevelAndMode);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MatchMenuWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MatchMenuWidget")
-	}
-	static class UMatchMenuWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMatchMenuWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMatchMenuWidget;
-
-// Class BrickRigs.MatchTimerWidget
-// 0x0000 (0x03F8 - 0x03F8)
-class UMatchTimerWidget : public UUserWidget
-{
-public:
-	void UpdateTimer(int32 NewTime);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MatchTimerWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MatchTimerWidget")
-	}
-	static class UMatchTimerWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMatchTimerWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMatchTimerWidget;
-
-// Class BrickRigs.MathBrick
-// 0x0088 (0x01A0 - 0x0118)
-class UMathBrick final : public UScalableBrick
-{
-public:
-	struct FVehicleInputChannel                   InputChannelA;                                     // 0x0118(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FVehicleInputChannel                   InputChannelB;                                     // 0x0140(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FVehicleOutputChannel                  OutputChannel;                                     // 0x0168(0x0028)(Edit, NativeAccessSpecifierPrivate)
-	EMathBrickOperation                           Operation;                                         // 0x0190(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_191[0xF];                                      // 0x0191(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MathBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MathBrick")
-	}
-	static class UMathBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMathBrick>();
-	}
-};
-DUMPER7_ASSERTS_UMathBrick;
-
-// Class BrickRigs.MenuButtonPanelWidget
-// 0x0030 (0x0428 - 0x03F8)
-class UMenuButtonPanelWidget : public UUserWidget
-{
-public:
-	TArray<class UMenuButtonWidget*>              Buttons;                                           // 0x03F8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickGridPanel*                        ButtonPanel;                                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UMenuButtonWidget>          ButtonClass;                                       // 0x0418(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumButtonsPerRow;                                  // 0x0420(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ClearButtons(bool bManualRemove);
-	class UMenuButtonWidget* CreateButton(const class FText& DisplayText, int32 IconIndex, const TDelegate<void()>& Delegate);
-	void RemoveUnusedButtons();
-	void SetNumButtonsPerRow(int32 NewNum);
-
-	class UWidget* GetWidgetToFocus() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MenuButtonPanelWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MenuButtonPanelWidget")
-	}
-	static class UMenuButtonPanelWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMenuButtonPanelWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMenuButtonPanelWidget;
-
-// Class BrickRigs.MenuGameMode
-// 0x00A0 (0x0440 - 0x03A0)
-class AMenuGameMode : public AGameModeBase
-{
-public:
-	uint8                                         Pad_3A0[0x10];                                     // 0x03A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 MenuSequenceClass;                                 // 0x03B0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class AMenuSequence*                          MenuSequence;                                      // 0x03B8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3C0[0x38];                                     // 0x03C0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   MenuSequenceOverride;                              // 0x03F8(0x0030)(Edit, EditorOnly, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_428[0x18];                                     // 0x0428(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MenuGameMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MenuGameMode")
-	}
-	static class AMenuGameMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AMenuGameMode>();
-	}
-};
-DUMPER7_ASSERTS_AMenuGameMode;
-
-// Class BrickRigs.MenuPlayerController
-// 0x0038 (0x0720 - 0x06E8)
-class AMenuPlayerController : public ABasePlayerController
-{
-public:
-	class AMenuSequence*                          MenuSequence;                                      // 0x06E8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector                                CameraLocation;                                    // 0x06F0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FRotator                               CameraRotation;                                    // 0x06FC(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	float                                         CameraFOV;                                         // 0x0708(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FViewTargetTransitionParams            ViewTargetTransitionParams;                        // 0x070C(0x0010)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_71C[0x4];                                      // 0x071C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MenuPlayerController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MenuPlayerController")
-	}
-	static class AMenuPlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AMenuPlayerController>();
-	}
-};
-DUMPER7_ASSERTS_AMenuPlayerController;
-
-// Class BrickRigs.MenuWidget
-// 0x0088 (0x0498 - 0x0410)
-class UMenuWidget : public UMainWidgetBase
-{
-public:
-	uint8                                         Pad_410[0x20];                                     // 0x0410(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMenuPageWidget*                        CurrentMenuPage;                                   // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   JoinSessionPopupClass;                             // 0x0438(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   NetworkErrorPopupClass;                            // 0x0468(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void AddMenuPage(class UMenuPageWidget* Widget);
-	void CloseMenu();
-	void CreateBackButton();
-	void OnClickedBack();
-	void OnClickedQuickGame();
-	void OnMenuContextChanged(const class FName& NewContext);
-	void OpenMenu(class FName InMenu);
-	void PlayMenuTransition();
-	void RemoveMenuPage(class UMenuPageWidget* Widget);
-	void SetTitleText(const class FText& InText);
-	void ShowMenuPage(TSoftClassPtr<class UClass> WidgetClass, const class FText& TitleText);
-	bool StepBack();
-
-	bool IsMainMenu() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MenuWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MenuWidget")
-	}
-	static class UMenuWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMenuWidget>();
-	}
-};
-DUMPER7_ASSERTS_UMenuWidget;
-
-// Class BrickRigs.ModHookSubsystem
-// 0x0010 (0x0048 - 0x0038)
-class UModHookSubsystem final : public UWorldSubsystem
-{
-public:
-	TArray<class UModHook*>                       ModHooks;                                          // 0x0038(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-
-public:
-	static class UModHook* GetModHookByClass(const class UObject* WorldContextObject, const TSubclassOf<class UModHook> ModHookClass);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ModHookSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ModHookSubsystem")
-	}
-	static class UModHookSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UModHookSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UModHookSubsystem;
-
-// Class BrickRigs.MotorBrick
-// 0x00C0 (0x01B8 - 0x00F8)
-class UMotorBrick final : public UFuelConsumerBrick
-{
-public:
-	TArray<class UAxleBrick*>                     ConnectedAxles;                                    // 0x00F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_108[0x50];                                     // 0x0108(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   ThrottleInputChannel;                              // 0x0158(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         GearRatioScale;                                    // 0x0180(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTankDrive;                                        // 0x0184(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_185[0x33];                                     // 0x0185(0x0033)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MotorBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MotorBrick")
-	}
-	static class UMotorBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMotorBrick>();
-	}
-};
-DUMPER7_ASSERTS_UMotorBrick;
-
-// Class BrickRigs.NetworkErrorPopupParams
-// 0x0000 (0x0078 - 0x0078)
-class UNetworkErrorPopupParams final : public UPopupParams
+// Class BrickRigs.LedgeBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class ULedgeBrickStaticInfo : public UBrickStaticInfo
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("NetworkErrorPopupParams")
+		STATIC_CLASS_IMPL("LedgeBrickStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"NetworkErrorPopupParams")
+		STATIC_NAME_IMPL(L"LedgeBrickStaticInfo")
 	}
-	static class UNetworkErrorPopupParams* GetDefaultObj()
+	static class ULedgeBrickStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNetworkErrorPopupParams>();
+		return GetDefaultObjImpl<ULedgeBrickStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UNetworkErrorPopupParams;
+DUMPER7_ASSERTS_ULedgeBrickStaticInfo;
 
-// Class BrickRigs.NewItemCountWidget
+// Class BrickRigs.LegacyBuilding
+// 0x0050 (0x0400 - 0x03B0)
+class ALegacyBuilding : public ABrickBuilding
+{
+public:
+	uint8                                         Pad_3B0[0x10];                                     // 0x03B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDestructibleInstancesComponent*        DestructibleInstancesComponent;                    // 0x03C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FBuildingMesh>                  BuildingMeshes;                                    // 0x03C8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FBuildingMaterialOverride>      MaterialOverrides;                                 // 0x03D8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	int32                                         NumWallsX;                                         // 0x03E8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumWallsY;                                         // 0x03EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumFloors;                                         // 0x03F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3F4[0xC];                                      // 0x03F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UBuildingPart* ConstructBuildingPart(int32 NumX, int32 NumY, int32 Floors, const struct FVector& Location);
+	void ConstructFlatRoof(class UBuildingPart* Part, uint8 Mesh);
+	void ConstructIndustrialRoof(class UBuildingPart* Part, uint8 RoofSlopeMesh, uint8 RoofMesh, uint8 WallMesh);
+	void ConstructRoof(class UBuildingPart* Part, uint8 RoofGableMesh, uint8 RoofMesh, bool bRotate);
+	void SpawnBuildingPart(class UBuildingPart* Part);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LegacyBuilding")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LegacyBuilding")
+	}
+	static class ALegacyBuilding* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ALegacyBuilding>();
+	}
+};
+DUMPER7_ASSERTS_ALegacyBuilding;
+
+// Class BrickRigs.LightBrickStaticInfo
+// 0x0008 (0x01E8 - 0x01E0)
+class ULightBrickStaticInfo : public UScalableBrickStaticInfo
+{
+public:
+	float                                         Intensity;                                         // 0x01E0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        LightDirectionFlags;                               // 0x01E4(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E6[0x2];                                      // 0x01E6(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LightBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LightBrickStaticInfo")
+	}
+	static class ULightBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULightBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_ULightBrickStaticInfo;
+
+// Class BrickRigs.LoadingScreenWidget
+// 0x0000 (0x0410 - 0x0410)
+class ULoadingScreenWidget : public UMainWidgetBase
+{
+public:
+	void SetBackgroundColor(const struct FLinearColor& InColor);
+	void SetLoadingText(const class FText& Text);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LoadingScreenWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LoadingScreenWidget")
+	}
+	static class ULoadingScreenWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULoadingScreenWidget>();
+	}
+};
+DUMPER7_ASSERTS_ULoadingScreenWidget;
+
+// Class BrickRigs.LoadoutInventoryComponent
+// 0x0008 (0x02B8 - 0x02B0)
+class ULoadoutInventoryComponent : public UInventoryComponent
+{
+public:
+	uint8                                         Pad_2B0[0x8];                                      // 0x02B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LoadoutInventoryComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LoadoutInventoryComponent")
+	}
+	static class ULoadoutInventoryComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULoadoutInventoryComponent>();
+	}
+};
+DUMPER7_ASSERTS_ULoadoutInventoryComponent;
+
+// Class BrickRigs.MapPopupWidget
+// 0x0008 (0x0438 - 0x0430)
+class UMapPopupWidget : public UPopupWidget
+{
+public:
+	class UMapWidget*                             MapWidget;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MapPopupWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MapPopupWidget")
+	}
+	static class UMapPopupWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMapPopupWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMapPopupWidget;
+
+// Class BrickRigs.MatchEndWidget
 // 0x0008 (0x0400 - 0x03F8)
-class UNewItemCountWidget : public UUserWidget
+class UMatchEndWidget : public UUserWidget
 {
 public:
 	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void SetNumNewItems(int32 NewNum);
-	void UpdateNumItems(int32 NewNum);
+	void OnClickedContinue();
+	void UpdateContinueButton(int32 TimeRemaining, bool bIsHost);
+	void UpdateMatchWinner(class UBrickTeam* WinnerTeam, ETeamAttitude TeamAttitude);
+
+	class UWidget* GetWidgetToFocus() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("NewItemCountWidget")
+		STATIC_CLASS_IMPL("MatchEndWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"NewItemCountWidget")
+		STATIC_NAME_IMPL(L"MatchEndWidget")
 	}
-	static class UNewItemCountWidget* GetDefaultObj()
+	static class UMatchEndWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNewItemCountWidget>();
+		return GetDefaultObjImpl<UMatchEndWidget>();
 	}
 };
-DUMPER7_ASSERTS_UNewItemCountWidget;
+DUMPER7_ASSERTS_UMatchEndWidget;
+
+// Class BrickRigs.MatchStateWidget
+// 0x0020 (0x0418 - 0x03F8)
+class UMatchStateWidget : public UUserWidget
+{
+public:
+	uint8                                         Pad_3F8[0x20];                                     // 0x03F8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnFadedOut();
+	void UpdateMatchState(const class FText& NewDisplayText, EBrickUIColorStyle NewColorStyle, bool bFadeOut);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MatchStateWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MatchStateWidget")
+	}
+	static class UMatchStateWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMatchStateWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMatchStateWidget;
+
+// Class BrickRigs.MathBrickStaticInfo
+// 0x0000 (0x01E0 - 0x01E0)
+class UMathBrickStaticInfo : public UScalableBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MathBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MathBrickStaticInfo")
+	}
+	static class UMathBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMathBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UMathBrickStaticInfo;
+
+// Class BrickRigs.MeleeAction
+// 0x0010 (0x00A0 - 0x0090)
+class UMeleeAction : public UCharacterAction
+{
+public:
+	float                                         ApplyDamageTime;                                   // 0x0090(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamageSweepDistance;                               // 0x0094(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamageSweepRadius;                                 // 0x0098(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeleeDamage;                                       // 0x009C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeleeAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeleeAction")
+	}
+	static class UMeleeAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeleeAction>();
+	}
+};
+DUMPER7_ASSERTS_UMeleeAction;
+
+// Class BrickRigs.MenuButtonWidget
+// 0x0030 (0x0440 - 0x0410)
+class UMenuButtonWidget : public UBrickUserWidget
+{
+public:
+	class UBrickButtonWidget*                     Button;                                            // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        TextBlock;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickImage*                            IconImage;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_428[0x18];                                     // 0x0428(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnClicked();
+	void SetColorStyle(EBrickUIColorStyle InColorStyle);
+	void SetDisplayIcon(TSoftObjectPtr<class UTexture2D> InIconTexture);
+	void SetDisplayText(const class FText& InText);
+	void UpdateColorStyle(const EBrickUIColorStyle InColorStyle);
+	void UpdateDisplayText(const class FText& InText);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MenuButtonWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MenuButtonWidget")
+	}
+	static class UMenuButtonWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMenuButtonWidget>();
+	}
+};
+DUMPER7_ASSERTS_UMenuButtonWidget;
+
+// Class BrickRigs.MenuMusic
+// 0x0030 (0x0078 - 0x0048)
+class UMenuMusic : public UPrimaryDataAsset
+{
+public:
+	TSoftObjectPtr<class USoundWave>              Sound;                                             // 0x0048(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MenuMusic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MenuMusic")
+	}
+	static class UMenuMusic* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMenuMusic>();
+	}
+};
+DUMPER7_ASSERTS_UMenuMusic;
+
+// Class BrickRigs.MenuSequence
+// 0x0030 (0x0328 - 0x02F8)
+class AMenuSequence: public AActor
+{
+public:
+	uint8                                         Pad_2F8[0x10];                                     // 0x02F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMenuSequenceProperties                MenuSequenceProperties;                            // 0x0308(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void CreateMenuButtons(class UMenuButtonPanelWidget* ButtonPanel);
+	void OnDefaultVehiclesQueried(const TArray<struct FUGCFileInfo>& FileInfos);
+	void QueryDefaultVehicles();
+
+	bool IsMenuSequenceReady() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MenuSequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MenuSequence")
+	}
+	static class AMenuSequence* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AMenuSequence>();
+	}
+};
+DUMPER7_ASSERTS_AMenuSequence;
+
+// Class BrickRigs.ModHook
+// 0x0000 (0x0030 - 0x0030)
+class UModHook : public UObject
+{
+public:
+	void BeginPlay();
+	void EndPlay();
+	void OnCharacterBeginPlay(class ABaseCharacter* Character);
+	void OnPlayerControllerBeginPlay(class ABasePlayerController* PC);
+	void OnSpectatorBeginPlay(class ABrickSpectatorPawn* Pawn);
+	void OnVehicleBeginPlay(class ABrickVehicle* Vehicle);
+	TSoftObjectPtr<class UTexture2D> OverrideBillboardTexture(const TSoftObjectPtr<class UTexture2D>& Texture, class ABillboard* Billboard);
+	struct FInventoryLoadout OverrideCharacterLoadout(const struct FInventoryLoadout& Loadout, class ABaseCharacter* Character);
+	TSubclassOf<class AGameModeBase> OverrideGameModeClass(TSubclassOf<class AGameModeBase> GameModeClass, const class FString& MapName, const class FString& Options, const class FString& Portal);
+	TSubclassOf<class AGameStateBase> OverrideGameStateClass(TSubclassOf<class AGameStateBase> GameStateClass);
+	TArray<TSubclassOf<class AInventoryItem>> OverrideLoadoutContainerItems(const TArray<TSubclassOf<class AInventoryItem>>& ItemClasses);
+	bool OverrideLoadSubLevel(bool bLoadLevel, const class FString& LevelName, class UGameModeInfo* GameMode);
+	bool OverrideMenu(class UMenuWidget* Widget, const class FName& Context);
+	TSoftClassPtr<class UClass> OverrideMenuSequence(const TSoftClassPtr<class UClass>& SequenceClass);
+	struct FWorldSetupParams OverrideMenuWorldSetupParams(const struct FWorldSetupParams& Params_0);
+	TSubclassOf<class APawn> OverridePawnClass(TSubclassOf<class APawn> PawnClass, class AController* Controller);
+	TSubclassOf<class APlayerCameraManager> OverridePlayerCameraManagerClass(TSubclassOf<class APlayerCameraManager> PlayerCameraManagerClass, class ABasePlayerController* PC);
+	TSubclassOf<class APlayerController> OverridePlayerControllerClass(TSubclassOf<class APlayerController> PlayerControllerClass);
+	TSubclassOf<class APlayerController> OverrideReplayPlayerControllerClass(TSubclassOf<class APlayerController> PlayerControllerClass);
+	TSubclassOf<class ASpectatorPawn> OverrideSpectatorClass(TSubclassOf<class ASpectatorPawn> SpectatorClass);
+	TSubclassOf<class ATrain> OverrideTrainClass(TSubclassOf<class ATrain> TrainClass);
+	TSubclassOf<class ABrickVehicle> OverrideVehicleClass(TSubclassOf<class ABrickVehicle> VehicleClass, class ABrickPlayerController* PC, const struct FPlayerSpawnRequest& SpawnRequest);
+	void PostConstructVehicle(class ABrickVehicle* Vehicle);
+	void PostSpawnPawn(class APawn* Pawn);
+	void PostSpawnPlayerController(class APlayerController* PC);
+	void PostSpawnSpectatorPawn(class ASpectatorPawn* Pawn);
+	void PostSpawnVehicle(class ABrickVehicle* Vehicle);
+	void PreConstructVehicle(class ABrickVehicle* Vehicle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ModHook")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ModHook")
+	}
+	static class UModHook* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModHook>();
+	}
+};
+DUMPER7_ASSERTS_UModHook;
+
+// Class BrickRigs.MotorBrickStaticInfo
+// 0x0060 (0x0218 - 0x01B8)
+class UMotorBrickStaticInfo : public UFuelConsumerBrickStaticInfo
+{
+public:
+	class USoundCue*                              MotorSoundCue;                                     // 0x01B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             StartupSound;                                      // 0x01C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             BrakeReleaseSound;                                 // 0x01C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             BackFireSound;                                     // 0x01D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartupTime;                                       // 0x01D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Acceleration;                                      // 0x01DC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         RPMRange;                                          // 0x01E0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ClutchRPMRange;                                    // 0x01E8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ShiftUpRPMRange;                                   // 0x01F0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatInterval                         ShiftDownRPMRange;                                 // 0x01F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BackfireRPM;                                       // 0x0200(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShiftDelay;                                        // 0x0204(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinAutoShiftDelay;                                 // 0x0208(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         NumForwardGears;                                   // 0x020C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         NumReverseGears;                                   // 0x020D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20E[0x2];                                      // 0x020E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LastGearSpeed;                                     // 0x0210(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotorBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotorBrickStaticInfo")
+	}
+	static class UMotorBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotorBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UMotorBrickStaticInfo;
+
+// Class BrickRigs.MudguardBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UMudguardBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MudguardBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MudguardBrickStaticInfo")
+	}
+	static class UMudguardBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMudguardBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UMudguardBrickStaticInfo;
+
+// Class BrickRigs.NetworkErrorPopupWidget
+// 0x0008 (0x0438 - 0x0430)
+class UNetworkErrorPopupWidget : public UPopupWidget
+{
+public:
+	class UBrickTextBlock*                        MessageTextBlock;                                  // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NetworkErrorPopupWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetworkErrorPopupWidget")
+	}
+	static class UNetworkErrorPopupWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNetworkErrorPopupWidget>();
+	}
+};
+DUMPER7_ASSERTS_UNetworkErrorPopupWidget;
 
 // Class BrickRigs.ObjectPropertyItemInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -13557,7 +13366,7 @@ public:
 DUMPER7_ASSERTS_UPagedListWidget;
 
 // Class BrickRigs.PaintAttachmentStaticInfo
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x03D0 - 0x03D0)
 class UPaintAttachmentStaticInfo : public UAttachmentStaticInfo
 {
 public:
@@ -13577,8 +13386,8 @@ public:
 DUMPER7_ASSERTS_UPaintAttachmentStaticInfo;
 
 // Class BrickRigs.PassengerInputComponent
-// 0x0000 (0x02C0 - 0x02C0)
-class UPassengerInputComponent final : public UVehicleInputComponent
+// 0x0000 (0x0278 - 0x0278)
+class UPassengerInputComponent : public UVehicleInputComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -13597,8 +13406,8 @@ public:
 DUMPER7_ASSERTS_UPassengerInputComponent;
 
 // Class BrickRigs.PendingLevelPlayerController
-// 0x0000 (0x06E8 - 0x06E8)
-class APendingLevelPlayerController final : public ABasePlayerController
+// 0x0000 (0x0718 - 0x0718)
+class APendingLevelPlayerController : public ABasePlayerController
 {
 public:
 	static class UClass* StaticClass()
@@ -13617,14 +13426,14 @@ public:
 DUMPER7_ASSERTS_APendingLevelPlayerController;
 
 // Class BrickRigs.PlacableObjectInputComponent
-// 0x0018 (0x01A8 - 0x0190)
-class UPlacableObjectInputComponent final : public UBaseEditorInputComponent
+// 0x0018 (0x0228 - 0x0210)
+class UPlacableObjectInputComponent : public UBaseEditorInputComponent
 {
 public:
-	uint8                                         Pad_190[0x18];                                     // 0x0190(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210[0x18];                                     // 0x0210(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnPressedSelectByPlacableType();
+	struct FBrActionResult Action_SelectByPlacableType(const struct FBrActionParams& Params_0);
 
 public:
 	static class UClass* StaticClass()
@@ -13642,168 +13451,184 @@ public:
 };
 DUMPER7_ASSERTS_UPlacableObjectInputComponent;
 
-// Class BrickRigs.PlayerInputComponent
-// 0x0098 (0x0218 - 0x0180)
-class UPlayerInputComponent final : public UBaseInputComponent
+// Class BrickRigs.PlayerControllerStaticInfo
+// 0x0300 (0x0330 - 0x0030)
+class UPlayerControllerStaticInfo : public UObject
 {
 public:
-	uint8                                         Pad_180[0x90];                                     // 0x0180(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInteractionComponent*                  FocusedBrickInteractionComponent;                  // 0x0210(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	void InteractAxis(float Val);
-	void OnPressedChat();
-	void OnPressedCycleMeasurementSystem();
-	void OnPressedInteractPri();
-	void OnPressedInteractSec();
-	void OnPressedInteractTer();
-	void OnPressedMoveCamera();
-	void OnPressedScoreboard();
-	void OnReleasedInteractPri();
-	void OnReleasedInteractSec();
-	void OnReleasedInteractTer();
-	void OnReleasedMoveCamera();
-
-	class FText GetCycleMeasurementSystemValueText() const;
+	struct FCameraFadeParams                      LevelTransitionFade;                               // 0x0030(0x001C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraFadeParams                      StateTransitionFade;                               // 0x004C(0x001C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraFadeParams                      MatchEndFade;                                      // 0x0068(0x001C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         MaxNumChatMessages;                                // 0x0084(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   JoinSessionPopupClass;                             // 0x0088(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   MapPopupClass;                                     // 0x00B8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ScoreboardPopupClass;                              // 0x00E8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   InventoryPopupClass;                               // 0x0118(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   VehicleBrowserPopupClass;                          // 0x0148(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   UnsavedChangesPopupClass;                          // 0x0178(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   CheatMenuPopupClass;                               // 0x01A8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   KickPlayerPopupClass;                              // 0x01D8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   PlayerHUDWidgetClass;                              // 0x0208(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   SpawnHUDWidgetClass;                               // 0x0238(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   SpectatorHUDWidgetClass;                           // 0x0268(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   EditorHUDWidgetClass;                              // 0x0298(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   MatchEndHUDWidgetClass;                            // 0x02C8(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxInteractionAngle;                               // 0x02F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxCharacterInteractionDistance;                   // 0x02FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VehicleHUDIconDrawDistanceScale;                   // 0x0300(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpectatorHUDIconDrawDistanceScale;                 // 0x0304(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundMix*                              DeathSoundMix;                                     // 0x0308(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundMix*                              NoAtmosphereSoundMix;                              // 0x0310(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundBase*                             HurtSound;                                         // 0x0318(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AVehicleEditor>             VehicleEditorClass;                                // 0x0320(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EditorEntryGarageInflation;                        // 0x0328(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClientVehicleDamageGracePeriod;                    // 0x032C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PlayerInputComponent")
+		STATIC_CLASS_IMPL("PlayerControllerStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PlayerInputComponent")
+		STATIC_NAME_IMPL(L"PlayerControllerStaticInfo")
 	}
-	static class UPlayerInputComponent* GetDefaultObj()
+	static class UPlayerControllerStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPlayerInputComponent>();
+		return GetDefaultObjImpl<UPlayerControllerStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_UPlayerInputComponent;
+DUMPER7_ASSERTS_UPlayerControllerStaticInfo;
 
-// Class BrickRigs.MessagePopupParams
-// 0x0020 (0x0098 - 0x0078)
-class UMessagePopupParams final : public UPopupParams
+// Class BrickRigs.PlayerWidget
+// 0x0238 (0x06E0 - 0x04A8)
+class alignas(0x10) UPlayerWidget : public UHUDIconCanvasWidget
 {
 public:
-	class FText                                   TitleText;                                         // 0x0078(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          bCanCancel;                                        // 0x0090(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A8[0x68];                                     // 0x04A8(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCrosshairWidget*                       CrosshairWidget;                                   // 0x0510(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UHurtMarkerWidget*>              HurtMarkers;                                       // 0x0518(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	class URestrictedAreaWidget*                  RestrictedAreaWidget;                              // 0x0528(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UDashboardWidget*                       VehicleDashboardWidget;                            // 0x0530(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UDashboardWidget*                       CharacterDashboardWidget;                          // 0x0538(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UCameraBrickWidget*                     CameraBrickWidget;                                 // 0x0540(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_548[0x10C];                                    // 0x0548(0x010C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFloatInterval                         IconScaleDistanceRange;                            // 0x0654(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_65C[0x4];                                      // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCrosshairWidget>           CrosshairWidgetClass;                              // 0x0660(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UHurtMarkerWidget>          HurtMarkerClass;                                   // 0x0668(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         MaxNumHurtMarkers;                                 // 0x0670(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_674[0x4];                                      // 0x0674(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class URestrictedAreaWidget>      RestrictedAreaWidgetClass;                         // 0x0678(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   VehicleDashboardWidgetClass;                       // 0x0680(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   CharacterDashboardWidgetClass;                     // 0x06B0(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void AddCameraBrickWidget(class UCameraBrickWidget* InWidget);
+	void AddCharacterDashboardWidget(class UUserWidget* InWidget);
+	void AddCrosshairWidget(class UCrosshairWidget* InWidget);
+	void AddRestrictedAreaWidget(class URestrictedAreaWidget* InWidget);
+	void AddVehicleDashboardWidget(class UUserWidget* InWidget);
+	void OnHUDVisibilityChanged(EHUDVisibility NewVisibility);
+	void OnInputHelpOpenChanged(const bool bNewOpen);
+	void OnViewTargetSubobjectChanged(class UObject* NewViewTargetSubobject);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MessagePopupParams")
+		STATIC_CLASS_IMPL("PlayerWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MessagePopupParams")
+		STATIC_NAME_IMPL(L"PlayerWidget")
 	}
-	static class UMessagePopupParams* GetDefaultObj()
+	static class UPlayerWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMessagePopupParams>();
+		return GetDefaultObjImpl<UPlayerWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMessagePopupParams;
+DUMPER7_ASSERTS_UPlayerWidget;
 
-// Class BrickRigs.PropellerBrick
-// 0x0000 (0x00F0 - 0x00F0)
-class UPropellerBrick final : public UBrick
+// Class BrickRigs.ProjectileManagerComponent
+// 0x0150 (0x0210 - 0x00C0)
+class UProjectileManagerComponent : public UActorComponent
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PropellerBrick")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PropellerBrick")
-	}
-	static class UPropellerBrick* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropellerBrick>();
-	}
-};
-DUMPER7_ASSERTS_UPropellerBrick;
-
-// Class BrickRigs.PropertiesPanelWidget
-// 0x0078 (0x0470 - 0x03F8)
-class UPropertiesPanelWidget : public UUserWidget
-{
-public:
-	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UPropertyCategoryWidget*>        PropertyCategoryWidgets;                           // 0x0410(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class UPropertyContainerWidget*>       PropertyContainerWidgets;                          // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_430[0x28];                                     // 0x0430(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UPropertyCategoryWidget>    CategoryWidgetClass;                               // 0x0458(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UPropertyContainerWidget>   ContainerWidgetClass;                              // 0x0460(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumPropertiesPerRow;                               // 0x0468(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EOrientation                                  Orientation;                                       // 0x046C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x150];                                     // 0x00C0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void AddCategoryWidget(class UPropertyCategoryWidget* Widget, int32 Index_0);
-	void AddProperties(class UObject* ActiveObject, const struct FBrickPropertyReflectionFilter& InFilter);
-	void AddPropertiesForSelection(class UObject* ActiveObject, const TArray<class UObject*>& SelectedObjects, const struct FBrickPropertyReflectionFilter& InFilter);
-	void ClearProperties();
-	void UpdateProperties();
+	void OnParticleComponentFinished(class UParticleSystemComponent* PSC);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PropertiesPanelWidget")
+		STATIC_CLASS_IMPL("ProjectileManagerComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PropertiesPanelWidget")
+		STATIC_NAME_IMPL(L"ProjectileManagerComponent")
 	}
-	static class UPropertiesPanelWidget* GetDefaultObj()
+	static class UProjectileManagerComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPropertiesPanelWidget>();
+		return GetDefaultObjImpl<UProjectileManagerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPropertiesPanelWidget;
+DUMPER7_ASSERTS_UProjectileManagerComponent;
 
-// Class BrickRigs.PropertyContainerWidget
-// 0x0068 (0x0478 - 0x0410)
-class UPropertyContainerWidget : public UBrickUserWidget
+// Class BrickRigs.PropertyCategoryWidget
+// 0x0018 (0x0410 - 0x03F8)
+class UPropertyCategoryWidget : public UUserWidget
 {
 public:
-	uint8                                         Pad_410[0x30];                                     // 0x0410(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPropertyWidget*                        PropertyWidget;                                    // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_448[0x18];                                     // 0x0448(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrickImage*                            IconImage;                                         // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMenuButtonPanelWidget*                 ButtonPanelWidget;                                 // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3F8[0x18];                                     // 0x03F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void AddPropertyWidget(class UPropertyWidget* Widget, EOrientation InOrientation);
-	bool OpenContextMenu();
-	void PostAddPropertyButtons();
-	void PreAddPropertyButtons();
-	void UpdateColorStyle(EBrickUIColorStyle InColorStyle);
-	void UpdateIsReadOnly(bool bInReadOnly);
-	void UpdateOrientation(EOrientation InOrientation);
-
-	class UMenuButtonPanelWidget* GetMenuButtonPanelWidget() const;
-	class UWidget* GetWidgetToFocus() const;
+	void UpdateCategory(const class FText& DisplayName);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PropertyContainerWidget")
+		STATIC_CLASS_IMPL("PropertyCategoryWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PropertyContainerWidget")
+		STATIC_NAME_IMPL(L"PropertyCategoryWidget")
 	}
-	static class UPropertyContainerWidget* GetDefaultObj()
+	static class UPropertyCategoryWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPropertyContainerWidget>();
+		return GetDefaultObjImpl<UPropertyCategoryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPropertyContainerWidget;
+DUMPER7_ASSERTS_UPropertyCategoryWidget;
+
+// Class BrickRigs.PropertyContainerInputComponent
+// 0x0010 (0x0210 - 0x0200)
+class UPropertyContainerInputComponent : public UBaseInputComponent
+{
+public:
+	uint8                                         Pad_200[0x10];                                     // 0x0200(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FBrActionResult Action_CopyValue(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PasteValue(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_PickValue(const struct FBrActionParams& Params_0);
+	struct FBrActionResult Action_SelectByValue(const struct FBrActionParams& Params_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropertyContainerInputComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyContainerInputComponent")
+	}
+	static class UPropertyContainerInputComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropertyContainerInputComponent>();
+	}
+};
+DUMPER7_ASSERTS_UPropertyContainerInputComponent;
 
 // Class BrickRigs.PumpBrickStaticInfo
 // 0x0078 (0x0218 - 0x01A0)
@@ -13852,33 +13677,6 @@ public:
 };
 DUMPER7_ASSERTS_ARaceTimer;
 
-// Class BrickRigs.RadioButtonWidget
-// 0x0008 (0x0418 - 0x0410)
-class URadioButtonWidget final : public UBrickUserWidget
-{
-public:
-	class UBrickButtonWidget*                     Button;                                            // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void OnRadioButtonClicked();
-	void SetIsSelected(bool bNewSelected);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RadioButtonWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RadioButtonWidget")
-	}
-	static class URadioButtonWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URadioButtonWidget>();
-	}
-};
-DUMPER7_ASSERTS_URadioButtonWidget;
-
 // Class BrickRigs.RCBrickStaticInfo
 // 0x0000 (0x01E0 - 0x01E0)
 class URCBrickStaticInfo : public UScalableBrickStaticInfo
@@ -13921,7 +13719,7 @@ DUMPER7_ASSERTS_URedirectorBrickStaticInfo;
 
 // Class BrickRigs.RestrictedAreaVolume
 // 0x0008 (0x0340 - 0x0338)
-class ARestrictedAreaVolume final : public AVolume
+class ARestrictedAreaVolume : public AVolume
 {
 public:
 	bool                                          bInvertVolume;                                     // 0x0338(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -13950,7 +13748,7 @@ DUMPER7_ASSERTS_ARestrictedAreaVolume;
 
 // Class BrickRigs.ReuploadPopupParams
 // 0x00E8 (0x0160 - 0x0078)
-class UReuploadPopupParams final : public UPopupParams
+class UReuploadPopupParams : public UPopupParams
 {
 public:
 	uint8                                         Pad_78[0xE8];                                      // 0x0078(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -13993,7 +13791,7 @@ DUMPER7_ASSERTS_URodBrickStaticInfo;
 
 // Class BrickRigs.RotorBladeBrick
 // 0x0000 (0x00F0 - 0x00F0)
-class URotorBladeBrick final : public UBrick
+class URotorBladeBrick : public UBrick
 {
 public:
 	static class UClass* StaticClass()
@@ -14013,7 +13811,7 @@ DUMPER7_ASSERTS_URotorBladeBrick;
 
 // Class BrickRigs.RotorBrick
 // 0x0008 (0x00F8 - 0x00F0)
-class URotorBrick final : public UBrick
+class URotorBrick : public UBrick
 {
 public:
 	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -14035,8 +13833,8 @@ public:
 DUMPER7_ASSERTS_URotorBrick;
 
 // Class BrickRigs.SandboxGameState
-// 0x0000 (0x06D0 - 0x06D0)
-class ASandboxGameState final : public ABrickGameState
+// 0x0000 (0x09B8 - 0x09B8)
+class ASandboxGameState : public ABrickGameState
 {
 public:
 	static class UClass* StaticClass()
@@ -14107,8 +13905,8 @@ public:
 DUMPER7_ASSERTS_UScoreboardWidget;
 
 // Class BrickRigs.SeatBrick
-// 0x0168 (0x0258 - 0x00F0)
-class USeatBrick final : public UBrick
+// 0x0190 (0x0280 - 0x00F0)
+class USeatBrick : public UBrick
 {
 public:
 	uint8                                         Pad_F0[0x10];                                      // 0x00F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
@@ -14116,28 +13914,39 @@ public:
 	uint8                                         Pad_108[0x20];                                     // 0x0108(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVehicleInput                          RepVehicleInput;                                   // 0x0128(0x0020)(Net, Transient, RepNotify, NoDestructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_148[0x78];                                     // 0x0148(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SeatName;                                          // 0x01C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector                                ExitLocation;                                      // 0x01D0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DC[0x7C];                                     // 0x01DC(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleOutputChannel                  OutputChannel;                                     // 0x01C0(0x0028)(Transient, NativeAccessSpecifierPrivate)
+	class FString                                 SeatName;                                          // 0x01E8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector                                ExitLocation;                                      // 0x01F8(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_204[0x7C];                                     // 0x0204(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Interact_EnterSeat(class ABrickPlayerController* PC);
 	void OnRep_Character(class ABrickCharacter* OldCharacter);
 	void OnRep_VehicleInput();
-	void SetInputAction(const EVehicleInputAxis Action, const bool bEnable);
-	void SetInputActionForced(const EVehicleInputAxis Action, const bool bEnable);
-	void SetInputAxis(const EVehicleInputAxis Axis, const float Val);
-	void SetInputAxisForced(const EVehicleInputAxis Axis, const float Val);
-	void ToggleInputAction(const EVehicleInputAxis Action);
+	void SetInputAction(const EVehicleInputAxis Action, const bool bEnable, const bool bNotifyInputComponent);
+	void SetInputActionForced(const EVehicleInputAxis Action, const bool bEnable, const bool bNotifyInputComponent);
+	void SetInputAxis(const EVehicleInputAxis Axis, const float Val, const bool bNotifyInputComponent);
+	void SetInputAxisForced(const EVehicleInputAxis Axis, const float Val, const bool bNotifyInputComponent);
+	void ToggleInputAction(const EVehicleInputAxis Action, const bool bNotifyInputComponent);
 
+	bool CanCycleFireActionMode() const;
+	int32 GetActiveSirenIndex() const;
+	class FText GetCameraDisplayName() const;
 	const TArray<struct FBrickEditorObjectID> GetControlledMotors() const;
 	int32 GetCurrentGear() const;
 	float GetCurrentRPM() const;
+	int32 GetFireActionMode() const;
 	bool GetFlipMotorThrottle() const;
+	void GetGearRange(int32* OutMin, int32* OutMax) const;
+	void GetIdealRPMRange(float* OutMin, float* OutMax) const;
 	bool GetInputAction(const EVehicleInputAxis Action) const;
 	float GetInputAxis(const EVehicleInputAxis Axis) const;
 	class UMotorBrick* GetMainMotor() const;
 	float GetMaxRPM() const;
+	int32 GetNumSirens() const;
+	class FText GetSeatDisplayName() const;
+	TArray<int32> GetValidFireActionModes() const;
+	bool IsInputAxisBound(const EVehicleInputAxis Axis) const;
 
 public:
 	static class UClass* StaticClass()
@@ -14177,15 +13986,15 @@ DUMPER7_ASSERTS_USensorBrickStaticInfo;
 
 // Class BrickRigs.SensorBrick
 // 0x0070 (0x01C0 - 0x0150)
-class alignas(0x10) USensorBrick final : public USensorBrickBase
+class alignas(0x10) USensorBrick : public USensorBrickBase
 {
 public:
 	uint8                                         Pad_150[0x40];                                     // 0x0150(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVehicleInputChannel                   EnabledInputChannel;                               // 0x0190(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	ESensorType                                   SensorType;                                        // 0x01B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EProximitySensorMask                          TraceMask;                                         // 0x01B9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bReturnToZero;                                     // 0x01BA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1BB[0x5];                                      // 0x01BB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   EnabledInputChannel;                               // 0x0190(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	ESensorType                                   SensorType;                                        // 0x01B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EProximitySensorMask                          TraceMask;                                         // 0x01B1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bReturnToZero;                                     // 0x01B2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1B3[0xD];                                      // 0x01B3(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -14203,51 +14012,67 @@ public:
 };
 DUMPER7_ASSERTS_USensorBrick;
 
-// Class BrickRigs.SightAttachment
-// 0x0048 (0x0390 - 0x0348)
-class ASightAttachment : public AAttachment
+// Class BrickRigs.ServerWidget
+// 0x0198 (0x05B8 - 0x0420)
+class UServerWidget : public UPagedListEntryWidget
 {
 public:
-	uint8                                         Pad_348[0x20];                                     // 0x0348(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               OcclusionMID;                                      // 0x0368(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMaterialInterface*                     ReticleMaterial;                                   // 0x0370(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_378[0x18];                                     // 0x0378(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBrickOnlineSessionInfo                Entry;                                             // 0x0420(0x0168)(Transient, NativeAccessSpecifierPrivate)
+	class UBrickTextBlock*                        NameTextBlock;                                     // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        MapTextBlock;                                      // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        GameModeTextBlock;                                 // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickTextBlock*                        PlayerCountTextBlock;                              // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPingIndicatorWidget*                   PingIndicator;                                     // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPingIndicatorWidget*                   FrameRateIndicator;                                // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void UpdateServer(const struct FBrickOnlineSessionInfo& SessionInfo);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SightAttachment")
+		STATIC_CLASS_IMPL("ServerWidget")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SightAttachment")
+		STATIC_NAME_IMPL(L"ServerWidget")
 	}
-	static class ASightAttachment* GetDefaultObj()
+	static class UServerWidget* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ASightAttachment>();
+		return GetDefaultObjImpl<UServerWidget>();
 	}
 };
-DUMPER7_ASSERTS_ASightAttachment;
+DUMPER7_ASSERTS_UServerWidget;
 
-// Class BrickRigs.SirenBrickStaticInfo
-// 0x0000 (0x01A0 - 0x01A0)
-class USirenBrickStaticInfo : public UBrickStaticInfo
+// Class BrickRigs.SightStaticInfo
+// 0x0080 (0x0450 - 0x03D0)
+class USightStaticInfo : public UAttachmentStaticInfo
 {
+public:
+	TSoftObjectPtr<class UMaterialInterface>      ReticleMaterial;                                   // 0x03D0(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LenseRadius;                                       // 0x0400(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UMaterialInterface>      OcclusionMaterial;                                 // 0x0408(0x0030)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RailFlangeLength;                                  // 0x0438(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RearOverhang;                                      // 0x043C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrontOverhang;                                     // 0x0440(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_444[0xC];                                      // 0x0444(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SirenBrickStaticInfo")
+		STATIC_CLASS_IMPL("SightStaticInfo")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SirenBrickStaticInfo")
+		STATIC_NAME_IMPL(L"SightStaticInfo")
 	}
-	static class USirenBrickStaticInfo* GetDefaultObj()
+	static class USightStaticInfo* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USirenBrickStaticInfo>();
+		return GetDefaultObjImpl<USightStaticInfo>();
 	}
 };
-DUMPER7_ASSERTS_USirenBrickStaticInfo;
+DUMPER7_ASSERTS_USightStaticInfo;
 
 // Class BrickRigs.SirenSequence
 // 0x0058 (0x0088 - 0x0030)
@@ -14277,7 +14102,7 @@ DUMPER7_ASSERTS_USirenSequence;
 
 // Class BrickRigs.SoundNodeFirearm
 // 0x0020 (0x0078 - 0x0058)
-class USoundNodeFirearm final : public USoundNode
+class USoundNodeFirearm : public USoundNode
 {
 public:
 	class USoundWave*                             FireSound;                                         // 0x0058(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -14387,7 +14212,7 @@ DUMPER7_ASSERTS_USpectatorWidget;
 
 // Class BrickRigs.SpinnerBrick
 // 0x0028 (0x0130 - 0x0108)
-class USpinnerBrick final : public UScalableBrickBase
+class USpinnerBrick : public UScalableBrickBase
 {
 public:
 	class UStaticMesh*                            SpinnerStaticMesh;                                 // 0x0108(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -14417,7 +14242,7 @@ DUMPER7_ASSERTS_USpinnerBrick;
 
 // Class BrickRigs.SprocketWheelBrick
 // 0x0060 (0x0170 - 0x0110)
-class USprocketWheelBrick final : public UTrackWheelBrick
+class USprocketWheelBrick : public UTrackWheelBrick
 {
 public:
 	uint8                                         Pad_110[0x48];                                     // 0x0110(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
@@ -14465,17 +14290,17 @@ public:
 DUMPER7_ASSERTS_UStructPropertyWidget;
 
 // Class BrickRigs.SwitchBrick
-// 0x0058 (0x01A8 - 0x0150)
-class USwitchBrick final : public USensorBrickBase
+// 0x0050 (0x01A0 - 0x0150)
+class USwitchBrick : public USensorBrickBase
 {
 public:
 	uint8                                         Pad_150[0xC];                                      // 0x0150(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	int8                                          InteractionValue;                                  // 0x015C(0x0001)(Net, ZeroConstructor, Transient, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_15D[0xB];                                      // 0x015D(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SwitchName;                                        // 0x0168(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVehicleInputChannel                   InputChannel;                                      // 0x0178(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	bool                                          bReturnToZero;                                     // 0x01A0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVehicleInputChannel                   InputChannel;                                      // 0x0178(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	bool                                          bReturnToZero;                                     // 0x0198(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Interact_Deactivate(class ABrickPlayerController* OtherPC);
@@ -14550,7 +14375,7 @@ DUMPER7_ASSERTS_UTargetMarkerBrickStaticInfo;
 
 // Class BrickRigs.TargetMarkerBrick
 // 0x0018 (0x0188 - 0x0170)
-class UTargetMarkerBrick final : public UCameraBrick
+class UTargetMarkerBrick : public UCameraBrick
 {
 public:
 	uint8                                         Pad_170[0x18];                                     // 0x0170(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -14625,6 +14450,35 @@ public:
 };
 DUMPER7_ASSERTS_UTeamScoreWidget;
 
+// Class BrickRigs.TextBrick
+// 0x0038 (0x0150 - 0x0118)
+class UTextBrick : public UScalableBrick
+{
+public:
+	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Text;                                              // 0x0128(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrickFont*                             Font;                                              // 0x0138(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         FontSize;                                          // 0x0140(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FColor                                 TextColor;                                         // 0x0144(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         OutlineThickness;                                  // 0x0148(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TextBrick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TextBrick")
+	}
+	static class UTextBrick* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTextBrick>();
+	}
+};
+DUMPER7_ASSERTS_UTextBrick;
+
 // Class BrickRigs.ThrusterBrickStaticInfo
 // 0x0068 (0x0248 - 0x01E0)
 class UThrusterBrickStaticInfo : public UScalableBrickStaticInfo
@@ -14660,33 +14514,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UThrusterBrickStaticInfo;
-
-// Class BrickRigs.TooltipWidget
-// 0x0040 (0x0450 - 0x0410)
-class UTooltipWidget : public UBrickUserWidget
-{
-public:
-	uint8                                         Pad_410[0x40];                                     // 0x0410(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void FadeIn();
-	void UpdateTooltipContent(const struct FTooltipContent& InContent);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TooltipWidget")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TooltipWidget")
-	}
-	static class UTooltipWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTooltipWidget>();
-	}
-};
-DUMPER7_ASSERTS_UTooltipWidget;
 
 // Class BrickRigs.Train
 // 0x00C8 (0x03C0 - 0x02F8)
@@ -14728,6 +14555,26 @@ public:
 };
 DUMPER7_ASSERTS_ATrain;
 
+// Class BrickRigs.TrussBrickStaticInfo
+// 0x0000 (0x01A0 - 0x01A0)
+class UTrussBrickStaticInfo : public UBrickStaticInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TrussBrickStaticInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TrussBrickStaticInfo")
+	}
+	static class UTrussBrickStaticInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTrussBrickStaticInfo>();
+	}
+};
+DUMPER7_ASSERTS_UTrussBrickStaticInfo;
+
 // Class BrickRigs.TurbineBrickStaticInfo
 // 0x0048 (0x0200 - 0x01B8)
 class UTurbineBrickStaticInfo : public UFuelConsumerBrickStaticInfo
@@ -14763,7 +14610,7 @@ DUMPER7_ASSERTS_UTurbineBrickStaticInfo;
 
 // Class BrickRigs.UGCFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
-class UUGCFunctionLibrary final : public UBlueprintFunctionLibrary
+class UUGCFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 	static struct FFluUGCItemIdWrapper MakeOnlineUGCItemId(const class FString& ItemId);
@@ -14783,35 +14630,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UUGCFunctionLibrary;
-
-// Class BrickRigs.UGCMetaDataPopupParams
-// 0x0108 (0x0180 - 0x0078)
-class UUGCMetaDataPopupParams final : public UPopupParams
-{
-public:
-	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUpdateTitle;                                      // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUpdateDescription;                                // 0x0081(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUpdateThumbnail;                                  // 0x0082(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUGCFileInfo                           FileInfo;                                          // 0x0088(0x00E8)(Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_170[0x10];                                     // 0x0170(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UGCMetaDataPopupParams")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UGCMetaDataPopupParams")
-	}
-	static class UUGCMetaDataPopupParams* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUGCMetaDataPopupParams>();
-	}
-};
-DUMPER7_ASSERTS_UUGCMetaDataPopupParams;
 
 // Class BrickRigs.UGCPropertyWidget
 // 0x0038 (0x0450 - 0x0418)
@@ -14843,7 +14661,7 @@ DUMPER7_ASSERTS_UUGCPropertyWidget;
 
 // Class BrickRigs.UGCTaskPopupParams
 // 0x0008 (0x0080 - 0x0078)
-class UUGCTaskPopupParams final : public UPopupParams
+class UUGCTaskPopupParams : public UPopupParams
 {
 public:
 	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -14866,7 +14684,7 @@ DUMPER7_ASSERTS_UUGCTaskPopupParams;
 
 // Class BrickRigs.UIFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
-class UUIFunctionLibrary final : public UBlueprintFunctionLibrary
+class UUIFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 	static class FText BoolAsText(bool bValue);
@@ -14878,9 +14696,8 @@ public:
 	static bool FilterTextForProfanity(const class FText& InText, class FText* OutText);
 	static bool FilterTextForURLs(const class FText& InText, class FText* OutText);
 	static class UWidget* FindFirstWidgetInWidgetPath(const TArray<class UWidget*>& Widgets, const struct FWidgetPathWrapper& WidgetPath);
-	static class FText GetAmmoTypeDisplayText(EAmmoType InAmmoType, bool bLongName);
 	static class FText GetCameraModeDisplayText(ECameraMode InCameraMode);
-	static class FText GetFireModeDisplayText(EFireMode InFireMode);
+	static class FText GetFreeCamModeDisplayText(const EFreeCamMode InFreeCamMode);
 	static class FText GetHUDVisibilityDisplayText(EHUDVisibility InHUDVisibility);
 	static class FText GetLicenseFileContent(const class FString& Filename);
 	static TArray<class FString> GetLicenseFiles();
@@ -14889,7 +14706,7 @@ public:
 	static class FString GetUnitFormatParameter(ENumericValueType ValueType);
 	static bool IsWidgetInWidgetPath(const class UWidget* Widget, const struct FWidgetPathWrapper& WidgetPath);
 	static class FText NumberToText(const float Value, const ENumericValueType ValueType, const int32 MaxFractionalDigits, const bool bIncludeUnits, const bool bAlwaysSign, const bool bZeroAsUnlimited);
-	static class FText TimespanAsText(const struct FTimespan& Timespan);
+	static class FText TimespanToText(const struct FTimespan& Timespan);
 
 public:
 	static class UClass* StaticClass()
@@ -14909,7 +14726,7 @@ DUMPER7_ASSERTS_UUIFunctionLibrary;
 
 // Class BrickRigs.UnsavedChangesPopupParams
 // 0x0000 (0x0078 - 0x0078)
-class UUnsavedChangesPopupParams final : public UPopupParams
+class UUnsavedChangesPopupParams : public UPopupParams
 {
 public:
 	static class UClass* StaticClass()
@@ -14928,12 +14745,12 @@ public:
 DUMPER7_ASSERTS_UUnsavedChangesPopupParams;
 
 // Class BrickRigs.UserIdPropertyWidget
-// 0x0070 (0x0488 - 0x0418)
+// 0x0048 (0x0460 - 0x0418)
 class UUserIdPropertyWidget : public UPropertyWidget
 {
 public:
-	uint8                                         Pad_418[0x68];                                     // 0x0418(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickTextBoxWidget*                    UserIdTextBox;                                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_418[0x40];                                     // 0x0418(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickTextBoxWidget*                    UserIdTextBox;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void OnUserIdTextChanged(const class FText& Text, EValueChangedEventType EventType);
@@ -15039,13 +14856,16 @@ public:
 DUMPER7_ASSERTS_AWearable;
 
 // Class BrickRigs.WeatherCondition
-// 0x0098 (0x00E0 - 0x0048)
-class UWeatherCondition final : public UPrimaryDataAsset
+// 0x00C0 (0x0108 - 0x0048)
+class UWeatherCondition : public UPrimaryDataAsset
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDisplayInfo                           DisplayInfo;                                       // 0x0050(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FWeatherConditionParams                Weather;                                           // 0x0078(0x0068)(Edit, NativeAccessSpecifierPublic)
+	struct FDisplayInfo                           DisplayInfo;                                       // 0x0050(0x0048)(Edit, Protected, NativeAccessSpecifierProtected)
+	bool                                          bRandomWeather;                                    // 0x0098(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RandomWeatherTransitionTime;                       // 0x009C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWeatherConditionParams                Weather;                                           // 0x00A0(0x0068)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -15142,7 +14962,7 @@ public:
 DUMPER7_ASSERTS_UWindowBrickStaticInfo;
 
 // Class BrickRigs.WindowManagerWidget
-// 0x0170 (0x0580 - 0x0410)
+// 0x01A8 (0x05B8 - 0x0410)
 class UWindowManagerWidget : public UBrickUserWidget
 {
 public:
@@ -15152,18 +14972,21 @@ public:
 	TArray<class UPopupContainerWidget*>          PopupContainerWidgets;                             // 0x0460(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_470[0x8];                                      // 0x0470(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMenuAnchorWidget*                      MenuAnchorWidget;                                  // 0x0478(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_480[0x20];                                     // 0x0480(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTooltipWidget*                         CurrentTooltipWidget;                              // 0x04A0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4A8[0x20];                                     // 0x04A8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   IntroSequenceWidgetClass;                          // 0x04D0(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   MenuWidgetClass;                                   // 0x0500(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   HUDContainerWidgetClass;                           // 0x0530(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UPopupContainerWidget>      PopupContainerClass;                               // 0x0560(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UContextMenuWidget>         ContextMenuWidgetClass;                            // 0x0568(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UTooltipWidget>             TooltipWidgetClass;                                // 0x0570(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         TooltipOffset;                                     // 0x0578(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         TooltipDelay;                                      // 0x057C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_480[0x40];                                     // 0x0480(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTooltipWidget*                         CurrentTooltipWidget;                              // 0x04C0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4C8[0x20];                                     // 0x04C8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanel*                           MainCanvasPanel;                                   // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   IntroSequenceWidgetClass;                          // 0x04F0(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   MenuWidgetClass;                                   // 0x0520(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   HUDContainerWidgetClass;                           // 0x0550(0x0030)(Edit, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UPopupContainerWidget>      PopupContainerClass;                               // 0x0580(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UContextMenuWidget>         ContextMenuWidgetClass;                            // 0x0588(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UTooltipWidget>             TooltipWidgetClass;                                // 0x0590(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TooltipOffset;                                     // 0x0598(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TooltipSafetyMargin;                               // 0x059C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TooltipDelay;                                      // 0x05A0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5A4[0x4];                                      // 0x05A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bIsOpen)>  OnInputHelpOpenChangedDelegate;                    // 0x05A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UWindowManagerWidget* Get(const class UObject* WorldContextObject);
@@ -15193,7 +15016,7 @@ DUMPER7_ASSERTS_UWindowManagerWidget;
 
 // Class BrickRigs.WingBrick
 // 0x0000 (0x00F0 - 0x00F0)
-class UWingBrick final : public UBrick
+class UWingBrick : public UBrick
 {
 public:
 	static class UClass* StaticClass()
@@ -15327,8 +15150,8 @@ public:
 DUMPER7_ASSERTS_UZombieAnimInstance;
 
 // Class BrickRigs.ZombieGameState
-// 0x0000 (0x06D0 - 0x06D0)
-class AZombieGameState final : public ABrickGameState
+// 0x0000 (0x09B8 - 0x09B8)
+class AZombieGameState : public ABrickGameState
 {
 public:
 	static class UClass* StaticClass()

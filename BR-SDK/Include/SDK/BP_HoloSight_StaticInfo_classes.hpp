@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_HoloSight_StaticInfo.SKEL_BP_HoloSight_StaticInfo_C
-// 0x0010 (0x0450 - 0x0440)
+// 0x0010 (0x0460 - 0x0450)
 class USKEL_BP_HoloSight_StaticInfo_C final : public USightStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_HoloSight_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_HoloSight_StaticInfo.BP_HoloSight_StaticInfo_C
-// 0x0000 (0x0440 - 0x0440)
+// 0x0000 (0x0450 - 0x0450)
 class UBP_HoloSight_StaticInfo_C final : public USightStaticInfo
 {
 public:

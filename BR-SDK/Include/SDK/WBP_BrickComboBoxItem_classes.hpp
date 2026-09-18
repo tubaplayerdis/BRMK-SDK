@@ -16,33 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_BrickComboBoxItem.WBP_BrickComboBoxItem_C
-// 0x0010 (0x0478 - 0x0468)
-class UWBP_BrickComboBoxItem_C final : public UBrickComboBoxItemWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_WBP_BrickComboBoxItem(int32 EntryPoint);
-	void SetNoItemBrush();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_BrickComboBoxItem_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_BrickComboBoxItem_C")
-	}
-	static class UWBP_BrickComboBoxItem_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_BrickComboBoxItem_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_BrickComboBoxItem_C;
-
 // WidgetBlueprintGeneratedClass WBP_BrickComboBoxItem.SKEL_WBP_BrickComboBoxItem_C
 // 0x0010 (0x0478 - 0x0468)
 class USKEL_WBP_BrickComboBoxItem_C final : public UBrickComboBoxItemWidget
@@ -68,5 +41,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_BrickComboBoxItem_C;
+
+// WidgetBlueprintGeneratedClass WBP_BrickComboBoxItem.WBP_BrickComboBoxItem_C
+// 0x0010 (0x0478 - 0x0468)
+class UWBP_BrickComboBoxItem_C final : public UBrickComboBoxItemWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void SetNoItemBrush();
+	void ExecuteUbergraph_WBP_BrickComboBoxItem(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_BrickComboBoxItem_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_BrickComboBoxItem_C")
+	}
+	static class UWBP_BrickComboBoxItem_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_BrickComboBoxItem_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_BrickComboBoxItem_C;
 
 SDK_NAMESPACE_END

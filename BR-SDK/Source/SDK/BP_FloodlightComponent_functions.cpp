@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_FloodlightComponent.SKEL_BP_FloodlightComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_BP_FloodlightComponent_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_BP_FloodlightComponent_C", "ReceiveTick");
-
-	Params::SKEL_BP_FloodlightComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FloodlightComponent.SKEL_BP_FloodlightComponent_C.ReceiveBeginPlay
 // (Event, Public, BlueprintEvent)
 
@@ -47,6 +27,26 @@ void USKEL_BP_FloodlightComponent_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("SKEL_BP_FloodlightComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FloodlightComponent.SKEL_BP_FloodlightComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_BP_FloodlightComponent_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_BP_FloodlightComponent_C", "ReceiveTick");
+
+	Params::SKEL_BP_FloodlightComponent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

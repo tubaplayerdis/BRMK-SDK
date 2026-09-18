@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "TranslationEditor_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "TranslationEditor_structs.hpp"
 
 
 SDK_NAMESPACE_START

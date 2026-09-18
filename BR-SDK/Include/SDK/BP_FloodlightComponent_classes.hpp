@@ -16,33 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_FloodlightComponent.SKEL_BP_FloodlightComponent_C
-// 0x0010 (0x03C0 - 0x03B0)
-class USKEL_BP_FloodlightComponent_C final : public USpotLightComponent
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_BP_FloodlightComponent_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_BP_FloodlightComponent_C")
-	}
-	static class USKEL_BP_FloodlightComponent_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_BP_FloodlightComponent_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_BP_FloodlightComponent_C;
-
 // BlueprintGeneratedClass BP_FloodlightComponent.BP_FloodlightComponent_C
 // 0x0000 (0x03B0 - 0x03B0)
 class UBP_FloodlightComponent_C final : public USpotLightComponent
@@ -62,5 +35,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBP_FloodlightComponent_C;
+
+// BlueprintGeneratedClass BP_FloodlightComponent.SKEL_BP_FloodlightComponent_C
+// 0x0010 (0x03C0 - 0x03B0)
+class USKEL_BP_FloodlightComponent_C final : public USpotLightComponent
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_FloodlightComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_FloodlightComponent_C")
+	}
+	static class USKEL_BP_FloodlightComponent_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_BP_FloodlightComponent_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_BP_FloodlightComponent_C;
 
 SDK_NAMESPACE_END

@@ -16,169 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.ExecuteUbergraph_WBP_PropertyContainer
-// (Final, UbergraphFunction)
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.OnMouseButtonUp
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry_OnMouseButtonUp                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FPointerEvent&             MouseEvent_OnMouseButtonUp                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FEventReply                      ReturnValue_OnMouseButtonUp                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-void UWBP_PropertyContainer_C::ExecuteUbergraph_WBP_PropertyContainer(int32 EntryPoint)
+struct FEventReply USKEL_WBP_PropertyContainer_C::OnMouseButtonUp(const struct FGeometry& MyGeometry_OnMouseButtonUp, const struct FPointerEvent& MouseEvent_OnMouseButtonUp)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "ExecuteUbergraph_WBP_PropertyContainer");
+		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "OnMouseButtonUp");
 
-	Params::WBP_PropertyContainer_C_ExecuteUbergraph_WBP_PropertyContainer Parms{};
+	Params::SKEL_WBP_PropertyContainer_C_OnMouseButtonUp Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.PostAddPropertyButtons
-// (Event, Protected, BlueprintEvent)
-
-void UWBP_PropertyContainer_C::PostAddPropertyButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "PostAddPropertyButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.OnMenuButtonClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_PropertyContainer_C::OnMenuButtonClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "OnMenuButtonClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.UpdateColorStyle
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertyContainer_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "UpdateColorStyle");
-
-	Params::WBP_PropertyContainer_C_UpdateColorStyle Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.UpdateOrientation
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EOrientation                            InOrientation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertyContainer_C::UpdateOrientation(EOrientation InOrientation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "UpdateOrientation");
-
-	Params::WBP_PropertyContainer_C_UpdateOrientation Parms{};
-
-	Parms.InOrientation = InOrientation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.AddPropertyWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UPropertyWidget*                  Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EOrientation                            InOrientation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertyContainer_C::AddPropertyWidget(class UPropertyWidget* Widget, EOrientation InOrientation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "AddPropertyWidget");
-
-	Params::WBP_PropertyContainer_C_AddPropertyWidget Parms{};
-
-	Parms.Widget = Widget;
-	Parms.InOrientation = InOrientation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainer.WBP_PropertyContainer_C.OnMouseButtonUp
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-struct FEventReply UWBP_PropertyContainer_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertyContainer_C", "OnMouseButtonUp");
-
-	Params::WBP_PropertyContainer_C_OnMouseButtonUp Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.MyGeometry_OnMouseButtonUp = std::move(MyGeometry_OnMouseButtonUp);
+	Parms.MouseEvent_OnMouseButtonUp = std::move(MouseEvent_OnMouseButtonUp);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.AddPropertyWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UPropertyWidget*                  Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EOrientation                            InOrientation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PropertyContainer_C::AddPropertyWidget(class UPropertyWidget* Widget, EOrientation InOrientation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "AddPropertyWidget");
-
-	Params::SKEL_WBP_PropertyContainer_C_AddPropertyWidget Parms{};
-
-	Parms.Widget = Widget;
-	Parms.InOrientation = InOrientation;
-
-	UObject::ProcessEvent(Func, &Parms);
+	return Parms.ReturnValue_OnMouseButtonUp;
 }
 
 
 // Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.UpdateOrientation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// EOrientation                            InOrientation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EOrientation                            InOrientation_UpdateOrientation                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_PropertyContainer_C::UpdateOrientation(EOrientation InOrientation)
+void USKEL_WBP_PropertyContainer_C::UpdateOrientation(EOrientation InOrientation_UpdateOrientation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -187,43 +55,9 @@ void USKEL_WBP_PropertyContainer_C::UpdateOrientation(EOrientation InOrientation
 
 	Params::SKEL_WBP_PropertyContainer_C_UpdateOrientation Parms{};
 
-	Parms.InOrientation = InOrientation;
+	Parms.InOrientation_UpdateOrientation = InOrientation_UpdateOrientation;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.UpdateColorStyle
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PropertyContainer_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "UpdateColorStyle");
-
-	Params::SKEL_WBP_PropertyContainer_C_UpdateColorStyle Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.OnMenuButtonClicked
-// (BlueprintCallable, BlueprintEvent)
-
-void USKEL_WBP_PropertyContainer_C::OnMenuButtonClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "OnMenuButtonClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -241,28 +75,194 @@ void USKEL_WBP_PropertyContainer_C::PostAddPropertyButtons()
 }
 
 
-// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.OnMouseButtonUp
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FEventReply                      ReturnValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.OnMenuButtonClicked
+// (BlueprintCallable, BlueprintEvent)
 
-struct FEventReply USKEL_WBP_PropertyContainer_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void USKEL_WBP_PropertyContainer_C::OnMenuButtonClicked()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "OnMouseButtonUp");
+		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "OnMenuButtonClicked");
 
-	Params::SKEL_WBP_PropertyContainer_C_OnMouseButtonUp Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.UpdateColorStyle
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle_UpdateColorStyle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertyContainer_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle_UpdateColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "UpdateColorStyle");
+
+	Params::SKEL_WBP_PropertyContainer_C_UpdateColorStyle Parms{};
+
+	Parms.InColorStyle_UpdateColorStyle = InColorStyle_UpdateColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyContainer.SKEL_WBP_PropertyContainer_C.AddPropertyWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPropertyWidget*                  Widget_AddPropertyWidget                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EOrientation                            InOrientation_AddPropertyWidget                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertyContainer_C::AddPropertyWidget(class UPropertyWidget* Widget_AddPropertyWidget, EOrientation InOrientation_AddPropertyWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertyContainer_C", "AddPropertyWidget");
+
+	Params::SKEL_WBP_PropertyContainer_C_AddPropertyWidget Parms{};
+
+	Parms.Widget_AddPropertyWidget = Widget_AddPropertyWidget;
+	Parms.InOrientation_AddPropertyWidget = InOrientation_AddPropertyWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.OnMouseButtonUp
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry_OnMouseButtonUp                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent_OnMouseButtonUp                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue_OnMouseButtonUp                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWBP_PropertyContainer_C::OnMouseButtonUp(const struct FGeometry& MyGeometry_OnMouseButtonUp, const struct FPointerEvent& MouseEvent_OnMouseButtonUp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "OnMouseButtonUp");
+
+	Params::WBP_PropertyContainer_C_OnMouseButtonUp Parms{};
+
+	Parms.MyGeometry_OnMouseButtonUp = std::move(MyGeometry_OnMouseButtonUp);
+	Parms.MouseEvent_OnMouseButtonUp = std::move(MouseEvent_OnMouseButtonUp);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	return Parms.ReturnValue_OnMouseButtonUp;
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.AddPropertyWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPropertyWidget*                  Widget_AddPropertyWidget                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EOrientation                            InOrientation_AddPropertyWidget                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyContainer_C::AddPropertyWidget(class UPropertyWidget* Widget_AddPropertyWidget, EOrientation InOrientation_AddPropertyWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "AddPropertyWidget");
+
+	Params::WBP_PropertyContainer_C_AddPropertyWidget Parms{};
+
+	Parms.Widget_AddPropertyWidget = Widget_AddPropertyWidget;
+	Parms.InOrientation_AddPropertyWidget = InOrientation_AddPropertyWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.UpdateColorStyle
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EBrickUIColorStyle                      InColorStyle_UpdateColorStyle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyContainer_C::UpdateColorStyle(EBrickUIColorStyle InColorStyle_UpdateColorStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "UpdateColorStyle");
+
+	Params::WBP_PropertyContainer_C_UpdateColorStyle Parms{};
+
+	Parms.InColorStyle_UpdateColorStyle = InColorStyle_UpdateColorStyle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.OnMenuButtonClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_PropertyContainer_C::OnMenuButtonClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "OnMenuButtonClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.PostAddPropertyButtons
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_PropertyContainer_C::PostAddPropertyButtons()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "PostAddPropertyButtons");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.UpdateOrientation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EOrientation                            InOrientation_UpdateOrientation                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyContainer_C::UpdateOrientation(EOrientation InOrientation_UpdateOrientation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "UpdateOrientation");
+
+	Params::WBP_PropertyContainer_C_UpdateOrientation Parms{};
+
+	Parms.InOrientation_UpdateOrientation = InOrientation_UpdateOrientation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertyContainer.WBP_PropertyContainer_C.ExecuteUbergraph_WBP_PropertyContainer
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertyContainer_C::ExecuteUbergraph_WBP_PropertyContainer(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertyContainer_C", "ExecuteUbergraph_WBP_PropertyContainer");
+
+	Params::WBP_PropertyContainer_C_ExecuteUbergraph_WBP_PropertyContainer Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

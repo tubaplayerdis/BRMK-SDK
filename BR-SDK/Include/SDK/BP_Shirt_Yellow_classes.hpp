@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_Shirt_Yellow.BP_Shirt_Yellow_C
-// 0x0000 (0x0380 - 0x0380)
-class ABP_Shirt_Yellow_C final : public ABP_Shirt_C
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("BP_Shirt_Yellow_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BP_Shirt_Yellow_C")
-	}
-	static class ABP_Shirt_Yellow_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABP_Shirt_Yellow_C>();
-	}
-};
-DUMPER7_ASSERTS_ABP_Shirt_Yellow_C;
-
 // BlueprintGeneratedClass BP_Shirt_Yellow.SKEL_BP_Shirt_Yellow_C
 // 0x0010 (0x03A0 - 0x0390)
 class ASKEL_BP_Shirt_Yellow_C final : public ASKEL_BP_Shirt_C
@@ -63,5 +43,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_BP_Shirt_Yellow_C;
+
+// BlueprintGeneratedClass BP_Shirt_Yellow.BP_Shirt_Yellow_C
+// 0x0000 (0x0380 - 0x0380)
+class ABP_Shirt_Yellow_C final : public ABP_Shirt_C
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("BP_Shirt_Yellow_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Shirt_Yellow_C")
+	}
+	static class ABP_Shirt_Yellow_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABP_Shirt_Yellow_C>();
+	}
+};
+DUMPER7_ASSERTS_ABP_Shirt_Yellow_C;
 
 SDK_NAMESPACE_END

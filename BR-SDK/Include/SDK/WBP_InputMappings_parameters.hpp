@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_InputMappings.SKEL_WBP_InputMappings_C.OnRevertInputPopupClosed
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_WBP_InputMappings_C_OnRevertInputPopupClosed final
-{
-public:
-	EPopupResult                                  Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_WBP_InputMappings_C_OnRevertInputPopupClosed;
-
 // Function WBP_InputMappings.WBP_InputMappings_C.ExecuteUbergraph_WBP_InputMappings
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_InputMappings_C_ExecuteUbergraph_WBP_InputMappings final
@@ -55,6 +46,15 @@ public:
 	EPopupResult                                  Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_InputMappings_C_OnRevertInputPopupClosed;
+
+// Function WBP_InputMappings.SKEL_WBP_InputMappings_C.OnRevertInputPopupClosed
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_WBP_InputMappings_C_OnRevertInputPopupClosed final
+{
+public:
+	EPopupResult                                  Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_WBP_InputMappings_C_OnRevertInputPopupClosed;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

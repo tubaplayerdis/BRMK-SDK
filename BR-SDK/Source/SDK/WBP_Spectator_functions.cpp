@@ -36,50 +36,6 @@ void UWBP_Spectator_C::ExecuteUbergraph_WBP_Spectator(int32 EntryPoint)
 }
 
 
-// Function WBP_Spectator.WBP_Spectator_C.BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Spectator_C::BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectator_C", "BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_Spectator_C_BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Spectator.WBP_Spectator_C.BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Spectator_C::BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectator_C", "BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_Spectator_C_BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Spectator.WBP_Spectator_C.BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
 // (BlueprintEvent)
 
@@ -197,50 +153,6 @@ void USKEL_WBP_Spectator_C::BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_
 		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_Spectator_C::BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_Spectator_C_BndEvt__PrevPlayerButton_K2Node_ComponentBoundEvent_2_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Spectator.SKEL_WBP_Spectator_C.BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_Spectator_C::BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_Spectator_C", "BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_Spectator_C_BndEvt__NextPlayerButton_K2Node_ComponentBoundEvent_3_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

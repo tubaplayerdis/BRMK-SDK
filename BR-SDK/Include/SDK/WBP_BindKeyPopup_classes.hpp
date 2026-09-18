@@ -31,7 +31,6 @@ public:
 public:
 	void ExecuteUbergraph_WBP_BindKeyPopup(int32 EntryPoint);
 	void UpdateIsBindingKey(bool bNewIsBinding);
-	void PreConstruct(bool IsDesignTime);
 	void UpdateConflictedMappings(bool bIsConflicted, const TArray<class FText>& ConflictedMappingNames);
 	void Construct();
 
@@ -66,7 +65,6 @@ public:
 public:
 	void Construct();
 	void UpdateConflictedMappings(bool bIsConflicted, const TArray<class FText>& ConflictedMappingNames);
-	void PreConstruct(bool IsDesignTime);
 	void UpdateIsBindingKey(bool bNewIsBinding);
 
 	class FText ConflictsArrayToText(class FText& InText, TArray<class FText>& InConflictNames) const;

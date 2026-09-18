@@ -18,6 +18,32 @@
 
 SDK_NAMESPACE_START
 
+// AnimBlueprintGeneratedClass ABP_Zombie.SKEL_ABP_Zombie_C
+// 0x0010 (0x0BF0 - 0x0BE0)
+class USKEL_ABP_Zombie_C final : public UZombieAnimInstance
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_ABP_Zombie_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_ABP_Zombie_C")
+	}
+	static class USKEL_ABP_Zombie_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_ABP_Zombie_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_ABP_Zombie_C;
+
 // AnimBlueprintGeneratedClass ABP_Zombie.ABP_Zombie_C
 // 0x0620 (0x1200 - 0x0BE0)
 class UABP_Zombie_C final : public UZombieAnimInstance
@@ -55,31 +81,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UABP_Zombie_C;
-
-// AnimBlueprintGeneratedClass ABP_Zombie.SKEL_ABP_Zombie_C
-// 0x0010 (0x0BF0 - 0x0BE0)
-class USKEL_ABP_Zombie_C final : public UZombieAnimInstance
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_ABP_Zombie_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_ABP_Zombie_C")
-	}
-	static class USKEL_ABP_Zombie_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_ABP_Zombie_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_ABP_Zombie_C;
 
 SDK_NAMESPACE_END

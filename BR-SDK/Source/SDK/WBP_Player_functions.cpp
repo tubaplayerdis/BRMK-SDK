@@ -36,6 +36,46 @@ void UWBP_Player_C::ExecuteUbergraph_WBP_Player(int32 EntryPoint)
 }
 
 
+// Function WBP_Player.WBP_Player_C.AddVehicleDashboardWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Player_C::AddVehicleDashboardWidget(class UUserWidget* InWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Player_C", "AddVehicleDashboardWidget");
+
+	Params::WBP_Player_C_AddVehicleDashboardWidget Parms{};
+
+	Parms.InWidget = InWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Player.WBP_Player_C.AddCharacterDashboardWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Player_C::AddCharacterDashboardWidget(class UUserWidget* InWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Player_C", "AddCharacterDashboardWidget");
+
+	Params::WBP_Player_C_AddCharacterDashboardWidget Parms{};
+
+	Parms.InWidget = InWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Player.WBP_Player_C.AddCameraBrickWidget
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -56,46 +96,6 @@ void UWBP_Player_C::AddCameraBrickWidget(class UCameraBrickWidget* InWidget)
 }
 
 
-// Function WBP_Player.WBP_Player_C.AddHealthBarWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UHealthBarWidget*                 InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Player_C::AddHealthBarWidget(class UHealthBarWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Player_C", "AddHealthBarWidget");
-
-	Params::WBP_Player_C_AddHealthBarWidget Parms{};
-
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Player.WBP_Player_C.AddCurrentItemWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UCurrentItemWidget*               InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Player_C::AddCurrentItemWidget(class UCurrentItemWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Player_C", "AddCurrentItemWidget");
-
-	Params::WBP_Player_C_AddCurrentItemWidget Parms{};
-
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Player.WBP_Player_C.AddCrosshairWidget
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -109,26 +109,6 @@ void UWBP_Player_C::AddCrosshairWidget(class UCrosshairWidget* InWidget)
 		Func = Class->GetFunction("WBP_Player_C", "AddCrosshairWidget");
 
 	Params::WBP_Player_C_AddCrosshairWidget Parms{};
-
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Player.WBP_Player_C.AddDashboardWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UDashboardWidget*                 InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Player_C::AddDashboardWidget(class UDashboardWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Player_C", "AddDashboardWidget");
-
-	Params::WBP_Player_C_AddDashboardWidget Parms{};
 
 	Parms.InWidget = InWidget;
 
@@ -176,26 +156,6 @@ void USKEL_WBP_Player_C::AddRestrictedAreaWidget(class URestrictedAreaWidget* In
 }
 
 
-// Function WBP_Player.SKEL_WBP_Player_C.AddDashboardWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UDashboardWidget*                 InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_Player_C::AddDashboardWidget(class UDashboardWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_Player_C", "AddDashboardWidget");
-
-	Params::SKEL_WBP_Player_C_AddDashboardWidget Parms{};
-
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Player.SKEL_WBP_Player_C.AddCrosshairWidget
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -216,46 +176,6 @@ void USKEL_WBP_Player_C::AddCrosshairWidget(class UCrosshairWidget* InWidget)
 }
 
 
-// Function WBP_Player.SKEL_WBP_Player_C.AddCurrentItemWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UCurrentItemWidget*               InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_Player_C::AddCurrentItemWidget(class UCurrentItemWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_Player_C", "AddCurrentItemWidget");
-
-	Params::SKEL_WBP_Player_C_AddCurrentItemWidget Parms{};
-
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Player.SKEL_WBP_Player_C.AddHealthBarWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UHealthBarWidget*                 InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_Player_C::AddHealthBarWidget(class UHealthBarWidget* InWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_Player_C", "AddHealthBarWidget");
-
-	Params::SKEL_WBP_Player_C_AddHealthBarWidget Parms{};
-
-	Parms.InWidget = InWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Player.SKEL_WBP_Player_C.AddCameraBrickWidget
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -269,6 +189,46 @@ void USKEL_WBP_Player_C::AddCameraBrickWidget(class UCameraBrickWidget* InWidget
 		Func = Class->GetFunction("SKEL_WBP_Player_C", "AddCameraBrickWidget");
 
 	Params::SKEL_WBP_Player_C_AddCameraBrickWidget Parms{};
+
+	Parms.InWidget = InWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Player.SKEL_WBP_Player_C.AddCharacterDashboardWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Player_C::AddCharacterDashboardWidget(class UUserWidget* InWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Player_C", "AddCharacterDashboardWidget");
+
+	Params::SKEL_WBP_Player_C_AddCharacterDashboardWidget Parms{};
+
+	Parms.InWidget = InWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Player.SKEL_WBP_Player_C.AddVehicleDashboardWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InWidget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_Player_C::AddVehicleDashboardWidget(class UUserWidget* InWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_Player_C", "AddVehicleDashboardWidget");
+
+	Params::SKEL_WBP_Player_C_AddVehicleDashboardWidget Parms{};
 
 	Parms.InWidget = InWidget;
 

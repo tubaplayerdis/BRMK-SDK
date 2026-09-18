@@ -16,114 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USKEL_WBP_GameLogo_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.UpdateUIStyle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class UBrickUIStyle*              Style                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USKEL_WBP_GameLogo_C::UpdateUIStyle(const class UBrickUIStyle* Style)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "UpdateUIStyle");
-
-	Params::SKEL_WBP_GameLogo_C_UpdateUIStyle Parms{};
-
-	Parms.Style = Style;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.UpdateLogo
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void USKEL_WBP_GameLogo_C::UpdateLogo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "UpdateLogo");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.SetLogo
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EGameLogoEnum                           InLogo                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USKEL_WBP_GameLogo_C::SetLogo(EGameLogoEnum InLogo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "SetLogo");
-
-	Params::SKEL_WBP_GameLogo_C_SetLogo Parms{};
-
-	Parms.InLogo = InLogo;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.InitMID
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMaterialInstanceDynamic*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UMaterialInstanceDynamic* USKEL_WBP_GameLogo_C::InitMID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "InitMID");
-
-	Params::SKEL_WBP_GameLogo_C_InitMID Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.IsLogoReady
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool USKEL_WBP_GameLogo_C::IsLogoReady() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "IsLogoReady");
-
-	Params::SKEL_WBP_GameLogo_C_IsLogoReady Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WBP_GameLogo.WBP_GameLogo_C.ExecuteUbergraph_WBP_GameLogo
 // (Final, UbergraphFunction)
 // Parameters:
@@ -245,6 +137,114 @@ bool UWBP_GameLogo_C::IsLogoReady() const
 		Func = Class->GetFunction("WBP_GameLogo_C", "IsLogoReady");
 
 	Params::WBP_GameLogo_C_IsLogoReady Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_GameLogo_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.UpdateUIStyle
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class UBrickUIStyle*              Style                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_GameLogo_C::UpdateUIStyle(const class UBrickUIStyle* Style)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "UpdateUIStyle");
+
+	Params::SKEL_WBP_GameLogo_C_UpdateUIStyle Parms{};
+
+	Parms.Style = Style;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.UpdateLogo
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void USKEL_WBP_GameLogo_C::UpdateLogo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "UpdateLogo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.SetLogo
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGameLogoEnum                           InLogo                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_GameLogo_C::SetLogo(EGameLogoEnum InLogo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "SetLogo");
+
+	Params::SKEL_WBP_GameLogo_C_SetLogo Parms{};
+
+	Parms.InLogo = InLogo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.InitMID
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UMaterialInstanceDynamic* USKEL_WBP_GameLogo_C::InitMID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "InitMID");
+
+	Params::SKEL_WBP_GameLogo_C_InitMID Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_GameLogo.SKEL_WBP_GameLogo_C.IsLogoReady
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool USKEL_WBP_GameLogo_C::IsLogoReady() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_GameLogo_C", "IsLogoReady");
+
+	Params::SKEL_WBP_GameLogo_C_IsLogoReady Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

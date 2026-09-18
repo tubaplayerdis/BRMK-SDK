@@ -36,6 +36,40 @@ void UWBP_ContextMenu_C::ExecuteUbergraph_WBP_ContextMenu(int32 EntryPoint)
 }
 
 
+// Function WBP_ContextMenu.WBP_ContextMenu_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_ContextMenu_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ContextMenu_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ContextMenu.WBP_ContextMenu_C.AddActions
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<struct FInputActionInfo>&  ActionNames                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UWBP_ContextMenu_C::AddActions(const TArray<struct FInputActionInfo>& ActionNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ContextMenu_C", "AddActions");
+
+	Params::WBP_ContextMenu_C_AddActions Parms{};
+
+	Parms.ActionNames = std::move(ActionNames);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ContextMenu.WBP_ContextMenu_C.UpdateTitleText
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -56,6 +90,26 @@ void UWBP_ContextMenu_C::UpdateTitleText(const class FText& InText)
 }
 
 
+// Function WBP_ContextMenu.WBP_ContextMenu_C.GetWidgetToFocus
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_ContextMenu_C::GetWidgetToFocus() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ContextMenu_C", "GetWidgetToFocus");
+
+	Params::WBP_ContextMenu_C_GetWidgetToFocus Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ContextMenu.SKEL_WBP_ContextMenu_C.UpdateTitleText
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -73,6 +127,60 @@ void USKEL_WBP_ContextMenu_C::UpdateTitleText(const class FText& InText)
 	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ContextMenu.SKEL_WBP_ContextMenu_C.AddActions
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const TArray<struct FInputActionInfo>&  ActionNames                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ContextMenu_C::AddActions(const TArray<struct FInputActionInfo>& ActionNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ContextMenu_C", "AddActions");
+
+	Params::SKEL_WBP_ContextMenu_C_AddActions Parms{};
+
+	Parms.ActionNames = std::move(ActionNames);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ContextMenu.SKEL_WBP_ContextMenu_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USKEL_WBP_ContextMenu_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ContextMenu_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ContextMenu.SKEL_WBP_ContextMenu_C.GetWidgetToFocus
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (BlueprintVisible, ExportObject, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWidget* USKEL_WBP_ContextMenu_C::GetWidgetToFocus() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ContextMenu_C", "GetWidgetToFocus");
+
+	Params::SKEL_WBP_ContextMenu_C_GetWidgetToFocus Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

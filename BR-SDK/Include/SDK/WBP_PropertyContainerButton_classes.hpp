@@ -17,33 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_PropertyContainerButton.WBP_PropertyContainerButton_C
-// 0x0010 (0x0450 - 0x0440)
-class UWBP_PropertyContainerButton_C final : public UMenuButtonWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_WBP_PropertyContainerButton(int32 EntryPoint);
-	void BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("WBP_PropertyContainerButton_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WBP_PropertyContainerButton_C")
-	}
-	static class UWBP_PropertyContainerButton_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWBP_PropertyContainerButton_C>();
-	}
-};
-DUMPER7_ASSERTS_UWBP_PropertyContainerButton_C;
-
 // WidgetBlueprintGeneratedClass WBP_PropertyContainerButton.SKEL_WBP_PropertyContainerButton_C
 // 0x0010 (0x0450 - 0x0440)
 class USKEL_WBP_PropertyContainerButton_C final : public UMenuButtonWidget
@@ -52,7 +25,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BndEvt__WBP_PropertyContainerButton_Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
+	void UpdateColorStyle(const EBrickUIColorStyle InColorStyle_UpdateColorStyle);
 
 public:
 	static class UClass* StaticClass()
@@ -69,5 +42,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USKEL_WBP_PropertyContainerButton_C;
+
+// WidgetBlueprintGeneratedClass WBP_PropertyContainerButton.WBP_PropertyContainerButton_C
+// 0x0010 (0x0450 - 0x0440)
+class UWBP_PropertyContainerButton_C final : public UMenuButtonWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0440(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void UpdateColorStyle(const EBrickUIColorStyle InColorStyle_UpdateColorStyle);
+	void ExecuteUbergraph_WBP_PropertyContainerButton(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("WBP_PropertyContainerButton_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_PropertyContainerButton_C")
+	}
+	static class UWBP_PropertyContainerButton_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWBP_PropertyContainerButton_C>();
+	}
+};
+DUMPER7_ASSERTS_UWBP_PropertyContainerButton_C;
 
 SDK_NAMESPACE_END

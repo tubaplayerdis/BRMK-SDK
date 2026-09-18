@@ -28,8 +28,7 @@ public:
 
 public:
 	void ExecuteUbergraph_WBP_MapCrosshair(int32 EntryPoint);
-	void SetStyleState(EBrickUIStyleState NewState);
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
+	void SetColorStyle(const EBrickUIColorStyle NewStyle);
 
 public:
 	static class UClass* StaticClass()
@@ -57,8 +56,7 @@ public:
 	class UBrickImage*                            LineImage;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetColorStyle(EBrickUIColorStyle NewStyle);
-	void SetStyleState(EBrickUIStyleState NewState);
+	void SetColorStyle(const EBrickUIColorStyle NewStyle);
 
 public:
 	static class UClass* StaticClass()

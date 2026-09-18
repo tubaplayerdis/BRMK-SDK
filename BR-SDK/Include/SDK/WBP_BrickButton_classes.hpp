@@ -16,31 +16,8 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_BrickButton.SKEL_WBP_BrickButton_C
-// 0x0010 (0x04C0 - 0x04B0)
-class USKEL_WBP_BrickButton_C final : public UBrickButtonWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_BrickButton_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_BrickButton_C")
-	}
-	static class USKEL_WBP_BrickButton_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_BrickButton_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_BrickButton_C;
-
 // WidgetBlueprintGeneratedClass WBP_BrickButton.WBP_BrickButton_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04A8 - 0x04A8)
 class UWBP_BrickButton_C final : public UBrickButtonWidget
 {
 public:
@@ -58,5 +35,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_BrickButton_C;
+
+// WidgetBlueprintGeneratedClass WBP_BrickButton.SKEL_WBP_BrickButton_C
+// 0x0010 (0x04B8 - 0x04A8)
+class USKEL_WBP_BrickButton_C final : public UBrickButtonWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_BrickButton_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_BrickButton_C")
+	}
+	static class USKEL_WBP_BrickButton_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_BrickButton_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_BrickButton_C;
 
 SDK_NAMESPACE_END

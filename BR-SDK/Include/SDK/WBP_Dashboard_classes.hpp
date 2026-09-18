@@ -10,26 +10,60 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BrickRigs_structs.hpp"
 #include "BrickRigs_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Dashboard.WBP_Dashboard_C
-// 0x0020 (0x0470 - 0x0450)
-class UWBP_Dashboard_C final : public UDashboardWidget
+// 0x00A0 (0x04C0 - 0x0420)
+class UWBP_Dashboard_C : public UDashboardWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    IconsBox;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickGridPanel*                        SlidersPanel;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickGridPanel*                        MainPanel;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_0;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWBP_InputAction_C*>             ActionWidgets;                                     // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumActions;                                        // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumSliders;                                        // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWBP_DashboardSlider_C*>         SliderWidgets;                                     // 0x0458(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         CurrentColumn;                                     // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentRow;                                        // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumColumns;                                        // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_DashboardBorder_C*>         BorderWidgets;                                     // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumBorders;                                        // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsFinishingRow;                                   // 0x048C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBrickSpacer*>                   SpacerWidgets;                                     // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumSpacers;                                        // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWantsSpacer;                                      // 0x04A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bAlwaysShowInputChord;                             // 0x04A5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4A6[0x2];                                      // 0x04A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        InputCategoryWidgets;                              // 0x04A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumInputCategories;                                // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_Dashboard(int32 EntryPoint);
-	void UpdateSliderWidgetSlot(class UDashboardSliderWidget* Widget, int32 Index_0, int32 NumSliders);
-	void AddIconWidget(class UDashboardIconWidget* Widget, int32 Index_0);
-	void AddSliderWidget(class UDashboardSliderWidget* Widget);
+	void PostUpdateDashboard();
+	void PreUpdateDashboard();
+	void PreConstruct(bool IsDesignTime);
+	void Destruct();
+	class UWBP_InputAction_C* AddAction(class FName ActionName, const bool bIsSecondaryAction, bool bFlipHorizontally, int32 ColumnSpan, int32 TotalColumnSpan, const struct FDisplayInfo& DisplayInfoOverride, bool bShowText, bool bShowInputChord);
+	class UWBP_DashboardSlider_C* AddSlider(float MinValue, float MaxValue, ENumericValueType ValueType, TSoftObjectPtr<class UTexture2D> IconTexture, int32 ColumnSpan);
+	void AddBorder(const class FText& Text, bool bInputHelpVisible, bool bNonInputHelpVisible, int32 ColumnSpan, EHorizontalAlignment HorizontalAlignment, bool bIsTitle);
+	void AddContentWidget(class UWidget* Widget, int32 ColumnSpan, int32 TotalColumnSpan);
+	void StartNextRow(bool bAddSpacer);
+	void AddSpacer();
+	void AddSpacerIfNeeded();
+	void AddInputHelpCategory(class UInputCategory* InCategory);
+
+	bool ShouldShowElement(bool bInputHelpVisible, bool bNonInputHelpVisible) const;
+	int32 ExpandColumnsForInputChord(int32 Columns, bool bShowInputChord) const;
 
 public:
 	static class UClass* StaticClass()
@@ -48,18 +82,49 @@ public:
 DUMPER7_ASSERTS_UWBP_Dashboard_C;
 
 // WidgetBlueprintGeneratedClass WBP_Dashboard.SKEL_WBP_Dashboard_C
-// 0x0020 (0x0470 - 0x0450)
-class USKEL_WBP_Dashboard_C final : public UDashboardWidget
+// 0x00A0 (0x04C0 - 0x0420)
+class USKEL_WBP_Dashboard_C : public UDashboardWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    IconsBox;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickGridPanel*                        SlidersPanel;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0420(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickGridPanel*                        MainPanel;                                         // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_0;                                         // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWBP_InputAction_C*>             ActionWidgets;                                     // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumActions;                                        // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumSliders;                                        // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWBP_DashboardSlider_C*>         SliderWidgets;                                     // 0x0458(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         CurrentColumn;                                     // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentRow;                                        // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumColumns;                                        // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_DashboardBorder_C*>         BorderWidgets;                                     // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumBorders;                                        // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsFinishingRow;                                   // 0x048C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBrickSpacer*>                   SpacerWidgets;                                     // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumSpacers;                                        // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWantsSpacer;                                      // 0x04A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bAlwaysShowInputChord;                             // 0x04A5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4A6[0x2];                                      // 0x04A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        InputCategoryWidgets;                              // 0x04A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         NumInputCategories;                                // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddSliderWidget(class UDashboardSliderWidget* Widget);
-	void AddIconWidget(class UDashboardIconWidget* Widget, int32 Index_0);
-	void UpdateSliderWidgetSlot(class UDashboardSliderWidget* Widget, int32 Index_0, int32 NumSliders);
+	void Destruct();
+	void PreConstruct(bool IsDesignTime);
+	void PreUpdateDashboard();
+	void PostUpdateDashboard();
+	class UWBP_InputAction_C* AddAction(class FName ActionName, const bool bIsSecondaryAction, bool bFlipHorizontally, int32 ColumnSpan, int32 TotalColumnSpan, const struct FDisplayInfo& DisplayInfoOverride, bool bShowText, bool bShowInputChord);
+	class UWBP_DashboardSlider_C* AddSlider(float MinValue, float MaxValue, ENumericValueType ValueType, TSoftObjectPtr<class UTexture2D> IconTexture, int32 ColumnSpan);
+	void AddBorder(const class FText& Text, bool bInputHelpVisible, bool bNonInputHelpVisible, int32 ColumnSpan, EHorizontalAlignment HorizontalAlignment, bool bIsTitle);
+	void AddContentWidget(class UWidget* Widget, int32 ColumnSpan, int32 TotalColumnSpan);
+	void StartNextRow(bool bAddSpacer);
+	void AddSpacer();
+	void AddSpacerIfNeeded();
+	void AddInputHelpCategory(class UInputCategory* InCategory);
+
+	bool ShouldShowElement(bool bInputHelpVisible, bool bNonInputHelpVisible) const;
+	int32 ExpandColumnsForInputChord(int32 Columns, bool bShowInputChord) const;
 
 public:
 	static class UClass* StaticClass()

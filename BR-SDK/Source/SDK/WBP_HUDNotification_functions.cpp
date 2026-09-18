@@ -37,13 +37,12 @@ void UWBP_HUDNotification_C::ExecuteUbergraph_WBP_HUDNotification(int32 EntryPoi
 
 
 // Function WBP_HUDNotification.WBP_HUDNotification_C.InitializeNotification
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FBrickUIIconSlot&          InIconSlot                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// const class FText&                      InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FDisplayInfo&              InDisplayInfo                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+// const EBrickUIColorStyle                InColorStyle                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle)
+void UWBP_HUDNotification_C::InitializeNotification(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle InColorStyle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,8 +51,7 @@ void UWBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIconSlo
 
 	Params::WBP_HUDNotification_C_InitializeNotification Parms{};
 
-	Parms.InIconSlot = std::move(InIconSlot);
-	Parms.InText = std::move(InText);
+	Parms.InDisplayInfo = std::move(InDisplayInfo);
 	Parms.InColorStyle = InColorStyle;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -159,11 +157,10 @@ void USKEL_WBP_HUDNotification_C::UpdateIsThumbnailNotification(bool bNewIsThumb
 // Function WBP_HUDNotification.SKEL_WBP_HUDNotification_C.InitializeNotification
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FBrickUIIconSlot&          InIconSlot                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const class FText&                      InText                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FDisplayInfo&              InDisplayInfo                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NativeAccessSpecifierPublic)
+// const EBrickUIColorStyle                InColorStyle                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIconSlot& InIconSlot, const class FText& InText, EBrickUIColorStyle InColorStyle)
+void USKEL_WBP_HUDNotification_C::InitializeNotification(const struct FDisplayInfo& InDisplayInfo, const EBrickUIColorStyle InColorStyle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -172,8 +169,7 @@ void USKEL_WBP_HUDNotification_C::InitializeNotification(const struct FBrickUIIc
 
 	Params::SKEL_WBP_HUDNotification_C_InitializeNotification Parms{};
 
-	Parms.InIconSlot = std::move(InIconSlot);
-	Parms.InText = std::move(InText);
+	Parms.InDisplayInfo = std::move(InDisplayInfo);
 	Parms.InColorStyle = InColorStyle;
 
 	UObject::ProcessEvent(Func, &Parms);

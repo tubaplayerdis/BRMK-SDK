@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_HurtMarker.SKEL_WBP_HurtMarker_C
-// 0x0020 (0x0428 - 0x0408)
-class USKEL_WBP_HurtMarker_C final : public UHurtMarkerWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       HurtMarkerAnim;                                    // 0x0418(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBrickImage*                            BrickImage_77;                                     // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void PlayHurtMarkerAnimation();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_HurtMarker_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_HurtMarker_C")
-	}
-	static class USKEL_WBP_HurtMarker_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_HurtMarker_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_HurtMarker_C;
-
 // WidgetBlueprintGeneratedClass WBP_HurtMarker.WBP_HurtMarker_C
 // 0x0020 (0x0428 - 0x0408)
 class UWBP_HurtMarker_C final : public UHurtMarkerWidget
@@ -72,5 +44,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_HurtMarker_C;
+
+// WidgetBlueprintGeneratedClass WBP_HurtMarker.SKEL_WBP_HurtMarker_C
+// 0x0020 (0x0428 - 0x0408)
+class USKEL_WBP_HurtMarker_C final : public UHurtMarkerWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       HurtMarkerAnim;                                    // 0x0418(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBrickImage*                            BrickImage_77;                                     // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void PlayHurtMarkerAnimation();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_HurtMarker_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_HurtMarker_C")
+	}
+	static class USKEL_WBP_HurtMarker_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_HurtMarker_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_HurtMarker_C;
 
 SDK_NAMESPACE_END

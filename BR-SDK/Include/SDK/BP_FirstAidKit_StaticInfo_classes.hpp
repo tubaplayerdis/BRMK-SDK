@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstAidKit_StaticInfo.SKEL_BP_FirstAidKit_StaticInfo_C
-// 0x0010 (0x03E0 - 0x03D0)
+// 0x0010 (0x03F0 - 0x03E0)
 class USKEL_BP_FirstAidKit_StaticInfo_C final : public UFirstAidKitStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()
@@ -40,7 +40,7 @@ public:
 DUMPER7_ASSERTS_USKEL_BP_FirstAidKit_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_FirstAidKit_StaticInfo.BP_FirstAidKit_StaticInfo_C
-// 0x0000 (0x03D0 - 0x03D0)
+// 0x0000 (0x03E0 - 0x03E0)
 class UBP_FirstAidKit_StaticInfo_C final : public UFirstAidKitStaticInfo
 {
 public:

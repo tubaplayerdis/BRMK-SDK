@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BrushEffects_List_structs.hpp"
 #include "BrushBlendType_structs.hpp"
 #include "BrushSettings_Basic_Falloff_structs.hpp"
+#include "BrushEffects_List_structs.hpp"
 
 
 SDK_NAMESPACE_START

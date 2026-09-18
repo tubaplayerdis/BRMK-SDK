@@ -17,7 +17,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Player.WBP_Player_C.ExecuteUbergraph_WBP_Player
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct WBP_Player_C_ExecuteUbergraph_WBP_Player final
 {
 public:
@@ -27,22 +27,37 @@ public:
 	struct FAnchors                               K2Node_MakeStruct_Anchors_2;                       // 0x0024(0x0010)(NoDestructor)
 	struct FAnchors                               K2Node_MakeStruct_Anchors_3;                       // 0x0034(0x0010)(NoDestructor)
 	struct FAnchors                               K2Node_MakeStruct_Anchors_4;                       // 0x0044(0x0010)(NoDestructor)
-	struct FAnchors                               K2Node_MakeStruct_Anchors_5;                       // 0x0054(0x0010)(NoDestructor)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URestrictedAreaWidget*                  K2Node_Event_InWidget_5;                           // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDashboardWidget*                       K2Node_Event_InWidget_4;                           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue;             // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_1;           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCrosshairWidget*                       K2Node_Event_InWidget_3;                           // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurrentItemWidget*                     K2Node_Event_InWidget_2;                           // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_2;           // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_3;           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UHealthBarWidget*                       K2Node_Event_InWidget_1;                           // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_4;           // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCameraBrickWidget*                     K2Node_Event_InWidget;                             // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_5;           // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URestrictedAreaWidget*                  K2Node_Event_InWidget_4;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCrosshairWidget*                       K2Node_Event_InWidget_3;                           // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue;             // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_1;           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCameraBrickWidget*                     K2Node_Event_InWidget_2;                           // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_2;           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_Event_InWidget_1;                           // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_3;           // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_Event_InWidget;                             // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_AddChildToCanvas_ReturnValue_4;           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Player_C_ExecuteUbergraph_WBP_Player;
+
+// Function WBP_Player.WBP_Player_C.AddVehicleDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Player_C_AddVehicleDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Player_C_AddVehicleDashboardWidget;
+
+// Function WBP_Player.WBP_Player_C.AddCharacterDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Player_C_AddCharacterDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Player_C_AddCharacterDashboardWidget;
 
 // Function WBP_Player.WBP_Player_C.AddCameraBrickWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -53,24 +68,6 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Player_C_AddCameraBrickWidget;
 
-// Function WBP_Player.WBP_Player_C.AddHealthBarWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Player_C_AddHealthBarWidget final
-{
-public:
-	class UHealthBarWidget*                       InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Player_C_AddHealthBarWidget;
-
-// Function WBP_Player.WBP_Player_C.AddCurrentItemWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Player_C_AddCurrentItemWidget final
-{
-public:
-	class UCurrentItemWidget*                     InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Player_C_AddCurrentItemWidget;
-
 // Function WBP_Player.WBP_Player_C.AddCrosshairWidget
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_Player_C_AddCrosshairWidget final
@@ -79,15 +76,6 @@ public:
 	class UCrosshairWidget*                       InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Player_C_AddCrosshairWidget;
-
-// Function WBP_Player.WBP_Player_C.AddDashboardWidget
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Player_C_AddDashboardWidget final
-{
-public:
-	class UDashboardWidget*                       InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Player_C_AddDashboardWidget;
 
 // Function WBP_Player.WBP_Player_C.AddRestrictedAreaWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -107,15 +95,6 @@ public:
 };
 DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddRestrictedAreaWidget;
 
-// Function WBP_Player.SKEL_WBP_Player_C.AddDashboardWidget
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_WBP_Player_C_AddDashboardWidget final
-{
-public:
-	class UDashboardWidget*                       InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddDashboardWidget;
-
 // Function WBP_Player.SKEL_WBP_Player_C.AddCrosshairWidget
 // 0x0008 (0x0008 - 0x0000)
 struct SKEL_WBP_Player_C_AddCrosshairWidget final
@@ -125,24 +104,6 @@ public:
 };
 DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddCrosshairWidget;
 
-// Function WBP_Player.SKEL_WBP_Player_C.AddCurrentItemWidget
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_WBP_Player_C_AddCurrentItemWidget final
-{
-public:
-	class UCurrentItemWidget*                     InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddCurrentItemWidget;
-
-// Function WBP_Player.SKEL_WBP_Player_C.AddHealthBarWidget
-// 0x0008 (0x0008 - 0x0000)
-struct SKEL_WBP_Player_C_AddHealthBarWidget final
-{
-public:
-	class UHealthBarWidget*                       InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddHealthBarWidget;
-
 // Function WBP_Player.SKEL_WBP_Player_C.AddCameraBrickWidget
 // 0x0008 (0x0008 - 0x0000)
 struct SKEL_WBP_Player_C_AddCameraBrickWidget final
@@ -151,6 +112,24 @@ public:
 	class UCameraBrickWidget*                     InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddCameraBrickWidget;
+
+// Function WBP_Player.SKEL_WBP_Player_C.AddCharacterDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Player_C_AddCharacterDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddCharacterDashboardWidget;
+
+// Function WBP_Player.SKEL_WBP_Player_C.AddVehicleDashboardWidget
+// 0x0008 (0x0008 - 0x0000)
+struct SKEL_WBP_Player_C_AddVehicleDashboardWidget final
+{
+public:
+	class UUserWidget*                            InWidget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_WBP_Player_C_AddVehicleDashboardWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

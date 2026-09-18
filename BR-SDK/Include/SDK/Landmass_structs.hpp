@@ -17,7 +17,7 @@ SDK_NAMESPACE_START
 
 // Enum Landmass.EBrushFalloffMode
 // NumValues: 0x0003
-enum class Landmass::EBrushFalloffMode : uint8
+enum class EBrushFalloffMode : uint8
 {
 	Angle                                    = 0,
 	Width                                    = 1,
@@ -26,7 +26,7 @@ enum class Landmass::EBrushFalloffMode : uint8
 
 // Enum Landmass.EBrushBlendType
 // NumValues: 0x0005
-enum class Landmass::EBrushBlendType : uint8
+enum class EBrushBlendType : uint8
 {
 	AlphaBlend                               = 0,
 	Min                                      = 1,
@@ -129,7 +129,7 @@ DUMPER7_ASSERTS_FBrushEffectCurves;
 struct FLandmassFalloffSettings final
 {
 public:
-	Landmass::EBrushFalloffMode                   FalloffMode;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrushFalloffMode                             FalloffMode;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FalloffAngle;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FalloffWidth;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -143,7 +143,7 @@ DUMPER7_ASSERTS_FLandmassFalloffSettings;
 struct FLandmassTerrainCarvingSettings final
 {
 public:
-	Landmass::EBrushBlendType                     BlendMode;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBrushBlendType                               BlendMode;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInvertShape;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLandmassFalloffSettings               FalloffSettings;                                   // 0x0004(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)

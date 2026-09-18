@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ErosionInterface_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "RenderTargetChannels_structs.hpp"
 #include "BrushTypes_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BrushWM_structs.hpp"
+#include "RenderTargetChannels_structs.hpp"
 #include "SectionSizeOptions_structs.hpp"
 #include "ShapeDrawingMode_structs.hpp"
+#include "BrushWM_structs.hpp"
+#include "ErosionInterface_structs.hpp"
 
 
 SDK_NAMESPACE_START

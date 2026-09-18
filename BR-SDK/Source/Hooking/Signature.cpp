@@ -93,10 +93,10 @@ namespace
 
 		uintptr_t moduleBase = (uintptr_t)hModule;
 		auto dos = (PIMAGE_DOS_HEADER)moduleBase;
-		if (dos->e_magic != IMAGE_DOS_SIGNATURE) return false;
+		//if (dos->e_magic != IMAGE_DOS_SIGNATURE) return false;
 
 		auto nt = (PIMAGE_NT_HEADERS)(moduleBase + dos->e_lfanew);
-		if (nt->Signature != IMAGE_NT_SIGNATURE) return false;
+		//if (nt->Signature != IMAGE_NT_SIGNATURE) return false;
 
 		auto section = IMAGE_FIRST_SECTION(nt);
 		for (unsigned i = 0; i < nt->FileHeader.NumberOfSections; ++i, ++section)
@@ -157,31 +157,6 @@ namespace
 		std::uintptr_t nextInstruction = callInstructionAddress + 5; // E8 + 4 bytes
 		return nextInstruction + displacement;
 	}
-
-	unsigned long long FindPatternF(const char* pattern, const char* mask)
-	{
-		unsigned long long base = (unsigned long long)GetModuleHandle(NULL);
-		MODULEINFO info = {};
-		GetModuleInformation(GetCurrentProcess(), GetModuleHandle(NULL), &info, sizeof(info));
-		unsigned __int64 size = (unsigned __int64)info.SizeOfImage;
-		unsigned __int64 patternLen = strlen(mask);
-
-		for (unsigned __int64 i = 0; i < size - patternLen; i++) {
-			bool found = true;
-
-			for (unsigned __int64 j = 0; j < patternLen; j++) {
-				if (mask[j] != '?' && pattern[j] != *(char*)(base + i + j)) {
-					found = false;
-					break;
-				}
-			}
-
-			if (found)
-				return base + i;
-		}
-
-		return 0;
-	}
 }
 
 Signature::Signature(const char* signature) noexcept : Sig(signature)
@@ -240,8 +215,11 @@ uintptr_t Signature::InternalResolveSignature(const std::string& signature, Sear
 
 	auto SearchSection = [](const char* section, const char* pattern, const char* mask, const char* module = nullptr) -> unsigned long long
 	{
+		std::cout << "Starting Module: " << module << std::endl;
 		std::uintptr_t base = 0; std::uint64_t size = 0;
 		if (!GetSectionByName(section,base, size, module)) return 0;
+
+		std::cout << "Searching Module: " << module << " BASE: " << base << " SIZE: " << size << std::endl;
 
 		unsigned long long addr = FindPatternF(pattern, mask, base, size);
 		if (addr == 0) {
@@ -283,7 +261,7 @@ uintptr_t Signature::InternalResolveSignature(const std::string& signature, Sear
 
 	if (addr == 0)
 	{
-		std::cerr << "SIGNATURE NOT FOUND: " << std::string(signature) << std::endl;
+		std::cout << "SIGNATURE NOT FOUND: " << std::string(signature) << std::endl;
 	}
 
 	return addr;

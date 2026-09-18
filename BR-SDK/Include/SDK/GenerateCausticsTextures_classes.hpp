@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "WaterEditor_classes.hpp"
 #include "Engine_structs.hpp"
+#include "RTMipGenerationSettings_structs.hpp"
+#include "CausticsWaveSpectrumSettings_structs.hpp"
 #include "CausticGeneratorOutputModes_structs.hpp"
 #include "Water_structs.hpp"
-#include "CausticsWaveSpectrumSettings_structs.hpp"
-#include "RTMipGenerationSettings_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "WaterEditor_classes.hpp"
 #include "CausticPreviewModes_structs.hpp"
 
 
@@ -24,7 +24,7 @@ SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GenerateCausticsTextures.GenerateCausticsTextures_C
 // 0x02A0 (0x05A8 - 0x0308)
-class AGenerateCausticsTextures_C final : public ACausticsGeneratorActor
+class AGenerateCausticsTextures_C : public ACausticsGeneratorActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
@@ -173,7 +173,7 @@ DUMPER7_ASSERTS_AGenerateCausticsTextures_C;
 
 // BlueprintGeneratedClass GenerateCausticsTextures.SKEL_GenerateCausticsTextures_C
 // 0x02A0 (0x05A8 - 0x0308)
-class ASKEL_GenerateCausticsTextures_C final : public ACausticsGeneratorActor
+class ASKEL_GenerateCausticsTextures_C : public ACausticsGeneratorActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0308(0x0010)(ZeroConstructor, Transient, DuplicateTransient)

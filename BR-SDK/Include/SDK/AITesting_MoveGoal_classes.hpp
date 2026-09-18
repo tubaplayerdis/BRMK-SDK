@@ -16,39 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass AITesting_MoveGoal.AITesting_MoveGoal_C
-// 0x0038 (0x0330 - 0x02F8)
-class AAITesting_MoveGoal_C final : public AActor
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBillboardComponent*                    MySpriteComponent;                                 // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CollisionBox;                                      // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                ObservedPawn;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFunctionalTest*                        CurrentTest;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bStartEnabled;                                     // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-public:
-	void ExecuteUbergraph_AITesting_MoveGoal(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void SetCollisionEnabled(bool bShouldBeEnabled);
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("AITesting_MoveGoal_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AITesting_MoveGoal_C")
-	}
-	static class AAITesting_MoveGoal_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AAITesting_MoveGoal_C>();
-	}
-};
-DUMPER7_ASSERTS_AAITesting_MoveGoal_C;
-
 // BlueprintGeneratedClass AITesting_MoveGoal.SKEL_AITesting_MoveGoal_C
 // 0x0038 (0x0330 - 0x02F8)
 class ASKEL_AITesting_MoveGoal_C final : public AActor
@@ -62,9 +29,9 @@ public:
 	bool                                          bStartEnabled;                                     // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void ReceiveBeginPlay();
-	void UserConstructionScript();
 	void SetCollisionEnabled(bool bShouldBeEnabled);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
@@ -81,5 +48,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_AITesting_MoveGoal_C;
+
+// BlueprintGeneratedClass AITesting_MoveGoal.AITesting_MoveGoal_C
+// 0x0038 (0x0330 - 0x02F8)
+class AAITesting_MoveGoal_C final : public AActor
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBillboardComponent*                    MySpriteComponent;                                 // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CollisionBox;                                      // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                ObservedPawn;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFunctionalTest*                        CurrentTest;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bStartEnabled;                                     // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+public:
+	void SetCollisionEnabled(bool bShouldBeEnabled);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_AITesting_MoveGoal(int32 EntryPoint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("AITesting_MoveGoal_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AITesting_MoveGoal_C")
+	}
+	static class AAITesting_MoveGoal_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AAITesting_MoveGoal_C>();
+	}
+};
+DUMPER7_ASSERTS_AAITesting_MoveGoal_C;
 
 SDK_NAMESPACE_END

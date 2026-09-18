@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_Explosion.BP_Explosion_C
-// 0x0000 (0x0348 - 0x0348)
-class ABP_Explosion_C final : public AExplosion
-{
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("BP_Explosion_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BP_Explosion_C")
-	}
-	static class ABP_Explosion_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ABP_Explosion_C>();
-	}
-};
-DUMPER7_ASSERTS_ABP_Explosion_C;
-
 // BlueprintGeneratedClass BP_Explosion.SKEL_BP_Explosion_C
 // 0x0010 (0x0358 - 0x0348)
 class ASKEL_BP_Explosion_C final : public AExplosion
@@ -61,5 +41,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ASKEL_BP_Explosion_C;
+
+// BlueprintGeneratedClass BP_Explosion.BP_Explosion_C
+// 0x0000 (0x0348 - 0x0348)
+class ABP_Explosion_C final : public AExplosion
+{
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("BP_Explosion_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Explosion_C")
+	}
+	static class ABP_Explosion_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ABP_Explosion_C>();
+	}
+};
+DUMPER7_ASSERTS_ABP_Explosion_C;
 
 SDK_NAMESPACE_END

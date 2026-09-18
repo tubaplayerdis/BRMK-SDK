@@ -16,6 +16,62 @@
 
 SDK_NAMESPACE_START
 
+// Function SplineMeshChild.SplineMeshChild_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ASplineMeshChild_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SplineMeshChild_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SplineMeshChild.SplineMeshChild_C.Update Values
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USplineComponent*                 Spline                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInterface*               Mat                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh*                      Mesh_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Scale_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Segment_Length_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASplineMeshChild_C::Update_Values(class USplineComponent* Spline, class UMaterialInterface* Mat, class UStaticMesh* Mesh_0, const struct FVector& Scale_0, float Segment_Length_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SplineMeshChild_C", "Update Values");
+
+	Params::SplineMeshChild_C_Update_Values Parms{};
+
+	Parms.Spline = Spline;
+	Parms.Mat = Mat;
+	Parms.Mesh_0 = Mesh_0;
+	Parms.Scale_0 = std::move(Scale_0);
+	Parms.Segment_Length_0 = Segment_Length_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SplineMeshChild.SplineMeshChild_C.Setup Spline Mesh Components
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ASplineMeshChild_C::Setup_Spline_Mesh_Components()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SplineMeshChild_C", "Setup Spline Mesh Components");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SplineMeshChild.SKEL_SplineMeshChild_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -121,62 +177,6 @@ void ASKEL_SplineMeshChild_C::Setup_Spline_Mesh_Components()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SKEL_SplineMeshChild_C", "Setup Spline Mesh Components");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SplineMeshChild.SplineMeshChild_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ASplineMeshChild_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SplineMeshChild_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SplineMeshChild.SplineMeshChild_C.Update Values
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USplineComponent*                 Spline                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UMaterialInterface*               Mat                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UStaticMesh*                      Mesh_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   Scale_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Segment_Length_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ASplineMeshChild_C::Update_Values(class USplineComponent* Spline, class UMaterialInterface* Mat, class UStaticMesh* Mesh_0, const struct FVector& Scale_0, float Segment_Length_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SplineMeshChild_C", "Update Values");
-
-	Params::SplineMeshChild_C_Update_Values Parms{};
-
-	Parms.Spline = Spline;
-	Parms.Mat = Mat;
-	Parms.Mesh_0 = Mesh_0;
-	Parms.Scale_0 = std::move(Scale_0);
-	Parms.Segment_Length_0 = Segment_Length_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SplineMeshChild.SplineMeshChild_C.Setup Spline Mesh Components
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ASplineMeshChild_C::Setup_Spline_Mesh_Components()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SplineMeshChild_C", "Setup Spline Mesh Components");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

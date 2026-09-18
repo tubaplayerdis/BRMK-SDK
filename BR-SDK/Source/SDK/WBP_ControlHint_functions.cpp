@@ -56,6 +56,66 @@ void UWBP_ControlHint_C::UpdateTextVisibility(bool bNewVisible)
 }
 
 
+// Function WBP_ControlHint.WBP_ControlHint_C.UpdatePressedKeyPadding
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const float                             PaddingRatio                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ControlHint_C::UpdatePressedKeyPadding(const float PaddingRatio)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControlHint_C", "UpdatePressedKeyPadding");
+
+	Params::WBP_ControlHint_C_UpdatePressedKeyPadding Parms{};
+
+	Parms.PaddingRatio = PaddingRatio;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.WBP_ControlHint_C.UpdateHoldProgress
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   InHoldProgress                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ControlHint_C::UpdateHoldProgress(float InHoldProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControlHint_C", "UpdateHoldProgress");
+
+	Params::WBP_ControlHint_C_UpdateHoldProgress Parms{};
+
+	Parms.InHoldProgress = InHoldProgress;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.WBP_ControlHint_C.SetIconOpacity
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   InOpacity                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ControlHint_C::SetIconOpacity(float InOpacity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControlHint_C", "SetIconOpacity");
+
+	Params::WBP_ControlHint_C_SetIconOpacity Parms{};
+
+	Parms.InOpacity = InOpacity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ControlHint.WBP_ControlHint_C.UpdateInputChordVisibility
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -96,6 +156,26 @@ void UWBP_ControlHint_C::SetIconSize(float NewSize)
 }
 
 
+// Function WBP_ControlHint.WBP_ControlHint_C.UpdateIsHoldAction
+// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bIsHoldAction                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWBP_ControlHint_C::UpdateIsHoldAction(bool bIsHoldAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ControlHint_C", "UpdateIsHoldAction");
+
+	Params::WBP_ControlHint_C_UpdateIsHoldAction Parms{};
+
+	Parms.bIsHoldAction = bIsHoldAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateInputChordVisibility
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -111,6 +191,66 @@ void USKEL_WBP_ControlHint_C::UpdateInputChordVisibility(bool bNewVisible)
 	Params::SKEL_WBP_ControlHint_C_UpdateInputChordVisibility Parms{};
 
 	Parms.bNewVisible = bNewVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.SetIconOpacity
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   InOpacity                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USKEL_WBP_ControlHint_C::SetIconOpacity(float InOpacity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "SetIconOpacity");
+
+	Params::SKEL_WBP_ControlHint_C_SetIconOpacity Parms{};
+
+	Parms.InOpacity = InOpacity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateHoldProgress
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// float                                   InHoldProgress                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ControlHint_C::UpdateHoldProgress(float InHoldProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "UpdateHoldProgress");
+
+	Params::SKEL_WBP_ControlHint_C_UpdateHoldProgress Parms{};
+
+	Parms.InHoldProgress = InHoldProgress;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdatePressedKeyPadding
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const float                             PaddingRatio                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ControlHint_C::UpdatePressedKeyPadding(const float PaddingRatio)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "UpdatePressedKeyPadding");
+
+	Params::SKEL_WBP_ControlHint_C_UpdatePressedKeyPadding Parms{};
+
+	Parms.PaddingRatio = PaddingRatio;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -151,6 +291,26 @@ void USKEL_WBP_ControlHint_C::SetIconSize(float NewSize)
 	Params::SKEL_WBP_ControlHint_C_SetIconSize Parms{};
 
 	Parms.NewSize = NewSize;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ControlHint.SKEL_WBP_ControlHint_C.UpdateIsHoldAction
+// (Event, Protected, HasDefaults, BlueprintEvent)
+// Parameters:
+// bool                                    bIsHoldAction                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ControlHint_C::UpdateIsHoldAction(bool bIsHoldAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ControlHint_C", "UpdateIsHoldAction");
+
+	Params::SKEL_WBP_ControlHint_C_UpdateIsHoldAction Parms{};
+
+	Parms.bIsHoldAction = bIsHoldAction;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

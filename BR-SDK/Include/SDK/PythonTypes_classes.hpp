@@ -35,46 +35,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnNavigationPathUpdated__PythonCallable;
 
-// Class PythonTypes.CharacterMovementUpdatedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UCharacterMovementUpdatedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CharacterMovementUpdatedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CharacterMovementUpdatedSignature__PythonCallable")
-	}
-	static class UCharacterMovementUpdatedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCharacterMovementUpdatedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UCharacterMovementUpdatedSignature__PythonCallable;
-
-// Class PythonTypes.ComponentEndOverlapSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UComponentEndOverlapSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComponentEndOverlapSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComponentEndOverlapSignature__PythonCallable")
-	}
-	static class UComponentEndOverlapSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComponentEndOverlapSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UComponentEndOverlapSignature__PythonCallable;
-
 // Class PythonTypes.OnTemperatureChangeDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnTemperatureChangeDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -94,26 +54,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnTemperatureChangeDelegate__PythonCallable;
-
-// Class PythonTypes.GetSlateVisibility__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UGetSlateVisibility__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GetSlateVisibility__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GetSlateVisibility__PythonCallable")
-	}
-	static class UGetSlateVisibility__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGetSlateVisibility__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UGetSlateVisibility__PythonCallable;
 
 // Class PythonTypes.ToolMenuDynamicExecuteAction__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -155,6 +95,26 @@ public:
 };
 DUMPER7_ASSERTS_UToolMenuDynamicCanExecuteAction__PythonCallable;
 
+// Class PythonTypes.IsRootComponentChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UIsRootComponentChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("IsRootComponentChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"IsRootComponentChanged__PythonCallable")
+	}
+	static class UIsRootComponentChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UIsRootComponentChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UIsRootComponentChanged__PythonCallable;
+
 // Class PythonTypes.ToolMenuDynamicIsActionChecked__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UToolMenuDynamicIsActionChecked__PythonCallable final : public UPythonCallableForDelegate
@@ -174,46 +134,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UToolMenuDynamicIsActionChecked__PythonCallable;
-
-// Class PythonTypes.OnMeasurementSystemChanged__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMeasurementSystemChanged__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMeasurementSystemChanged__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMeasurementSystemChanged__PythonCallable")
-	}
-	static class UOnMeasurementSystemChanged__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMeasurementSystemChanged__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMeasurementSystemChanged__PythonCallable;
-
-// Class PythonTypes.TrackablePlaneDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UTrackablePlaneDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TrackablePlaneDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TrackablePlaneDelegate__PythonCallable")
-	}
-	static class UTrackablePlaneDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTrackablePlaneDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UTrackablePlaneDelegate__PythonCallable;
 
 // Class PythonTypes.ToolMenuDynamicGetActionCheckState__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -294,6 +214,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UConstraintBrokenSignature__PythonCallable;
+
+// Class PythonTypes.TrackableObjectDelegate__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UTrackableObjectDelegate__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TrackableObjectDelegate__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TrackableObjectDelegate__PythonCallable")
+	}
+	static class UTrackableObjectDelegate__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTrackableObjectDelegate__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UTrackableObjectDelegate__PythonCallable;
 
 // Class PythonTypes.OnPawnControllerChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -395,26 +335,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnMontageEndedMCDelegate__PythonCallable;
 
-// Class PythonTypes.InstigatedAnyDamageSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UInstigatedAnyDamageSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InstigatedAnyDamageSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InstigatedAnyDamageSignature__PythonCallable")
-	}
-	static class UInstigatedAnyDamageSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInstigatedAnyDamageSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UInstigatedAnyDamageSignature__PythonCallable;
-
 // Class PythonTypes.OnAllMontageInstancesEndedMCDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnAllMontageInstancesEndedMCDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -454,26 +374,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnMontageBlendingOutStartedMCDelegate__PythonCallable;
-
-// Class PythonTypes.ActorComponentActivatedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UActorComponentActivatedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActorComponentActivatedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorComponentActivatedSignature__PythonCallable")
-	}
-	static class UActorComponentActivatedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActorComponentActivatedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UActorComponentActivatedSignature__PythonCallable;
 
 // Class PythonTypes.PlayMontageAnimNotifyDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -535,6 +435,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnAudioFadeChangeSignature__PythonCallable;
 
+// Class PythonTypes.ViewportDisplayCallback__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UViewportDisplayCallback__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ViewportDisplayCallback__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ViewportDisplayCallback__PythonCallable")
+	}
+	static class UViewportDisplayCallback__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UViewportDisplayCallback__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UViewportDisplayCallback__PythonCallable;
+
 // Class PythonTypes.ApplicationLifetimeDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UApplicationLifetimeDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -555,66 +475,6 @@ public:
 };
 DUMPER7_ASSERTS_UApplicationLifetimeDelegate__PythonCallable;
 
-// Class PythonTypes.LevelStreamingLoadedStatus__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class ULevelStreamingLoadedStatus__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LevelStreamingLoadedStatus__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelStreamingLoadedStatus__PythonCallable")
-	}
-	static class ULevelStreamingLoadedStatus__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULevelStreamingLoadedStatus__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_ULevelStreamingLoadedStatus__PythonCallable;
-
-// Class PythonTypes.OnAssetReimport_Dyn__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnAssetReimport_Dyn__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnAssetReimport_Dyn__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnAssetReimport_Dyn__PythonCallable")
-	}
-	static class UOnAssetReimport_Dyn__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnAssetReimport_Dyn__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnAssetReimport_Dyn__PythonCallable;
-
-// Class PythonTypes.OnUserClosedAdvertisement__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnUserClosedAdvertisement__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnUserClosedAdvertisement__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnUserClosedAdvertisement__PythonCallable")
-	}
-	static class UOnUserClosedAdvertisement__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnUserClosedAdvertisement__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnUserClosedAdvertisement__PythonCallable;
-
 // Class PythonTypes.ApplicationStartupArgumentsDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UApplicationStartupArgumentsDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -634,6 +494,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UApplicationStartupArgumentsDelegate__PythonCallable;
+
+// Class PythonTypes.TakePointDamageSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UTakePointDamageSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TakePointDamageSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TakePointDamageSignature__PythonCallable")
+	}
+	static class UTakePointDamageSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTakePointDamageSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UTakePointDamageSignature__PythonCallable;
 
 // Class PythonTypes.OnLowPowerModeDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -675,66 +555,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnSubmixEnvelopeBP__PythonCallable;
 
-// Class PythonTypes.OnAsyncHandleSaveGame__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnAsyncHandleSaveGame__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnAsyncHandleSaveGame__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnAsyncHandleSaveGame__PythonCallable")
-	}
-	static class UOnAsyncHandleSaveGame__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnAsyncHandleSaveGame__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnAsyncHandleSaveGame__PythonCallable;
-
-// Class PythonTypes.OnPopupClosedScript__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnPopupClosedScript__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnPopupClosedScript__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnPopupClosedScript__PythonCallable")
-	}
-	static class UOnPopupClosedScript__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnPopupClosedScript__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnPopupClosedScript__PythonCallable;
-
-// Class PythonTypes.GetSlateBrush__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UGetSlateBrush__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GetSlateBrush__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GetSlateBrush__PythonCallable")
-	}
-	static class UGetSlateBrush__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGetSlateBrush__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UGetSlateBrush__PythonCallable;
-
 // Class PythonTypes.OnSubmixSpectralAnalysisBP__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnSubmixSpectralAnalysisBP__PythonCallable final : public UPythonCallableForDelegate
@@ -754,6 +574,66 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnSubmixSpectralAnalysisBP__PythonCallable;
+
+// Class PythonTypes.CharacterMovementUpdatedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UCharacterMovementUpdatedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CharacterMovementUpdatedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CharacterMovementUpdatedSignature__PythonCallable")
+	}
+	static class UCharacterMovementUpdatedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCharacterMovementUpdatedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UCharacterMovementUpdatedSignature__PythonCallable;
+
+// Class PythonTypes.OnNotifyStateReplaced__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnNotifyStateReplaced__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnNotifyStateReplaced__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnNotifyStateReplaced__PythonCallable")
+	}
+	static class UOnNotifyStateReplaced__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnNotifyStateReplaced__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnNotifyStateReplaced__PythonCallable;
+
+// Class PythonTypes.MovementModeChangedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UMovementModeChangedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovementModeChangedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovementModeChangedSignature__PythonCallable")
+	}
+	static class UMovementModeChangedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovementModeChangedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UMovementModeChangedSignature__PythonCallable;
 
 // Class PythonTypes.OnQuartzMetronomeEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -795,25 +675,45 @@ public:
 };
 DUMPER7_ASSERTS_UOnQuartzMetronomeEventBP__PythonCallable;
 
-// Class PythonTypes.OnGameUserSettingsUINeedsUpdate__PythonCallable
+// Class PythonTypes.OnFocused__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnGameUserSettingsUINeedsUpdate__PythonCallable final : public UPythonCallableForDelegate
+class UOnFocused__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnGameUserSettingsUINeedsUpdate__PythonCallable")
+		STATIC_CLASS_IMPL("OnFocused__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnGameUserSettingsUINeedsUpdate__PythonCallable")
+		STATIC_NAME_IMPL(L"OnFocused__PythonCallable")
 	}
-	static class UOnGameUserSettingsUINeedsUpdate__PythonCallable* GetDefaultObj()
+	static class UOnFocused__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnGameUserSettingsUINeedsUpdate__PythonCallable>();
+		return GetDefaultObjImpl<UOnFocused__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnGameUserSettingsUINeedsUpdate__PythonCallable;
+DUMPER7_ASSERTS_UOnFocused__PythonCallable;
+
+// Class PythonTypes.ComponentEndCursorOverSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentEndCursorOverSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentEndCursorOverSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentEndCursorOverSignature__PythonCallable")
+	}
+	static class UComponentEndCursorOverSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentEndCursorOverSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentEndCursorOverSignature__PythonCallable;
 
 // Class PythonTypes.OnQuartzCommandEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -835,25 +735,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnQuartzCommandEvent__PythonCallable;
 
-// Class PythonTypes.OnLeaderboardFlushed__PythonCallable
+// Class PythonTypes.GetTooltipContent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnLeaderboardFlushed__PythonCallable final : public UPythonCallableForDelegate
+class UGetTooltipContent__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnLeaderboardFlushed__PythonCallable")
+		STATIC_CLASS_IMPL("GetTooltipContent__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnLeaderboardFlushed__PythonCallable")
+		STATIC_NAME_IMPL(L"GetTooltipContent__PythonCallable")
 	}
-	static class UOnLeaderboardFlushed__PythonCallable* GetDefaultObj()
+	static class UGetTooltipContent__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnLeaderboardFlushed__PythonCallable>();
+		return GetDefaultObjImpl<UGetTooltipContent__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnLeaderboardFlushed__PythonCallable;
+DUMPER7_ASSERTS_UGetTooltipContent__PythonCallable;
 
 // Class PythonTypes.OnQuartzCommandEventBP__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -875,6 +775,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnQuartzCommandEventBP__PythonCallable;
 
+// Class PythonTypes.OnReply__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnReply__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnReply__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnReply__PythonCallable")
+	}
+	static class UOnReply__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnReply__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnReply__PythonCallable;
+
 // Class PythonTypes.OnAudioFinished__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnAudioFinished__PythonCallable final : public UPythonCallableForDelegate
@@ -894,26 +814,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnAudioFinished__PythonCallable;
-
-// Class PythonTypes.OnUserClickedBanner__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnUserClickedBanner__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnUserClickedBanner__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnUserClickedBanner__PythonCallable")
-	}
-	static class UOnUserClickedBanner__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnUserClickedBanner__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnUserClickedBanner__PythonCallable;
 
 // Class PythonTypes.OnQueueSubtitles__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -955,6 +855,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnAudioPlayStateChanged__PythonCallable;
 
+// Class PythonTypes.PlatformReceivedLocalNotificationDelegate__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UPlatformReceivedLocalNotificationDelegate__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlatformReceivedLocalNotificationDelegate__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlatformReceivedLocalNotificationDelegate__PythonCallable")
+	}
+	static class UPlatformReceivedLocalNotificationDelegate__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlatformReceivedLocalNotificationDelegate__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UPlatformReceivedLocalNotificationDelegate__PythonCallable;
+
 // Class PythonTypes.OnAudioVirtualizationChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnAudioVirtualizationChanged__PythonCallable final : public UPythonCallableForDelegate
@@ -975,25 +895,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnAudioVirtualizationChanged__PythonCallable;
 
-// Class PythonTypes.ViewportDisplayCallback__PythonCallable
+// Class PythonTypes.OnLevelSequenceLoaded__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UViewportDisplayCallback__PythonCallable final : public UPythonCallableForDelegate
+class UOnLevelSequenceLoaded__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ViewportDisplayCallback__PythonCallable")
+		STATIC_CLASS_IMPL("OnLevelSequenceLoaded__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ViewportDisplayCallback__PythonCallable")
+		STATIC_NAME_IMPL(L"OnLevelSequenceLoaded__PythonCallable")
 	}
-	static class UViewportDisplayCallback__PythonCallable* GetDefaultObj()
+	static class UOnLevelSequenceLoaded__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UViewportDisplayCallback__PythonCallable>();
+		return GetDefaultObjImpl<UOnLevelSequenceLoaded__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UViewportDisplayCallback__PythonCallable;
+DUMPER7_ASSERTS_UOnLevelSequenceLoaded__PythonCallable;
 
 // Class PythonTypes.OnAudioPlaybackPercent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1015,46 +935,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnAudioPlaybackPercent__PythonCallable;
 
-// Class PythonTypes.OnColorDisplayModeChanged__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnColorDisplayModeChanged__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnColorDisplayModeChanged__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnColorDisplayModeChanged__PythonCallable")
-	}
-	static class UOnColorDisplayModeChanged__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnColorDisplayModeChanged__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnColorDisplayModeChanged__PythonCallable;
-
-// Class PythonTypes.LevelStreamingVisibilityStatus__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class ULevelStreamingVisibilityStatus__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LevelStreamingVisibilityStatus__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelStreamingVisibilityStatus__PythonCallable")
-	}
-	static class ULevelStreamingVisibilityStatus__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULevelStreamingVisibilityStatus__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_ULevelStreamingVisibilityStatus__PythonCallable;
-
 // Class PythonTypes.OnAudioSingleEnvelopeValue__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnAudioSingleEnvelopeValue__PythonCallable final : public UPythonCallableForDelegate
@@ -1074,6 +954,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnAudioSingleEnvelopeValue__PythonCallable;
+
+// Class PythonTypes.OnAsyncHandleSaveGame__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnAsyncHandleSaveGame__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnAsyncHandleSaveGame__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnAsyncHandleSaveGame__PythonCallable")
+	}
+	static class UOnAsyncHandleSaveGame__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnAsyncHandleSaveGame__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnAsyncHandleSaveGame__PythonCallable;
 
 // Class PythonTypes.OnAudioMultiEnvelopeValue__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1115,26 +1015,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnForceFeedbackFinished__PythonCallable;
 
-// Class PythonTypes.CharacterReachedApexSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UCharacterReachedApexSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CharacterReachedApexSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CharacterReachedApexSignature__PythonCallable")
-	}
-	static class UCharacterReachedApexSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCharacterReachedApexSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UCharacterReachedApexSignature__PythonCallable;
-
 // Class PythonTypes.InputActionHandlerDynamicSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UInputActionHandlerDynamicSignature__PythonCallable final : public UPythonCallableForDelegate
@@ -1154,26 +1034,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInputActionHandlerDynamicSignature__PythonCallable;
-
-// Class PythonTypes.ForEachAssetIteratorSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UForEachAssetIteratorSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ForEachAssetIteratorSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ForEachAssetIteratorSignature__PythonCallable")
-	}
-	static class UForEachAssetIteratorSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UForEachAssetIteratorSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UForEachAssetIteratorSignature__PythonCallable;
 
 // Class PythonTypes.InputTouchHandlerDynamicSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1195,25 +1055,25 @@ public:
 };
 DUMPER7_ASSERTS_UInputTouchHandlerDynamicSignature__PythonCallable;
 
-// Class PythonTypes.MovementModeChangedSignature__PythonCallable
+// Class PythonTypes.CharacterReachedApexSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UMovementModeChangedSignature__PythonCallable final : public UPythonCallableForDelegate
+class UCharacterReachedApexSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovementModeChangedSignature__PythonCallable")
+		STATIC_CLASS_IMPL("CharacterReachedApexSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovementModeChangedSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"CharacterReachedApexSignature__PythonCallable")
 	}
-	static class UMovementModeChangedSignature__PythonCallable* GetDefaultObj()
+	static class UCharacterReachedApexSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovementModeChangedSignature__PythonCallable>();
+		return GetDefaultObjImpl<UCharacterReachedApexSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UMovementModeChangedSignature__PythonCallable;
+DUMPER7_ASSERTS_UCharacterReachedApexSignature__PythonCallable;
 
 // Class PythonTypes.InputAxisHandlerDynamicSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1235,26 +1095,6 @@ public:
 };
 DUMPER7_ASSERTS_UInputAxisHandlerDynamicSignature__PythonCallable;
 
-// Class PythonTypes.ComponentSleepSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UComponentSleepSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComponentSleepSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComponentSleepSignature__PythonCallable")
-	}
-	static class UComponentSleepSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComponentSleepSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UComponentSleepSignature__PythonCallable;
-
 // Class PythonTypes.InputVectorAxisHandlerDynamicSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UInputVectorAxisHandlerDynamicSignature__PythonCallable final : public UPythonCallableForDelegate
@@ -1274,46 +1114,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInputVectorAxisHandlerDynamicSignature__PythonCallable;
-
-// Class PythonTypes.InputChannelScriptDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UInputChannelScriptDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InputChannelScriptDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InputChannelScriptDelegate__PythonCallable")
-	}
-	static class UInputChannelScriptDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputChannelScriptDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UInputChannelScriptDelegate__PythonCallable;
-
-// Class PythonTypes.OnEditableTextBoxCommittedEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnEditableTextBoxCommittedEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnEditableTextBoxCommittedEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnEditableTextBoxCommittedEvent__PythonCallable")
-	}
-	static class UOnEditableTextBoxCommittedEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnEditableTextBoxCommittedEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnEditableTextBoxCommittedEvent__PythonCallable;
 
 // Class PythonTypes.InputGestureHandlerDynamicSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1355,26 +1155,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnInterpToResetDelegate__PythonCallable;
 
-// Class PythonTypes.ParticleDeathSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UParticleDeathSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ParticleDeathSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ParticleDeathSignature__PythonCallable")
-	}
-	static class UParticleDeathSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UParticleDeathSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UParticleDeathSignature__PythonCallable;
-
 // Class PythonTypes.OnInterpToReverseDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnInterpToReverseDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -1415,6 +1195,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnInterpToStopDelegate__PythonCallable;
 
+// Class PythonTypes.ComponentOnReleasedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentOnReleasedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentOnReleasedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentOnReleasedSignature__PythonCallable")
+	}
+	static class UComponentOnReleasedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentOnReleasedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentOnReleasedSignature__PythonCallable;
+
 // Class PythonTypes.OnInterpToWaitBeginDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnInterpToWaitBeginDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -1434,6 +1234,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnInterpToWaitBeginDelegate__PythonCallable;
+
+// Class PythonTypes.OnListEntryReleasedDynamic__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnListEntryReleasedDynamic__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnListEntryReleasedDynamic__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnListEntryReleasedDynamic__PythonCallable")
+	}
+	static class UOnListEntryReleasedDynamic__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnListEntryReleasedDynamic__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnListEntryReleasedDynamic__PythonCallable;
 
 // Class PythonTypes.OnInterpToWaitEndDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1475,6 +1295,26 @@ public:
 };
 DUMPER7_ASSERTS_UPlatformEventDelegate__PythonCallable;
 
+// Class PythonTypes.OnSubmixSpectralAnalysis__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnSubmixSpectralAnalysis__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnSubmixSpectralAnalysis__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnSubmixSpectralAnalysis__PythonCallable")
+	}
+	static class UOnSubmixSpectralAnalysis__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnSubmixSpectralAnalysis__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnSubmixSpectralAnalysis__PythonCallable;
+
 // Class PythonTypes.OnTimelineEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnTimelineEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -1494,26 +1334,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnTimelineEvent__PythonCallable;
-
-// Class PythonTypes.PlatformStartupArgumentsDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UPlatformStartupArgumentsDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlatformStartupArgumentsDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlatformStartupArgumentsDelegate__PythonCallable")
-	}
-	static class UPlatformStartupArgumentsDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlatformStartupArgumentsDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UPlatformStartupArgumentsDelegate__PythonCallable;
 
 // Class PythonTypes.OnTimelineFloat__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1535,26 +1355,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnTimelineFloat__PythonCallable;
 
-// Class PythonTypes.OnPropertyValueChanged__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnPropertyValueChanged__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnPropertyValueChanged__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnPropertyValueChanged__PythonCallable")
-	}
-	static class UOnPropertyValueChanged__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnPropertyValueChanged__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnPropertyValueChanged__PythonCallable;
-
 // Class PythonTypes.OnTimelineVector__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnTimelineVector__PythonCallable final : public UPythonCallableForDelegate
@@ -1574,26 +1374,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnTimelineVector__PythonCallable;
-
-// Class PythonTypes.OnPrimaryAssetClassLoaded__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnPrimaryAssetClassLoaded__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnPrimaryAssetClassLoaded__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnPrimaryAssetClassLoaded__PythonCallable")
-	}
-	static class UOnPrimaryAssetClassLoaded__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnPrimaryAssetClassLoaded__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnPrimaryAssetClassLoaded__PythonCallable;
 
 // Class PythonTypes.OnTimelineLinearColor__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1615,26 +1395,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnTimelineLinearColor__PythonCallable;
 
-// Class PythonTypes.ActorOnClickedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UActorOnClickedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActorOnClickedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorOnClickedSignature__PythonCallable")
-	}
-	static class UActorOnClickedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActorOnClickedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UActorOnClickedSignature__PythonCallable;
-
 // Class PythonTypes.OnDataDrivenCVarChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnDataDrivenCVarChanged__PythonCallable final : public UPythonCallableForDelegate
@@ -1655,25 +1415,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnDataDrivenCVarChanged__PythonCallable;
 
-// Class PythonTypes.ParticleSpawnSignature__PythonCallable
+// Class PythonTypes.GetIconLocationScript__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UParticleSpawnSignature__PythonCallable final : public UPythonCallableForDelegate
+class UGetIconLocationScript__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ParticleSpawnSignature__PythonCallable")
+		STATIC_CLASS_IMPL("GetIconLocationScript__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ParticleSpawnSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"GetIconLocationScript__PythonCallable")
 	}
-	static class UParticleSpawnSignature__PythonCallable* GetDefaultObj()
+	static class UGetIconLocationScript__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UParticleSpawnSignature__PythonCallable>();
+		return GetDefaultObjImpl<UGetIconLocationScript__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UParticleSpawnSignature__PythonCallable;
+DUMPER7_ASSERTS_UGetIconLocationScript__PythonCallable;
 
 // Class PythonTypes.OnCanvasRenderTargetUpdate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1695,6 +1455,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnCanvasRenderTargetUpdate__PythonCallable;
 
+// Class PythonTypes.ParticleBurstSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UParticleBurstSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ParticleBurstSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ParticleBurstSignature__PythonCallable")
+	}
+	static class UParticleBurstSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UParticleBurstSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UParticleBurstSignature__PythonCallable;
+
 // Class PythonTypes.PlatformInterfaceDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UPlatformInterfaceDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -1715,25 +1495,225 @@ public:
 };
 DUMPER7_ASSERTS_UPlatformInterfaceDelegate__PythonCallable;
 
-// Class PythonTypes.GameplayTaskSpawnActorDelegate__PythonCallable
+// Class PythonTypes.AsyncDelayComplete__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UGameplayTaskSpawnActorDelegate__PythonCallable final : public UPythonCallableForDelegate
+class UAsyncDelayComplete__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GameplayTaskSpawnActorDelegate__PythonCallable")
+		STATIC_CLASS_IMPL("AsyncDelayComplete__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GameplayTaskSpawnActorDelegate__PythonCallable")
+		STATIC_NAME_IMPL(L"AsyncDelayComplete__PythonCallable")
 	}
-	static class UGameplayTaskSpawnActorDelegate__PythonCallable* GetDefaultObj()
+	static class UAsyncDelayComplete__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGameplayTaskSpawnActorDelegate__PythonCallable>();
+		return GetDefaultObjImpl<UAsyncDelayComplete__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTaskSpawnActorDelegate__PythonCallable;
+DUMPER7_ASSERTS_UAsyncDelayComplete__PythonCallable;
+
+// Class PythonTypes.OnInputHelpOpenChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnInputHelpOpenChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnInputHelpOpenChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnInputHelpOpenChanged__PythonCallable")
+	}
+	static class UOnInputHelpOpenChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnInputHelpOpenChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnInputHelpOpenChanged__PythonCallable;
+
+// Class PythonTypes.PyTestMulticastDelegate__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UPyTestMulticastDelegate__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PyTestMulticastDelegate__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PyTestMulticastDelegate__PythonCallable")
+	}
+	static class UPyTestMulticastDelegate__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPyTestMulticastDelegate__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UPyTestMulticastDelegate__PythonCallable;
+
+// Class PythonTypes.InstigatedAnyDamageSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UInstigatedAnyDamageSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InstigatedAnyDamageSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InstigatedAnyDamageSignature__PythonCallable")
+	}
+	static class UInstigatedAnyDamageSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInstigatedAnyDamageSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UInstigatedAnyDamageSignature__PythonCallable;
+
+// Class PythonTypes.OnMockDataMeshTrackerUpdated__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMockDataMeshTrackerUpdated__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMockDataMeshTrackerUpdated__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMockDataMeshTrackerUpdated__PythonCallable")
+	}
+	static class UOnMockDataMeshTrackerUpdated__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMockDataMeshTrackerUpdated__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMockDataMeshTrackerUpdated__PythonCallable;
+
+// Class PythonTypes.OnUserClickedBanner__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnUserClickedBanner__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnUserClickedBanner__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnUserClickedBanner__PythonCallable")
+	}
+	static class UOnUserClickedBanner__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnUserClickedBanner__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnUserClickedBanner__PythonCallable;
+
+// Class PythonTypes.ActorEndTouchOverSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UActorEndTouchOverSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorEndTouchOverSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorEndTouchOverSignature__PythonCallable")
+	}
+	static class UActorEndTouchOverSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorEndTouchOverSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UActorEndTouchOverSignature__PythonCallable;
+
+// Class PythonTypes.OnUserClosedAdvertisement__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnUserClosedAdvertisement__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnUserClosedAdvertisement__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnUserClosedAdvertisement__PythonCallable")
+	}
+	static class UOnUserClosedAdvertisement__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnUserClosedAdvertisement__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnUserClosedAdvertisement__PythonCallable;
+
+// Class PythonTypes.OnSubmixRecordedFileDone__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnSubmixRecordedFileDone__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnSubmixRecordedFileDone__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnSubmixRecordedFileDone__PythonCallable")
+	}
+	static class UOnSubmixRecordedFileDone__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnSubmixRecordedFileDone__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnSubmixRecordedFileDone__PythonCallable;
+
+// Class PythonTypes.LevelStreamingLoadedStatus__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class ULevelStreamingLoadedStatus__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LevelStreamingLoadedStatus__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelStreamingLoadedStatus__PythonCallable")
+	}
+	static class ULevelStreamingLoadedStatus__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULevelStreamingLoadedStatus__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_ULevelStreamingLoadedStatus__PythonCallable;
+
+// Class PythonTypes.LevelStreamingVisibilityStatus__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class ULevelStreamingVisibilityStatus__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LevelStreamingVisibilityStatus__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelStreamingVisibilityStatus__PythonCallable")
+	}
+	static class ULevelStreamingVisibilityStatus__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULevelStreamingVisibilityStatus__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_ULevelStreamingVisibilityStatus__PythonCallable;
 
 // Class PythonTypes.LandedSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1755,25 +1735,25 @@ public:
 };
 DUMPER7_ASSERTS_ULandedSignature__PythonCallable;
 
-// Class PythonTypes.OnActionTriggered__PythonCallable
+// Class PythonTypes.OnGameUserSettingsUINeedsUpdate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnActionTriggered__PythonCallable final : public UPythonCallableForDelegate
+class UOnGameUserSettingsUINeedsUpdate__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnActionTriggered__PythonCallable")
+		STATIC_CLASS_IMPL("OnGameUserSettingsUINeedsUpdate__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnActionTriggered__PythonCallable")
+		STATIC_NAME_IMPL(L"OnGameUserSettingsUINeedsUpdate__PythonCallable")
 	}
-	static class UOnActionTriggered__PythonCallable* GetDefaultObj()
+	static class UOnGameUserSettingsUINeedsUpdate__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnActionTriggered__PythonCallable>();
+		return GetDefaultObjImpl<UOnGameUserSettingsUINeedsUpdate__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnActionTriggered__PythonCallable;
+DUMPER7_ASSERTS_UOnGameUserSettingsUINeedsUpdate__PythonCallable;
 
 // Class PythonTypes.OnProjectileBounceDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1835,6 +1815,26 @@ public:
 };
 DUMPER7_ASSERTS_UPlatformDelegate__PythonCallable;
 
+// Class PythonTypes.EQSQueryDoneSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UEQSQueryDoneSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EQSQueryDoneSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EQSQueryDoneSignature__PythonCallable")
+	}
+	static class UEQSQueryDoneSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEQSQueryDoneSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UEQSQueryDoneSignature__PythonCallable;
+
 // Class PythonTypes.PlatformFailedToRegisterForRemoteNotificationsDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UPlatformFailedToRegisterForRemoteNotificationsDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -1854,26 +1854,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPlatformFailedToRegisterForRemoteNotificationsDelegate__PythonCallable;
-
-// Class PythonTypes.PlatformReceivedLocalNotificationDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UPlatformReceivedLocalNotificationDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlatformReceivedLocalNotificationDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlatformReceivedLocalNotificationDelegate__PythonCallable")
-	}
-	static class UPlatformReceivedLocalNotificationDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlatformReceivedLocalNotificationDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UPlatformReceivedLocalNotificationDelegate__PythonCallable;
 
 // Class PythonTypes.PlatformReceivedRemoteNotificationDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -1935,26 +1915,6 @@ public:
 };
 DUMPER7_ASSERTS_UPlatformRegisteredForUserNotificationsDelegate__PythonCallable;
 
-// Class PythonTypes.OnMediaPlayerMediaEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMediaPlayerMediaEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMediaPlayerMediaEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMediaPlayerMediaEvent__PythonCallable")
-	}
-	static class UOnMediaPlayerMediaEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMediaPlayerMediaEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMediaPlayerMediaEvent__PythonCallable;
-
 // Class PythonTypes.PlatformScreenOrientationChangedDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UPlatformScreenOrientationChangedDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -1974,6 +1934,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPlatformScreenOrientationChangedDelegate__PythonCallable;
+
+// Class PythonTypes.PlatformStartupArgumentsDelegate__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UPlatformStartupArgumentsDelegate__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlatformStartupArgumentsDelegate__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlatformStartupArgumentsDelegate__PythonCallable")
+	}
+	static class UPlatformStartupArgumentsDelegate__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlatformStartupArgumentsDelegate__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UPlatformStartupArgumentsDelegate__PythonCallable;
 
 // Class PythonTypes.OnAssetLoaded__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2035,45 +2015,65 @@ public:
 };
 DUMPER7_ASSERTS_UOnMatineeEvent__PythonCallable;
 
-// Class PythonTypes.OnPontoonExitedWater__PythonCallable
+// Class PythonTypes.OnAssetPreImport_Dyn__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnPontoonExitedWater__PythonCallable final : public UPythonCallableForDelegate
+class UOnAssetPreImport_Dyn__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnPontoonExitedWater__PythonCallable")
+		STATIC_CLASS_IMPL("OnAssetPreImport_Dyn__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnPontoonExitedWater__PythonCallable")
+		STATIC_NAME_IMPL(L"OnAssetPreImport_Dyn__PythonCallable")
 	}
-	static class UOnPontoonExitedWater__PythonCallable* GetDefaultObj()
+	static class UOnAssetPreImport_Dyn__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnPontoonExitedWater__PythonCallable>();
+		return GetDefaultObjImpl<UOnAssetPreImport_Dyn__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnPontoonExitedWater__PythonCallable;
+DUMPER7_ASSERTS_UOnAssetPreImport_Dyn__PythonCallable;
 
-// Class PythonTypes.ParticleBurstSignature__PythonCallable
+// Class PythonTypes.ParticleSpawnSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UParticleBurstSignature__PythonCallable final : public UPythonCallableForDelegate
+class UParticleSpawnSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ParticleBurstSignature__PythonCallable")
+		STATIC_CLASS_IMPL("ParticleSpawnSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ParticleBurstSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"ParticleSpawnSignature__PythonCallable")
 	}
-	static class UParticleBurstSignature__PythonCallable* GetDefaultObj()
+	static class UParticleSpawnSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UParticleBurstSignature__PythonCallable>();
+		return GetDefaultObjImpl<UParticleSpawnSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UParticleBurstSignature__PythonCallable;
+DUMPER7_ASSERTS_UParticleSpawnSignature__PythonCallable;
+
+// Class PythonTypes.ParticleDeathSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UParticleDeathSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ParticleDeathSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ParticleDeathSignature__PythonCallable")
+	}
+	static class UParticleDeathSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UParticleDeathSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UParticleDeathSignature__PythonCallable;
 
 // Class PythonTypes.ParticleCollisionSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2115,25 +2115,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnSystemFinished__PythonCallable;
 
-// Class PythonTypes.OnSubmixRecordedFileDone__PythonCallable
+// Class PythonTypes.BlueprintFindSessionsResultDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnSubmixRecordedFileDone__PythonCallable final : public UPythonCallableForDelegate
+class UBlueprintFindSessionsResultDelegate__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnSubmixRecordedFileDone__PythonCallable")
+		STATIC_CLASS_IMPL("BlueprintFindSessionsResultDelegate__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnSubmixRecordedFileDone__PythonCallable")
+		STATIC_NAME_IMPL(L"BlueprintFindSessionsResultDelegate__PythonCallable")
 	}
-	static class UOnSubmixRecordedFileDone__PythonCallable* GetDefaultObj()
+	static class UBlueprintFindSessionsResultDelegate__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnSubmixRecordedFileDone__PythonCallable>();
+		return GetDefaultObjImpl<UBlueprintFindSessionsResultDelegate__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnSubmixRecordedFileDone__PythonCallable;
+DUMPER7_ASSERTS_UBlueprintFindSessionsResultDelegate__PythonCallable;
 
 // Class PythonTypes.OnSubmixEnvelope__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2155,26 +2155,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnSubmixEnvelope__PythonCallable;
 
-// Class PythonTypes.OnSubmixSpectralAnalysis__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnSubmixSpectralAnalysis__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnSubmixSpectralAnalysis__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnSubmixSpectralAnalysis__PythonCallable")
-	}
-	static class UOnSubmixSpectralAnalysis__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnSubmixSpectralAnalysis__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnSubmixSpectralAnalysis__PythonCallable;
-
 // Class PythonTypes.EmptyOnlineDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UEmptyOnlineDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -2195,26 +2175,6 @@ public:
 };
 DUMPER7_ASSERTS_UEmptyOnlineDelegate__PythonCallable;
 
-// Class PythonTypes.InAppPurchaseResult2__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UInAppPurchaseResult2__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InAppPurchaseResult2__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InAppPurchaseResult2__PythonCallable")
-	}
-	static class UInAppPurchaseResult2__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInAppPurchaseResult2__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UInAppPurchaseResult2__PythonCallable;
-
 // Class PythonTypes.OnPrimaryAssetLoaded__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnPrimaryAssetLoaded__PythonCallable final : public UPythonCallableForDelegate
@@ -2234,6 +2194,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnPrimaryAssetLoaded__PythonCallable;
+
+// Class PythonTypes.OnClicked__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnClicked__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnClicked__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnClicked__PythonCallable")
+	}
+	static class UOnClicked__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnClicked__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnClicked__PythonCallable;
+
+// Class PythonTypes.OnPrimaryAssetClassLoaded__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnPrimaryAssetClassLoaded__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnPrimaryAssetClassLoaded__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnPrimaryAssetClassLoaded__PythonCallable")
+	}
+	static class UOnPrimaryAssetClassLoaded__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnPrimaryAssetClassLoaded__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnPrimaryAssetClassLoaded__PythonCallable;
 
 // Class PythonTypes.OnPrimaryAssetListLoaded__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2295,6 +2295,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnPrimaryAssetBundlesChanged__PythonCallable;
 
+// Class PythonTypes.OnLeaderboardFlushed__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnLeaderboardFlushed__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnLeaderboardFlushed__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnLeaderboardFlushed__PythonCallable")
+	}
+	static class UOnLeaderboardFlushed__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnLeaderboardFlushed__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnLeaderboardFlushed__PythonCallable;
+
 // Class PythonTypes.OnNavDataGenericEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnNavDataGenericEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -2314,46 +2334,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnNavDataGenericEvent__PythonCallable;
-
-// Class PythonTypes.SmartLinkReachedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class USmartLinkReachedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartLinkReachedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartLinkReachedSignature__PythonCallable")
-	}
-	static class USmartLinkReachedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartLinkReachedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_USmartLinkReachedSignature__PythonCallable;
-
-// Class PythonTypes.OnMockDataMeshTrackerUpdated__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMockDataMeshTrackerUpdated__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMockDataMeshTrackerUpdated__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMockDataMeshTrackerUpdated__PythonCallable")
-	}
-	static class UOnMockDataMeshTrackerUpdated__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMockDataMeshTrackerUpdated__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMockDataMeshTrackerUpdated__PythonCallable;
 
 // Class PythonTypes.OnARTrackingStateChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2395,26 +2375,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnARTransformUpdated__PythonCallable;
 
-// Class PythonTypes.OnButtonClickedEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnButtonClickedEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnButtonClickedEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnButtonClickedEvent__PythonCallable")
-	}
-	static class UOnButtonClickedEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnButtonClickedEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnButtonClickedEvent__PythonCallable;
-
 // Class PythonTypes.ARSaveWorldPin__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UARSaveWorldPin__PythonCallable final : public UPythonCallableForDelegate
@@ -2454,6 +2414,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UARGetCandidateObjectPin__PythonCallable;
+
+// Class PythonTypes.SeePawnDelegate__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class USeePawnDelegate__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SeePawnDelegate__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SeePawnDelegate__PythonCallable")
+	}
+	static class USeePawnDelegate__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USeePawnDelegate__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_USeePawnDelegate__PythonCallable;
 
 // Class PythonTypes.GeoTrackingAvailabilityDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2515,6 +2495,26 @@ public:
 };
 DUMPER7_ASSERTS_UInstanceARActorSpawnedDelegate__PythonCallable;
 
+// Class PythonTypes.OnOpeningEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnOpeningEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnOpeningEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnOpeningEvent__PythonCallable")
+	}
+	static class UOnOpeningEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnOpeningEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnOpeningEvent__PythonCallable;
+
 // Class PythonTypes.InstanceARActorToBeDestroyedDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UInstanceARActorToBeDestroyedDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -2555,25 +2555,25 @@ public:
 };
 DUMPER7_ASSERTS_UTrackableDelegate__PythonCallable;
 
-// Class PythonTypes.OnEditableTextCommittedEvent__PythonCallable
+// Class PythonTypes.TrackablePlaneDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnEditableTextCommittedEvent__PythonCallable final : public UPythonCallableForDelegate
+class UTrackablePlaneDelegate__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnEditableTextCommittedEvent__PythonCallable")
+		STATIC_CLASS_IMPL("TrackablePlaneDelegate__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnEditableTextCommittedEvent__PythonCallable")
+		STATIC_NAME_IMPL(L"TrackablePlaneDelegate__PythonCallable")
 	}
-	static class UOnEditableTextCommittedEvent__PythonCallable* GetDefaultObj()
+	static class UTrackablePlaneDelegate__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnEditableTextCommittedEvent__PythonCallable>();
+		return GetDefaultObjImpl<UTrackablePlaneDelegate__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnEditableTextCommittedEvent__PythonCallable;
+DUMPER7_ASSERTS_UTrackablePlaneDelegate__PythonCallable;
 
 // Class PythonTypes.TrackablePointDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2655,45 +2655,25 @@ public:
 };
 DUMPER7_ASSERTS_UTrackableEnvProbeDelegate__PythonCallable;
 
-// Class PythonTypes.AsyncDelayComplete__PythonCallable
+// Class PythonTypes.OnKeySelected__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UAsyncDelayComplete__PythonCallable final : public UPythonCallableForDelegate
+class UOnKeySelected__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("AsyncDelayComplete__PythonCallable")
+		STATIC_CLASS_IMPL("OnKeySelected__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"AsyncDelayComplete__PythonCallable")
+		STATIC_NAME_IMPL(L"OnKeySelected__PythonCallable")
 	}
-	static class UAsyncDelayComplete__PythonCallable* GetDefaultObj()
+	static class UOnKeySelected__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAsyncDelayComplete__PythonCallable>();
+		return GetDefaultObjImpl<UOnKeySelected__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UAsyncDelayComplete__PythonCallable;
-
-// Class PythonTypes.TrackableObjectDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UTrackableObjectDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TrackableObjectDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TrackableObjectDelegate__PythonCallable")
-	}
-	static class UTrackableObjectDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTrackableObjectDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UTrackableObjectDelegate__PythonCallable;
+DUMPER7_ASSERTS_UOnKeySelected__PythonCallable;
 
 // Class PythonTypes.XRDeviceOnDisconnectDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2735,26 +2715,6 @@ public:
 };
 DUMPER7_ASSERTS_UXRTimedInputActionDelegate__PythonCallable;
 
-// Class PythonTypes.GetInteractionOptionsScript__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UGetInteractionOptionsScript__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GetInteractionOptionsScript__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GetInteractionOptionsScript__PythonCallable")
-	}
-	static class UGetInteractionOptionsScript__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGetInteractionOptionsScript__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UGetInteractionOptionsScript__PythonCallable;
-
 // Class PythonTypes.VRNotificationsDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UVRNotificationsDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -2774,46 +2734,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UVRNotificationsDelegate__PythonCallable;
-
-// Class PythonTypes.GetTooltipContent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UGetTooltipContent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GetTooltipContent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GetTooltipContent__PythonCallable")
-	}
-	static class UGetTooltipContent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGetTooltipContent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UGetTooltipContent__PythonCallable;
-
-// Class PythonTypes.SimpleListItemEventDynamic__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class USimpleListItemEventDynamic__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SimpleListItemEventDynamic__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SimpleListItemEventDynamic__PythonCallable")
-	}
-	static class USimpleListItemEventDynamic__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USimpleListItemEventDynamic__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_USimpleListItemEventDynamic__PythonCallable;
 
 // Class PythonTypes.DeviceModelLoadedDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -2915,6 +2835,26 @@ public:
 };
 DUMPER7_ASSERTS_UGenerateWidgetForString__PythonCallable;
 
+// Class PythonTypes.OnMenuOpenChangedEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMenuOpenChangedEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMenuOpenChangedEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMenuOpenChangedEvent__PythonCallable")
+	}
+	static class UOnMenuOpenChangedEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMenuOpenChangedEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMenuOpenChangedEvent__PythonCallable;
+
 // Class PythonTypes.GetBool__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UGetBool__PythonCallable final : public UPythonCallableForDelegate
@@ -2975,46 +2915,6 @@ public:
 };
 DUMPER7_ASSERTS_UGetFloat__PythonCallable;
 
-// Class PythonTypes.OnHUDVisibilityChanged__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnHUDVisibilityChanged__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnHUDVisibilityChanged__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnHUDVisibilityChanged__PythonCallable")
-	}
-	static class UOnHUDVisibilityChanged__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnHUDVisibilityChanged__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnHUDVisibilityChanged__PythonCallable;
-
-// Class PythonTypes.OnMultiLineEditableTextCommittedEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMultiLineEditableTextCommittedEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMultiLineEditableTextCommittedEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMultiLineEditableTextCommittedEvent__PythonCallable")
-	}
-	static class UOnMultiLineEditableTextCommittedEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMultiLineEditableTextCommittedEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMultiLineEditableTextCommittedEvent__PythonCallable;
-
 // Class PythonTypes.GetInt32__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UGetInt32__PythonCallable final : public UPythonCallableForDelegate
@@ -3034,26 +2934,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGetInt32__PythonCallable;
-
-// Class PythonTypes.OnInteractionAxis__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnInteractionAxis__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnInteractionAxis__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnInteractionAxis__PythonCallable")
-	}
-	static class UOnInteractionAxis__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnInteractionAxis__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnInteractionAxis__PythonCallable;
 
 // Class PythonTypes.GetLinearColor__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3095,6 +2975,26 @@ public:
 };
 DUMPER7_ASSERTS_UGetMouseCursor__PythonCallable;
 
+// Class PythonTypes.GetSlateBrush__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UGetSlateBrush__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GetSlateBrush__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GetSlateBrush__PythonCallable")
+	}
+	static class UGetSlateBrush__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGetSlateBrush__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UGetSlateBrush__PythonCallable;
+
 // Class PythonTypes.GetSlateColor__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UGetSlateColor__PythonCallable final : public UPythonCallableForDelegate
@@ -3114,6 +3014,66 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGetSlateColor__PythonCallable;
+
+// Class PythonTypes.OnMouseCaptureEndEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMouseCaptureEndEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMouseCaptureEndEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMouseCaptureEndEvent__PythonCallable")
+	}
+	static class UOnMouseCaptureEndEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMouseCaptureEndEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMouseCaptureEndEvent__PythonCallable;
+
+// Class PythonTypes.GetSlateVisibility__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UGetSlateVisibility__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GetSlateVisibility__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GetSlateVisibility__PythonCallable")
+	}
+	static class UGetSlateVisibility__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGetSlateVisibility__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UGetSlateVisibility__PythonCallable;
+
+// Class PythonTypes.OnItemSelected__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnItemSelected__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnItemSelected__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnItemSelected__PythonCallable")
+	}
+	static class UOnItemSelected__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnItemSelected__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnItemSelected__PythonCallable;
 
 // Class PythonTypes.GetWidget__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3154,66 +3114,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnPointerEvent__PythonCallable;
-
-// Class PythonTypes.GetIconLocationScript__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UGetIconLocationScript__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GetIconLocationScript__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GetIconLocationScript__PythonCallable")
-	}
-	static class UGetIconLocationScript__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGetIconLocationScript__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UGetIconLocationScript__PythonCallable;
-
-// Class PythonTypes.OnFloatValueChangedEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnFloatValueChangedEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnFloatValueChangedEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnFloatValueChangedEvent__PythonCallable")
-	}
-	static class UOnFloatValueChangedEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnFloatValueChangedEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnFloatValueChangedEvent__PythonCallable;
-
-// Class PythonTypes.OnReply__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnReply__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnReply__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnReply__PythonCallable")
-	}
-	static class UOnReply__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnReply__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnReply__PythonCallable;
 
 // Class PythonTypes.OnWidgetAnimationPlaybackStatusChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3275,26 +3175,6 @@ public:
 };
 DUMPER7_ASSERTS_UWidgetAnimationDynamicEvents__PythonCallable;
 
-// Class PythonTypes.OnFadedOut__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnFadedOut__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnFadedOut__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnFadedOut__PythonCallable")
-	}
-	static class UOnFadedOut__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnFadedOut__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnFadedOut__PythonCallable;
-
 // Class PythonTypes.OnConstructEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnConstructEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -3314,6 +3194,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnConstructEvent__PythonCallable;
+
+// Class PythonTypes.OnItemExpansionChangedDynamic__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnItemExpansionChangedDynamic__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnItemExpansionChangedDynamic__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnItemExpansionChangedDynamic__PythonCallable")
+	}
+	static class UOnItemExpansionChangedDynamic__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnItemExpansionChangedDynamic__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnItemExpansionChangedDynamic__PythonCallable;
 
 // Class PythonTypes.OnInputAction__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3375,26 +3275,6 @@ public:
 };
 DUMPER7_ASSERTS_UWidgetAnimationResult__PythonCallable;
 
-// Class PythonTypes.OnMovieSceneSequencePlayerEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMovieSceneSequencePlayerEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMovieSceneSequencePlayerEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMovieSceneSequencePlayerEvent__PythonCallable")
-	}
-	static class UOnMovieSceneSequencePlayerEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMovieSceneSequencePlayerEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMovieSceneSequencePlayerEvent__PythonCallable;
-
 // Class PythonTypes.DownloadImageDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UDownloadImageDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -3455,6 +3335,26 @@ public:
 };
 DUMPER7_ASSERTS_UOnGameWindowCloseButtonClickedDelegate__PythonCallable;
 
+// Class PythonTypes.OnButtonClickedEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnButtonClickedEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnButtonClickedEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnButtonClickedEvent__PythonCallable")
+	}
+	static class UOnButtonClickedEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnButtonClickedEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnButtonClickedEvent__PythonCallable;
+
 // Class PythonTypes.OnButtonPressedEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnButtonPressedEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -3474,6 +3374,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnButtonPressedEvent__PythonCallable;
+
+// Class PythonTypes.OnMediaPlayerMediaOpenFailed__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMediaPlayerMediaOpenFailed__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMediaPlayerMediaOpenFailed__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMediaPlayerMediaOpenFailed__PythonCallable")
+	}
+	static class UOnMediaPlayerMediaOpenFailed__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMediaPlayerMediaOpenFailed__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMediaPlayerMediaOpenFailed__PythonCallable;
 
 // Class PythonTypes.OnButtonReleasedEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3535,26 +3455,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnCheckBoxComponentStateChanged__PythonCallable;
 
-// Class PythonTypes.OnOpeningEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnOpeningEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnOpeningEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnOpeningEvent__PythonCallable")
-	}
-	static class UOnOpeningEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnOpeningEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnOpeningEvent__PythonCallable;
-
 // Class PythonTypes.OnSelectionChangedEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnSelectionChangedEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -3595,6 +3495,46 @@ public:
 };
 DUMPER7_ASSERTS_UOnEditableTextChangedEvent__PythonCallable;
 
+// Class PythonTypes.OnEditableTextCommittedEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnEditableTextCommittedEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnEditableTextCommittedEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnEditableTextCommittedEvent__PythonCallable")
+	}
+	static class UOnEditableTextCommittedEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnEditableTextCommittedEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnEditableTextCommittedEvent__PythonCallable;
+
+// Class PythonTypes.GetInteractionOptionsScript__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UGetInteractionOptionsScript__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GetInteractionOptionsScript__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GetInteractionOptionsScript__PythonCallable")
+	}
+	static class UGetInteractionOptionsScript__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGetInteractionOptionsScript__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UGetInteractionOptionsScript__PythonCallable;
+
 // Class PythonTypes.OnEditableTextBoxChangedEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnEditableTextBoxChangedEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -3615,25 +3555,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnEditableTextBoxChangedEvent__PythonCallable;
 
-// Class PythonTypes.ComponentBeginCursorOverSignature__PythonCallable
+// Class PythonTypes.OnEditableTextBoxCommittedEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UComponentBeginCursorOverSignature__PythonCallable final : public UPythonCallableForDelegate
+class UOnEditableTextBoxCommittedEvent__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ComponentBeginCursorOverSignature__PythonCallable")
+		STATIC_CLASS_IMPL("OnEditableTextBoxCommittedEvent__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ComponentBeginCursorOverSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"OnEditableTextBoxCommittedEvent__PythonCallable")
 	}
-	static class UComponentBeginCursorOverSignature__PythonCallable* GetDefaultObj()
+	static class UOnEditableTextBoxCommittedEvent__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UComponentBeginCursorOverSignature__PythonCallable>();
+		return GetDefaultObjImpl<UOnEditableTextBoxCommittedEvent__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UComponentBeginCursorOverSignature__PythonCallable;
+DUMPER7_ASSERTS_UOnEditableTextBoxCommittedEvent__PythonCallable;
 
 // Class PythonTypes.OnExpandableAreaExpansionChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3675,65 +3615,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnIsSelectingKeyChanged__PythonCallable;
 
-// Class PythonTypes.ActorBeginTouchOverSignature__PythonCallable
+// Class PythonTypes.OnClickedMenuButton__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UActorBeginTouchOverSignature__PythonCallable final : public UPythonCallableForDelegate
+class UOnClickedMenuButton__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActorBeginTouchOverSignature__PythonCallable")
+		STATIC_CLASS_IMPL("OnClickedMenuButton__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActorBeginTouchOverSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"OnClickedMenuButton__PythonCallable")
 	}
-	static class UActorBeginTouchOverSignature__PythonCallable* GetDefaultObj()
+	static class UOnClickedMenuButton__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActorBeginTouchOverSignature__PythonCallable>();
+		return GetDefaultObjImpl<UOnClickedMenuButton__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UActorBeginTouchOverSignature__PythonCallable;
-
-// Class PythonTypes.OnKeySelected__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnKeySelected__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnKeySelected__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnKeySelected__PythonCallable")
-	}
-	static class UOnKeySelected__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnKeySelected__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnKeySelected__PythonCallable;
-
-// Class PythonTypes.OnDragged__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnDragged__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnDragged__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnDragged__PythonCallable")
-	}
-	static class UOnDragged__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnDragged__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnDragged__PythonCallable;
+DUMPER7_ASSERTS_UOnClickedMenuButton__PythonCallable;
 
 // Class PythonTypes.OnListEntryGeneratedDynamic__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3755,25 +3655,65 @@ public:
 };
 DUMPER7_ASSERTS_UOnListEntryGeneratedDynamic__PythonCallable;
 
-// Class PythonTypes.OnListEntryReleasedDynamic__PythonCallable
+// Class PythonTypes.ComponentOnInputTouchEndSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnListEntryReleasedDynamic__PythonCallable final : public UPythonCallableForDelegate
+class UComponentOnInputTouchEndSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnListEntryReleasedDynamic__PythonCallable")
+		STATIC_CLASS_IMPL("ComponentOnInputTouchEndSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnListEntryReleasedDynamic__PythonCallable")
+		STATIC_NAME_IMPL(L"ComponentOnInputTouchEndSignature__PythonCallable")
 	}
-	static class UOnListEntryReleasedDynamic__PythonCallable* GetDefaultObj()
+	static class UComponentOnInputTouchEndSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnListEntryReleasedDynamic__PythonCallable>();
+		return GetDefaultObjImpl<UComponentOnInputTouchEndSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnListEntryReleasedDynamic__PythonCallable;
+DUMPER7_ASSERTS_UComponentOnInputTouchEndSignature__PythonCallable;
+
+// Class PythonTypes.SimpleListItemEventDynamic__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class USimpleListItemEventDynamic__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SimpleListItemEventDynamic__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleListItemEventDynamic__PythonCallable")
+	}
+	static class USimpleListItemEventDynamic__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USimpleListItemEventDynamic__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_USimpleListItemEventDynamic__PythonCallable;
+
+// Class PythonTypes.OnHUDVisibilityChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnHUDVisibilityChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnHUDVisibilityChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnHUDVisibilityChanged__PythonCallable")
+	}
+	static class UOnHUDVisibilityChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnHUDVisibilityChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnHUDVisibilityChanged__PythonCallable;
 
 // Class PythonTypes.OnListEntryInitializedDynamic__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3794,6 +3734,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnListEntryInitializedDynamic__PythonCallable;
+
+// Class PythonTypes.ComponentBeginOverlapSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentBeginOverlapSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentBeginOverlapSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentBeginOverlapSignature__PythonCallable")
+	}
+	static class UComponentBeginOverlapSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentBeginOverlapSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentBeginOverlapSignature__PythonCallable;
 
 // Class PythonTypes.OnListItemSelectionChangedDynamic__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3835,26 +3795,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnItemIsHoveredChangedDynamic__PythonCallable;
 
-// Class PythonTypes.ActorComponentDeactivateSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UActorComponentDeactivateSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActorComponentDeactivateSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorComponentDeactivateSignature__PythonCallable")
-	}
-	static class UActorComponentDeactivateSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActorComponentDeactivateSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UActorComponentDeactivateSignature__PythonCallable;
-
 // Class PythonTypes.OnListItemScrolledIntoViewDynamic__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnListItemScrolledIntoViewDynamic__PythonCallable final : public UPythonCallableForDelegate
@@ -3875,45 +3815,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnListItemScrolledIntoViewDynamic__PythonCallable;
 
-// Class PythonTypes.OnMenuOpenChangedEvent__PythonCallable
+// Class PythonTypes.OnFadedOut__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnMenuOpenChangedEvent__PythonCallable final : public UPythonCallableForDelegate
+class UOnFadedOut__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnMenuOpenChangedEvent__PythonCallable")
+		STATIC_CLASS_IMPL("OnFadedOut__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnMenuOpenChangedEvent__PythonCallable")
+		STATIC_NAME_IMPL(L"OnFadedOut__PythonCallable")
 	}
-	static class UOnMenuOpenChangedEvent__PythonCallable* GetDefaultObj()
+	static class UOnFadedOut__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnMenuOpenChangedEvent__PythonCallable>();
+		return GetDefaultObjImpl<UOnFadedOut__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnMenuOpenChangedEvent__PythonCallable;
-
-// Class PythonTypes.OnUIStyleChangedDynamic__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnUIStyleChangedDynamic__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnUIStyleChangedDynamic__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnUIStyleChangedDynamic__PythonCallable")
-	}
-	static class UOnUIStyleChangedDynamic__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnUIStyleChangedDynamic__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnUIStyleChangedDynamic__PythonCallable;
+DUMPER7_ASSERTS_UOnFadedOut__PythonCallable;
 
 // Class PythonTypes.GetUserWidget__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -3954,6 +3874,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnMultiLineEditableTextChangedEvent__PythonCallable;
+
+// Class PythonTypes.OnMultiLineEditableTextCommittedEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMultiLineEditableTextCommittedEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMultiLineEditableTextCommittedEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMultiLineEditableTextCommittedEvent__PythonCallable")
+	}
+	static class UOnMultiLineEditableTextCommittedEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMultiLineEditableTextCommittedEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMultiLineEditableTextCommittedEvent__PythonCallable;
+
+// Class PythonTypes.TakeRadialDamageSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UTakeRadialDamageSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TakeRadialDamageSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TakeRadialDamageSignature__PythonCallable")
+	}
+	static class UTakeRadialDamageSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTakeRadialDamageSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UTakeRadialDamageSignature__PythonCallable;
 
 // Class PythonTypes.OnMultiLineEditableTextBoxChangedEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4035,26 +3995,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnMouseCaptureBeginEvent__PythonCallable;
 
-// Class PythonTypes.OnMouseCaptureEndEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMouseCaptureEndEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMouseCaptureEndEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMouseCaptureEndEvent__PythonCallable")
-	}
-	static class UOnMouseCaptureEndEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMouseCaptureEndEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMouseCaptureEndEvent__PythonCallable;
-
 // Class PythonTypes.OnControllerCaptureBeginEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnControllerCaptureBeginEvent__PythonCallable final : public UPythonCallableForDelegate
@@ -4094,6 +4034,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnControllerCaptureEndEvent__PythonCallable;
+
+// Class PythonTypes.OnFloatValueChangedEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnFloatValueChangedEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnFloatValueChangedEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnFloatValueChangedEvent__PythonCallable")
+	}
+	static class UOnFloatValueChangedEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnFloatValueChangedEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnFloatValueChangedEvent__PythonCallable;
 
 // Class PythonTypes.OnSpinBoxBeginSliderMovement__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4175,26 +4135,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnGetItemChildrenDynamic__PythonCallable;
 
-// Class PythonTypes.OnItemExpansionChangedDynamic__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnItemExpansionChangedDynamic__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnItemExpansionChangedDynamic__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnItemExpansionChangedDynamic__PythonCallable")
-	}
-	static class UOnItemExpansionChangedDynamic__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnItemExpansionChangedDynamic__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnItemExpansionChangedDynamic__PythonCallable;
-
 // Class PythonTypes.OnHoveredWidgetChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnHoveredWidgetChanged__PythonCallable final : public UPythonCallableForDelegate
@@ -4215,26 +4155,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnHoveredWidgetChanged__PythonCallable;
 
-// Class PythonTypes.ShouldBeVisibleScript__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UShouldBeVisibleScript__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ShouldBeVisibleScript__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ShouldBeVisibleScript__PythonCallable")
-	}
-	static class UShouldBeVisibleScript__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UShouldBeVisibleScript__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UShouldBeVisibleScript__PythonCallable;
-
 // Class PythonTypes.OnMontagePlayDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnMontagePlayDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -4254,6 +4174,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnMontagePlayDelegate__PythonCallable;
+
+// Class PythonTypes.OnMovieSceneSequencePlayerEvent__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMovieSceneSequencePlayerEvent__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMovieSceneSequencePlayerEvent__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMovieSceneSequencePlayerEvent__PythonCallable")
+	}
+	static class UOnMovieSceneSequencePlayerEvent__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMovieSceneSequencePlayerEvent__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMovieSceneSequencePlayerEvent__PythonCallable;
 
 // Class PythonTypes.OnSynthEnvelopeValue__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4295,25 +4235,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnSoundLoadComplete__PythonCallable;
 
-// Class PythonTypes.ComponentCollisionSettingsChangedSignature__PythonCallable
+// Class PythonTypes.OnMediaPlayerMediaEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UComponentCollisionSettingsChangedSignature__PythonCallable final : public UPythonCallableForDelegate
+class UOnMediaPlayerMediaEvent__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ComponentCollisionSettingsChangedSignature__PythonCallable")
+		STATIC_CLASS_IMPL("OnMediaPlayerMediaEvent__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ComponentCollisionSettingsChangedSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"OnMediaPlayerMediaEvent__PythonCallable")
 	}
-	static class UComponentCollisionSettingsChangedSignature__PythonCallable* GetDefaultObj()
+	static class UOnMediaPlayerMediaEvent__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UComponentCollisionSettingsChangedSignature__PythonCallable>();
+		return GetDefaultObjImpl<UOnMediaPlayerMediaEvent__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UComponentCollisionSettingsChangedSignature__PythonCallable;
+DUMPER7_ASSERTS_UOnMediaPlayerMediaEvent__PythonCallable;
 
 // Class PythonTypes.OnMediaPlayerMediaOpened__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4334,46 +4274,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnMediaPlayerMediaOpened__PythonCallable;
-
-// Class PythonTypes.AsyncEditorWaitForGameWorldEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UAsyncEditorWaitForGameWorldEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AsyncEditorWaitForGameWorldEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AsyncEditorWaitForGameWorldEvent__PythonCallable")
-	}
-	static class UAsyncEditorWaitForGameWorldEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAsyncEditorWaitForGameWorldEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UAsyncEditorWaitForGameWorldEvent__PythonCallable;
-
-// Class PythonTypes.OnMediaPlayerMediaOpenFailed__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnMediaPlayerMediaOpenFailed__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnMediaPlayerMediaOpenFailed__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnMediaPlayerMediaOpenFailed__PythonCallable")
-	}
-	static class UOnMediaPlayerMediaOpenFailed__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnMediaPlayerMediaOpenFailed__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnMediaPlayerMediaOpenFailed__PythonCallable;
 
 // Class PythonTypes.OnAssetPostImport_Dyn__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4415,45 +4315,45 @@ public:
 };
 DUMPER7_ASSERTS_UOnAssetPostLODImport_Dyn__PythonCallable;
 
-// Class PythonTypes.LeaderboardQueryResult__PythonCallable
+// Class PythonTypes.ComponentOnInputTouchBeginSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class ULeaderboardQueryResult__PythonCallable final : public UPythonCallableForDelegate
+class UComponentOnInputTouchBeginSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LeaderboardQueryResult__PythonCallable")
+		STATIC_CLASS_IMPL("ComponentOnInputTouchBeginSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LeaderboardQueryResult__PythonCallable")
+		STATIC_NAME_IMPL(L"ComponentOnInputTouchBeginSignature__PythonCallable")
 	}
-	static class ULeaderboardQueryResult__PythonCallable* GetDefaultObj()
+	static class UComponentOnInputTouchBeginSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULeaderboardQueryResult__PythonCallable>();
+		return GetDefaultObjImpl<UComponentOnInputTouchBeginSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_ULeaderboardQueryResult__PythonCallable;
+DUMPER7_ASSERTS_UComponentOnInputTouchBeginSignature__PythonCallable;
 
-// Class PythonTypes.OnAssetPreImport_Dyn__PythonCallable
+// Class PythonTypes.OnAssetReimport_Dyn__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnAssetPreImport_Dyn__PythonCallable final : public UPythonCallableForDelegate
+class UOnAssetReimport_Dyn__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnAssetPreImport_Dyn__PythonCallable")
+		STATIC_CLASS_IMPL("OnAssetReimport_Dyn__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnAssetPreImport_Dyn__PythonCallable")
+		STATIC_NAME_IMPL(L"OnAssetReimport_Dyn__PythonCallable")
 	}
-	static class UOnAssetPreImport_Dyn__PythonCallable* GetDefaultObj()
+	static class UOnAssetReimport_Dyn__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnAssetPreImport_Dyn__PythonCallable>();
+		return GetDefaultObjImpl<UOnAssetReimport_Dyn__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnAssetPreImport_Dyn__PythonCallable;
+DUMPER7_ASSERTS_UOnAssetReimport_Dyn__PythonCallable;
 
 // Class PythonTypes.InstancePointDamageSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4515,6 +4415,46 @@ public:
 };
 DUMPER7_ASSERTS_UOnImageWriteComplete__PythonCallable;
 
+// Class PythonTypes.OnPageChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnPageChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnPageChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnPageChanged__PythonCallable")
+	}
+	static class UOnPageChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnPageChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnPageChanged__PythonCallable;
+
+// Class PythonTypes.OnPropertyValueChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnPropertyValueChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnPropertyValueChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnPropertyValueChanged__PythonCallable")
+	}
+	static class UOnPropertyValueChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnPropertyValueChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnPropertyValueChanged__PythonCallable;
+
 // Class PythonTypes.OnNotifyReplaced__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnNotifyReplaced__PythonCallable final : public UPythonCallableForDelegate
@@ -4534,26 +4474,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnNotifyReplaced__PythonCallable;
-
-// Class PythonTypes.OnNotifyStateReplaced__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnNotifyStateReplaced__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnNotifyStateReplaced__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnNotifyStateReplaced__PythonCallable")
-	}
-	static class UOnNotifyStateReplaced__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnNotifyStateReplaced__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnNotifyStateReplaced__PythonCallable;
 
 // Class PythonTypes.GenericGameplayTaskDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4575,26 +4495,6 @@ public:
 };
 DUMPER7_ASSERTS_UGenericGameplayTaskDelegate__PythonCallable;
 
-// Class PythonTypes.OnPastedFunctionCallNode__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnPastedFunctionCallNode__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnPastedFunctionCallNode__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnPastedFunctionCallNode__PythonCallable")
-	}
-	static class UOnPastedFunctionCallNode__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnPastedFunctionCallNode__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnPastedFunctionCallNode__PythonCallable;
-
 // Class PythonTypes.OnClaimedResourcesChangeSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnClaimedResourcesChangeSignature__PythonCallable final : public UPythonCallableForDelegate
@@ -4615,25 +4515,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnClaimedResourcesChangeSignature__PythonCallable;
 
-// Class PythonTypes.InAppPurchaseRestoreResult2__PythonCallable
+// Class PythonTypes.GameplayTaskSpawnActorDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UInAppPurchaseRestoreResult2__PythonCallable final : public UPythonCallableForDelegate
+class UGameplayTaskSpawnActorDelegate__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InAppPurchaseRestoreResult2__PythonCallable")
+		STATIC_CLASS_IMPL("GameplayTaskSpawnActorDelegate__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InAppPurchaseRestoreResult2__PythonCallable")
+		STATIC_NAME_IMPL(L"GameplayTaskSpawnActorDelegate__PythonCallable")
 	}
-	static class UInAppPurchaseRestoreResult2__PythonCallable* GetDefaultObj()
+	static class UGameplayTaskSpawnActorDelegate__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInAppPurchaseRestoreResult2__PythonCallable>();
+		return GetDefaultObjImpl<UGameplayTaskSpawnActorDelegate__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseRestoreResult2__PythonCallable;
+DUMPER7_ASSERTS_UGameplayTaskSpawnActorDelegate__PythonCallable;
 
 // Class PythonTypes.TaskFinishDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4695,6 +4595,46 @@ public:
 };
 DUMPER7_ASSERTS_UAIMoveCompletedSignature__PythonCallable;
 
+// Class PythonTypes.ColorChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UColorChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ColorChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ColorChanged__PythonCallable")
+	}
+	static class UColorChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UColorChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UColorChanged__PythonCallable;
+
+// Class PythonTypes.PhysicsVolumeChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UPhysicsVolumeChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PhysicsVolumeChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicsVolumeChanged__PythonCallable")
+	}
+	static class UPhysicsVolumeChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPhysicsVolumeChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UPhysicsVolumeChanged__PythonCallable;
+
 // Class PythonTypes.OAISimpleDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOAISimpleDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -4715,45 +4655,45 @@ public:
 };
 DUMPER7_ASSERTS_UOAISimpleDelegate__PythonCallable;
 
-// Class PythonTypes.PyTestMulticastDelegate__PythonCallable
+// Class PythonTypes.OnLevelSequencePlayerCameraCutEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UPyTestMulticastDelegate__PythonCallable final : public UPythonCallableForDelegate
+class UOnLevelSequencePlayerCameraCutEvent__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PyTestMulticastDelegate__PythonCallable")
+		STATIC_CLASS_IMPL("OnLevelSequencePlayerCameraCutEvent__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PyTestMulticastDelegate__PythonCallable")
+		STATIC_NAME_IMPL(L"OnLevelSequencePlayerCameraCutEvent__PythonCallable")
 	}
-	static class UPyTestMulticastDelegate__PythonCallable* GetDefaultObj()
+	static class UOnLevelSequencePlayerCameraCutEvent__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPyTestMulticastDelegate__PythonCallable>();
+		return GetDefaultObjImpl<UOnLevelSequencePlayerCameraCutEvent__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UPyTestMulticastDelegate__PythonCallable;
+DUMPER7_ASSERTS_UOnLevelSequencePlayerCameraCutEvent__PythonCallable;
 
-// Class PythonTypes.EQSQueryDoneSignature__PythonCallable
+// Class PythonTypes.SmartLinkReachedSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UEQSQueryDoneSignature__PythonCallable final : public UPythonCallableForDelegate
+class USmartLinkReachedSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("EQSQueryDoneSignature__PythonCallable")
+		STATIC_CLASS_IMPL("SmartLinkReachedSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"EQSQueryDoneSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"SmartLinkReachedSignature__PythonCallable")
 	}
-	static class UEQSQueryDoneSignature__PythonCallable* GetDefaultObj()
+	static class USmartLinkReachedSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UEQSQueryDoneSignature__PythonCallable>();
+		return GetDefaultObjImpl<USmartLinkReachedSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UEQSQueryDoneSignature__PythonCallable;
+DUMPER7_ASSERTS_USmartLinkReachedSignature__PythonCallable;
 
 // Class PythonTypes.PerceptionUpdatedDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4774,6 +4714,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPerceptionUpdatedDelegate__PythonCallable;
+
+// Class PythonTypes.InputChannelScriptDelegate__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UInputChannelScriptDelegate__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InputChannelScriptDelegate__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InputChannelScriptDelegate__PythonCallable")
+	}
+	static class UInputChannelScriptDelegate__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInputChannelScriptDelegate__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UInputChannelScriptDelegate__PythonCallable;
 
 // Class PythonTypes.ActorPerceptionUpdatedDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4815,6 +4775,26 @@ public:
 };
 DUMPER7_ASSERTS_UActorPerceptionInfoUpdatedDelegate__PythonCallable;
 
+// Class PythonTypes.TakeAnyDamageSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UTakeAnyDamageSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TakeAnyDamageSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TakeAnyDamageSignature__PythonCallable")
+	}
+	static class UTakeAnyDamageSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTakeAnyDamageSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UTakeAnyDamageSignature__PythonCallable;
+
 // Class PythonTypes.HearNoiseDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UHearNoiseDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -4834,26 +4814,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UHearNoiseDelegate__PythonCallable;
-
-// Class PythonTypes.SeePawnDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class USeePawnDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SeePawnDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SeePawnDelegate__PythonCallable")
-	}
-	static class USeePawnDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USeePawnDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_USeePawnDelegate__PythonCallable;
 
 // Class PythonTypes.MoveTaskCompletedSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -4915,26 +4875,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnNiagaraSystemFinished__PythonCallable;
 
-// Class PythonTypes.ActorOnReleasedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UActorOnReleasedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActorOnReleasedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorOnReleasedSignature__PythonCallable")
-	}
-	static class UActorOnReleasedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActorOnReleasedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UActorOnReleasedSignature__PythonCallable;
-
 // Class PythonTypes.OnPontoonEnteredWater__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnPontoonEnteredWater__PythonCallable final : public UPythonCallableForDelegate
@@ -4954,6 +4894,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnPontoonEnteredWater__PythonCallable;
+
+// Class PythonTypes.OnPontoonExitedWater__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnPontoonExitedWater__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnPontoonExitedWater__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnPontoonExitedWater__PythonCallable")
+	}
+	static class UOnPontoonExitedWater__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnPontoonExitedWater__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnPontoonExitedWater__PythonCallable;
 
 // Class PythonTypes.OnCameraUnderwaterStateChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5015,6 +4975,26 @@ public:
 };
 DUMPER7_ASSERTS_UAchievementWriteDelegate__PythonCallable;
 
+// Class PythonTypes.ActorDestroyedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UActorDestroyedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorDestroyedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorDestroyedSignature__PythonCallable")
+	}
+	static class UActorDestroyedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorDestroyedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UActorDestroyedSignature__PythonCallable;
+
 // Class PythonTypes.OnlineConnectionResult__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnlineConnectionResult__PythonCallable final : public UPythonCallableForDelegate
@@ -5034,26 +5014,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnlineConnectionResult__PythonCallable;
-
-// Class PythonTypes.BlueprintFindSessionsResultDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UBlueprintFindSessionsResultDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlueprintFindSessionsResultDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlueprintFindSessionsResultDelegate__PythonCallable")
-	}
-	static class UBlueprintFindSessionsResultDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlueprintFindSessionsResultDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UBlueprintFindSessionsResultDelegate__PythonCallable;
 
 // Class PythonTypes.OnlineTurnBasedMatchResult__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5075,26 +5035,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnlineTurnBasedMatchResult__PythonCallable;
 
-// Class PythonTypes.ComponentBeginOverlapSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UComponentBeginOverlapSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComponentBeginOverlapSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComponentBeginOverlapSignature__PythonCallable")
-	}
-	static class UComponentBeginOverlapSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComponentBeginOverlapSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UComponentBeginOverlapSignature__PythonCallable;
-
 // Class PythonTypes.InAppPurchaseResult__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UInAppPurchaseResult__PythonCallable final : public UPythonCallableForDelegate
@@ -5115,25 +5055,25 @@ public:
 };
 DUMPER7_ASSERTS_UInAppPurchaseResult__PythonCallable;
 
-// Class PythonTypes.ActorEndCursorOverSignature__PythonCallable
+// Class PythonTypes.InAppPurchaseResult2__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UActorEndCursorOverSignature__PythonCallable final : public UPythonCallableForDelegate
+class UInAppPurchaseResult2__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActorEndCursorOverSignature__PythonCallable")
+		STATIC_CLASS_IMPL("InAppPurchaseResult2__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActorEndCursorOverSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"InAppPurchaseResult2__PythonCallable")
 	}
-	static class UActorEndCursorOverSignature__PythonCallable* GetDefaultObj()
+	static class UInAppPurchaseResult2__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActorEndCursorOverSignature__PythonCallable>();
+		return GetDefaultObjImpl<UInAppPurchaseResult2__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UActorEndCursorOverSignature__PythonCallable;
+DUMPER7_ASSERTS_UInAppPurchaseResult2__PythonCallable;
 
 // Class PythonTypes.InAppPurchaseQueryResult__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5195,6 +5135,106 @@ public:
 };
 DUMPER7_ASSERTS_UInAppPurchaseRestoreResult__PythonCallable;
 
+// Class PythonTypes.ComponentBeginCursorOverSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentBeginCursorOverSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentBeginCursorOverSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentBeginCursorOverSignature__PythonCallable")
+	}
+	static class UComponentBeginCursorOverSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentBeginCursorOverSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentBeginCursorOverSignature__PythonCallable;
+
+// Class PythonTypes.InAppPurchaseRestoreResult2__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UInAppPurchaseRestoreResult2__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InAppPurchaseRestoreResult2__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseRestoreResult2__PythonCallable")
+	}
+	static class UInAppPurchaseRestoreResult2__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInAppPurchaseRestoreResult2__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UInAppPurchaseRestoreResult2__PythonCallable;
+
+// Class PythonTypes.ForEachAssetIteratorSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UForEachAssetIteratorSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ForEachAssetIteratorSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ForEachAssetIteratorSignature__PythonCallable")
+	}
+	static class UForEachAssetIteratorSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UForEachAssetIteratorSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UForEachAssetIteratorSignature__PythonCallable;
+
+// Class PythonTypes.ActorBeginTouchOverSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UActorBeginTouchOverSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorBeginTouchOverSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorBeginTouchOverSignature__PythonCallable")
+	}
+	static class UActorBeginTouchOverSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorBeginTouchOverSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UActorBeginTouchOverSignature__PythonCallable;
+
+// Class PythonTypes.LeaderboardQueryResult__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class ULeaderboardQueryResult__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LeaderboardQueryResult__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LeaderboardQueryResult__PythonCallable")
+	}
+	static class ULeaderboardQueryResult__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULeaderboardQueryResult__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_ULeaderboardQueryResult__PythonCallable;
+
 // Class PythonTypes.OnlineLogoutResult__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnlineLogoutResult__PythonCallable final : public UPythonCallableForDelegate
@@ -5234,46 +5274,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnlineShowLoginUIResult__PythonCallable;
-
-// Class PythonTypes.OnLevelSequencePlayerCameraCutEvent__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnLevelSequencePlayerCameraCutEvent__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnLevelSequencePlayerCameraCutEvent__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnLevelSequencePlayerCameraCutEvent__PythonCallable")
-	}
-	static class UOnLevelSequencePlayerCameraCutEvent__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnLevelSequencePlayerCameraCutEvent__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnLevelSequencePlayerCameraCutEvent__PythonCallable;
-
-// Class PythonTypes.OnLevelSequenceLoaded__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnLevelSequenceLoaded__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnLevelSequenceLoaded__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnLevelSequenceLoaded__PythonCallable")
-	}
-	static class UOnLevelSequenceLoaded__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnLevelSequenceLoaded__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnLevelSequenceLoaded__PythonCallable;
 
 // Class PythonTypes.FunctionalTestEventSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5315,6 +5315,26 @@ public:
 };
 DUMPER7_ASSERTS_UFunctionalTestAISpawned__PythonCallable;
 
+// Class PythonTypes.OnPastedFunctionCallNode__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnPastedFunctionCallNode__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnPastedFunctionCallNode__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnPastedFunctionCallNode__PythonCallable")
+	}
+	static class UOnPastedFunctionCallNode__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnPastedFunctionCallNode__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnPastedFunctionCallNode__PythonCallable;
+
 // Class PythonTypes.PyTestDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UPyTestDelegate__PythonCallable final : public UPythonCallableForDelegate
@@ -5335,105 +5355,45 @@ public:
 };
 DUMPER7_ASSERTS_UPyTestDelegate__PythonCallable;
 
-// Class PythonTypes.PhysicsVolumeChanged__PythonCallable
+// Class PythonTypes.ActorComponentActivatedSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UPhysicsVolumeChanged__PythonCallable final : public UPythonCallableForDelegate
+class UActorComponentActivatedSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PhysicsVolumeChanged__PythonCallable")
+		STATIC_CLASS_IMPL("ActorComponentActivatedSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PhysicsVolumeChanged__PythonCallable")
+		STATIC_NAME_IMPL(L"ActorComponentActivatedSignature__PythonCallable")
 	}
-	static class UPhysicsVolumeChanged__PythonCallable* GetDefaultObj()
+	static class UActorComponentActivatedSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPhysicsVolumeChanged__PythonCallable>();
+		return GetDefaultObjImpl<UActorComponentActivatedSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicsVolumeChanged__PythonCallable;
+DUMPER7_ASSERTS_UActorComponentActivatedSignature__PythonCallable;
 
-// Class PythonTypes.IsRootComponentChanged__PythonCallable
+// Class PythonTypes.ActorComponentDeactivateSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UIsRootComponentChanged__PythonCallable final : public UPythonCallableForDelegate
+class UActorComponentDeactivateSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("IsRootComponentChanged__PythonCallable")
+		STATIC_CLASS_IMPL("ActorComponentDeactivateSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"IsRootComponentChanged__PythonCallable")
+		STATIC_NAME_IMPL(L"ActorComponentDeactivateSignature__PythonCallable")
 	}
-	static class UIsRootComponentChanged__PythonCallable* GetDefaultObj()
+	static class UActorComponentDeactivateSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UIsRootComponentChanged__PythonCallable>();
+		return GetDefaultObjImpl<UActorComponentDeactivateSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UIsRootComponentChanged__PythonCallable;
-
-// Class PythonTypes.TakeAnyDamageSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UTakeAnyDamageSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TakeAnyDamageSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TakeAnyDamageSignature__PythonCallable")
-	}
-	static class UTakeAnyDamageSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTakeAnyDamageSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UTakeAnyDamageSignature__PythonCallable;
-
-// Class PythonTypes.TakePointDamageSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UTakePointDamageSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TakePointDamageSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TakePointDamageSignature__PythonCallable")
-	}
-	static class UTakePointDamageSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTakePointDamageSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UTakePointDamageSignature__PythonCallable;
-
-// Class PythonTypes.TakeRadialDamageSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UTakeRadialDamageSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TakeRadialDamageSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TakeRadialDamageSignature__PythonCallable")
-	}
-	static class UTakeRadialDamageSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTakeRadialDamageSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UTakeRadialDamageSignature__PythonCallable;
+DUMPER7_ASSERTS_UActorComponentDeactivateSignature__PythonCallable;
 
 // Class PythonTypes.ActorBeginOverlapSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5515,6 +5475,66 @@ public:
 };
 DUMPER7_ASSERTS_UActorBeginCursorOverSignature__PythonCallable;
 
+// Class PythonTypes.ActorEndCursorOverSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UActorEndCursorOverSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorEndCursorOverSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorEndCursorOverSignature__PythonCallable")
+	}
+	static class UActorEndCursorOverSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorEndCursorOverSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UActorEndCursorOverSignature__PythonCallable;
+
+// Class PythonTypes.ActorOnClickedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UActorOnClickedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorOnClickedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorOnClickedSignature__PythonCallable")
+	}
+	static class UActorOnClickedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorOnClickedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UActorOnClickedSignature__PythonCallable;
+
+// Class PythonTypes.ActorOnReleasedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UActorOnReleasedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActorOnReleasedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorOnReleasedSignature__PythonCallable")
+	}
+	static class UActorOnReleasedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActorOnReleasedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UActorOnReleasedSignature__PythonCallable;
+
 // Class PythonTypes.ActorOnInputTouchBeginSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UActorOnInputTouchBeginSignature__PythonCallable final : public UPythonCallableForDelegate
@@ -5555,45 +5575,25 @@ public:
 };
 DUMPER7_ASSERTS_UActorOnInputTouchEndSignature__PythonCallable;
 
-// Class PythonTypes.ActorEndTouchOverSignature__PythonCallable
+// Class PythonTypes.OnFreeCamModeChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UActorEndTouchOverSignature__PythonCallable final : public UPythonCallableForDelegate
+class UOnFreeCamModeChanged__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActorEndTouchOverSignature__PythonCallable")
+		STATIC_CLASS_IMPL("OnFreeCamModeChanged__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActorEndTouchOverSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"OnFreeCamModeChanged__PythonCallable")
 	}
-	static class UActorEndTouchOverSignature__PythonCallable* GetDefaultObj()
+	static class UOnFreeCamModeChanged__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActorEndTouchOverSignature__PythonCallable>();
+		return GetDefaultObjImpl<UOnFreeCamModeChanged__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UActorEndTouchOverSignature__PythonCallable;
-
-// Class PythonTypes.ActorDestroyedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UActorDestroyedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActorDestroyedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActorDestroyedSignature__PythonCallable")
-	}
-	static class UActorDestroyedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActorDestroyedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UActorDestroyedSignature__PythonCallable;
+DUMPER7_ASSERTS_UOnFreeCamModeChanged__PythonCallable;
 
 // Class PythonTypes.ActorEndPlaySignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5635,6 +5635,26 @@ public:
 };
 DUMPER7_ASSERTS_UComponentHitSignature__PythonCallable;
 
+// Class PythonTypes.ComponentEndOverlapSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentEndOverlapSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentEndOverlapSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentEndOverlapSignature__PythonCallable")
+	}
+	static class UComponentEndOverlapSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentEndOverlapSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentEndOverlapSignature__PythonCallable;
+
 // Class PythonTypes.ComponentWakeSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UComponentWakeSignature__PythonCallable final : public UPythonCallableForDelegate
@@ -5655,25 +5675,85 @@ public:
 };
 DUMPER7_ASSERTS_UComponentWakeSignature__PythonCallable;
 
-// Class PythonTypes.ComponentEndCursorOverSignature__PythonCallable
+// Class PythonTypes.OnLoadPage__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UComponentEndCursorOverSignature__PythonCallable final : public UPythonCallableForDelegate
+class UOnLoadPage__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ComponentEndCursorOverSignature__PythonCallable")
+		STATIC_CLASS_IMPL("OnLoadPage__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ComponentEndCursorOverSignature__PythonCallable")
+		STATIC_NAME_IMPL(L"OnLoadPage__PythonCallable")
 	}
-	static class UComponentEndCursorOverSignature__PythonCallable* GetDefaultObj()
+	static class UOnLoadPage__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UComponentEndCursorOverSignature__PythonCallable>();
+		return GetDefaultObjImpl<UOnLoadPage__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UComponentEndCursorOverSignature__PythonCallable;
+DUMPER7_ASSERTS_UOnLoadPage__PythonCallable;
+
+// Class PythonTypes.ComponentSleepSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentSleepSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentSleepSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentSleepSignature__PythonCallable")
+	}
+	static class UComponentSleepSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentSleepSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentSleepSignature__PythonCallable;
+
+// Class PythonTypes.ComponentCollisionSettingsChangedSignature__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UComponentCollisionSettingsChangedSignature__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComponentCollisionSettingsChangedSignature__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComponentCollisionSettingsChangedSignature__PythonCallable")
+	}
+	static class UComponentCollisionSettingsChangedSignature__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComponentCollisionSettingsChangedSignature__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UComponentCollisionSettingsChangedSignature__PythonCallable;
+
+// Class PythonTypes.OnInputMethodChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnInputMethodChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnInputMethodChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnInputMethodChanged__PythonCallable")
+	}
+	static class UOnInputMethodChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnInputMethodChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnInputMethodChanged__PythonCallable;
 
 // Class PythonTypes.ComponentOnClickedSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5694,86 +5774,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UComponentOnClickedSignature__PythonCallable;
-
-// Class PythonTypes.ComponentOnReleasedSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UComponentOnReleasedSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComponentOnReleasedSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComponentOnReleasedSignature__PythonCallable")
-	}
-	static class UComponentOnReleasedSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComponentOnReleasedSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UComponentOnReleasedSignature__PythonCallable;
-
-// Class PythonTypes.ComponentOnInputTouchBeginSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UComponentOnInputTouchBeginSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComponentOnInputTouchBeginSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComponentOnInputTouchBeginSignature__PythonCallable")
-	}
-	static class UComponentOnInputTouchBeginSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComponentOnInputTouchBeginSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UComponentOnInputTouchBeginSignature__PythonCallable;
-
-// Class PythonTypes.ForEachActorIteratorSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UForEachActorIteratorSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ForEachActorIteratorSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ForEachActorIteratorSignature__PythonCallable")
-	}
-	static class UForEachActorIteratorSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UForEachActorIteratorSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UForEachActorIteratorSignature__PythonCallable;
-
-// Class PythonTypes.ComponentOnInputTouchEndSignature__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UComponentOnInputTouchEndSignature__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComponentOnInputTouchEndSignature__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComponentOnInputTouchEndSignature__PythonCallable")
-	}
-	static class UComponentOnInputTouchEndSignature__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComponentOnInputTouchEndSignature__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UComponentOnInputTouchEndSignature__PythonCallable;
 
 // Class PythonTypes.ComponentBeginTouchOverSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5855,6 +5855,26 @@ public:
 };
 DUMPER7_ASSERTS_UComponentFractureSignature__PythonCallable;
 
+// Class PythonTypes.OnPopupClosedScript__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnPopupClosedScript__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnPopupClosedScript__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnPopupClosedScript__PythonCallable")
+	}
+	static class UOnPopupClosedScript__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnPopupClosedScript__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnPopupClosedScript__PythonCallable;
+
 // Class PythonTypes.OnInteraction__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UOnInteraction__PythonCallable final : public UPythonCallableForDelegate
@@ -5874,6 +5894,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnInteraction__PythonCallable;
+
+// Class PythonTypes.OnInteractionAxis__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnInteractionAxis__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnInteractionAxis__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnInteractionAxis__PythonCallable")
+	}
+	static class UOnInteractionAxis__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnInteractionAxis__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnInteractionAxis__PythonCallable;
 
 // Class PythonTypes.OnVehicleConstructedScript__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5895,65 +5935,25 @@ public:
 };
 DUMPER7_ASSERTS_UOnVehicleConstructedScript__PythonCallable;
 
-// Class PythonTypes.OnClickedMenuButton__PythonCallable
+// Class PythonTypes.BrLatestNewsRequestDelegate__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnClickedMenuButton__PythonCallable final : public UPythonCallableForDelegate
+class UBrLatestNewsRequestDelegate__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnClickedMenuButton__PythonCallable")
+		STATIC_CLASS_IMPL("BrLatestNewsRequestDelegate__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnClickedMenuButton__PythonCallable")
+		STATIC_NAME_IMPL(L"BrLatestNewsRequestDelegate__PythonCallable")
 	}
-	static class UOnClickedMenuButton__PythonCallable* GetDefaultObj()
+	static class UBrLatestNewsRequestDelegate__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnClickedMenuButton__PythonCallable>();
+		return GetDefaultObjImpl<UBrLatestNewsRequestDelegate__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnClickedMenuButton__PythonCallable;
-
-// Class PythonTypes.OnButtonSelected__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnButtonSelected__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnButtonSelected__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnButtonSelected__PythonCallable")
-	}
-	static class UOnButtonSelected__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnButtonSelected__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnButtonSelected__PythonCallable;
-
-// Class PythonTypes.OnPageChanged__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnPageChanged__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnPageChanged__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnPageChanged__PythonCallable")
-	}
-	static class UOnPageChanged__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnPageChanged__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnPageChanged__PythonCallable;
+DUMPER7_ASSERTS_UBrLatestNewsRequestDelegate__PythonCallable;
 
 // Class PythonTypes.OnEntrySelected__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -5975,126 +5975,6 @@ public:
 };
 DUMPER7_ASSERTS_UOnEntrySelected__PythonCallable;
 
-// Class PythonTypes.OnLoadPage__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnLoadPage__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnLoadPage__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnLoadPage__PythonCallable")
-	}
-	static class UOnLoadPage__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnLoadPage__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnLoadPage__PythonCallable;
-
-// Class PythonTypes.ActionDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UActionDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionDelegate__PythonCallable")
-	}
-	static class UActionDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UActionDelegate__PythonCallable;
-
-// Class PythonTypes.AxisDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UAxisDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AxisDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AxisDelegate__PythonCallable")
-	}
-	static class UAxisDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAxisDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UAxisDelegate__PythonCallable;
-
-// Class PythonTypes.GetValueTextDelegate__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UGetValueTextDelegate__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GetValueTextDelegate__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GetValueTextDelegate__PythonCallable")
-	}
-	static class UGetValueTextDelegate__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGetValueTextDelegate__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UGetValueTextDelegate__PythonCallable;
-
-// Class PythonTypes.IsActionEnabled__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UIsActionEnabled__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("IsActionEnabled__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"IsActionEnabled__PythonCallable")
-	}
-	static class UIsActionEnabled__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UIsActionEnabled__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UIsActionEnabled__PythonCallable;
-
-// Class PythonTypes.IsActionEnabledNoParams__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UIsActionEnabledNoParams__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("IsActionEnabledNoParams__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"IsActionEnabledNoParams__PythonCallable")
-	}
-	static class UIsActionEnabledNoParams__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UIsActionEnabledNoParams__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UIsActionEnabledNoParams__PythonCallable;
-
 // Class PythonTypes.GetMaxDrawDistScript__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
 class UGetMaxDrawDistScript__PythonCallable final : public UPythonCallableForDelegate
@@ -6115,25 +5995,45 @@ public:
 };
 DUMPER7_ASSERTS_UGetMaxDrawDistScript__PythonCallable;
 
-// Class PythonTypes.ColorChanged__PythonCallable
+// Class PythonTypes.OnDragged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UColorChanged__PythonCallable final : public UPythonCallableForDelegate
+class UOnDragged__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ColorChanged__PythonCallable")
+		STATIC_CLASS_IMPL("OnDragged__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ColorChanged__PythonCallable")
+		STATIC_NAME_IMPL(L"OnDragged__PythonCallable")
 	}
-	static class UColorChanged__PythonCallable* GetDefaultObj()
+	static class UOnDragged__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UColorChanged__PythonCallable>();
+		return GetDefaultObjImpl<UOnDragged__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UColorChanged__PythonCallable;
+DUMPER7_ASSERTS_UOnDragged__PythonCallable;
+
+// Class PythonTypes.ShouldBeVisibleScript__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UShouldBeVisibleScript__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ShouldBeVisibleScript__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ShouldBeVisibleScript__PythonCallable")
+	}
+	static class UShouldBeVisibleScript__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UShouldBeVisibleScript__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UShouldBeVisibleScript__PythonCallable;
 
 // Class PythonTypes.OnColorChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -6154,6 +6054,86 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOnColorChanged__PythonCallable;
+
+// Class PythonTypes.OnSlomoChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnSlomoChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnSlomoChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnSlomoChanged__PythonCallable")
+	}
+	static class UOnSlomoChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnSlomoChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnSlomoChanged__PythonCallable;
+
+// Class PythonTypes.OnColorDisplayModeChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnColorDisplayModeChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnColorDisplayModeChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnColorDisplayModeChanged__PythonCallable")
+	}
+	static class UOnColorDisplayModeChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnColorDisplayModeChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnColorDisplayModeChanged__PythonCallable;
+
+// Class PythonTypes.OnMeasurementSystemChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnMeasurementSystemChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnMeasurementSystemChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnMeasurementSystemChanged__PythonCallable")
+	}
+	static class UOnMeasurementSystemChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnMeasurementSystemChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnMeasurementSystemChanged__PythonCallable;
+
+// Class PythonTypes.OnUIStyleChangedDynamic__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnUIStyleChangedDynamic__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnUIStyleChangedDynamic__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnUIStyleChangedDynamic__PythonCallable")
+	}
+	static class UOnUIStyleChangedDynamic__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnUIStyleChangedDynamic__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnUIStyleChangedDynamic__PythonCallable;
 
 // Class PythonTypes.OnTextBoxChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -6195,25 +6175,45 @@ public:
 };
 DUMPER7_ASSERTS_UOnSliderValueChanged__PythonCallable;
 
-// Class PythonTypes.OnInputMethodChanged__PythonCallable
+// Class PythonTypes.OnIsInFreeCamChanged__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnInputMethodChanged__PythonCallable final : public UPythonCallableForDelegate
+class UOnIsInFreeCamChanged__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnInputMethodChanged__PythonCallable")
+		STATIC_CLASS_IMPL("OnIsInFreeCamChanged__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnInputMethodChanged__PythonCallable")
+		STATIC_NAME_IMPL(L"OnIsInFreeCamChanged__PythonCallable")
 	}
-	static class UOnInputMethodChanged__PythonCallable* GetDefaultObj()
+	static class UOnIsInFreeCamChanged__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnInputMethodChanged__PythonCallable>();
+		return GetDefaultObjImpl<UOnIsInFreeCamChanged__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnInputMethodChanged__PythonCallable;
+DUMPER7_ASSERTS_UOnIsInFreeCamChanged__PythonCallable;
+
+// Class PythonTypes.OnProjectileCameraEnabledChanged__PythonCallable
+// 0x0000 (0x0040 - 0x0040)
+class UOnProjectileCameraEnabledChanged__PythonCallable final : public UPythonCallableForDelegate
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnProjectileCameraEnabledChanged__PythonCallable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnProjectileCameraEnabledChanged__PythonCallable")
+	}
+	static class UOnProjectileCameraEnabledChanged__PythonCallable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnProjectileCameraEnabledChanged__PythonCallable>();
+	}
+};
+DUMPER7_ASSERTS_UOnProjectileCameraEnabledChanged__PythonCallable;
 
 // Class PythonTypes.OnInitializeItem__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
@@ -6235,84 +6235,44 @@ public:
 };
 DUMPER7_ASSERTS_UOnInitializeItem__PythonCallable;
 
-// Class PythonTypes.OnItemSelected__PythonCallable
+// Class PythonTypes.ForEachActorIteratorSignature__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnItemSelected__PythonCallable final : public UPythonCallableForDelegate
+class UForEachActorIteratorSignature__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnItemSelected__PythonCallable")
+		STATIC_CLASS_IMPL("ForEachActorIteratorSignature__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnItemSelected__PythonCallable")
+		STATIC_NAME_IMPL(L"ForEachActorIteratorSignature__PythonCallable")
 	}
-	static class UOnItemSelected__PythonCallable* GetDefaultObj()
+	static class UForEachActorIteratorSignature__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnItemSelected__PythonCallable>();
+		return GetDefaultObjImpl<UForEachActorIteratorSignature__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnItemSelected__PythonCallable;
+DUMPER7_ASSERTS_UForEachActorIteratorSignature__PythonCallable;
 
-// Class PythonTypes.OnClicked__PythonCallable
+// Class PythonTypes.AsyncEditorWaitForGameWorldEvent__PythonCallable
 // 0x0000 (0x0040 - 0x0040)
-class UOnClicked__PythonCallable final : public UPythonCallableForDelegate
+class UAsyncEditorWaitForGameWorldEvent__PythonCallable final : public UPythonCallableForDelegate
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("OnClicked__PythonCallable")
+		STATIC_CLASS_IMPL("AsyncEditorWaitForGameWorldEvent__PythonCallable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"OnClicked__PythonCallable")
+		STATIC_NAME_IMPL(L"AsyncEditorWaitForGameWorldEvent__PythonCallable")
 	}
-	static class UOnClicked__PythonCallable* GetDefaultObj()
+	static class UAsyncEditorWaitForGameWorldEvent__PythonCallable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnClicked__PythonCallable>();
+		return GetDefaultObjImpl<UAsyncEditorWaitForGameWorldEvent__PythonCallable>();
 	}
 };
-DUMPER7_ASSERTS_UOnClicked__PythonCallable;
-
-// Class PythonTypes.OnFocused__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnFocused__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnFocused__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnFocused__PythonCallable")
-	}
-	static class UOnFocused__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnFocused__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnFocused__PythonCallable;
-
-// Class PythonTypes.OnUpdateContentStyle__PythonCallable
-// 0x0000 (0x0040 - 0x0040)
-class UOnUpdateContentStyle__PythonCallable final : public UPythonCallableForDelegate
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnUpdateContentStyle__PythonCallable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnUpdateContentStyle__PythonCallable")
-	}
-	static class UOnUpdateContentStyle__PythonCallable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnUpdateContentStyle__PythonCallable>();
-	}
-};
-DUMPER7_ASSERTS_UOnUpdateContentStyle__PythonCallable;
+DUMPER7_ASSERTS_UAsyncEditorWaitForGameWorldEvent__PythonCallable;
 
 SDK_NAMESPACE_END

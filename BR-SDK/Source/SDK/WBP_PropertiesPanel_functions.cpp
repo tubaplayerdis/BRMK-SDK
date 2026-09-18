@@ -16,6 +16,50 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_PropertiesPanel.SKEL_WBP_PropertiesPanel_C.AddCategoryWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPropertyCategoryWidget*          Widget_AddCategoryWidget                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_AddCategoryWidget                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PropertiesPanel_C::AddCategoryWidget(class UPropertyCategoryWidget* Widget_AddCategoryWidget, int32 Index_AddCategoryWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PropertiesPanel_C", "AddCategoryWidget");
+
+	Params::SKEL_WBP_PropertiesPanel_C_AddCategoryWidget Parms{};
+
+	Parms.Widget_AddCategoryWidget = Widget_AddCategoryWidget;
+	Parms.Index_AddCategoryWidget = Index_AddCategoryWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PropertiesPanel.WBP_PropertiesPanel_C.AddCategoryWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPropertyCategoryWidget*          Widget_AddCategoryWidget                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_AddCategoryWidget                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PropertiesPanel_C::AddCategoryWidget(class UPropertyCategoryWidget* Widget_AddCategoryWidget, int32 Index_AddCategoryWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PropertiesPanel_C", "AddCategoryWidget");
+
+	Params::WBP_PropertiesPanel_C_AddCategoryWidget Parms{};
+
+	Parms.Widget_AddCategoryWidget = Widget_AddCategoryWidget;
+	Parms.Index_AddCategoryWidget = Index_AddCategoryWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_PropertiesPanel.WBP_PropertiesPanel_C.ExecuteUbergraph_WBP_PropertiesPanel
 // (Final, UbergraphFunction)
 // Parameters:
@@ -31,50 +75,6 @@ void UWBP_PropertiesPanel_C::ExecuteUbergraph_WBP_PropertiesPanel(int32 EntryPoi
 	Params::WBP_PropertiesPanel_C_ExecuteUbergraph_WBP_PropertiesPanel Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertiesPanel.WBP_PropertiesPanel_C.AddCategoryWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UPropertyCategoryWidget*          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PropertiesPanel_C::AddCategoryWidget(class UPropertyCategoryWidget* Widget, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PropertiesPanel_C", "AddCategoryWidget");
-
-	Params::WBP_PropertiesPanel_C_AddCategoryWidget Parms{};
-
-	Parms.Widget = Widget;
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PropertiesPanel.SKEL_WBP_PropertiesPanel_C.AddCategoryWidget
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UPropertyCategoryWidget*          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PropertiesPanel_C::AddCategoryWidget(class UPropertyCategoryWidget* Widget, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PropertiesPanel_C", "AddCategoryWidget");
-
-	Params::SKEL_WBP_PropertiesPanel_C_AddCategoryWidget Parms{};
-
-	Parms.Widget = Widget;
-	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

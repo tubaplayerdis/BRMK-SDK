@@ -4219,7 +4219,7 @@ DUMPER7_ASSERTS_UWindowTitleBarAreaSlot;
 
 // Class UMG.WrapBox
 // 0x0028 (0x0268 - 0x0240)
-class UWrapBox final : public UPanelWidget
+class UWrapBox : public UPanelWidget
 {
 public:
 	struct FVector2D                              InnerSlotPadding;                                  // 0x0240(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerController_StaticInfo.BP_PlayerController_StaticInfo_C
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0330 - 0x0330)
 class UBP_PlayerController_StaticInfo_C final : public UPlayerControllerStaticInfo
 {
 public:
@@ -37,11 +37,11 @@ public:
 DUMPER7_ASSERTS_UBP_PlayerController_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_PlayerController_StaticInfo.SKEL_BP_PlayerController_StaticInfo_C
-// 0x0010 (0x0370 - 0x0360)
+// 0x0010 (0x0340 - 0x0330)
 class USKEL_BP_PlayerController_StaticInfo_C final : public UPlayerControllerStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()

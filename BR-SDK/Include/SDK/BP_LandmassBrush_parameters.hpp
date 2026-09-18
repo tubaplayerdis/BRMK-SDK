@@ -11,13 +11,40 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "RenderTargetChannels_structs.hpp"
 #include "BrushWM_structs.hpp"
 #include "Engine_structs.hpp"
+#include "RenderTargetChannels_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_LandmassBrush.SKEL_BP_LandmassBrush_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct SKEL_BP_LandmassBrush_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_LandmassBrush_C_ReceiveTick;
+
+// Function BP_LandmassBrush.SKEL_BP_LandmassBrush_C.ActorSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct SKEL_BP_LandmassBrush_C_ActorSelectionChanged final
+{
+public:
+	bool                                          bSelected;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SKEL_BP_LandmassBrush_C_ActorSelectionChanged;
+
+// Function BP_LandmassBrush.SKEL_BP_LandmassBrush_C.Center Actor on Spline Points
+// 0x000C (0x000C - 0x0000)
+struct SKEL_BP_LandmassBrush_C_Center_Actor_on_Spline_Points final
+{
+public:
+	struct FVector                                AccumAvg;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_SKEL_BP_LandmassBrush_C_Center_Actor_on_Spline_Points;
 
 // Function BP_LandmassBrush.BP_LandmassBrush_C.ExecuteUbergraph_BP_LandmassBrush
 // 0x02D8 (0x02D8 - 0x0000)
@@ -691,33 +718,6 @@ public:
 	class UTextureRenderTarget2D*                 K2Node_Select_Default_10;                          // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_LandmassBrush_C_RenderBrushToStack;
-
-// Function BP_LandmassBrush.SKEL_BP_LandmassBrush_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct SKEL_BP_LandmassBrush_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_BP_LandmassBrush_C_ReceiveTick;
-
-// Function BP_LandmassBrush.SKEL_BP_LandmassBrush_C.ActorSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct SKEL_BP_LandmassBrush_C_ActorSelectionChanged final
-{
-public:
-	bool                                          bSelected;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SKEL_BP_LandmassBrush_C_ActorSelectionChanged;
-
-// Function BP_LandmassBrush.SKEL_BP_LandmassBrush_C.Center Actor on Spline Points
-// 0x000C (0x000C - 0x0000)
-struct SKEL_BP_LandmassBrush_C_Center_Actor_on_Spline_Points final
-{
-public:
-	struct FVector                                AccumAvg;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_SKEL_BP_LandmassBrush_C_Center_Actor_on_Spline_Points;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

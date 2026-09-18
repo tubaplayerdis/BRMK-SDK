@@ -16,110 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Allocate RTs
-// (BlueprintCallable, BlueprintEvent)
-
-void ASKEL_WaveFoamRenderer_C::Allocate_RTs()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Allocate RTs");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Create MID
-// (BlueprintCallable, BlueprintEvent)
-
-void ASKEL_WaveFoamRenderer_C::Create_MID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Create MID");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Start Tick
-// (BlueprintCallable, BlueprintEvent)
-
-void ASKEL_WaveFoamRenderer_C::Start_Tick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Start Tick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Stop Tick
-// (BlueprintCallable, BlueprintEvent)
-
-void ASKEL_WaveFoamRenderer_C::Stop_Tick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Stop Tick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.CustomTick
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASKEL_WaveFoamRenderer_C::CustomTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "CustomTick");
-
-	Params::SKEL_WaveFoamRenderer_C_CustomTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Initialize
-// (BlueprintCallable, BlueprintEvent)
-
-void ASKEL_WaveFoamRenderer_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.UserConstructionScript
-// (Event, Public, BlueprintEvent)
-
-void ASKEL_WaveFoamRenderer_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WaveFoamRenderer.WaveFoamRenderer_C.ExecuteUbergraph_WaveFoamRenderer
 // (Final, UbergraphFunction)
 // Parameters:
@@ -239,6 +135,110 @@ void AWaveFoamRenderer_C::UserConstructionScript()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WaveFoamRenderer_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Allocate RTs
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_WaveFoamRenderer_C::Allocate_RTs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Allocate RTs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Create MID
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_WaveFoamRenderer_C::Create_MID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Create MID");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Start Tick
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_WaveFoamRenderer_C::Start_Tick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Start Tick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Stop Tick
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_WaveFoamRenderer_C::Stop_Tick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Stop Tick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.CustomTick
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ASKEL_WaveFoamRenderer_C::CustomTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "CustomTick");
+
+	Params::SKEL_WaveFoamRenderer_C_CustomTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.Initialize
+// (BlueprintCallable, BlueprintEvent)
+
+void ASKEL_WaveFoamRenderer_C::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "Initialize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WaveFoamRenderer.SKEL_WaveFoamRenderer_C.UserConstructionScript
+// (Event, Public, BlueprintEvent)
+
+void ASKEL_WaveFoamRenderer_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WaveFoamRenderer_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

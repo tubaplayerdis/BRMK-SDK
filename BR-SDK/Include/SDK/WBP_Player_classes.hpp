@@ -17,19 +17,18 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Player.WBP_Player_C
-// 0x0010 (0x06E0 - 0x06D0)
+// 0x0010 (0x06F0 - 0x06E0)
 class UWBP_Player_C final : public UPlayerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_WBP_Player(int32 EntryPoint);
+	void AddVehicleDashboardWidget(class UUserWidget* InWidget);
+	void AddCharacterDashboardWidget(class UUserWidget* InWidget);
 	void AddCameraBrickWidget(class UCameraBrickWidget* InWidget);
-	void AddHealthBarWidget(class UHealthBarWidget* InWidget);
-	void AddCurrentItemWidget(class UCurrentItemWidget* InWidget);
 	void AddCrosshairWidget(class UCrosshairWidget* InWidget);
-	void AddDashboardWidget(class UDashboardWidget* InWidget);
 	void AddRestrictedAreaWidget(class URestrictedAreaWidget* InWidget);
 
 public:
@@ -49,19 +48,18 @@ public:
 DUMPER7_ASSERTS_UWBP_Player_C;
 
 // WidgetBlueprintGeneratedClass WBP_Player.SKEL_WBP_Player_C
-// 0x0010 (0x06E0 - 0x06D0)
+// 0x0010 (0x06F0 - 0x06E0)
 class USKEL_WBP_Player_C final : public UPlayerWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06E0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void AddRestrictedAreaWidget(class URestrictedAreaWidget* InWidget);
-	void AddDashboardWidget(class UDashboardWidget* InWidget);
 	void AddCrosshairWidget(class UCrosshairWidget* InWidget);
-	void AddCurrentItemWidget(class UCurrentItemWidget* InWidget);
-	void AddHealthBarWidget(class UHealthBarWidget* InWidget);
 	void AddCameraBrickWidget(class UCameraBrickWidget* InWidget);
+	void AddCharacterDashboardWidget(class UUserWidget* InWidget);
+	void AddVehicleDashboardWidget(class UUserWidget* InWidget);
 
 public:
 	static class UClass* StaticClass()

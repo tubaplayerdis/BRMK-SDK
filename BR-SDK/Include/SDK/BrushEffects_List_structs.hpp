@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "BrushEffects_List_Blurring_structs.hpp"
-#include "BrushEffects_List_CurlNoise_structs.hpp"
-#include "BrushEffects_List_Displacement_structs.hpp"
-#include "BrushEffects_List_Terracing_structs.hpp"
 #include "BrushEffects_List_SmoothBlending_structs.hpp"
+#include "BrushEffects_List_CurlNoise_structs.hpp"
+#include "BrushEffects_List_Terracing_structs.hpp"
+#include "BrushEffects_List_Displacement_structs.hpp"
 
 
 SDK_NAMESPACE_START

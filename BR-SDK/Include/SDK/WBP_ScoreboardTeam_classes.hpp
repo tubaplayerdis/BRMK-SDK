@@ -31,7 +31,6 @@ public:
 
 public:
 	void ExecuteUbergraph_WBP_ScoreboardTeam(int32 EntryPoint);
-	void BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 	void UpdateCanJoinTeam(bool bCanJoin);
 	void UpdateCanEverJoinTeam(bool bCanJoin);
 	void BndEvt__JoinButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
@@ -68,7 +67,6 @@ public:
 	void BndEvt__JoinButton_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
 	void UpdateCanEverJoinTeam(bool bCanJoin);
 	void UpdateCanJoinTeam(bool bCanJoin);
-	void BndEvt__JoinButton_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState);
 
 public:
 	static class UClass* StaticClass()

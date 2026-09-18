@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Deagle_StaticInfo.BP_Deagle_StaticInfo_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x08D0 - 0x08D0)
 class UBP_Deagle_StaticInfo_C final : public UFirearmStaticInfo
 {
 public:
@@ -37,11 +37,11 @@ public:
 DUMPER7_ASSERTS_UBP_Deagle_StaticInfo_C;
 
 // BlueprintGeneratedClass BP_Deagle_StaticInfo.SKEL_BP_Deagle_StaticInfo_C
-// 0x0010 (0x08D0 - 0x08C0)
+// 0x0010 (0x08E0 - 0x08D0)
 class USKEL_BP_Deagle_StaticInfo_C final : public UFirearmStaticInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08C0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08D0(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	static class UClass* StaticClass()

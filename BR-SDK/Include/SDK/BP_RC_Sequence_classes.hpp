@@ -16,47 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass BP_RC_Sequence.SKEL_BP_RC_Sequence_C
-// 0x0050 (0x0378 - 0x0328)
-class ASKEL_BP_RC_Sequence_C : public AMenuSequence
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       Camera;                                            // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Vehicle;                                           // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USplineComponent*                       TrackSpline;                                       // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Remote;                                            // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Character;                                         // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Speed;                                             // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentDist;                                       // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TrailerOffset;                                     // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void ReceiveTick(float DeltaSeconds);
-	void UserConstructionScript();
-	void KickVehicle(const struct FVector& Impulse);
-
-	struct FVector GetLookAtTarget() const;
-	struct FRotator GetTrailerRotation() const;
-	bool IsVehicleDestroyed() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_BP_RC_Sequence_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_BP_RC_Sequence_C")
-	}
-	static class ASKEL_BP_RC_Sequence_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASKEL_BP_RC_Sequence_C>();
-	}
-};
-DUMPER7_ASSERTS_ASKEL_BP_RC_Sequence_C;
-
 // BlueprintGeneratedClass BP_RC_Sequence.BP_RC_Sequence_C
 // 0x0050 (0x0378 - 0x0328)
 class ABP_RC_Sequence_C : public AMenuSequence
@@ -97,5 +56,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ABP_RC_Sequence_C;
+
+// BlueprintGeneratedClass BP_RC_Sequence.SKEL_BP_RC_Sequence_C
+// 0x0050 (0x0378 - 0x0328)
+class ASKEL_BP_RC_Sequence_C : public AMenuSequence
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       Camera;                                            // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Vehicle;                                           // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USplineComponent*                       TrackSpline;                                       // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Remote;                                            // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Character;                                         // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Speed;                                             // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentDist;                                       // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TrailerOffset;                                     // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+	void KickVehicle(const struct FVector& Impulse);
+
+	struct FVector GetLookAtTarget() const;
+	struct FRotator GetTrailerRotation() const;
+	bool IsVehicleDestroyed() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_BP_RC_Sequence_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_BP_RC_Sequence_C")
+	}
+	static class ASKEL_BP_RC_Sequence_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASKEL_BP_RC_Sequence_C>();
+	}
+};
+DUMPER7_ASSERTS_ASKEL_BP_RC_Sequence_C;
 
 SDK_NAMESPACE_END

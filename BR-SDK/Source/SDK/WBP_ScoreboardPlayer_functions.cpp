@@ -16,112 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ScoreboardPlayer_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_ScoreboardPlayer_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateButtonStyle
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewSelected                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsLocalPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ETeamAttitude                           TeamAttitude                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ScoreboardPlayer_C::UpdateButtonStyle(bool bNewSelected, bool bIsLocalPlayer, ETeamAttitude TeamAttitude)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "UpdateButtonStyle");
-
-	Params::SKEL_WBP_ScoreboardPlayer_C_UpdateButtonStyle Parms{};
-
-	Parms.bNewSelected = bNewSelected;
-	Parms.bIsLocalPlayer = bIsLocalPlayer;
-	Parms.TeamAttitude = TeamAttitude;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ScoreboardPlayer_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "PreConstruct");
-
-	Params::SKEL_WBP_ScoreboardPlayer_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateIsAlive
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsAlive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ScoreboardPlayer_C::UpdateIsAlive(bool bIsAlive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "UpdateIsAlive");
-
-	Params::SKEL_WBP_ScoreboardPlayer_C_UpdateIsAlive Parms{};
-
-	Parms.bIsAlive = bIsAlive;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateAdminRole
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const EAdminRole                        Role                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ScoreboardPlayer_C::UpdateAdminRole(const EAdminRole Role)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "UpdateAdminRole");
-
-	Params::SKEL_WBP_ScoreboardPlayer_C_UpdateAdminRole Parms{};
-
-	Parms.Role = Role;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ScoreboardPlayer.WBP_ScoreboardPlayer_C.ExecuteUbergraph_WBP_ScoreboardPlayer
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -226,23 +120,85 @@ void UWBP_ScoreboardPlayer_C::UpdateButtonStyle(bool bNewSelected, bool bIsLocal
 }
 
 
-// Function WBP_ScoreboardPlayer.WBP_ScoreboardPlayer_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateButtonStyle
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bNewSelected                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsLocalPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ETeamAttitude                           TeamAttitude                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_ScoreboardPlayer_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+void USKEL_WBP_ScoreboardPlayer_C::UpdateButtonStyle(bool bNewSelected, bool bIsLocalPlayer, ETeamAttitude TeamAttitude)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ScoreboardPlayer_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "UpdateButtonStyle");
 
-	Params::WBP_ScoreboardPlayer_C_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
+	Params::SKEL_WBP_ScoreboardPlayer_C_UpdateButtonStyle Parms{};
 
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
+	Parms.bNewSelected = bNewSelected;
+	Parms.bIsLocalPlayer = bIsLocalPlayer;
+	Parms.TeamAttitude = TeamAttitude;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardPlayer_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "PreConstruct");
+
+	Params::SKEL_WBP_ScoreboardPlayer_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateIsAlive
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsAlive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardPlayer_C::UpdateIsAlive(bool bIsAlive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "UpdateIsAlive");
+
+	Params::SKEL_WBP_ScoreboardPlayer_C_UpdateIsAlive Parms{};
+
+	Parms.bIsAlive = bIsAlive;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ScoreboardPlayer.SKEL_WBP_ScoreboardPlayer_C.UpdateAdminRole
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const EAdminRole                        Role                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_ScoreboardPlayer_C::UpdateAdminRole(const EAdminRole Role)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_ScoreboardPlayer_C", "UpdateAdminRole");
+
+	Params::SKEL_WBP_ScoreboardPlayer_C_UpdateAdminRole Parms{};
+
+	Parms.Role = Role;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

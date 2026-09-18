@@ -17,38 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// WidgetBlueprintGeneratedClass WBP_NumericProperty.SKEL_WBP_NumericProperty_C
-// 0x0020 (0x0468 - 0x0448)
-class USKEL_WBP_NumericProperty_C final : public UNumericPropertyWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickHorizontalBox*                    SlidersBox;                                        // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMenuButtonWidget*                      LockButton;                                        // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void AddSliderWidget(class UBrickSliderWidget* Slider);
-	void OnBrickUnitsButtonClicked();
-	void UpdateNumericProperty(const ENumericValueType ValueType, const int32 NumAxes);
-	void OnLockButtonClicked();
-	void Destruct();
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_NumericProperty_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_NumericProperty_C")
-	}
-	static class USKEL_WBP_NumericProperty_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_NumericProperty_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_NumericProperty_C;
-
 // WidgetBlueprintGeneratedClass WBP_NumericProperty.WBP_NumericProperty_C
 // 0x0020 (0x0468 - 0x0448)
 class UWBP_NumericProperty_C final : public UNumericPropertyWidget
@@ -81,5 +49,37 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_NumericProperty_C;
+
+// WidgetBlueprintGeneratedClass WBP_NumericProperty.SKEL_WBP_NumericProperty_C
+// 0x0020 (0x0468 - 0x0448)
+class USKEL_WBP_NumericProperty_C final : public UNumericPropertyWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickHorizontalBox*                    SlidersBox;                                        // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMenuButtonWidget*                      LockButton;                                        // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void AddSliderWidget(class UBrickSliderWidget* Slider);
+	void OnBrickUnitsButtonClicked();
+	void UpdateNumericProperty(const ENumericValueType ValueType, const int32 NumAxes);
+	void OnLockButtonClicked();
+	void Destruct();
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_NumericProperty_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_NumericProperty_C")
+	}
+	static class USKEL_WBP_NumericProperty_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_NumericProperty_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_NumericProperty_C;
 
 SDK_NAMESPACE_END

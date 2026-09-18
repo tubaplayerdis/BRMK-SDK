@@ -322,28 +322,6 @@ void UWBP_ColorProperty_C::BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_Co
 }
 
 
-// Function WBP_ColorProperty.WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ColorProperty_C::BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_ColorProperty.WBP_ColorProperty_C.SetCurrentColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -383,28 +361,6 @@ void UWBP_ColorProperty_C::UpdateCurrentColor(bool bUpdateHex)
 	Params::WBP_ColorProperty_C_UpdateCurrentColor Parms{};
 
 	Parms.bUpdateHex = bUpdateHex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ColorProperty.SKEL_WBP_ColorProperty_C.BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_ColorProperty_C::BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_ColorProperty_C", "BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_ColorProperty_C_BndEvt__WBP_ColorProperty_DisplayModeButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

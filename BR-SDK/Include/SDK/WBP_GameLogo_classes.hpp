@@ -10,50 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "GameLogoEnum_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameLogoEnum_structs.hpp"
 #include "UMG_classes.hpp"
-#include "BrickRigs_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// WidgetBlueprintGeneratedClass WBP_GameLogo.SKEL_WBP_GameLogo_C
-// 0x0030 (0x0428 - 0x03F8)
-class USKEL_WBP_GameLogo_C final : public UUserWidget
-{
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBrickImage*                            LogoImage;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	EGameLogoEnum                                 Logo;                                              // 0x0418(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBrickUIStyle*                          UIStyle;                                           // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void Construct();
-	void UpdateUIStyle(const class UBrickUIStyle* Style);
-	void UpdateLogo();
-	void SetLogo(EGameLogoEnum InLogo);
-	class UMaterialInstanceDynamic* InitMID();
-
-	bool IsLogoReady() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		BP_STATIC_CLASS_IMPL("SKEL_WBP_GameLogo_C")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SKEL_WBP_GameLogo_C")
-	}
-	static class USKEL_WBP_GameLogo_C* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USKEL_WBP_GameLogo_C>();
-	}
-};
-DUMPER7_ASSERTS_USKEL_WBP_GameLogo_C;
 
 // WidgetBlueprintGeneratedClass WBP_GameLogo.WBP_GameLogo_C
 // 0x0030 (0x0428 - 0x03F8)
@@ -92,5 +54,42 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWBP_GameLogo_C;
+
+// WidgetBlueprintGeneratedClass WBP_GameLogo.SKEL_WBP_GameLogo_C
+// 0x0030 (0x0428 - 0x03F8)
+class USKEL_WBP_GameLogo_C final : public UUserWidget
+{
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0010)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBrickBorder*                           Border;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBrickImage*                            LogoImage;                                         // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EGameLogoEnum                                 Logo;                                              // 0x0418(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBrickUIStyle*                          UIStyle;                                           // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void Construct();
+	void UpdateUIStyle(const class UBrickUIStyle* Style);
+	void UpdateLogo();
+	void SetLogo(EGameLogoEnum InLogo);
+	class UMaterialInstanceDynamic* InitMID();
+
+	bool IsLogoReady() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		BP_STATIC_CLASS_IMPL("SKEL_WBP_GameLogo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SKEL_WBP_GameLogo_C")
+	}
+	static class USKEL_WBP_GameLogo_C* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USKEL_WBP_GameLogo_C>();
+	}
+};
+DUMPER7_ASSERTS_USKEL_WBP_GameLogo_C;
 
 SDK_NAMESPACE_END

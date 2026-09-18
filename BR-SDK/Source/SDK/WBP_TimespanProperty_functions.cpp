@@ -36,86 +36,22 @@ void UWBP_TimespanProperty_C::ExecuteUbergraph_WBP_TimespanProperty(int32 EntryP
 }
 
 
-// Function WBP_TimespanProperty.WBP_TimespanProperty_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWBP_TimespanProperty_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimespanProperty_C", "PreConstruct");
-
-	Params::WBP_TimespanProperty_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TimespanProperty.WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature
+// Function WBP_TimespanProperty.WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature(int32 Item, EValueChangedEventType EventType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature");
+		Func = Class->GetFunction("WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature");
 
-	Params::WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature Parms{};
+	Params::WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature Parms{};
 
-	Parms.Value = Value;
-	Parms.EventType = EventType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TimespanProperty.WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature");
-
-	Params::WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.EventType = EventType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TimespanProperty.WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature");
-
-	Params::WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
+	Parms.Item = Item;
 	Parms.EventType = EventType;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -144,51 +80,16 @@ void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_SecondsSlider_K2Node_
 }
 
 
-// Function WBP_TimespanProperty.WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_TimespanProperty.WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_TimespanProperty.WBP_TimespanProperty_C.UpdateTimespanProperty
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
+// const bool                              bInit                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FTimespan&                 Timespan                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // const struct FTimespan&                 MinValue_0                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // const struct FTimespan&                 MaxValue_0                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAllowInfinite                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const bool                              bAllowInfinite                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan& Timespan, const struct FTimespan& MinValue_0, const struct FTimespan& MaxValue_0, bool bAllowInfinite)
+void UWBP_TimespanProperty_C::UpdateTimespanProperty(const bool bInit, const struct FTimespan& Timespan, const struct FTimespan& MinValue_0, const struct FTimespan& MaxValue_0, const bool bAllowInfinite)
 {
 	static class UFunction* Func = nullptr;
 
@@ -197,6 +98,7 @@ void UWBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan& Tim
 
 	Params::WBP_TimespanProperty_C_UpdateTimespanProperty Parms{};
 
+	Parms.bInit = bInit;
 	Parms.Timespan = std::move(Timespan);
 	Parms.MinValue_0 = std::move(MinValue_0);
 	Parms.MaxValue_0 = std::move(MaxValue_0);
@@ -206,15 +108,62 @@ void UWBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan& Tim
 }
 
 
+// Function WBP_TimespanProperty.WBP_TimespanProperty_C.On_ComboBox_InitializeItemDelegate_0
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FBrickComboBoxItemParams*        OutParams                                              (Parm, OutParm)
+
+void UWBP_TimespanProperty_C::On_ComboBox_InitializeItemDelegate_0(int32 Item, struct FBrickComboBoxItemParams* OutParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TimespanProperty_C", "On_ComboBox_InitializeItemDelegate_0");
+
+	Params::WBP_TimespanProperty_C_On_ComboBox_InitializeItemDelegate_0 Parms{};
+
+	Parms.Item = Item;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutParams != nullptr)
+		*OutParams = std::move(Parms.OutParams);
+}
+
+
+// Function WBP_TimespanProperty.WBP_TimespanProperty_C.InitComboBoxValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FTimespan&                       InTimespan                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TimespanProperty_C::InitComboBoxValue(struct FTimespan& InTimespan)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TimespanProperty_C", "InitComboBoxValue");
+
+	Params::WBP_TimespanProperty_C_InitComboBoxValue Parms{};
+
+	Parms.InTimespan = std::move(InTimespan);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InTimespan = std::move(Parms.InTimespan);
+}
+
+
 // Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.UpdateTimespanProperty
 // (Event, Protected, BlueprintEvent)
 // Parameters:
+// const bool                              bInit                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTimespan&                 Timespan                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTimespan&                 MinValue_0                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTimespan&                 MaxValue_0                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAllowInfinite                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bAllowInfinite                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan& Timespan, const struct FTimespan& MinValue_0, const struct FTimespan& MaxValue_0, bool bAllowInfinite)
+void USKEL_WBP_TimespanProperty_C::UpdateTimespanProperty(const bool bInit, const struct FTimespan& Timespan, const struct FTimespan& MinValue_0, const struct FTimespan& MaxValue_0, const bool bAllowInfinite)
 {
 	static class UFunction* Func = nullptr;
 
@@ -223,48 +172,13 @@ void USKEL_WBP_TimespanProperty_C::UpdateTimespanProperty(const struct FTimespan
 
 	Params::SKEL_WBP_TimespanProperty_C_UpdateTimespanProperty Parms{};
 
+	Parms.bInit = bInit;
 	Parms.Timespan = std::move(Timespan);
 	Parms.MinValue_0 = std::move(MinValue_0);
 	Parms.MaxValue_0 = std::move(MaxValue_0);
 	Parms.bAllowInfinite = bAllowInfinite;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature");
-
-	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_0_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
-// (Public)
-
-void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_InfiniteButton_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -290,89 +204,71 @@ void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_SecondsSlider_K2
 }
 
 
-// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature
 // (Public)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature(int32 Item, EValueChangedEventType EventType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature");
 
-	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_MinutesSlider_K2Node_ComponentBoundEvent_3_OnSliderValueChanged__DelegateSignature Parms{};
+	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_ComboBox_K2Node_ComponentBoundEvent_0_OnItemSelected__DelegateSignature Parms{};
 
-	Parms.Value = Value;
+	Parms.Item = Item;
 	Parms.EventType = EventType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature
-// (Public)
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.On_ComboBox_InitializeItemDelegate_0
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FBrickComboBoxItemParams*        OutParams                                              (Parm, OutParm)
 
-void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+void USKEL_WBP_TimespanProperty_C::On_ComboBox_InitializeItemDelegate_0(int32 Item, struct FBrickComboBoxItemParams* OutParams)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "On_ComboBox_InitializeItemDelegate_0");
 
-	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_HoursSlider_K2Node_ComponentBoundEvent_4_OnSliderValueChanged__DelegateSignature Parms{};
+	Params::SKEL_WBP_TimespanProperty_C_On_ComboBox_InitializeItemDelegate_0 Parms{};
 
-	Parms.Value = Value;
-	Parms.EventType = EventType;
+	Parms.Item = Item;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutParams != nullptr)
+		*OutParams = std::move(Parms.OutParams);
 }
 
 
-// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature
-// (Public)
+// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.InitComboBoxValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EValueChangedEventType                  EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTimespan&                       InTimespan                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
-void USKEL_WBP_TimespanProperty_C::BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature(float Value, EValueChangedEventType EventType)
+void USKEL_WBP_TimespanProperty_C::InitComboBoxValue(struct FTimespan& InTimespan)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature");
+		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "InitComboBoxValue");
 
-	Params::SKEL_WBP_TimespanProperty_C_BndEvt__WBP_TimespanProperty_DaysSlider_K2Node_ComponentBoundEvent_5_OnSliderValueChanged__DelegateSignature Parms{};
+	Params::SKEL_WBP_TimespanProperty_C_InitComboBoxValue Parms{};
 
-	Parms.Value = Value;
-	Parms.EventType = EventType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TimespanProperty.SKEL_WBP_TimespanProperty_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_TimespanProperty_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_TimespanProperty_C", "PreConstruct");
-
-	Params::SKEL_WBP_TimespanProperty_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.InTimespan = std::move(InTimespan);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InTimespan = std::move(Parms.InTimespan);
 }
 
 

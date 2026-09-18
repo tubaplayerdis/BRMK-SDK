@@ -16,32 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PlayerIcon.SKEL_WBP_PlayerIcon_C.UpdatePlayerIcon
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bNewIsLocalPlayer                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bNewIsTeamLeader                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ECharacterStateOfHealth                 NewStateOfHealth                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bNewCanBeDamaged                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USKEL_WBP_PlayerIcon_C::UpdatePlayerIcon(bool bNewIsLocalPlayer, bool bNewIsTeamLeader, ECharacterStateOfHealth NewStateOfHealth, bool bNewCanBeDamaged)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_PlayerIcon_C", "UpdatePlayerIcon");
-
-	Params::SKEL_WBP_PlayerIcon_C_UpdatePlayerIcon Parms{};
-
-	Parms.bNewIsLocalPlayer = bNewIsLocalPlayer;
-	Parms.bNewIsTeamLeader = bNewIsTeamLeader;
-	Parms.NewStateOfHealth = NewStateOfHealth;
-	Parms.bNewCanBeDamaged = bNewCanBeDamaged;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_PlayerIcon.WBP_PlayerIcon_C.ExecuteUbergraph_WBP_PlayerIcon
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -78,6 +52,32 @@ void UWBP_PlayerIcon_C::UpdatePlayerIcon(bool bNewIsLocalPlayer, bool bNewIsTeam
 		Func = Class->GetFunction("WBP_PlayerIcon_C", "UpdatePlayerIcon");
 
 	Params::WBP_PlayerIcon_C_UpdatePlayerIcon Parms{};
+
+	Parms.bNewIsLocalPlayer = bNewIsLocalPlayer;
+	Parms.bNewIsTeamLeader = bNewIsTeamLeader;
+	Parms.NewStateOfHealth = NewStateOfHealth;
+	Parms.bNewCanBeDamaged = bNewCanBeDamaged;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PlayerIcon.SKEL_WBP_PlayerIcon_C.UpdatePlayerIcon
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bNewIsLocalPlayer                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNewIsTeamLeader                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECharacterStateOfHealth                 NewStateOfHealth                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNewCanBeDamaged                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USKEL_WBP_PlayerIcon_C::UpdatePlayerIcon(bool bNewIsLocalPlayer, bool bNewIsTeamLeader, ECharacterStateOfHealth NewStateOfHealth, bool bNewCanBeDamaged)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SKEL_WBP_PlayerIcon_C", "UpdatePlayerIcon");
+
+	Params::SKEL_WBP_PlayerIcon_C_UpdatePlayerIcon Parms{};
 
 	Parms.bNewIsLocalPlayer = bNewIsLocalPlayer;
 	Parms.bNewIsTeamLeader = bNewIsTeamLeader;

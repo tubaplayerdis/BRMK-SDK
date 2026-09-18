@@ -151,7 +151,7 @@ class UMenuButtonWidget* UBP_MenuFunctionLibrary_C::CreateExitButton(class UMenu
 }
 
 
-// Function BP_MenuFunctionLibrary.BP_MenuFunctionLibrary_C.CreateContinueButton
+// Function BP_MenuFunctionLibrary.BP_MenuFunctionLibrary_C.Create Continue Button
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -159,14 +159,14 @@ class UMenuButtonWidget* UBP_MenuFunctionLibrary_C::CreateExitButton(class UMenu
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UMenuButtonWidget* UBP_MenuFunctionLibrary_C::CreateContinueButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+class UMenuButtonWidget* UBP_MenuFunctionLibrary_C::Create_Continue_Button(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BP_MenuFunctionLibrary_C", "CreateContinueButton");
+		Func = StaticClass()->GetFunction("BP_MenuFunctionLibrary_C", "Create Continue Button");
 
-	Params::BP_MenuFunctionLibrary_C_CreateContinueButton Parms{};
+	Params::BP_MenuFunctionLibrary_C_Create_Continue_Button Parms{};
 
 	Parms.Widget = Widget;
 	Parms.Delegate = Delegate;
@@ -558,7 +558,7 @@ class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateExitButton(class 
 }
 
 
-// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.CreateContinueButton
+// Function BP_MenuFunctionLibrary.SKEL_BP_MenuFunctionLibrary_C.Create Continue Button
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMenuButtonPanelWidget*           Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -566,14 +566,14 @@ class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateExitButton(class 
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMenuButtonWidget*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::CreateContinueButton(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
+class UMenuButtonWidget* USKEL_BP_MenuFunctionLibrary_C::Create_Continue_Button(class UMenuButtonPanelWidget* Widget, const TDelegate<void()>& Delegate, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "CreateContinueButton");
+		Func = StaticClass()->GetFunction("SKEL_BP_MenuFunctionLibrary_C", "Create Continue Button");
 
-	Params::SKEL_BP_MenuFunctionLibrary_C_CreateContinueButton Parms{};
+	Params::SKEL_BP_MenuFunctionLibrary_C_Create_Continue_Button Parms{};
 
 	Parms.Widget = Widget;
 	Parms.Delegate = Delegate;

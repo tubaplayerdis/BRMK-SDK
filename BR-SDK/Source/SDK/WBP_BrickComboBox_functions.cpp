@@ -16,99 +16,43 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_BrickComboBox.WBP_BrickComboBox_C.ExecuteUbergraph_WBP_BrickComboBox
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_BrickComboBox_C::ExecuteUbergraph_WBP_BrickComboBox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickComboBox_C", "ExecuteUbergraph_WBP_BrickComboBox");
-
-	Params::WBP_BrickComboBox_C_ExecuteUbergraph_WBP_BrickComboBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_BrickComboBox.WBP_BrickComboBox_C.UpdateUseItemList
+// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.UpdateUseItemList
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bInUseItemList                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bInUseItemList_UpdateUseItemList                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_BrickComboBox_C::UpdateUseItemList(bool bInUseItemList)
+void USKEL_WBP_BrickComboBox_C::UpdateUseItemList(bool bInUseItemList_UpdateUseItemList)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickComboBox_C", "UpdateUseItemList");
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBox_C", "UpdateUseItemList");
 
-	Params::WBP_BrickComboBox_C_UpdateUseItemList Parms{};
+	Params::SKEL_WBP_BrickComboBox_C_UpdateUseItemList Parms{};
 
-	Parms.bInUseItemList = bInUseItemList;
+	Parms.bInUseItemList_UpdateUseItemList = bInUseItemList_UpdateUseItemList;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BrickComboBox.WBP_BrickComboBox_C.AddSelectedItemWidget
+// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.AddSelectedItemWidget
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UBrickComboBoxItemWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBrickComboBoxItemWidget*         Widget_AddSelectedItemWidget                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWBP_BrickComboBox_C::AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget)
+void USKEL_WBP_BrickComboBox_C::AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget_AddSelectedItemWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickComboBox_C", "AddSelectedItemWidget");
+		Func = Class->GetFunction("SKEL_WBP_BrickComboBox_C", "AddSelectedItemWidget");
 
-	Params::WBP_BrickComboBox_C_AddSelectedItemWidget Parms{};
+	Params::SKEL_WBP_BrickComboBox_C_AddSelectedItemWidget Parms{};
 
-	Parms.Widget = Widget;
+	Parms.Widget_AddSelectedItemWidget = Widget_AddSelectedItemWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_BrickComboBox.WBP_BrickComboBox_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_BrickComboBox_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickComboBox_C", "BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
-
-	Params::WBP_BrickComboBox_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
-
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_BrickComboBox.WBP_BrickComboBox_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_BrickComboBox_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BrickComboBox_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -126,63 +70,75 @@ void USKEL_WBP_BrickComboBox_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnCl
 }
 
 
-// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature
-// (Public)
-// Parameters:
-// EBrickUIColorStyle                      InColorStyle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBrickUIStyleState                      InContentStyleState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function WBP_BrickComboBox.WBP_BrickComboBox_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+// (BlueprintEvent)
 
-void USKEL_WBP_BrickComboBox_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature(EBrickUIColorStyle InColorStyle, EBrickUIStyleState InContentStyleState)
+void UWBP_BrickComboBox_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BrickComboBox_C", "BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature");
+		Func = Class->GetFunction("WBP_BrickComboBox_C", "BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
 
-	Params::SKEL_WBP_BrickComboBox_C_BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUpdateContentStyle__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InColorStyle = InColorStyle;
-	Parms.InContentStyleState = InContentStyleState;
+
+// Function WBP_BrickComboBox.WBP_BrickComboBox_C.AddSelectedItemWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UBrickComboBoxItemWidget*         Widget_AddSelectedItemWidget                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BrickComboBox_C::AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget_AddSelectedItemWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BrickComboBox_C", "AddSelectedItemWidget");
+
+	Params::WBP_BrickComboBox_C_AddSelectedItemWidget Parms{};
+
+	Parms.Widget_AddSelectedItemWidget = Widget_AddSelectedItemWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.AddSelectedItemWidget
+// Function WBP_BrickComboBox.WBP_BrickComboBox_C.UpdateUseItemList
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UBrickComboBoxItemWidget*         Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInUseItemList_UpdateUseItemList                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void USKEL_WBP_BrickComboBox_C::AddSelectedItemWidget(class UBrickComboBoxItemWidget* Widget)
+void UWBP_BrickComboBox_C::UpdateUseItemList(bool bInUseItemList_UpdateUseItemList)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BrickComboBox_C", "AddSelectedItemWidget");
+		Func = Class->GetFunction("WBP_BrickComboBox_C", "UpdateUseItemList");
 
-	Params::SKEL_WBP_BrickComboBox_C_AddSelectedItemWidget Parms{};
+	Params::WBP_BrickComboBox_C_UpdateUseItemList Parms{};
 
-	Parms.Widget = Widget;
+	Parms.bInUseItemList_UpdateUseItemList = bInUseItemList_UpdateUseItemList;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_BrickComboBox.SKEL_WBP_BrickComboBox_C.UpdateUseItemList
-// (Event, Protected, BlueprintEvent)
+// Function WBP_BrickComboBox.WBP_BrickComboBox_C.ExecuteUbergraph_WBP_BrickComboBox
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bInUseItemList                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USKEL_WBP_BrickComboBox_C::UpdateUseItemList(bool bInUseItemList)
+void UWBP_BrickComboBox_C::ExecuteUbergraph_WBP_BrickComboBox(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SKEL_WBP_BrickComboBox_C", "UpdateUseItemList");
+		Func = Class->GetFunction("WBP_BrickComboBox_C", "ExecuteUbergraph_WBP_BrickComboBox");
 
-	Params::SKEL_WBP_BrickComboBox_C_UpdateUseItemList Parms{};
+	Params::WBP_BrickComboBox_C_ExecuteUbergraph_WBP_BrickComboBox Parms{};
 
-	Parms.bInUseItemList = bInUseItemList;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "LevelSequenceEditor_structs.hpp"
 #include "UnrealEd_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "LevelSequenceEditor_structs.hpp"
 
 
 SDK_NAMESPACE_START

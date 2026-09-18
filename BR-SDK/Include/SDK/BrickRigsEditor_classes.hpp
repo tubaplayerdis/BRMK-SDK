@@ -12,6 +12,7 @@
 
 #include "BrickRigs_structs.hpp"
 #include "AnimGraph_classes.hpp"
+#include "Engine_classes.hpp"
 #include "Landscape_classes.hpp"
 
 
@@ -62,6 +63,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAnimGraphNode_ViewRotation;
+
+// Class BrickRigsEditor.BrEditorStatics
+// 0x0000 (0x0030 - 0x0030)
+class UBrEditorStatics final : public UBlueprintFunctionLibrary
+{
+public:
+	static void FixMacroLibrary(class UBlueprint* Blueprint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BrEditorStatics")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BrEditorStatics")
+	}
+	static class UBrEditorStatics* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBrEditorStatics>();
+	}
+};
+DUMPER7_ASSERTS_UBrEditorStatics;
 
 // Class BrickRigsEditor.BrickLandscapeBrush
 // 0x0090 (0x03B0 - 0x0320)
